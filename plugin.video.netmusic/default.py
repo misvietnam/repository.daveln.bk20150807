@@ -90,7 +90,7 @@ def search():
       keyb.doModal()
       if (keyb.isConfirmed()):
         searchText=urllib.quote_plus(keyb.getText())
-      url=nctm+'tim-kiem?q='+searchText
+      url=nctm+'tim-kiem/mv?q='+searchText
       print "Searching URL: "+url	  
       mediaList(url)
     except: pass

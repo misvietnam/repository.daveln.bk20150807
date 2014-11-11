@@ -59,7 +59,7 @@ def main():
   addDir('[COLOR cyan]XVideos [COLOR red] Adult Videos[/COLOR]',xvideos,2,logos+'xvideos.png')	
   addDir('[COLOR magenta]Tube8 [COLOR red] Adult Videos[/COLOR]',tube8,2,logos+'tube8.png') 
   addDir('[COLOR lightgreen]YouPorn [COLOR red] Adult Videos[/COLOR]',youporn,2,logos+'youporn.png')   
-  addDir('[COLOR lightblue]TimTube [COLOR red] Adult Videos[/COLOR]',timtube,2,logos+'youporn.png')   
+  addDir('[COLOR lightblue]TimTube [COLOR red] Adult Videos[/COLOR]',timtube,2,logos+'timtube.png')   
   
 def search():
   if 'youjizz.com' in name:

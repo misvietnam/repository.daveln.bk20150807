@@ -31,6 +31,8 @@ xvietsimpletv='https://raw.githubusercontent.com/giolao/Viet-Simpletv/master/x_p
 vietsextv='rtmpe://64.62.143.5/live/do%20not%20steal%20my-Stream2'
 xvideos='http://www.xvideos.com'
 youjizz='http://www.youjizz.com'
+youporn='http://www.youporn.com'
+timtube='http://www.timtube.com'
 tube8='http://www.tube8.com/'
 
 def makeRequest(url):
@@ -50,12 +52,14 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  
 def main():
-  addLink('[COLOR orange]Viet [COLOR red][B]Sex TV[/B][/COLOR]',vietsextv,logos+'vietsextv.png')
-  addDir('[COLOR yellow]HD [COLOR red][B] Adult Videos[/B][COLOR cyan] - [COLOR lime]Tube8[/COLOR]',tube8+'cat/hd/22/',5,logos+'hdadult.png')  
-  addDir('[COLOR lime]VietSimple [COLOR red][B] Adult TV[/B][/COLOR]',xvietsimpletv,3,logos+'vietsimpletv.png')	
-  addDir('[COLOR yellow]YouJizz [COLOR red][B] Adult Videos[/B][/COLOR]',youjizz,2,logos+'youjizz.png')	
-  addDir('[COLOR cyan]XVideos [COLOR red][B] Adult Videos[/B][/COLOR]',xvideos,2,logos+'xvideos.png')	
-  addDir('[COLOR magenta]Tube8 [COLOR red][B] Adult Videos[/B][/COLOR]',tube8,2,logos+'tube8.png')  
+  addLink('[COLOR orange]Viet [COLOR red]Sex TV[/COLOR]',vietsextv,logos+'vietsextv.png')
+  addDir('[COLOR yellow]HD [COLOR red] Adult Videos[COLOR cyan] - [COLOR lime]Tube8[/COLOR]',tube8+'cat/hd/22/',5,logos+'hdadult.png')  
+  addDir('[COLOR lime]VietSimple [COLOR red] Adult TV[/COLOR]',xvietsimpletv,3,logos+'vietsimpletv.png')	
+  addDir('[COLOR yellow]YouJizz [COLOR red] Adult Videos[/COLOR]',youjizz,2,logos+'youjizz.png')	
+  addDir('[COLOR cyan]XVideos [COLOR red] Adult Videos[/COLOR]',xvideos,2,logos+'xvideos.png')	
+  addDir('[COLOR magenta]Tube8 [COLOR red] Adult Videos[/COLOR]',tube8,2,logos+'tube8.png') 
+  addDir('[COLOR lightgreen]YouPorn [COLOR red] Adult Videos[/COLOR]',youporn,2,logos+'youporn.png')   
+  addDir('[COLOR lightblue]TimTube [COLOR red] Adult Videos[/COLOR]',timtube,2,logos+'youporn.png')   
   
 def search():
   if 'youjizz.com' in name:
@@ -88,11 +92,31 @@ def search():
       print "Searching URL: "+url	  
       mediaList(url)
     except: pass	  
+  if 'youporn.com' in name:
+    try:
+      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
+      keyb.doModal()
+      if (keyb.isConfirmed()):
+        searchText=urllib.quote_plus(keyb.getText())
+      url=youporn+'/search/?query='+searchText
+      print "Searching URL: "+url	  
+      mediaList(url)
+    except: pass	  
+  if 'timtube.com' in name:
+    try:
+      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
+      keyb.doModal()
+      if (keyb.isConfirmed()):
+        searchText=urllib.quote_plus(keyb.getText())
+      url=timtube+'/search-1-'+searchText+'-video.html'
+      print "Searching URL: "+url	  
+      mediaList(url)
+    except: pass	  
   
 def categories(url): 
   content=makeRequest(url)
   if 'youjizz' in url:
-    addDir('[COLOR yellow]youjizz.com[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR yellow]Movie Search[/COLOR]',youjizz,1,logos+'youjizz.png')
+    addDir('[COLOR yellow]youjizz.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',youjizz,1,logos+'youjizz.png')
     match=re.compile("<a href=\"(.+?)\" ><span>(.+?)<\/span><\/a>").findall(content)
     for url,name in match:
       addDir('[COLOR cyan]'+name+'[/COLOR]',youjizz+url,3,logos+'youjizz.png')  
@@ -100,7 +124,7 @@ def categories(url):
     for url,name in match:
       addDir('[COLOR cyan]'+name+'[/COLOR]',youjizz+url,3,logos+'youjizz.png')
   if 'xvideos' in url:
-    addDir('[COLOR lightgreen]xvideos.com[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR lightgreen]Movie Search[/COLOR]',xvideos,1,logos+'xvideos.png')
+    addDir('[COLOR lightgreen]xvideos.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',xvideos,1,logos+'xvideos.png')
     match=re.compile("href=\"([^\"]*)\" title=\"([^\"]+)\"><img src=\"(.+?)\"").findall(content)
     for url,name,thumbnail in match:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',xvideos+url,thumbnail)
@@ -113,7 +137,7 @@ def categories(url):
     for url,name in match:
       addDir('[COLOR cyan]'+name+'[/COLOR]',xvideos+'/c/'+url,3,logos+'xvideos.png')  
   if 'tube8' in url:
-    addDir('[COLOR lime]tube8.com[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR lime]Movie Search[/COLOR]',tube8,1,logos+'tube8.png')
+    addDir('[COLOR lime]tube8.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',tube8,1,logos+'tube8.png')
     match=re.compile('href=\'([^\']*)\'>(.+?)<').findall(content)
     for url,name in match:
       if 'HD' in name:
@@ -124,7 +148,30 @@ def categories(url):
 	    pass
       else:  
         addDir('[COLOR cyan]'+name+'[/COLOR]',url,3, logos+'tube8.png')	  
-
+  if 'youporn' in url:
+    addDir('[COLOR lime]youporn.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',youporn,1,logos+'youporn.png')
+    match=re.compile("onclick=\".+?\" href=\"([^\"]*)\">(.+?)<").findall(content)[1:7]
+    for url,name in match:
+      addDir('[COLOR yellow]'+name+'[/COLOR]',youporn+url,3, logos+'youporn.png')
+    addDir('[COLOR yellow]Most Discussed[/COLOR]',youporn+'/most_discussed/',3, logos+'youporn.png')	
+    match=re.compile("href=\"\/category(.+?)\">(.+?)<").findall(content)
+    for url,name in match:
+      addDir('[COLOR cyan]'+name+'[/COLOR]',youporn+'/category'+url,3, logos+'youporn.png')	
+    match=re.compile("href=\"\/country(.+?)\">(.+?)<").findall(content)
+    for url,name in match:
+      addDir('[COLOR lime]'+name+'[/COLOR]',youporn+'/country'+url,3, logos+'youporn.png')
+  if 'timtube' in url:
+    addDir('[COLOR lime]timtube.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',timtube,1,logos + 'timtube.png')
+    match = re.compile("href=\"(.+?)\" title=\"New Movies\">(.+?)<").findall(content)
+    for url,name in match:
+      addDir('[COLOR yellow]' + name + '[/COLOR]',timtube + url,3, logos + 'timtube.png')	
+    match = re.compile("href=\"(.+?)\" title=\"Top Movies\">(.+?)<").findall(content)
+    for url,name in match:
+      addDir('[COLOR cyan]' + name + '[/COLOR]',timtube + url,3, logos + 'timtube.png')	
+    match = re.compile("href=\"(.+?)video.html\">(.+?)<").findall(content)
+    for url,name in match:
+      addDir('[COLOR orange]' + name + '[/COLOR]',timtube + url + 'video.html',3, logos + 'timtube.png')
+  
 def tube8_HD(url):
   content=makeRequest(url)
   match=re.compile("href=\"(.+?)\" class=\"video-thumb-link\".+?src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
@@ -132,7 +179,7 @@ def tube8_HD(url):
     add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
   match=re.compile("href=\"(.+?)\">(\d+)<").findall(content) 
   for url,name in match:  
-   addDir('[COLOR lime]Trang '+name+'[COLOR orange] >>>>[/COLOR]',url,5,logos+'hdadult.png') 
+   addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',url,5,logos+'hdadult.png') 
      
 def mediaList(url):
   content=makeRequest(url)
@@ -151,24 +198,49 @@ def mediaList(url):
         add_Link('[COLOR yellow]'+name+' [COLOR lime]('+duration+')[/COLOR]',youjizz+url,thumbnail)
       match=re.compile("<a href=\"(.+?).html\">(\d+)<\/a>").findall(content)
       for url,name in match:	
-        addDir('[COLOR orange]Trang '+name+'[COLOR cyan]  >>>>[/COLOR]',youjizz+url +'.html',3,logos+'youjizz.png')
+        addDir('[COLOR orange]Page '+name+'[COLOR cyan]  >>>>[/COLOR]',youjizz+url +'.html',3,logos+'youjizz.png')
       match=re.compile("<a href='([^>]*)'>(\d+)<\/a>").findall(content)
       for url,name in match:	
-        addDir('[COLOR red]Trang '+name+'[COLOR magenta]  >>>>[/COLOR]',youjizz+url,3,logos+'youjizz.png')
+        addDir('[COLOR red]Page '+name+'[COLOR magenta]  >>>>[/COLOR]',youjizz+url,3,logos+'youjizz.png')
   if 'xvideos' in url:
     match=re.compile("href=\"([^\"]*)\" title=\"([^\"]+)\"><img src=\"(.+?)\"").findall(content)
     for url,name,thumbnail in match:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',xvideos+url,thumbnail)
     match=re.compile("class=\"nP\" href=\"(.+?)\">Next<").findall(content)  
-    addDir('[COLOR lime]Trang[COLOR orange]  Kế[COLOR cyan]  Tiếp[COLOR red]  >>>>[/COLOR]',xvideos+match[0],3,logos+'xvideos.png')
+    addDir('[COLOR lime]Next[COLOR orange]  Page[COLOR red]  >>>>[/COLOR]',xvideos+match[0],3,logos+'xvideos.png')
   if 'tube8' in url:
     match=re.compile("href=\"(.+?)\" class=\"video-thumb-link\".+?src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
     for url,thumbnail,name in match:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
     match=re.compile("href=\"(.+?)\">(\d+)<").findall(content) 
     for url,name in match:  
-     addDir('[COLOR lime]Trang '+name+'[COLOR orange] >>>>[/COLOR]',url,3,logos+'tube8.png')
-  
+     addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',url,3,logos+'tube8.png')
+  if 'youporn' in url:
+    match=re.compile("href=\"(.+?)\">\s*<span class=\"hdIcon\"><\/span>	<img src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
+    for url,thumbnail,name in match:
+      add_Link('[COLOR yellow]'+name+'[/COLOR]',youporn+url,thumbnail)
+    match=re.compile("href=\"(.+?)\">\s*<img src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
+    for url,thumbnail,name in match:
+      addLink('[COLOR yellow]'+name+'[/COLOR]',youporn+url,thumbnail)	
+    match=re.compile("link rel=\"next\" href=\"(.+?)\"").findall(content) 
+    for url in match:  
+     addDir('[COLOR lime]Next[COLOR orange]  Page[COLOR red]  >>>>[/COLOR]',url,3,logos+'youporn.png')
+  if 'timtube' in url:
+    if 'top-videos' in url:
+      match = re.compile("href=\"(.+?)\"><img id=\".+?\" onmouseout=\".+?\" onmouseover=\".+?\" src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
+      for url,thumbnail,name in match:
+        add_Link('[COLOR yellow]' + name + '[/COLOR]',timtube + url,thumbnail)	
+      match = re.compile("href=\"(.+?)\">(\d+)<").findall(content)[1:] 
+      for url,name in match:  
+       addDir('[COLOR lime]Page ' + name + '[COLOR orange] >>>>[/COLOR]',timtube + '/' + url.replace(' ','-'),3,logos + 'timtube.png')
+    else:
+      match = re.compile("href=\"(.+?)\" onClick=\".+?\"><img id=\".+?\" onmouseout=\".+?\" onmouseover=\".+?\" src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
+      for url,thumbnail,name in match:
+        add_Link('[COLOR yellow]' + name.replace('&nbsp;','')  + '[/COLOR]',timtube + url,thumbnail)	
+      match = re.compile("href=\"(.+?)\">(\d+)<").findall(content)[1:] 
+      for url,name in match:  
+       addDir('[COLOR lime]Page ' + name + '[COLOR orange] >>>>[/COLOR]',timtube + '/' + url.replace(' ','-'),3,logos + 'timtube.png')
+ 
 def resolveUrl(url):
   content=makeRequest(url)
   if 'youjizz' in url:
@@ -176,7 +248,15 @@ def resolveUrl(url):
   if 'xvideos' in url:
     mediaUrl=urllib.unquote(re.compile("flv_url=(.+?)&amp").findall(content)[-1]) 
   if 'tube8' in url:
-    mediaUrl=re.compile('videoUrlJS	= \'(.+?)\'').findall(content)[0]	
+    mediaUrl=re.compile('videoUrlJS	= \'(.+?)\'').findall(content)[0]
+  if 'youporn' in url:
+    mediaUrl=re.compile("video id=\"player-html5\" src=\"(.+?)\"").findall(content)[0].replace('&amp;','&') 
+    #mediaUrl=re.compile("<span>&nbsp;<\/span><a href=\"(.+?)\"").findall(content)[0].replace('&amp;','&')#MPG	
+  if 'timtube' in url:	
+    try:
+      mediaUrl = re.compile("source src=\"(.+?)\"").findall(content)[0]
+    except:
+      mediaUrl = re.compile("file: \"(.+?)\"").findall(content)[0]	
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return

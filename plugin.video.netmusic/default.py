@@ -50,14 +50,14 @@ def makeRequest(url):
 def main():
   addDir('[COLOR yellow]Video Nhạc Số[/COLOR]',nhacso,2,logos+'ns.png')		
   addDir('[COLOR lime]Video Chia Sẻ Nhạc[/COLOR]',csn,2,logos+'csn.png')
-  addDir('[COLOR silver]Video Nhạc Của Tui[/COLOR]',nctm+'mv.html',2,logos+'nct.png')  
-  addLink('[COLOR orange]SCTV2 - [/COLOR][COLOR lightgreen]Âm Nhạc Quốc Tế[/COLOR]','rtmpe://112.197.2.154/live//sctv2_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/LiveTV token=1b#K8!3zc65ends!',logos+'sctv2.png')  
+  addDir('[COLOR cyan]Video Nhạc Của Tui[/COLOR]',nctm+'mv.html',2,logos+'nct.png')  
+  addLink('[COLOR orange]SCTV2 - [COLOR lightgreen]Âm Nhạc Quốc Tế[/COLOR]','rtmpe://112.197.2.154/live//sctv2_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/LiveTV token=1b#K8!3zc65ends!',logos+'sctv2.png')  
   addLink('[COLOR gold]Vmusic[/COLOR]','http://206.190.130.141:1935/liveStream/mtv_1/playlist.m3u8',logos+'vmusic.png')	
   addLink('[COLOR magenta]Viet MTV[/COLOR]','http://64.62.143.5:1935/live/donotstealmy-Stream1/playlist.m3u8?bitrate=800&q=high',logos+'vietmtv.png')		
-  #addLink('[COLOR lightgreen]Viet MTV[/COLOR]','rtmpe://64.62.143.5:1935/live/donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://www.vietstartv.com',logos+'vietmtv.png')		
+  #addLink('[COLOR lightblue]Viet MTV[/COLOR]','rtmpe://64.62.143.5:1935/live/donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://www.vietstartv.com',logos+'vietmtv.png')		
   #addLink('[COLOR lightblue]Viet MTV[/COLOR]','rtmpe://64.62.143.5/live playpath=donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://zui.vn/livetv/viet-mtv-83.html',logos+'vietmtv.png')		
-  addLink('[COLOR cyan]Nhạc Của Tui[/COLOR]','rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php',logos+'nhaccuatui.png')	
-  #addLink('[COLOR blue]Nhạc Của Tui[/COLOR]','rtmp://123.30.134.108/live/ playpath=nctlive swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/nhac-cua-tui-40.html',logos+'nhaccuatui.png')	
+  addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php',logos+'nhaccuatui.png')	
+  #addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108/live/ playpath=nctlive swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/nhac-cua-tui-40.html',logos+'nhaccuatui.png')	
   addLink('[COLOR violet]VPop TV[/COLOR]','http://206.190.130.141:1935/liveStream/vpoptv_1/playlist.m3u8',logos+'vpop.png')
   addLink('[COLOR chocolate]iTV[/COLOR]','rtmp://live.kenhitv.vn/liveweb/ playpath=itv_web_500k.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/itv-10.html',logos+'itv.png')
   #addLink('[COLOR silver]iTV[/COLOR]','http://117.103.224.73:1935/live/_definst_/ITV/ITV_live.smil/playlist.m3u8',logos+'itv.png')
@@ -80,9 +80,9 @@ def search():
       keyb.doModal()
       if (keyb.isConfirmed()):
         searchText=urllib.quote_plus(keyb.getText())
-      url=csn+'search.php?s='+searchText#+'&song_list=""'
+      url=csn+'search.php?s='+searchText+'&cat=video'
       print "Searching URL: "+url	  
-      mediaList(url)
+      CSN_mediaList_Search(url)
     except: pass
   if 'Nhạc Của Tui' in name:
     try:
@@ -137,13 +137,13 @@ def mediaList(url):
       add_Link('[COLOR yellow]'+name+'[/COLOR]',(csn+url),thumbnail)
     match=re.compile("<a href=\"(.+?)video\/\" class=\"npage\">1<\/a>").findall(content)[0:1]
     for url in match:
-      addDir('[COLOR cyan]Trang Đầu Tiên (Nhạc Video Mới Chia Sẻ+Download Mới Nhất)[/COLOR]',csn+url+'video/',3,thumbnail)
+      addDir('[COLOR cyan]Trang Đầu Tiên ([COLOR lime]Nhạc Video Mới Chia Sẻ[COLOR cyan] + [COLOR orange]Download Mới Nhất[COLOR cyan])[/COLOR]',csn+url+'video/',3,thumbnail)
     match=re.compile("<a href=\"hd\/video\/([a-z]-video\/new[0-9]+).html\" class=\"npage\">(\d+)<\/a>").findall(content)
     for url,name in match:
       addDir('[COLOR lime]Trang Mới Chia Sẻ '+name+'[/COLOR]',csn+'hd/video/'+url+'.html',3,logos+'csn.png')
     match=re.compile("<a href=\"hd\/video\/([a-z]-video\/down[0-9]+).html\" class=\"npage\">(\d+)<\/a>").findall(content)
     for url,name in match:
-      addDir('[COLOR orange]Trang Download Mới Nhất '+name+'[/COLOR]',csn+'hd/video/'+url+'.html',3,logos+'csn.png')	  	    
+      addDir('[COLOR orange]Trang Download Mới Nhất '+name+'[/COLOR]',csn+'hd/video/'+url+'.html',3,logos+'csn.png')	  
   if 'nhacso' in url:		
     if 'the-loai-video' in url:
       match=re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\".+?\s.*?src=\"([^\"]+)\" width").findall(content)
@@ -159,6 +159,16 @@ def mediaList(url):
       match=re.compile("<li ><a href=\"(.+?)\">(\d+)<\/a><\/li>").findall(content)
       for url,name in match:
         addDir('[COLOR lime]Trang '+name+'[/COLOR]',url,3,logos+'ns.png')
+  if 'nhacso.net/tim-kiem' in url or 'nhacso.net/tim-video' in url:	
+    match=re.compile("href=\"(.+?)\" title=\"(.+?)\".+?>\s*<img width.+?src=\"(.+?)\"").findall(content)
+    for url,name,thumbnail in match:
+      add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail) 
+    match=re.compile("class=\"xemthem\" href=\"http:\/\/nhacso.net\/tim-video(.+?)\"").findall(content)
+    for url in match:
+      addDir('[COLOR lime]Xem Tất Cả[COLOR orange]  >>>>[/COLOR]','http://nhacso.net/tim-video' + url.replace(' ','%20'),3,logos+'ns.png')	
+    match=re.compile("style=\"cursor: pointer;\" href=\"(.+?)\"><ins>(\d+)<\/ins>").findall(content)
+    for url,name in match:
+      addDir('[COLOR lime]Trang '+name+'[COLOR orange]  >>>>[/COLOR]',url.replace(' ','%20'),3,logos+'ns.png')	  	  
   if 'nhaccuatui' in url:
     match=re.compile("href=\"http:\/\/m.nhaccuatui.com\/video\/([^\"]*)\" title=\"([^\"]+)\"><img alt=\".+?\" src=\"(.*?)\"").findall(content)		
     for url,name,thumbnail in match:
@@ -166,7 +176,16 @@ def mediaList(url):
     match=re.compile("href=\"([^\"]*)\" class=\"next\" titlle=\"([^\"]+)\"").findall(content)
     for url,name in match:	
       addDir('[COLOR cyan]'+name+'[COLOR orange]  >>>>[/COLOR]',url,3,logos+'nct.png')
-  
+
+def CSN_mediaList_Search(url):
+  content=makeRequest(url)			
+  match=re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\"><img src=\"([^\"]+)\"").findall(content)
+  for url,name,thumbnail in match:
+    add_Link('[COLOR yellow]'+name+'[/COLOR]',(csn+url),thumbnail)
+  match=re.compile("href=\"(.+?)\" class=\"npage\">(\d+)<").findall(content)
+  for url,name in match:
+    addDir('[COLOR cyan]Trang '+name+'[/COLOR]',url.replace('&amp;','&'),5,logos+'csn.png')  
+		
 def resolveUrl(url):
   content=makeRequest(url)
   if 'chiasenhac' in url:		
@@ -257,5 +276,8 @@ elif mode==3:
 		
 elif mode==4:
   resolveUrl(url)		
-		
+
+elif mode==5:
+  CSN_mediaList_Search(url)		
+  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

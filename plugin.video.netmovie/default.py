@@ -202,21 +202,21 @@ def categories(url):
   if 'anhtrang' in url:  
     addDir('[COLOR yellow]anhtrang[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim[/COLOR]',anhtrang,1,logos+'anhtrang.png')
     content=makeRequest(anhtrang)
-    match=re.compile("<a class=\"link\" href=\"([^\"]*)\" >\s*<span>(.+?)<\/span>").findall(content)
+    match=re.compile("<a class=\"link\" href=\"http:\/\/thuocphim.net\/([^\"]*)\" >\s*<span>(.+?)<\/span>").findall(content)
     for url,name in match:
-      addDir('[COLOR lime]'+name+'[/COLOR]',url,12,logos+'anhtrang.png')  
-    match=re.compile("<a class=\"link\" href=\"([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[0:7]
+      addDir('[COLOR lime]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')  
+    match=re.compile("<a class=\"link\" href=\"http:\/\/thuocphim.net\/([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[0:7]
     for url,name in match:
-      addDir('[COLOR cyan]'+name+'[/COLOR]',url,12,logos+'anhtrang.png')
-    match=re.compile("<a class=\"link\" href=\"([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[7:19]
+      addDir('[COLOR cyan]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')
+    match=re.compile("<a class=\"link\" href=\"http:\/\/thuocphim.net\/([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[7:19]
     for url,name in match:
-      addDir('[COLOR orange]'+name+'[/COLOR]',url,12,logos+'anhtrang.png')	
-    match=re.compile('<li class="item27">\s*<a class="topdaddy link" href="([^"]*)">\s*<span>(.+?)<\/span>').findall(content)
+      addDir('[COLOR orange]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')	
+    match=re.compile('<li class="item27">\s*<a class="topdaddy link" href="http:\/\/thuocphim.net\/([^"]*)">\s*<span>(.+?)<\/span>').findall(content)
     for url,name in match:
-      addDir('[COLOR magenta]'+name+'[/COLOR]',url,12,logos+'anhtrang.png') 
-    match=re.compile('<li class="item28">\s*<a class="topdaddy link" href="(.+?)">\s*<span>(.+?)<\/span>').findall(content)
+      addDir('[COLOR magenta]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png') 
+    match=re.compile('<li class="item28">\s*<a class="topdaddy link" href="http:\/\/thuocphim.net\/(.+?)">\s*<span>(.+?)<\/span>').findall(content)
     for url,name in match:
-      addDir('[COLOR lightblue]'+name+'[/COLOR]',url,12,logos+'anhtrang.png') 
+      addDir('[COLOR lightblue]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png') 
   
 def index(url):
   content=makeRequest(url)
@@ -338,10 +338,10 @@ def episodes(url,name):
   content=makeRequest(url)
   if 'phimgiaitri' in url:    
     thumbnail=re.compile("<meta property=\"og:image\" content=\"(.+?)\"").findall(content)
-    get_Link('[COLOR yellow]Tập 1  -  [/COLOR]'+name,url,thumbnail[0])
+    add_Link('[COLOR yellow]Tập 1  -  [/COLOR]'+name,url,thumbnail[0])
     match=re.compile("<a href=\"(.+?)\" page=(\d+)>").findall(content)
     for url,title in match:
-      get_Link('[COLOR yellow]Tập '+title+'  -  '+name+'[/COLOR]',url,thumbnail[0])
+      add_Link('[COLOR yellow]Tập '+title+'  -  '+name+'[/COLOR]',url,thumbnail[0])
   if 'fptplay' in url:
     title=re.compile('<title>([^\']+)</title>').findall(content)		
     match=re.compile("<a href=\"\/Video([^\"]*)\">(.*?)<\/a><\/li>").findall(content)
@@ -378,12 +378,19 @@ def inquiry():
 def resolveUrl(url):
   content=makeRequest(url)
   if 'dangcaphd' in url:
-    try:	
-	  mediaUrl=re.compile('<a _episode="1" _link="(.+?)_\d_\d+.mp4"').findall(content)[0]+'.mp4'
-    except:		
-	  mediaUrl=re.compile('<a _episode="1" _link="(.+?)"').findall(content)[0]
+    try:
+      try:	
+	    mediaUrl=re.compile('<a _episode="1" _link="(.+?)_\d_\d+.mp4"').findall(content)[0].replace('demophimle','phimle1311')+'.mp4'
+      except:
+	    mediaUrl=re.compile('<a _episode="1" _link="(.+?)_\d_\d+.mp4"').findall(content)[0].replace('demophimle','phimle0610')+'.mp4'	  
+    except:
+	  mediaUrl=re.compile('<a _episode="1" _link="(.+?)"').findall(content)[0].replace(' ','%20')
   if 'phimgiaitri' in url:	
-    mediaUrl='http://phimgiaitri.vn/phimtv/phimle'+re.compile('file: "rtmpe:.+?phimle(.+?)"').findall(content)[0]
+    match = re.compile('file: "rtmpe:\/\/5318b6e71a98f.streamlock.net(.+?)"').findall(content)[0]  
+    if '/media1/' in match:
+      mediaUrl = 'http://phimgiaitri.vn/phimtxn/' + match.replace('/media1/mp4:','')
+    else:
+      mediaUrl = 'http://phimgiaitri.vn:81/phimtxn/' + match.replace('/media2/mp4:','') 
   if 'fptplay' in url:
 	mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
   if 'zui' in url:
@@ -397,13 +404,6 @@ def resolveUrl(url):
       mediaUrl=re.compile("var video_src_mv=\"(.+?)\"").findall(content)[0]   
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
-  return
-
-def urlResolver(url):
-  content=makeRequest(url)
-  mediaUrl='http://phimgiaitri.vn:83/phimtv/phimbo'+re.compile('file: "rtmpe:.+?phimbo(.+?)"').findall(content)[0]
-  item=xbmcgui.ListItem(path=mediaUrl)
-  xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)  
   return
 
 def get_params():
@@ -430,14 +430,7 @@ def addDir(name,url,mode,iconimage):
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
   return ok
-   
-def get_Link(name,url,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=11"  
-  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-  liz.setInfo( type="Video", infoLabels={ "Title": name } )
-  liz.setProperty('IsPlayable', 'true')  
-  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz) 
-  
+    
 def add_Link(name,url,iconimage):
   u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=10"  
   liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
@@ -506,9 +499,6 @@ elif mode==9:
  
 elif mode==10:
   resolveUrl(url)
-
-elif mode==11:
-  urlResolver(url) 
   
 elif mode==12:
   anhtrang_mediaList(url) 

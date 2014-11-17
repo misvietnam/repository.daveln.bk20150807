@@ -91,7 +91,17 @@ def search():
       url=tube8+'searches.html?q='+searchText
       print "Searching URL: "+url	  
       mediaList(url)
-    except: pass	  
+    except: pass
+  if 'HD - Tube 8' in name:
+    try:
+      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
+      keyb.doModal()
+      if (keyb.isConfirmed()):
+        searchText=urllib.quote_plus(keyb.getText())
+      url=tube8+'cat/hd/22/?q='+searchText
+      print "Searching URL: "+url	  
+      tube8_HD(url)
+    except: pass	
   if 'youporn.com' in name:
     try:
       keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
@@ -174,12 +184,13 @@ def categories(url):
   
 def tube8_HD(url):
   content=makeRequest(url)
-  match=re.compile("href=\"(.+?)\" class=\"video-thumb-link\".+?src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
-  for url,thumbnail,name in match:
-    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
-  match=re.compile("href=\"(.+?)\">(\d+)<").findall(content) 
+  addDir('[COLOR cyan]HD - Tube 8   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',tube8+'cat/hd/22/',1,logos+'hdadult.png')  
+  match=re.compile("href=\"(.+?)\" class=\"video-thumb-link\" ><span class=\"(.+?)Icon\".+?src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
+  for url,hdcat,thumbnail,name in match:
+    add_Link('[COLOR yellow]'+name+'  [COLOR lime][UPPERCASE]['+hdcat+'][/UPPERCASE][/COLOR]',url,thumbnail)
+  match=re.compile("href=\"http:\/\/www.tube8.com\/(.+?)\">(\d+)<").findall(content) 
   for url,name in match:  
-   addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',url,5,logos+'hdadult.png') 
+   addDir('[COLOR magenta]Page '+name+'[COLOR orange] >>>>[/COLOR]',tube8+url,5,logos+'hdadult.png') 
      
 def mediaList(url):
   content=makeRequest(url)

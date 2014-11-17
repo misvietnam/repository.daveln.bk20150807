@@ -1,3 +1,7 @@
+v 1.0.7
+Add HD Search
+Fix logos
+
 v 1.0.6
 Fix timtube logo
 

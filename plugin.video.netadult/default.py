@@ -53,7 +53,7 @@ def makeRequest(url):
  
 def main():
   addLink('[COLOR orange]Viet [COLOR red]Sex TV[/COLOR]',vietsextv,logos+'vietsextv.png')
-  addDir('[COLOR yellow]HD [COLOR red] Adult Videos[COLOR cyan] - [COLOR lime]Tube8[/COLOR]',tube8+'cat/hd/22/',5,logos+'hdadult.png')  
+  addDir('[COLOR yellow]HD [COLOR red] Adult Videos[/COLOR]','hdadult',7,logos+'hdadult.png')    
   addDir('[COLOR lime]VietSimple [COLOR red] Adult TV[/COLOR]',xvietsimpletv,3,logos+'vietsimpletv.png')	
   addDir('[COLOR yellow]YouJizz [COLOR red] Adult Videos[/COLOR]',youjizz,2,logos+'youjizz.png')	
   addDir('[COLOR cyan]XVideos [COLOR red] Adult Videos[/COLOR]',xvideos,2,logos+'xvideos.png')	
@@ -68,7 +68,7 @@ def search():
       keyb.doModal()
       if (keyb.isConfirmed()):
         searchText=urllib.quote_plus(keyb.getText())
-      url='http://www.youjizz.com/srch.php?q='+searchText
+      url=youjizz+'/srch.php?q='+searchText
       print "Searching URL: "+url	  
       mediaList(url)
     except: pass
@@ -127,6 +127,7 @@ def categories(url):
   content=makeRequest(url)
   if 'youjizz' in url:
     addDir('[COLOR yellow]youjizz.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',youjizz,1,logos+'youjizz.png')
+    addDir('[COLOR lime]HD[/COLOR]',youjizz+'/search/highdefinition-1.html',3,logos+'youjizz.png')
     match=re.compile("<a href=\"(.+?)\" ><span>(.+?)<\/span><\/a>").findall(content)
     for url,name in match:
       addDir('[COLOR cyan]'+name+'[/COLOR]',youjizz+url,3,logos+'youjizz.png')  
@@ -181,7 +182,11 @@ def categories(url):
     match = re.compile("href=\"(.+?)video.html\">(.+?)<").findall(content)
     for url,name in match:
       addDir('[COLOR orange]' + name + '[/COLOR]',timtube + url + 'video.html',3, logos + 'timtube.png')
-  
+
+def HD():
+  addDir('[COLOR yellow]HD [COLOR red] Adult Videos[COLOR cyan] - [COLOR lime]Tube8[/COLOR]',tube8+'cat/hd/22/',5,logos+'hdadult.png')  
+  addDir('[COLOR lime]HD [COLOR red] Adult Videos[COLOR cyan] - [COLOR yellow]YouJizz[/COLOR]',youjizz+'/search/highdefinition-1.html',6,logos+'hdadult.png')    
+	  
 def tube8_HD(url):
   content=makeRequest(url)
   addDir('[COLOR cyan]HD - Tube 8   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',tube8+'cat/hd/22/',1,logos+'hdadult.png')  
@@ -191,7 +196,19 @@ def tube8_HD(url):
   match=re.compile("href=\"http:\/\/www.tube8.com\/(.+?)\">(\d+)<").findall(content) 
   for url,name in match:  
    addDir('[COLOR magenta]Page '+name+'[COLOR orange] >>>>[/COLOR]',tube8+url,5,logos+'hdadult.png') 
-     
+
+def youjizz_HD(url):
+  content=makeRequest(url)
+  match=re.compile("href='([^']*)'.+?\s*\s*<img class=.+?data-original=\"([^\"]*)\">\s*<\/span>\s*<span id=\"title1\">\s*(.+?)<\/span>").findall(content)
+  for url,thumbnail,name in match:
+    add_Link('[COLOR yellow]'+name+'[/COLOR]',youjizz+url,thumbnail)
+  match=re.compile("href=\"\/search(.+?)\">(\d+)<").findall(content) 
+  for url,name in match:  
+   addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',youjizz+'/search'+url,6,logos+'hdadult.png') 
+  match=re.compile('href=\'\/search(.+?)\'>(\d+)<').findall(content) 
+  for url,name in match:  
+   addDir('[COLOR red]Page '+name+'[COLOR yellow] >>>>[/COLOR]',youjizz+'/search'+url,6,logos+'hdadult.png') 
+   
 def mediaList(url):
   content=makeRequest(url)
   if 'Viet-Simpletv' in url:  
@@ -203,6 +220,16 @@ def mediaList(url):
       match=re.compile("<a class=\"frame\" href='(.+?)'.+?><\/a>\s*<img class.+?data-original=\"(.+?)\"").findall(content)		
       for url,thumbnail in match:
         add_Link('[COLOR yellow]'+url.replace('/videos/','').replace('-',' ').replace('.html','')+'[/COLOR]',youjizz+url,thumbnail)
+    if 'highdefinition' in url:
+      match=re.compile("href='([^']*)'.+?\s*\s*<img class=.+?data-original=\"([^\"]*)\">\s*<\/span>\s*<span id=\"title1\">\s*(.+?)<\/span>").findall(content)
+      for url,thumbnail,name in match:
+        add_Link('[COLOR yellow]'+name+'[/COLOR]',youjizz+url,thumbnail)
+      match=re.compile("href=\"\/search(.+?)\">(\d+)<").findall(content) 
+      for url,name in match:  
+        addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',youjizz+'/search'+url,3,logos+'hdadult.png') 
+      match=re.compile('href=\'\/search(.+?)\'>(\d+)<').findall(content) 
+      for url,name in match:  
+        addDir('[COLOR red]Page '+name+'[COLOR yellow] >>>>[/COLOR]',youjizz+'/search'+url,3,logos+'hdadult.png') 	
     else:
       match=re.compile("<a class=\"frame\" href='(.+?)'.+?><\/a>\s*<img class.+?data-original=\"(.+?)\">\s*<\/span>\s*<span id=\"title1\">(.+?)<\/span>\s*<span id=\"title2\">\s*<span class='thumbtime'><span>(.+?)<\/span>").findall(content)		
       for url,thumbnail,name,duration in match:
@@ -349,6 +376,12 @@ elif mode==4:
   resolveUrl(url) 
 
 elif mode==5:
-  tube8_HD(url)  
+  tube8_HD(url)
+
+elif mode==6:
+  youjizz_HD(url)  
   
+elif mode==7:
+  HD()  
+    
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

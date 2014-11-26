@@ -236,10 +236,12 @@ def mediaList(url):
     if 'random' in url or 'srch.php' in url:
       match=re.compile("<a class=\"frame\" href='(.+?)'.+?><\/a>\s*<img class.+?data-original=\"(.+?)\"").findall(content)		
       for url,thumbnail in match:
-        add_Link('[COLOR yellow]'+url.replace('/videos/','').replace('-',' ').replace('.html','')+'[/COLOR]',youjizz+url,thumbnail)
+        name=url.replace('/videos/','').replace('-',' ').replace('.html','') # Do name seperately
+        name=re.sub('\s\d+$','',name) # Get rid of numbers at the end of string 
+        add_Link('[COLOR yellow][UPPERCASE]'+name+'[/UPPERCASE][/COLOR]',youjizz+url,thumbnail)
     elif 'highdefinition' in url:
       match=re.compile("href='([^']*)'.+?\s*\s*<img class=.+?data-original=\"([^\"]*)\">\s*<\/span>\s*<span id=\"title1\">\s*(.+?)<\/span>").findall(content)
-      for url,thumbnail,name in match: #This HD site also includes SD contents '-640-480-' in thumbnail
+      for url,thumbnail,name in match: # This HD site also includes SD contents '-640-480-' in thumbnail
         if '-1280-720-' in thumbnail:  
           add_Link('[COLOR yellow]'+name+' [COLOR lime][HD - 720][/COLOR] ',youjizz+url,thumbnail)	
         elif '-1280-960-' in thumbnail or '-1920-1080-' in thumbnail:

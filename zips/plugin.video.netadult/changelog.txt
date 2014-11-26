@@ -1,3 +1,9 @@
+v 1.0.10
+Fix YouJizz search.
+1. Do name seperately.
+2. Delete numbers at 
+end of name string.
+
 v 1.0.9
 Fix YouJizz HD
 

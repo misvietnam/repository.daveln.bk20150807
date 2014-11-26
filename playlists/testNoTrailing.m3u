@@ -1,0 +1,32 @@
+#EXTM3U
+
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/vovtv/v.m3u8
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/bberg/v.m3u8
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/alzn/v.m3u8
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/rt/v.m3u8
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/abcn/v.m3u8
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/lifen/v.m3u8
+#EXTINF:0, Hay
+http://2co1.vp9.tv/chn/cbs/v.m3u8
+
+#EXTINF:-1,***movihd.net*** HÃY QUYẾN RŨ EM
+http://media2.movihd.net/phimle/20142210/QuyenRuEm.mp4
+#EXTINF:-1,TRÒ ĐÙA TÌNH ÁI
+http://media2.movihd.net/phimle/20140901/TroDuaTinhAi.mp4
+
+
+#EXTM3U
+#EXTINF:0,The Bourne Supremacy - Quyen Luc Cua Bourne (subViet)
+http://tvphim.vn/data/phim/id_movie_269/id_episode_673/ae81f9d26b178e94b4fe610786c0bbfd.mp4
+#EXTINF:0,The Fault in Our Stars (subViet)
+http://tvphim.vn/data/phim/id_movie_276/id_episode_700/02f09b2ac090159565ee8faba575a56a.mp4
+#EXTINF:0,The Bourne Identity - Ho So Điep Vien Bourne (subViet)
+http://tvphim.vn/data/phim/id_movie_268/id_episode_658/0b5b5cf02de604810c81305e1eb25e42.mp4
+#EXTINF:0,Too Beautiful To Lie - Người đẹp nói dối
+http://tvphim.vn/data/phim/id_movie_263/id_episode_665/5be72d6063640807d9dfc0104eeeb69a.mp4

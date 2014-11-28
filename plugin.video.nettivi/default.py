@@ -32,7 +32,7 @@ tvchannels='https://www.dropbox.com/s/kwodh4i7zsovhjl/tvchannels.json?raw=1'
 haotivi='https://www.dropbox.com/s/e2wycvbvnh2sh49/haotivi.json?raw=1'
 vtcplay='http://117.103.206.21:88/Channel/GetChannels'
 htvonline='http://www.htvonline.com.vn/livetv'
-fptplay='http://fptplay.net/'
+fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
 zuitv='http://zui.vn/livetv.html'
 
@@ -58,12 +58,12 @@ def main():
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
   addDir('[COLOR lightblue]FPTPlay[/COLOR]',fptplay,2,logos+'fptplay.png')  
   addDir('[COLOR cyan]haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
-  addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
+  #addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
   addDir('[COLOR yellow]VietSimple TV[/COLOR]',viet_simpletv,10,logos+'vietsimpletv.png')  
   addDir('[COLOR cyan]VTC[/COLOR]',tvchannels,7,logos+'vtccomvn.png')		
   addDir('[COLOR magenta]HTVOnline[/COLOR]',htvonline,6,logos+'htvonline.png')
   addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				
-  addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png')
+  #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png')
   addLink('[COLOR lightgreen]Little Sai Gon TV[/COLOR]','http://stream.s15.cpanelservices.com/lstvlive/livestream/playlist.m3u8',logos+'littlesaigon.png')	
   addLink('[COLOR silver]Animal Planet[/COLOR]','http://202.75.23.34:80/live/ch31//01.m3u8',logos+'ap.png')	
   addLink('[COLOR violet]Discovery Channel[/COLOR]','http://202.75.23.34:80/live/ch29/01.m3u8',logos+'discovery.png')	
@@ -99,6 +99,8 @@ def fpt(url):
   for url,name in match:
     if 'livetv' in url:
       addDir('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,6,logos+'fptplay.png')
+    if 'film' in url or 'livetv' in url:
+      pass	
     else:
       addDir('[COLOR lime]'+name+'[/COLOR]',fptplay+url,4,logos+'fptplay.png')			
 
@@ -140,7 +142,10 @@ def index(url):
   if 'fptplay' in url:
 	match=re.compile("channel=\"(.*?)\" href=\"(.+?)\" data=\".+?\">\s+<img src=\"(.*?)\"").findall(content)
 	for name,url,thumbnail in match:
-	  add_Link('[COLOR lime]'+name+'[/COLOR]',fptplay+url,thumbnail)						
+	  if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
+	    add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
+	  else:
+	    add_Link('[COLOR lime]'+name+'[/COLOR]',fptplay+url,thumbnail)						
   if 'zui' in url:
     match=re.compile("alt='(.+?)' href='(.+?)'><img src='(.+?)'").findall(content)[3:36]
     for name,url,thumbnail in match:
@@ -248,12 +253,14 @@ def HD():
   for url,name,thumbnail in match:	
     if 'HTV7' in name or 'HTV9' in name or ' HD' in name or 'htv2-31336E61' in url:
 	  add_Link('[COLOR cyan]'+name+'[/COLOR]',url,thumbnail)
-  add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')  	  	  
+  add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')
+'''  
   content=makeRequest(vtcplay)  
   match=re.compile("\"Name\":\"(.*?)\".+?\"Thumbnail2\":\"(.+?)\".+?\"Path\":\"([^\"]*)\"").findall(content)
   for name,thumbnail,url in match:
     if ' HD' in name:
 	  addLink('[COLOR yellow]'+name.decode("utf-8")+'[/COLOR]',url,thumbnail)
+'''	  
 	  
 def search():
   try:
@@ -276,7 +283,8 @@ def resolveUrl(url):
     mediaUrl=re.compile('livetv_play\(\'player\', \'1\', \'(.+?)\'\)').findall(content)[0]	
   elif 'fptplay' in url:
     if 'livetv' in url: 
-	  mediaUrl=re.compile('var video_str="<video id=\'main-video\' src=\'" \+ "(.+?)"').findall(content)[0].replace('1000.stream','2500.stream')						
+	  mediaUrl=re.compile('var video_str = "<video id=\'main-video\' src=\'" \+ "(.+?)"').findall(content)[0]	
+	  #mediaUrl=re.compile('var video_str = "<video id=\'main-video\' src=\'" \+ "(.+?)"').findall(content)[0].replace('1000.stream','2500.stream')						
     else:
 	  mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
   item=xbmcgui.ListItem(path=mediaUrl)

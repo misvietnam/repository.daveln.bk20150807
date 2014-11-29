@@ -175,16 +175,19 @@ def categories(url):
       addDir('[COLOR cyan]'+name+'[/COLOR]',xvideos+'/c/'+url,3,logos+'xvideos.png')  
   elif 'tube8' in url:
     addDir('[COLOR lime]tube8.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',tube8,1,logos+'tube8.png')
-    match=re.compile('href=\'([^\']*)\'>(.+?)<').findall(content)
+    match=re.compile("href=\"([^\"]*)\" title=\".+?\">([^<]*)<").findall(content)
     for url,name in match:
       if 'HD' in name:
-        addDir('[COLOR yellow]'+name+'[/COLOR]',url,3, logos+'tube8.png')
-    match=re.compile('href=\'([^\']*)\'>(.+?)<').findall(content)
+        add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+'tube8.png')
+    match=re.compile("href=\"([^\"]*)\" title=\".+?\">([^<]*)<").findall(content)
     for url,name in match:	  
       if 'HD' in name:
 	    pass
       else:  
-        addDir('[COLOR cyan]'+name+'[/COLOR]',url,3, logos+'tube8.png')	  
+        add_Link('[COLOR cyan]'+name+'[/COLOR]',url,logos+'tube8.png')	
+    match=re.compile("href=\"(.+?)\">(\d+)<").findall(content) 
+    for url,name in match:  
+     addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',url,2,logos+'tube8.png')		
   elif 'youporn' in url:
     addDir('[COLOR lime]youporn.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',youporn,1,logos+'youporn.png')
     match=re.compile("onclick=\".+?\" href=\"([^\"]*)\">(.+?)<").findall(content)[1:7]
@@ -227,7 +230,7 @@ def categories(url):
 def tube8_HD(url):
   content=makeRequest(url)
   addDir('[COLOR cyan]HD - Tube 8   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]',tube8+'cat/hd/22/',1,logos+'hdadult.png')  
-  match=re.compile("href=\"(.+?)\" class=\"video-thumb-link\" ><span class=\"(.+?)Icon\".+?src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
+  match=re.compile('href="(.+?)" class="video-thumb-link">\s*<span class="(.+?)Icon"><\/span>\s*<img class="videoThumbs"\s*id=".+?"\s*category=".+?"\s*src="(.+?)"\s*alt="(.+?)"').findall(content)
   for url,hdcat,thumbnail,name in match:
     add_Link('[COLOR yellow]'+name+' [COLOR lime][UPPERCASE]['+hdcat+'][/UPPERCASE][/COLOR] ',url,thumbnail)
   match=re.compile("href=\"http:\/\/www.tube8.com\/(.+?)\">(\d+)<").findall(content) 
@@ -256,11 +259,14 @@ def youjizz_HD(url):
 def pornhdhdporn(url,name):
   content=makeRequest(url)
   match = re.compile('iframe src=\'([^\']*)\'').findall(content)
-  for url in match:  
+  for url in match:
+     addDir(name.replace('[COLOR yellow]','[COLOR cyan]'),url,9,logos + 'hdporn1.png')  
+
+def pornhd_index(url,name):  
     content = makeRequest(url) 
     match = re.compile("iframe src=\"([^\']*)\"").findall(content)	
     for url in match:
-      add_Link(name.replace('[COLOR yellow]','[COLOR lime]'),url,logos + 'hdporn.png')  
+      add_Link(name.replace('[COLOR cyan]','[COLOR lime]'),url,logos + 'hdporn.png')  
      
 def mediaList(url):
   content=makeRequest(url)
@@ -306,13 +312,6 @@ def mediaList(url):
       add_Link('[COLOR yellow]'+name+'[/COLOR]',xvideos+url,thumbnail)
     match=re.compile("class=\"nP\" href=\"(.+?)\">Next<").findall(content)  
     addDir('[COLOR lime]Next[COLOR orange]  Page[COLOR red]  >>>>[/COLOR]',xvideos+match[0],3,logos+'xvideos.png')
-  elif 'tube8' in url:
-    match=re.compile("href=\"(.+?)\" class=\"video-thumb-link\".+?src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
-    for url,thumbnail,name in match:
-      add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
-    match=re.compile("href=\"(.+?)\">(\d+)<").findall(content) 
-    for url,name in match:  
-     addDir('[COLOR lime]Page '+name+'[COLOR orange] >>>>[/COLOR]',url,3,logos+'tube8.png')
   elif 'youporn' in url:
     match=re.compile("href=\"(.+?)\">\s*<span class=\"hdIcon\"><\/span>	<img src=\"(.+?)\" alt=\"(.+?)\"").findall(content)
     for url,thumbnail,name in match:
@@ -448,5 +447,8 @@ elif mode==7:
   
 elif mode==8:
   pornhdhdporn(url,name)
+
+elif mode==9:
+  pornhd_index(url,name)  
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

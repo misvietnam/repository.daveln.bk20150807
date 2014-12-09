@@ -1,0 +1,18 @@
+SBTN, http://gdata.youtube.com/feeds/api/users/sbtnofficial/uploads?start-index=1&max-results=50, sbtn.png
+VietFace, http://gdata.youtube.com/feeds/api/users/officialVietFaceTV/uploads?start-index=1&max-results=50, vietface.png  
+Thúy Nga, http://gdata.youtube.com/feeds/api/users/tuyentapthuyngaful/uploads?start-index=1&max-results=50, thuynga.png  
+Asia, http://gdata.youtube.com/feeds/api/users/TrungTamAsiaChannel/uploads?start-index=1&max-results=50, asia.png 
+Vân Sơn, http://gdata.youtube.com/feeds/api/users/VanSonOnline/uploads?start-index=1&max-results=50, vanson.png
+Bước Chân Hai Thế Hệ, http://gdata.youtube.com/feeds/api/users/buocchanhaithehe/uploads?start-index=1&max-results=50, buocchan2thehe.png  
+POPS TV VIỆT NAM, http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50, popstv.png 
+Blue Ocean Music USA, http://gdata.youtube.com/feeds/api/users/blueoceanmusicusa/uploads?start-index=1&max-results=50, blueocean.png
+Zing MP3, http://gdata.youtube.com/feeds/api/users/ZingMp3Official/uploads?start-index=1&max-results=50, zingmp3.png 
+Gala Nhạc Việt, http://gdata.youtube.com/feeds/api/users/galanhacviet/uploads?start-index=1&max-results=50, gala.png  
+Sắc Việt, http://gdata.youtube.com/feeds/api/users/sacviet/uploads?start-index=1&max-results=50, sacviet.png  
+Mỹ Tâm, http://gdata.youtube.com/feeds/api/users/mytamofficial/uploads?start-index=1&max-results=50, mytam.png
+Đàm Vĩnh Hưng, http://gdata.youtube.com/feeds/api/users/DamVinhHungPOPS/uploads?start-index=1&max-results=50, damvinhhung.png  
+Đan Trường, http://gdata.youtube.com/feeds/api/users/DanTruongPOPS/uploads?start-index=1&max-results=50, dantruong.png  
+Vân Sơn Hài Collection, http://www.dailymotion.com/rss/user/danduphim88/1, vanson.png
+Thế giới Giải Trí, http://www.dailymotion.com/rss/user/VideoGiaiTri/1, giaitri.png 
+Blue Ocean Music, http://www.dailymotion.com/rss/user/blueoceanmusic_chanel/1, blueocean.png 
+Music, http://www.dailymotion.com/rss/user/Music24h/1, music.png

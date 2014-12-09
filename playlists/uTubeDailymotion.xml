@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<channels>
+
+<channel>YouTube
+<name></name>
+<thumbnail></thumbnail>
+
+<items>
+
+<item>
+<title>[COLOR yellow]SBTN[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/sbtnofficial/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]VietFace[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/officialVietFaceTV/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Thúy Nga[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/tuyentapthuyngaful/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Asia[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/TrungTamAsiaChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Vân Sơn[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/VanSonOnline/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Bước Chân Hai Thế Hệ[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/buocchanhaithehe/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]POPS TV VIỆT NAM[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Blue Ocean Music USA[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/blueoceanmusicusa/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Zing MP3[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/ZingMp3Official/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Gala Nhạc Việt[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/galanhacviet/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Sắc Việt[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/sacviet/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Mỹ Tâm[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/mytamofficial/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Đàm Vĩnh Hưng[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/DamVinhHungPOPS/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR yellow]Đan Trường[/COLOR]</title>>
+<link>http://gdata.youtube.com/feeds/api/users/DanTruongPOPS/uploads?start-index=1&max-results=50</link>
+<thumbnail></thumbnail>
+</item>
+
+</items>
+</channel>
+
+<channel>Dailymotion
+<name></name>
+<thumbnail></thumbnail>
+
+<items>
+
+<item>
+<title>[COLOR cyan]Vân Sơn Hài Collection[/COLOR]</title>>
+<link>http://www.dailymotion.com/rss/user/danduphim88/1</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR cyan]Thế giới Giải Trí[/COLOR]</title>>
+<link>http://www.dailymotion.com/rss/user/VideoGiaiTri/1</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR cyan]Blue Ocean Music[/COLOR]</title>>
+<link>http://www.dailymotion.com/rss/user/blueoceanmusic_chanel/1</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR cyan]Music[/COLOR]</title>>
+<link>http://www.dailymotion.com/rss/user/Music24h/1</link>
+<thumbnail></thumbnail>
+</item>
+
+</items>
+</channel>
+
+</channels>

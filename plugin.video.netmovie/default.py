@@ -53,6 +53,9 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  
 def main():
+  add_Link('Daily Motion -  Asia : Mùa Hè Rực Rỡ -D1-1','plugin://plugin.video.dailymotion_com/?mode=playVideo&url=x188lgd','')
+  add_Link('Youtube - My Tam','plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=pYGNl0hqAbU','')
+  add_Link('Youtube - Dam Vinh Hung','plugin://plugin.video.youtube/?action=play_video&videoid=Hg6bFataO5g','')  
   addDir('[COLOR yellow]phim3s.net[/COLOR]',phim3s,2,logos+'phim3s_1.png')
   addDir('[COLOR lime]dangcaphd.com[/COLOR]',dchd,2,logos+'dchd_1.png')
   addDir('[COLOR lightblue]hdcaphe.com[/COLOR]',hd_caphe+'camera-quan-sat.html',2,logos+'hdcaphe.png')
@@ -202,19 +205,19 @@ def categories(url):
   if 'anhtrang' in url:  
     addDir('[COLOR yellow]anhtrang[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim[/COLOR]',anhtrang,1,logos+'anhtrang.png')
     content=makeRequest(anhtrang)
-    match=re.compile("<a class=\"link\" href=\"http:\/\/thuocphim.net\/([^\"]*)\" >\s*<span>(.+?)<\/span>").findall(content)
+    match=re.compile("<a class=\"link\" href=\"http:\/\/.+?\/([^\"]*)\" >\s*<span>(.+?)<\/span>").findall(content)
     for url,name in match:
       addDir('[COLOR lime]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')  
-    match=re.compile("<a class=\"link\" href=\"http:\/\/thuocphim.net\/([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[0:7]
+    match=re.compile("<a class=\"link\" href=\"http:\/\/.+?\/([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[0:7]
     for url,name in match:
       addDir('[COLOR cyan]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')
-    match=re.compile("<a class=\"link\" href=\"http:\/\/thuocphim.net\/([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[7:19]
+    match=re.compile("<a class=\"link\" href=\"http:\/\/.+?\/([^\"]+)\">\s*<span>(.+?)<\/span>").findall(content)[7:19]
     for url,name in match:
       addDir('[COLOR orange]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')	
-    match=re.compile('<li class="item27">\s*<a class="topdaddy link" href="http:\/\/thuocphim.net\/([^"]*)">\s*<span>(.+?)<\/span>').findall(content)
+    match=re.compile('<li class="item27">\s*<a class="topdaddy link" href="http:\/\/.+?\/([^"]*)">\s*<span>(.+?)<\/span>').findall(content)
     for url,name in match:
       addDir('[COLOR magenta]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png') 
-    match=re.compile('<li class="item28">\s*<a class="topdaddy link" href="http:\/\/thuocphim.net\/(.+?)">\s*<span>(.+?)<\/span>').findall(content)
+    match=re.compile('<li class="item28">\s*<a class="topdaddy link" href="http:\/\/.+?\/(.+?)">\s*<span>(.+?)<\/span>').findall(content)
     for url,name in match:
       addDir('[COLOR lightblue]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png') 
   
@@ -401,7 +404,9 @@ def resolveUrl(url):
     try:
       mediaUrl=re.compile("<source src=\"([^\"]*)\"").findall(content)[0]
     except: 
-      mediaUrl=re.compile("var video_src_mv=\"(.+?)\"").findall(content)[0]   
+      mediaUrl=re.compile("var video_src_mv=\"(.+?)\"").findall(content)[0]
+  else:
+    mediaUrl = url  
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return

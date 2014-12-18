@@ -1,3 +1,6 @@
+v 1.0.15
+Fix anhtrang
+
 v 1.0.14
 Fix dangcaphd
 Fix anhtrang
@@ -44,7 +47,7 @@ Code cleanup
 Fix icon
 
 v 1.0.2
-Fixed Phim3s' Search
+Fix Phim3s' Search
 
 v 1.0.1
 Update phim3s

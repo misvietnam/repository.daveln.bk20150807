@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!-- Categories: Main Menu, News, Music, Sitcom, TV Shows, Cooking, MakeUp, AudioBook -->
+<!-- Categories: Main Menu, OverseaNews, NewsInVN, Music, Sitcom, TV Shows, Sports, Cooking, MakeUp, AudioBook -->
 
 <stream>
 
 <!------------ Main Menu ----------------->
 
 <item>
-<title>Main Menu - Tin Tức</title>
+<title>Main Menu Plus - Tin Tức</title>
 <link>TinTuc</link>
 <thumbnail>tintuc.png</thumbnail>
 </item>
@@ -31,6 +31,12 @@
 </item>
 
 <item>
+<title>Main Menu - Thể Thao</title>
+<link>HaiKich</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
 <title>Main Menu - Nấu Ăn</title>
 <link>NauAn</link>
 <thumbnail>nauan.png</thumbnail>
@@ -48,84 +54,158 @@
 <thumbnail>doctruyen.png</thumbnail>
 </item>
 
-<!------------ News ---------------------->
+<!------------ OverseaNews --------------->
 
 <item>
-<title>News - SBTN USA</title>
+<title>OverseaNews - SBTN USA</title>
 <link>http://gdata.youtube.com/feeds/api/users/sbtnofficial/uploads?start-index=1&max-results=50</link>
 <thumbnail>sbtn.png</thumbnail>
 </item>
 
 <item>
-<title>News - SBTN Canada</title>
+<title>OverseaNews - SBTN Houston</title>
+<link>http://gdata.youtube.com/feeds/api/users/sbtnhosuton/uploads?start-index=1&max-results=50</link>
+<thumbnail>sbtnhouston.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - SBTN Boston</title>
+<link>http://gdata.youtube.com/feeds/api/users/newssbtnboston/uploads?start-index=1&max-results=50</link>
+<thumbnail>sbtnboston.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - SBTN Canada</title>
 <link>http://gdata.youtube.com/feeds/api/users/thoibaocanada/uploads?start-index=1&max-results=50</link>
 <thumbnail>sbtncanada.png</thumbnail>
 </item>
 
 <item>
-<title>News - SBTN Úc Châu</title>
+<title>OverseaNews - SBTN Úc Châu</title>
 <link>http://gdata.youtube.com/feeds/api/users/SBTNAUS/uploads?start-index=1&max-results=50</link>
 <thumbnail>sbtnucchau.png</thumbnail>
 </item>
 
 <item>
-<title>News - Người Việt Online</title>
+<title>OverseaNews - Người Việt Online</title>
 <link>http://gdata.youtube.com/feeds/api/users/NguoiVietOnline/uploads?start-index=1&max-results=50</link>
 <thumbnail>nguoiviet.png</thumbnail>
 </item>
 
 <item>
-<title>News - Phố Bolsa TV</title>
+<title>OverseaNews - Phố Bolsa TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/PhoBolsaTV/uploads?start-index=1&max-results=50</link>
 <thumbnail>phobolsatv.png</thumbnail>
 </item>
 
 <item>
-<title>News - VA TV Online</title>
+<title>OverseaNews - VA TV Online</title>
 <link>http://gdata.youtube.com/feeds/api/users/VATVONLINE/uploads?start-index=1&max-results=50</link>
 <thumbnail>vatv.png</thumbnail>
 </item>
 
 <item>
-<title>News - LSTV Network</title>
+<title>OverseaNews - LSTV Network</title>
 <link>http://gdata.youtube.com/feeds/api/users/LSTVNETWORK/uploads?start-index=1&max-results=50</link>
 <thumbnail>lstv.png</thumbnail>
 </item>
 
 <item>
-<title>News - Việt News TV</title>
+<title>OverseaNews - Việt News TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/vietnewstelevision/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnewstv.png</thumbnail>
 </item>
 
 <item>
-<title>News - Van TV Houston</title>
+<title>OverseaNews - Van TV Houston</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCj-SnkM-BNrsgsEM52TvmVw/uploads?start-index=1&max-results=50</link>
 <thumbnail>vza.png</thumbnail>
 </item>
 
 <item>
-<title>News - VOA</title>
+<title>OverseaNews - TDBroadcasting</title>
+<link>http://gdata.youtube.com/feeds/api/users/TDBroadcasting/uploads?start-index=1&max-results=50</link>
+<thumbnail>tdbroadcast.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - NWVietnameseNews</title>
+<link>http://gdata.youtube.com/feeds/api/users/NWVietnameseNews/uploads?start-index=1&max-results=50</link>
+<thumbnail>nwnews.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - Tiếng Nói Tự Do Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/TiengNoiTuDoVietNam/uploads?start-index=1&max-results=50</link>
+<thumbnail>tudonews.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - Truyền Hình Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/Truyenhinhvietnam1/uploads?start-index=1&max-results=50</link>
+<thumbnail>thvietnamnews.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - VOA</title>
 <link>http://gdata.youtube.com/feeds/api/users/VOATiengVietVideo/uploads?start-index=1&max-results=50</link>
 <thumbnail>voa.png</thumbnail>
 </item>
 
 <item>
-<title>News - BBC</title>
+<title>OverseaNews - BBC</title>
 <link>http://gdata.youtube.com/feeds/api/users/BBCVietnamese/uploads?start-index=1&max-results=50</link>
 <thumbnail>bbc.png</thumbnail>
 </item>
 
 <item>
-<title>News - RFA</title>
+<title>OverseaNews - RFA</title>
 <link>http://gdata.youtube.com/feeds/api/users/RFAVietnamese/uploads?start-index=1&max-results=50</link>
 <thumbnail>rfa.png</thumbnail>
 </item>
 
+<!------------- NewsInVN ----------------->
+
 <item>
-<title>[COLOR yellow] News - Tin Tức Trong Nước - [/COLOR]Truyền Hình Tuổi Trẻ</title>
+<title>NewsInVN - Truyền Hình Tuổi Trẻ</title>
 <link>http://gdata.youtube.com/feeds/api/users/truyenhinhtuoitre/uploads?start-index=1&max-results=50</link>
 <thumbnail>thtt.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Việt Weekly</title>
+<link>http://gdata.youtube.com/feeds/api/users/vietweeklytube/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietweekly.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTCTube</title>
+<link>http://gdata.youtube.com/feeds/api/users/vtctv/uploads?start-index=1&max-results=50</link>
+<thumbnail>vtctv.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTV - Đài Truyền hình Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTVgo/uploads?start-index=1&max-results=50</link>
+<thumbnail>vtvgo.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTVLife</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTVLife/uploads?start-index=1&max-results=50</link>
+<thumbnail>vtvlife.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTVShowbiz</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTVShowbiz/uploads?start-index=1&max-results=50</link>
+<thumbnail>vtvshowbiz.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTV4 on the Go</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTV4go/uploads?start-index=1&max-results=50</link>
+<thumbnail>vtv4go.png</thumbnail>
 </item>
 
 <!------------ Music --------------------->
@@ -185,7 +265,7 @@
 </item>
 
 <item>
-<title>Music - Dong Giao</title>
+<title>Music - Đồng Giao</title>
 <link>http://gdata.youtube.com/feeds/api/users/donggiaoofficial/uploads?start-index=1&max-results=50</link>
 <thumbnail>donggiao.png</thumbnail>
 </item>
@@ -244,6 +324,12 @@
 <title>Sitcom - Vân Sơn Hài Collection</title>
 <link>http://www.dailymotion.com/rss/user/danduphim88/1</link>
 <thumbnail>vanson.png</thumbnail>
+</item>
+
+<item>
+<title>Sitcom - Cafe Cười</title>
+<link>http://gdata.youtube.com/feeds/api/users/cafecuoisenvang/uploads?start-index=1&max-results=50</link>
+<thumbnail>cafecuoi.png</thumbnail>
 </item>
 
 <item>
@@ -420,6 +506,38 @@
 <title>TiviShows - X-Factor VN</title>
 <link>http://gdata.youtube.com/feeds/api/users/NhanToBiAn1/uploads?start-index=1&max-results=50</link>
 <thumbnail>xfactor.png</thumbnail>
+</item>
+
+<!------------- Sports ------------------->
+
+<item>
+<title>Sports - Thethao247vn</title>
+<link>http://gdata.youtube.com/feeds/api/users/Thethao247vn/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao247vn.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Bóng Đá</title>
+<link>http://gdata.youtube.com/feeds/api/users/cutinhofull/uploads?start-index=1&max-results=50</link>
+<thumbnail>bongda.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Thao Online</title>
+<link>http://gdata.youtube.com/feeds/api/users/UC6xlwDp7bWpzdhoBcq0mYsg/uploads?start-index=1&max-results=50</link>
+<thumbnail>ttonline.png</thumbnail>
+</item>
+
+<item>
+<title>Sports -  Báo Bóng Đá</title>
+<link>http://gdata.youtube.com/feeds/api/users/bongdaplustv/uploads?start-index=1&max-results=50</link>
+<thumbnail>baobongda.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - VTV Sport</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTVSport/uploads?start-index=1&max-results=50</link>
+<thumbnail>vtvsport.png</thumbnail>
 </item>
 
 <!------------ Cooking ------------------->

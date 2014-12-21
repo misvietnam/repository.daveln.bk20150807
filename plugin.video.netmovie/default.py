@@ -53,9 +53,6 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  
 def main():
-  add_Link('Daily Motion -  Asia : Mùa Hè Rực Rỡ -D1-1','plugin://plugin.video.dailymotion_com/?mode=playVideo&url=x188lgd','')
-  add_Link('Youtube - My Tam','plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=pYGNl0hqAbU','')
-  add_Link('Youtube - Dam Vinh Hung','plugin://plugin.video.youtube/?action=play_video&videoid=Hg6bFataO5g','')  
   addDir('[COLOR yellow]phim3s.net[/COLOR]',phim3s,2,logos+'phim3s_1.png')
   addDir('[COLOR lime]dangcaphd.com[/COLOR]',dchd,2,logos+'dchd_1.png')
   addDir('[COLOR lightblue]hdcaphe.com[/COLOR]',hd_caphe+'camera-quan-sat.html',2,logos+'hdcaphe.png')

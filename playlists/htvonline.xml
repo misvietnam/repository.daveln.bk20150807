@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+
+<stream>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]NATIONAL GEOGRAPHIC[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/national-geographic-3132366E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/26042014/natgeo2_59521398493696.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]DISCOVERY HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/discovery-hd-3132336E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/17052014/discovery-world-hd--edited_20461400345320.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]STAR MOVIE HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/star-movie-hd-3132376E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/18052014/star-movies-hd--edited_75921400346206.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]ESPN HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/espn-hd-3132346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/18052014/fox-sports-plus-logo--edited_12981400346294.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]STAR WORLD HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/star-world-hd-3132386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/18052014/star-world-hd--edited_72251400346181.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]HTV 2 - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv2-31336E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htv2_87041388139404.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]HTV 7 - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv7-34336E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htv7_27951388138557.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]HTV - Thể Thao[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv-the-thao-34386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htv_the-thao_74801388139968.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]HTV 1[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv1-32326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htv1_13781388139486.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]Bóng Đá TV - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/bong-da-tv-hd-3133346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/03062014/bongdahd_36191401776621.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]HTV 3[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv3-34396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/26032014/htv3_red_65681395806087.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]HTV 4[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv4-35306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htv4_70521388139563.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]HTV 9 -HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv9-37356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htv_9_96011388139602.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]HTVC - PHIM HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-phim-hd-35326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htvc_movie_50151388139835.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]Thuần Việt - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/thua%CC%80n-vie%CC%A3t-hd-39326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/thuanviet_hd_51441388139662.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]HTVC - PHIM[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-phim-3131306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27012014/htvc_movie_50151388139835_80281390814952.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]Thuần Việt[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/thua%CC%80n-vie%CC%A3t-3130396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27012014/thuan_viet_67731382411308_87811390814814.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]HTVC +[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-plus-htvc+-35316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27012014/c+_49641377055135_65111390814649.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]HTVC - Gia Đình[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-gia-dinh-34356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htvgiadinh_60171388139882.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]HTVC - Phụ Nữ[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-phu-nu-35356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/pn_66361388139915.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]HTVC - Du Lịch[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-du-lich-33396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/dulichvacuocsong_32651388139741.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]HTVC - SHOPPING[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-shopping.-34366E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/28122013/htvcshopping_57871388200808.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]HTVC - Ca Nhạc[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htvc-ca-nhac-34376E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/htvmusic_77851388140058.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]FBNC - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/fbnc-34306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/fbnc_92161388139631.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]HTV 2[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv2-3132326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/26042014/htv2_52321398488170.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]VTV 3 - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv3-hd-3133356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/16062014/vtv3_20711402902808.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]VTV 6 - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv6-hd-3133366E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/16062014/vtv6_43081402902871.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]VTV 1[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv1-32316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/21082013/vtv1_51961377055325.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]VTV 2[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv2-37326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/vtv2_56311397551336.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]VTV 3[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv3-32306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/21082013/vtv3_17021377055352.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]VTV 4[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv4-3131396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/vtv4_70941397553534.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]VTV 5[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv5-3132306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/vtv5_27181397553903.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]VTV 9[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv9-37346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/16042014/vtv9_97381397636733.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]YEAH 1[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/yeah1-3133396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/19072014/image001_96451405738891.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]VTC 3 - HD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc3-hd-3133376E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/03072014/vtc3_hd_64101404390449.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]VTC 4[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc4-3131366E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/vtc4_35721397550869.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]VTC 6[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc6-3131376E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/vtc6_46921397551003.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]VTC 7[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc7--today-tv-3131316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27012014/vtc7_94111385954243_86071390814842.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]VTC 9 - Let's Việt[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc9-%28lets-viet%29-3131326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27012014/vtc9_68331385954275_72011390814828.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]VTC 10[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc10-3131386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/vtc10_35531397551057.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]Việt Nam Net[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vietnamnet-3133386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/09072014/vietnamnet_92481404898331.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]Tây Ninh[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/tayninh-3134316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/25072014/ttv_11__76601406270531.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]Cần Thơ THTPCT[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/can-tho-thtpct-3130336E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/27122013/thtpct_39031388140843.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]Khánh Hoà KTV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/khanh-hoa-ktv-3130346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/21012014/khanhhoa_96941390299027.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]Lạng Sơn LSTV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/lang-son--lstv-38396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/lstv_41791389003996.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]Bình Định BTV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/binh-dinh--btv-33356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/21082013/btv_53201377055201.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]Nam Định NTV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/nam-di%CC%A3nh-ntv-3130386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/02012014/namdinh_44191388632405.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]Bình Dương 3[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/binh-duong-3-3130326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/28122013/btv3_81071388229441.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]Cà Mau CTV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/ca-mau--ctv-36376E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/ctv_57031389004403.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]Lào Cai THLC[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/lao-cai--thlc-37306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/thlc_30421389003882.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]Đồng Tháp THDT[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/dong-thap--thdt-36306E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15012014/thdtlogo_27321389779800.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]QUẢNG NAM QRT[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/quang-nam-qrt-3130356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/21012014/quang-nam_58201390299076.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]SÓC TRĂNG STV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/soc-trang-stv-35386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/21012014/std-logo_90471390298988.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]ĐẮC LẮC DRT[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/dac-lac--drt-36386E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/drt_16681389004338.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]ĐẮC NÔNG PTD[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/dac-nong--ptd-36396E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/ptd_89911389004281.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]HUẾ TRT[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/hue--trt-36346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/trt_16851389004073.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]BẮC GIANG BGTV[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/bac-giang--bgtv-36366E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/bgtv_57131389004599.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]VĨNH PHÚC VP[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vinh-phuc-vp-37316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/vp_63421389003728.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR green][B][UPPERCASE]Vĩnh Long THVL1[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/thvl1-vi%CC%83nh-long-36326E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/20012014/thvl1_65831390202372.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white][B][UPPERCASE]BÌNH PHƯỚC BPTV1[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/binh-phuoc-bptv1-33346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/bptv1_84661389004532.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR lime][B][UPPERCASE]LONG AN LA34[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/long-an-la34-35346E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/06012014/la34_24471389003778.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR yellow][B][UPPERCASE]bạc liêu[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/bac-lieu-3132316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/15042014/bac-lieu_29591397558042.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue][B][UPPERCASE]Hải Dương[/UPPERCASE][/B][/COLOR]</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name>
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/haiduong-3133316E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail>http://img.htvonline.com.vn/livetv/22052014/haiduong_86191400730736.png</thumbnail>
+</item>
+
+
+</stream>

@@ -1,0 +1,56 @@
+#EXTM3U
+
+#EXTINF:-1,[COLOR lime]SCTV 1[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv1_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/7/sctv1.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 2[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv2_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/2/sctv_2.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 3[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv3_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/10/sctv_3.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 4[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv4_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/9/sctv_4.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 5[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv5_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/11/sctv_5.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 6[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv6_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/12/sctv_6.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 7[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv7_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/13/sctv_7.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 8[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv8_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/14/sctv_8.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 9[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv9_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/8/sctv_9.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 10[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv10_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/15/sctv_10.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 11[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv11_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/16/sctv_11.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 12[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv12_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/17/sctv_12.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 13[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv13_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/18/sctv_13.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 14[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv14_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/19/sctv_14.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 15[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv15_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/20/sctv_15.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 16[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv16_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/21/sctv_16.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV 17 - Phim Tổng Hợp[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctv17_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/4/sctv_17.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR lime]SCTV HD - Thể Thao[/COLOR]
+rtmpe://112.197.2.154:1935/live/sctvhdthethao_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/22/sctv_hd_the_thao.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR yellow]VTV 1[/COLOR]
+rtmpe://112.197.2.154:1935/live/vtv1_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/41/vtv1.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR yellow]VTV 2[/COLOR]
+rtmpe://112.197.2.154:1935/live/vtv2_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/29/vtv2.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR yellow]VTV 3[/COLOR]
+rtmpe://112.197.2.154:1935/live/vtv3_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/30/vtv3.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR yellow]VTV 4[/COLOR]
+rtmpe://112.197.2.154:1935/live/vtv4_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/42/vtv4.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR yellow]VTV 6[/COLOR]
+rtmpe://112.197.2.154:1935/live/vtv6_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/32/vtv6.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR yellow]ANTV[/COLOR]
+rtmpe://112.197.2.154:1935/live/antv_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/31/antv.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR cyan]HTV 9[/COLOR]
+rtmpe://112.197.2.154:1935/live/htv9_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/40/htv9.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR orange]HN 1[/COLOR]
+rtmpe://112.197.2.154:1935/live/HN1_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/44/ha_noi_1.html token=1b#K8!3zc65ends!
+#EXTINF:-1,[COLOR orange]THVL 1[/COLOR]
+rtmpe://112.197.2.154:1935/live/thvl_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/46/thvl1.html token=1b#K8!3zc65ends!

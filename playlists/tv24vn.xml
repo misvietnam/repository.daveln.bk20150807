@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<stream>
+
+<item>
+<title>[COLOR lime]SCTV 1[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/7/sctv1.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/7/sctv1.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/7/sctv1.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 2[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/2/sctv_2.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/2/sctv2.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/2/sctv_2.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 3[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/10/sctv_3.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/10/bsctv3.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/10/sctv_3.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 4[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/9/sctv_4.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/9/sctv4.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/9/sctv_4.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 5[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/11/sctv_5.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/11/sctv5.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/11/sctv_5.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 6[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/12/sctv_6.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/12/sctv6.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/12/sctv_6.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 7[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/13/sctv_7.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/13/sctv7.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/13/sctv_7.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 8[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/14/sctv_8.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/14/sctv8.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/14/sctv_8.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 9[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/8/sctv_9.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/8/sctv9.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/8/sctv_9.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 10[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/15/sctv_10.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/15/sctv10.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/15/sctv_10.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 11[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/16/sctv_11.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/16/sctv11.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/16/sctv_11.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 12[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/17/sctv_12.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/17/sctv12.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/17/sctv_12.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 13[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/18/sctv_13.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/18/sctv13.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/18/sctv_13.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 14[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/19/sctv_14.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/19/sctv14.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/19/sctv_14.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 15[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/20/sctv_15.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/20/bsctv15.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/20/sctv_15.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 16[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/21/sctv_16.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/21/sctv16.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/21/sctv_16.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV 17 - Phim Tổng Hợp[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/4/sctv_17.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/4/sctv17.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/4/sctv_17.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR lime]SCTV HD - Thể Thao[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/22/sctv_hd_the_thao.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/22/sctvhdthethao.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/22/sctv_hd_the_thao.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR yellow]VTV 1[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/41/vtv1.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/41/vtv1.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/41/vtv1.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR yellow]VTV 2[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/29/vtv2.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/29/vtv2.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/29/vtv2.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR yellow]VTV 3[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/30/vtv3.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/30/vtv3.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/30/vtv3.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR yellow]VTV 4[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/42/vtv4.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/42/vtv4.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/42/vtv4.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR yellow]VTV 6[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/32/vtv6.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/32/vtv6.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/32/vtv6.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR yellow]ANTV[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/31/antv.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/31/antv.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/31/antv.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR cyan]HTV 9[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/40/htv9.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/40/htv9.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/40/htv9.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR orange]HN 1[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/44/ha_noi_1.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/44/hn1.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/44/ha_noi_1.html</page>
+<referer></referer>
+</regex>
+</item>
+
+<item>
+<title>[COLOR orange]THVL 1[/COLOR]</title>
+<link>rtmpe$doregex[tv24vn] swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/LiveTV/46/thvl1.html live=1 timeout=60 token=1b#K8!3zc65ends!</link>
+<thumbnail>http://tv24.vn/WebMedia/Channels/46/thvl1.png</thumbnail>
+<regex>
+<name>tv24vn</name>
+<expres>'file': 'http(.+?)\/playlist.m3u8</expres>
+<page>http://www.tv24.vn/LiveTV/46/thvl1.html</page>
+<referer></referer>
+</regex>
+</item>
+
+</stream>

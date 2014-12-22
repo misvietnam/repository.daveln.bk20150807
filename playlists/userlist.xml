@@ -684,4 +684,10 @@
 <thumbnail>muckhac.png</thumbnail>
 </item>
 
+<item>
+<title>Other -  Zui.vn</title>
+<link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
 </stream>

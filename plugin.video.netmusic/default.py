@@ -14,15 +14,14 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.                           
 
 You should have received a copy of the GNU General Public License      
-along with this program. If not, see <http://www.gnu.org/licenses/  
+along with this program. If not, see <http://www.gnu.org/licenses/>  
 '''                                                                           
 
 import urllib,urllib2,re,os
 import xbmcplugin,xbmcgui,xbmcaddon
 
-addon=xbmcaddon.Addon('plugin.video.netmusic')
-profile=xbmc.translatePath(addon.getAddonInfo('profile'))
 mysettings=xbmcaddon.Addon(id='plugin.video.netmusic')
+profile=mysettings.getAddonInfo('profile')
 home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
@@ -56,8 +55,8 @@ def main():
   addLink('[COLOR magenta]Viet MTV[/COLOR]','http://64.62.143.5:1935/live/donotstealmy-Stream1/playlist.m3u8?bitrate=800&q=high',logos+'vietmtv.png')		
   #addLink('[COLOR lightblue]Viet MTV[/COLOR]','rtmpe://64.62.143.5:1935/live/donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://www.vietstartv.com',logos+'vietmtv.png')		
   #addLink('[COLOR lightblue]Viet MTV[/COLOR]','rtmpe://64.62.143.5/live playpath=donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://zui.vn/livetv/viet-mtv-83.html',logos+'vietmtv.png')		
-  addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php',logos+'nhaccuatui.png')	
-  #addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108/live/ playpath=nctlive swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/nhac-cua-tui-40.html',logos+'nhaccuatui.png')	
+  addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php',logos+'nlive.png')	
+  #addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108/live/ playpath=nctlive swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/nhac-cua-tui-40.html',logos+'nlive.png')	
   addLink('[COLOR violet]VPop TV[/COLOR]','http://206.190.130.141:1935/liveStream/vpoptv_1/playlist.m3u8',logos+'vpop.png')
   addLink('[COLOR chocolate]iTV[/COLOR]','rtmp://live.kenhitv.vn/liveweb/ playpath=itv_web_500k.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/itv-10.html',logos+'itv.png')
   #addLink('[COLOR silver]iTV[/COLOR]','http://117.103.224.73:1935/live/_definst_/ITV/ITV_live.smil/playlist.m3u8',logos+'itv.png')
@@ -74,7 +73,7 @@ def search():
       print "Searching URL: "+url	  
       mediaList(url)
     except: pass
-  if 'Chia Sẻ Nhạc' in name:
+  elif 'Chia Sẻ Nhạc' in name:
     try:
       keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
       keyb.doModal()
@@ -84,7 +83,7 @@ def search():
       print "Searching URL: "+url	  
       CSN_mediaList_Search(url)
     except: pass
-  if 'Nhạc Của Tui' in name:
+  elif 'Nhạc Của Tui' in name:
     try:
       keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
       keyb.doModal()
@@ -111,12 +110,12 @@ def categories(url):
         pass
       else:		
         addDir('[COLOR cyan]'+name+'[/COLOR]',nhacso+'video-cua-nghe-si'+url.replace('.html','-1-1.html'),3,logos+'ns.png')	  	  
-  if 'chiasenhac' in url:
+  elif 'chiasenhac' in url:
     addDir('[COLOR yellow]Chia Sẻ Nhạc[B]   [COLOR lime]>[COLOR magenta]>[COLOR cyan]>[COLOR orange]>   [/B][COLOR yellow]Tìm Nhạc[/COLOR]',csn,1,logos+'csn.png')		
     match=re.compile("<a href=\"hd(.+?)\" title=\"([^\"]*)\"").findall(content)[1:8]
     for url,name in match:
 	  addDir('[COLOR lime]'+name+'[/COLOR]',csn+'hd'+url,3,logos+'csn.png')
-  if 'nhaccuatui' in url:
+  elif 'nhaccuatui' in url:
     addDir('[COLOR yellow]Nhạc Của Tui   [B][COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Video[/COLOR]',nctm,1,logos+'nhaccuatui.png')
     match=re.compile("href=\"http:\/\/m.nhaccuatui.com\/mv\/(.+?)\" title=\"([^\"]*)\"").findall(content)
     for url,name in match:		
@@ -144,7 +143,7 @@ def mediaList(url):
     match=re.compile("<a href=\"hd\/video\/([a-z]-video\/down[0-9]+).html\" class=\"npage\">(\d+)<\/a>").findall(content)
     for url,name in match:
       addDir('[COLOR orange]Trang Download Mới Nhất '+name+'[/COLOR]',csn+'hd/video/'+url+'.html',3,logos+'csn.png')	  
-  if 'nhacso' in url:		
+  elif 'nhacso' in url:		
     if 'the-loai-video' in url:
       match=re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\".+?\s.*?src=\"([^\"]+)\" width").findall(content)
       for url,name,thumbnail in match:
@@ -159,7 +158,7 @@ def mediaList(url):
       match=re.compile("<li ><a href=\"(.+?)\">(\d+)<\/a><\/li>").findall(content)
       for url,name in match:
         addDir('[COLOR lime]Trang '+name+'[/COLOR]',url,3,logos+'ns.png')
-  if 'nhacso.net/tim-kiem' in url or 'nhacso.net/tim-video' in url:	
+  elif 'nhacso.net/tim-kiem' in url or 'nhacso.net/tim-video' in url:	
     match=re.compile("href=\"(.+?)\" title=\"(.+?)\".+?>\s*<img width.+?src=\"(.+?)\"").findall(content)
     for url,name,thumbnail in match:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail) 
@@ -169,7 +168,7 @@ def mediaList(url):
     match=re.compile("style=\"cursor: pointer;\" href=\"(.+?)\"><ins>(\d+)<\/ins>").findall(content)
     for url,name in match:
       addDir('[COLOR lime]Trang '+name+'[COLOR orange]  >>>>[/COLOR]',url.replace(' ','%20'),3,logos+'ns.png')	  	  
-  if 'nhaccuatui' in url:
+  elif 'nhaccuatui' in url:
     match=re.compile("href=\"http:\/\/m.nhaccuatui.com\/video\/([^\"]*)\" title=\"([^\"]+)\"><img alt=\".+?\" src=\"(.*?)\"").findall(content)		
     for url,name,thumbnail in match:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',nctm+'video/'+url,thumbnail)
@@ -193,9 +192,9 @@ def resolveUrl(url):
       mediaUrl=re.compile("\"hd-2\".+?\"([^\"]+)\"").findall(content)[0].replace('%3A',':').replace('%2F','/').replace('%2520','%20')
     except:
       mediaUrl=re.compile("\"file\".*?\"([^\"]*)\"").findall(content)[-1].replace('%3A',':').replace('%2F','/').replace('%2520','%20')
-  if 'nhacso' in url:		
+  elif 'nhacso' in url:		
     mediaUrl=re.compile("src=\"([^\"]+)\" data-setup").findall(content)[0]	
-  if 'nhaccuatui' in url:
+  elif 'nhaccuatui' in url:
     mediaUrl=re.compile("title=\".+?\" href=\"([^\"]*)\"").findall(content)[0]  
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  

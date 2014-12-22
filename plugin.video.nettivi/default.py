@@ -14,15 +14,14 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.                           
 
 You should have received a copy of the GNU General Public License      
-along with this program. If not, see <http://www.gnu.org/licenses/  
+along with this program. If not, see <http://www.gnu.org/licenses/>  
 '''                                                                           
 
 import urllib,urllib2,re,os
 import xbmcplugin,xbmcgui,xbmcaddon
-	
-addon=xbmcaddon.Addon('plugin.video.nettivi')
-profile=xbmc.translatePath(addon.getAddonInfo('profile'))
+
 mysettings=xbmcaddon.Addon(id='plugin.video.nettivi')
+profile=mysettings.getAddonInfo('profile')
 home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
@@ -100,7 +99,7 @@ def fpt(url):
   for url,name in match:
     if 'livetv' in url:
       addDir('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,6,logos+'fptplay.png')
-    if 'film' in url or 'livetv' in url:
+    elif 'film' in url or 'livetv' in url:
       pass	
     else:
       addDir('[COLOR lime]'+name+'[/COLOR]',fptplay+url,4,logos+'fptplay.png')			
@@ -136,18 +135,18 @@ def index(url):
 	    add_Link('[COLOR yellow][UPPERCASE]'+name+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)	  
 	  else:	  
 	    add_Link('[COLOR lime][UPPERCASE]'+name.replace('b','')+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)
-  if 'htvonline' in url:
+  elif 'htvonline' in url:
 	match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
 	for url,name,thumbnail in match:
 	  add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
-  if 'fptplay' in url:
+  elif 'fptplay' in url:
 	match=re.compile("channel=\"(.*?)\" href=\"(.+?)\" data=\".+?\">\s+<img src=\"(.*?)\"").findall(content)
 	for name,url,thumbnail in match:
 	  if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
 	    add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
 	  else:
 	    add_Link('[COLOR lime]'+name+'[/COLOR]',fptplay+url,thumbnail)						
-  if 'zui' in url:
+  elif 'zui' in url:
     match=re.compile("alt='(.+?)' href='(.+?)'><img src='(.+?)'").findall(content)[3:36]
     for name,url,thumbnail in match:
       if 'SCTV1' in name or 'VTC14' in name or 'ITV' in name or 'Nhạc của tui' in name or 'Thuần Việt' in name:

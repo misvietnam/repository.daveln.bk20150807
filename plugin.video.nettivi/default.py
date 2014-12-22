@@ -28,13 +28,14 @@ fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 viet_simpletv='https://raw.githubusercontent.com/giolao/Viet-Simpletv/master/playlist.m3u'
-tvchannels='https://www.dropbox.com/s/kwodh4i7zsovhjl/tvchannels.json?raw=1'
-haotivi='https://www.dropbox.com/s/e2wycvbvnh2sh49/haotivi.json?raw=1'
+tvchannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/tvchannels.json'
+haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/haotivi.json'
 vtcplay='http://117.103.206.21:88/Channel/GetChannels'
 htvonline='http://www.htvonline.com.vn/livetv'
 fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
 zuitv='http://zui.vn/livetv.html'
+token = 'token=1b#K8!3zc65ends!'
 
 def makeRequest(url):
   try:
@@ -278,7 +279,8 @@ def resolveUrl(url):
   if 'htvonline' in url:		
     mediaUrl=re.compile("file: \"([^\"]*)\"").findall(content)[0]	
   elif 'tv24' in url:
-    mediaUrl='http'+re.compile('\'file\': \'http([^\']*)').findall(content)[0]	
+    videoUrl=re.compile('\'file\': \'http([^\']*)\/playlist.m3u8').findall(content)[0]
+    mediaUrl='rtmpe' + videoUrl + ' swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ ' + token
   elif 'zui' in url:
     mediaUrl=re.compile('livetv_play\(\'player\', \'1\', \'(.+?)\'\)').findall(content)[0]	
   elif 'fptplay' in url:

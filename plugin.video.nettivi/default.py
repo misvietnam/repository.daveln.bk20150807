@@ -26,7 +26,7 @@ home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
-viet_simpletv='https://raw.githubusercontent.com/giolao/Viet-Simpletv/master/playlist.m3u'
+viet_simpletv='https://raw.githubusercontent.com/giolao/Viet-Simpletv/master/new_playlist.m3u'
 tvchannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/tvchannels.json'
 haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/haotivi.json'
 vtcplay='http://117.103.206.21:88/Channel/GetChannels'
@@ -93,17 +93,20 @@ def vietsimpletv(url):
       addLink('[COLOR yellow]'+name+'[/COLOR]',url,logos+'vietsimpletv.png')		  
   
 def fpt(url):
-  addDir('[COLOR cyan]Tìm FPTPlay\'s Video[B]   [COLOR cyan]>[COLOR yellow]>[COLOR lime]>[COLOR orange]>   [/B][COLOR orange]Video Search[/COLOR]',fptplay,11,logos+'fptplay.png')		 
+  #addDir('[COLOR cyan]Tìm FPTPlay\'s Video[B]   [COLOR cyan]>[COLOR yellow]>[COLOR lime]>[COLOR orange]>   [/B][COLOR orange]Video Search[/COLOR]',fptplay,11,logos+'fptplay.png')		 
   content=makeRequest(url)	
   match=re.compile("<li ><a href=\"(.+?)\" class=\".+?\">(.+?)<\/a><\/li>").findall(content)
   for url,name in match:
     if 'livetv' in url:
       addDir('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,6,logos+'fptplay.png')
+    else: 
+      pass
+'''      
     elif 'film' in url or 'livetv' in url:
       pass	
     else:
       addDir('[COLOR lime]'+name+'[/COLOR]',fptplay+url,4,logos+'fptplay.png')			
-
+'''
 def mediaList(url):	
   content=makeRequest(url)
   match=re.compile("<div class=\"col\">\s*<a href=\"([^\"]+)\">\s*<img src=\"([^\"]*)\" alt=\"(.+?)\"").findall(content)
@@ -140,7 +143,7 @@ def index(url):
 	for url,name,thumbnail in match:
 	  add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
   elif 'fptplay' in url:
-	match=re.compile("channel=\"(.*?)\" href=\"(.+?)\" data=\".+?\">\s+<img src=\"(.*?)\"").findall(content)
+	match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
 	for name,url,thumbnail in match:
 	  if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
 	    add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
@@ -284,8 +287,8 @@ def resolveUrl(url):
     mediaUrl=re.compile('livetv_play\(\'player\', \'1\', \'(.+?)\'\)').findall(content)[0]	
   elif 'fptplay' in url:
     if 'livetv' in url: 
-	  mediaUrl=re.compile('var video_str = "<video id=\'main-video\' src=\'" \+ "(.+?)"').findall(content)[0]	
-	  #mediaUrl=re.compile('var video_str = "<video id=\'main-video\' src=\'" \+ "(.+?)"').findall(content)[0].replace('1000.stream','2500.stream')						
+      #mediaUrl=re.compile('"hls_stream": "(.+?)"').findall(content)[0] # ?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
+      mediaUrl=re.compile('"adapt_hls": "(.+?)"').findall(content)[0]   # No token    
     else:
 	  mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
   item=xbmcgui.ListItem(path=mediaUrl)

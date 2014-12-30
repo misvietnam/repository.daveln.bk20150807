@@ -578,6 +578,17 @@
 <thumbnail>dulich.png</thumbnail>
 </item>
 
+<item>
+<title>Travel - Văn hóa Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/vanhoaviettv/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Khám Phá Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/KhamPhaVietNamVTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
 <!------------ Medical ------------------->
 
 <item>
@@ -685,14 +696,20 @@
 <!------------ Other ---------------->
 
 <item>
-<title>Other -  HTVOnline Entertainment</title>
+<title>Other - HTVOnline Entertainment</title>
 <link>http://gdata.youtube.com/feeds/api/users/htvonlinetube/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 
 <item>
-<title>Other -  Zui.vn</title>
+<title>Other - Zui.vn</title>
 <link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Khoa học - Đời sống</title>
+<link>http://gdata.youtube.com/feeds/api/users/khoahoctv/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

@@ -165,6 +165,12 @@
 </item>
 
 <item>
+<title>OverseaNews - Quê Hương Media</title>
+<link>http://gdata.youtube.com/feeds/api/users/quehuongradio/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - VOA</title>
 <link>http://gdata.youtube.com/feeds/api/users/VOATiengVietVideo/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -547,7 +553,7 @@
 </item>
 
 <item>
-<title>Sports -  Báo Bóng Đá</title>
+<title>Sports - Báo Bóng Đá</title>
 <link>http://gdata.youtube.com/feeds/api/users/bongdaplustv/uploads?start-index=1&max-results=50</link>
 <thumbnail>thethao.png</thumbnail>
 </item>
@@ -567,7 +573,7 @@
 </item>
 
 <item>
-<title>Travel -  Du lịch Thái Lan</title>
+<title>Travel - Du lịch Thái Lan</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCj799b-m3Ve44vPoD1NDbxA/uploads?start-index=1&max-results=50</link>
 <thumbnail>dulich.png</thumbnail>
 </item>
@@ -601,7 +607,7 @@
 </item>
 
 <item>
-<title>Cooking -  Cathy Ha</title>
+<title>Cooking - Cathy Ha</title>
 <link>http://gdata.youtube.com/feeds/api/users/VietFoodie/uploads?start-index=1&max-results=50</link>
 <thumbnail>nauan.png</thumbnail>
 </item>

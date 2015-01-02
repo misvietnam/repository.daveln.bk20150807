@@ -131,7 +131,8 @@ def mediaLists(url):
     match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
     for url, thumbnail, name in match:
       name = name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
-      url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')	  
+      #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
+      url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	      
       addLink(name, url, thumbnail)
     match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
     for url in match:  

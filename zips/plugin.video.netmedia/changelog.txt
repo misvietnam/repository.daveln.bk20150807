@@ -1,3 +1,18 @@
+v 1.0.4 (Jan. 2, 2015)
+a. Remove import youtube
+b. Remove import dailymotion
+c. Users need to install 
+youtube and dailymotion manually
+
+d. Download link for youtube
+https://github.com/bromix/plugin.video.youtube
+
+e. Download links for youtube's older versions 
+http://ftp.vim.org/pub/pub/mediaplayer/xbmc/addons/frodo/plugin.video.youtube/
+
+f. Download link for Dailymotion
+https://github.com/AddonScriptorDE/plugin.video.dailymotion_com
+
 v 1.0.3
 update
 

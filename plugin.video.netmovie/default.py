@@ -60,7 +60,7 @@ def main():
   addDir('[COLOR lightgreen]phimhayhd.tv[/COLOR]',hayhd,2,logos+'hayhd.png')
   addDir('[COLOR lightblue]hdcaphe.com[/COLOR]',hd_caphe+'camera-quan-sat.html',2,logos+'hdcaphe.png')  
   addDir('[COLOR cyan]phimgiaitri.vn[/COLOR]',pgt,5,logos+'pgt.png')
-  #addDir('[COLOR lime]dangcaphd.com[/COLOR]',dchd,2,logos+'dchd_1.png')  
+  addDir('[COLOR lime]dangcaphd.com[/COLOR]',dchd,2,logos+'dchd_1.png')  
   #addDir('[COLOR magenta]fptplay.net[/COLOR]',fptplay,2,logos+'fptplay.png')
   #addDir('[COLOR silver]zui.vn[/COLOR]',zui,2,logos+'zui.png')   
  
@@ -301,12 +301,12 @@ def categories(url):
     for url, name in match:  
       addDir('[COLOR lime]Videos - ' + name + '[/COLOR]', megaboxvn + 'video-clip/' + url, 15, logos + 'megabox.png')	
   elif 'phimhayhd' in url:
-    addDir('[COLOR yellow]phimhayhd[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR cyan]Tìm Phim Lẻ[/COLOR]', hayhd, 9, logos + 'hayhd.png')
-    addDir('[COLOR lime]phimhayhd[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR cyan]Tìm Phim Bộ[/COLOR]', hayhd, 1, logos + 'hayhd.png')  
+    addDir('[COLOR yellow]phimhayhd[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim Lẻ[/COLOR]', hayhd, 9, logos + 'hayhd.png')
+    addDir('[COLOR lime]phimhayhd[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR lime]Tìm Phim Bộ[/COLOR]', hayhd, 1, logos + 'hayhd.png')  
     content = makeRequest(hayhd) 
     match = re.compile('href=".+?the-loai([^"]*)">([^>]+)<').findall(content)[0:16]  
     for url, name in match:  
-      addDir('[COLOR cyan]Phim Lẻ - [COLOR yellow]' + name.replace('Phim','') + '[/COLOR]', ('%sthe-loai%s' % (hayhd, url)), 3, logos + 'hayhd.png')
+      addDir('[COLOR cyan]Phim Lẻ - [COLOR yellow]' + name.replace('Phim ','') + '[/COLOR]', ('%sthe-loai%s' % (hayhd, url)), 3, logos + 'hayhd.png')
     match = re.compile('href=".+?phim-bo([^"]*)">([^>]+)<').findall(content)[0:4] 
     for url, name in match: 
       addDir('[COLOR orange]Phim Bộ - [COLOR lime]' + name + '[/COLOR]', ('%sphim-bo%s' % (hayhd, url)), 7, logos + 'hayhd.png')	

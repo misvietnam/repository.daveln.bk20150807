@@ -1,3 +1,6 @@
+v 1.0.18
+Re-enable dangcaphd
+
 v 1.0.17
 Add phimhayhd.vn
 Disable dangcaphd

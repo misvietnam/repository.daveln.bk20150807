@@ -25,8 +25,8 @@ profile=mysettings.getAddonInfo('profile')
 home=mysettings.getAddonInfo('path')
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
-homemenu=xbmc.translatePath(os.path.join(home, 'userlist.xml'))
-homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/userlist.xml'
+homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
+homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
 
 if not os.path.exists(homemenu):
   try:
@@ -40,15 +40,16 @@ if status==200:
 else:
   pass
 
-def userlist():
+def menulist():
   try:
     mainmenu=open(homemenu, 'r')  
-    menulink=mainmenu.read()
+    mlink=mainmenu.read()
     mainmenu.close()
-    return menulink
+    match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(mlink)
+    return match
   except:
     pass	
-	
+  
 def makeRequest(url):
   try:
     req=urllib2.Request(url)
@@ -61,9 +62,7 @@ def makeRequest(url):
     pass
 		
 def main():
-  content=userlist()
-  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
-  for title, url, thumbnail in match:
+  for title, url, thumbnail in menulink:
     if 'Main Menu - ' in title:  
       addDir(title.replace('Main Menu - ',''), url , 2, logos + thumbnail)
     elif 'Main Menu Plus - ' in title:  
@@ -74,11 +73,9 @@ def main():
 def directories():
   addDir('Tin Tức Hải Ngoại', url, 2, logos + 'haingoai.png')
   addDir('Tin Tức Trong Nước', url, 2, logos + 'vietnam.png')
-	  
+      
 def categories():
-  content=userlist()
-  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
-  for title, url, thumbnail in match:
+  for title, url, thumbnail in menulink:
     if 'Tin Tức Hải Ngoại' in name:
       if 'OverseaNews' in title:	
         addDir(title.replace('OverseaNews - ',''), url , 3, logos + thumbnail)
@@ -127,7 +124,7 @@ def categories():
       if 'Other' in title:	
         addDir(title.replace('Other - ',''), url , 3, logos + thumbnail)
       else: pass	  
-	  
+      
 def mediaLists(url):
   content=makeRequest(url)
   if 'youtube' in url:	  
@@ -138,7 +135,7 @@ def mediaLists(url):
       addLink(name, url, thumbnail)
     match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
     for url in match:  
-      addDir('[COLOR yellow]Trang kế tiếp  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;','&'), 3, icon)		  
+      addDir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;','&'), 3, icon)		  
   elif 'dailymotion' in url:	    
     match=re.compile('<title>(.+?)<\/title>\s*<link>(.+?)_.+?<\/link>\s*<description>.+?src="(.+?)"').findall(content)
     for name, url, thumbnail in match:  
@@ -147,7 +144,7 @@ def mediaLists(url):
       addLink(name, url, thumbnail)
     match=re.compile('<dm:link rel="next" href="(.+?)"').findall(content)
     for url in match:  
-      addDir('[COLOR lime]Trang kế tiếp  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url, 3, icon)	
+      addDir('[COLOR lime]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url, 3, icon)	
 	  
 def resolveUrl(url):
   mediaUrl = url	
@@ -186,7 +183,8 @@ def addLink(name,url,iconimage):
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   liz.setProperty('IsPlayable', 'true')  
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
-                     
+
+menulink=menulist()  
 params=get_params()
 url=None
 name=None

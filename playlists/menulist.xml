@@ -171,6 +171,12 @@
 </item>
 
 <item>
+<title>OverseaNews - Thư Viện Toàn Cầu</title>
+<link>http://www.dailymotion.com/rss/user/ThuVienToanCau/1</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - VOA</title>
 <link>http://gdata.youtube.com/feeds/api/users/VOATiengVietVideo/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -191,8 +197,26 @@
 <!------------- NewsInVN ----------------->
 
 <item>
-<title>NewsInVN - Truyền Hình Tuổi Trẻ</title>
+<title>NewsInVN - Truyền Hình Tuổi Trẻ Link# 1</title>
 <link>http://gdata.youtube.com/feeds/api/users/truyenhinhtuoitre/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Truyền Hình Tuổi Trẻ Link# 2</title>
+<link>http://www.dailymotion.com/rss/user/truyenhinhtuoitre/1</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTV - Đài Truyền Hình Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTVgo/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VIETNAM NEWS AGENCY</title>
+<link>http://www.dailymotion.com/rss/user/TTXVN/1</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -205,12 +229,6 @@
 <item>
 <title>NewsInVN - VTCTube</title>
 <link>http://gdata.youtube.com/feeds/api/users/vtctv/uploads?start-index=1&max-results=50</link>
-<thumbnail>vietnam.png</thumbnail>
-</item>
-
-<item>
-<title>NewsInVN - VTV - Đài Truyền hình Việt Nam</title>
-<link>http://gdata.youtube.com/feeds/api/users/VTVgo/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -325,8 +343,8 @@
 </item>
 
 <item>
-<title>Music - Thế giới Giải Trí</title>
-<link>http://www.dailymotion.com/rss/user/VideoGiaiTri/1</link>
+<title>Music - POPS VIỆT NAM</title>
+<link>http://www.dailymotion.com/rss/user/PopsVietNam/1</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -339,6 +357,18 @@
 <item>
 <title>Music - Ca Nhạc</title>
 <link>http://www.dailymotion.com/rss/user/Music24h/1</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Thế giới Giải Trí</title>
+<link>http://www.dailymotion.com/rss/user/VideoGiaiTri/1</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Ca Nhạc Việt Nam</title>
+<link>http://www.dailymotion.com/rss/user/TaiSON1973/1</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -564,6 +594,12 @@
 <thumbnail>thethao.png</thumbnail>
 </item>
 
+<item>
+<title>Sports - Tin Thể Thao</title>
+<link>http://www.dailymotion.com/rss/user/johny_huy/1</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
 <!------------- Travel ------------------->
 
 <item>
@@ -641,6 +677,12 @@
 <thumbnail>nauan.png</thumbnail>
 </item>
 
+<item>
+<title>Cooking - Sinh Tố</title>
+<link>http://www.dailymotion.com/rss/user/hocnauan/1</link>
+<thumbnail>nauan.png</thumbnail>
+</item>
+
 <!------------ MakeUp -------------------->
 
 <item>
@@ -704,6 +746,18 @@
 <item>
 <title>Other - Khoa học - Đời sống</title>
 <link>http://gdata.youtube.com/feeds/api/users/khoahoctv/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Vietnamese Cuisine</title>
+<link>http://www.dailymotion.com/rss/user/VietnameseCuisine/1</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Chương Trình Tổng Hợp</title>
+<link>http://www.dailymotion.com/rss/user/Viettrinh/1</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

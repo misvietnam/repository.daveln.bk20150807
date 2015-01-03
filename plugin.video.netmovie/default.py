@@ -218,7 +218,7 @@ def categories(url):
     for url,name in match:
       addDir('[COLOR lightgreen]'+name+'[/COLOR]',dchd+'movie'+url,3,logos+'dchd_2.png')					
   elif 'phimgiaitri' in url:
-    addDir('[COLOR lime]phimgiatri[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR lime]Tìm Phim Lẻ[/COLOR]',pgt,1,logos+'pgt.png')
+    addDir('[COLOR lime]phimgiaitri[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR lime]Tìm Phim Lẻ[/COLOR]',pgt,1,logos+'pgt.png')
     match=re.compile('<a href=\'result.php\?type=Phim Lẻ(.+?)\'><span>(.+?)<\/span>').findall(content)
     for url,name in match:
       addDir('[COLOR yellow]'+name+'[/COLOR]',pgt+'result.php?type=Phim%20L%E1%BA%BB'+url.replace(' ','%20'),3,logos+'pgt.png')	
@@ -401,7 +401,7 @@ def pgtri():
 def dirs(url):
   content=makeRequest(url) 
   if 'phimgiaitri' in url:
-    addDir('[COLOR yellow]phimgiatri[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim Bộ[/COLOR]',pgt,9,logos+'pgt.png')
+    addDir('[COLOR yellow]phimgiaitri[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim Bộ[/COLOR]',pgt,9,logos+'pgt.png')
     match=re.compile('<a href=\'result.php\?type=Phim Bộ(.+?)\'><span>(.+?)<\/span>').findall(content) 
     for url,name in match:
       addDir('[COLOR lime]'+name+'[/COLOR]',pgt+'result.php?type=Phim%20B%E1%BB%99'+url.replace(' ','%20'),7,logos+'pgt.png')
@@ -507,6 +507,9 @@ def episodes(url,name):
       add_Link('[COLOR yellow]Tập '+title+'[/COLOR]',hd_caphe+url,logos+'hdcaphe.png')  
   elif 'megabox' in url:
     thumbnail = re.compile ('<link rel="image_src" href="(.+?)"').findall(content)[-1]
+    match = re.compile('<option selected="selected"  value="(.+?)">(.+?)<\/option>').findall(content)
+    for url, title in match:
+      add_Link('[COLOR cyan]' + title + '[COLOR magenta] - ' + name + '[/COLOR]',megaboxvn + url,thumbnail + '?.jpg')     
     match = re.compile('<option  value="(.+?)">(.+?)<\/option>').findall(content)
     for url, title in match:
       add_Link('[COLOR cyan]' + title + '[COLOR magenta] - ' + name + '[/COLOR]',megaboxvn + url,thumbnail + '?.jpg') 

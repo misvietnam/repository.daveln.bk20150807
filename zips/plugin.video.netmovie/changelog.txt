@@ -1,3 +1,7 @@
+v 1.0.19
+Add Tập 1 to megabox
+Add more info to addon.xml
+
 v 1.0.18
 Re-enable dangcaphd
 

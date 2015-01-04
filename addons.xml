@@ -81,7 +81,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.netporn18+"
+<addon id="plugin.video.netporn"
        name="*net[COLOR red]porn[COLOR yellow]18+[/COLOR]"
        version="1.0.0"
        provider-name="DaveLN">

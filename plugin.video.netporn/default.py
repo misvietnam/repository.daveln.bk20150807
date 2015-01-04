@@ -20,7 +20,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/
 import urllib,urllib2,re,os
 import xbmcplugin,xbmcgui,xbmcaddon
 
-mysettings=xbmcaddon.Addon(id='plugin.video.netporn18+')
+mysettings=xbmcaddon.Addon(id='plugin.video.netporn')
 profile=mysettings.getAddonInfo('profile')
 home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))

@@ -54,7 +54,6 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  addLink('[COLOR blue]test[/COLOR]','http://stream05.phimhayhd.vn:1935/phimle/_definst_/mp4:2014/iceman.2014/750/iceman.2014.mp4/playlist.m3u8','')
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')

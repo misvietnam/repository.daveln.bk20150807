@@ -15,7 +15,14 @@
   <extension point="xbmc.addon.metadata">
     <summary>TV</summary>
     <description>Internet TV</description>
-	<disclaimer lang="en">I am not responsible for the contents of these streams, which are pulled from online provider(s). The streams do not represent my views or opinions in any way.</disclaimer>	
+	<disclaimer lang="en">
+[COLOR lime]The streaming media are pulled from online provider(s).
+[COLOR red]These streams do not represent my views or opinions in any way.[/COLOR]</disclaimer>
     <platform>all</platform>
+		<license>http://www.gnu.org/licenses/</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/daveln/repository.daveln</source>  
   </extension>
 </addon>

@@ -34,6 +34,7 @@ htvonline='http://www.htvonline.com.vn/livetv'
 fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
 zuitv='http://zui.vn/livetv.html'
+listream='http://new.livestream.com'
 token = 'token=1b#K8!3zc65ends!'
 
 def makeRequest(url):
@@ -53,10 +54,12 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
+  addLink('[COLOR blue]test[/COLOR]','http://stream05.phimhayhd.vn:1935/phimle/_definst_/mp4:2014/iceman.2014/750/iceman.2014.mp4/playlist.m3u8','')
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
-  addDir('[COLOR lightblue]FPTPlay[/COLOR]',fptplay,2,logos+'fptplay.png')  
+  addDir('[COLOR lightblue]FPTPlay[/COLOR]',fptplay,2,logos+'fptplay.png')
+  addDir('[COLOR lightblue]Livestream[/COLOR]',listream+'/watch',6,logos+'listream.png')  
   addDir('[COLOR cyan]haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
   #addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
   addDir('[COLOR yellow]VietSimple TV[/COLOR]',viet_simpletv,10,logos+'vietsimpletv.png')  
@@ -142,6 +145,10 @@ def index(url):
 	match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
 	for url,name,thumbnail in match:
 	  add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
+  elif 'livestream' in url:
+	match=re.compile('href="([^"]*)".+?src="([^"]+)".+?\s.+\s.+title="([^>]*)"').findall(content)
+	for url,thumbnail,name in match:
+	  add_Link('[COLOR yellow]'+name+'[/COLOR]',listream+url,thumbnail)    
   elif 'fptplay' in url:
 	match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
 	for name,url,thumbnail in match:
@@ -283,6 +290,8 @@ def resolveUrl(url):
   elif 'tv24' in url:
     videoUrl=re.compile('\'file\': \'http([^\']*)\/playlist.m3u8').findall(content)[0]
     mediaUrl='rtmpe' + videoUrl + ' swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ ' + token
+  elif 'livestream' in url:
+    mediaUrl=re.compile('"rtsp_url":"(.+?)"').findall(content)[0]    
   elif 'zui' in url:
     mediaUrl=re.compile('livetv_play\(\'player\', \'1\', \'(.+?)\'\)').findall(content)[0]	
   elif 'fptplay' in url:

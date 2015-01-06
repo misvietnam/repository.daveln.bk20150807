@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!-- Categories: Main Menu, OverseaNews, NewsInVN, Music, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, MakeUp, AudioBook, OtherStuff -->
+<!-- Categories: Main Menu, OverseaNews, NewsInVN, Music, Karaoke, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, MakeUp, AudioBook, OtherStuff -->
 
 <stream>
 
@@ -16,6 +16,12 @@
 <title>Main Menu - Ca Nhạc</title>
 <link>CaNhac</link>
 <thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Main Menu - Hát Karaoke</title>
+<link>Karaoke</link>
+<thumbnail>karaoke.png</thumbnail>
 </item>
 
 <item>
@@ -49,9 +55,9 @@
 </item>
 
 <item>
-<title>Main Menu - Nấu Ăn</title>
+<title>Main Menu - Ẩm Thực Tình Yêu</title>
 <link>NauAn</link>
-<thumbnail>nauan.png</thumbnail>
+<thumbnail>amthuctinhyeu.png</thumbnail>
 </item>
 
 <item>
@@ -372,6 +378,92 @@
 <thumbnail>canhac.png</thumbnail>
 </item>
 
+<!------------ Karaoke ------------------->
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]ViCi karaoke online</title>
+<link>http://gdata.youtube.com/feeds/api/users/vcbuikara1993/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]KARAOKE YOU SING FREE</title>
+<link>http://gdata.youtube.com/feeds/api/users/nguyenhoangthanh1/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 1</title>
+<link>http://gdata.youtube.com/feeds/api/users/karaokephamvanvang/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 2</title>
+<link>http://gdata.youtube.com/feeds/api/users/letaiducks/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 3</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCqLIjOVf9_YMNeydzpEXf1w/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 4</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCvfYGLpsIShZvMFAIubbo4Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 5</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCwnnS6DdCQ8VOr4SH4CbV1Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 6</title>
+<link>http://gdata.youtube.com/feeds/api/users/NguyenTanLuc2/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 7</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCN0AKDjI-TIbAmUGdS9Rc0A/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 8</title>
+<link>http://gdata.youtube.com/feeds/api/users/nhacsongnguyenthanh/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Karaoke On VEVO</title>
+<link>http://gdata.youtube.com/feeds/api/users/KaraokeOnVEVO/uploads?start-index=1&max-results=50</link>
+<thumbnail>englishkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]The KARAOKE Channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/TheKARAOKEChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>englishkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Sing Sing Karaoke </title>
+<link>http://gdata.youtube.com/feeds/api/users/singkingkaraoke/uploads?start-index=1&max-results=50</link>
+<thumbnail>englishkaraoke.png</thumbnail>
+</item>
+
+<item>
+<title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Sing Song Music</title>
+<link>http://gdata.youtube.com/feeds/api/users/singsongsmusic/uploads?start-index=1&max-results=50</link>
+<thumbnail>englishkaraoke.png</thumbnail>
+</item>
+
 <!------------ Sitcom -------------------->
 
 <item>
@@ -642,45 +734,51 @@
 <!------------ Cooking ------------------->
 
 <item>
-<title>Cooking - Xuân Hồng</title>
-<link>http://gdata.youtube.com/feeds/api/users/tdmaison/uploads?start-index=1&max-results=50</link>
-<thumbnail>nauan.png</thumbnail>
-</item>
-
-<item>
-<title>Cooking - Uyên Thi</title>
+<title>Cooking - Uyên Thi - Bếp Nhà Ta Nấu</title>
 <link>http://gdata.youtube.com/feeds/api/users/UyenThyCooking2013/uploads?start-index=1&max-results=50</link>
-<thumbnail>nauan.png</thumbnail>
-</item>
-
-<item>
-<title>Cooking - Cathy Ha</title>
-<link>http://gdata.youtube.com/feeds/api/users/VietFoodie/uploads?start-index=1&max-results=50</link>
-<thumbnail>nauan.png</thumbnail>
+<thumbnail>amthuctinhyeu.png</thumbnail>
 </item>
 
 <item>
 <title>Cooking - Asian Cooking Made Easy</title>
 <link>http://gdata.youtube.com/feeds/api/users/AsianCookingmadeEasy/uploads?start-index=1&max-results=50</link>
-<thumbnail>nauan.png</thumbnail>
-</item>
-
-<item>
-<title>Cooking - Helen's Recipes</title>
-<link>http://gdata.youtube.com/feeds/api/users/HelenRecipes/uploads?start-index=1&max-results=50</link>
-<thumbnail>nauan.png</thumbnail>
+<thumbnail>amthuctinhyeu.png</thumbnail>
 </item>
 
 <item>
 <title>Cooking - Ẩm Thực Tình Yêu</title>
 <link>http://gdata.youtube.com/feeds/api/users/amthuctinhyeu123/uploads?start-index=1&max-results=50</link>
-<thumbnail>nauan.png</thumbnail>
+<thumbnail>amthuctinhyeu.png</thumbnail>
+</item>
+
+<item>
+<title>Cooking - Helen's Recipes</title>
+<link>http://gdata.youtube.com/feeds/api/users/HelenRecipes/uploads?start-index=1&max-results=50</link>
+<thumbnail>amthuctinhyeu.png</thumbnail>
+</item>
+
+<item>
+<title>Cooking - Xuân Hồng</title>
+<link>http://gdata.youtube.com/feeds/api/users/tdmaison/uploads?start-index=1&max-results=50</link>
+<thumbnail>amthuctinhyeu.png</thumbnail>
+</item>
+
+<item>
+<title>Cooking - Cathy Ha</title>
+<link>http://gdata.youtube.com/feeds/api/users/VietFoodie/uploads?start-index=1&max-results=50</link>
+<thumbnail>amthuctinhyeu.png</thumbnail>
+</item>
+
+<item>
+<title>Cooking - Món Ngon</title>
+<link>http://gdata.youtube.com/feeds/api/users/khoainv/uploads?start-index=1&max-results=50</link>
+<thumbnail>amthuctinhyeu.png</thumbnail>
 </item>
 
 <item>
 <title>Cooking - Sinh Tố</title>
 <link>http://www.dailymotion.com/rss/user/hocnauan/1</link>
-<thumbnail>nauan.png</thumbnail>
+<thumbnail>amthuctinhyeu.png</thumbnail>
 </item>
 
 <!------------ MakeUp -------------------->

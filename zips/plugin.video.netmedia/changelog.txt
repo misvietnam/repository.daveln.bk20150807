@@ -1,3 +1,7 @@
+v 1.0.5
+Add Karaoke
+Update menulist
+
 v 1.0.4 (Jan. 2, 2015)
 a. Remove import youtube
 b. Remove import dailymotion

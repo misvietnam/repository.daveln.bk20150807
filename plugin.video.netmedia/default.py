@@ -27,7 +27,7 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
-
+'''
 if not os.path.exists(homemenu):
   try:
     open(homemenu, 'w+').close()
@@ -39,7 +39,7 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
-
+'''
 def menulist():
   try:
     mainmenu=open(homemenu, 'r')  
@@ -87,7 +87,11 @@ def categories():
     elif 'Ca Nhạc' in name:
       if 'Music' in title:	
         addDir(title.replace('Music - ',''), url , 3, logos + thumbnail)
-      else: pass		
+      else: pass
+    elif 'Hát Karaoke' in name:
+      if 'Karaoke - ' in title:	
+        addDir(title.replace('Karaoke - ',''), url , 3, logos + thumbnail)
+      else: pass	      
     elif 'Hài Kịch' in name:
       if 'Sitcom' in title:	
         addDir(title.replace('Sitcom - ',''), url , 3, logos + thumbnail)
@@ -108,9 +112,9 @@ def categories():
       if 'Medical' in title:	
         addDir(title.replace('Medical - ',''), url , 3, logos + thumbnail)
       else: pass		  
-    elif 'Nấu Ăn' in name:
+    elif 'Ẩm Thực Tình Yêu' in name:
       if 'Cooking' in title:	
-        addDir(title.replace('Cooking - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Cooking - ',''), url , 3, logos + thumbnail)     
       else: pass		
     elif 'Trang Điểm' in name:
       if 'MakeUp' in title:	
@@ -129,7 +133,7 @@ def mediaLists(url):
   content=makeRequest(url)
   if 'youtube' in url:	  
     match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
-    for url, thumbnail, name in match:
+    for url, thumbnail, name in match:       
       name = name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
       #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
       url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	      

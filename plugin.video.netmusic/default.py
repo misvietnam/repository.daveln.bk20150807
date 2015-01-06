@@ -97,7 +97,7 @@ def search():
     except: pass
   elif 'Tìm Karaoke' in name:
     try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
+      keyb=xbmc.Keyboard('', '[COLOR cyan]Enter search text[/COLOR]')
       keyb.doModal()
       if (keyb.isConfirmed()):
         searchText=urllib.quote_plus(keyb.getText())
@@ -198,7 +198,7 @@ def mediaList(url):
   elif 'timkaraoke' in url:
     match = re.compile('pagespeed_url_hash="1785647900".+?href="([^"]*)">([^>]+)<').findall(content)
     for url, name in match: 
-      add_Link('[COLOR yellow]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'karaoke.png') 
+      add_Link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'karaoke.png') 
       
 def CSN_mediaList_Search(url):
   content=makeRequest(url)			

@@ -44,7 +44,7 @@ else:
  
 def main():
   addLink('[COLOR lime]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
-  addDir('[COLOR yellow]Asian [COLOR red] Porn TV[/COLOR]','asianporn',1,logos+'asian.png')	
+  addDir('[COLOR yellow]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')	
        
 def pornList():
   mainmenu=open(homemenu, 'r')  

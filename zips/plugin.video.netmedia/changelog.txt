@@ -1,3 +1,7 @@
+v 1.0.6
+Add Y Khoa Tổng Quát from www.dnrtv.org.vn
+Add This Old House
+
 v 1.0.5
 Add Karaoke
 Update menulist

@@ -731,6 +731,11 @@
 <thumbnail>ykhoa.png</thumbnail>
 </item>
 
+<item>
+<title>Y Tế Đồng Nai - Y Khoa Tổng Quát</title>
+<link>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
 <!------------ Cooking ------------------->
 
 <item>
@@ -856,6 +861,12 @@
 <item>
 <title>Other - Chương Trình Tổng Hợp</title>
 <link>http://www.dailymotion.com/rss/user/Viettrinh/1</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Home Repair - This Old House</title>
+<link>http://gdata.youtube.com/feeds/api/users/thisoldhouse/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

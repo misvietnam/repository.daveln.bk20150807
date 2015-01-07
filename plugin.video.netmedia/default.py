@@ -27,7 +27,7 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
-'''
+
 if not os.path.exists(homemenu):
   try:
     open(homemenu, 'w+').close()
@@ -39,7 +39,7 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
-'''
+
 def menulist():
   try:
     mainmenu=open(homemenu, 'r')  
@@ -64,95 +64,116 @@ def makeRequest(url):
 def main():
   for title, url, thumbnail in menulink:
     if 'Main Menu - ' in title:  
-      addDir(title.replace('Main Menu - ',''), url , 2, logos + thumbnail)
+      addDir(title.replace('Main Menu - ',''),url,2,logos+thumbnail)
     elif 'Main Menu Plus - ' in title:  
-      addDir(title.replace('Main Menu Plus - ',''), url , 1, logos + thumbnail)	  
+      addDir(title.replace('Main Menu Plus - ',''),url,1,logos+thumbnail)	  
     else:
       pass
 
 def directories():
-  addDir('Tin Tức Hải Ngoại', url, 2, logos + 'haingoai.png')
-  addDir('Tin Tức Trong Nước', url, 2, logos + 'vietnam.png')
+  addDir('Tin Tức Hải Ngoại',url,2,logos+'haingoai.png')
+  addDir('Tin Tức Trong Nước',url,2,logos+'vietnam.png')
       
 def categories():
   for title, url, thumbnail in menulink:
     if 'Tin Tức Hải Ngoại' in name:
       if 'OverseaNews' in title:	
-        addDir(title.replace('OverseaNews - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('OverseaNews - ',''),url,3,logos+thumbnail)
       else: pass	
     elif 'Tin Tức Trong Nước' in name:
       if 'NewsInVN' in title:	
-        addDir(title.replace('NewsInVN - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('NewsInVN - ',''),url,3,logos+thumbnail)
       else: pass		  
     elif 'Ca Nhạc' in name:
       if 'Music' in title:	
-        addDir(title.replace('Music - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Music - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Hát Karaoke' in name:
       if 'Karaoke - ' in title:	
-        addDir(title.replace('Karaoke - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Karaoke - ',''),url,3,logos+thumbnail)
       else: pass	      
     elif 'Hài Kịch' in name:
       if 'Sitcom' in title:	
-        addDir(title.replace('Sitcom - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Sitcom - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'TV Shows' in name:
       if 'TiviShows' in title:	
-        addDir(title.replace('TiviShows - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('TiviShows - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Thể Thao' in name:
       if 'Sports' in title:	
-        addDir(title.replace('Sports - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Sports - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Du Lịch' in name:
       if 'Travel' in title:	
-        addDir(title.replace('Travel - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Travel - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Y Khoa' in name:
       if 'Medical' in title:	
-        addDir(title.replace('Medical - ',''), url , 3, logos + thumbnail)
-      else: pass		  
+        addDir(title.replace('Medical - ',''),url,3,logos+thumbnail)
+      elif 'Y Tế Đồng Nai' in title:
+        addDir(title.replace('Y Tế Đồng Nai - ',''),url,5,logos+thumbnail)      
+      else: pass
     elif 'Ẩm Thực Tình Yêu' in name:
       if 'Cooking' in title:	
-        addDir(title.replace('Cooking - ',''), url , 3, logos + thumbnail)     
+        addDir(title.replace('Cooking - ',''),url,3,logos+thumbnail)     
       else: pass		
     elif 'Trang Điểm' in name:
       if 'MakeUp' in title:	
-        addDir(title.replace('MakeUp - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('MakeUp - ',''),url,3,logos+thumbnail)
       else: pass		
     elif 'Đọc Truyện' in name:
       if 'AudioBook' in title:	
-        addDir(title.replace('AudioBook - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('AudioBook - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Những Mục Khác' in name:
       if 'Other' in title:	
-        addDir(title.replace('Other - ',''), url , 3, logos + thumbnail)
+        addDir(title.replace('Other - ',''),url,3,logos+thumbnail)
       else: pass	  
-      
+
+def dongnai(url):
+  content=makeRequest(url)
+  match=re.compile("img src=\"([^\"]+)\" \/><\/a>\s*<a href=\"([^\"]*)\" class=\"title\">(.+?)<").findall(content)
+  for thumbnail,url,name in match:	
+    addLink(name,url,thumbnail)
+  match=re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang đầu<').findall(content)
+  for url in match:	
+    addDir('[COLOR violet]Trang đầu[/COLOR]',url,5,logos+'dongnai.png')    
+  match=re.compile('class=\'paging_normal\' href=\'([^\']+)\'>(\d+)<').findall(content)
+  for url,name in match:	
+    addDir('[COLOR lime]Trang '+name+'[/COLOR]',url,5,logos+'dongnai.png')	
+  match=re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang cuối<').findall(content)
+  for url in match:	
+    addDir('[COLOR red]Trang cuối[/COLOR]',url,5,logos+'dongnai.png')	
+    
 def mediaLists(url):
   content=makeRequest(url)
   if 'youtube' in url:	  
     match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
-    for url, thumbnail, name in match:       
+    for url,thumbnail,name in match:       
       name = name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
       #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
       url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	      
       addLink(name, url, thumbnail)
     match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
     for url in match:  
-      addDir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;','&'), 3, icon)		  
+      addDir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]',url.replace('&amp;','&'),3,icon)		  
   elif 'dailymotion' in url:	    
     match=re.compile('<title>(.+?)<\/title>\s*<link>(.+?)_.+?<\/link>\s*<description>.+?src="(.+?)"').findall(content)
-    for name, url, thumbnail in match:  
+    for name,url,thumbnail in match:  
       name = name.replace("&#039;", "'").replace('&quot;', '"').replace('&amp;', '&').replace('.', ' ')
       url = url.replace('http://www.dailymotion.com/video/', 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=')	  
       addLink(name, url, thumbnail)
     match=re.compile('<dm:link rel="next" href="(.+?)"').findall(content)
     for url in match:  
-      addDir('[COLOR lime]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url, 3, icon)	
+      addDir('[COLOR lime]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]',url,3,icon)	
 	  
 def resolveUrl(url):
-  mediaUrl = url	
+  if 'www.dnrtv.org.vn' in url:
+    content=makeRequest(url)
+    mediaUrl=re.compile("url: '(.+?)mp4'").findall(content)[0]+'mp4'
+  else:  
+    mediaUrl = url	
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)  
   return
@@ -226,5 +247,8 @@ elif mode==3:
    
 elif mode==4:
   resolveUrl(url)
+
+elif mode==5:
+  dongnai(url)  
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

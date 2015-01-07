@@ -34,7 +34,6 @@ htvonline='http://www.htvonline.com.vn/livetv'
 fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
 zuitv='http://zui.vn/livetv.html'
-listream='http://new.livestream.com'
 token = 'token=1b#K8!3zc65ends!'
 
 def makeRequest(url):
@@ -58,7 +57,6 @@ def main():
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
   addDir('[COLOR lightblue]FPTPlay[/COLOR]',fptplay,2,logos+'fptplay.png')
-  addDir('[COLOR lightblue]Livestream[/COLOR]',listream+'/watch',6,logos+'listream.png')  
   addDir('[COLOR cyan]haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
   #addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
   addDir('[COLOR yellow]VietSimple TV[/COLOR]',viet_simpletv,10,logos+'vietsimpletv.png')  
@@ -80,7 +78,7 @@ def vietsimpletv(url):
   match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
   for name,url in match:
     if 'htvonline' in url:
-	  add_Link('[COLOR cyan]'+name+'[/COLOR]',url,logos+'vietsimpletv.png')
+	    add_Link('[COLOR cyan]'+name+'[/COLOR]',url,logos+'vietsimpletv.png')
     elif 'tv24.vn' in url:  
       addLink('[COLOR lime]'+name+'[/COLOR]',url.replace('rtmp://$OPT:rtmp-raw=',''),logos+'vietsimpletv.png')
     elif 'torrent-tv.ru' in url:  
@@ -134,32 +132,28 @@ def episodes(url):
 def index(url):
   content=makeRequest(url)
   if 'tv24' in url:
-	match=re.compile("<SPAN id=\".+?\"><a href='(.+?)'><img src='(.+?)' onmouseover=\"this.src='http:\/\/tv24.vn\/WebMedia\/Channels\/\d+\/(.+?).png'").findall(content)
-	for url,thumbnail,name in match:
-	  if 'vtv' in name:
-	    add_Link('[COLOR yellow][UPPERCASE]'+name+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)	  
-	  else:	  
-	    add_Link('[COLOR lime][UPPERCASE]'+name.replace('b','')+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)
+	  match=re.compile("<SPAN id=\".+?\"><a href='(.+?)'><img src='(.+?)' onmouseover=\"this.src='http:\/\/tv24.vn\/WebMedia\/Channels\/\d+\/(.+?).png'").findall(content)
+	  for url,thumbnail,name in match:
+	    if 'vtv' in name:
+	      add_Link('[COLOR yellow][UPPERCASE]'+name+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)	  
+	    else:	  
+	      add_Link('[COLOR lime][UPPERCASE]'+name.replace('b','')+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)
   elif 'htvonline' in url:
-	match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
-	for url,name,thumbnail in match:
-	  add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)
-  elif 'livestream' in url:
-	match=re.compile('href="([^"]*)".+?src="([^"]+)".+?\s.+\s.+title="([^>]*)"').findall(content)
-	for url,thumbnail,name in match:
-	  add_Link('[COLOR yellow]'+name+'[/COLOR]',listream+url,thumbnail)    
+	  match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
+	  for url,name,thumbnail in match:
+	    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)  
   elif 'fptplay' in url:
-	match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
-	for name,url,thumbnail in match:
-	  if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
-	    add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
-	  else:
-	    add_Link('[COLOR lime]'+name+'[/COLOR]',fptplay+url,thumbnail)						
+	  match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
+	  for name,url,thumbnail in match:
+	    if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
+	      add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
+	    else:
+	      add_Link('[COLOR lime]'+name.replace('&#39;','\'')+'[/COLOR]',fptplay+url,thumbnail)						
   elif 'zui' in url:
     match=re.compile("alt='(.+?)' href='(.+?)'><img src='(.+?)'").findall(content)[3:36]
     for name,url,thumbnail in match:
       if 'SCTV1' in name or 'VTC14' in name or 'ITV' in name or 'Nhạc của tui' in name or 'Thuần Việt' in name:
-	    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)	  
+	      add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)	  
       else:
         pass
 		
@@ -261,14 +255,14 @@ def HD():
   match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
   for url,name,thumbnail in match:	
     if 'HTV7' in name or 'HTV9' in name or ' HD' in name or 'htv2-31336E61' in url:
-	  add_Link('[COLOR cyan]'+name+'[/COLOR]',url,thumbnail)
+	    add_Link('[COLOR cyan]'+name+'[/COLOR]',url,thumbnail)
   add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')
 '''  
   content=makeRequest(vtcplay)  
   match=re.compile("\"Name\":\"(.*?)\".+?\"Thumbnail2\":\"(.+?)\".+?\"Path\":\"([^\"]*)\"").findall(content)
   for name,thumbnail,url in match:
     if ' HD' in name:
-	  addLink('[COLOR yellow]'+name.decode("utf-8")+'[/COLOR]',url,thumbnail)
+	    addLink('[COLOR yellow]'+name.decode("utf-8")+'[/COLOR]',url,thumbnail)
 '''	  
 	  
 def search():
@@ -288,9 +282,7 @@ def resolveUrl(url):
     mediaUrl=re.compile("file: \"([^\"]*)\"").findall(content)[0]	
   elif 'tv24' in url:
     videoUrl=re.compile('\'file\': \'http([^\']*)\/playlist.m3u8').findall(content)[0]
-    mediaUrl='rtmpe' + videoUrl + ' swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ ' + token
-  elif 'livestream' in url:
-    mediaUrl=re.compile('"rtsp_url":"(.+?)"').findall(content)[0]    
+    mediaUrl='rtmpe' + videoUrl + ' swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ ' + token   
   elif 'zui' in url:
     mediaUrl=re.compile('livetv_play\(\'player\', \'1\', \'(.+?)\'\)').findall(content)[0]	
   elif 'fptplay' in url:
@@ -298,7 +290,7 @@ def resolveUrl(url):
       #mediaUrl=re.compile('"hls_stream": "(.+?)"').findall(content)[0] # ?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
       mediaUrl=re.compile('"adapt_hls": "(.+?)"').findall(content)[0]   # No token    
     else:
-	  mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
+	    mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return

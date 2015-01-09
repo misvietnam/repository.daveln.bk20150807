@@ -89,97 +89,49 @@ def megavn(url):
         addDir('[COLOR yellow]' + title + '[/COLOR]', url, 13, logos + 'megabox.png')  
 
 def search():
-  if 'phim3s' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+  try:
+    keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
+    keyb.doModal()
+    if (keyb.isConfirmed()):
+      searchText=urllib.quote_plus(keyb.getText())
+    if 'phim3s' in name:  
       url=phim3s+'search?keyword='+searchText
       print "Searching URL: "+url	  
       index(url)
-    except: pass
-  elif 'dangcaphd' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'dangcaphd' in name:
       url=dchd+'movie/search.html?key='+searchText+'&search_movie=0'
       print "Searching URL: "+url	  
       index(url)
-    except: pass
-  elif 'Tìm Phim Lẻ' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'Tìm Phim Lẻ' in name:
       url=pgt+'result.php?type=search&keywords='+searchText
       print "Searching URL: "+url	  
       index(url)
-    except: pass
-  elif 'fptplay' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR lime]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'fptplay' in name:
       url=fptplay+'Search/'+searchText
       print "Searching URL: "+url	  
       mediaList(url)
-    except: pass
-  elif 'zui' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-	    searchText=urllib.quote_plus(keyb.getText())
+    elif 'zui' in name:
       url='http://zui.vn/tim-kiem-nc/'+searchText+'.html'
       print "Searching URL: "+url	  
       mediaList(url)
-    except: pass
-  elif 'hdcaphe' in name:		
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'hdcaphe' in name:		
       url=hd_caphe+'search-result.html?keywords='+searchText
       print "Searching URL: "+url	  
       mediaList(url)
-    except: pass	
-  elif 'anhtrang' in name:		
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'anhtrang' in name:		
       url=anhtrang+'tim-kiem='+searchText+'.html'
       print "Searching URL: "+url	  
       anhtrang_mediaList(url)
-    except: pass
-  elif 'megabox' in name:	
-    try:
-      keyb = xbmc.Keyboard('', '[COLOR cyan]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText = urllib.quote_plus(keyb.getText())
+    elif 'megabox' in name:	
       url = megaboxvn + 'home/search/index/key/' + searchText
       print "Searching URL: "+url	 	
       megaListEps(url)
       otherMegaList(url)
-    except: pass
-  elif 'phimhayhd' in name:	
-    try:
-      keyb = xbmc.Keyboard('', '[COLOR lime]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText = urllib.quote_plus(keyb.getText())
+    elif 'phimhayhd' in name:	
       url = hayhd + 'tim-kiem.html?query=' + searchText
       print "Searching URL: "+url	 	
       hayhd_bo(url)
-    except: pass
+  except: pass
 
 def hayhd_bo(url):
   content = makeRequest(url)
@@ -258,7 +210,7 @@ def categories(url):
     addDir('[COLOR violet]PHIM HOẠT HÌNH[/COLOR]',hd_caphe+'PHIM_HD_IPHONE_MAY_TINH_BANG_TABLET.html',7,logos+'hdcaphe.png')  	
   elif 'anhtrang' in url:  
     addDir('[COLOR yellow]anhtrang[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim[/COLOR]',anhtrang,1,logos+'anhtrang.png')
-    content=makeRequest(anhtrang)
+    #content=makeRequest(anhtrang)
     match=re.compile("<a class=\"link\" href=\"http:\/\/.+?\/([^\"]*)\" >\s*<span>(.+?)<\/span>").findall(content)
     for url,name in match:
       addDir('[COLOR lime]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png')  

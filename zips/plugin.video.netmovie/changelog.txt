@@ -1,3 +1,6 @@
+v 1.0.20
+Update search
+
 v 1.0.19
 Add Tập 1 to megabox
 Add more info to addon.xml

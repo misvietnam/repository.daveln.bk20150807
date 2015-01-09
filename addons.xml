@@ -35,7 +35,7 @@
 
 <addon id="plugin.video.netmovie"
        name="*netmovie"
-       version="1.0.19"
+       version="1.0.20"
        provider-name="DaveLN">
   <requires>
         <import addon="xbmc.python" version="2.1.0" optional="true" />
@@ -63,7 +63,7 @@
 
 <addon id="plugin.video.netmusic"
        name="*netmusic"
-       version="1.0.14"
+       version="1.0.15"
        provider-name="DaveLN">
   <requires>
         <import addon="xbmc.python" version="2.1.0" optional="true" />

@@ -64,47 +64,29 @@ def main():
   #addLink('[COLOR silver]iTV[/COLOR]','http://117.103.224.73:1935/live/_definst_/ITV/ITV_live.smil/playlist.m3u8',logos+'itv.png')
   addLink('[COLOR orange]M[COLOR red]TV[/COLOR][/COLOR]','rtmp://85.132.78.6:1935/live/ playpath=muztv.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/mtv-81.html',logos+'mtv.png')
 
-def search():
-  if 'Nhạc Số' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
-      url=nhacso+'tim-kiem/'+searchText+'.html'
-      print "Searching URL: "+url	  
+def search(): 
+  try:
+    keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
+    keyb.doModal()
+    if (keyb.isConfirmed()):
+      searchText=urllib.quote_plus(keyb.getText())
+    if 'Nhạc Số' in name:  
+      url=nhacso+'tim-kiem/'+searchText.replace('+',' ')+'.html'
+      print "Searching URL: "+url      
       mediaList(url)
-    except: pass
-  elif 'Chia Sẻ Nhạc' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'Chia Sẻ Nhạc' in name: 
       url=csn+'search.php?s='+searchText+'&cat=video'
-      print "Searching URL: "+url	  
-      CSN_mediaList_Search(url)
-    except: pass
-  elif 'Nhạc Của Tui' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+      print "Searching URL: "+url      
+      CSN_mediaList_Search(url)      
+    elif 'Nhạc Của Tui' in name:
       url=nctm+'tim-kiem/mv?q='+searchText
-      print "Searching URL: "+url	  
+      print "Searching URL: "+url      
       mediaList(url)
-    except: pass
-  elif 'Tìm Karaoke' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR cyan]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'Tìm Karaoke' in name:
       url=karaoke+'/search/karaoke/'+searchText.replace('+',' ')
-      print "Searching URL: "+url	  
-      mediaList(url)
-    except: pass
+      print "Searching URL: "+url      
+      mediaList(url) 
+  except: pass
     
 def categories(url):
   content=makeRequest(url)

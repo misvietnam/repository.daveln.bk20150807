@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!-- Categories: Main Menu, OverseaNews, NewsInVN, Music, Karaoke, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, MakeUp, AudioBook, OtherStuff -->
+<!-- Categories: Main Menu, Religion, OverseaNews, NewsInVN, Children, Music, Karaoke, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, MakeUp, AudioBook, OtherStuff -->
 
 <stream>
 
 <!------------ Main Menu ----------------->
 
 <item>
+<title>Main Menu - Tôn Giáo</title>
+<link>TonGiao</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
 <title>Main Menu Plus - Tin Tức</title>
 <link>TinTuc</link>
 <thumbnail>tintuc.png</thumbnail>
+</item>
+
+<item>
+<title>Main Menu - Thiếu Nhi</title>
+<link>ThieuNhi</link>
+<thumbnail>thieunhi.png</thumbnail>
 </item>
 
 <item>
@@ -73,9 +85,131 @@
 </item>
 
 <item>
+<title>Main Menu - Di trú và Nhập Tịch Hoa Kỳ</title>
+<link>DiTru</link>
+<thumbnail>ditru.png</thumbnail>
+</item>
+
+<item>
 <title>Main Menu - Những Mục Khác</title>
 <link>MucKhac</link>
 <thumbnail>muckhac.png</thumbnail>
+</item>
+
+<!-------------- Religion ---------------->
+
+<item>
+<title>Religion - Đức Mẹ TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/chuacuuthe/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Phim Công Giáo</title>
+<link>http://gdata.youtube.com/feeds/api/users/PhimCongGiaoVN/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Phim Công Giáo 2</title>
+<link>http://gdata.youtube.com/feeds/api/users/PhimCongGiao2/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Thánh Ca</title>
+<link>http://gdata.youtube.com/feeds/api/users/ThanhCaHD/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Thánh Ca Không Lời</title>
+<link>http://gdata.youtube.com/feeds/api/users/Thanhcakhongloi/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Giảng Luận Cơ Đốc</title>
+<link>http://gdata.youtube.com/feeds/api/users/upnhacnee/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Thư viện Cơ Đốc</title>
+<link>http://gdata.youtube.com/feeds/api/users/cdnvn/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Thánh Nhạc</title>
+<link>http://gdata.youtube.com/feeds/api/users/CDNVN00/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Thư Viện Phật Giáo</title>
+<link>http://gdata.youtube.com/feeds/api/users/thuvienphatgiao/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Niệm Phật Thành Phật</title>
+<link>http://gdata.youtube.com/feeds/api/users/NiemPhatThanhPhat/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Phật Tâm video</title>
+<link>http://gdata.youtube.com/feeds/api/users/phatamvideo/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - NAM MÔ A DI ĐÀ PHẬT</title>
+<link>http://gdata.youtube.com/feeds/api/users/nammoadidaphatnew/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Phật Pháp Nhiệm Màu</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCP9jSXwNXTEoql3cZSoI4Yw/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Phật Giáo Hòa Hảo</title>
+<link>http://gdata.youtube.com/feeds/api/users/nhatsonvan1981/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - PHẬT GIÁO HÒA HẢO (PGHH)</title>
+<link>http://gdata.youtube.com/feeds/api/users/hoahao185/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - PHẬT GIÁO HÒA HẢO - PGHH</title>
+<link>http://gdata.youtube.com/feeds/api/users/nguoihoahao/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - PHẬT GIÁO HÒA HẢO (PGHH)</title>
+<link>http://gdata.youtube.com/feeds/api/users/giaolypghh/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - TỦ SÁCH NÓI CAO ĐÀI</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCtHYWzR7fBcqFMhgHw1nsNg/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Cao Đài Ban Chỉnh Đạo</title>
+<link>http://gdata.youtube.com/feeds/api/users/caodaibanchinhdaoorg/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
 </item>
 
 <!------------ OverseaNews --------------->
@@ -256,6 +390,86 @@
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
+<!------------ Children ------------------>
+
+<item>
+<title>Children - Thế Hệ Trẻ TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/TheHeTreTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Gương Mặt Thân Quen Nhí</title>
+<link>http://gdata.youtube.com/feeds/api/users/GMTQNHI/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - POPS Kids</title>
+<link>http://gdata.youtube.com/feeds/api/users/popskids/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Hát Cùng Siêu Chíp</title>
+<link>http://gdata.youtube.com/feeds/api/users/hatcungsieuchipvtv2/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Thiếu Nhi Nhạc</title>
+<link>http://gdata.youtube.com/feeds/api/users/thieunhinhac/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Children's Music</title>
+<link>http://gdata.youtube.com/feeds/api/users/Childrenmusic1/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Little Baby Bum</title>
+<link>http://gdata.youtube.com/feeds/api/users/LittleBabyBum/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - ABC Kid TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/checkgate/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Phim Hoạt Hình Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/CartoonVietNam/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Trẻ Thơ Cười</title>
+<link>http://gdata.youtube.com/feeds/api/users/trethoviet/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Toon-a-matic</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCCwuHAInO9o50h_xjlu_i7A/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Disney Cars Toy Club DCTC</title>
+<link>http://gdata.youtube.com/feeds/api/users/MaterCarClub/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
+<title>Children - Barbie Film Collection</title>
+<link>http://gdata.youtube.com/feeds/api/users/BarbieFilmCollection/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
 <!------------ Music --------------------->
 
 <item>
@@ -285,6 +499,18 @@
 <item>
 <title>Music - POPS TV VIỆT NAM</title>
 <link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - POPS VIỆT NAM</title>
+<link>http://www.dailymotion.com/rss/user/PopsVietNam/1</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - POPS MUSIC</title>
+<link>http://gdata.youtube.com/feeds/api/users/POPSVIETNAM/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -325,6 +551,12 @@
 </item>
 
 <item>
+<title>Music -  Nhạc Vàng NTPlus</title>
+<link>http://gdata.youtube.com/feeds/api/users/NhacvangNTPlus/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
 <title>Music - Sắc Việt</title>
 <link>http://gdata.youtube.com/feeds/api/users/sacviet/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
@@ -345,12 +577,6 @@
 <item>
 <title>Music - Đan Trường</title>
 <link>http://gdata.youtube.com/feeds/api/users/DanTruongPOPS/uploads?start-index=1&max-results=50</link>
-<thumbnail>canhac.png</thumbnail>
-</item>
-
-<item>
-<title>Music - POPS VIỆT NAM</title>
-<link>http://www.dailymotion.com/rss/user/PopsVietNam/1</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -394,7 +620,7 @@
 
 <item>
 <title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 1</title>
-<link>http://gdata.youtube.com/feeds/api/users/karaokephamvanvang/uploads?start-index=1&max-results=50</link>
+<link>http://gdata.youtube.com/feeds/api/users/TNOTV1/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietkaraoke.png</thumbnail>
 </item>
 
@@ -441,6 +667,12 @@
 </item>
 
 <item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 9</title>
+<link>http://gdata.youtube.com/feeds/api/users/karaokephamvanvang/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
 <title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Karaoke On VEVO</title>
 <link>http://gdata.youtube.com/feeds/api/users/KaraokeOnVEVO/uploads?start-index=1&max-results=50</link>
 <thumbnail>englishkaraoke.png</thumbnail>
@@ -459,7 +691,7 @@
 </item>
 
 <item>
-<title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Sing Songs</title>
+<title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Sing Songs Music</title>
 <link>http://gdata.youtube.com/feeds/api/users/singsongsmusic/uploads?start-index=1&max-results=50</link>
 <thumbnail>englishkaraoke.png</thumbnail>
 </item>
@@ -608,7 +840,7 @@
 
 <item>
 <title>TiviShows - Gương Mặt Thân Quen</title>
-<link>http://gdata.youtube.com/feeds/api/users/UCih6dQQqTvq__SF2CefjYGw/uploads?start-index=1&max-results=50</link>
+<link>http://gdata.youtube.com/feeds/api/users/YFSFVietnam/uploads?start-index=1&max-results=50</link>
 <thumbnail>tvshows.png</thumbnail>
 </item>
 
@@ -806,6 +1038,12 @@
 <thumbnail>trangdiem.png</thumbnail>
 </item>
 
+<item>
+<title>MakeUp - VietBeauty NailViet</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCrvDF3Rzt6qeFVjFwQM3rRw/uploads?start-index=1&max-results=50</link>
+<thumbnail>trangdiem.png</thumbnail>
+</item>
+
 <!------------ AudioBook ----------------->
 
 <item>
@@ -836,6 +1074,14 @@
 <title>AudioBook - Truyện Audio Online</title>
 <link>http://gdata.youtube.com/feeds/api/users/AudioOnlineHay/uploads?start-index=1&max-results=50</link>
 <thumbnail>doctruyen.png</thumbnail>
+</item>
+
+<!------------ Immigration ---------------->
+
+<item>
+<title>Immigration - Di trú và Nhập Tịch Hoa Kỳ</title>
+<link>http://gdata.youtube.com/feeds/api/users/NguyenLegalGroup/uploads?start-index=1&max-results=50</link>
+<thumbnail>ditru.png</thumbnail>
 </item>
 
 <!------------ Other ---------------->

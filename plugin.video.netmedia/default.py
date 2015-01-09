@@ -76,16 +76,23 @@ def directories():
       
 def categories():
   for title, url, thumbnail in menulink:
-    if 'Tin Tức Hải Ngoại' in name:
-      if 'OverseaNews' in title:	
+    if 'Tôn Giáo' in name:
+      if 'Religion - ' in title:	
+        addDir(title.replace('Religion - ',''),url,3,logos+thumbnail)  
+    elif 'Tin Tức Hải Ngoại' in name:
+      if 'OverseaNews - ' in title:	
         addDir(title.replace('OverseaNews - ',''),url,3,logos+thumbnail)
       else: pass	
     elif 'Tin Tức Trong Nước' in name:
-      if 'NewsInVN' in title:	
+      if 'NewsInVN - ' in title:	
         addDir(title.replace('NewsInVN - ',''),url,3,logos+thumbnail)
-      else: pass		  
+      else: pass	      
+    elif 'Thiếu Nhi' in name:
+      if 'Children - ' in title:	
+        addDir(title.replace('Children - ',''),url,3,logos+thumbnail)
+      else: pass      
     elif 'Ca Nhạc' in name:
-      if 'Music' in title:	
+      if 'Music - ' in title:	
         addDir(title.replace('Music - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Hát Karaoke' in name:
@@ -93,41 +100,45 @@ def categories():
         addDir(title.replace('Karaoke - ',''),url,3,logos+thumbnail)
       else: pass	      
     elif 'Hài Kịch' in name:
-      if 'Sitcom' in title:	
+      if 'Sitcom - ' in title:	
         addDir(title.replace('Sitcom - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'TV Shows' in name:
-      if 'TiviShows' in title:	
+      if 'TiviShows - ' in title:	
         addDir(title.replace('TiviShows - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Thể Thao' in name:
-      if 'Sports' in title:	
+      if 'Sports - ' in title:	
         addDir(title.replace('Sports - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Du Lịch' in name:
-      if 'Travel' in title:	
+      if 'Travel - ' in title:	
         addDir(title.replace('Travel - ',''),url,3,logos+thumbnail)
       else: pass
     elif 'Y Khoa' in name:
-      if 'Medical' in title:	
+      if 'Medical - ' in title:	
         addDir(title.replace('Medical - ',''),url,3,logos+thumbnail)
       elif 'Y Tế Đồng Nai' in title:
         addDir(title.replace('Y Tế Đồng Nai - ',''),url,5,logos+thumbnail)      
       else: pass
     elif 'Ẩm Thực Tình Yêu' in name:
-      if 'Cooking' in title:	
+      if 'Cooking - ' in title:	
         addDir(title.replace('Cooking - ',''),url,3,logos+thumbnail)     
       else: pass		
     elif 'Trang Điểm' in name:
-      if 'MakeUp' in title:	
+      if 'MakeUp - ' in title:	
         addDir(title.replace('MakeUp - ',''),url,3,logos+thumbnail)
       else: pass		
     elif 'Đọc Truyện' in name:
-      if 'AudioBook' in title:	
+      if 'AudioBook - ' in title:	
         addDir(title.replace('AudioBook - ',''),url,3,logos+thumbnail)
       else: pass
+    elif 'Di trú và Nhập Tịch Hoa Kỳ' in name:
+      if 'Immigration - ' in title:	
+        addDir(title.replace('Immigration - ',''),url,3,logos+thumbnail)
+      else: pass      
     elif 'Những Mục Khác' in name:
-      if 'Other' in title:	
+      if 'Other - ' in title:	
         addDir(title.replace('Other - ',''),url,3,logos+thumbnail)
       else: pass	  
 

@@ -1,3 +1,7 @@
+v 1.0.7
+Add Tôn Giáo, Thiếu Nhi, Nhập Tịch, and Nails
+Update menulist
+
 v 1.0.6
 Add Y Khoa Tổng Quát from www.dnrtv.org.vn
 Add This Old House

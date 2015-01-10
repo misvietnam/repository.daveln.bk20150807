@@ -26,10 +26,34 @@ home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
+homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
+homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
 karaoke = 'http://www.timkaraoke.com'
 nctm='http://m.nhaccuatui.com/'
 nhacso='http://nhacso.net/'
 csn='http://chiasenhac.com/'
+
+if not os.path.exists(homemenu):
+  try:
+    open(homemenu, 'w+').close()
+  except:
+    pass  	
+	
+status=urllib.urlopen(homelink).getcode()
+if status==200:
+  urllib.urlretrieve (homelink, homemenu)
+else:
+  pass
+
+def menulist():
+  try:
+    mainmenu=open(homemenu, 'r')  
+    mlink=mainmenu.read()
+    mainmenu.close()
+    match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(mlink)
+    return match
+  except:
+    pass	
 
 def makeRequest(url):
   try:
@@ -48,7 +72,7 @@ def makeRequest(url):
       print 'Reason: ', e.reason
 
 def main():
-  addDir('[COLOR lightgreen]Hát Karaoke Online[/COLOR]',karaoke,2,logos+'timkaraoke.png')
+  addDir('[COLOR lightgreen]Hát Karaoke Online[/COLOR]','KaraokeOnline',6,logos+'karaoke.png')
   addDir('[COLOR yellow]Video Nhạc Số[/COLOR]',nhacso,2,logos+'ns.png')		
   addDir('[COLOR lime]Video Chia Sẻ Nhạc[/COLOR]',csn,2,logos+'csn.png')
   addDir('[COLOR cyan]Video Nhạc Của Tui[/COLOR]',nctm+'mv.html',2,logos+'nct.png')  
@@ -63,7 +87,7 @@ def main():
   addLink('[COLOR chocolate]iTV[/COLOR]','rtmp://live.kenhitv.vn/liveweb/ playpath=itv_web_500k.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/itv-10.html',logos+'itv.png')
   #addLink('[COLOR silver]iTV[/COLOR]','http://117.103.224.73:1935/live/_definst_/ITV/ITV_live.smil/playlist.m3u8',logos+'itv.png')
   addLink('[COLOR orange]M[COLOR red]TV[/COLOR][/COLOR]','rtmp://85.132.78.6:1935/live/ playpath=muztv.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/mtv-81.html',logos+'mtv.png')
-
+      
 def search(): 
   try:
     keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
@@ -125,10 +149,16 @@ def categories(url):
     addDir('[COLOR cyan]Tìm Karaoke[B]   [COLOR cyan]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR cyan]Karaoke Search[/COLOR]', karaoke, 1, logos + 'timkaraoke.png') 
     match = re.compile('pagespeed_url_hash="1785647900".+?href="([^"]*)">([^>]+)<').findall(content)
     for url, name in match: 
-      add_Link('[COLOR yellow]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'karaoke.png')  
+      add_Link('[COLOR yellow]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'timkaraoke.png')  
     match = re.compile('<\/i> <br\/>\s*<a href="([^"]*)">([^>]+)<').findall(content)
     for url, name in match: 
-      add_Link('[COLOR lime]' + name + '[/COLOR]',('%s%s' % (karaoke, url)), logos + 'karaoke.png')
+      add_Link('[COLOR lime]' + name + '[/COLOR]',('%s%s' % (karaoke, url)), logos + 'timkaraoke.png')
+      
+def getKaraoke():
+  addDir('[COLOR cyan]Vietnamese[COLOR magenta] - [COLOR lightgreen]timkaraoke.com[/COLOR]',karaoke,2,logos+'timkaraoke.png')
+  for title, url, thumbnail in menulink:
+    if 'Karaoke - ' in title:
+      addDir(title.replace('Karaoke - ',''),url,3,logos+thumbnail) 
   
 def mediaList(url):
   content=makeRequest(url)
@@ -138,7 +168,7 @@ def mediaList(url):
       add_Link('[COLOR yellow]'+name+'[/COLOR]',(csn+url),thumbnail)
     match=re.compile("<a href=\"(.+?)video\/\" class=\"npage\">1<\/a>").findall(content)[0:1]
     for url in match:
-      addDir('[COLOR cyan]Trang Đầu Tiên ([COLOR lime]Nhạc Video Mới Chia Sẻ[COLOR cyan] + [COLOR orange]Download Mới Nhất[COLOR cyan])[/COLOR]',csn+url+'video/',3,thumbnail)
+      addDir('[COLOR cyan]Trang Đầu Tiên ([COLOR lime]Nhạc Video Mới Chia Sẻ[COLOR cyan] + [COLOR orange]Download Mới Nhất[COLOR cyan])[/COLOR]',csn+url+'video/',3,logos+'csn.png')
     match=re.compile("<a href=\"hd\/video\/([a-z]-video\/new[0-9]+).html\" class=\"npage\">(\d+)<\/a>").findall(content)
     for url,name in match:
       addDir('[COLOR lime]Trang Mới Chia Sẻ '+name+'[/COLOR]',csn+'hd/video/'+url+'.html',3,logos+'csn.png')
@@ -180,7 +210,17 @@ def mediaList(url):
   elif 'timkaraoke' in url:
     match = re.compile('pagespeed_url_hash="1785647900".+?href="([^"]*)">([^>]+)<').findall(content)
     for url, name in match: 
-      add_Link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'karaoke.png') 
+      add_Link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'timkaraoke.png') 
+  if 'youtube' in url:	  
+    match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
+    for url,thumbnail,name in match:       
+      name=name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
+      #url=url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
+      url=url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	      
+      add_Link(name, url, thumbnail)
+    match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
+    for url in match:  
+      addDir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]',url.replace('&amp;','&'),3,icon)		  
       
 def CSN_mediaList_Search(url):
   content=makeRequest(url)			
@@ -203,7 +243,9 @@ def resolveUrl(url):
   elif 'nhaccuatui' in url:
     mediaUrl=re.compile("title=\".+?\" href=\"([^\"]*)\"").findall(content)[0] 
   elif 'timkaraoke' in url:
-    mediaUrl = re.compile('source src="(.+?)"').findall(content)[0].replace(' ','%20')  
+    mediaUrl=re.compile('source src="(.+?)"').findall(content)[0].replace(' ','%20')  
+  elif 'youtube' in url:
+    mediaUrl=url  
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return
@@ -246,7 +288,8 @@ def addLink(name,url,iconimage):
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
   return ok
-                      
+
+menulink=menulist() 
 params=get_params()
 url=None
 name=None
@@ -286,5 +329,7 @@ elif mode==4:
 
 elif mode==5:
   CSN_mediaList_Search(url)		
-  
+
+elif mode==6:
+  getKaraoke()  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

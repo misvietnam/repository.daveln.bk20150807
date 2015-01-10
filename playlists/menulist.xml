@@ -105,6 +105,12 @@
 </item>
 
 <item>
+<title>Religion - Viet Catholic News</title>
+<link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
 <title>Religion - Phim Công Giáo</title>
 <link>http://gdata.youtube.com/feeds/api/users/PhimCongGiaoVN/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
@@ -245,6 +251,12 @@
 </item>
 
 <item>
+<title>OverseaNews - Viet Catholic News</title>
+<link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - Người Việt Online</title>
 <link>http://gdata.youtube.com/feeds/api/users/NguoiVietOnline/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -275,6 +287,18 @@
 </item>
 
 <item>
+<title>OverseaNews - Việt Weekly TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/VietWeeklyEtc/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - Việt Weekly</title>
+<link>http://gdata.youtube.com/feeds/api/users/vietweeklytube/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - Van TV Houston</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCj-SnkM-BNrsgsEM52TvmVw/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -289,12 +313,6 @@
 <item>
 <title>OverseaNews - NWVietnameseNews</title>
 <link>http://gdata.youtube.com/feeds/api/users/NWVietnameseNews/uploads?start-index=1&max-results=50</link>
-<thumbnail>haingoai.png</thumbnail>
-</item>
-
-<item>
-<title>OverseaNews - Tiếng Nói Tự Do Việt Nam</title>
-<link>http://gdata.youtube.com/feeds/api/users/TiengNoiTuDoVietNam/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
 </item>
 
@@ -355,14 +373,14 @@
 </item>
 
 <item>
-<title>NewsInVN - VIETNAM NEWS AGENCY</title>
-<link>http://www.dailymotion.com/rss/user/TTXVN/1</link>
+<title>NewsInVN - Truyền Hình Thông Tấn</title>
+<link>http://gdata.youtube.com/feeds/api/users/truyenhinhthongtan/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
 <item>
-<title>NewsInVN - Việt Weekly</title>
-<link>http://gdata.youtube.com/feeds/api/users/vietweeklytube/uploads?start-index=1&max-results=50</link>
+<title>NewsInVN - VIETNAM NEWS AGENCY</title>
+<link>http://www.dailymotion.com/rss/user/TTXVN/1</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -497,18 +515,6 @@
 </item>
 
 <item>
-<title>Music - POPS TV VIỆT NAM</title>
-<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
-<thumbnail>canhac.png</thumbnail>
-</item>
-
-<item>
-<title>Music - POPS VIỆT NAM</title>
-<link>http://www.dailymotion.com/rss/user/PopsVietNam/1</link>
-<thumbnail>canhac.png</thumbnail>
-</item>
-
-<item>
 <title>Music - POPS MUSIC</title>
 <link>http://gdata.youtube.com/feeds/api/users/POPSVIETNAM/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
@@ -517,6 +523,18 @@
 <item>
 <title>Music - Blue Ocean Music USA</title>
 <link>http://gdata.youtube.com/feeds/api/users/blueoceanmusicusa/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Nhạc Việt Official</title>
+<link>http://gdata.youtube.com/feeds/api/users/NhacvietOfficial/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Nhạc Vàng Hải Ngoại</title>
+<link>http://gdata.youtube.com/feeds/api/users/NhacvietVEVO/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -559,6 +577,12 @@
 <item>
 <title>Music - Sắc Việt</title>
 <link>http://gdata.youtube.com/feeds/api/users/sacviet/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Như Quỳnh</title>
+<link>http://gdata.youtube.com/feeds/api/users/nhuquynhtube/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -949,6 +973,25 @@
 <link>http://gdata.youtube.com/feeds/api/users/KhamPhaVietNamVTV/uploads?start-index=1&max-results=50</link>
 <thumbnail>dulich.png</thumbnail>
 </item>
+
+<item>
+<title>Travel - Du Lịch Khát Vọng Việt</title>
+<link>http://gdata.youtube.com/feeds/api/users/dulichkhatvongviet/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Du lịch Biển Đảo Phú Quốc</title>
+<link>http://gdata.youtube.com/feeds/api/users/phuquoctravelonline/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Du lịch Anz</title>
+<link>http://gdata.youtube.com/feeds/api/users/dulichanz2/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
 <!------------ Medical ------------------->
 
 <item>
@@ -1085,6 +1128,18 @@
 </item>
 
 <!------------ Other ---------------->
+
+<item>
+<title>Other - POPS TV VIỆT NAM</title>
+<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - POPS VIỆT NAM</title>
+<link>http://www.dailymotion.com/rss/user/PopsVietNam/1</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
 
 <item>
 <title>Other - HTVOnline Entertainment</title>

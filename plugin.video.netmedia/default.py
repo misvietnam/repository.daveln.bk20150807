@@ -27,7 +27,7 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
-'''
+
 if not os.path.exists(homemenu):
   try:
     open(homemenu, 'w+').close()
@@ -39,7 +39,7 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
-'''
+
 def menulist():
   try:
     mainmenu=open(homemenu, 'r')  

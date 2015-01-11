@@ -77,8 +77,11 @@ def directories():
 def categories():
   for title, url, thumbnail in menulink:
     if 'Tôn Giáo' in name:
-      if 'Religion - ' in title:	
-        addDir(title.replace('Religion - ',''),url,3,logos+thumbnail)  
+      if 'Religious Films - ' in title:
+        addLink(title.replace('Religious Films - ',''),url,logos+thumbnail)    
+      elif 'Religion - ' in title:	
+        addDir(title.replace('Religion - ',''),url,3,logos+thumbnail)      
+      else: pass        
     elif 'Tin Tức Hải Ngoại' in name:
       if 'OverseaNews - ' in title:	
         addDir(title.replace('OverseaNews - ',''),url,3,logos+thumbnail)

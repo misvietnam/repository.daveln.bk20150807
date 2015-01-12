@@ -693,6 +693,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Karaoke ------------------->
 
 <item>
+<title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Làng Văn Karaoke</title>
+<link>http://gdata.youtube.com/feeds/api/users/langvankaraoke/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietkaraoke.png</thumbnail>
+</item>
+
+<item>
 <title>Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]ViCi karaoke online</title>
 <link>http://gdata.youtube.com/feeds/api/users/vcbuikara1993/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietkaraoke.png</thumbnail>
@@ -1031,6 +1037,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Travel - Du Lịch Đất Việt</title>
+<link>http://gdata.youtube.com/feeds/api/users/datviettour198/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
 <title>Travel - Du Lịch Khát Vọng Việt</title>
 <link>http://gdata.youtube.com/feeds/api/users/dulichkhatvongviet/uploads?start-index=1&max-results=50</link>
 <thumbnail>dulich.png</thumbnail>
@@ -1067,6 +1079,7 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <link>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</link>
 <thumbnail>ykhoa.png</thumbnail>
 </item>
+
 <!------------ Cooking ------------------->
 
 <item>
@@ -1230,7 +1243,7 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>DCAP -  Animalist</title>
+<title>DCAP - Animalist</title>
 <link>http://gdata.youtube.com/feeds/api/users/AnimalistNetwork/uploads?start-index=1&max-results=50</link>
 <thumbnail>DCAP.png</thumbnail>
 </item>
@@ -1254,7 +1267,7 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>DCAP -  NatGeoWild</title>
+<title>DCAP - NatGeoWild</title>
 <link>http://gdata.youtube.com/feeds/api/users/NatGeoWild/uploads?start-index=1&max-results=50</link>
 <thumbnail>DCAP.png</thumbnail>
 </item>

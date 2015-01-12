@@ -1,0 +1,47 @@
+﻿#EXTM3U
+#EXTINF:-1,VTV1 HD 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv1hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV3 HD 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv3hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV6 HD 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv6hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV2 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv2_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV9 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv9_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB1
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:giaitritv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVcab2 PHIM VIET
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:phimviet_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB3 THETHAOTV HD
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:thethaotv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB4 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:kenh17_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB7 DDRAMAS
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:ddramas_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB8 BIBI 
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:bibi_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB9
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:infotv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB10 O2TV
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:o2tv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB12
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:styletv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVCAB15
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:investtv_hls.smil/playlist.m3u8
+#EXTINF:-1,BONGDATV HD
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:bongdatv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTC4 YEAH1
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:yeah1tv_hls.smil/playlist.m3u8
+#EXTINF:-1,ZONEFM 
+http://hlscache.fptplay.net.vn/liveshow/xonefmlive/chunklist.m3u8
+
+
+
+
+
+
+
+
+
+

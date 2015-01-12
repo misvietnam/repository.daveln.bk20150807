@@ -1,0 +1,137 @@
+﻿#EXTM3U
+#EXTINF:-1, HTV2 (720p)    
+plugin://plugin.video.htvonline/?cid=13&mode=playvideo&name=HTV2+%28720p%29                                                                                                                      
+#EXTINF:-1, HTV 7 HD (720p)    
+plugin://plugin.video.htvonline/?cid=43&mode=playvideo&name=HTV+7+HD+%28720p%29                             
+#EXTINF:-1, HTV 9 HD (720p)                        
+plugin://plugin.video.htvonline/?cid=75&mode=playvideo&name=+%28720p%29  
+
+#EXTINF:-1, HTVC Movie HD (720p)    
+plugin://plugin.video.htvonline/?cid=52&mode=playvideo&name=HTVC+Movie+HD+%28720p%29                                                                                                                      
+#EXTINF:-1, THUAN VIET HD (720p)    
+plugin://plugin.video.htvonline/?cid=92&mode=playvideo&name=Thu%C3%A2%CC%80n+Vi%C3%AA%CC%A3t+HD+%28720p%29                                                                                                                      
+#EXTINF:-1, HTVC Phim (720p)    
+plugin://plugin.video.htvonline/?cid=110&mode=playvideo&name=HTVC+Phim+%28720p%29   
+#EXTINF:-1, FBNC (720p)    
+plugin://plugin.video.htvonline/?cid=40&mode=playvideo&name=FBNC+%28720p%29                             
+#EXTINF:-1, VTC3 HD(720p)    
+plugin://plugin.video.htvonline/?cid=137&mode=playvideo&name=+%28720p%29   
+#EXTINF:-1, Yeah1(720p)    
+plugin://plugin.video.htvonline/?cid=139&mode=playvideo&name=+%28720p%29  
+
+#EXTINF:-1, VTV3(720p)    
+plugin://plugin.video.htvonline/?cid=135&mode=playvideo&name=+%28720p%29                             
+#EXTINF:-1, VTV6(720p)    
+plugin://plugin.video.htvonline/?cid=136&mode=playvideo&name=+%28720p%29
+#EXTINF:-1, THETHAOTV HD (720p)    
+plugin://plugin.video.htvonline/?cid=133&mode=playvideo&name=+%28720p%29                                                                                                                     
+#EXTINF:-1, BONGDAHD (720p)    
+plugin://plugin.video.htvonline/?cid=134&mode=playvideo&name=+%28720p%29                                                                          
+                      
+#EXTINF:-1, NATGEO HD(720p)    
+plugin://plugin.video.htvonline/?cid=126&mode=playvideo&name=+%28720p%29   
+#EXTINF:-1, STAR MOVIES HD(720p)   
+plugin://plugin.video.htvonline/?cid=127&mode=playvideo&name=+%28720p%29                                                                          
+#EXTINF:-1, STAR WORLD HD(720p)    
+plugin://plugin.video.htvonline/?cid=128&mode=playvideo&name=+%28720p%29  
+                                                                        
+#EXTINF:-1, HTV2 (360p)    
+plugin://plugin.video.htvonline/?cid=122&mode=playvideo&name=HTV2+%28360p%29                             
+#EXTINF:-1, HTV 3 (360p)    
+plugin://plugin.video.htvonline/?cid=49&mode=playvideo&name=HTV+3+%28360p%29      
+#EXTINF:-1, HTV 4 (360p) 
+plugin://plugin.video.htvonline/?cid=50&mode=playvideo&name=HTV+4+%28360p%29     
+#EXTINF:-1, HTV The Thao (360p)    
+plugin://plugin.video.htvonline/?cid=48&mode=playvideo&name=HTV+The+Thao+%28360p%29                                                                          
+                                                                       
+#EXTINF:-1, THUAN VIET(360p)    
+plugin://plugin.video.htvonline/?cid=109&mode=playvideo&name=+%28360p%29                                                                                                                      
+#EXTINF:-1, HTVC Plus HTVC+ (360p)    
+plugin://plugin.video.htvonline/?cid=51&mode=playvideo&name=HTVC+Plus+HTVC%2B+%28360p%29                                                                                                                      
+#EXTINF:-1, HTVGia Dinh (360p)    
+plugin://plugin.video.htvonline/?cid=45&mode=playvideo&name=HTVGia+Dinh+%28360p%29                                                                          
+#EXTINF:-1, HTVC Phu nu (360p)    
+plugin://plugin.video.htvonline/?cid=55&mode=playvideo&name=HTVC+Ph%E1%BB%A5+N%E1%BB%AF+%28360p%29                                                                                                                      
+#EXTINF:-1, htvc Du lich Cuoc SOng (360p)    
+plugin://plugin.video.htvonline/?cid=39&mode=playvideo&name=Du+lich+%26+Cuoc+SOng+%28360p%29                                                                                                                      
+#EXTINF:-1, HTV Mua Sam (360p)    
+plugin://plugin.video.htvonline/?cid=46&mode=playvideo&name=HTV+Mua+Sam+%28360p%29                                                                                                                      
+#EXTINF:-1, HTV Music (360p)    
+plugin://plugin.video.htvonline/?cid=47&mode=playvideo&name=HTV+Music+%28360p%29                             
+#EXTINF:-1, MTV (360p)    
+plugin://plugin.video.htvonline/?cid=14&mode=playvideo&name=mtv+%28360p%29                             
+#EXTINF:-1, youtv (360p)    
+plugin://plugin.video.htvonline/?cid=143&mode=playvideo&name=+%28360p%29
+                                                                        
+#EXTINF:-1, VTV1(360p)    
+plugin://plugin.video.htvonline/?cid=21&mode=playvideo&name=+%28360p%29                             
+#EXTINF:-1, VTV2 (360p)    
+plugin://plugin.video.htvonline/?cid=72&mode=playvideo&name=VTV2+%28360p%29                                                                                                                      
+#EXTINF:-1, VTV3 (360p)    
+plugin://plugin.video.htvonline/?cid=20&mode=playvideo&name=VTV3+%28360p%29                                                                                                                      
+#EXTINF:-1, VTV9 (360p)    
+plugin://plugin.video.htvonline/?cid=74&mode=playvideo&name=VTV9+%28360p%29 
+#EXTINF:-1, Vietnamnet(360p)    
+plugin://plugin.video.htvonline/?cid=138&mode=playvideo&name=+%28360p%29                                         
+                                                                       
+#EXTINF:-1, VTC4(360p)    
+plugin://plugin.video.htvonline/?cid=116&mode=playvideo&name=+%28360p%29                             
+#EXTINF:-1, VTC6(360p)    
+plugin://plugin.video.htvonline/?cid=117&mode=playvideo&name=+%28360p%29  
+#EXTINF:-1, VTC7 - Today TV (360p)    
+plugin://plugin.video.htvonline/?cid=111&mode=playvideo&name=VTC7+-+Today+TV+%28360p%29                                                                          
+#EXTINF:-1, VTC9 (Let's Viet) (360p)    
+plugin://plugin.video.htvonline/?cid=112&mode=playvideo&name=VTC9+%28Let%27s+Vi%E1%BB%87t%29+%28360p%29                                                                                                                      
+#EXTINF:-1, VTC10(360p)    
+plugin://plugin.video.htvonline/?cid=118&mode=playvideo&name=+%28360p%29                             
+                           
+#EXTINF:-1, BRT(360p)    
+plugin://plugin.video.htvonline/?cid=130&mode=playvideo&name=+%28360p%29                             
+#EXTINF:-1, TTV11(720p)    
+plugin://plugin.video.htvonline/?cid=141&mode=playvideo&name=+%28720p%29                                                                          
+#EXTINF:-1, THTPCT 
+plugin://plugin.video.htvonline/?cid=103&mode=playvideo&name=C%E1%BA%A6N+TH%C6%A0+THTPCT+%0D%0A+%28720p%29                                                                                                                      
+#EXTINF:-1, KTV (360p)    
+plugin://plugin.video.htvonline/?cid=104&mode=playvideo&name=KH%C3%81NH+H%C3%92A+KTV%0D%0A+%28360p%29                                                                                                                      
+#EXTINF:-1, LSTV (360p)    
+plugin://plugin.video.htvonline/?cid=89&mode=playvideo&name=L%E1%BA%A0NG+S%C6%A0N+-+LSTV+%28360p%29                                                                                                                      
+#EXTINF:-1, BTV (360p)    
+plugin://plugin.video.htvonline/?cid=35&mode=playvideo&name=B%C3%8CNH+%C4%90%E1%BB%8ANH+-+BTV+%28360p%29                                                                                                                      
+#EXTINF:-1, NTV Nam dinh(360p)    
+plugin://plugin.video.htvonline/?cid=108&mode=playvideo&name=Nam+%C4%90i%CC%A3nh+NTV+%28360p%29                                                                                                                      
+#EXTINF:-1, BTV3 (360p)     
+plugin://plugin.video.htvonline/?cid=102&mode=playvideo&name=BTV3%0D%0A+%28360p%29                                                                                                                       
+#EXTINF:-1, CA MAU - CTV (360p)    
+plugin://plugin.video.htvonline/?cid=67&mode=playvideo&name=C%C3%80+MAU+-+CTV+%28360p%29                                                                                                                      
+#EXTINF:-1, LAO CAI - THLC (360p)    
+plugin://plugin.video.htvonline/?cid=70&mode=playvideo&name=L%C3%80O+CAI+-+THLC%0D%0A+%28360p%29                                                                                                                      
+#EXTINF:-1, THDT (360p)    
+plugin://plugin.video.htvonline/?cid=60&mode=playvideo&name=%C4%90%E1%BB%92NG+TH%C3%81P+-+THDT+%28360p%29                                                                                                                      
+#EXTINF:-1, SOC TRANG STV (360p)    
+plugin://plugin.video.htvonline/?cid=58&mode=playvideo&name=S%C3%93C+TR%C4%82NG+STV+%28360p%29                                                                                                                      
+#EXTINF:-1, DAC LAC -DRT (360p)    
+plugin://plugin.video.htvonline/?cid=68&mode=playvideo&name=%C4%90%E1%BA%AEC+L%E1%BA%AEC+-DRT+%28360p%29                                                                                                                      
+#EXTINF:-1, DAC NONG - PTD (360p)    
+plugin://plugin.video.htvonline/?cid=69&mode=playvideo&name=%C4%90%E1%BA%AEC+N%C3%94NG+-+PTD+%28360p%29                                                                                                                      
+#EXTINF:-1, HUE -TRT (360p)    
+plugin://plugin.video.htvonline/?cid=64&mode=playvideo&name=HU%E1%BA%BE+-TRT+%28360p%29                                                                                                                      
+#EXTINF:-1, BAC GIANG - BGTV (360p)    
+plugin://plugin.video.htvonline/?cid=66&mode=playvideo&name=B%E1%BA%AEC+GIANG+-+BGTV+%28360p%29                                                                                                                      
+#EXTINF:-1, VINH PHUC VP (360p)    
+plugin://plugin.video.htvonline/?cid=71&mode=playvideo&name=V%C4%A8NH+PH%C3%9AC+VP+%28360p%29                                                                                                                      
+#EXTINF:-1, THVL1 ViÌƒnh Long (360p)    
+plugin://plugin.video.htvonline/?cid=62&mode=playvideo&name=THVL1+Vi%CC%83nh+Long+%28360p%29                                                                                                                          
+#EXTINF:-1, BINH PHUOC BPTV1 (360p)    
+plugin://plugin.video.htvonline/?cid=34&mode=playvideo&name=B%C3%8CNH+PH%C6%AF%E1%BB%9AC+BPTV1+%28360p%29                                                                                                                      
+#EXTINF:-1, LONG AN LA34 (360p)    
+plugin://plugin.video.htvonline/?cid=54&mode=playvideo&name=LONG+AN+LA34+%28360p%29                                                                                                                          
+#EXTINF:-1, BAC LIEU(360p)    
+plugin://plugin.video.htvonline/?cid=121&mode=playvideo&name=+%28360p%29                                                                          
+#EXTINF:-1, HAI DUONG(360p)    
+plugin://plugin.video.htvonline/?cid=131&mode=playvideo&name=+%28360p%29                                                                                                                
+#EXTINF:-1, NINH BINH(360p)    
+plugin://plugin.video.htvonline/?cid=142&mode=playvideo&name=+%28360p%29                             
+#EXTINF:-1, Truyen hinh Thai Nguyen (360p)    
+plugin://plugin.video.htvonline/?cid=145&mode=playvideo&name=Truyen+hinh+Thai+Nguyen+%28360p%29                                                                          
+#EXTINF:-1, KIEN GIANG(360p)    
+plugin://plugin.video.htvonline/?cid=146&mode=playvideo&name=+%28360p%29                             

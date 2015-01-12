@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!-- Categories: Main Menu, Religion, OverseaNews, NewsInVN, Children, Music, Karaoke, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, MakeUp, AudioBook, OtherStuff -->
+<!-- Categories: Main Menu, Religion, OverseaNews, NewsInVN, Children, 
+Music, Karaoke, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, 
+MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 
 <stream>
 
@@ -88,6 +90,18 @@
 <title>Main Menu - Di trú và Nhập Tịch Hoa Kỳ</title>
 <link>DiTru</link>
 <thumbnail>ditru.png</thumbnail>
+</item>
+
+<item>
+<title>Main Menu - America's Funniest Videos</title>
+<link>DiTru</link>
+<thumbnail>AFV.png</thumbnail>
+</item>
+
+<item>
+<title>Main Menu - Dicovery Channels & Animal Planet</title>
+<link>DiTru</link>
+<thumbnail>DCAP.png</thumbnail>
 </item>
 
 <item>
@@ -1173,6 +1187,100 @@
 <title>Immigration - Di trú và Nhập Tịch Hoa Kỳ</title>
 <link>http://gdata.youtube.com/feeds/api/users/NguyenLegalGroup/uploads?start-index=1&max-results=50</link>
 <thumbnail>ditru.png</thumbnail>
+</item>
+
+<!------------- AFV ----------------->
+
+<item>
+<title>AFV - America's Funniest Home Videos</title>
+<link>http://gdata.youtube.com/feeds/api/users/AFVofficial/uploads?start-index=1&max-results=50</link>
+<thumbnail>AFV.png</thumbnail>
+</item>
+
+<item>
+<title>AFV - AFV Kids</title>
+<link>http://gdata.youtube.com/feeds/api/users/ToddleTale/uploads?start-index=1&max-results=50</link>
+<thumbnail>AFV.png</thumbnail>
+</item>
+
+<item>
+<title>AFV - AFV Animals</title>
+<link>http://gdata.youtube.com/feeds/api/users/PETSAMI/uploads?start-index=1&max-results=50</link>
+<thumbnail>AFV.png</thumbnail>
+</item>
+
+<item>
+<title>AFV - AFVApproved</title>
+<link>http://gdata.youtube.com/feeds/api/users/AFVApproved/uploads?start-index=1&max-results=50</link>
+<thumbnail>AFV.png</thumbnail>
+</item>
+
+<item>
+<title>AFV - AFVMobile</title>
+<link>http://gdata.youtube.com/feeds/api/users/AFVMobile/uploads?start-index=1&max-results=50</link>
+<thumbnail>AFV.png</thumbnail>
+</item>
+
+<!------ Discovery & Animal --------->
+
+<item>
+<title>DCAP - Animal Planet</title>
+<link>http://gdata.youtube.com/feeds/api/users/AnimlPlanet/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Animal Planet TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/AnimalPlanetTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP -  Animalist</title>
+<link>http://gdata.youtube.com/feeds/api/users/AnimalistNetwork/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Documentary TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/storyofkittens/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Science Channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/ScienceChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - National Geographic</title>
+<link>http://gdata.youtube.com/feeds/api/users/NationalGeographic/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP -  NatGeoWild</title>
+<link>http://gdata.youtube.com/feeds/api/users/NatGeoWild/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - History Channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/historychannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Documentary & Discovery Channel HD (Official)</title>
+<link>http://gdata.youtube.com/feeds/api/users/LordDiscovery/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Discovery Channel Science Documentary</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCe4AKRmWCL9LLorr-q3On_Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
 </item>
 
 <!------------ Other ---------------->

@@ -1,4 +1,6 @@
 v 1.0.8
+Add AFV
+Add Dicovery channel & Animal Planet
 Update Tôn Giáo
 Update menulist
 

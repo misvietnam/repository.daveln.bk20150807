@@ -137,7 +137,15 @@ def categories():
     elif 'Di trú và Nhập Tịch Hoa Kỳ' in name:
       if 'Immigration - ' in title:	
         addDir(title.replace('Immigration - ',''),url,3,logos+thumbnail)
-      else: pass      
+      else: pass
+    elif 'America\'s Funniest Videos' in name:
+      if 'AFV - ' in title:	
+        addDir(title.replace('AFV - ',''),url,3,logos+thumbnail)
+      else: pass	  
+    elif 'Dicovery Channels & Animal Planet' in name:
+      if 'DCAP - ' in title:	
+        addDir(title.replace('DCAP - ',''),url,3,logos+thumbnail)
+      else: pass	        
     elif 'Những Mục Khác' in name:
       if 'Other - ' in title:	
         addDir(title.replace('Other - ',''),url,3,logos+thumbnail)

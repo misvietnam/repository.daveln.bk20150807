@@ -533,6 +533,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Children - Cartoon Network</title>
+<link>http://gdata.youtube.com/feeds/api/users/cartoonnetwork/uploads?start-index=1&max-results=50</link>
+<thumbnail>thieunhi.png</thumbnail>
+</item>
+
+<item>
 <title>Children - Little Baby Bum</title>
 <link>http://gdata.youtube.com/feeds/api/users/LittleBabyBum/uploads?start-index=1&max-results=50</link>
 <thumbnail>thieunhi.png</thumbnail>

@@ -27,7 +27,7 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
-
+'''
 if not os.path.exists(homemenu):
   try:
     open(homemenu, 'w+').close()
@@ -39,7 +39,7 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
-
+'''
 def menulist():
   try:
     mainmenu=open(homemenu, 'r')  
@@ -71,8 +71,8 @@ def main():
       pass
 
 def directories():
-  addDir('Tin Tức Hải Ngoại',url,2,logos+'haingoai.png')
-  addDir('Tin Tức Trong Nước',url,2,logos+'vietnam.png')
+  addDir('Tin Tức & TV Hải Ngoại',url,2,logos+'haingoai.png')
+  addDir('Tin Tức & TV Trong Nước',url,2,logos+'vietnam.png')
       
 def categories():
   for title, url, thumbnail in menulink:
@@ -80,11 +80,11 @@ def categories():
       if 'Religion - ' in title:	
         addDir(title.replace('Religion - ',''),url,3,logos+thumbnail)      
       else: pass        
-    elif 'Tin Tức Hải Ngoại' in name:
+    elif 'Tin Tức & TV Hải Ngoại' in name:
       if 'OverseaNews - ' in title:	
         addDir(title.replace('OverseaNews - ',''),url,3,logos+thumbnail)
       else: pass	
-    elif 'Tin Tức Trong Nước' in name:
+    elif 'Tin Tức & TV Trong Nước' in name:
       if 'NewsInVN - ' in title:	
         addDir(title.replace('NewsInVN - ',''),url,3,logos+thumbnail)
       else: pass	      
@@ -104,6 +104,10 @@ def categories():
       if 'Sitcom - ' in title:	
         addDir(title.replace('Sitcom - ',''),url,3,logos+thumbnail)
       else: pass
+    elif 'Talk Shows' in name:
+      if 'TalkShows - ' in title:	
+        addDir(title.replace('TalkShows - ',''),url,3,logos+thumbnail)
+      else: pass      
     elif 'TV Shows' in name:
       if 'TiviShows - ' in title:	
         addDir(title.replace('TiviShows - ',''),url,3,logos+thumbnail)

@@ -15,9 +15,9 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu Plus - Tin Tức</title>
+<title>Main Menu Plus - Tin Tức & TV</title>
 <link>TinTuc</link>
-<thumbnail>tintuc.png</thumbnail>
+<thumbnail>tintuctv.png</thumbnail>
 </item>
 
 <item>
@@ -325,6 +325,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>OverseaNews - officialVietFaceTV</title>
+<link>http://gdata.youtube.com/feeds/api/users/officialVietFaceTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - VA TV Online</title>
 <link>http://gdata.youtube.com/feeds/api/users/VATVONLINE/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -441,8 +447,14 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>NewsInVN - VTCTube</title>
-<link>http://gdata.youtube.com/feeds/api/users/vtctv/uploads?start-index=1&max-results=50</link>
+<title>NewsInVN - LET'SVIET TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/letsvietvn/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - VTV4 on the Go</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTV4go/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -453,14 +465,14 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>NewsInVN - VTVShowbiz</title>
-<link>http://gdata.youtube.com/feeds/api/users/VTVShowbiz/uploads?start-index=1&max-results=50</link>
+<title>NewsInVN - VTCTube</title>
+<link>http://gdata.youtube.com/feeds/api/users/vtctv/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
 <item>
-<title>NewsInVN - VTV4 on the Go</title>
-<link>http://gdata.youtube.com/feeds/api/users/VTV4go/uploads?start-index=1&max-results=50</link>
+<title>NewsInVN - Zing TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/ZingTVVN/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -791,14 +803,14 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Sitcom -------------------->
 
 <item>
-<title>Sitcom - Vân Sơn Hài Collection</title>
-<link>http://www.dailymotion.com/rss/user/danduphim88/1</link>
+<title>Sitcom - Tiệm Bánh Hoàng Tử Bé - Kim Chi Cà Pháo</title>
+<link>http://gdata.youtube.com/feeds/api/users/tiembanhhoangtube/uploads?start-index=1&max-results=50</link>
 <thumbnail>haikich.png</thumbnail>
 </item>
 
 <item>
-<title>Sitcom - Cafe Cười</title>
-<link>http://gdata.youtube.com/feeds/api/users/cafecuoisenvang/uploads?start-index=1&max-results=50</link>
+<title>Sitcom - Vân Sơn Hài Collection</title>
+<link>http://www.dailymotion.com/rss/user/danduphim88/1</link>
 <thumbnail>haikich.png</thumbnail>
 </item>
 
@@ -815,12 +827,24 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Sitcom - Cafe Cười</title>
+<link>http://gdata.youtube.com/feeds/api/users/cafecuoisenvang/uploads?start-index=1&max-results=50</link>
+<thumbnail>haikich.png</thumbnail>
+</item>
+
+<item>
 <title>Sitcom - MC Việt Thảo</title>
 <link>http://gdata.youtube.com/feeds/api/users/mcvietthao/uploads?start-index=1&max-results=50</link>
 <thumbnail>haikich.png</thumbnail>
 </item>
 
 <!------------ TV Shows ------------------>
+
+<item>
+<title>TiviShows - VTVShowbiz</title>
+<link>http://gdata.youtube.com/feeds/api/users/VTVShowbiz/uploads?start-index=1&max-results=50</link>
+<thumbnail>tvshows.png</thumbnail>
+</item>
 
 <item>
 <title>TiviShows - Tìm Kiếm Tài Năng Việt</title>

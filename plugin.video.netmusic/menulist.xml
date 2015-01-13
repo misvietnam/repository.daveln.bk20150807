@@ -841,12 +841,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ TV Shows ------------------>
 
 <item>
-<title>TiviShows - VTVShowbiz</title>
-<link>http://gdata.youtube.com/feeds/api/users/VTVShowbiz/uploads?start-index=1&max-results=50</link>
-<thumbnail>tvshows.png</thumbnail>
-</item>
-
-<item>
 <title>TiviShows - Tìm Kiếm Tài Năng Việt</title>
 <link>http://gdata.youtube.com/feeds/api/users/VTVShowbiz/uploads?start-index=1&max-results=50</link>
 <thumbnail>tvshows.png</thumbnail>

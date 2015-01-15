@@ -1,3 +1,6 @@
+v 1.1.0
+Fix phim3s
+
 v 1.0.20
 Update search
 

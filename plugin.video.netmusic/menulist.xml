@@ -343,6 +343,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>OverseaNews - Viet Bay</title>
+<link>http://gdata.youtube.com/feeds/api/users/vietbaytv/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - VIETV</title>
+<link>http://gdata.youtube.com/feeds/api/users/VIETVnetwork/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - Việt News TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/vietnewstelevision/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -1355,6 +1367,24 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Other - Home Repair - This Old House</title>
 <link>http://gdata.youtube.com/feeds/api/users/thisoldhouse/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Khan Academy</title>
+<link>http://gdata.youtube.com/feeds/api/users/khanacademy/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Khan Academy Projects</title>
+<link>http://gdata.youtube.com/feeds/api/users/khanacademyprojects/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Khan Academy Medicine</title>
+<link>http://gdata.youtube.com/feeds/api/users/khanacademymedicine/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

@@ -1371,6 +1371,24 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Other - Khan Academy</title>
+<link>http://gdata.youtube.com/feeds/api/users/khanacademy/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Khan Academy Projects</title>
+<link>http://gdata.youtube.com/feeds/api/users/khanacademyprojects/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Khan Academy Medicine</title>
+<link>http://gdata.youtube.com/feeds/api/users/khanacademymedicine/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
 <title>Other - Zui.vn</title>
 <link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>

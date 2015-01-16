@@ -99,6 +99,10 @@ def categories():
     elif 'Hát Karaoke' in name:
       if 'Karaoke - ' in title:	
         addDir(title.replace('Karaoke - ',''),url,3,logos+thumbnail)
+      else: pass	
+    elif 'Cải Lương' in name:
+      if 'Cailuong - ' in title:	
+        addDir(title.replace('Cailuong - ',''),url,3,logos+thumbnail)
       else: pass	      
     elif 'Hài Kịch' in name:
       if 'Sitcom - ' in title:	

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <!-- Categories: Main Menu, Religion, OverseaNews, NewsInVN, Children, 
-Music, Karaoke, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, 
+Music, Karaoke, CaiLuong, Sitcom, TV Shows, Sports, Travel, Medical, Cooking, 
 MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 
 <stream>
@@ -36,6 +36,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <title>Main Menu - Hát Karaoke</title>
 <link>Karaoke</link>
 <thumbnail>karaoke.png</thumbnail>
+</item>
+
+<item>
+<title>Main Menu - Cải Lương</title>
+<link>Karaoke</link>
+<thumbnail>cailuong.png</thumbnail>
 </item>
 
 <item>
@@ -816,6 +822,122 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <title>Karaoke - [COLOR lime]English[/COLOR][COLOR magenta] - [/COLOR]Sing Songs Music</title>
 <link>http://gdata.youtube.com/feeds/api/users/singsongsmusic/uploads?start-index=1&max-results=50</link>
 <thumbnail>englishkaraoke.png</thumbnail>
+</item>
+
+<!------------ CaiLuong -------------------->
+
+<item>
+<title>Cailuong - Lệ Thuỷ</title>
+<link>http://gdata.youtube.com/feeds/api/users/micovn/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Ngọc Huyền</title>
+<link>http://gdata.youtube.com/feeds/api/users/NgocHuyenZone/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/cailuongvn2014/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - cailuongvietnam.vn</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCM85iZlQzyEV3Ag9Bh2v54A/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - cailuongvietnam.com</title>
+<link>http://gdata.youtube.com/feeds/api/users/tancogiaoduyencp/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Xưa</title>
+<link>http://gdata.youtube.com/feeds/api/users/CaiLuongXaHoiVuLinh/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Tuyển Chọn</title>
+<link>http://gdata.youtube.com/feeds/api/users/UC6bHadMDGCHftH3hfgvMI6A/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Đặc Sắc</title>
+<link>http://gdata.youtube.com/feeds/api/users/UC1XYd63HQSrooxjUOb1PbuQ/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Việt Nam Cải Lương</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCYK1xo7CRbGIhNyfz4MyGkQ/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Online</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCPR1RT-nvozDhweXtHh6Zkw/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Xã Hội</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCSmAD-c_3B_2F-iONBTSrDg/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương Miền Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCMKsP2qCocvWTDP5hfNm_Tw/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Tân Cổ Giao Duyên</title>
+<link>http://gdata.youtube.com/feeds/api/users/trutinhvietnam2014/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương 1</title>
+<link>http://gdata.youtube.com/feeds/api/users/MrMinhRang/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương 2</title>
+<link>http://gdata.youtube.com/feeds/api/users/cailuongtoiyeutv/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương 3</title>
+<link>http://gdata.youtube.com/feeds/api/users/cailuongluong2015/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương 4</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCcUyBre7IIdskndDbBe_dRg/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương 5</title>
+<link>http://gdata.youtube.com/feeds/api/users/TPhung2011/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
+<title>Cailuong - Cải Lương 6</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCrfhSe0PnEYb-Y_ARusKwHQ/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
 </item>
 
 <!------------ Sitcom -------------------->

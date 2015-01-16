@@ -465,7 +465,7 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>NewsInVN - LET'SVIET TV</title>
+<title>NewsInVN - LET'S VIET TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/letsvietvn/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
@@ -483,6 +483,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - POPS TV VIỆT NAM</title>
+<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - VTCTube</title>
 <link>http://gdata.youtube.com/feeds/api/users/vtctv/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
@@ -491,6 +497,42 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>NewsInVN - Zing TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/ZingTVVN/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - FAP TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/FAPtivi/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Giải Trí TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/ChannelGiaiTriTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - htv2channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/htv2channel/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Yeah1 Family TV - VTC4</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCo_QG56Ijk2iklFgpUOVKIA/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - YAN News</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanNewsTube/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - YAN TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanTvTurnsUon/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -679,8 +721,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Music - Yeah1 Music</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCI2OiZs5aVcyBUBVsgovzng/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
 <title>Music - Như Quỳnh</title>
 <link>http://gdata.youtube.com/feeds/api/users/nhuquynhtube/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Lam Trường</title>
+<link>http://gdata.youtube.com/feeds/api/users/LamTruongOfficial/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -985,8 +1039,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Sitcom - 5sonlinevietnam</title>
+<link>http://gdata.youtube.com/feeds/api/users/5sonlinevietnam/uploads?start-index=1&max-results=50</link>
+<thumbnail>haikich.png</thumbnail>
+</item>
+
+<item>
 <title>Sitcom - Cafe Cười</title>
 <link>http://gdata.youtube.com/feeds/api/users/cafecuoisenvang/uploads?start-index=1&max-results=50</link>
+<thumbnail>haikich.png</thumbnail>
+</item>
+
+<item>
+<title>Sitcom - Yeah1/NVU/Phở</title>
+<link>http://gdata.youtube.com/feeds/api/users/2idolshow/uploads?start-index=1&max-results=50</link>
 <thumbnail>haikich.png</thumbnail>
 </item>
 
@@ -1013,6 +1079,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>TiviShows - Đừng Để Tiền Rơi</title>
 <link>http://gdata.youtube.com/feeds/api/users/trochoivtv/uploads?start-index=1&max-results=50</link>
+<thumbnail>tvshows.png</thumbnail>
+</item>
+
+<item>
+<title>TiviShows - Bếp Hát</title>
+<link>http://gdata.youtube.com/feeds/api/users/bephatvn/uploads?start-index=1&max-results=50</link>
+<thumbnail>tvshows.png</thumbnail>
+</item>
+
+<item>
+<title>TiviShows - Vui Ơi Là Vui</title>
+<link>http://gdata.youtube.com/feeds/api/users/gameshowVuiOiLaVui/uploads?start-index=1&max-results=50</link>
 <thumbnail>tvshows.png</thumbnail>
 </item>
 
@@ -1511,8 +1589,8 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Other ---------------->
 
 <item>
-<title>Other - POPS TV VIỆT NAM</title>
-<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<title>Other - Bếp Yêu Thương</title>
+<link>http://gdata.youtube.com/feeds/api/users/WilmarVietnam/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 
@@ -1567,6 +1645,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Other - Khan Academy Medicine</title>
 <link>http://gdata.youtube.com/feeds/api/users/khanacademymedicine/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Yantv Jsc</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanTVChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Yeah1 Film/iMovie</title>
+<link>http://gdata.youtube.com/feeds/api/users/ImovieBTV4/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

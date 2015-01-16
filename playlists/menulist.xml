@@ -1243,6 +1243,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Travel - Đi Du Lịch</title>
+<link>http://gdata.youtube.com/feeds/api/users/DiDuLichOnline/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
 <title>Travel - Venus Travel VN</title>
 <link>http://gdata.youtube.com/feeds/api/users/venustravelvn/uploads?start-index=1&max-results=50</link>
 <thumbnail>dulich.png</thumbnail>

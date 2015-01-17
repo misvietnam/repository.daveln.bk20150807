@@ -119,6 +119,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!-------------- Religion ---------------->
 
 <item>
+<title>Religion - Viet Catholic News</title>
+<link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - TVASTM - Đức Mẹ Hằng Cứu Giúp</title>
+<link>http://gdata.youtube.com/feeds/api/users/tvastm/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
 <title>Religion - Đức Mẹ TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/chuacuuthe/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
@@ -133,12 +145,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Religion - KINH MÂN CÔI online</title>
 <link>http://gdata.youtube.com/feeds/api/users/kinhmancoionline/uploads?start-index=1&max-results=50</link>
-<thumbnail>tongiao.png</thumbnail>
-</item>
-
-<item>
-<title>Religion - Viet Catholic News</title>
-<link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
 </item>
 
@@ -313,6 +319,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>OverseaNews - SBTN Paris</title>
+<link>http://gdata.youtube.com/feeds/api/users/paris2013sbtn/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - Viet Catholic News</title>
 <link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -411,6 +423,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>OverseaNews - Thư Viện Toàn Cầu</title>
 <link>http://www.dailymotion.com/rss/user/ThuVienToanCau/1</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
+<title>OverseaNews - Truyền Hình Online VTO của Người Việt Tự Do Tiểu Bang Utah</title>
+<link>http://gdata.youtube.com/feeds/api/users/1734ize/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
 </item>
 

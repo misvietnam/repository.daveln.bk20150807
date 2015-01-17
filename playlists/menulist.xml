@@ -57,19 +57,19 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu - Thể Thao</title>
-<link>HaiKich</link>
+<title>Main Menu - Thể Thao & Thể Dục</title>
+<link>TheThao</link>
 <thumbnail>thethao.png</thumbnail>
 </item>
 
 <item>
-<title>Main Menu - Du Lịch</title>
+<title>Main Menu - Du Lịch & Cuộc Sống</title>
 <link>DuLich</link>
 <thumbnail>dulich.png</thumbnail>
 </item>
 
 <item>
-<title>Main Menu - Y Khoa</title>
+<title>Main Menu - Y Khoa & Sức Khoẻ</title>
 <link>YKhoa</link>
 <thumbnail>ykhoa.png</thumbnail>
 </item>
@@ -100,13 +100,13 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 
 <item>
 <title>Main Menu - America's Funniest Videos</title>
-<link>DiTru</link>
+<link>AFV</link>
 <thumbnail>AFV.png</thumbnail>
 </item>
 
 <item>
 <title>Main Menu - Dicovery Channels & Animal Planet</title>
-<link>DiTru</link>
+<link>DCAP</link>
 <thumbnail>DCAP.png</thumbnail>
 </item>
 
@@ -1247,6 +1247,43 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------- Sports ------------------->
 
 <item>
+<title>Sports - Thể Dục Thẩm Mỹ với MC Nguyễn Cao Kỳ Duyên</title>
+<link>http://gdata.youtube.com/feeds/api/users/nhochembitkhoc/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Dục Thẩm Mỹ 1</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCplLrzVkLP31D0ymZ_q333A/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Dục Thẩm Mỹ 2</title>
+<link>http://gdata.youtube.com/feeds/api/users/UC3neDQB3isgEr0FqQyUJ44Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Dục Thẩm Mỹ 3</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCMd8pzGXMqFjdZSogx_Oy6Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+
+<item>
+<title>Sports - Vovinam Thái Nguyên</title>
+<link>http://gdata.youtube.com/feeds/api/users/thanhnienxungkich/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Vovinam England</title>
+<link>http://gdata.youtube.com/feeds/api/users/VovinamEngland/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
 <title>Sports - Thethao247vn</title>
 <link>http://gdata.youtube.com/feeds/api/users/Thethao247vn/uploads?start-index=1&max-results=50</link>
 <thumbnail>thethao.png</thumbnail>
@@ -1283,8 +1320,86 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Sports - The Olympic Channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/olympic/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Allsports Athletics</title>
+<link>http://gdata.youtube.com/feeds/api/users/AllSportsAthletics/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - ESPN</title>
+<link>http://gdata.youtube.com/feeds/api/users/ESPN/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
 <title>Sports - Đô Vật WWE</title>
 <link>http://gdata.youtube.com/feeds/api/users/WWEFanNation/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - HBO Boxing</title>
+<link>http://gdata.youtube.com/feeds/api/users/HBOsports/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Glovesgymabc Gloves</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCYGlQcpAY_2UxEOCxTd1k5Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Kings of Boxing</title>
+<link>http://gdata.youtube.com/feeds/api/users/2112wildcat/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - NBA</title>
+<link>http://gdata.youtube.com/feeds/api/users/NBA/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Basketball Nation</title>
+<link>http://gdata.youtube.com/feeds/api/users/BasketballNationHD/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Football News</title>
+<link>http://gdata.youtube.com/feeds/api/users/FootballNewsUS/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Swimming World</title>
+<link>http://gdata.youtube.com/feeds/api/users/SwimmingWorldSPI/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - USA Swimming</title>
+<link>http://gdata.youtube.com/feeds/api/users/USASwimmingOrg/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - US Open Tennis Championships</title>
+<link>http://gdata.youtube.com/feeds/api/users/USOPEN/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Australian Open TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/australianopentv/uploads?start-index=1&max-results=50</link>
 <thumbnail>thethao.png</thumbnail>
 </item>
 
@@ -1383,6 +1498,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Medical ------------------->
 
 <item>
+<title>Y Tế NguoiVietTV - Y Tế – Sức Khỏe</title>
+<link>http://nguoiviettv.com/?cat=23</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
+<title>Y Tế Đồng Nai - Y Khoa Tổng Quát</title>
+<link>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
 <title>Medical - Tin Tức Y Khoa</title>
 <link>http://gdata.youtube.com/feeds/api/users/CoPhamMD/uploads?start-index=1&max-results=50</link>
 <thumbnail>ykhoa.png</thumbnail>
@@ -1395,8 +1522,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Y Tế Đồng Nai - Y Khoa Tổng Quát</title>
-<link>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</link>
+<title>Medical - Sức Khỏe Mỗi Ngày</title>
+<link>http://gdata.youtube.com/feeds/api/users/tringoai/uploads?start-index=1&max-results=50</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
+<title>Medical - Tài Liệu Y Học</title>
+<link>http://gdata.youtube.com/feeds/api/users/TaiLieuYHoc/uploads?start-index=1&max-results=50</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
+<title>Medical - Thư Viện Y Khoa</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCldPEiKvoHXuT6E4Zp5vCIg/uploads?start-index=1&max-results=50</link>
 <thumbnail>ykhoa.png</thumbnail>
 </item>
 
@@ -1513,6 +1652,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Immigration - Di trú và Nhập Tịch Hoa Kỳ</title>
 <link>http://gdata.youtube.com/feeds/api/users/NguyenLegalGroup/uploads?start-index=1&max-results=50</link>
+<thumbnail>ditru.png</thumbnail>
+</item>
+
+<item>
+<title>Immigration - Nhập Tịch Di trú Hoa Kỳ</title>
+<link>http://gdata.youtube.com/feeds/api/users/NguyenLeThienTrang/uploads?start-index=1&max-results=50</link>
 <thumbnail>ditru.png</thumbnail>
 </item>
 
@@ -1675,18 +1820,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Other - Zui.vn</title>
 <link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Vovinam Thái Nguyên</title>
-<link>http://gdata.youtube.com/feeds/api/users/thanhnienxungkich/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Vovinam England</title>
-<link>http://gdata.youtube.com/feeds/api/users/VovinamEngland/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

@@ -127,8 +127,10 @@ def categories():
     elif 'Y Khoa' in name:
       if 'Medical - ' in title:	
         addDir(title.replace('Medical - ',''),url,3,logos+thumbnail)
+      elif 'Y Tế NguoiVietTV - ' in title:
+        addDir(title.replace('Y Tế NguoiVietTV - ',''),url,5,logos+thumbnail)         
       elif 'Y Tế Đồng Nai' in title:
-        addDir(title.replace('Y Tế Đồng Nai - ',''),url,5,logos+thumbnail)      
+        addDir(title.replace('Y Tế Đồng Nai - ',''),url,5,logos+thumbnail)        
       else: pass
     elif 'Ẩm Thực Tình Yêu' in name:
       if 'Cooking - ' in title:	
@@ -159,21 +161,30 @@ def categories():
         addDir(title.replace('Other - ',''),url,3,logos+thumbnail)
       else: pass	  
 
-def dongnai(url):
+def medicalSites(url):
   content=makeRequest(url)
-  match=re.compile("img src=\"([^\"]+)\" \/><\/a>\s*<a href=\"([^\"]*)\" class=\"title\">(.+?)<").findall(content)
-  for thumbnail,url,name in match:	
-    addLink(name,url,thumbnail)
-  match=re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang đầu<').findall(content)
-  for url in match:	
-    addDir('[COLOR violet]Trang đầu[/COLOR]',url,5,logos+'dongnai.png')    
-  match=re.compile('class=\'paging_normal\' href=\'([^\']+)\'>(\d+)<').findall(content)
-  for url,name in match:	
-    addDir('[COLOR lime]Trang '+name+'[/COLOR]',url,5,logos+'dongnai.png')	
-  match=re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang cuối<').findall(content)
-  for url in match:	
-    addDir('[COLOR red]Trang cuối[/COLOR]',url,5,logos+'dongnai.png')	
-    
+  if 'www.dnrtv.org.vn' in url:
+    match=re.compile("img src=\"([^\"]+)\" \/><\/a>\s*<a href=\"([^\"]*)\" class=\"title\">(.+?)<").findall(content)
+    for thumbnail,url,name in match:	
+      addLink(name,url,thumbnail)
+    match=re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang đầu<').findall(content)
+    for url in match:	
+      addDir('[COLOR violet]Trang đầu[/COLOR]',url,5,logos+'dongnai.png')    
+    match=re.compile('class=\'paging_normal\' href=\'([^\']+)\'>(\d+)<').findall(content)
+    for url,name in match:	
+      addDir('[COLOR lime]Trang '+name+'[/COLOR]',url,5,logos+'dongnai.png')	
+    match=re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang cuối<').findall(content)
+    for url in match:	
+      addDir('[COLOR red]Trang cuối[/COLOR]',url,5,logos+'dongnai.png')	
+  elif 'nguoiviettv' in url:
+    match=re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[15:-6]
+    for name,url,thumbnail in match:
+      name=name.replace('&#8220;','"').replace('&#8221;','"').replace('&#8211;',' - ')    
+      addLink(name,url,thumbnail)   
+    match=re.compile("href='([^']*)' class='.+?'>(\d+)<").findall(content)
+    for url,name in match:	
+      addDir('[COLOR yellow]Trang '+name+'[/COLOR]',url.replace('#038;',''),5,logos+'bacsi.png')	
+     
 def mediaLists(url):
   content=makeRequest(url)
   if 'youtube' in url:	  
@@ -200,6 +211,10 @@ def resolveUrl(url):
   if 'www.dnrtv.org.vn' in url:
     content=makeRequest(url)
     mediaUrl=re.compile("url: '(.+?)mp4'").findall(content)[0]+'mp4'
+  elif 'nguoiviettv' in url:
+    content=makeRequest(url)
+    videoID=re.compile('src="http://www.youtube.com/embed/(.+?)\?').findall(content)[0]
+    mediaUrl='plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid='+videoID        
   else:  
     mediaUrl = url	
   item=xbmcgui.ListItem(path=mediaUrl)
@@ -277,6 +292,6 @@ elif mode==4:
   resolveUrl(url)
 
 elif mode==5:
-  dongnai(url)  
+  medicalSites(url)  
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

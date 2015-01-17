@@ -57,19 +57,19 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu - Thể Thao</title>
-<link>HaiKich</link>
+<title>Main Menu - Thể Thao & Thể Dục</title>
+<link>TheThao</link>
 <thumbnail>thethao.png</thumbnail>
 </item>
 
 <item>
-<title>Main Menu - Du Lịch</title>
+<title>Main Menu - Du Lịch & Cuộc Sống</title>
 <link>DuLich</link>
 <thumbnail>dulich.png</thumbnail>
 </item>
 
 <item>
-<title>Main Menu - Y Khoa</title>
+<title>Main Menu - Y Khoa & Sức Khoẻ</title>
 <link>YKhoa</link>
 <thumbnail>ykhoa.png</thumbnail>
 </item>
@@ -100,13 +100,13 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 
 <item>
 <title>Main Menu - America's Funniest Videos</title>
-<link>DiTru</link>
+<link>AFV</link>
 <thumbnail>AFV.png</thumbnail>
 </item>
 
 <item>
 <title>Main Menu - Dicovery Channels & Animal Planet</title>
-<link>DiTru</link>
+<link>DCAP</link>
 <thumbnail>DCAP.png</thumbnail>
 </item>
 
@@ -117,6 +117,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <!-------------- Religion ---------------->
+
+<item>
+<title>Religion - Viet Catholic News</title>
+<link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - TV Ánh Sáng Tin Mừng</title>
+<link>http://gdata.youtube.com/feeds/api/users/tvastm/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
 
 <item>
 <title>Religion - Đức Mẹ TV</title>
@@ -133,12 +145,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Religion - KINH MÂN CÔI online</title>
 <link>http://gdata.youtube.com/feeds/api/users/kinhmancoionline/uploads?start-index=1&max-results=50</link>
-<thumbnail>tongiao.png</thumbnail>
-</item>
-
-<item>
-<title>Religion - Viet Catholic News</title>
-<link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
 </item>
 
@@ -313,6 +319,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>OverseaNews - SBTN Paris</title>
+<link>http://gdata.youtube.com/feeds/api/users/paris2013sbtn/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - Viet Catholic News</title>
 <link>http://gdata.youtube.com/feeds/api/users/VietCatholicNews/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -415,6 +427,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>OverseaNews - Truyền Hình Online VTO của Người Việt Tự Do Tiểu Bang Utah</title>
+<link>http://gdata.youtube.com/feeds/api/users/1734ize/uploads?start-index=1&max-results=50</link>
+<thumbnail>haingoai.png</thumbnail>
+</item>
+
+<item>
 <title>OverseaNews - VOA</title>
 <link>http://gdata.youtube.com/feeds/api/users/VOATiengVietVideo/uploads?start-index=1&max-results=50</link>
 <thumbnail>haingoai.png</thumbnail>
@@ -465,7 +483,7 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>NewsInVN - LET'SVIET TV</title>
+<title>NewsInVN - LET'S VIET TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/letsvietvn/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
@@ -483,6 +501,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - POPS TV VIỆT NAM</title>
+<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - VTCTube</title>
 <link>http://gdata.youtube.com/feeds/api/users/vtctv/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
@@ -491,6 +515,42 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>NewsInVN - Zing TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/ZingTVVN/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - FAP TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/FAPtivi/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Giải Trí TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/ChannelGiaiTriTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - htv2channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/htv2channel/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Yeah1 Family TV - VTC4</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCo_QG56Ijk2iklFgpUOVKIA/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - YAN News</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanNewsTube/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - YAN TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanTvTurnsUon/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -679,8 +739,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Music - Yeah1 Music</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCI2OiZs5aVcyBUBVsgovzng/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
 <title>Music - Như Quỳnh</title>
 <link>http://gdata.youtube.com/feeds/api/users/nhuquynhtube/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Lam Trường</title>
+<link>http://gdata.youtube.com/feeds/api/users/LamTruongOfficial/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -833,6 +905,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Cailuong - Bạch Tuyết</title>
+<link>http://gdata.youtube.com/feeds/api/users/fukudahoushin1/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
 <title>Cailuong - Ngọc Huyền</title>
 <link>http://gdata.youtube.com/feeds/api/users/NgocHuyenZone/uploads?start-index=1&max-results=50</link>
 <thumbnail>cailuong.png</thumbnail>
@@ -893,6 +971,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Cailuong - Cải Lương Xã Hội 2</title>
+<link>http://gdata.youtube.com/feeds/api/users/DangDinhHau/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
 <title>Cailuong - Cải Lương Miền Nam</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCMKsP2qCocvWTDP5hfNm_Tw/uploads?start-index=1&max-results=50</link>
 <thumbnail>cailuong.png</thumbnail>
@@ -940,6 +1024,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <thumbnail>cailuong.png</thumbnail>
 </item>
 
+<item>
+<title>Cailuong - Cải Lương 7</title>
+<link>http://gdata.youtube.com/feeds/api/users/sirnguyenhha/uploads?start-index=1&max-results=50</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
 <!------------ Sitcom -------------------->
 
 <item>
@@ -967,8 +1057,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Sitcom - 5sonlinevietnam</title>
+<link>http://gdata.youtube.com/feeds/api/users/5sonlinevietnam/uploads?start-index=1&max-results=50</link>
+<thumbnail>haikich.png</thumbnail>
+</item>
+
+<item>
 <title>Sitcom - Cafe Cười</title>
 <link>http://gdata.youtube.com/feeds/api/users/cafecuoisenvang/uploads?start-index=1&max-results=50</link>
+<thumbnail>haikich.png</thumbnail>
+</item>
+
+<item>
+<title>Sitcom - Yeah1/NVU/Phở</title>
+<link>http://gdata.youtube.com/feeds/api/users/2idolshow/uploads?start-index=1&max-results=50</link>
 <thumbnail>haikich.png</thumbnail>
 </item>
 
@@ -995,6 +1097,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>TiviShows - Đừng Để Tiền Rơi</title>
 <link>http://gdata.youtube.com/feeds/api/users/trochoivtv/uploads?start-index=1&max-results=50</link>
+<thumbnail>tvshows.png</thumbnail>
+</item>
+
+<item>
+<title>TiviShows - Bếp Hát</title>
+<link>http://gdata.youtube.com/feeds/api/users/bephatvn/uploads?start-index=1&max-results=50</link>
+<thumbnail>tvshows.png</thumbnail>
+</item>
+
+<item>
+<title>TiviShows - Vui Ơi Là Vui</title>
+<link>http://gdata.youtube.com/feeds/api/users/gameshowVuiOiLaVui/uploads?start-index=1&max-results=50</link>
 <thumbnail>tvshows.png</thumbnail>
 </item>
 
@@ -1133,6 +1247,43 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------- Sports ------------------->
 
 <item>
+<title>Sports - Thể Dục Thẩm Mỹ với MC Nguyễn Cao Kỳ Duyên</title>
+<link>http://gdata.youtube.com/feeds/api/users/nhochembitkhoc/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Dục Thẩm Mỹ 1</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCplLrzVkLP31D0ymZ_q333A/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Dục Thẩm Mỹ 2</title>
+<link>http://gdata.youtube.com/feeds/api/users/UC3neDQB3isgEr0FqQyUJ44Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Thể Dục Thẩm Mỹ 3</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCMd8pzGXMqFjdZSogx_Oy6Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+
+<item>
+<title>Sports - Vovinam Thái Nguyên</title>
+<link>http://gdata.youtube.com/feeds/api/users/thanhnienxungkich/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Vovinam England</title>
+<link>http://gdata.youtube.com/feeds/api/users/VovinamEngland/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
 <title>Sports - Thethao247vn</title>
 <link>http://gdata.youtube.com/feeds/api/users/Thethao247vn/uploads?start-index=1&max-results=50</link>
 <thumbnail>thethao.png</thumbnail>
@@ -1168,6 +1319,90 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <thumbnail>thethao.png</thumbnail>
 </item>
 
+<item>
+<title>Sports - The Olympic Channel</title>
+<link>http://gdata.youtube.com/feeds/api/users/olympic/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Allsports Athletics</title>
+<link>http://gdata.youtube.com/feeds/api/users/AllSportsAthletics/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - ESPN</title>
+<link>http://gdata.youtube.com/feeds/api/users/ESPN/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Đô Vật WWE</title>
+<link>http://gdata.youtube.com/feeds/api/users/WWEFanNation/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - HBO Boxing</title>
+<link>http://gdata.youtube.com/feeds/api/users/HBOsports/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Glovesgymabc Gloves</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCYGlQcpAY_2UxEOCxTd1k5Q/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Kings of Boxing</title>
+<link>http://gdata.youtube.com/feeds/api/users/2112wildcat/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - NBA</title>
+<link>http://gdata.youtube.com/feeds/api/users/NBA/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Basketball Nation</title>
+<link>http://gdata.youtube.com/feeds/api/users/BasketballNationHD/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Football News</title>
+<link>http://gdata.youtube.com/feeds/api/users/FootballNewsUS/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Swimming World</title>
+<link>http://gdata.youtube.com/feeds/api/users/SwimmingWorldSPI/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - USA Swimming</title>
+<link>http://gdata.youtube.com/feeds/api/users/USASwimmingOrg/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - US Open Tennis Championships</title>
+<link>http://gdata.youtube.com/feeds/api/users/USOPEN/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
+<item>
+<title>Sports - Australian Open TV</title>
+<link>http://gdata.youtube.com/feeds/api/users/australianopentv/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
 <!------------- Travel ------------------->
 
 <item>
@@ -1177,7 +1412,13 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Travel - Du lịch Thái Lan</title>
+<title>Travel - Du Lịch Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/apttravelgroup/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Du Lịch Thái Lan</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCj799b-m3Ve44vPoD1NDbxA/uploads?start-index=1&max-results=50</link>
 <thumbnail>dulich.png</thumbnail>
 </item>
@@ -1218,7 +1459,55 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <thumbnail>dulich.png</thumbnail>
 </item>
 
+<item>
+<title>Travel - Đi Du Lịch</title>
+<link>http://gdata.youtube.com/feeds/api/users/DiDuLichOnline/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Venus Travel VN</title>
+<link>http://gdata.youtube.com/feeds/api/users/venustravelvn/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Mekong Culture</title>
+<link>http://gdata.youtube.com/feeds/api/users/mekongculture/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Văn Hóa Miền Sông Nước</title>
+<link>http://gdata.youtube.com/feeds/api/users/miensongnuoc/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Đồng Tháp Quê Mình</title>
+<link>http://gdata.youtube.com/feeds/api/users/DThapquetoi/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
+<item>
+<title>Travel - Du Lịch và Ẩm Thực Miền Tây Sông Nước</title>
+<link>http://gdata.youtube.com/feeds/api/users/dulichvaamthuc/uploads?start-index=1&max-results=50</link>
+<thumbnail>dulich.png</thumbnail>
+</item>
+
 <!------------ Medical ------------------->
+
+<item>
+<title>Y Tế NguoiVietTV - Y Tế – Sức Khỏe</title>
+<link>http://nguoiviettv.com/?cat=23</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
+<title>Y Tế Đồng Nai - Y Khoa Tổng Quát</title>
+<link>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
 
 <item>
 <title>Medical - Tin Tức Y Khoa</title>
@@ -1233,8 +1522,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Y Tế Đồng Nai - Y Khoa Tổng Quát</title>
-<link>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</link>
+<title>Medical - Sức Khỏe Mỗi Ngày</title>
+<link>http://gdata.youtube.com/feeds/api/users/tringoai/uploads?start-index=1&max-results=50</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
+<title>Medical - Tài Liệu Y Học</title>
+<link>http://gdata.youtube.com/feeds/api/users/TaiLieuYHoc/uploads?start-index=1&max-results=50</link>
+<thumbnail>ykhoa.png</thumbnail>
+</item>
+
+<item>
+<title>Medical - Thư Viện Y Khoa</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCldPEiKvoHXuT6E4Zp5vCIg/uploads?start-index=1&max-results=50</link>
 <thumbnail>ykhoa.png</thumbnail>
 </item>
 
@@ -1354,6 +1655,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <thumbnail>ditru.png</thumbnail>
 </item>
 
+<item>
+<title>Immigration - Nhập Tịch Di trú Hoa Kỳ</title>
+<link>http://gdata.youtube.com/feeds/api/users/NguyenLeThienTrang/uploads?start-index=1&max-results=50</link>
+<thumbnail>ditru.png</thumbnail>
+</item>
+
 <!------------- AFV ----------------->
 
 <item>
@@ -1387,6 +1694,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <!------ Discovery & Animal --------->
+
+<item>
+<title>DCAP - Thế giới động vật</title>
+<link>http://gdata.youtube.com/feeds/api/users/thegioidongvathd/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Thế Giới Động Vật Hoang Dã</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCcTBt9-jXyxIja4A3pHBRpg/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
 
 <item>
 <title>DCAP - Animal Planet</title>
@@ -1451,8 +1770,8 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Other ---------------->
 
 <item>
-<title>Other - POPS TV VIỆT NAM</title>
-<link>http://gdata.youtube.com/feeds/api/users/POPSTVVIETNAM/uploads?start-index=1&max-results=50</link>
+<title>Other - Bếp Yêu Thương</title>
+<link>http://gdata.youtube.com/feeds/api/users/WilmarVietnam/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 
@@ -1487,6 +1806,24 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Other - Yantv Jsc</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanTVChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Yeah1 Film/iMovie</title>
+<link>http://gdata.youtube.com/feeds/api/users/ImovieBTV4/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Zui.vn</title>
+<link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
 <title>Other - Home Repair - This Old House</title>
 <link>http://gdata.youtube.com/feeds/api/users/thisoldhouse/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
@@ -1507,12 +1844,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Other - Khan Academy Medicine</title>
 <link>http://gdata.youtube.com/feeds/api/users/khanacademymedicine/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Zui.vn</title>
-<link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

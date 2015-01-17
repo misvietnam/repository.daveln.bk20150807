@@ -1282,6 +1282,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <thumbnail>thethao.png</thumbnail>
 </item>
 
+<item>
+<title>Sports - Đô Vật WWE</title>
+<link>http://gdata.youtube.com/feeds/api/users/WWEFanNation/uploads?start-index=1&max-results=50</link>
+<thumbnail>thethao.png</thumbnail>
+</item>
+
 <!------------- Travel ------------------->
 
 <item>
@@ -1545,6 +1551,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------ Discovery & Animal --------->
 
 <item>
+<title>DCAP - Thế giới động vật</title>
+<link>http://gdata.youtube.com/feeds/api/users/thegioidongvathd/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
+<title>DCAP - Thế Giới Động Vật Hoang Dã</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCcTBt9-jXyxIja4A3pHBRpg/uploads?start-index=1&max-results=50</link>
+<thumbnail>DCAP.png</thumbnail>
+</item>
+
+<item>
 <title>DCAP - Animal Planet</title>
 <link>http://gdata.youtube.com/feeds/api/users/AnimlPlanet/uploads?start-index=1&max-results=50</link>
 <thumbnail>DCAP.png</thumbnail>
@@ -1643,6 +1661,36 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Other - Yantv Jsc</title>
+<link>http://gdata.youtube.com/feeds/api/users/YanTVChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Yeah1 Film/iMovie</title>
+<link>http://gdata.youtube.com/feeds/api/users/ImovieBTV4/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Zui.vn</title>
+<link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Vovinam Thái Nguyên</title>
+<link>http://gdata.youtube.com/feeds/api/users/thanhnienxungkich/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Vovinam England</title>
+<link>http://gdata.youtube.com/feeds/api/users/VovinamEngland/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
 <title>Other - Home Repair - This Old House</title>
 <link>http://gdata.youtube.com/feeds/api/users/thisoldhouse/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
@@ -1663,24 +1711,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Other - Khan Academy Medicine</title>
 <link>http://gdata.youtube.com/feeds/api/users/khanacademymedicine/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Yantv Jsc</title>
-<link>http://gdata.youtube.com/feeds/api/users/YanTVChannel/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Yeah1 Film/iMovie</title>
-<link>http://gdata.youtube.com/feeds/api/users/ImovieBTV4/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Zui.vn</title>
-<link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

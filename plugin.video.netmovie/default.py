@@ -26,13 +26,14 @@ home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
+mode_opt=int(mysettings.getSetting('Mode_Number'))
 anhtrang='http://phim.anhtrang.org/'
 m_anhtrang='http://m.anhtrang.org/'
 hd_caphe='http://phim.hdcaphe.com/'
 phim3s='http://phim3s.net/'
 dchd='http://dangcaphd.com/'
 pgt='http://phimgiaitri.vn/'
-fptplay='http://fptplay.net/'
+fptplay='http://fptplay.net'
 megaboxvn='http://megabox.vn/'
 hayhd='http://phimhayhd.tv/'
 zui='http://zui.vn/'
@@ -61,7 +62,7 @@ def main():
   addDir('[COLOR lightblue]hdcaphe.com[/COLOR]',hd_caphe+'camera-quan-sat.html',2,logos+'hdcaphe.png')  
   addDir('[COLOR cyan]phimgiaitri.vn[/COLOR]',pgt,5,logos+'pgt.png')
   addDir('[COLOR lime]dangcaphd.com[/COLOR]',dchd,2,logos+'dchd_1.png')  
-  #addDir('[COLOR magenta]fptplay.net[/COLOR]',fptplay,2,logos+'fptplay.png')
+  addDir('[COLOR magenta]fptplay.net[/COLOR]',fptplay,2,logos+'fptplay.png')
   #addDir('[COLOR silver]zui.vn[/COLOR]',zui,2,logos+'zui.png')   
  
 def megavn(url):
@@ -173,15 +174,16 @@ def categories(url):
     addDir('[COLOR lime]phimgiaitri[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR lime]Tìm Phim Lẻ[/COLOR]',pgt,1,logos+'pgt.png')
     match=re.compile('<a href=\'result.php\?type=Phim Lẻ(.+?)\'><span>(.+?)<\/span>').findall(content)
     for url,name in match:
-      addDir('[COLOR yellow]'+name+'[/COLOR]',pgt+'result.php?type=Phim%20L%E1%BA%BB'+url.replace(' ','%20'),3,logos+'pgt.png')	
+      addDir('[COLOR yellow]'+name+'[/COLOR]',pgt+'result.php?type=Phim%20L%E1%BA%BB'+url.replace(' ','%20'),3,logos+'pgt.png')
   elif 'fptplay' in url:
-    addDir('[COLOR lime]fptplay[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>  [/B][COLOR lime]Tìm Video[/COLOR]',fptplay,1,logos+'fptplay.png')
+    addDir('[COLOR lime]Nhấn vô đây, [COLOR yellow]chọn cách bắt links [COLOR cyan]nhanh [COLOR yellow]hay [COLOR cyan]chậm[/COLOR]',url,17,logos+'fptplay.png')
+    #addDir('[COLOR lime]fptplay[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR lime]Tìm Phim[/COLOR]',fptplay,1,logos+'fptplay.png')    
     match=re.compile("<li ><a href=\"(.+?)\" class=\".+?\">(.+?)<\/a><\/li>").findall(content)
     for url,name in match:
-      if 'livetv' in url:
-        pass
-      else:
-        addDir('[COLOR magenta]'+name+'[/COLOR]',fptplay+url,6,logos+'fptplay.png')	
+		  if 'livetv' in url:
+			  pass
+		  else:
+			  addDir('[COLOR magenta]'+name+'[/COLOR]',fptplay+url,6,logos+'fptplay.png')				
   elif 'zui' in url:
     addDir('[COLOR magenta]zui[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR magenta]Tìm Phim[/COLOR]',zui,1,logos+'zui.png') 
     match=re.compile("<li><a title=\".+?\" href=\"([^\"]*)\">([^>]+)<\/a><\/li>").findall(content)[0:3]
@@ -360,7 +362,7 @@ def dirs(url):
   elif 'fptplay' in url:
     match=re.compile("<h3><a href=\"(.+?)\">(.+?)<\/a><\/h3>").findall(content)
     for url,name in match:	
-      addDir('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,7,logos+'fptplay.png')
+      addDir('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,mode_opt,logos+'fptplay.png')
 	  
 def mediaList(url):
   content=makeRequest(url)
@@ -374,7 +376,7 @@ def mediaList(url):
   elif 'fptplay' in url:
     match=re.compile("<div class=\"col\">\s*<a href=\"([^\"]+)\">\s*<img src=\"([^\"]*)\" alt=\"(.+?)\"").findall(content)
     for url,thumbnail,name in match:	
-      addDir('[COLOR lime]'+name.replace('&amp;','[COLOR cyan]và')+'[/COLOR]',fptplay+url,8,thumbnail)
+      addDir('[COLOR lime]'+name.replace('amp;','')+'[/COLOR]',fptplay+url,8,thumbnail)
     match=re.compile("<li><a href=\"(.+?)\">(\d+)<\/a><\/li>").findall(content)
     for url,name in match:	
       addDir('[COLOR yellow]Trang '+name+'[/COLOR]',fptplay+url,7,logos+'fptplay.png')
@@ -433,7 +435,21 @@ def anhtrang_mediaList(url):
   match=re.compile("<a class=\"pagelast\" href=\"([^\"]*)\">(.+?)<\/a>").findall(content)
   for url,name in match:	
     addDir('[COLOR red]Trang '+name.replace('Cuối','[COLOR red]Cuối[COLOR magenta] >>>>')+'[/COLOR]',url,12,logos+'anhtrang.png')
-   
+
+def fpt_img(url):
+  content=makeRequest(url)
+  match=re.compile("<div class=\"col\">\s*<a href=\"([^\"]+)\">\s*<img src=\"([^\"]*)\" alt=\"(.+?)\"").findall(content)
+  for url1,thumbnail,name in match:	
+    name=name.replace('amp;','')
+    content1=makeRequest(fptplay+url1)	
+    match1=re.compile('data="([^"]*)" href.*?onclick.+?<a>(\d+)<').findall(content1)
+    for url2,inum in match1:
+      #add_Link('%s - %s' % ('[COLOR cyan]Tập '+inum,'[COLOR lime]'+name+'[/COLOR]'),'%s%s' % (fptplay,url2),thumbnail)
+      add_Link(('%s - %s' % ('[COLOR cyan]Tập '+inum,'[COLOR lime]'+name+'[/COLOR]')).replace('Tập 1 - ',''),'%s%s' % (fptplay,url2),thumbnail)          
+  match=re.compile("<li><a href=\"(.+?)\">(\d+)<\/a><\/li>").findall(content)
+  for url,name in match:	
+    addDir('[COLOR yellow]Trang '+name+'[/COLOR]',fptplay+url,16,logos+'fptplay.png')         
+    
 def episodes(url,name):
   content=makeRequest(url)
   if 'phimgiaitri' in url:    
@@ -443,10 +459,10 @@ def episodes(url,name):
     for url,title in match:
       add_Link('[COLOR yellow]Tập '+title+'  -  '+name+'[/COLOR]',url,thumbnail[0])
   elif 'fptplay' in url:
-    title=re.compile('<title>([^\']+)</title>').findall(content)		
-    match=re.compile("<a href=\"\/Video([^\"]*)\">(.*?)<\/a><\/li>").findall(content)
-    for url,name in match:
-      add_Link(('%s   -   %s' % ('[COLOR lime]Tập '+name,'[COLOR yellow]'+title[-1].replace('&amp;','[COLOR cyan]và')+'[/COLOR]')),('%sVideo%s' % (fptplay, url)),logos+'fptplay.png')
+    title=re.compile('<title>([^\']+)</title>').findall(content)[-1].replace('amp;','')		
+    match=re.compile('data="([^"]*)" href.*?onclick.+?<a>(\d+)<').findall(content)
+    for url,inum in match:
+      add_Link(('%s - %s' % ('[COLOR lime]Tập '+inum,'[COLOR yellow]'+title+'[/COLOR]')).replace('Tập 1 - ',''),('%s%s' % (fptplay, url)),logos+'fptplay.png')
   elif 'zui' in url:
     thumbnail=re.compile("<meta property=\"og:image\" content=\"(.+?)\"").findall(content)[0]		
     match=re.compile('<a id=\'.+?\' href=\'(.+?)\'  >(.+?)<\/a><\/li>').findall(content)
@@ -493,24 +509,20 @@ def anhtrang_eps(url,name):
     add_Link('[COLOR lime]Tập '+title+'[COLOR cyan][B]  -  [/B][/COLOR]'+name,url,thumbnail)   
   
 def inquiry():
-  if 'phim3s' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR lime]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+  try:
+    keyb=xbmc.Keyboard('', '[COLOR lime]Enter search text[/COLOR]')
+    keyb.doModal()
+    if (keyb.isConfirmed()):
+      searchText=urllib.quote_plus(keyb.getText())
+    if 'Tìm Phim Bộ' in name:  
       url=pgt+'result.php?type=search&keywords='+searchText
+      print "Searching URL: "+url	  
       mediaList(url)
-    except: pass
-  elif 'phimhayhd' in name:
-    try:
-      keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
-      keyb.doModal()
-      if (keyb.isConfirmed()):
-        searchText=urllib.quote_plus(keyb.getText())
+    elif 'phimhayhd' in name:
       url = hayhd + 'tim-kiem.html?query=' + searchText
+      print "Searching URL: "+url	  
       hayhd_le(url)
-    except: pass
+  except: pass
 
 def hayhd_le(url):	
   content = makeRequest(url)
@@ -522,36 +534,48 @@ def hayhd_le(url):
     add_Link('[COLOR yellow]' + name + '[/COLOR]', url,thumbnail)
   
 def resolveUrl(url):
-  content=makeRequest(url)
-  if 'dangcaphd' in url:
+  if 'fptplay' in url:
+    req=urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
+    req.add_header('Referer', fptplay)
+    response=urllib2.urlopen(req, timeout=120)
+    link=response.read()
+    response.close()    
+    mediaUrl=link 
+  elif 'dangcaphd' in url:
+    content=makeRequest(url)
     try:	
 	    mediaUrl=re.compile('<a _episode="1" _link="(.+?)_\d_\d+.mp4"').findall(content)[0].replace('demophimle','phimle2112')+'.mp4'	  
     except:
       mediaUrl=re.compile('<a _episode="1" _link="(.+?)"').findall(content)[0].replace(' ','%20')
-  elif 'phimgiaitri' in url:	
+  elif 'phimgiaitri' in url:
+    content=makeRequest(url)	
     match = re.compile('file: "rtmpe:\/\/5318b6e71a98f.streamlock.net(.+?)"').findall(content)[0]  
     if '/media1/' in match:
       mediaUrl = 'http://phimgiaitri.vn/phimtxn/' + match.replace('/media1/mp4:','')
     else:
       mediaUrl = 'http://phimgiaitri.vn:81/phimtxn/' + match.replace('/media2/mp4:','') 
-  elif 'fptplay' in url:
-    mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
   elif 'zui' in url:
+    content=makeRequest(url)
     mediaUrl='rtmp'+re.compile("'rtmp(.+?)'").findall(content)[0]#+'/playlist.m3u8'
-  elif 'hdcaphe' in url:	
+  elif 'hdcaphe' in url:
+    content=makeRequest(url)	
     mediaUrl=re.compile('\'http.startparam\':\'start\',\s*file: \'(.+?)\'').findall(content)[0].replace(' ','%20')	
   elif 'anhtrang' in url:
+    content=makeRequest(url)
     try:
       mediaUrl=re.compile("<source src=\"([^\"]*)\"").findall(content)[0]
     except: 
       mediaUrl=re.compile("var video_src_mv=\"(.+?)\"").findall(content)[0]
   elif 'megabox' in url:
+    content=makeRequest(url)
     videoUrl = re.compile('file: "(.+?)"').findall(content)[0]
     if 'youtube' in videoUrl:
       mediaUrl = videoUrl.replace('https://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
     else:
       mediaUrl = videoUrl 
   elif 'phimhayhd' in url:
+    content=makeRequest(url)
     mediaUrl = re.compile('"film":{"url":"(.+?)m3u8"').findall(content)[0].replace('\\','')+'m3u8'  
   else:
     mediaUrl = url  
@@ -667,5 +691,11 @@ elif mode==14:
 
 elif mode==15:
   otherMegaList(url)
+
+elif mode==16:
+  fpt_img(url)
+  
+elif mode==17:
+  mysettings.openSettings()
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

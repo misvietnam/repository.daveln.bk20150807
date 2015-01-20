@@ -1,3 +1,8 @@
+v 1.1.1
+Re-enable fptplay
+Add mode option for fptplay
+Fix phimgiaitri's inquiry
+
 v 1.1.0
 Fix phim3s
 

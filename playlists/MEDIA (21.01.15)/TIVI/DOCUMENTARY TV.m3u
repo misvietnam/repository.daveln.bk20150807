@@ -1,0 +1,60 @@
+﻿#EXTM3U
+
+#EXTINF:-1, HTVonline-NATGEO HD 
+plugin://plugin.video.htvonline/?cid=126&mode=playvideo&name=NAT+GEO+HD+720p
+#EXTINF:0, SCTVHD-NATGEO 
+http://112.197.2.154:1935/mlive/C002_HD_4/chunklist.m3u8
+#EXTINF:-1, VTVPlus-NATGEO WILD HD 
+plugin://plugin.video.vtvplus/play/48
+#EXTINF:-1, VTVPlus-NATGEO HD 
+plugin://plugin.video.vtvplus/play/46
+#EXTINF:-1, VTVPlus-NATGEO 
+plugin://plugin.video.vtvplus/play/50
+#EXTINF:0, SCTVHD-DISCOVERY WORLD 
+http://112.197.2.154:1935/mlive/C003_HD_4/chunklist.m3u8
+#EXTINF:-1, AVG-DISCOVERY WORLD HD 
+http://113.160.49.34/lives/origin03/discoveryhd.isml/discoveryhd-2096k.m3u8
+#EXTINF:-1, SCTV-DISCOVERY
+http://112.197.2.154:1935/mlive/C021_SD_4/playlist.m3u8
+#EXTINF:-1, AVG-ANIMAL PLANET 
+http://113.160.49.34/lives/origin03/animalsd.isml/animalsd-1096k.m3u8
+#EXTINF:-1, SCTV ANIMAL PLANET
+http://112.197.2.154:1935/mlive/C017_SD_4/playlist.m3u8
+#EXTINF:-1, HTVonline-HTVC DU LICH 
+plugin://plugin.video.hdplay/?url=http://www.htvonline.com.vn/livetv/htvc-du-lich-33396E61.html&amp;mode=4
+#EXTINF:0, SCTVHD-DU LỊCH KHÁM PHÁ    
+http://112.197.2.154:1935/mlive/C007_HD_4/chunklist.m3u8
+#EXTINF:-1, SCTV12- Du lich kham pha
+rtmpe://112.197.2.154:1935/live//sctv12_2 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ token=1b#K8!3zc65ends!
+#EXTINF:-1, ARTE FRANCE
+http://frlive.artestras.cshls.lldns.net/artestras/contrib/frlive/frlive_925.m3u8
+#EXTINF:-1, ALJAZEERA DOC
+rtmp://aljazeeraflashlivefs.fplive.net:1935/aljazeeraflashlive-live playpath=aljazeera_doc_high swfUrl=http://admin.brightcove.com/viewer/us1.25.04.00.2011-05-19124744/federatedVideoUI/BrightcovePlayer.swf live=1 pageUrl=http://upload.wikimedia.org/wikipedia/en/e/e6/Al_Jazeera_Doc.png
+#EXTINF:-1, TOM AND JERRY
+http://66.90.111.2:1935/ctv/tom/playlist.m3u8
+#EXTINF:-1, BELGELSEL TV
+mms://yayin7.canliyayin.org/belgeseltv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

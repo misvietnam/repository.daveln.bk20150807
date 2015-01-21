@@ -1,0 +1,149 @@
+﻿#EXTM3U
+#EXTINF:-1,VTV3 HD
+plugin://plugin.video.vtvplus/play/1
+#EXTINF:-1,VTV6 HD
+plugin://plugin.video.vtvplus/play/5
+#EXTINF:-1,ThethaoTV HD
+plugin://plugin.video.vtvplus/play/12
+#EXTINF:-1,BongdaTV HD
+plugin://plugin.video.vtvplus/play/11
+#EXTINF:-1,ThuanViet HD
+plugin://plugin.video.vtvplus/play/30
+#EXTINF:-1,SCTV Hai HD
+plugin://plugin.video.vtvplus/play/36
+#EXTINF:-1,National Geographic HD
+plugin://plugin.video.vtvplus/play/46
+#EXTINF:-1,NatGeo Wild HD
+plugin://plugin.video.vtvplus/play/48
+#EXTINF:-1,Star Movies HD
+plugin://plugin.video.vtvplus/play/18
+#EXTINF:-1,Star World HD
+plugin://plugin.video.vtvplus/play/44
+
+#EXTINF:-1,VTV1
+plugin://plugin.video.vtvplus/play/2
+#EXTINF:-1,VTV2
+plugin://plugin.video.vtvplus/play/3
+#EXTINF:-1,VTV3
+plugin://plugin.video.vtvplus/play/87
+#EXTINF:-1,VTV4
+plugin://plugin.video.vtvplus/play/4
+#EXTINF:-1,VTV6
+plugin://plugin.video.vtvplus/play/88
+#EXTINF:-1,VTV9
+plugin://plugin.video.vtvplus/play/6
+#EXTINF:-1,ANTV
+plugin://plugin.video.vtvplus/play/52
+#EXTINF:-1,TTXVN
+plugin://plugin.video.vtvplus/play/54
+#EXTINF:-1,VTVcab1
+plugin://plugin.video.vtvplus/play/56
+#EXTINF:-1,VTVcab2
+plugin://plugin.video.vtvplus/play/20
+#EXTINF:-1,ThethaoTV
+plugin://plugin.video.vtvplus/play/15
+#EXTINF:-1,VTVcab4
+plugin://plugin.video.vtvplus/play/7
+#EXTINF:-1,VTVcab5
+plugin://plugin.video.vtvplus/play/21
+#EXTINF:-1,VTVcab6
+plugin://plugin.video.vtvplus/play/23
+#EXTINF:-1,VTVcab7
+plugin://plugin.video.vtvplus/play/19
+#EXTINF:-1,VTVcab8
+plugin://plugin.video.vtvplus/play/59
+#EXTINF:-1,VTVcab10
+plugin://plugin.video.vtvplus/play/62
+#EXTINF:-1,VTVcab12
+plugin://plugin.video.vtvplus/play/58
+#EXTINF:-1,VTVcab15
+plugin://plugin.video.vtvplus/play/14
+#EXTINF:-1,BongdaTV
+plugin://plugin.video.vtvplus/play/17
+#EXTINF:-1,VTVcab17
+plugin://plugin.video.vtvplus/play/63
+
+#EXTINF:-1,HTV3
+plugin://plugin.video.vtvplus/play/39
+#EXTINF:-1,HTV4
+plugin://plugin.video.vtvplus/play/42
+#EXTINF:-1,HTV7
+plugin://plugin.video.vtvplus/play/37
+#EXTINF:-1,HTV9
+plugin://plugin.video.vtvplus/play/38
+#EXTINF:-1,HTV Thethao
+plugin://plugin.video.vtvplus/play/13
+#EXTINF:-1,HTVC Canhac
+plugin://plugin.video.vtvplus/play/40
+#EXTINF:-1,HTVC FBNC
+plugin://plugin.video.vtvplus/play/43
+
+#EXTINF:-1,VTC7
+plugin://plugin.video.vtvplus/play/24
+#EXTINF:-1,VTC9
+plugin://plugin.video.vtvplus/play/29
+#EXTINF:-1,SCTV2
+plugin://plugin.video.vtvplus/play/31
+#EXTINF:-1,SCTV13
+plugin://plugin.video.vtvplus/play/33
+#EXTINF:-1,SCTV15
+plugin://plugin.video.vtvplus/play/10
+#EXTINF:-1,SCTV17
+plugin://plugin.video.vtvplus/play/28
+#EXTINF:-1,SCTV18
+plugin://plugin.video.vtvplus/play/8
+
+#EXTINF:-1,BTV3
+plugin://plugin.video.vtvplus/play/70
+#EXTINF:-1,BTV4
+plugin://plugin.video.vtvplus/play/69
+#EXTINF:-1,THVL1
+plugin://plugin.video.vtvplus/play/53
+#EXTINF:-1,National Geographic
+plugin://plugin.video.vtvplus/play/50
+#EXTINF:-1,OPT1
+plugin://plugin.video.vtvplus/play/47
+#EXTINF:-1,CNN
+plugin://plugin.video.vtvplus/play/45
+#EXTINF:-1,BBC World News
+plugin://plugin.video.vtvplus/play/49
+#EXTINF:-1,MTV
+plugin://plugin.video.vtvplus/play/55
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                    

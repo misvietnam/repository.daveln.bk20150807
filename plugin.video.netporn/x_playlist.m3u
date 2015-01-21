@@ -1,45 +1,32 @@
-#EXTM3U $BorpasFileFormat="1"
-#EXTINF:-1 group-title="TV 18+" tvg-logo="..\Channel\Logo\JAV HD.png" tvg-name="203",JAV HD
-http://119.81.30.117:1935/mediacache/_definst_/mp4:http2/18X/Caribbeancompr09121_952.mp4/playlist.m3u8
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\Love Story.png" tvg-name="203",But Go
-rtmp://lm07.everyon.tv:1935/ptv7/phd772
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\Delight Empire HD Movie.png" tvg-name="203",Delight Empire
-rtmp://lm07.everyon.tv:1935/ptv7/phd63
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Girls TV.png" tvg-name="203",Girls TV
-rtmp://lm07.everyon.tv:1935/ptv7/phd501
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\Porn.png" tvg-name="203",Honey TV
-rtmp://lm07.everyon.tv:1935/ptv7/phd928
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\J-Hot Girl TV.png" tvg-name="203",J Hot Girl
-rtmp://lm07.everyon.tv:1935/ptv7/phd59
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\LIVETing.png" tvg-name="203",LiveTing 1
-rtmp://lm07.everyon.tv:1935/ptv7/phd1006
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\LIVETing.png" tvg-name="203",LiveTing 2
-rtmp://lm07.everyon.tv:1935/ptv7/phd64
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Midnight.png" tvg-name="203",Midnight
-rtmp://lm07.everyon.tv:1935/ptv7/phd766
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Nuart TV.png" tvg-name="203",NuArt
-http://torrent-tv.ru/torrent-online.php?translation=5617
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\2 HOT.png" tvg-name="203",Okadai
-rtmp://lm07.everyon.tv:1935/ptv7/phd61
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Pink TV.png" tvg-name="203",Pink TV
-rtmp://lm07.everyon.tv:1935/ptv7/phd62
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\RedLight Platinum.png" tvg-name="203",Platinum TV
-http://torrent-tv.ru/torrent-online.php?translation=4967
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\Playy.png" tvg-name="203",Play>19+
-rtmp://lm07.everyon.tv:1935/ptv7/phd769
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Playboy.png" tvg-name="203",Playboy
-rtmp://lm07.everyon.tv:1935/ptv7/phd499
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Playboy TV.png" tvg-name="203",Playboy Kr
-rtmp://lm07.everyon.tv:1935/ptv7/phd10497
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\Rusnight.png" tvg-name="203",Rusnight
-http://torrent-tv.ru/torrent-online.php?translation=1209
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\SEX 1 tv.png" tvg-name="203",Sex TV1
-rtmp://lm07.everyon.tv:1935/ptv7/phd1003
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\SEX 2 tv.png" tvg-name="203",Sex TV2
-rtmp://lm07.everyon.tv:1935/ptv7/phd1005
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\SEX 3 tv.png" tvg-name="203",Sex TV3
-rtmp://lm07.everyon.tv:1935/ptv7/phd1008
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\logo\21+.png" tvg-name="203",Viet Sex TV
-rtmpe://64.62.143.5/live/do%20not%20steal%20my-Stream2
-#EXTINF:-1 $ExtFilter="Movies" group-title="TV 18+" tvg-logo="..\Channel\Logo\XXL.png" tvg-name="203",XXL
-http://torrent-tv.ru/torrent-online.php?translation=8192
+#EXTM3U
+#EXTINF:-1,But Go
+rtmp://edge2.everyon.tv/etv2/phd772
+#EXTINF:-1,Delight Empire
+rtmp://edge2.everyon.tv/etv2/phd63
+#EXTINF:-1,Girls TV
+rtmp://edge2.everyon.tv/etv2/phd501
+#EXTINF:-1,Honey TV
+rtmp://edge2.everyon.tv/etv2/phd928
+#EXTINF:-1,J Hot Girl
+rtmp://edge2.everyon.tv/etv2/phd59
+#EXTINF:-1,LiveTing 1
+rtmp://edge2.everyon.tv/etv2/phd1006
+#EXTINF:-1,LiveTing 2
+rtmp://edge2.everyon.tv/etv2/phd64
+#EXTINF:-1,Midnight
+rtmp://edge2.everyon.tv/etv2/phd766
+#EXTINF:-1,Okadai
+rtmp://edge2.everyon.tv/etv2/phd61
+#EXTINF:-1,Pink TV
+rtmp://edge2.everyon.tv/etv2/phd62
+#EXTINF:-1,Playy 19+
+rtmp://edge2.everyon.tv/etv2/phd769
+#EXTINF:-1,Playboy
+rtmp://edge2.everyon.tv/etv2/phd499
+#EXTINF:-1,Sex TV1
+rtmp://edge2.everyon.tv/etv2/phd1003
+#EXTINF:-1,Sex TV2
+rtmp://edge2.everyon.tv/etv2/phd1005
+#EXTINF:-1,Sex TV3
+rtmp://edge2.everyon.tv/etv2/phd1008
+

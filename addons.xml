@@ -92,7 +92,7 @@
 
 <addon id="plugin.video.netporn"
        name="*net[COLOR red]porn[COLOR yellow]18+[/COLOR]"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="DaveLN">
   <requires>
         <import addon="xbmc.python" version="2.1.0" optional="true" />

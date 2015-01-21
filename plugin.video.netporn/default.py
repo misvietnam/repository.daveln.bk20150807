@@ -14,7 +14,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.                           
 
 You should have received a copy of the GNU General Public License      
-along with this program. If not, see <http://www.gnu.org/licenses/  
+along with this program. If not, see <http://www.gnu.org/licenses/>  
 '''                                                                           
 
 import urllib,urllib2,re,os
@@ -27,7 +27,7 @@ fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'x_playlist.m3u'))
-homelink='https://raw.githubusercontent.com/giolao/Viet-Simpletv/master/x_playlist.m3u'
+homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/x_playlist.m3u'
 hardcoresextv='rtmpe://64.62.143.5/live/do%20not%20steal%20my-Stream2'
 
 if not os.path.exists(homemenu):
@@ -41,7 +41,7 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
- 
+
 def main():
   addLink('[COLOR lime]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
   addDir('[COLOR yellow]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')	
@@ -50,12 +50,9 @@ def pornList():
   mainmenu=open(homemenu, 'r')  
   content=mainmenu.read()
   mainmenu.close()
-  match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
-  for name,url in match:
-    if 'Viet Sex TV' in name:
-      pass
-    else:  
-	    addLink('[COLOR yellow]'+name.replace('>','y ')+'[/COLOR]',url,logos+'asian.png')
+  match=re.compile('#EXTINF.+,(.+)\s*(.+)\n').findall(content)
+  for name,url in match:  
+	  addLink('[COLOR yellow]'+name+'[/COLOR]',url,logos+'asian.png')
    
 def get_params():
   param=[]

@@ -1,3 +1,6 @@
+v 1.1.2
+Re-enable fptplay's search
+
 v 1.1.1
 Re-enable fptplay
 Add mode option for fptplay

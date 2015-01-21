@@ -107,10 +107,13 @@ def search():
       url=pgt+'result.php?type=search&keywords='+searchText
       print "Searching URL: "+url	  
       index(url)
-    elif 'fptplay' in name:
-      url=fptplay+'Search/'+searchText
-      print "Searching URL: "+url	  
-      mediaList(url)
+    elif 'FPTPLAY' in name:
+      url=fptplay+'/Search/'+searchText
+      print "Searching URL: "+url	      
+      try:
+        mediaList(url)  # Fast - no thumbs + 1 more click
+      except:  
+        fpt_img(url)    # Slow - thumbs + 1 less click
     elif 'zui' in name:
       url='http://zui.vn/tim-kiem-nc/'+searchText+'.html'
       print "Searching URL: "+url	  
@@ -177,7 +180,7 @@ def categories(url):
       addDir('[COLOR yellow]'+name+'[/COLOR]',pgt+'result.php?type=Phim%20L%E1%BA%BB'+url.replace(' ','%20'),3,logos+'pgt.png')
   elif 'fptplay' in url:
     addDir('[COLOR lime]Nhấn vô đây, [COLOR yellow]chọn cách bắt links [COLOR cyan]nhanh [COLOR yellow]hay [COLOR cyan]chậm[/COLOR]',url,17,logos+'fptplay.png')
-    #addDir('[COLOR lime]fptplay[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR lime]Tìm Phim[/COLOR]',fptplay,1,logos+'fptplay.png')    
+    addDir('[COLOR blue]FPTPLAY[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR blue]Tìm Video[/COLOR]',fptplay,1,logos+'fptplaysearch.png')    
     match=re.compile("<li ><a href=\"(.+?)\" class=\".+?\">(.+?)<\/a><\/li>").findall(content)
     for url,name in match:
 		  if 'livetv' in url:

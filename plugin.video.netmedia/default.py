@@ -27,6 +27,7 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'menulist.xml'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
+dict={'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':'-', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
 
 if not os.path.exists(homemenu):
   try:
@@ -49,7 +50,15 @@ def menulist():
     return match
   except:
     pass	
-  
+    
+def replaceAll(text, dict):
+  try:
+    for a, b in dict.iteritems():
+      text = text.replace(a, b)
+    return text
+  except:
+    pass	
+        
 def makeRequest(url):
   try:
     req=urllib2.Request(url)
@@ -179,28 +188,28 @@ def medicalSites(url):
   elif 'nguoiviettv' in url:
     match=re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[15:-6]
     for name,url,thumbnail in match:
-      name=name.replace('&#8220;','"').replace('&#8221;','"').replace('&#8211;',' - ')    
+      name=replaceAll(name,dict)  
       addLink(name,url,thumbnail)   
     match=re.compile("href='([^']*)' class='.+?'>(\d+)<").findall(content)
     for url,name in match:	
-      addDir('[COLOR yellow]Trang '+name+'[/COLOR]',url.replace('#038;',''),5,logos+'bacsi.png')	
-     
+      addDir('[COLOR yellow]Trang '+name+'[/COLOR]',url.replace('&#038;','&'),5,logos+'bacsi.png')
+      
 def mediaLists(url):
   content=makeRequest(url)
   if 'youtube' in url:	  
     match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
-    for url,thumbnail,name in match:       
-      name = name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
+    for url,thumbnail,name in match:
+      name=replaceAll(name,dict)    
       #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
       url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	      
       addLink(name, url, thumbnail)
     match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
-    for url in match:  
+    for url in match:	      
       addDir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]',url.replace('&amp;','&'),3,icon)		  
   elif 'dailymotion' in url:	    
     match=re.compile('<title>(.+?)<\/title>\s*<link>(.+?)_.+?<\/link>\s*<description>.+?src="(.+?)"').findall(content)
-    for name,url,thumbnail in match:  
-      name = name.replace("&#039;", "'").replace('&quot;', '"').replace('&amp;', '&').replace('.', ' ')
+    for name,url,thumbnail in match:
+      name=replaceAll(name,dict)    
       url = url.replace('http://www.dailymotion.com/video/', 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=')	  
       addLink(name, url, thumbnail)
     match=re.compile('<dm:link rel="next" href="(.+?)"').findall(content)

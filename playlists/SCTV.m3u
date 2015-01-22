@@ -36,7 +36,7 @@ http://112.197.2.154:1935/mlive/C005_HD_3/chunklist.m3u8
 
 #EXTINF:-1, SCTV1- HÀI
 http://112.197.2.154:1935/mlive/C027_SD_3/playlist.m3u8
-#EXTINF:-1,SCTV2 YANTV ÂM NHAC
+#EXTINF:-1, SCTV2 YANTV ÂM NHAC
 http://112.197.2.154:1935/mlive/C028_SD_3/playlist.m3u8
 #EXTINF:-1, SCTV3 SAOTV THIẾU NHI
 http://112.197.2.154:1935/mlive/C029_SD_3/playlist.m3u8

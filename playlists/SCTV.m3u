@@ -1,0 +1,149 @@
+﻿#EXTM3U
+#EXTINF:-1, SCTVHD-VĂN HÓA NGHỆ THUẬT
+http://112.197.2.154:1935/mlive/C006_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-DU LỊCH KHÁM PHÁ    
+http://112.197.2.154:1935/mlive/C007_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-PHIM  
+http://112.197.2.154:1935/mlive/C009_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-PHIM CHÂU Á  
+http://112.197.2.154:1935/mlive/C010_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-HÀI    
+http://112.197.2.154:1935/mlive/C011_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-SÂN KHẤU  
+http://112.197.2.154:1935/mlive/C012_HD_2/chunklist.m3u8
+#EXTINF:0, SCTVHD-PHIM TỔNG HỢP    
+http://112.197.2.154:1935/mlive/C013_HD_2/chunklist.m3u8
+#EXTINF:0, SCTVHD-GIẢI TRÍ - TỔNG HỢP  
+http://112.197.2.154:1935/mlive/C014_HD_2/chunklist.m3u8
+#EXTINF:0, SCTVHD-PHIM NƯỚC NGOÀI    
+http://112.197.2.154:1935/mlive/C015_HD_2/chunklist.m3u8
+#EXTINF:0, SCTVHD-THIẾU NHI  
+http://112.197.2.154:1935/mlive/C016_HD_2/chunklist.m3u8
+#EXTINF:0, SCTVHD-PHỤ NỮ GIA ĐÌNH  
+http://112.197.2.154:1935/mlive/C017_HD_2/chunklist.m3u8
+#EXTINF:0, SCTVHD THỂ THAO
+http://112.197.2.154:1935/mlive/C008_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-NATGEO 
+http://112.197.2.154:1935/mlive/C002_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-DISCOVERY WORLD 
+http://112.197.2.154:1935/mlive/C003_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-STAR MOVIES 
+http://112.197.2.154:1935/mlive/C001_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-HBO 
+http://112.197.2.154:1935/mlive/C004_HD_3/chunklist.m3u8
+#EXTINF:0, SCTVHD-FOX SPORT 
+http://112.197.2.154:1935/mlive/C005_HD_3/chunklist.m3u8
+
+#EXTINF:-1, SCTV1- HÀI
+http://112.197.2.154:1935/mlive/C027_SD_3/playlist.m3u8
+#EXTINF:-1,SCTV2 YANTV ÂM NHAC
+http://112.197.2.154:1935/mlive/C028_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV3 SAOTV THIẾU NHI
+http://112.197.2.154:1935/mlive/C029_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV4 GIẢI TRÍ TỔNG HỢP 
+http://112.197.2.154:1935/mlive/C030_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV5 KÊNH MUA SẮM
+http://112.197.2.154:1935/mlive/C037_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV6 SÓNG NHẠC
+http://112.197.2.154:1935/mlive/C038_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV7 SÂN KHẤU VĂN NGHỆ TH
+http://112.197.2.154:1935/mlive/C039_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV8 THỊ TRƯỜNG 24H
+http://112.197.2.154:1935/mlive/C040_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV9 PHIM CHÂU Á
+http://112.197.2.154:1935/mlive/C041_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV10 HOME SHOPPING
+http://112.197.2.154:1935/mlive/C064_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV11 HÁT TRÊN TRUYỀN HÌNH
+http://112.197.2.154:1935/mlive/C066_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV12 DU LỊCH KHÁM PHÁ
+http://112.197.2.154:1935/mlive/C067_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV13 PHỤ NỮ GIA ĐÌNH
+http://112.197.2.154:1935/mlive/C031_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV14 PHIM VIỆT NAM
+http://112.197.2.154:1935/mlive/C032_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV15 THỂ THAO
+http://112.197.2.154:1935/mlive/C042_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV16 PHIM NƯỚC NGOÀI ĐẶC SẮC
+http://112.197.2.154:1935/mlive/C033_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV17 PHIM TỔNG HỢP
+http://112.197.2.154:1935/mlive/C034_SD_3/playlist.m3u8
+
+#EXTINF:-1, SCTV VTV1
+http://112.197.2.154:1935/mlive/C043_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTV2
+http://112.197.2.154:1935/mlive/C044_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTV3
+http://112.197.2.154:1935/mlive/C035_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTV4
+http://112.197.2.154:1935/mlive/C045_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTV6
+http://112.197.2.154:1935/mlive/C046_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTV9
+http://112.197.2.154:1935/mlive/C047_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV ANTV
+http://112.197.2.154:1935/mlive/C048_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTVCAB5
+http://112.197.2.154:1935/mlive/C059_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTVCAB9
+http://112.197.2.154:1935/mlive/C055_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTVCAB10 O2TV
+http://112.197.2.154:1935/mlive/C054_SD_3/playlist.m3u8
+
+#EXTINF:-1,SCTV VTVCAB16 BONGDATV
+http://112.197.2.154:1935/mlive/C036_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTVHUE
+http://112.197.2.154:1935/mlive/C061_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTVCANTHO1
+http://112.197.2.154:1935/mlive/C063_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV HN1
+http://112.197.2.154:1935/mlive/C057_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV HTV2
+http://112.197.2.154:1935/mlive/C050_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV HTV7
+http://112.197.2.154:1935/mlive/C052_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV HTV9
+http://112.197.2.154:1935/mlive/C053_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTC7
+http://112.197.2.154:1935/mlive/C058_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV VTC9
+http://112.197.2.154:1935/mlive/C056_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV DRT1
+http://112.197.2.154:1935/mlive/C060_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV BRT
+http://112.197.2.154:1935/mlive/C062_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV LA34
+http://112.197.2.154:1935/mlive/C051_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV THVL1
+http://112.197.2.154:1935/mlive/C049_SD_3/playlist.m3u8
+
+#EXTINF:-1, SCTV CINEMAX
+http://112.197.2.154:1935/mlive/C026_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV MEDIACORP
+http://112.197.2.154:1935/mlive/C025_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV CNBC
+http://112.197.2.154:1935/mlive/C024_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV CNN
+http://112.197.2.154:1935/mlive/C023_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV BBC WORLD NEWS
+http://112.197.2.154:1935/mlive/C022_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV DISCOVERY
+http://112.197.2.154:1935/mlive/C021_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV FOXSPORT2
+http://112.197.2.154:1935/mlive/C020_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV FASHIONTV
+http://112.197.2.154:1935/mlive/C019_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV CHANNEL V
+http://112.197.2.154:1935/mlive/C018_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV ANIMAL PLANET
+http://112.197.2.154:1935/mlive/C017_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV AXN 
+http://112.197.2.154:1935/mlive/C016_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV STAR WORLD
+http://112.197.2.154:1935/mlive/C015_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV HBO
+http://112.197.2.154:1935/mlive/C014_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV CN
+http://112.197.2.154:1935/mlive/C013_SD_3/playlist.m3u8
+#EXTINF:-1, SCTV DISNEY
+http://112.197.2.154:1935/mlive/C012_SD_3/playlist.m3u8

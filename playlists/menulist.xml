@@ -483,6 +483,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - Truyền Hình Vĩnh Long</title>
+<link>http://gdata.youtube.com/feeds/api/users/VinhLongTV/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - LET'S VIET TV</title>
 <link>http://gdata.youtube.com/feeds/api/users/letsvietvn/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>

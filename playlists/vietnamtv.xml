@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+
+<stream>
+
+<item>
+<title>Truyền Hình Vĩnh Long</title>
+<link>rtmp://123.30.108.72/live/ playpath=thvl1 swfUrl=http://www.thvl.vn/jwplayer/jwplayer.flash.swf pageUrl=http://www.thvl.vn/jwplayer/jw.php?l=rtmp&i=http://thvl.vn/wp-content/uploads/2014/12/THVL1Online.jpg&w=395&h=325&a=1</link>
+<thumbnail>vinhlong.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Đồng Nai 1</title>
+<link>rtmp://123.29.75.131:1935/thdn playpath=dn1.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
+<thumbnail>thdn.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Đồng Nai 2</title>
+<link>rtmp://123.29.75.131:1935/thdn playpath=dn2.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
+<thumbnail>thdn.png</thumbnail>
+</item>
+
+<item>
+<title>Dong Nai Radio</title>
+<link>rtmp://vov.radiovietnam.vn:1935/live playpath=dongnai.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
+<thumbnail>thdn.png</thumbnail>
+</item>
+
+</stream>

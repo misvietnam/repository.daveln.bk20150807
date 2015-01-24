@@ -3,6 +3,12 @@
 <stream>
 
 <item>
+<title>VNews - Truyền Hình Thông Tấn Xã Việt Nam</title>
+<link>rtmp://live.vnanet.vn:1935/Live/ playpath=DRC swfUrl=http://avnews.vnanet.vn/RtmpPlayer/player.swf pageUrl=http://avnews.vnanet.vn/ live=1 timeout=90</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
 <title>Truyền Hình Bắc Ninh</title>
 <link>rtmp://113.160.154.159:5119/live playpath=bntv swfUrl=http://www.umediaserver.net/bin/FlashPlayer/player-quick.swf pageUrl=http://bacninhtv.vn/ live=1 timeout=90</link>
 <thumbnail>vietnamtv.png</thumbnail>

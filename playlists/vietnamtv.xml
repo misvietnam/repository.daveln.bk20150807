@@ -64,7 +64,7 @@
 
 <item>
 <title>Truyền Hình Quảng Ngãi</title>
-<link>http://113.160.244.44/liveevent.m3u8 live=1 timeout=90</link>
+<link>http://113.160.244.44/liveevent.m3u8</link>
 <thumbnail>vietnamtv.png</thumbnail>
 </item>
 

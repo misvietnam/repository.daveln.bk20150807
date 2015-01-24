@@ -471,6 +471,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - VNews - Truyền Hình Thông Tấn</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCfA4BYQdTPU9ItmQOauuFEQ/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - Truyền Hình Thông Tấn</title>
 <link>http://gdata.youtube.com/feeds/api/users/truyenhinhthongtan/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>

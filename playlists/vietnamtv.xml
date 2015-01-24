@@ -1,30 +1,119 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-
 <stream>
+
+<item>
+<title>Truyền Hình Bắc Ninh</title>
+<link>rtmp://113.160.154.159:5119/live playpath=bntv swfUrl=http://www.umediaserver.net/bin/FlashPlayer/player-quick.swf pageUrl=http://bacninhtv.vn/</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Bến Tre</title>
+<link>rtmp://113.163.94.245/live/ playpath=Stream swfUrl=http://thbt.vn/jwplayer/jwplayer.flash.swf pageUrl=http://thbt.vn/jwplayer/?l=rtmp%3A%2F%2F113.163.94.245%2Flive%2FStream&i=http://thbt.vn/wp-content/uploads/2014/03/nentruct.png&w=400&h=280&a=0</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Bình Phước 1</title>
+<link>rtmp://113.161.180.136/live/ playpath=thbp1.tv swfUrl=http://www.bptv.com.vn/vplayer.swf pageUrl=http://www.bptv.com.vn/</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Bình Phước 2</title>
+<link>rtmp://113.161.180.136/live/ playpath=thbp2.tv swfUrl=http://www.bptv.com.vn/vplayer.swf pageUrl=http://www.bptv.com.vn/#</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Cà Mau</title>
+<link>rtmp://113.161.220.254/livepkgr/ playpath=livestream1?adbe-live-event=liveevent swfUrl=http://ctvcamau.vn/jwplayer/jwplayer.flash.swf pageUrl=http://ctvcamau.vn/jwplayer/?l=rtmp&i=http://118.69.199.136/wp- content/uploads/2014/01/TVonline_Ctvcamau.jpg&w=400&h=300&a=1</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Cần Thơ</title>
+<link>rtmp://113.161.204.167:1935/livepkgr/ playpath=livestream swfUrl=http://vtvcantho.vn/Content/jwplayer/player.swf pageUrl=http://vtvcantho.vn/</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Đà Nẵng</title>
+<link>rtmp://yqyydhnc.cdnviet.com/mnrrnlm playpath=drt1 swfUrl=http://www.drt.danang.vn/js/DRTplayer.swf pageUrl=http://www.drt.danang.vn/</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Dak Nông</title>
+<link>rtmp://222.255.158.22:1935/live playpath=truyenhinh swfUrl=http://fpdownload.adobe.com/strobe/FlashMediaPlayback_101.swf/[[DYNAMIC]]/1 pageUrl=http://www.ptthdaknong.com.vn/truyenhinh.html</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Đồng Nai</title>
+<link>rtmp://123.29.75.131:1935/thdn playpath=dn1.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Phú Yên</title>
+<link>rtmp://113.161.4.102/live/ playpath=vtvphuyen.tv swfUrl=http://vtvphuyen.vn/vplayer.swf pageUrl=http://vtvphuyen.vn/</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Quảng Ngãi</title>
+<link>http://113.160.244.44/liveevent.m3u8</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
+
+<item>
+<title>Truyền Hình Sóc Trăng</title>
+<link>rtmp://115.78.3.164/live playpath=stv1 swfUrl=http://thst.vn/MediaPlayer/vplayer.swf pageUrl=http://thst.vn/Truyen_hinh.aspx</link>
+<thumbnail>vietnamtv.png</thumbnail>
+</item>
 
 <item>
 <title>Truyền Hình Vĩnh Long</title>
 <link>rtmp://123.30.108.72/live/ playpath=thvl1 swfUrl=http://www.thvl.vn/jwplayer/jwplayer.flash.swf pageUrl=http://www.thvl.vn/jwplayer/jw.php?l=rtmp&i=http://thvl.vn/wp-content/uploads/2014/12/THVL1Online.jpg&w=395&h=325&a=1</link>
-<thumbnail>vinhlong.png</thumbnail>
+<thumbnail>vietnamtv.png</thumbnail>
 </item>
 
 <item>
-<title>Truyền Hình Đồng Nai 1</title>
-<link>rtmp://123.29.75.131:1935/thdn playpath=dn1.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
-<thumbnail>dongnai.png</thumbnail>
+<title>Bến Tre Radio</title>
+<link>rtmp://113.163.94.245:1936/live/ playpath=audiostream swfUrl=http://thbt.vn/jwplayer/jwplayer.flash.swf pageUrl=http://thbt.vn/jwplayer/?l=rtmp%3A%2F%2F113.163.94.245%3A1936%2Flive%2Faudiostream&i=http://222.255.237.48/wp-content/uploads/2013/11/nen-truc-tuyen-copy.png&w=400&h=280&a=1</link>
+<thumbnail>vietnamradio.png</thumbnail>
 </item>
 
 <item>
-<title>Truyền Hình Đồng Nai 2</title>
-<link>rtmp://123.29.75.131:1935/thdn playpath=dn2.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
-<thumbnail>dongnai.png</thumbnail>
+<title>Bình Phước Radio</title>
+<link>rtmp://113.161.180.136/live/ playpath=thbp.radio swfUrl=http://www.bptv.com.vn/vplayer.swf pageUrl=http://www.bptv.com.vn/#</link>
+<thumbnail>vietnamradio.png</thumbnail>
+</item>
+
+<item>
+<title>Cà Mau Radio</title>
+<link>rtmp://113.161.220.254/livepkgr/ playpath=livestream4?adbe-live-event=liveevent swfUrl=http://ctvcamau.vn/jwplayer/jwplayer.flash.swf pageUrl=http://ctvcamau.vn/jwplayer/?l=rtmp2&i=http://118.69.199.136/wp-content/uploads/2014/01/radio_online.jpg&w=400&h=300&a=1</link>
+<thumbnail>vietnamradio.png</thumbnail>
 </item>
 
 <item>
 <title>Đồng Nai Radio</title>
 <link>rtmp://vov.radiovietnam.vn:1935/live playpath=dongnai.stream swfUrl=http://www.dnrtv.org.vn/static/js/flowplayer/flowplayer-3.2.7.swf pageUrl=http://www.dnrtv.org.vn/</link>
-<thumbnail>dongnai.png</thumbnail>
+<thumbnail>vietnamradio.png</thumbnail>
+</item>
+
+<item>
+<title>Đồng Tháp Radio</title>
+<link>rtmp://vov.radiovietnam.vn:1935/live playpath=dongthap.stream swfUrl=http://radiovietnam.vn/media/RadioPlayer.swf pageUrl=http://radiovietnam.vn/sharedradio.aspx?rname=dongthap&w=625&h=320</link>
+<thumbnail>vietnamradio.png</thumbnail>
+</item>
+
+<item>
+<title>Sóc Trăng Radio</title>
+<link>rtmp://115.78.3.164/live playpath=FMsoctrang swfUrl=http://thst.vn/MediaPlayer/vplayer.swf pageUrl=http://thst.vn/Phat_thanh.aspx</link>
+<thumbnail>vietnamradio.png</thumbnail>
 </item>
 
 </stream>

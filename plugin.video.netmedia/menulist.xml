@@ -471,6 +471,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - VNews - Truyền Hình Thông Tấn</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCfA4BYQdTPU9ItmQOauuFEQ/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - Truyền Hình Thông Tấn</title>
 <link>http://gdata.youtube.com/feeds/api/users/truyenhinhthongtan/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
@@ -479,6 +485,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>NewsInVN - VIETNAM NEWS AGENCY</title>
 <link>http://www.dailymotion.com/rss/user/TTXVN/1</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Truyền Hình Vĩnh Long</title>
+<link>http://gdata.youtube.com/feeds/api/users/VinhLongTV/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -647,12 +659,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <!------------ Music --------------------->
-
-<item>
-<title>Music - Thúy Nga - Paris By Night</title>
-<link>http://gdata.youtube.com/feeds/api/users/TNPBN/uploads?start-index=1&max-results=50</link>
-<thumbnail>canhac.png</thumbnail>
-</item>
 
 <item>
 <title>Music - Asia</title>

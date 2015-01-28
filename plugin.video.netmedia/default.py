@@ -110,8 +110,10 @@ def categories():
         addDir(title.replace('Karaoke - ',''),url,3,logos+thumbnail)
       else: pass	
     elif 'Cải Lương' in name:
-      if 'Cailuong - ' in title:	
-        addDir(title.replace('Cailuong - ',''),url,3,logos+thumbnail)
+      if 'CailuongTV - ' in title:
+        addLink(title.replace('CailuongTV - ',''),url,logos+thumbnail)
+      elif 'Cailuong - ' in title:	
+        addDir(title.replace('Cailuong - ',''),url,3,logos+thumbnail)  
       else: pass	      
     elif 'Hài Kịch' in name:
       if 'Sitcom - ' in title:	
@@ -199,9 +201,10 @@ def mediaLists(url):
   if 'youtube' in url:	  
     match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
     for url,thumbnail,name in match:
-      name=replaceAll(name,dict)    
-      #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')
-      url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	      
+      name=replaceAll(name,dict)
+      url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=') #new
+      #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')  #old
+      #url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=') #old     
       addLink(name, url, thumbnail)
     match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
     for url in match:	      

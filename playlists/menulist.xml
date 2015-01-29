@@ -471,6 +471,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - Kênh Truyền Hình VTC 14</title>
+<link>http://gdata.youtube.com/feeds/api/users/KenhTruyenHinhVTC14/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - VNews - Truyền Hình Thông Tấn</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCfA4BYQdTPU9ItmQOauuFEQ/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
@@ -1794,8 +1800,26 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Other - Chuyện lạ Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/chuyenlavietnam24h/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Giải Trí 60 Giây</title>
+<link>http://gdata.youtube.com/feeds/api/users/bantintonghop/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
 <title>Other - Khoa học - Đời sống</title>
 <link>http://gdata.youtube.com/feeds/api/users/khoahoctv/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - KHOA HỌC- CÔNG NGHỆ Plus</title>
+<link>http://gdata.youtube.com/feeds/api/users/KHCN1123Pus/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

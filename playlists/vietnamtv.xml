@@ -5,7 +5,7 @@
 <!------------ TV in VN ----------------->
 
 <item>
-<title>VNews - Truyền Hình Thông Tấn Xã Việt Nam</title>
+<title>VNews - Truyền Hình Thông Tấn</title>
 <link>rtmp://live.vnanet.vn:1935/Live/ playpath=DRC swfUrl=http://avnews.vnanet.vn/RtmpPlayer/player.swf pageUrl=http://avnews.vnanet.vn/ live=1 timeout=90</link>
 <thumbnail>vietnamtv.png</thumbnail>
 </item>

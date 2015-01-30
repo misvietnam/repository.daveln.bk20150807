@@ -2,8 +2,6 @@
 
 <stream>
 
-<!------------ TV in VN ----------------->
-
 <item>
 <title>VNews - Truyền Hình Thông Tấn Xã Việt Nam</title>
 <link>rtmp://live.vnanet.vn:1935/Live/ playpath=DRC swfUrl=http://avnews.vnanet.vn/RtmpPlayer/player.swf pageUrl=http://avnews.vnanet.vn/ live=1 timeout=90</link>
@@ -195,14 +193,6 @@
 <thumbnail>vietnamtv.png</thumbnail>
 </item>
 
-<!------------ Radio in VN ----------------->
-
-<item>
-<title>An Giang Radio</title>
-<link>rtmp://113.161.212.25/live/ playpath=radio swfUrl=http://atv.org.vn/player/player.swf pageUrl=http://nguoiviet.tv/an-giang-radio-2/ live=1 timeout=90</link>
-<thumbnail>vietnamradio.png</thumbnail>
-</item>
-
 <item>
 <title>Bến Tre Radio</title>
 <link>rtmp://113.163.94.245:1936/live/ playpath=audiostream swfUrl=http://thbt.vn/jwplayer/jwplayer.flash.swf pageUrl=http://thbt.vn/jwplayer/?l=rtmp%3A%2F%2F113.163.94.245%3A1936%2Flive%2Faudiostream&i=http://222.255.237.48/wp-content/uploads/2013/11/nen-truc-tuyen-copy.png&w=400&h=280&a=1 live=1 timeout=90</link>
@@ -230,12 +220,6 @@
 <item>
 <title>Đồng Tháp Radio</title>
 <link>rtmp://vov.radiovietnam.vn:1935/live playpath=dongthap.stream swfUrl=http://radiovietnam.vn/media/RadioPlayer.swf pageUrl=http://radiovietnam.vn/sharedradio.aspx?rname=dongthap&w=625&h=320 live=1 timeout=90</link>
-<thumbnail>vietnamradio.png</thumbnail>
-</item>
-
-<item>
-<title>Khánh Hoà Radio</title>
-<link>rtmp://118.69.198.109:1935/live playpath=audio swfUrl=http://thvl.vn/vplayer.swf pageUrl=http://nguoiviet.tv/radio-khanh-hoa/ live=1 timeout=90</link>
 <thumbnail>vietnamradio.png</thumbnail>
 </item>
 

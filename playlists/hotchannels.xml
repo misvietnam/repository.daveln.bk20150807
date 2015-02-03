@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<stream>
+
+<item>
+<title>Little Sai Gon TV</title>
+<link>http://stream.s15.cpanelservices.com/lstvlive/livestream/playlist.m3u8</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Viet MTV</title>
+<link>http://64.62.143.5:1935/live/donotstealmy-Stream1/playlist.m3u8?bitrate=800&q=high</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Animal Planet Live HD</title>
+<link>http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Animal Planet</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL373/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Discovery HD</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL351/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Discovery</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL371/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Discovery Channel</title>
+<link>http://83.139.104.108/Content/HLS/Live/Channel(Discovery_Channel)/Stream(03)/index.m3u8</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>NAT GEO WILD HD</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL355/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>NAT GEO</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL377/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>TLC 1 HD</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL356/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Fox 1 HD</title>
+<link>http://200.76.77.237/LIVE/H01/CANAL415/PROFILE03.m3u8?</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>CBSN Live HD</title>
+<link>http://cbsnewshd-lh.akamaihd.net/i/CBSNDC_4@199302/index_4000_av-b.m3u8?sd=10&rebase=on</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>NBC Sports Live Extra - Golf & New Events Live HD</title>
+<link>http://tvegolf-i.akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+</stream>

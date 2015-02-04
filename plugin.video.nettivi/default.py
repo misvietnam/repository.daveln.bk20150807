@@ -26,6 +26,7 @@ home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
+hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
 fptm3u='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/FPTPLAY.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
@@ -69,7 +70,12 @@ def main():
   addDir('[COLOR silver]VTC[/COLOR]',tvchannels,7,logos+'vtccomvn.png')		
   addDir('[COLOR magenta]HTVOnline[/COLOR]',htvonline,6,logos+'htvonline.png')
   #addDir('SCTV Extras',sctv,6,logos+'sctv.png')
-  #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png') 	  
+  #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png') 
+  content=makeRequest(hotChannels)
+  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
+  for name,url,thumb in match:
+    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb)
+'''
   addLink('[COLOR lightgreen]Little Sai Gon TV[/COLOR]','http://stream.s15.cpanelservices.com/lstvlive/livestream/playlist.m3u8',logos+'littlesaigon.png')	
   addLink('[COLOR lightblue]Animal Planet[/COLOR]','http://202.75.23.34:80/live/ch31//01.m3u8',logos+'ap.png')	
   addLink('[COLOR violet]Discovery Channel[/COLOR]','http://202.75.23.34:80/live/ch29/01.m3u8',logos+'discovery.png')	
@@ -78,7 +84,7 @@ def main():
   addLink('[COLOR gold]History Channel[/COLOR]','http://202.75.23.36:80/live/ch45/01.m3u8',logos+'history.png')	
   addLink('[COLOR chocolate]NatGeo Wild[/COLOR]','http://202.75.23.35:80/live/ch39/01.m3u8',logos+'natgeowild.png')	
   addLink('[COLOR green]National Geographic[/COLOR]','http://202.75.23.35:80/live/ch38/01.m3u8',logos+'natgeo.png')
-
+'''
 def vietsimpletv(url):
   content=makeRequest(url)	
   match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
@@ -241,6 +247,11 @@ def hao():
   addDir('[COLOR coral]Malaysia[/COLOR]',haotivi,7,logos+'my.png')
 	  
 def HD():
+  content=makeRequest(hotChannels)
+  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
+  for name,url,thumb in match:
+    if 'CBSN Live HD' in name or 'NBC Sports Live Extra - Golf & New Events Live HD' in name:
+      add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb) 
   add_Link('[COLOR lime]National Geographic HD[/COLOR]','http://www.htvonline.com.vn/livetv/national-geographic-3132366E61.html',logos+'natgeohd.png')
   add_Link('[COLOR lime]Discovery World HD[/COLOR]','http://www.htvonline.com.vn/livetv/discovery-hd-3132336E61.html',logos+'dischd.png')
   add_Link('[COLOR lime]FOX SPORTS PLUS HD[/COLOR]','http://www.htvonline.com.vn/livetv/espn-hd-3132346E61.html',logos+'foxsporthd.png')	  
@@ -249,7 +260,7 @@ def HD():
   for url,name,thumbnail in match:	
     if 'HTV7' in name or 'HTV9' in name or ' HD' in name or 'htv2-31336E61' in url:
 	    add_Link('[COLOR cyan]'+name+'[/COLOR]',url,thumbnail)
-  add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')
+  add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')   
 '''
   content=makeRequest(sctv)  
   match=re.compile('#EXTINF.+?,(.+)\s(.+)\n').findall(content)

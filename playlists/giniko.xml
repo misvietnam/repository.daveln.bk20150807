@@ -39,12 +39,6 @@
 </item>
 
 <item>
-<title>Russia Today</title>
-<link>http://www.giniko.com/watch.php?id=24</link>
-<thumbnail>http://www.giniko.com/logos/190x110/24.jpg</thumbnail>
-</item>
-
-<item>
 <title>Fashion One (HongKong)</title>
 <link>http://www.giniko.com/watch.php?id=34</link>
 <thumbnail>http://www.giniko.com/logos/190x110/34.jpg</thumbnail>
@@ -53,13 +47,19 @@
 <item>
 <title>Fashion One (France)</title>
 <link>http://www.giniko.com/watch.php?id=15</link>
-<thumbnail>http://www.giniko.com/logos/190x110/15.jpg</thumbnail>
+<thumbnail>http://www.giniko.com/logos/190x110/15.jpeg</thumbnail>
 </item>
 
 <item>
 <title>Vox Africa</title>
 <link>http://www.giniko.com/watch.php?id=81</link>
-<thumbnail>http://www.giniko.com/logos/190x110/81.jpg</thumbnail>
+<thumbnail>http://www.giniko.com/logos/190x110/81.jpeg</thumbnail>
+</item>
+
+<item>
+<title>Russia Today</title>
+<link>http://www.giniko.com/watch.php?id=24</link>
+<thumbnail>http://www.giniko.com/logos/190x110/24.png</thumbnail>
 </item>
 
 <item>
@@ -75,7 +75,7 @@
 </item>
 
 <item>
-<title>Day Star</title>
+<title>Daystar</title>
 <link>http://www.giniko.com/watch.php?id=109</link>
 <thumbnail>http://www.giniko.com/logos/190x110/109.jpg</thumbnail>
 </item>

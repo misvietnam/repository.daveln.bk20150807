@@ -105,9 +105,12 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>[COLOR red]Adult TV [COLOR yellow]18+[/COLOR]</summary>
-    <description>Internet [COLOR red]Adult TV [COLOR yellow]18+ [COLOR white]from various sources[/COLOR]</description>
+    <description>Internet [COLOR red]Adult TV [COLOR yellow]18+ [COLOR white]from various sources[/COLOR]
+
+[COLOR red][B]WARNING:[/B]
+[COLOR yellow]You must be[COLOR red] at least 18 years old[COLOR yellow] or[COLOR red] over the legal age where you live or use this addon[COLOR yellow] to watch adult contents.[/COLOR]</description>
 	<disclaimer lang="en">
-[COLOR lime]The streaming media are pulled from online provider(s).
+[COLOR lime]The streaming media are found via website(s).
 [COLOR red]These streams do not represent my views or opinions in any way.[/COLOR]</disclaimer>
     <platform>all</platform>
 		<license>http://www.gnu.org/licenses/</license>

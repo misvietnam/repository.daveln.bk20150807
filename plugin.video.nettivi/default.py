@@ -250,7 +250,7 @@ def HD():
   content=makeRequest(hotChannels)
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
   for name,url,thumb in match:
-    if 'CBSN Live HD' in name or 'NBC Sports Live Extra - Golf & New Events Live HD' in name:
+    if 'CBSN Live HD' in name or 'NBC Sports Live Extra - Golf & New Events Live HD' in name or 'VEVO ' in name:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb) 
   add_Link('[COLOR lime]National Geographic HD[/COLOR]','http://www.htvonline.com.vn/livetv/national-geographic-3132366E61.html',logos+'natgeohd.png')
   add_Link('[COLOR lime]Discovery World HD[/COLOR]','http://www.htvonline.com.vn/livetv/discovery-hd-3132336E61.html',logos+'dischd.png')

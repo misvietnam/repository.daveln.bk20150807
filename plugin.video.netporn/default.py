@@ -43,8 +43,16 @@ else:
   pass
 
 def main():
-  addLink('[COLOR lime]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
-  addDir('[COLOR yellow]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')	
+  addLink('[COLOR cyan]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
+  addDir('[COLOR lime]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')
+  req=urllib2.Request('http://www.giniko.com/watch.php?id=95')
+  req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
+  response=urllib2.urlopen(req)
+  link=response.read()
+  response.close()
+  match=re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(link)
+  for thumb,url in match:
+    addLink('[COLOR yellow]Miami [COLOR red]TV[/COLOR]',url,thumb) 	
        
 def pornList():
   mainmenu=open(homemenu, 'r')  
@@ -52,7 +60,7 @@ def pornList():
   mainmenu.close()
   match=re.compile('#EXTINF.+,(.+)\s*(.+)\n').findall(content)
   for name,url in match:  
-	  addLink('[COLOR yellow]'+name+'[/COLOR]',url,logos+'asian.png')
+	  addLink('[COLOR lime]'+name+'[/COLOR]',url,logos+'asian.png')
    
 def get_params():
   param=[]

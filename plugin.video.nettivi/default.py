@@ -33,8 +33,10 @@ sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlist
 tvchannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/tvchannels.json'
 haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/haotivi.json'
 vietnamtv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/vietnamtv.xml'
+giniko='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/giniko.xml'
 vtcplay='http://117.103.206.21:88/Channel/GetChannels'
 htvonline='http://www.htvonline.com.vn/livetv'
+wezatv='http://www.wezatv.com'
 fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
 zuitv='http://zui.vn/livetv.html'
@@ -71,6 +73,7 @@ def main():
   addDir('[COLOR magenta]HTVOnline[/COLOR]',htvonline,6,logos+'htvonline.png')
   #addDir('SCTV Extras',sctv,6,logos+'sctv.png')
   #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png') 
+  addDir('[COLOR lime]World and Sport TV[/COLOR]','worldtv',12,logos+'worldtv.png')  
   content=makeRequest(hotChannels)
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
   for name,url,thumb in match:
@@ -85,6 +88,17 @@ def main():
   addLink('[COLOR chocolate]NatGeo Wild[/COLOR]','http://202.75.23.35:80/live/ch39/01.m3u8',logos+'natgeowild.png')	
   addLink('[COLOR green]National Geographic[/COLOR]','http://202.75.23.35:80/live/ch38/01.m3u8',logos+'natgeo.png')
 '''
+
+def worldtv():
+  content=makeRequest(wezatv)
+  match=re.compile('href="http://www.wezatv.com/dooball/(.+?)" title="ดูทีวีออนไลน์ช่อง(.+?)"><img src="../(.+?)"').findall(content)
+  for url,name,thumb in match:
+    add_Link('[COLOR lime]'+name+'[/COLOR]',wezatv+'/dooball/'+url,wezatv+'/'+thumb)
+  content=makeRequest(giniko)
+  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
+  for name,url,thumb in match:
+    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumb)
+    
 def vietsimpletv(url):
   content=makeRequest(url)	
   match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
@@ -290,7 +304,9 @@ def resolveUrl(url):
       mediaUrl=re.compile('"hls_stream": "(.+?)"').findall(content)[0] # ?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
       #mediaUrl=re.compile('"adapt_hls": "(.+?)"').findall(content)[0]   # No token    
     else:
-	    mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0] 
+	    mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0]
+  elif 'wezatv' in url or 'giniko' in url: 
+    mediaUrl=re.compile('file: "(.+?)"').findall(content)[0]  
   else:
     mediaUrl=url  
   item=xbmcgui.ListItem(path=mediaUrl)
@@ -384,5 +400,8 @@ elif mode==9:
   
 elif mode==11:
   vietsimpletv(url) 
+
+elif mode==12:
+  worldtv()  
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

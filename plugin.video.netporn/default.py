@@ -29,7 +29,7 @@ logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'x_playlist.m3u'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/x_playlist.m3u'
 hardcoresextv='rtmpe://64.62.143.5/live/do%20not%20steal%20my-Stream2'
-
+'''
 if not os.path.exists(homemenu):
   try:
     open(homemenu, 'w+').close()
@@ -41,26 +41,59 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
+'''
+def menulist():
+  try:
+    mainmenu=open(homemenu, 'r')  
+    content=mainmenu.read()
+    mainmenu.close()
+    match=re.compile('#EXTINF.+,(.+)\s*(.+)\n').findall(content)
+    return match
+  except:
+    pass	
+
+def makeRequest(url):
+  try:
+    req=urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
+    response=urllib2.urlopen(req, timeout=60)
+    link=response.read()
+    response.close()  
+    return link
+  except urllib2.URLError, e:
+    print 'We failed to open "%s".' % url
+    if hasattr(e, 'code'):
+      print 'We failed with error code - %s.' % e.code	
+    if hasattr(e, 'reason'):
+      print 'We failed to reach a server.'
+      print 'Reason: ', e.reason
 
 def main():
   addLink('[COLOR cyan]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
   addDir('[COLOR lime]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')
-  req=urllib2.Request('http://www.giniko.com/watch.php?id=95')
-  req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
-  response=urllib2.urlopen(req)
-  link=response.read()
-  response.close()
-  match=re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(link)
+  content=makeRequest('http://www.giniko.com/watch.php?id=95')
+  match=re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(content)
   for thumb,url in match:
-    addLink('[COLOR yellow]Miami [COLOR red]TV[/COLOR]',url,thumb) 	
-       
+    addLink('[COLOR yellow]Miami [COLOR red]TV[/COLOR]',url,thumb)
+  for name,url in menulink: 
+    if 'Miami International TV' in name:
+      addLink('[COLOR yellow]Miami International [COLOR red]TV[/COLOR]',url,'http://www.miamitvchannel.com/images/MIAMITV-international.png')
+    else:
+      pass 
+  '''    
+  content=makeRequest('http://www.miamitvchannel.com/miami-tv.php#.VNpT4C6YHTo')
+  match=re.compile("rtmp(.+?)%27%2C").findall(content)
+  for url in match:
+    url=urllib.unquote_plus("rtmp"+url+' live=1 timeout=60')  
+    addLink('[COLOR yellow]Miami International [COLOR red]TV[/COLOR]',url,'http://www.miamitvchannel.com/images/MIAMITV-international.png') 	
+  '''
+  
 def pornList():
-  mainmenu=open(homemenu, 'r')  
-  content=mainmenu.read()
-  mainmenu.close()
-  match=re.compile('#EXTINF.+,(.+)\s*(.+)\n').findall(content)
-  for name,url in match:  
-	  addLink('[COLOR lime]'+name+'[/COLOR]',url,logos+'asian.png')
+  for name,url in menulink: 
+    if 'Miami International TV' in name:
+      pass
+    else:
+      addLink('[COLOR lime]'+name+'[/COLOR]',url,logos+'asian.png')
    
 def get_params():
   param=[]
@@ -93,7 +126,8 @@ def addLink(name,url,iconimage):
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
   return ok  
-  
+
+menulink=menulist()   
 params=get_params()
 url=None
 name=None

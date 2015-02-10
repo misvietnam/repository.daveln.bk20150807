@@ -1,3 +1,7 @@
+v 1.0.3
+Added Miami International TV
+Changed icon
+
 v 1.0.2
 Added Miami TV
 

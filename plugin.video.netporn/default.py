@@ -29,7 +29,7 @@ logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 homemenu=xbmc.translatePath(os.path.join(home, 'x_playlist.m3u'))
 homelink='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/x_playlist.m3u'
 hardcoresextv='rtmpe://64.62.143.5/live/do%20not%20steal%20my-Stream2'
-'''
+
 if not os.path.exists(homemenu):
   try:
     open(homemenu, 'w+').close()
@@ -41,7 +41,7 @@ if status==200:
   urllib.urlretrieve (homelink, homemenu)
 else:
   pass
-'''
+
 def menulist():
   try:
     mainmenu=open(homemenu, 'r')  

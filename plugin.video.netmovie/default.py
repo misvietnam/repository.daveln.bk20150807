@@ -38,6 +38,7 @@ pgt='http://phimgiaitri.vn/'
 fptplay='http://fptplay.net'
 megaboxvn='http://megabox.vn/'
 hayhd='http://phimhayhd.tv/'
+phim7='http://phim7.com'
 zui='http://zui.vn/'
 
 def makeRequest(url):
@@ -58,6 +59,7 @@ def makeRequest(url):
  
 def main():
   addDir('[COLOR yellow]phim3s.net[/COLOR]',phim3s,2,logos+'phim3s.png')
+  addDir('[COLOR lime]phim7.com[/COLOR]',phim7,2,logos+'phim7.png')  
   addDir('[COLOR orange]anhtrang.org[/COLOR]',anhtrang,2,logos+'anhtrang.png')  
   addDir('[COLOR violet]megabox.vn[/COLOR]',megaboxvn,2,logos+'megabox.png')  
   addDir('[COLOR lightgreen]phimhayhd.tv[/COLOR]',hayhd,2,logos+'hayhd.png')
@@ -124,7 +126,7 @@ def search():
       url=anhtrang+'tim-kiem='+searchText+'.html'  
       anhtrang_mediaList(url)
     elif 'megabox' in name:	
-      url = megaboxvn + 'home/search/index/key/' + searchText	
+      url = megaboxvn + 'home/search/index/key/' + searchText.replace('+','%20')	
       megaListEps(url)
       otherMegaList(url)
     elif 'phimhayhd' in name:	
@@ -135,9 +137,12 @@ def search():
       mobile_search_result(url)
     elif 'dangcapmovie' in name:      
       url = dangcapmovie + 'movie/search.html?key=' + searchText
-      dangcapmovie_search_result(url)      
+      dangcapmovie_search_result(url) 
+    elif 'phim7' in name:      
+      url = phim7+'/tim-kiem/tat-ca/'+searchText.replace('+','-')+'.html'
+      mediaList(url)	  
   except: pass
- 
+
 def hayhd_bo(url):
   content = makeRequest(url)
   match = re.compile('href="([^"]*)">\s*<img.+?data-src="([^"]+)" alt.+?title="([^"]*)"').findall(content)
@@ -244,7 +249,7 @@ def categories(url):
     for url,name in match:
       addDir('[COLOR lightblue]'+name+'[/COLOR]',anhtrang + url,12,logos+'anhtrang.png') 
   elif 'megabox' in url:  
-    #addDir('[COLOR cyan]megabox[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR cyan]Tìm Phim[/COLOR]',megaboxvn,1,logos+'megabox.png')
+    addDir('[COLOR cyan]megabox[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR cyan]Tìm Phim[/COLOR]',megaboxvn,1,logos+'megabox.png')
     match = re.compile("href=\"tvonline\/(.+?)\">([^>]*)<").findall(content)[:3]  
     for url, name in match: 
       if 'the-loai' in url:  
@@ -287,7 +292,20 @@ def categories(url):
     match=re.compile('title="phim(.+?)" href="\/(.+?)">').findall(content)
     for name,url in match:
       addDir('[COLOR cyan]'+name+'[/COLOR]',phimmobile + url,18,logos+'mobile.png')
-
+  elif 'phim7' in url:
+    addDir('[COLOR lime]phim7.com[B]   [COLOR lime]>[COLOR orange]>[COLOR blue]>[COLOR magenta]>   [/B][COLOR yellow]Tìm Phim[/COLOR]',phim7,1,logos+'phim7.png')
+    match=re.compile("href='(.+?)' title='(.+?)'>").findall(content)[0:25]
+    for url,name in match:	
+      addDir('[COLOR cyan]'+name+'[/COLOR]',phim7+url,7,logos+'phim7.png')	
+    addDir('[COLOR lime]Video mới[/COLOR]','http://phim7.com/video-moi.html',30,logos+'phim7.png')
+    addDir('[COLOR lime]Video clip hay[/COLOR]','http://phim7.com/video.html',30,logos+'phim7.png')  
+    match=re.compile('href="(.+?)" title="(.+?)">').findall(content)[1:27]
+    for url,name in match:
+      if 'video clip hay' in name:
+        pass	
+      else:  
+        addDir('[COLOR yellow]'+name+'[/COLOR]',phim7+url,7,logos+'phim7.png')
+   
 def filmmobile(url):
   content=makeRequest(url)
   match=re.compile('title="(.+?)" class.+? href="\/(.+?)">\s*<img height.+?src="(.+?)"').findall(content)		
@@ -304,7 +322,6 @@ def filmmobile(url):
 def mobile_video_link(url,name):
   content=makeRequest(url)
   thumbnail=re.compile('src="\/u(.+?)"').findall(content)[0]
-  print'thumbnail: ',thumbnail
   content=makeRequest(url.replace('/phim/','/xem-phim-online/'))
   match=re.compile('value="\/(.+?)".*>(.+?)<').findall(content)		
   for url,inum in match:
@@ -437,8 +454,8 @@ def mediaList(url):
       addDir('[COLOR yellow]Trang '+name+'[/COLOR]',pgt+url.replace(' ','%20'),7,logos+'pgt.png')
   elif 'fptplay' in url:
     match=re.compile("<div class=\"col\">\s*<a href=\"([^\"]+)\">\s*<img src=\"([^\"]*)\" alt=\"(.+?)\"").findall(content)
-    for url,thumbnail,name in match: 
-      addDir('[COLOR lime]'+name.replace('amp;','')+'[/COLOR]',fptplay+url,8,thumbnail)
+    for url,iconimage,name in match: 
+      addDir('[COLOR lime]'+name.replace('amp;','')+'[/COLOR]',fptplay+url,8,iconimage)
     match=re.compile("<li><a href=\"(.+?)\">(\d+)<\/a><\/li>").findall(content)
     for url,name in match:	
       addDir('[COLOR yellow]Trang '+name+'[/COLOR]',fptplay+url,7,logos+'fptplay.png')
@@ -501,7 +518,88 @@ def mediaList(url):
         addDir('[COLOR red]' + name + ' Page[/COLOR]',url,7,logos + 'dcm.png')      
       else:
         addDir('[COLOR lime]Page ' + name + '[/COLOR]',url,7,logos + 'dcm.png')
-         
+  elif 'phim7' in url:
+    match=re.compile('href="(.+?)" title="(.+?)"><span class="poster">\s*<img src=".+?" alt="" />\s*<img class=".+?" src=".+?" data-original="(.+?)"').findall(content)
+    for url,name,iconimage in match:
+      addDir('[COLOR yellow]'+name+'[/COLOR]',phim7+url.replace('/phim/','/xem-phim/'),31,iconimage)
+    match=re.compile("href='(.+?)' >(\d+)<").findall(content)
+    for url,page in match:
+      addDir('[COLOR lime]Page '+page+'[/COLOR]',phim7+url,7,logos+'phim7.png')
+ 
+def serverlist_7(url):
+  print 'serverlist URL',url	
+  content=makeRequest(url)
+  match=re.compile('<p class=".+?"><b>(.+?)</b>').findall(content)
+  for sname in match:
+    if '- Server PHIMVÀNG' in sname:
+      addDir('[COLOR yellow]'+sname+'[/COLOR]',url,32,iconimage)
+    elif '- Server DREAM' in sname:
+      addDir('[COLOR cyan]'+sname+'[/COLOR]',url,33,iconimage)
+    elif '- Server VIETNAM' in sname:
+      addDir('[COLOR lightblue]'+sname+'[/COLOR]',url,34,iconimage)
+    elif '- Server VIP' in sname:
+      addDir('[COLOR lime]'+sname+'[/COLOR]',url,35,iconimage)
+    elif '- Server YOUTUBE' in sname:
+      addDir('[COLOR blue]'+sname+'[/COLOR]',url,36,iconimage)	  
+    else:
+      addDir('[COLOR lightgreen]'+sname+'[/COLOR]',url,37,iconimage)
+
+def videoclip_7(url):
+  print 'mediaList URL',url
+  content=makeRequest(url)
+  match=re.compile('href="(.+?)" title="(.+?)"><span class="poster">\s*<img src=".+?" alt="" />\s*<img class=".+?" src=".+?" data-original="(.+?)"').findall(content)
+  for url,name,iconimage in match:
+    add_Link('[COLOR lime]'+name+'[/COLOR]',phim7+url.replace('/phim/','/xem-phim/'),iconimage)
+  match=re.compile("href='(.+?)' >(\d+)<").findall(content)
+  for url,page in match:
+    addDir('[COLOR yellow]Page '+page+'[/COLOR]',phim7+url,22,logos+'phim7.png')
+	  
+def phimvang_7(url):
+  content=makeRequest(url)
+  match=re.compile('<p class=".+?"><b>- Server PHIMVÀNG</b>((?s).+?)</p>').findall(content)
+  for vlinks in match:
+    match=re.compile('href="(.+?)" title="(.+?)" class=".+?">(.+?)<').findall(vlinks)
+    for url,title,eps in match:
+      add_Link('[COLOR yellow]'+eps+'[/COLOR]',phim7+url,iconimage)	  	
+ 
+def dream_7(url):
+  content=makeRequest(url)
+  match=re.compile('<p class=".+?"><b>- Server DREAM</b>((?s).+?)</p>').findall(content)
+  for vlinks in match:
+    match=re.compile('href="(.+?)" title="(.+?)" class=".+?">(.+?)<').findall(vlinks)
+    for url,title,eps in match:
+      add_Link('[COLOR cyan]'+eps+'[/COLOR]',phim7+url,iconimage)	  	
+
+def vietnam_7(url):
+  content=makeRequest(url)
+  match=re.compile('<p class=".+?"><b>- Server VIETNAM</b>((?s).+?)</p>').findall(content)
+  for vlinks in match:
+    match=re.compile('href="(.+?)" title="(.+?)" class=".+?">(.+?)<').findall(vlinks)
+    for url,title,eps in match:
+      add_Link('[COLOR lightblue]'+eps+'[/COLOR]',phim7+url,iconimage)	  	
+ 
+def vip_7(url):
+  content=makeRequest(url)
+  match=re.compile('<p class=".+?"><b>- Server VIP</b>((?s).+?)</p>').findall(content)
+  for vlinks in match:
+    match=re.compile('href="(.+?)" title="(.+?)" class=".+?">(.+?)<').findall(vlinks)
+    for url,title,eps in match:
+      add_Link('[COLOR lime]'+eps+'[/COLOR]',phim7+url,iconimage)	  	
+
+def utube_7(url):
+  content=makeRequest(url)
+  match=re.compile('<p class=".+?"><b>- Server YOUTUBE</b>((?s).+?)</p>').findall(content)
+  for vlinks in match:
+    match=re.compile('href="(.+?)" title="(.+?)" class=".+?">(.+?)<').findall(vlinks)
+    for url,title,eps in match:
+      add_Link('[COLOR blue]'+eps+'[/COLOR]',phim7+url,iconimage)	  	
+	  
+def other_7(url):
+  content=makeRequest(url)
+  match=re.compile('href="(.+?)" title="(.+?)" class=".+?">(.+?)<').findall(vlinks)
+  for url,title,eps in match:
+    add_Link('[COLOR lightgreen]'+eps+'[/COLOR]',phim7+url,iconimage)	  	
+ 
 def anhtrang_mediaList(url):
   content=makeRequest(url)
   match=re.compile("<a href=\"([^\"]*)\" title=\"([^\"]+)\"><img src=\"(.+?)\"").findall(content)		
@@ -540,7 +638,7 @@ def episodes(url,name):
     title=re.compile('<title>([^\']+)</title>').findall(content)[-1].replace('amp;','')		
     match=re.compile('data="([^"]*)" href.*?onclick.+?<a>(\d+)<').findall(content)
     for url,inum in match:
-      add_Link(('%s - %s' % ('[COLOR lime]Tập '+inum,'[COLOR yellow]'+title+'[/COLOR]')).replace('Tập 1 - ',''),('%s%s' % (fptplay, url)),logos+'fptplay.png')
+      add_Link(('%s - %s' % ('[COLOR lime]Tập '+inum,'[COLOR yellow]'+title+'[/COLOR]')).replace('Tập 1 - ',''),('%s%s' % (fptplay, url)),iconimage)
   elif 'zui' in url:
     thumbnail=re.compile("<meta property=\"og:image\" content=\"(.+?)\"").findall(content)[0]		
     match=re.compile('<a id=\'.+?\' href=\'(.+?)\'  >(.+?)<\/a><\/li>').findall(content)
@@ -671,6 +769,12 @@ def resolveUrl(url):
       mediaUrl=phimmobile+re.compile('src="\/(.+?)"><\/source>').findall(content)[0]
     except:
       mediaUrl='plugin://plugin.video.youtube/play/?video_id='+re.compile('file: "https://www.youtube.com/watch\?v=(.+?)"').findall(content)[-1]        
+  elif 'phim7' in url:
+    content=makeRequest(url)  
+    try:
+      mediaUrl='https://redirector'+re.compile('file: "https://redirector(.+?)", label:".+?", type: "video/mp4"').findall(content)[-1]
+    except:
+      mediaUrl='plugin://plugin.video.youtube/?action=play_video&videoid='+re.compile('file : "http://www.youtube.com/watch\?v=(.+?)&amp').findall(content)[0] 	      
   else:
     mediaUrl = url  
   item=xbmcgui.ListItem(path=mediaUrl)
@@ -695,7 +799,7 @@ def get_params():
   return param
 				  
 def addDir(name,url,mode,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)
   ok=True
   liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
@@ -703,7 +807,7 @@ def addDir(name,url,mode,iconimage):
   return ok
     
 def add_Link(name,url,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=10"  
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=10"+"&iconimage="+urllib.quote_plus(iconimage)  
   liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   liz.setProperty('IsPlayable', 'true')  
@@ -720,6 +824,7 @@ params=get_params()
 url=None
 name=None
 mode=None
+iconimage=None
 
 try:
   url=urllib.unquote_plus(params["url"])
@@ -733,10 +838,15 @@ try:
   mode=int(params["mode"])
 except:
   pass
-
+try:
+  iconimage=urllib.unquote_plus(params["iconimage"])
+except:
+  pass  
+  
 print "Mode: "+str(mode)
 print "URL: "+str(url)
 print "Name: "+str(name)
+print "iconimage: "+str(iconimage)
 
 if mode==None or url==None or len(url)<1:
   main()
@@ -797,5 +907,29 @@ elif mode==18:
 
 elif mode==19:
   mobile_video_link(url,name)
+
+elif mode==30:
+  videoclip_7(url) 
+  
+elif mode==31:
+  serverlist_7(url)  
+
+elif mode==32:
+  phimvang_7(url) 
+  
+elif mode==33:
+  dream_7(url)
+  
+elif mode==34:
+  vietnam_7(url) 
+  
+elif mode==35:
+  vip_7(url)
+  
+elif mode==36:
+  utube_7(url) 
+ 
+elif mode==37:
+  other_7(url) 
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

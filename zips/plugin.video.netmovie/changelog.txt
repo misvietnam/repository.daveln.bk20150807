@@ -1,3 +1,7 @@
+v 1.1.4
+Added phim7.com (phimvang.org)
+Added iconimage
+
 v 1.1.3
 Added phimmobile
 Added dangcapmovie

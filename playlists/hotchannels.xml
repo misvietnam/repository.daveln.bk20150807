@@ -129,12 +129,6 @@
 </item>
 
 <item>
-<title>Sport</title>
-<link>rtmp://66.55.92.158:1935/app playpath=streamsparse swfUrl=https://streamup.com/assets/StreamupVideoChat.swf pageUrl=https://streamup.com/rooms/streamspArse/plugins/video/show?autoplayAudio=true live=1</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
 <title>Miami Life & Health</title>
 <link>rtmp://67.212.178.250:1935/sav_tvmiami/ playpath=life swfUrl=http://p.jwpcdn.com/6/11/jwplayer.flash.swf pageUrl=http://miamitvlife.com/ live=1 timeout=60</link>
 <thumbnail>hotchannel.png</thumbnail>

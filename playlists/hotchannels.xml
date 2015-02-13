@@ -117,6 +117,24 @@
 </item>
 
 <item>
+<title>WiKids Sci-Fi Network</title>
+<link>rtmp://66.55.92.158:1935/app playpath=wikids-sci-fi-network swfUrl=https://streamup.com/assets/StreamupVideoChat.swf pageUrl=https://streamup.com/wikids-sci-fi-network live=1</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Stargate SG1 SGA</title>
+<link>rtmp://66.55.92.158:1935/app playpath=stargate-sg1-sga swfUrl=https://streamup.com/assets/StreamupVideoChat.swf pageUrl=https://streamup.com/stargate-sg1-sga live=1</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Sport</title>
+<link>rtmp://66.55.92.158:1935/app playpath=streamsparse swfUrl=https://streamup.com/assets/StreamupVideoChat.swf pageUrl=https://streamup.com/rooms/streamspArse/plugins/video/show?autoplayAudio=true live=1</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
 <title>Miami Life & Health</title>
 <link>rtmp://67.212.178.250:1935/sav_tvmiami/ playpath=life swfUrl=http://p.jwpcdn.com/6/11/jwplayer.flash.swf pageUrl=http://miamitvlife.com/ live=1 timeout=60</link>
 <thumbnail>hotchannel.png</thumbnail>

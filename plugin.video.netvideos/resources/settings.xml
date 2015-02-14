@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General Settings">		
+		<setting id="Mode_Number" type="select" label="Chọn số, nhấn OK (1 = Nhanh, làm nhiều. 2 = Chậm, làm ít)" values="1|2" default="1"/>	
+	</category>	
+</settings>

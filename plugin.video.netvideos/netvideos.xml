@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Categories: nguoiviet.com -->
+
+<stream>
+
+<!------------ nguoiviet.com ----------------->
+
+<item>
+<title>nguoiviet.com - Tin Trong Ngày</title>
+<link>http://nguoiviettv.com/?cat=3</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Phóng Sự</title>
+<link>http://nguoiviettv.com/?cat=4</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Bình Luận Phỏng Vấn</title>
+<link>http://nguoiviettv.com/?cat=24</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Văn Nghệ Giải Trí</title>
+<link>http://nguoiviettv.com/?cat=8</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Học Việt Ngữ</title>
+<link>http://nguoiviettv.com/?cat=31</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Du Lịch</title>
+<link>http://nguoiviettv.com/?cat=25</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Thương Mại Đó Đây</title>
+<link>http://nguoiviettv.com/?cat=9</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Bình Luận</title>
+<link>http://nguoiviettv.com/?cat=5</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Giờ Giải Ảo</title>
+<link>http://nguoiviettv.com/?cat=20</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Quê Nhà Quê Người</title>
+<link>http://nguoiviettv.com/?cat=21</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Y tế Sức Khoẻ</title>
+<link>http://nguoiviettv.com/?cat=23</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Kết Nối Tin Tức</title>
+<link>http://nguoiviettv.com/?cat=6</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+<item>
+<title>nguoiviet.com - Xem Nhiều Nhất</title>
+<link>http://nguoiviettv.com/?page_id=6&orderby=views</link>
+<thumbnail>nguoiviet.png</thumbnail>
+</item>
+
+</stream>

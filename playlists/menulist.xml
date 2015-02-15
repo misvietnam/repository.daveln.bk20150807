@@ -667,6 +667,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Music --------------------->
 
 <item>
+<title>Music - Thuý Nga Paris By Night</title>
+<link>http://gdata.youtube.com/feeds/api/users/TNPBN/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
 <title>Music - Asia</title>
 <link>http://gdata.youtube.com/feeds/api/users/TrungTamAsiaChannel/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>

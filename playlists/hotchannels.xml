@@ -15,6 +15,24 @@
 </item>
 
 <item>
+<title>Kids TV</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bibi_hls.smil/playlist.m3u8</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Thể Thao</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:thethaotvsd_hls.smil/playlist.m3u8</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>Bóng Đá TV</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bongdatvsd_hls.smil/playlist.m3u8</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
 <title>Outdoor</title>
 <link>http://cdn-07.sdn.si/outdoorchannel/outdoorchannel.isml/outdoorchannel-video%3D2500000-audio101%3D128000.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>

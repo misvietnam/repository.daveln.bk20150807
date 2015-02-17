@@ -3,19 +3,19 @@
 <stream>
 
 <item>
-<title>Kids TV</title>
+<title>Kids TV (TV Trong Nước - Tiếng Việt)</title>
 <link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bibi_hls.smil/playlist.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>
 
 <item>
-<title>Thể Thao</title>
+<title>Thể Thao (TV Trong Nước - Tiếng Việt)</title>
 <link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:thethaotvsd_hls.smil/playlist.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>
 
 <item>
-<title>Bóng Đá TV</title>
+<title>Bóng Đá TV (TV Trong Nước - Tiếng Việt)</title>
 <link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bongdatvsd_hls.smil/playlist.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>

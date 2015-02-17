@@ -27,6 +27,7 @@ fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
+moreHotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/morehotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
 fptm3u='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/FPTPLAY.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
@@ -73,11 +74,15 @@ def main():
   addDir('[COLOR magenta]HTVOnline[/COLOR]',htvonline,6,logos+'htvonline.png')
   #addDir('SCTV Extras',sctv,6,logos+'sctv.png')
   #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png') 
-  addDir('[COLOR lime]World and Sport TV[/COLOR]','worldtv',12,logos+'worldtv.png')  
+  addDir('[COLOR lime]World and Sport TV[/COLOR]','worldtv',12,logos+'worldtv.png')
+  content=makeRequest(moreHotChannels)
+  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
+  for name,url,thumb in match:
+    addLink('[COLOR cyan]'+name+'[/COLOR]',url,logos+thumb)  
   content=makeRequest(hotChannels)
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
   for name,url,thumb in match:
-    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb)
+    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb)	
 '''
   addLink('[COLOR lightgreen]Little Sai Gon TV[/COLOR]','http://stream.s15.cpanelservices.com/lstvlive/livestream/playlist.m3u8',logos+'littlesaigon.png')	
   addLink('[COLOR lightblue]Animal Planet[/COLOR]','http://202.75.23.34:80/live/ch31//01.m3u8',logos+'ap.png')	
@@ -183,6 +188,7 @@ def videoLinks(url,name):
   elif 'TV Hải Ngoại' in name:
     match=re.compile("\"BroadcastStation\":\"haingoaitv\",\"Channel\":\"(.*?)\",\"Path\":\"([^\"]*)\",\"Thumbnail\":\"(.+?)\"").findall(content)
     for name,url,thumbnail in match:
+      print "Printing TV Hai Ngoai Thumbnail: ",thumbnail
       addLink('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)												      
   elif 'VTCPlay' in name:
     match=re.compile("\"Name\":\"(.*?)\".+?\"Thumbnail2\":\"(.+?)\".+?\"Path\":\"([^\"]*)\"").findall(content)

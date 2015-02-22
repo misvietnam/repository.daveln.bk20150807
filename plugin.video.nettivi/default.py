@@ -40,6 +40,7 @@ htvonline='http://www.htvonline.com.vn/livetv'
 wezatv='http://www.wezatv.com'
 fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
+anluongtv='http://tv.anluong.info/'
 zuitv='http://zui.vn/livetv.html'
 token = 'token=1b#K8!3zc65ends!'
    
@@ -59,12 +60,13 @@ def makeRequest(url):
       print 'We failed to reach a server.'
       print 'Reason: ', e.reason
  	  
-def main():  
+def main():
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
   addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR lime]Radio[/COLOR]',viet_tv,11,logos+'vietsimpletv.png') 
-  addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				  
+  #addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				  
+  addDir('[COLOR lime]SCTV  ++  [COLOR yellow]SCTV HD [/COLOR]',anluongtv,6,logos+'sctv.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
   addDir('[COLOR white]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
   addDir('[COLOR blue]FPTPlay Link # 2[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
@@ -174,7 +176,29 @@ def index(url):
 	      add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)	  
       else:
         pass
-		
+  elif 'tv.anluong.info' in url:		
+    match=re.compile('href="\?tab=kenhhd&xem=(.+?)"><img title="([^"]+)" class="images-kenh".+?src="([^"]*)"').findall(content)
+    for url,name,thumbnail in match:	
+      addDir('[COLOR magenta]SCTV HD [COLOR lime]- [COLOR yellow]'+name.replace('HD','').replace('SCTV ','')+'[/COLOR]',anluongtv+'?tab=kenhhd&xem='+url,5,anluongtv+thumbnail)
+    match=re.compile('href="(.+?)"><img class="images-kenh1"  src="(.+?)"').findall(content)
+    for url,thumbnail in match:
+      name=url.replace('?tab=sctv&xem=','').upper()
+      addDir('[COLOR cyan]'+name.replace('SCTV','SCTV ')+'[/COLOR]',anluongtv+url,5,anluongtv+thumbnail)	
+
+def sctv_serverlist(url):
+  content=makeRequest(url)
+  if 'kenhhd' in url:
+	match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
+	for url, sname in match:
+	  if 'f4m' in url:
+	    pass
+	  else:
+	    getLink('[COLOR magenta]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)
+  else:
+    match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
+    for url, sname in match:
+      getLink('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
+		  
 def videoLinks(url,name):
   content=makeRequest(url)
   if 'xemphimso' in url:
@@ -265,7 +289,24 @@ def hao():
   addDir('[COLOR gold]Thailand[/COLOR]',haotivi,7,logos+'th.png')
   addDir('[COLOR tan]Indonesia[/COLOR]',haotivi,7,logos+'id.png')
   addDir('[COLOR coral]Malaysia[/COLOR]',haotivi,7,logos+'my.png')
-	  
+
+def urlResolver(url):
+  if 'm3u8' in url:
+	mediaUrl=url.split('=')[-1]
+  else:
+    content=makeRequest(url)
+    try:  
+	  mediaUrl=re.compile('file: "(.+?)",').findall(content)[0]
+    except:
+      try:
+        mediaUrl=re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]	
+      except:
+		mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath='+re.compile("'file': '(.+?)',").findall(content)[0]
+		#mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+'/'+re.compile("'file': '(.+?)',").findall(content)[0]		
+  item=xbmcgui.ListItem(path=mediaUrl)
+  xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
+  return
+   
 def HD():
   content=makeRequest(hotChannels)
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
@@ -296,7 +337,7 @@ def HD():
 	    addLink('[COLOR yellow]'+name.decode("utf-8")+'[/COLOR]',url,thumbnail)
 '''	  
 	  
-def resolveUrl(url):
+def resolveUrl(url):	  
   content=makeRequest(url)
   if 'htvonline' in url:		
     mediaUrl=re.compile("file: \"([^\"]*)\"").findall(content)[0]	
@@ -337,7 +378,7 @@ def get_params():
   return param
 	
 def addDir(name,url,mode,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)
   ok=True
   liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
@@ -352,16 +393,24 @@ def addLink(name,url,iconimage):
   return ok
   
 def add_Link(name,url,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=9"  
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=9"+"&iconimage="+urllib.quote_plus(iconimage)  
   liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   liz.setProperty('IsPlayable', 'true')  
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
-	  
+
+def getLink(name,url,iconimage):
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=3"+"&iconimage="+urllib.quote_plus(iconimage)  
+  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+  liz.setInfo( type="Video", infoLabels={ "Title": name } )
+  liz.setProperty('IsPlayable', 'true')  
+  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
+  
 params=get_params()
 url=None
 name=None
 mode=None
+iconimage=None
 
 try:
   url=urllib.unquote_plus(params["url"])
@@ -375,10 +424,15 @@ try:
   mode=int(params["mode"])
 except:
   pass
-
+try:
+  iconimage=urllib.unquote_plus(params["iconimage"])
+except:
+  pass  
+ 
 print "Mode: "+str(mode)
 print "URL: "+str(url)
 print "Name: "+str(name)
+print "iconimage: "+str(iconimage)
 
 if mode==None or url==None or len(url)<1:
   main()
@@ -388,10 +442,16 @@ elif mode==1:
 
 elif mode==2:
   fpt_m3u(url)  
-   		
+
+elif mode==3:
+  urlResolver(url)
+  
 elif mode==4:
   dirs(url)
-				
+
+elif mode==5:
+  sctv_serverlist(url)
+  
 elif mode==6:
   index(url)
 		
@@ -410,4 +470,5 @@ elif mode==11:
 elif mode==12:
   worldtv()  
 
+ 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

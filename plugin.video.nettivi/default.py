@@ -41,6 +41,7 @@ wezatv='http://www.wezatv.com'
 fptplay='http://fptplay.net'
 tv24vn='http://www.tv24.vn'
 anluongtv='http://tv.anluong.info/'
+tvreplay='http://103.31.126.20/tvcatchup/'
 zuitv='http://zui.vn/livetv.html'
 token = 'token=1b#K8!3zc65ends!'
    
@@ -61,13 +62,18 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
+  addDir('[COLOR cyan]Updated [COLOR orange]TV Tổng Hợp [COLOR cyan]and [COLOR lime]Replay [COLOR cyan]in this version (1.0.19)[/COLOR]','startnote',None,logos+'happytestings.png')
+  addDir('[COLOR yellow]Special thanks to thanh51 for these updates.[/COLOR]','credits',None,logos+'happytestings.png')
+  addDir('[COLOR red]**********************************************[/COLOR]','endnote',None,logos+'happytestings.png')
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
-  addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR lime]Radio[/COLOR]',viet_tv,11,logos+'vietsimpletv.png') 
+  addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR yellow]SCTV HD  ++  [COLOR lime]Radio[/COLOR]','tonghop',13,logos+'vietsimpletv.png')  
+  #addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR lime]Radio[/COLOR]',viet_tv,11,logos+'vietsimpletv.png') 
   #addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				  
-  addDir('[COLOR lime]SCTV  ++  [COLOR yellow]SCTV HD [/COLOR]',anluongtv,6,logos+'sctv.png')
+  #addDir('[COLOR lime]SCTV  ++  [COLOR yellow]SCTV HD [/COLOR]',anluongtv,6,logos+'sctv.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
+  addDir('[COLOR lime]Replay - TV được chiếu lại[/COLOR]',tvreplay,20,logos+'replay.png')  
   addDir('[COLOR white]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
   addDir('[COLOR blue]FPTPlay Link # 2[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
   addDir('[COLOR cyan]Haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
@@ -95,6 +101,12 @@ def main():
   addLink('[COLOR chocolate]NatGeo Wild[/COLOR]','http://202.75.23.35:80/live/ch39/01.m3u8',logos+'natgeowild.png')	
   addLink('[COLOR green]National Geographic[/COLOR]','http://202.75.23.35:80/live/ch38/01.m3u8',logos+'natgeo.png')
 '''
+
+def tv_replay(url):
+  content=makeRequest(url)
+  match=re.compile('href="(\d+)/">(\d+)/<').findall(content)
+  for url, name in match:
+    addDir('[COLOR lime]'+name+'[/COLOR]',tvreplay+url,21,logos+'replay.png')
 
 def worldtv():
   content=makeRequest(wezatv)
@@ -125,6 +137,37 @@ def vietsimpletv(url):
     else:  
       addLink('[COLOR yellow]'+name+'[/COLOR]',url,logos+'vietsimpletv.png')		  
 
+def tvtonghop_linklist(url):
+  content=makeRequest(url)
+  match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
+  for url, sname in match:
+	if 'f4m' in url:
+	  pass
+	else:
+	  get_Link('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
+
+def url_Resolver(url):
+  if 'm3u8' in url:
+	mediaUrl=url.split('=')[-1]
+  elif 'rtmp' in url:
+	mediaUrl=url.split('=')[-1]	
+  else:
+    content=makeRequest(url)
+    try: 
+      try:	
+	    mediaUrl=re.compile('file: "(.+?)",').findall(content)[0]
+      except:
+	    mediaUrl=re.compile('iframe src=".+?src=(.+?)"').findall(content)[0]	  
+    except:
+      try:
+        mediaUrl=re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]	
+      except:
+		mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath='+re.compile("'file': '(.+?)',").findall(content)[0]
+		#mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+'/'+re.compile("'file': '(.+?)',").findall(content)[0]		
+  item=xbmcgui.ListItem(path=mediaUrl)
+  xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
+  return
+	  
 def fpt_m3u(url):
   content=makeRequest(url)
   match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
@@ -136,7 +179,13 @@ def dirs(url):
   match=re.compile("<h3><a href=\"(.+?)\">(.+?)<\/a><\/h3>").findall(content)
   for url,name in match:	
     addDir('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,3,logos+'fptplay.png')
-		
+
+def tvreplay_link(url):
+  content=makeRequest(url)
+  match=re.compile('<a href="(.+?)">(.+?)\.mp4</a>').findall(content)
+  for href, name in match:
+    addLink('[COLOR cyan]'+name+'[/COLOR]',url+'/'+href,logos+'replay.png')
+	
 def index(url):
   content=makeRequest(url)
   if 'tv24' in url:
@@ -198,7 +247,40 @@ def sctv_serverlist(url):
     match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
     for url, sname in match:
       getLink('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
-		  
+
+def add_Link(name,url,iconimage):
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=9"+"&iconimage="+urllib.quote_plus(iconimage)  
+  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+  liz.setInfo( type="Video", infoLabels={ "Title": name } )
+  liz.setProperty('IsPlayable', 'true')  
+  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
+
+def tvtonghop():
+  content=makeRequest(anluongtv)
+  match=re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="(.+?)"').findall(content)
+  for url,name,thumbnail in match:
+    if 'SCTV' in name or 'SAO TV HD' in name:
+      addDir('[COLOR lime]'+name+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)
+    else:
+	  pass
+  match=re.compile('href="(.+?)"><img class="images-kenh1"  src="(.+?)"').findall(content)
+  for url,thumbnail in match:
+    name=url.replace('?tab=sctv&xem=','').upper()
+    addDir('[COLOR cyan]'+name.replace('SCTV','SCTV ')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)	  
+  match=re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="(.+?)"').findall(content)
+  for url,name,thumbnail in match:	  
+    if 'SCTV' in name or 'SAO TV HD' in name or 'NHẠC CÁCH MẠNG' in name:
+      pass
+    else: 
+      addDir('[COLOR yellow]'+name.replace('SOPPING','SHOPPING')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)
+  content=makeRequest(viet_tv)	
+  match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
+  for name,url in match:
+    if 'radiovietnam' in url or 'VOA News' in name  or 'NHK Vietnam' in name  or 'RFI Vietnam' in name  or 'VOH' in name:  
+      addLink('[COLOR orange]'+name+'  -  [COLOR lightgreen]Radio[/COLOR]',url,logos+'vietsimpletv.png') 
+    else:
+	  pass
+	  
 def videoLinks(url,name):
   content=makeRequest(url)
   if 'xemphimso' in url:
@@ -274,7 +356,14 @@ def videoLinks(url,name):
     match=re.compile("\"lang\":\"my\".*?:\"([^\"]*)\",\"title\":\"(.+?)\"").findall(content)
     for url,name in match:
       addLink('[COLOR coral]'+name+'[/COLOR]',url,logos+'my.png')
-	  
+
+def get_Link(name,url,iconimage):
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=15"+"&iconimage="+urllib.quote_plus(iconimage)  
+  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+  liz.setInfo( type="Video", infoLabels={ "Title": name } )
+  liz.setProperty('IsPlayable', 'true')  
+  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
+ 	  
 def hao():						
   #addDir('[COLOR yellow]Việt Nam[/COLOR]',haotivi,7,logos+'vn.png')
   addDir('[COLOR lime]US[/COLOR]',haotivi,7,logos+'us.png')
@@ -306,7 +395,14 @@ def urlResolver(url):
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return
-   
+
+def getLink(name,url,iconimage):
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=3"+"&iconimage="+urllib.quote_plus(iconimage)  
+  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+  liz.setInfo( type="Video", infoLabels={ "Title": name } )
+  liz.setProperty('IsPlayable', 'true')  
+  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
+  
 def HD():
   content=makeRequest(hotChannels)
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
@@ -391,21 +487,7 @@ def addLink(name,url,iconimage):
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
   return ok
-  
-def add_Link(name,url,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=9"+"&iconimage="+urllib.quote_plus(iconimage)  
-  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-  liz.setInfo( type="Video", infoLabels={ "Title": name } )
-  liz.setProperty('IsPlayable', 'true')  
-  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
-
-def getLink(name,url,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=3"+"&iconimage="+urllib.quote_plus(iconimage)  
-  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-  liz.setInfo( type="Video", infoLabels={ "Title": name } )
-  liz.setProperty('IsPlayable', 'true')  
-  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
-  
+   
 params=get_params()
 url=None
 name=None
@@ -470,5 +552,19 @@ elif mode==11:
 elif mode==12:
   worldtv()  
 
- 
+elif mode==13:
+  tvtonghop()
+
+elif mode==14:
+  tvtonghop_linklist(url)
+
+elif mode==15:
+  url_Resolver(url)
+
+elif mode==20:
+  tv_replay(url)
+
+elif mode==21:
+  tvreplay_link(url)
+  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

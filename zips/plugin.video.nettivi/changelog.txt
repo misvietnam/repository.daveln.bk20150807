@@ -1,3 +1,7 @@
+v 1.0.19
+Updated TV tong hop
+Added TV replay
+
 v 1.0.18
 Added SCTV and SCTV HD
 Disable tv24vn

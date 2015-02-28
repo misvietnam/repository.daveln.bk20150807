@@ -19,6 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
 
 import urllib,urllib2,re,os
 import xbmcplugin,xbmcgui,xbmcaddon
+from datetime import datetime
 
 mysettings=xbmcaddon.Addon(id='plugin.video.nettivi')
 profile=mysettings.getAddonInfo('profile')
@@ -113,8 +114,12 @@ def thanh51_tv(url):
 def tv_replay(url):
   content=makeRequest(url)
   match=re.compile('href="(\d+)/">(\d+)/<').findall(content)
-  for url, name in match:
-    addDir('[COLOR lime]'+name+'[/COLOR]',tvreplay+url,21,logos+'replay.png')
+  for url,name in match:
+    name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]Ngày %d  [COLOR yellow]tháng %m  [COLOR lime]năm %Y[/COLOR]')
+    #name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]%d[COLOR magenta] - [COLOR yellow]%m[COLOR magenta] - [COLOR lime]%Y[/COLOR]')
+    #name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]%b[COLOR magenta]. [COLOR yellow]%d[COLOR magenta], [COLOR lime]%Y[/COLOR]')
+    #name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]%B [COLOR yellow]%d[COLOR magenta], [COLOR lime]%Y[/COLOR]')	
+    addDir(name,tvreplay+url,21,logos+'replay.png')	
 
 def worldtv():
   content=makeRequest(wezatv)

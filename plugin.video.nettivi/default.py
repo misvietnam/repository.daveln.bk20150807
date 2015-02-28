@@ -35,6 +35,7 @@ tvchannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/pl
 haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/haotivi.json'
 vietnamtv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/vietnamtv.xml'
 giniko='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/giniko.xml'
+thanh51='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.m3u'
 vtcplay='http://117.103.206.21:88/Channel/GetChannels'
 htvonline='http://www.htvonline.com.vn/livetv'
 wezatv='http://www.wezatv.com'
@@ -62,9 +63,9 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  addDir('[COLOR cyan]Updated [COLOR orange]TV Tổng Hợp [COLOR cyan]and [COLOR lime]Replay [COLOR cyan]in this version (1.0.19)[/COLOR]','startnote',None,logos+'happytestings.png')
-  addDir('[COLOR yellow]Special thanks to thanh51 for these updates.[/COLOR]','credits',None,logos+'happytestings.png')
-  addDir('[COLOR red]**********************************************[/COLOR]','endnote',None,logos+'happytestings.png')
+  #addDir('[COLOR cyan]Updated [COLOR orange]TV Tổng Hợp [COLOR cyan]and [COLOR lime]Replay [COLOR cyan]in this version (1.0.19)[/COLOR]','startnote',None,logos+'happytestings.png')
+  #addDir('[COLOR yellow]Special thanks to thanh51 for these updates.[/COLOR]','credits',None,logos+'happytestings.png')
+  #addDir('[COLOR red]**********************************************[/COLOR]','endnote',None,logos+'happytestings.png')
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -72,6 +73,7 @@ def main():
   #addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR lime]Radio[/COLOR]',viet_tv,11,logos+'vietsimpletv.png') 
   #addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				  
   #addDir('[COLOR lime]SCTV  ++  [COLOR yellow]SCTV HD [/COLOR]',anluongtv,6,logos+'sctv.png')
+  addDir('[COLOR lime]TV Tổng Hợp [COLOR magenta]- [COLOR cyan]Links provided by thanh51[/COLOR]',thanh51,51,logos+'thanh51.png')  
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
   addDir('[COLOR lime]Replay - TV được chiếu lại[/COLOR]',tvreplay,20,logos+'replay.png')  
   addDir('[COLOR white]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
@@ -101,6 +103,12 @@ def main():
   addLink('[COLOR chocolate]NatGeo Wild[/COLOR]','http://202.75.23.35:80/live/ch39/01.m3u8',logos+'natgeowild.png')	
   addLink('[COLOR green]National Geographic[/COLOR]','http://202.75.23.35:80/live/ch38/01.m3u8',logos+'natgeo.png')
 '''
+
+def thanh51_tv(url):
+  content=makeRequest(url)
+  match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
+  for name,url in match: 
+    addLink(name,url,logos+'thanh51.png')
 
 def tv_replay(url):
   content=makeRequest(url)
@@ -566,5 +574,8 @@ elif mode==20:
 
 elif mode==21:
   tvreplay_link(url)
-  
+ 
+elif mode==51:
+  thanh51_tv(url) 
+ 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

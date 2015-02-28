@@ -682,7 +682,7 @@ http://213.250.19.50/natgeo/natgeo.m3u8
 http://213.250.19.50/natgeowild/natgeowild.m3u8
 
 
-#EXTINF:100,[COLOR lightgreen]FPTPlay TV[/COLOR]
+#EXTINF:100,[COLOR magenta]FPTPlay TV[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1,VTV1 HD
 http://hlscache.fptplay.net.vn/livev/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -916,7 +916,7 @@ http://hlscache.fptplay.net.vn/img/img7_2000/playlist.m3u8?token=c335VydmVyX3Rpb
 http://hlscache.fptplay.net.vn/img/img8_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 
 
-#EXTINF:100,[COLOR lightblue]SCTV[/COLOR]
+#EXTINF:100,[COLOR blue]SCTV[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1, SCTVHD-SÓNG NHẠC (720P)
 http://sctv.live.cdn.anluong.info/live/C006_HD_4/chunklist.m3u8?us=9b9aea5546402462bbb2e05df3ad5fdccb9cfdcf968ad7a6c14937bbf42a62b5ac95ddff24e337955113e2468571ec8f%7C1397200

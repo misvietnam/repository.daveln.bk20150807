@@ -1,143 +1,0 @@
-﻿#EXTM3U
-
-#EXTINF:-1, VTV1 HD
-http://scache.fptplay.net.vn/livev/vtv1hd_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTV3 HD
-http://hlscache.fptplay.net.vn/livez/vtv3HD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTV6 HD
-http://scache.fptplay.net.vn/event/vtv6_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, QPVN HD
-http://hlscache.fptplay.net.vn/livez/quocphongHD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTC HD 3
-http://hlscache.fptplay.net.vn/livez/vtcHD3_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HTV9 HD
-http://playcache.fptplay.net.vn/live/htv9HD_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTC3 HD
-http://hlscache.fptplay.net.vn/livez/vtc3HD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HTVC THUẦN VIỆT HD
-http://hlscache.fptplay.net.vn/live/htvcthuanvietHD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HTVC MOVIES HD
-http://hlscache.fptplay.net.vn/live/htvcmovieHD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTC13 ITV HD
-http://scache.fptplay.net.vn/livez/itvHD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, [V] HD
-http://scache.fptplay.net.vn/live/htvcplusHD_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-
-#EXTINF:-1, VTV2
-http://scache.fptplay.net.vn/livez/vtv2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTV4
-http://scache.fptplay.net.vn/livez/vtv4_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTV9
-http://scache.fptplay.net.vn/livez/vtv9_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTVCANTHO1
-http://scache.fptplay.net.vn/live/cvtv1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, ANTV
-http://hlscache.fptplay.net.vn/live/antv_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VIETNAMNET
-http://scache.fptplay.net.vn/live/vietnamnet_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, TTXVN
-http://scache.fptplay.net.vn/livez/vnews_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTVcab1 GIẢI TRÍ
-http://hlscache.fptplay.net.vn/livev/giaitritv_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTVcab2 PHIM VIỆT
-http://hlscache.fptplay.net.vn/livev/phimviet_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTVCAB3 THETHAOTV
-http://scache.fptplay.net.vn/livev/thethaotvsd_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTVcab4 KÊNH17
-http://hlscache.fptplay.net.vn/livev/kenh17_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTVcab6 Haytv
-http://hlscache.fptplay.net.vn/livev/haytv_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTVcab8 BIBI
-http://hlscache.fptplay.net.vn/livev/bibi_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTVcab9 INFOTV
-http://hlscache.fptplay.net.vn/livev/infotv_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTVcab10 O2TV
-http://hlscache.fptplay.net.vn/livev/o2tv_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTVcab12 STYLETV
-http://hlscache.fptplay.net.vn/livev/styletv_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTVCAB16 BONGĐATV
-http://scache.fptplay.net.vn/livev/bongdatvsd_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, XONEFM
-http://scache.fptplay.net.vn/liveshow/xonefmlive/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VOV GIAO THÔNG HN
-http://scache.fptplay.net.vn/event/vovgt.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, AVG NCM
-http://hlscache.fptplay.net.vn/livez/ncm_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, AVG PHIMHAY
-http://scache.fptplay.net.vn/livez/phimhay_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, AVG SAM
-http://scache.fptplay.net.vn/livez/sam_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, AVG THDT2
-http://hlscache.fptplay.net.vn/livez/mientay_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, AVG VIETTEEN
-http://scache.fptplay.net.vn/livez/vietteen_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HTV1
-http://hlscache.fptplay.net.vn/live/htv1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTV2
-http://hlscache.fptplay.net.vn/live/htv2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTV3
-http://hlscache.fptplay.net.vn/live/htv3_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTV4
-http://hlscache.fptplay.net.vn/live/htv4_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTV7
-http://hlscache.fptplay.net.vn/live/htv7_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTV THETHAO
-http://scache.fptplay.net.vn/live/htvcthethao_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTVC DU LỊCH
-http://hlscache.fptplay.net.vn/live/htvcdulich_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HTVC THUAN VIỆT
-http://hlscache.fptplay.net.vn/live/htvcthuanviet_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTVC MOVIES
-http://hlscache.fptplay.net.vn/livez/htvcmovie_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTVC SHOPPING
-http://scache.fptplay.net.vn/live/htvcshopping_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTVC PHỤ NỮ
-http://hlscache.fptplay.net.vn/livez/htvcphunu_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, HTVC GIA ĐÌNH
-http://scache.fptplay.net.vn/live/htvcgiadinh_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HTVC FBNC
-http://scache.fptplay.net.vn/livez/fbnchd_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTC1
-http://scache.fptplay.net.vn/livez/vtc1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC2
-http://scache.fptplay.net.vn/livez/vtc2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, YEAH1 TV
-http://hlscache.fptplay.net.vn/livev/yeah1tv_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC5
-http://scache.fptplay.net.vn/livez/vtc5_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC6
-http://scache.fptplay.net.vn/livez/vtc6_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC7
-http://hlscache.fptplay.net.vn/livez/vtc7_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, VTC9
-http://scache.fptplay.net.vn/livez/vtc9_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC10
-http://scache.fptplay.net.vn/livez/vtc10_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC14
-http://scache.fptplay.net.vn/livez/vtc14_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl#EXTINF:-1, VTC16
-http://scache.fptplay.net.vn/livez/vtc16_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HÀ NỘI 1
-http://scache.fptplay.net.vn/livez/hntv1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HÀ NỘI 2
-http://scache.fptplay.net.vn/livez/hntv2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, THP HẢI PHÒNG
-http://scache.fptplay.net.vn/livez/haiphong_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, QTV1 QUẢNG NINH 1
-http://scache.fptplay.net.vn/livez/quangninh1_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, QTV3 QUẢNG NINH 3
-http://scache.fptplay.net.vn/livez/quangninh3_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, NTV NINH BINH
-http://scache.fptplay.net.vn/live/ninhbinh_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, TTV THANH HOA
-http://scache.fptplay.net.vn/live/thanhhoa_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, NTV NGHỆ AN
-http://scache.fptplay.net.vn/livez/nghean_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, HBTV HÒA BÌNH
-http://scache.fptplay.net.vn/livez/hoabinh_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, TTV TUYEN QUANG
-http://scache.fptplay.net.vn/livez/tuyenquang_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, DRT1 ĐÀ NẴNG 1
-http://scache.fptplay.net.vn/live/danang1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, DRT2 ĐÀ NẴNG 2 
-http://scache.fptplay.net.vn/live/danang2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, BTV BINH DINH
-http://scache.fptplay.net.vn/live/binhdinh_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, KTV KHANH HOA
-http://scache.fptplay.net.vn/live/khanhhoa_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, DN1 ĐỒNG NAI 1
-http://scache.fptplay.net.vn/live/dongnai1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, DN2 ĐỒNG NAI 2
-http://scache.fptplay.net.vn/live/dongnai2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, BTV1 BÌNH DƯƠNG 1
-http://scache.fptplay.net.vn/live/btv1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, BTV2 BÌNH DƯƠNG 2
-http://scache.fptplay.net.vn/live/btv2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, BTV4 BÌNH DƯƠNG 4
-http://scache.fptplay.net.vn/live/btv4_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, BRT BARIA VUNGTAU
-http://scache.fptplay.net.vn/live/bariavungtau_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, THTPCT TP.CẦN THƠ
-http://scache.fptplay.net.vn/live/cantho_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, THVL1
-http://scache.fptplay.net.vn/livez/vinhlong1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, THVL2
-http://scache.fptplay.net.vn/livez/vinhlong2_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, THTG TIỀN GIANG
-http://scache.fptplay.net.vn/livez/tiengiang_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-#EXTINF:-1, ATV1 AN GIANG
-http://scache.fptplay.net.vn/live/angiang_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-
-

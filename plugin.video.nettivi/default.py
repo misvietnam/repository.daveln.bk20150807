@@ -19,7 +19,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
 
 import urllib,urllib2,re,os
 import xbmcplugin,xbmcgui,xbmcaddon
-from datetime import datetime
 
 mysettings=xbmcaddon.Addon(id='plugin.video.nettivi')
 profile=mysettings.getAddonInfo('profile')
@@ -28,7 +27,6 @@ fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
-moreHotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/morehotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
 fptm3u='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/FPTPLAY.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
@@ -37,6 +35,7 @@ haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playl
 vietnamtv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/vietnamtv.xml'
 giniko='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/giniko.xml'
 thanh51='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.m3u'
+ATF01='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ATF01.m3u'
 vtcplay='http://117.103.206.21:88/Channel/GetChannels'
 htvonline='http://www.htvonline.com.vn/livetv'
 wezatv='http://www.wezatv.com'
@@ -64,9 +63,6 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  #addDir('[COLOR cyan]Updated [COLOR orange]TV Tổng Hợp [COLOR cyan]and [COLOR lime]Replay [COLOR cyan]in this version (1.0.19)[/COLOR]','startnote',None,logos+'happytestings.png')
-  #addDir('[COLOR yellow]Special thanks to thanh51 for these updates.[/COLOR]','credits',None,logos+'happytestings.png')
-  #addDir('[COLOR red]**********************************************[/COLOR]','endnote',None,logos+'happytestings.png')
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -75,6 +71,7 @@ def main():
   #addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				  
   #addDir('[COLOR lime]SCTV  ++  [COLOR yellow]SCTV HD [/COLOR]',anluongtv,6,logos+'sctv.png')
   addDir('[COLOR lime]TV Tổng Hợp [COLOR magenta]- [COLOR cyan]Links provided by thanh51[/COLOR]',thanh51,51,logos+'thanh51.png')  
+  addDir('[COLOR yellow]Live TV [COLOR white]- Links posted by ATF01[/COLOR]',ATF01,51,logos+'atf01.png')    
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
   addDir('[COLOR lime]Replay - TV được chiếu lại[/COLOR]',tvreplay,20,logos+'replay.png')  
   addDir('[COLOR white]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
@@ -86,40 +83,25 @@ def main():
   #addDir('SCTV Extras',sctv,6,logos+'sctv.png')
   #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png') 
   addDir('[COLOR lime]World and Sport TV[/COLOR]','worldtv',12,logos+'worldtv.png')
-  content=makeRequest(moreHotChannels)
-  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
-  for name,url,thumb in match:
-    addLink('[COLOR cyan]'+name+'[/COLOR]',url,logos+thumb)  
   content=makeRequest(hotChannels)
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
   for name,url,thumb in match:
-    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb)	
-'''
-  addLink('[COLOR lightgreen]Little Sai Gon TV[/COLOR]','http://stream.s15.cpanelservices.com/lstvlive/livestream/playlist.m3u8',logos+'littlesaigon.png')	
-  addLink('[COLOR lightblue]Animal Planet[/COLOR]','http://202.75.23.34:80/live/ch31//01.m3u8',logos+'ap.png')	
-  addLink('[COLOR violet]Discovery Channel[/COLOR]','http://202.75.23.34:80/live/ch29/01.m3u8',logos+'discovery.png')	
-  addLink('[COLOR pink]Discovery HD World[/COLOR]','http://202.75.23.34:80/live/ch30/01.m3u8',logos+'dischd.png')	
-  addLink('[COLOR olive]Discovery Science[/COLOR]','http://202.75.23.34:80/live/ch33/01.m3u8',logos+'discsc.png')	
-  addLink('[COLOR gold]History Channel[/COLOR]','http://202.75.23.36:80/live/ch45/01.m3u8',logos+'history.png')	
-  addLink('[COLOR chocolate]NatGeo Wild[/COLOR]','http://202.75.23.35:80/live/ch39/01.m3u8',logos+'natgeowild.png')	
-  addLink('[COLOR green]National Geographic[/COLOR]','http://202.75.23.35:80/live/ch38/01.m3u8',logos+'natgeo.png')
-'''
+    addLink('[COLOR cyan]'+name+'[/COLOR]',url,logos+thumb)  
 
-def thanh51_tv(url):
+def thanh51_atf01_tv(url,name):
   content=makeRequest(url)
   match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
-  for name,url in match: 
-    addLink(name,url,logos+'thanh51.png')
-
+  for title,url in match:
+    if 'thanh51' in name:  
+	  addLink(title,url,logos+'thanh51.png')
+    else:  
+      addLink(title,url,logos+'atf01.png')
+	  
 def tv_replay(url):
   content=makeRequest(url)
   match=re.compile('href="(\d+)/">(\d+)/<').findall(content)
-  for url,name in match:
-    name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]Ngày %d  [COLOR yellow]tháng %m  [COLOR lime]năm %Y[/COLOR]')
-    #name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]%d[COLOR magenta] - [COLOR yellow]%m[COLOR magenta] - [COLOR lime]%Y[/COLOR]')
-    #name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]%b[COLOR magenta]. [COLOR yellow]%d[COLOR magenta], [COLOR lime]%Y[/COLOR]')
-    #name=datetime.strptime(name, '%Y%m%d').strftime('[COLOR cyan]%B [COLOR yellow]%d[COLOR magenta], [COLOR lime]%Y[/COLOR]')	
-    addDir(name,tvreplay+url,21,logos+'replay.png')	
+  for url, name in match:
+    addDir('[COLOR lime]'+name+'[/COLOR]',tvreplay+url,21,logos+'replay.png')
 
 def worldtv():
   content=makeRequest(wezatv)
@@ -581,6 +563,6 @@ elif mode==21:
   tvreplay_link(url)
  
 elif mode==51:
-  thanh51_tv(url) 
+  thanh51_atf01_tv(url,name) 
  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

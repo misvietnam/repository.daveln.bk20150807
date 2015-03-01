@@ -1,3 +1,8 @@
+v 1.0.22
+Date format conversion did not work well, downgrade to v 1.0.20
+Added ATF01's Live TV
+Removed credits from addon.xml
+
 v 1.0.21
 Converted to Vietnamese date format for TV Replay
 

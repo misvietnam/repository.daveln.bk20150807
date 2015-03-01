@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.nettivi"
        name="*nettivi"
-       version="1.0.21"
+       version="1.0.22"
        provider-name="DaveLN">
   <requires>
         <import addon="xbmc.python" version="2.1.0" optional="true" />
@@ -14,12 +14,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>TV</summary>
-    <description>
-Internet TV
-
-[COLOR red]Credits:[/COLOR] Special thanks to the following people for their posted/supplied links:
-
-ATF01,  thanh51,  lovetv</description>
+    <description>Internet TV</description>
 	<disclaimer lang="en">
 [COLOR lime]The streaming media are found via website(s).
 [COLOR red]These streams do not represent my views or opinions in any way.[/COLOR]</disclaimer>

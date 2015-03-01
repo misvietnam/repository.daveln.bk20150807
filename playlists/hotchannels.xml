@@ -21,135 +21,21 @@
 </item>
 
 <item>
-<title>Animal Planet Live HD</title>
-<link>http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028</link>
+<title>Kids TV (TV Trong Nước - Tiếng Việt)</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bibi_hls.smil/playlist.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>
 
 <item>
-<title>Animal Planet</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL373/PROFILE03.m3u8?</link>
+<title>Thể Thao (TV Trong Nước - Tiếng Việt)</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:thethaotvsd_hls.smil/playlist.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>
 
 <item>
-<title>Discovery HD</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL351/PROFILE03.m3u8?</link>
+<title>Bóng Đá TV (TV Trong Nước - Tiếng Việt)</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bongdatvsd_hls.smil/playlist.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>
-
-<item>
-<title>Discovery</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL371/PROFILE03.m3u8?</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>Discovery Channel</title>
-<link>http://83.139.104.108/Content/HLS/Live/Channel(Discovery_Channel)/Stream(03)/index.m3u8</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>NAT GEO WILD HD</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL355/PROFILE03.m3u8?</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>NAT GEO</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL377/PROFILE03.m3u8?</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>TLC 1 HD</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL356/PROFILE03.m3u8?</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>Fox 1 HD</title>
-<link>http://200.76.77.237/LIVE/H01/CANAL415/PROFILE03.m3u8?</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>CBSN Live HD</title>
-<link>http://cbsnewshd-lh.akamaihd.net/i/CBSNDC_4@199302/index_4000_av-b.m3u8?sd=10&rebase=on</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>NBC Sports Live Extra - Golf & New Events Live HD</title>
-<link>http://tvegolf-i.akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>CNBC</title>
-<link>http://livestation_hls-lh.akamaihd.net/i/cnbc_en@106428/index_838_av-p.m3u8?sd=10&rebase=on</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>ABC HD</title>
-<link>http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8?sd=10&b=1200&rebase=on</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>RT Today HD</title>
-<link>http://odna.octoshape.net/f3f5m2v4/cds/ch1_720p/chunklist.m3u8?Vd?u#bt!25</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>Pentagon Channel HD</title>
-<link>http://149.11.34.6:1935/live/pentagon.stream/playlist.m3u8?wowzasessionid=750145898</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>CBS Dramas</title>
-<link>http://cdn-07.sdn.si/cbsdrama/cbsdrama.isml/cbsdrama-video%3D2500000-audio101%3D128000.m3u8</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>WiKids Sci-Fi Network</title>
-<link>rtmp://66.55.92.158:1935/app playpath=wikids-sci-fi-network swfUrl=https://streamup.com/assets/StreamupVideoChat.swf pageUrl=https://streamup.com/wikids-sci-fi-network live=1</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>Stargate SG1 SGA</title>
-<link>rtmp://66.55.92.158:1935/app playpath=stargate-sg1-sga swfUrl=https://streamup.com/assets/StreamupVideoChat.swf pageUrl=https://streamup.com/stargate-sg1-sga live=1</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>Miami Life & Health</title>
-<link>rtmp://67.212.178.250:1935/sav_tvmiami/ playpath=life swfUrl=http://p.jwpcdn.com/6/11/jwplayer.flash.swf pageUrl=http://miamitvlife.com/ live=1 timeout=60</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>VEVO 1 HD POP MUSIC</title>
-<link>http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>VEVO 2 HD HITHOP MUSIC</title>
-<link>http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch2/06/prog_index.m3u8</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item>
-
-<item>
-<title>VEVO 3 HD COUNTRY MUSIC</title>
-<link>http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch3/06/prog_index.m3u8</link>
-<thumbnail>hotchannel.png</thumbnail>
-</item> 
 
 </stream>

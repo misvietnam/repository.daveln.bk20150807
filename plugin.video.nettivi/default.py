@@ -70,11 +70,11 @@ def main():
   #addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR lime]Radio[/COLOR]',viet_tv,11,logos+'vietsimpletv.png') 
   #addDir('[COLOR lime]TV24VN    [COLOR lime]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>    [COLOR yellow]SCTV[/COLOR]',tv24vn,6,logos+'tv24vn.png')				  
   #addDir('[COLOR lime]SCTV  ++  [COLOR yellow]SCTV HD [/COLOR]',anluongtv,6,logos+'sctv.png')
-  addDir('[COLOR lime]TV Tổng Hợp [COLOR magenta]- [COLOR cyan]Links provided by thanh51[/COLOR]',thanh51,51,logos+'thanh51.png')  
-  addDir('[COLOR yellow]Live TV [COLOR white]- Links posted by ATF01[/COLOR]',ATF01,51,logos+'atf01.png')    
-  addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')
-  addDir('[COLOR lime]Replay - TV được chiếu lại[/COLOR]',tvreplay,20,logos+'replay.png')  
-  addDir('[COLOR white]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
+  addDir('[COLOR lime]TV Tổng Hợp[COLOR magenta] - [COLOR cyan]Links provided by thanh51[/COLOR]',thanh51,51,logos+'thanh51.png')  
+  addDir('[COLOR yellow]Live TV[COLOR magenta] - [COLOR red]Playlist posted by ATF01[/COLOR]',ATF01,51,logos+'atf01.png')    
+  addDir('[COLOR lime]Replay[COLOR magenta] - [COLOR white]TV được chiếu lại (VN server)[/COLOR]',tvreplay,20,logos+'replay.png')
+  addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')  
+  addDir('[COLOR lightgreen]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
   addDir('[COLOR blue]FPTPlay Link # 2[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
   addDir('[COLOR cyan]Haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
   #addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
@@ -177,9 +177,11 @@ def dirs(url):
 
 def tvreplay_link(url):
   content=makeRequest(url)
-  match=re.compile('<a href="(.+?)">(.+?)\.mp4</a>').findall(content)
-  for href, name in match:
-    addLink('[COLOR cyan]'+name+'[/COLOR]',url+'/'+href,logos+'replay.png')
+  match=re.compile('href="(.+?)">(.+?)\.mp4</a></td><td align="right">.+?</td><td align="right">(.+?)<').findall(content)
+  for href, name, vsize in match:
+    name=name.split('_')
+    name=name[0]+'_'+name[-1]
+    addLink('[COLOR cyan]'+name+'   [COLOR yellow]'+vsize+'[/COLOR]',url+'/'+href,logos+'replay.png')
 	
 def index(url):
   content=makeRequest(url)

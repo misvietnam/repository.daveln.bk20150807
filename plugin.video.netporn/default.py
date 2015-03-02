@@ -71,6 +71,7 @@ def makeRequest(url):
 def main():
   addLink('[COLOR cyan]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
   addDir('[COLOR lime]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')
+  addDir('[COLOR magenta]XXX[COLOR red] by ATF01[/COLOR]','XXX_ATF01',1,logos+'xxxatf01.png')  
   content=makeRequest('http://www.giniko.com/watch.php?id=95')
   match=re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(content)
   for thumb,url in match:
@@ -92,8 +93,10 @@ def pornList():
   for name,url in menulink: 
     if 'Miami International TV' in name:
       pass
-    else:
+    elif 'ATF01' in url:
       addLink('[COLOR lime]'+name+'[/COLOR]',url,logos+'asian.png')
+    else:
+      addLink('[COLOR magenta]'+name.replace('ATF01 - ','')+'[/COLOR]',url,logos+'xxxatf01.png')
    
 def get_params():
   param=[]

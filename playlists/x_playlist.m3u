@@ -29,7 +29,7 @@ http://46.105.116.159:1935/cellcast/encoder22/.m3u8
 http://178.33.126.213:1935/cellcast/encoder32/.m3u8
 #EXTINF:-1,thanh51 -  Babestation Unleashed
 http://46.105.116.159:1935/iptv_cellcast_24/livestream_three2/.m3u8
-#EXTINF:-1,thanh51 -  Babestation Unleashed2
+#EXTINF:-1,thanh51 -  Babestation Unleashed 2
 http://178.33.126.213:1935/iptv_cellcast_24/livestream_two2/.m3u8
 #EXTINF:-1,thanh51 -  Babestation Xtra
 http://46.105.116.159:1935/cellcast/encoder72/.m3u8
@@ -91,7 +91,7 @@ http://cdn-02.sdn.si/superone/superone.isml/superone-video=2500000-audio101=1280
 http://46.249.213.93/iPhone/broadcast/powergirls-tablet.3gp/powergirls-tablet.3gp-mr648k.m3u8
 #EXTINF:-1,thanh51 -  Bollywood Bikini TV
 http://46.249.213.93/iPhone/broadcast/bollywoodbikini-tablet.3gp/bollywoodbikini-tablet.3gp-mr647k.m3u8
-#EXTINF:-1,thanh51 -  Adult Channel(Soft)
+#EXTINF:-1,thanh51 -  Adult Channel (Soft)
 http://83.139.104.98/Content/HLS/Live/Channel(ADULT_CHANNEL)/Stream(03)/index.m3u8
 #EXTINF:-1,thanh51 -  XXX
 http://188.165.220.116:8081/live/1/playlist.m3u8

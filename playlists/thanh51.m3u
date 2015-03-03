@@ -1,4 +1,4 @@
-#EXTM3U
+﻿#EXTM3U
 
 #EXTINF:100,[COLOR yellow]Hải Ngoại TV[/COLOR]
 http://www.myownlabel.com
@@ -176,6 +176,8 @@ http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv6hd_hls.smil/playlist.m3u8
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:giaitritv_hls.smil/playlist.m3u8
 #EXTINF:-1,VTVcab2 PHIM VIET
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:phimviet_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVcab3 Thethaotv
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:thethaotvsd_hls.smil/playlist.m3u8
 #EXTINF:-1,VTVCAB4 KÊNH17
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:kenh17_hls.smil/playlist.m3u8
 #EXTINF:-1,VTVCAB7 DDRAMAS
@@ -190,6 +192,8 @@ http://vtv.live.cdn.fptplay.net/vtvlive/smil:o2tv_hls.smil/playlist.m3u8
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:styletv_hls.smil/playlist.m3u8
 #EXTINF:-1,VTVCAB15 INVESTV
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:investtv_hls.smil/playlist.m3u8
+#EXTINF:-1,VTVcab16 Bongdatv
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:bongdatvsd_hls.smil/playlist.m3u8
 #EXTINF:-1,HN1 HÀ NỘI 1
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:hanoi1_hls.smil/playlist.m3u8
 #EXTINF:-1,HTV9
@@ -452,7 +456,7 @@ http://cdn-02.sdn.si/crimeinvestigation/crimeinvestigation.m3u8
 http://cdn-02.sdn.si/bbcknowledge/bbcknowledge.m3u8
 #EXTINF:-1,USA TLC
 http://cdn-02.sdn.si/tlc/tlc.m3u8
-#EXTINF:-1 tvg-name="Discovery_Channel_HD" tvg-id="Discovery Channel HD" tvg-logo="DISCOVERY.png" group-title="UK TV",[I]Discovery HD [UK][/I]
+#EXTINF:-1,Discovery HD
 http://cdn-01.sdn.si/discoverychannel/discoverychannel.isml/discoverychannel-video%3D900000-audio101%3D128000.m3u8?timeout=15
 #EXTINF:-1, DISCOVERY HD
 http://200.76.77.237/LIVE/H01/CANAL351/PROFILE03.m3u8?
@@ -680,6 +684,130 @@ http://213.250.19.50/animalplanet/animalplanet.m3u8
 http://213.250.19.50/natgeo/natgeo.m3u8
 #EXTINF:-1,Nat Geo Wild 
 http://213.250.19.50/natgeowild/natgeowild.m3u8
+
+
+#EXTINF:100,[COLOR blue]----------------NHÓM KÊNH QUỐC TẾ HD (720p - 1080p)-----------------[/COLOR]
+http://www.myownlabel.com
+#EXTINF:-1, A & E 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=106&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, AMC 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=330&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, AXN 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=110&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Azcorazon HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=479&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Berita Satu Sport HD 720P (Indonesia)
+http://beritasatulive-lh.akamaihd.net/i/b1sport_1@121529/index_720_av-p.m3u8
+#EXTINF:-1, Best Music HD
+rtmp://stream.smcloud.net/live2/best/best_720p
+#EXTINF:-1, Cinecanal HD 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=310&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Club HD 720P
+http://195.189.238.18/streaming/firstmuz/16/hd/playlist.m3u8
+#EXTINF:-1, Dance TV HD 720P
+http://91.82.85.16:1935/relay15/nettv_channel_1/HasBahCa.m3u8
+#EXTINF:-1, Dpelicula HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=326&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Discovery Theatre 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=242&lan=2&rows=40&f=.m3u8
+‪#EXTINF:-1, Eska Best Music 720P
+rtmp://stream.smcloud.net/live2/best/best_720p
+#EXTINF:-1, Eska Party 720P
+rtmp://stream.smcloud.net/live2/eska_party/eska_party_720p
+#EXTINF:-1, Eska Rock 720P
+rtmp://stream.smcloud.net/live2/eska_rock/eska_rock_720p
+#EXTINF:-1, Estrella HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=478&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Film Zone HD 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=322&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, fix tv HD (Hungary)
+rtmp://video.fixhd.tv/fix/hd.stream
+#EXTINF:-1, Fox 1 HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=298&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Fox Action HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=302&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Fox Movie HD 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=306&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, FX 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=102&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Golden HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=318&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, ,HD MEDIA 3D 720P
+rtmp://hdmedia3d.vintera.tv/hdmedia3d//hdmedia3d.stream
+#EXTINF:-1, History 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=246&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, KANAL 6 HD 1080P
+http://84.22.33.3:9024
+#EXTINF:-1, La Sexsta HD 720P (Spanish)
+http://antena3-aos1-apple-live.adaptive.level3.net/apple/antena3/channel02/la_sexta_hd_1548K_1280x720_main.m3u8
+#EXTINF:-1, MTV Live HD 720P
+http://89.212.240.49:11980/live/smil:324_0.smil/playlist.m3u8?authorization_key=hNj0mnLtB9O5rfIKuCVsX7oWASQayqZg&stream_id=0
+#EXTINF:-1, MTV Live 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=430&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Natgeo Wild 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=250&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Nick HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=214&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Novorossiya TV HD 720P
+http://193.23.58.156:8888/udp/234.1.10.21:1234
+#EXTINF:-1, Pac Mountain 1080P
+http://xrxs.net/video/live-p12moun-4728.m3u8
+#EXTINF:-1, PAC National 720P
+http://xrxs.net/video/live-p12netw-2328.m3u8
+#EXTINF:-1, PAC-12 Net. (Arizona) 720P
+http://xrxs.net/video/live-p12ariz-2328.m3u8
+#EXTINF:-1, PAC-12 Net. (Arizona) 1080P
+http://xrxs.net/video/live-p12ariz-4728.m3u8
+#EXTINF:-1, PAC-12 Net. (Bay Area) 720P
+http://xrxs.net/video/live-p12baya-2328.m3u8
+#EXTINF:-1, PAC-12 Net. (Bay Area) 1080P
+http://xrxs.net/video/live-p12baya-4728.m3u8
+#EXTINF:-1, PAC-12 Net. (Los Angeles) 720P
+http://xrxs.net/video/live-p12losa-2328.m3u8
+#EXTINF:-1, PAC-12 Net. (Oregon) 720P
+http://xrxs.net/video/live-p12oreg-2328.m3u8
+#EXTINF:-1, PAC-12 Net. (Oregon) 1080P
+http://xrxs.net/video/live-p12oreg-4728.m3u8
+#EXTINF:-1, PAC-12 Net. (Washington) 720P
+http://xrxs.net/video/live-p12wash-2328.m3u8
+#EXTINF:-1, PAC-12 Net. (Washington) 1080P
+http://xrxs.net/video/live-p12wash-4728.m3u8
+#EXTINF:-1, Party Tv HD 720P
+rtmp://stream.smcloud.net/live2/eska_party/eska_party_720p
+#EXTINF:-1, Polo Party TV 720P
+rtmp://stream.smcloud.net/live2/polo_party/polo_party_720p
+#EXTINF:-1, Px Hits 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=475&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, RT HD 720P (Russian)
+http://odna.octoshape.net/f3f5m2v4/cds/ch6_720p/playlist.m3u8
+#EXTINF:-1, RT Documentary HD 720P (Russian)
+http://odna.octoshape.net/f3f5m2v4/cds/ch5_720p/chunklist.m3u8?b?b*t$
+#EXTINF:-1, Sony 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=90&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Space HD 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=334&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, ,Sport HD 720P
+http://lswb-de-08.servers.octoshape.net:1935/live/kanalsport_2000k/playlist.m3u8
+#EXTINF:-1, Sports Night HD 720P (German)
+rtmp://freeview.fms.visionip.tv/live/sports_tonight-sports_tonight-live-25f-16x9-HD
+#EXTINF:-1, Telehit 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=434&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, TLC HD 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=254&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, TNT HD 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=314&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, U 1080P (Spanish)
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=122&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, VH HD 1080P
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=438&lan=2&rows=40&f=.m3u8
+#EXTINF:-1, Vevo HD 1 720P
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8
+#EXTINF:-1, Vevo HD 2 720P
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch2/06/prog_index.m3u8
+#EXTINF:-1, Vevo HD 3 720P
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch3/06/prog_index.m3u8
+#EXTINF:-1, VOX Music HD 720P
+rtmp://stream.smcloud.net/live2/vox/vox_720p
 
 
 #EXTINF:100,[COLOR magenta]FPTPlay TV[/COLOR]
@@ -1136,6 +1264,29 @@ rtmpe://112.197.2.154/live//htv9_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pa
 rtmpe://112.197.2.154/live//thvl1_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/ token=1b#K8!3zc65ends!
 
 
+#EXTINF:100,[COLOR blue]------------------NHÓM KÊNH LIFETV------------------[/COLOR]
+http://www.myownlabel.com
+#EXTINF:-1, LIFETV
+rtmp://27.118.16.16/live/live_lifetv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/#EXTINF:-1, KÊNH 9 MUSIC
+rtmp://27.118.16.16/live//9_music swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, FITNESS 360
+rtmp://27.118.16.16/live//fitness_360 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, MODEL CHANNEL
+rtmp://27.118.16.16/live//model_channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, DI SẢN VIỆT
+rtmp://27.118.16.16/live//disanviet swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, 4 MEN
+rtmp://27.118.16.16/live//4Men swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, 2 Channel Vietnam
+rtmp://27.118.16.16/live//2channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, SOTV
+rtmp://27.118.16.16/live//sotv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, TECH CHANNEL
+rtmp://27.118.16.16/live//tech swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, Kênh 911
+rtmp://27.118.16.16/live//911 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, TRUYỀN THÔNG VIỆT
+rtmp://27.118.16.16/live//ttv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
 
 
 

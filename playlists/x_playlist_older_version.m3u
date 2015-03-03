@@ -3,6 +3,7 @@
 #EXTINF:-1,Miami International TV
 rtmp://67.212.178.250:1935/sav_tvmiami/myStream141
 
+
 #EXTINF:-1,ATF01 - Bella XXX Club
 http://46.249.213.93/iPhone/broadcast/bellaclub-tablet.3gp/bellaclub-tablet.3gp-mr648k.m3u8
 #EXTINF:-1,ATF01 - Eroxxx HD
@@ -73,9 +74,9 @@ rtsp://46.249.213.93/broadcast/hot100-tablet.3gp
 http://cdn-02.sdn.si/hustler/hustler.isml/hustler-video=2500000-audio101=128000.m3u8
 #EXTINF:-1,thanh51 - HUSTLER
 http://cdn-02.sdn.si/hustler/hustler.isml/hustler-video=1500000-audio101=128000.m3u8
-#EXTINF:-1,thanh51 - HUSTLER
+#EXTINF:-1,thanh51 - HUSTLER HD
 http://cdn-02.sdn.si/hustlerhd/hustlerhd.isml/hustlerhd-video=4500000-audio101=128000.m3u8
-#AAASTREAM:-1,thanh51 - HUSTLER HD 720p
+#EXTINF:-1,thanh51 - HUSTLER HD 720p
 http://213.250.19.50/hustlerhd/hustlerhd.isml/hustlerhd-video=4500000-audio101=128000.m3u8
 #EXTINF:-1,thanh51 - PLAY BOY 1
 http://cdn-02.sdn.si/playboy/playboy.isml/playboy-video=2500000-audio101=128000.m3u8
@@ -127,4 +128,7 @@ rtmp://edge2.everyon.tv/etv2/phd1003
 rtmp://edge2.everyon.tv/etv2/phd1005
 #EXTINF:-1,Sex TV3
 rtmp://edge2.everyon.tv/etv2/phd1008
+
+
+
 

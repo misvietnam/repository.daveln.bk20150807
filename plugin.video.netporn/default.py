@@ -71,7 +71,8 @@ def makeRequest(url):
 def main():
   addLink('[COLOR cyan]Hardcore [COLOR red]Sex TV[/COLOR]',hardcoresextv,logos+'hardcore.png')
   addDir('[COLOR lime]Asian [COLOR red]Porn TV[/COLOR]','asianporn',1,logos+'asian.png')
-  addDir('[COLOR magenta]XXX[COLOR red] by ATF01[/COLOR]','ATF01_XXX',2,logos+'atf01xxx.png')  
+  addDir('[COLOR magenta]XXX[COLOR red] by ATF01[/COLOR]','ATF01_XXX',2,logos+'atf01xxx.png') 
+  addDir('[COLOR blue]XXX[COLOR red] by thanh51[/COLOR]','thanh51_xxx',4,logos+'thanh51xxx.png')  
   content=makeRequest('http://www.giniko.com/watch.php?id=95')
   match=re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(content)
   for thumb,url in match:
@@ -91,7 +92,7 @@ def main():
   
 def pornList():
   for name,url in menulink: 
-    if 'Miami International TV' in name or 'ATF01' in name:
+    if 'Miami International TV' in name or 'ATF01' in name or 'thanh51' in name:
       pass
     else:
       addLink('[COLOR lime]'+name+'[/COLOR]',url,logos+'asian.png')
@@ -102,7 +103,14 @@ def ATF01XXX():
       addLink('[COLOR magenta]'+name.replace('ATF01 - ','')+'[/COLOR]',url,logos+'atf01xxx.png')
     else:
       pass
-   
+
+def thanh51xxx():
+  for name,url in menulink: 
+    if 'thanh51' in name:
+      addLink('[COLOR blue]'+name.replace('thanh51 - ','')+'[/COLOR]',url,logos+'thanh51xxx.png')
+    else:
+      pass
+	  
 def get_params():
   param=[]
   paramstring=sys.argv[2]
@@ -166,5 +174,8 @@ elif mode==1:
 
 elif mode==2:
   ATF01XXX()
-   
+
+elif mode==4:
+  thanh51xxx()
+  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

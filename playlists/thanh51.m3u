@@ -1,6 +1,6 @@
 ﻿#EXTM3U
 
-#EXTINF:100,[COLOR yellow]Hải Ngoại TV[/COLOR]
+#EXTINF:100,[COLOR yellow]------------------NHÓM KÊNH HẢI NGOẠI TV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1, KVLA
 http://206.190.140.142/liveStream/kvla_1/playlist.m3u8
@@ -82,7 +82,7 @@ http://stream.onworldtv.com/live/mtv24/index.m3u8
 http://stream.onworldtv.com/live/teleprogreso/index.m3u8
 
 
-#EXTINF:100,[COLOR lime]VP9 TV[/COLOR]
+#EXTINF:100,[COLOR lime]------------------NHÓM KÊNH VP9 TV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1, VTV1   
 http://115.146.126.226/chn/vtv1/v.m3u8
@@ -164,7 +164,7 @@ http://115.146.126.226/chn/bin04/v.m3u8
 http://115.146.126.226/chn/st3/v.m3u8
 
 
-#EXTINF:100,[COLOR orange]VTVPlay TV[/COLOR]
+#EXTINF:100,[COLOR orange]------------------NHÓM KÊNH VTVPLAY TV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1,VTV1 HD 
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv1hd_hls.smil/playlist.m3u8
@@ -210,7 +210,7 @@ http://vtv.live.cdn.fptplay.net/vtvlive/smil:arirang_hls.smil/playlist.m3u8
 http://vtv.live.cdn.fptplay.net/vtvlive/smil:kbs_hls.smil/playlist.m3u8
 
 
-#EXTINF:100,[COLOR cyan]Quốc Tế TV[/COLOR]
+#EXTINF:100,[COLOR cyan]------------------NHÓM KÊNH QUỐC TẾ TV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1,I 24 NEWS USA HD
 http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/master.m3u8
@@ -810,7 +810,7 @@ http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch3/06/prog_index.m3u8
 rtmp://stream.smcloud.net/live2/vox/vox_720p
 
 
-#EXTINF:100,[COLOR magenta]FPTPlay TV[/COLOR]
+#EXTINF:100,[COLOR magenta]------------------NHÓM KÊNH FPTPLAY TV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1,VTV1 HD
 http://hlscache.fptplay.net.vn/livev/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -1044,7 +1044,7 @@ http://hlscache.fptplay.net.vn/img/img7_2000/playlist.m3u8?token=c335VydmVyX3Rpb
 http://hlscache.fptplay.net.vn/img/img8_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 
 
-#EXTINF:100,[COLOR blue]SCTV[/COLOR]
+#EXTINF:100,[COLOR blue]------------------NHÓM KÊNH SCTV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1, SCTVHD-SÓNG NHẠC (720P)
 http://sctv.live.cdn.anluong.info/live/C006_HD_4/chunklist.m3u8?us=9b9aea5546402462bbb2e05df3ad5fdccb9cfdcf968ad7a6c14937bbf42a62b5ac95ddff24e337955113e2468571ec8f%7C1397200
@@ -1267,7 +1267,8 @@ rtmpe://112.197.2.154/live//thvl1_2 live=1 swfUrl=http://tv24.vn/getflash.ashx p
 #EXTINF:100,[COLOR blue]------------------NHÓM KÊNH LIFETV------------------[/COLOR]
 http://www.myownlabel.com
 #EXTINF:-1, LIFETV
-rtmp://27.118.16.16/live/live_lifetv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/#EXTINF:-1, KÊNH 9 MUSIC
+rtmp://27.118.16.16/live/live_lifetv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
+#EXTINF:-1, KÊNH 9 MUSIC
 rtmp://27.118.16.16/live//9_music swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
 #EXTINF:-1, FITNESS 360
 rtmp://27.118.16.16/live//fitness_360 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/

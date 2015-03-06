@@ -32,6 +32,7 @@ karaoke = 'http://www.timkaraoke.com'
 nctm='http://m.nhaccuatui.com/'
 nhacso='http://nhacso.net/'
 csn='http://chiasenhac.com/'
+ThuyNga='http://ott.thuynga.com/'
 
 if not os.path.exists(homemenu):
   try:
@@ -73,21 +74,27 @@ def makeRequest(url):
 
 def main():
   addDir('[COLOR lightgreen]Hát Karaoke Online[/COLOR]','KaraokeOnline',6,logos+'karaoke.png')
-  addDir('[COLOR yellow]Video Nhạc Số[/COLOR]',nhacso,2,logos+'ns.png')		
+  addDir('[COLOR yellow]Thuý Nga - Paris by Night[/COLOR]','thuynga',11,logos+'thuynga.png')  
+  addDir('[COLOR lightblue]Video Nhạc Số[/COLOR]',nhacso,2,logos+'ns.png')		
   addDir('[COLOR lime]Video Chia Sẻ Nhạc[/COLOR]',csn,2,logos+'csn.png')
   addDir('[COLOR cyan]Video Nhạc Của Tui[/COLOR]',nctm+'mv.html',2,logos+'nct.png')  
-  addLink('[COLOR orange]SCTV2 - [COLOR blue]Âm Nhạc Quốc Tế[/COLOR]','rtmpe://112.197.2.154/live//sctv2_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/LiveTV token=1b#K8!3zc65ends!',logos+'sctv2.png')  
-  addLink('[COLOR gold]Vmusic[/COLOR]','http://206.190.130.141:1935/liveStream/mtv_1/playlist.m3u8',logos+'vmusic.png')	
+  #addLink('[COLOR orange]SCTV2 - [COLOR white]Âm Nhạc Quốc Tế[/COLOR]','rtmpe://112.197.2.154/live//sctv2_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/LiveTV token=1b#K8!3zc65ends!',logos+'sctv2.png')  
+  addLink('[COLOR gold]Vmusic[/COLOR]','http://206.190.140.142:1935/liveStream/mtv_1/playlist.m3u8',logos+'vmusic.png')	
   addLink('[COLOR magenta]Viet MTV[/COLOR]','http://64.62.143.5:1935/live/donotstealmy-Stream1/playlist.m3u8?bitrate=800&q=high',logos+'vietmtv.png')		
   #addLink('[COLOR lightblue]Viet MTV[/COLOR]','rtmpe://64.62.143.5:1935/live/donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://www.vietstartv.com',logos+'vietmtv.png')		
   #addLink('[COLOR lightblue]Viet MTV[/COLOR]','rtmpe://64.62.143.5/live playpath=donotstealmy-Stream1 swfUrl=http://www.vietstartv.com/player.swf pageUrl=http://zui.vn/livetv/viet-mtv-83.html',logos+'vietmtv.png')		
-  addLink('[COLOR lightblue]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php',logos+'nlive.png')	
+  #addLink('[COLOR lightblue]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php',logos+'nlive.png')	
   #addLink('[COLOR lightgreen]Nhạc Của Tui - [COLOR gold]N+ Live[/COLOR]','rtmp://123.30.134.108/live/ playpath=nctlive swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/nhac-cua-tui-40.html',logos+'nlive.png')	
-  addLink('[COLOR violet]VPop TV[/COLOR]','http://206.190.130.141:1935/liveStream/vpoptv_1/playlist.m3u8',logos+'vpop.png')
+  addLink('[COLOR violet]VPop TV[/COLOR]','http://206.190.136.254:1935/liveStream/vpoptv_1/playlist.m3u8',logos+'vpop.png')
   addLink('[COLOR chocolate]iTV[/COLOR]','rtmp://live.kenhitv.vn/liveweb/ playpath=itv_web_500k.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/itv-10.html',logos+'itv.png')
   #addLink('[COLOR silver]iTV[/COLOR]','http://117.103.224.73:1935/live/_definst_/ITV/ITV_live.smil/playlist.m3u8',logos+'itv.png')
   addLink('[COLOR orange]M[COLOR red]TV[/COLOR][/COLOR]','rtmp://85.132.78.6:1935/live/ playpath=muztv.stream swfUrl=http://zui.vn/templates/images/jwplayer.swf pageUrl=http://zui.vn/livetv/mtv-81.html',logos+'mtv.png')
-      
+
+def thuynga():
+  addDir('PBN SHOWS | [COLOR yellow]VARIETY[/COLOR]',ThuyNga+'en/genre/index/22/3/',3,logos+'thuynga.png')  
+  addDir('PBN SHOWS | [COLOR cyan]COMEDY[/COLOR]',ThuyNga+'en/genre/index/26/3',3,logos+'thuynga.png')  
+  addDir('PBN SHOWS | [COLOR lime]BTS[/COLOR]',ThuyNga+'en/genre/index/64/3',3,logos+'thuynga.png')    
+  
 def search(): 
   try:
     keyb=xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
@@ -211,7 +218,7 @@ def mediaList(url):
     match = re.compile('pagespeed_url_hash="1785647900".+?href="([^"]*)">([^>]+)<').findall(content)
     for url, name in match: 
       add_Link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), logos + 'timkaraoke.png') 
-  if 'youtube' in url:	  
+  elif 'youtube' in url:	  
     match=re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
     for url,thumbnail,name in match:       
       name=name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
@@ -221,7 +228,14 @@ def mediaList(url):
     match=re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
     for url in match:  
       addDir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]',url.replace('&amp;','&'),3,icon)		  
-      
+  elif 'thuynga' in url:
+	match=re.compile("style=\"background-image: url\('(.+?)'\)\">\s*<span class.+?</span>\s.+\s.+\s.+\s*<a href=\"(.+?)\">(.+?)<").findall(content)
+	for thumbnail,url,name in match:
+	  add_Link(name,ThuyNga+url,thumbnail+'?.jpg')
+	match=re.compile('href="http://ott.thuynga.com/([^>]+)">(\d+)<').findall(content)	
+	for url,name in match:
+	  addDir('[COLOR magenta]Trang '+name+'[/COLOR]',ThuyNga+url,3,logos+'thuynga.png')	
+	       
 def CSN_mediaList_Search(url):
   content=makeRequest(url)			
   match=re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\"><img src=\"([^\"]+)\"").findall(content)
@@ -245,7 +259,9 @@ def resolveUrl(url):
   elif 'timkaraoke' in url:
     mediaUrl=re.compile('source src="(.+?)"').findall(content)[0].replace(' ','%20')  
   elif 'youtube' in url:
-    mediaUrl=url  
+    mediaUrl=url 
+  elif 'thuynga' in url:
+    mediaUrl=re.compile("var iosUrl = '(.+?)'").findall(content)[0]  
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return
@@ -331,5 +347,10 @@ elif mode==5:
   CSN_mediaList_Search(url)		
 
 elif mode==6:
-  getKaraoke()  
+  getKaraoke() 
+
+elif mode==11:
+  thuynga()
+  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
+

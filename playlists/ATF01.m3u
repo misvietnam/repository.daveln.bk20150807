@@ -51,7 +51,7 @@ http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8
 http://93.184.221.133/00573D/1277/1277-0.m3u8
 #EXTINF:-1,BBC 2
 http://37.220.29.186:8000/bbc2/bbc2/index.m3u8
-#EXTINF:-1,  BBC World News
+#EXTINF:-1,BBC World News
 rtmp://d.cdn.newschat.tv/edge playpath=bbcwn_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/world/
 #EXTINF:-1,BBC Knowledge
 http://cdn-02.sdn.si/bbcknowledge/bbcknowledge.isml/bbcknowledge-video%3D2500000-audio101%3D128000.m3u8
@@ -193,7 +193,7 @@ http://str108.setplex.net/fastv_2psh/PinkActionglobal_rly_greece_109/chunklist.m
 http://str108.setplex.net/fastv_2psh/PinkAction2global_rly_greece_103/chunklist.m3u8
 #EXTINF:-1,Pink Action 3
 http://str108.setplex.net/fastv_2psh/PinkAction3global_rly_greece_103/chunklist.m3u8
-#EXTINF:-1, Pink Horror
+#EXTINF:-1,Pink Horror
 http://str108.setplex.net/fastv_2psh/PinkHorrorglobal_rly_greece_103/chunklist.m3u8
 #EXTINF:-1,Pink Movies 2
 http://str108.setplex.net/fastv_2psh/PinkMovies2global_rly_greece_109/chunklist.m3u8
@@ -203,7 +203,7 @@ http://str108.setplex.net/fastv_2psh/PinkMovies3global_rly_greece_109/chunklist.
 http://str108.setplex.net/fastv_2psh/PinkPremiumglobal_rly_greece_103/chunklist.m3u8
 #EXTINF:-1,NASA HD
 http://public.infozen.cshls.lldns.net/infozen/public/public/public_1000.m3u8
-#EXTINF:-1, Sportnet-360 HD
+#EXTINF:-1,Sportnet-360 HD
 http://nlds187.cdnak.neulion.com/nlds/sportsnetnow/sn_360/as/live/sn_360_hd_3000_ipad.m3u8
 #EXTINF:-1,Sports Stadium Astro HD
 http://stream.ssh101.com/hls/333656.m3u8

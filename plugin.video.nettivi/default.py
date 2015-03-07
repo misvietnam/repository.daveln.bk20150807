@@ -28,7 +28,6 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
-fptm3u='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/FPTPLAY.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
 tvchannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/tvchannels.json'
 haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/haotivi.json'
@@ -50,7 +49,7 @@ def makeRequest(url):
   try:
     req=urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
-    response=urllib2.urlopen(req, timeout=90)
+    response=urllib2.urlopen(req)
     link=response.read()
     response.close()  
     return link
@@ -74,8 +73,7 @@ def main():
   addDir('[COLOR yellow]Live TV[COLOR magenta] - [COLOR red]Playlist posted by ATF01[/COLOR]',ATF01,51,logos+'atf01.png')    
   addDir('[COLOR lime]Replay[COLOR magenta] - [COLOR white]TV được chiếu lại (VN server)[/COLOR]',tvreplay,20,logos+'replay.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')  
-  addDir('[COLOR lightgreen]FPTPlay Link # 1[/COLOR]',fptm3u,2,logos+'fptplay_1.png')
-  addDir('[COLOR blue]FPTPlay Link # 2[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
+  addDir('[COLOR blue]FPTPlay[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
   addDir('[COLOR cyan]Haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
   #addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
   addDir('[COLOR silver]VTC[/COLOR]',tvchannels,7,logos+'vtccomvn.png')		
@@ -87,7 +85,7 @@ def main():
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
   for name,url,thumb in match:
     addLink('[COLOR cyan]'+name+'[/COLOR]',url,logos+thumb)  
-
+	
 def thanh51_atf01_tv(url,name):
   content=makeRequest(url)
   match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
@@ -162,13 +160,7 @@ def url_Resolver(url):
   item=xbmcgui.ListItem(path=mediaUrl)
   xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
   return
-	  
-def fpt_m3u(url):
-  content=makeRequest(url)
-  match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
-  for name,url in match: 
-    addLink(name,url,logos+'fptplay_1.png')
-  	  	  
+	   	  	  
 def dirs(url):
   content=makeRequest(url)
   match=re.compile("<h3><a href=\"(.+?)\">(.+?)<\/a><\/h3>").findall(content)
@@ -204,9 +196,9 @@ def index(url):
     for name,url in match: 
       add_Link(name,url,logos+'sctv.png')
   elif 'htvonline' in url:
-	  match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
+	  match=re.compile("<a class=\"mh-grids5-img\".*?href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
 	  for url,name,thumbnail in match:
-	    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)  
+	    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail) 
   elif 'fptplay' in url:
     match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
     for name,url,thumbnail in match:
@@ -410,7 +402,7 @@ def HD():
   add_Link('[COLOR lime]Discovery World HD[/COLOR]','http://www.htvonline.com.vn/livetv/discovery-hd-3132336E61.html',logos+'dischd.png')
   add_Link('[COLOR lime]FOX SPORTS PLUS HD[/COLOR]','http://www.htvonline.com.vn/livetv/espn-hd-3132346E61.html',logos+'foxsporthd.png')	  
   content=makeRequest(htvonline)  
-  match=re.compile("<a class=\"mh-grids5-img\" href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
+  match=re.compile("<a class=\"mh-grids5-img\".*?href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
   for url,name,thumbnail in match:	
     if 'HTV7' in name or 'HTV9' in name or ' HD' in name or 'htv2-31336E61' in url:
 	    add_Link('[COLOR cyan]'+name+'[/COLOR]',url,thumbnail)
@@ -433,7 +425,9 @@ def HD():
 def resolveUrl(url):	  
   content=makeRequest(url)
   if 'htvonline' in url:		
-    mediaUrl=re.compile("file: \"([^\"]*)\"").findall(content)[0]	
+    mediaUrl=re.compile("file: \"([^\"]*)\"").findall(content)[0]
+  elif 'hplus' in url:
+    mediaUrl=re.compile("var iosUrl = \"(.+?)\"").findall(content)[0]	
   elif 'tv24' in url:
     videoUrl=re.compile('\'file\': \'http([^\']*)\/playlist.m3u8').findall(content)[0]
     mediaUrl='rtmpe' + videoUrl + ' swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ ' + token   
@@ -519,9 +513,6 @@ if mode==None or url==None or len(url)<1:
 elif mode==1:
   hao()
 
-elif mode==2:
-  fpt_m3u(url)  
-
 elif mode==3:
   urlResolver(url)
   
@@ -568,3 +559,4 @@ elif mode==51:
   thanh51_atf01_tv(url,name) 
  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
+

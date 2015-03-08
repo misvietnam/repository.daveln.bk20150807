@@ -15,6 +15,12 @@
 </item>
 
 <item>
+<title>CP24</title>
+<link>plugin://plugin.video.f4mTester/?url=http://ams-lp3.9c9media.com/hds-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.f4m</link>
+<thumbnail>cp24.png</thumbnail>
+</item>
+
+<item>
 <title>Outdoor</title>
 <link>http://tv.vnzee.com/live/outdoor~ztv_CND_partner.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>

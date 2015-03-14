@@ -1,2 +1,6 @@
 <settings>
+  <category label="Add m3u Source">
+    <setting label="Add URL to remote m3u playlist" type="text"  id="remote_m3u" default="" />
+    <setting label="Add path to local m3u playlist" type="file"  id="local_m3u" default="" /> 
+  </category>
 </settings>

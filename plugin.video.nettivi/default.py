@@ -26,6 +26,8 @@ home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
+localm3u=mysettings.getSetting('local_m3u')
+remotem3u=mysettings.getSetting('remote_m3u')
 hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
@@ -35,7 +37,6 @@ vietnamtv='https://raw.githubusercontent.com/daveln/repository.daveln/master/pla
 giniko='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/giniko.xml'
 thanh51='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.m3u'
 ATF01='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ATF01.m3u'
-vtcplay='http://117.103.206.21:88/Channel/GetChannels'
 htvonline='http://www.htvonline.com.vn/livetv'
 wezatv='http://www.wezatv.com'
 fptplay='http://fptplay.net'
@@ -62,7 +63,9 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')
+  addDir('[COLOR magenta]SETUP PATH FOR M3U PLAYLIST[/COLOR]','settings',101,logos+'settings.png')
+  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')   
+  addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')  
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
   addDir('[COLOR orange]TV Tổng Hợp   ++   [COLOR yellow]SCTV HD  ++  [COLOR lime]Radio[/COLOR]','tonghop',13,logos+'vietsimpletv.png')  
@@ -73,7 +76,7 @@ def main():
   addDir('[COLOR yellow]Live TV[COLOR magenta] - [COLOR red]Playlist posted by ATF01[/COLOR]',ATF01,51,logos+'atf01.png')    
   addDir('[COLOR lime]Replay[COLOR magenta] - [COLOR white]TV được chiếu lại (VN server)[/COLOR]',tvreplay,20,logos+'replay.png')
   addDir('[COLOR deeppink]Access Asia Network[/COLOR]',tvchannels,7,logos+'accessasia.png')  
-  addDir('[COLOR blue]FPTPlay[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
+  #addDir('[COLOR blue]FPTPlay[/COLOR]',fptplay+'/livetv',6,logos+'fptplay.png')  
   addDir('[COLOR cyan]Haotivi[/COLOR]',haotivi,1,logos+'hao.png')		
   #addDir('[COLOR orange]VTCPlay[/COLOR]',vtcplay,7,logos+'vtcplay.png')
   addDir('[COLOR silver]VTC[/COLOR]',tvchannels,7,logos+'vtccomvn.png')		
@@ -85,15 +88,32 @@ def main():
   match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
   for name,url,thumb in match:
     addLink('[COLOR cyan]'+name+'[/COLOR]',url,logos+thumb)  
-	
-def thanh51_atf01_tv(url,name):
+ 
+def my_m3u_directories():
+  addDir('[COLOR lime]My remote m3u playlist[/COLOR]',remotem3u,51,logos+'mychannel.png')
+  addDir('[COLOR yellow]My local m3u playlist[/COLOR]','localm3u',31,logos+'mychannel.png')
+  
+def my_local_m3u():
+  try:
+    mym3u=open(localm3u, 'r')  
+    link=mym3u.read()
+    mym3u.close()
+    match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(link)
+    for title,url in match:
+	  addLink(title,url,logos+'mychannel.png')
+  except:
+    pass  
+	  
+def thanh51_atf01_remotem3u_tv(url,name):
   content=makeRequest(url)
   match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
   for title,url in match:
     if 'thanh51' in name:  
 	  addLink(title,url,logos+'thanh51.png')
-    else:  
+    elif 'ATF01' in url:  
       addLink(title,url,logos+'atf01.png')
+    else:
+      addLink(title,url,logos+'mychannel.png')	
 	  
 def tv_replay(url):
   content=makeRequest(url)
@@ -135,7 +155,9 @@ def tvtonghop_linklist(url):
   match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
   for url, sname in match:
 	if 'f4m' in url:
-	  pass
+	  url=url.split('=')[-1]
+	  url='plugin://plugin.video.f4mTester/?url='+url
+	  addLink('[COLOR yellow]'+sname.replace(' sever','Link ')+'[COLOR lime]  (f4m)[/COLOR]',url,iconimage)
 	else:
 	  get_Link('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
 
@@ -143,7 +165,7 @@ def url_Resolver(url):
   if 'm3u8' in url:
 	mediaUrl=url.split('=')[-1]
   elif 'rtmp' in url:
-	mediaUrl=url.split('=')[-1]	
+	mediaUrl=url.split('=')[-1]
   else:
     content=makeRequest(url)
     try: 
@@ -200,12 +222,13 @@ def index(url):
 	  for url,name,thumbnail in match:
 	    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail) 
   elif 'fptplay' in url:
-    match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
+    #match=re.compile("channel=\"(.*?)\" href=\".+?\" data=\"(.+?)\" adsstatus.+?>\s+<img src=\"(.*?)\"").findall(content)
+    match=re.compile('channel="(.*?)" href=".+?" data="(.+?)" adsstatus="">\s\s*\s*\s*\s*<img class="img-responsive" src="(.+?)\?.+?"').findall(content)	
     for name,url,thumbnail in match:
             #print >> open (xbmc.translatePath(os.path.join(home, 'FPTPlayLiveTV.txt')),'a+'),fptplay+url
-	    if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
-	      add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
-	    else:
+	    #if 'VOVTV' in name or 'OneTV' in name or 'VTV3' in name or 'VTV6' in name:
+	      #add_Link('[COLOR yellow]'+name+'[/COLOR]',fptplay+url,thumbnail)	  
+	    #else:
 	      add_Link('[COLOR lime]'+name.replace('&#39;','\'')+'[/COLOR]',fptplay+url,thumbnail)
   elif 'zui' in url:
     match=re.compile("alt='(.+?)' href='(.+?)'><img src='(.+?)'").findall(content)[3:36]
@@ -406,40 +429,32 @@ def HD():
   for url,name,thumbnail in match:	
     if 'HTV7' in name or 'HTV9' in name or ' HD' in name or 'htv2-31336E61' in url:
 	    add_Link('[COLOR cyan]'+name+'[/COLOR]',url,thumbnail)
-  add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')   
-'''
-  content=makeRequest(sctv)  
-  match=re.compile('#EXTINF.+?,(.+)\s(.+)\n').findall(content)
-  for name,url in match:
-    if 'SCTVHD-' in name: 
-      add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+'sctvhd.png')
-    else:  
-      pass  
-  content=makeRequest(vtcplay)  
-  match=re.compile("\"Name\":\"(.*?)\".+?\"Thumbnail2\":\"(.+?)\".+?\"Path\":\"([^\"]*)\"").findall(content)
-  for name,thumbnail,url in match:
-    if ' HD' in name:
-	    addLink('[COLOR yellow]'+name.decode("utf-8")+'[/COLOR]',url,thumbnail)
-'''	  
+  add_Link('[COLOR cyan]FBNC HD[/COLOR]','http://www.htvonline.com.vn/livetv/fbnc-34306E61.html',logos+'fnbchd.png')     
 	  
-def resolveUrl(url):	  
-  content=makeRequest(url)
-  if 'htvonline' in url:		
+def resolveUrl(url):
+  if 'fptplay' in url:
+    req=urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
+    req.add_header('Referer', fptplay)	
+    response=urllib2.urlopen(req)
+    link=response.read()
+    response.close()
+    mediaUrl='plugin://plugin.video.f4mTester/?url='+re.compile('"adapt_hds": "(.+?)"').findall(link)[0]
+  elif 'htvonline' in url:
+    content=makeRequest(url)
     mediaUrl=re.compile("file: \"([^\"]*)\"").findall(content)[0]
   elif 'hplus' in url:
+    content=makeRequest(url)  
     mediaUrl=re.compile("var iosUrl = \"(.+?)\"").findall(content)[0]	
   elif 'tv24' in url:
+    content=makeRequest(url)  
     videoUrl=re.compile('\'file\': \'http([^\']*)\/playlist.m3u8').findall(content)[0]
     mediaUrl='rtmpe' + videoUrl + ' swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://tv24.vn/ ' + token   
   elif 'zui' in url:
+    content=makeRequest(url)  
     mediaUrl=re.compile('livetv_play\(\'player\', \'1\', \'(.+?)\'\)').findall(content)[0]	
-  elif 'fptplay' in url:
-    if 'livetv' in url: 
-      mediaUrl=re.compile('"hls_stream": "(.+?)"').findall(content)[0] # ?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
-      #mediaUrl=re.compile('"adapt_hls": "(.+?)"').findall(content)[0]   # No token    
-    else:
-	    mediaUrl=re.compile('"<source src=\'([^\']*)\'').findall(content)[0]
-  elif 'wezatv' in url or 'giniko' in url: 
+  elif 'wezatv' in url or 'giniko' in url:
+    content=makeRequest(url)  
     mediaUrl=re.compile('file: "(.+?)"').findall(content)[0]  
   else:
     mediaUrl=url  
@@ -554,9 +569,18 @@ elif mode==20:
 
 elif mode==21:
   tvreplay_link(url)
- 
+
+elif mode==30:
+  my_m3u_directories()
+
+elif mode==31:
+  my_local_m3u()
+  
 elif mode==51:
-  thanh51_atf01_tv(url,name) 
+  thanh51_atf01_remotem3u_tv(url,name) 
  
+elif mode==101:
+  mysettings.openSettings()
+  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
 

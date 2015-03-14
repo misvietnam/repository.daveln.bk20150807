@@ -28,6 +28,11 @@ icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 localm3u=mysettings.getSetting('local_m3u')
 remotem3u=mysettings.getSetting('remote_m3u')
+localxml=mysettings.getSetting('local_xml')
+remotexml=mysettings.getSetting('remote_xml')
+#m3u_regex='#EXTINF.+,(.+)\s(.+?)\s'
+m3u_regex='#EXTINF.+,(.+)\s(.+?)\n'
+xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
@@ -63,8 +68,9 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  addDir('[COLOR magenta]SETUP PATH FOR M3U PLAYLIST[/COLOR]','settings',101,logos+'settings.png')
-  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')   
+  addDir('[COLOR white]SETUP PATH FOR[COLOR magenta] XML/M3U[COLOR white] PLAYLIST[/COLOR]','settings',101,logos+'settings.png')
+  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png') 
+  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI[/COLOR]','myxml',30,logos+'myxml.png')  
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')  
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -83,37 +89,66 @@ def main():
   addDir('[COLOR magenta]HTVOnline[/COLOR]',htvonline,6,logos+'htvonline.png')
   #addDir('SCTV Extras',sctv,6,logos+'sctv.png')
   #addDir('[COLOR white]Zui Live TV[/COLOR]',zuitv,6,logos+'zui.png') 
-  addDir('[COLOR lime]World and Sport TV[/COLOR]','worldtv',12,logos+'worldtv.png')
+  addDir('[COLOR lime]World TV[/COLOR]','worldtv',12,logos+'worldtv.png') #World and Sport TV
   content=makeRequest(hotChannels)
-  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
+  match=re.compile(xml_regex).findall(content)
   for name,url,thumb in match:
     addLink('[COLOR cyan]'+name+'[/COLOR]',url,logos+thumb)  
  
-def my_m3u_directories():
-  addDir('[COLOR lime]My remote m3u playlist[/COLOR]',remotem3u,51,logos+'mychannel.png')
-  addDir('[COLOR yellow]My local m3u playlist[/COLOR]','localm3u',31,logos+'mychannel.png')
-  
-def my_local_m3u():
-  try:
-    mym3u=open(localm3u, 'r')  
-    link=mym3u.read()
-    mym3u.close()
-    match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(link)
+def my_playlist_directories(name):
+  if 'XML' in name:
+    addDir('[COLOR cyan]My Remote XML Playlist[/COLOR]',remotexml,31,logos+'myxml.png')
+    addDir('[COLOR orange]My Local XML Playlist[/COLOR]','localxml',31,logos+'myxml.png')  
+  else:
+    addDir('[COLOR yellow]My Remote M3U Playlist[/COLOR]',remotem3u,31,logos+'mychannel.png')
+    addDir('[COLOR lime]My Local M3U Playlist[/COLOR]','localm3u',31,logos+'mychannel.png')
+ 
+def my_playlist_links(name):
+  if 'Local M3U' in name:
+    try:
+      mym3u=open(localm3u, 'r')  
+      link=mym3u.read()
+      mym3u.close()
+      match=re.compile(m3u_regex).findall(link)
+      for title,url in match:
+	    addLink(title,url,logos+'mychannel.png')
+    except:
+      pass 
+  elif 'Remote M3U' in name:
+    content=makeRequest(remotem3u)
+    match=re.compile(m3u_regex).findall(content)
     for title,url in match:
-	  addLink(title,url,logos+'mychannel.png')
-  except:
-    pass  
+	  addLink(title,url,logos+'mychannel.png') 	  
+  elif 'Local XML' in name:
+    try:
+      myxml=open(localxml, 'r')  
+      link=myxml.read()
+      myxml.close()
+      match=re.compile(xml_regex).findall(link)
+      for title,url,thumb in match:
+	  if len(thumb) > 0:
+	    addLink(title,url,thumb) 
+	  else:	
+	    addLink(title,url,logos+'myxml.png')	
+    except:
+      pass  	  
+  elif 'Remote XML' in name:
+    content=makeRequest(remotexml)
+    match=re.compile(xml_regex).findall(content)
+    for title,url,thumb in match:
+	  if len(thumb) <= 0:
+	    addLink(title,url,logos+'myxml.png') 
+	  else:	
+	    addLink(title,url,thumb)	  
 	  
-def thanh51_atf01_remotem3u_tv(url,name):
+def thanh51_atf01(url,name):
   content=makeRequest(url)
-  match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(content)
+  match=re.compile(m3u_regex).findall(content)
   for title,url in match:
     if 'thanh51' in name:  
 	  addLink(title,url,logos+'thanh51.png')
-    elif 'ATF01' in url:  
+    else:  
       addLink(title,url,logos+'atf01.png')
-    else:
-      addLink(title,url,logos+'mychannel.png')	
 	  
 def tv_replay(url):
   content=makeRequest(url)
@@ -122,18 +157,20 @@ def tv_replay(url):
     addDir('[COLOR lime]'+name+'[/COLOR]',tvreplay+url,21,logos+'replay.png')
 
 def worldtv():
+  content=makeRequest(giniko)
+  match=re.compile(xml_regex).findall(content)
+  for name,url,thumb in match:
+    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumb)
+'''
   content=makeRequest(wezatv)
   match=re.compile('href="http://www.wezatv.com/dooball/(.+?)" title="ดูทีวีออนไลน์ช่อง(.+?)"><img src="../(.+?)"').findall(content)
   for url,name,thumb in match:
     add_Link('[COLOR lime]'+name+'[/COLOR]',wezatv+'/dooball/'+url,wezatv+'/'+thumb)
-  content=makeRequest(giniko)
-  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
-  for name,url,thumb in match:
-    add_Link('[COLOR yellow]'+name+'[/COLOR]',url,thumb)
+'''	
     
 def vietsimpletv(url):
   content=makeRequest(url)	
-  match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
+  match=re.compile(m3u_regex).findall(content)
   for name,url in match:
     if 'htvonline' in url:
       add_Link('[COLOR cyan]'+name+'[/COLOR]',url,logos+'vietsimpletv.png')
@@ -157,7 +194,7 @@ def tvtonghop_linklist(url):
 	if 'f4m' in url:
 	  url=url.split('=')[-1]
 	  url='plugin://plugin.video.f4mTester/?url='+url
-	  addLink('[COLOR yellow]'+sname.replace(' sever','Link ')+'[COLOR lime]  (f4m)[/COLOR]',url,iconimage)
+	  addLink('[COLOR yellow]'+sname.replace(' sever','Link')+'[COLOR lime] (f4m)[/COLOR]',url,iconimage)
 	else:
 	  get_Link('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
 
@@ -207,14 +244,14 @@ def index(url):
 	    else:	  
 	      add_Link('[COLOR lime][UPPERCASE]'+name.replace('b','')+'[/UPPERCASE][/COLOR]',('%s%s' % (tv24vn, url)),thumbnail)
   elif 'vietnamtv' in url:
-    match=re.compile("<title>(.*?)<\/title>\s*<link>(.+?)<\/link>\s*<thumbnail>(.*?)<\/thumbnail>").findall(content)
+    match=re.compile(xml_regex).findall(content)
     for name,url,thumbnail in match:
       if 'Truyền Hình' in name:
         add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumbnail)
       elif 'Radio' in name:
         add_Link('[COLOR lime]'+name+'[/COLOR]',url,logos+thumbnail)        
   elif 'SCTV.m3u' in url:
-    match=re.compile('#EXTINF.+?,(.+)\s(.+)\n').findall(content)
+    match=re.compile(m3u_regex).findall(content)
     for name,url in match: 
       add_Link(name,url,logos+'sctv.png')
   elif 'htvonline' in url:
@@ -286,7 +323,7 @@ def tvtonghop():
     else: 
       addDir('[COLOR yellow]'+name.replace('SOPPING','SHOPPING')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)
   content=makeRequest(viet_tv)	
-  match=re.compile('#EXTINF.+?,(.+)\s([^"]*)\n').findall(content)
+  match=re.compile(m3u_regex).findall(content)
   for name,url in match:
     if 'radiovietnam' in url or 'VOA News' in name  or 'NHK Vietnam' in name  or 'RFI Vietnam' in name  or 'VOH' in name:  
       addLink('[COLOR orange]'+name+'  -  [COLOR lightgreen]Radio[/COLOR]',url,logos+'vietsimpletv.png') 
@@ -306,7 +343,6 @@ def videoLinks(url,name):
   elif 'TV Hải Ngoại' in name:
     match=re.compile("\"BroadcastStation\":\"haingoaitv\",\"Channel\":\"(.*?)\",\"Path\":\"([^\"]*)\",\"Thumbnail\":\"(.+?)\"").findall(content)
     for name,url,thumbnail in match:
-      print "Printing TV Hai Ngoai Thumbnail: ",thumbnail
       addLink('[COLOR yellow]'+name+'[/COLOR]',url,thumbnail)												      
   elif 'VTCPlay' in name:
     match=re.compile("\"Name\":\"(.*?)\".+?\"Thumbnail2\":\"(.+?)\".+?\"Path\":\"([^\"]*)\"").findall(content)
@@ -417,7 +453,7 @@ def getLink(name,url,iconimage):
   
 def HD():
   content=makeRequest(hotChannels)
-  match=re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(content)
+  match=re.compile(xml_regex).findall(content)
   for name,url,thumb in match:
     if 'CBSN Live HD' in name or 'NBC Sports Live Extra - Golf & New Events Live HD' in name or 'VEVO ' in name:
       add_Link('[COLOR yellow]'+name+'[/COLOR]',url,logos+thumb) 
@@ -571,13 +607,13 @@ elif mode==21:
   tvreplay_link(url)
 
 elif mode==30:
-  my_m3u_directories()
+  my_playlist_directories(name)
 
 elif mode==31:
-  my_local_m3u()
+  my_playlist_links(name)
   
 elif mode==51:
-  thanh51_atf01_remotem3u_tv(url,name) 
+  thanh51_atf01(url,name) 
  
 elif mode==101:
   mysettings.openSettings()

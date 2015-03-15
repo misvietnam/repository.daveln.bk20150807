@@ -69,8 +69,8 @@ def makeRequest(url):
  	  
 def main():
   addDir('[COLOR white]SETUP PATH FOR[COLOR magenta] XML/M3U[COLOR white] PLAYLIST[/COLOR]','settings',101,logos+'settings.png')
-  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png') 
-  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI[/COLOR]','myxml',30,logos+'myxml.png')  
+  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')  #play direct and plugin links.
+  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI[/COLOR]','myxml',30,logos+'myxml.png')	#play direct and plugin links (change "&amp;" to "&") 
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')  
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -111,14 +111,14 @@ def my_playlist_links(name):
       mym3u.close()
       match=re.compile(m3u_regex).findall(link)
       for title,url in match:
-	    addLink(title,url,logos+'mychannel.png')
+	    playLink(title,url,logos+'mychannel.png')
     except:
       pass 
   elif 'Remote M3U' in name:
     content=makeRequest(remotem3u)
     match=re.compile(m3u_regex).findall(content)
     for title,url in match:
-	  addLink(title,url,logos+'mychannel.png') 	  
+	  playLink(title,url,logos+'mychannel.png') 	  
   elif 'Local XML' in name:
     try:
       myxml=open(localxml, 'r')  
@@ -127,9 +127,9 @@ def my_playlist_links(name):
       match=re.compile(xml_regex).findall(link)
       for title,url,thumb in match:
 	  if len(thumb) > 0:
-	    addLink(title,url,thumb) 
+	    playLink(title,url,thumb) 
 	  else:	
-	    addLink(title,url,logos+'myxml.png')	
+	    playLink(title,url,logos+'myxml.png')	
     except:
       pass  	  
   elif 'Remote XML' in name:
@@ -137,10 +137,10 @@ def my_playlist_links(name):
     match=re.compile(xml_regex).findall(content)
     for title,url,thumb in match:
 	  if len(thumb) <= 0:
-	    addLink(title,url,logos+'myxml.png') 
+	    playLink(title,url,logos+'myxml.png') 
 	  else:	
-	    addLink(title,url,thumb)	  
-	  
+	    playLink(title,url,thumb)	  
+ 
 def thanh51_atf01(url,name):
   content=makeRequest(url)
   match=re.compile(m3u_regex).findall(content)
@@ -450,7 +450,23 @@ def getLink(name,url,iconimage):
   liz.setInfo( type="Video", infoLabels={ "Title": name } )
   liz.setProperty('IsPlayable', 'true')  
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
-  
+
+def playLink(name,url,iconimage):
+  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=32"+"&iconimage="+urllib.quote_plus(iconimage)  
+  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+  liz.setInfo( type="Video", infoLabels={ "Title": name } )
+  liz.setProperty('IsPlayable', 'true')  
+  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
+
+def play_my_playlists(url):
+  if 'plugin://plugin' in url:
+    mediaUrl=url.replace('&amp;','&')
+  else:
+    mediaUrl=url  
+  item=xbmcgui.ListItem(path=mediaUrl)
+  xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
+  return
+   
 def HD():
   content=makeRequest(hotChannels)
   match=re.compile(xml_regex).findall(content)
@@ -611,6 +627,9 @@ elif mode==30:
 
 elif mode==31:
   my_playlist_links(name)
+
+elif mode==32:
+  play_my_playlists(url)
   
 elif mode==51:
   thanh51_atf01(url,name) 

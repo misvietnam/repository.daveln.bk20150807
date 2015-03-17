@@ -70,7 +70,7 @@ def M3UtoXML():
       m3u_list=open(m3u_file, 'r')  
       link=m3u_list.read()
       m3u_list.close()
-      match=re.compile('#EXTINF.+,(.+)\s(.+?)\n').findall(link) 
+      match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(link) 
       for title, url in match:
         print >> open(converted_xml, 'a+'), ('<item>' + '\n' + '<title>' + title + '</title>' + '\n' + '<link>' + url + '</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>')
       print >> open(converted_xml, 'a+'), ('\n' + '</stream>' + '\n\n\n\n')	

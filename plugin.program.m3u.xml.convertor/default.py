@@ -53,6 +53,7 @@ def XMLtoM3U():
       xml_list.close()
       match=re.compile('<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>').findall(link) 
       for title, url, thumbnail in match:
+        url=url.replace('&amp;','&')
         print >> open(converted_m3u, 'a+'), ('#EXTINF:0,' + title + '\n' + url)
       print >> open(converted_m3u, 'a+'), '\n\n\n\n'
       ok = xbmcgui.Dialog().ok('[COLOR orange]XML to M3U Convertor[/COLOR]', 'Done.', '', 'Congratulations!')
@@ -72,6 +73,7 @@ def M3UtoXML():
       m3u_list.close()
       match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(link) 
       for title, url in match:
+        url=url.replace('&','&amp;')	  
         print >> open(converted_xml, 'a+'), ('<item>' + '\n' + '<title>' + title + '</title>' + '\n' + '<link>' + url + '</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>')
       print >> open(converted_xml, 'a+'), ('\n' + '</stream>' + '\n\n\n\n')	
       ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Convertor[/COLOR]', 'Done.', '', 'Congratulations!') 

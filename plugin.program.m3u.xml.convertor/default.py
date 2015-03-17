@@ -34,7 +34,7 @@ m3u_file=mysettings.getSetting('m3u_file')
 thumb=mysettings.getSetting('thumb')
 
 def main():
-  addDir('[COLOR magenta][B]FYI:[/B]  [COLOR yellow]Newly converted playlists are located in this add-on\'s folder.[/COLOR]','',None,logos+'note.png')
+  addDir('[COLOR magenta][B]FYI:[/B]  [COLOR yellow]Newly converted files are located in this add-on\'s folder.[/COLOR]','',None,logos+'note.png')
   addDir('[COLOR orange]XML to M3U Convertor[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
   addDir('[COLOR cyan]M3U to XML Convertor[/COLOR]','M3U2XML','M3UtoXML',icon)
   
@@ -47,7 +47,7 @@ def XMLtoM3U():
         os.remove(converted_m3u)
       else: 
 	    pass
-      print >> open(converted_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:0,[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%d-%m-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
+      print >> open(converted_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:0,[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%m-%d-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
       xml_list=open(xml_file, 'r')  
       link=xml_list.read()
       xml_list.close()

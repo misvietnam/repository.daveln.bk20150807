@@ -67,7 +67,7 @@ def M3UtoXML():
         os.remove(converted_xml)
       else: 
 	    pass
-      print >> open(converted_xml, 'a+'), ('<?xml version="1.0" encoding="utf-8" standalone="yes"?>' + '\n\n' + '<stream>' + '\n\n' + '<item>' + '\n' + '<title>[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%d-%m-%Y") + ' [COLOR lime]****[/COLOR]</title>' + '\n' + '<link>http://www.youtube.com</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>' + '\n')		
+      print >> open(converted_xml, 'a+'), ('<?xml version="1.0" encoding="utf-8" standalone="yes"?>' + '\n\n' + '<stream>' + '\n\n' + '<item>' + '\n' + '<title>[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%m-%d-%Y") + ' [COLOR lime]****[/COLOR]</title>' + '\n' + '<link>http://www.youtube.com</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>' + '\n')		
       m3u_list=open(m3u_file, 'r')  
       link=m3u_list.read()
       m3u_list.close()

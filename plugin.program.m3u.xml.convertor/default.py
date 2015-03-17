@@ -34,7 +34,7 @@ m3u_file=mysettings.getSetting('m3u_file')
 thumb=mysettings.getSetting('thumb')
 
 def main():
-  addDir('[COLOR magenta][B]FYI:[/B]  [COLOR yellow]Newly converted files are located in this add-on\'s folder.[/COLOR]','',None,logos+'note.png')
+  addDir('[COLOR magenta][B]FYI:[/B]  [COLOR yellow]Newly converted playlists are located in this add-on\'s folder.[/COLOR]','',None,logos+'note.png')
   addDir('[COLOR orange]XML to M3U Convertor[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
   addDir('[COLOR cyan]M3U to XML Convertor[/COLOR]','M3U2XML','M3UtoXML',icon)
   

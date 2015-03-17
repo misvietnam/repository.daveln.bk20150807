@@ -55,7 +55,7 @@ def XMLtoM3U():
       for title, url, thumbnail in match:
         print >> open(converted_m3u, 'a+'), ('#EXTINF:0,' + title + '\n' + url)
       print >> open(converted_m3u, 'a+'), '\n\n\n\n'
-      ok = xbmcgui.Dialog().ok('[COLOR orange]XML to M3U Convertor[/COLOR]', 'Congratulation!', '', 'Done.')
+      ok = xbmcgui.Dialog().ok('[COLOR orange]XML to M3U Convertor[/COLOR]', 'Done.', '', 'Congratulations!')
     except:
       pass	
 	
@@ -74,7 +74,7 @@ def M3UtoXML():
       for title, url in match:
         print >> open(converted_xml, 'a+'), ('<item>' + '\n' + '<title>' + title + '</title>' + '\n' + '<link>' + url + '</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>')
       print >> open(converted_xml, 'a+'), ('\n' + '</stream>' + '\n\n\n\n')	
-      ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Convertor[/COLOR]', 'Congratulation!', '', 'Done.') 
+      ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Convertor[/COLOR]', 'Done.', '', 'Congratulations!') 
     except:
       pass
   else:	

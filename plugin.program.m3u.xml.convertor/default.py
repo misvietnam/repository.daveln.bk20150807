@@ -21,9 +21,9 @@ import urllib,urllib2,re,os,time
 import xbmcplugin,xbmcgui,xbmcaddon
 from datetime import datetime
 
-mysettings = xbmcaddon.Addon(id='plugin.program.m3u.xml.convertor')
-profile = mysettings.getAddonInfo('profile')
-home = mysettings.getAddonInfo('path')
+mysettings=xbmcaddon.Addon(id='plugin.program.m3u.xml.convertor')
+profile=mysettings.getAddonInfo('profile')
+home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))

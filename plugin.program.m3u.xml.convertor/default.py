@@ -17,9 +17,8 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>  
 '''                                                                           
 
-import urllib,urllib2,re,os,time
+import urllib,urllib2,re,os,sys,time
 import xbmcplugin,xbmcgui,xbmcaddon
-from datetime import datetime
 
 mysettings=xbmcaddon.Addon(id='plugin.program.m3u.xml.convertor')
 profile=mysettings.getAddonInfo('profile')
@@ -27,61 +26,53 @@ home=mysettings.getAddonInfo('path')
 fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
-converted_xml=xbmc.translatePath(os.path.join(home, 'ConvertedXML.xml'))
-converted_m3u=xbmc.translatePath(os.path.join(home, 'ConvertedM3U.m3u'))
 xml_file=mysettings.getSetting('xml_file')
 m3u_file=mysettings.getSetting('m3u_file')
 thumb=mysettings.getSetting('thumb')
+dest=mysettings.getSetting('dest')
+convert_to_xml=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S")+'_'+m3u_file.split('/')[-1].split('\\')[-1].replace('.m3u','.xml'))))
+convert_to_m3u=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S")+'_'+xml_file.split('/')[-1].split('\\')[-1].replace('.xml','.m3u'))))
 
 def main():
-  addDir('[COLOR magenta][B]FYI:[/B]  [COLOR yellow]Newly converted playlists are located in this add-on\'s folder.[/COLOR]','',None,logos+'note.png')
-  addDir('[COLOR orange]XML to M3U Convertor[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
+  addDir('[COLOR yellow]XML to M3U Convertor[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
   addDir('[COLOR cyan]M3U to XML Convertor[/COLOR]','M3U2XML','M3UtoXML',icon)
   
-def XMLtoM3U():
+def XML_to_M3U():
   if len(xml_file) <= 0:
     mysettings.openSettings()
   else:
     try:
-      if os.path.exists(converted_m3u):
-        os.remove(converted_m3u)
-      else: 
-	    pass
-      print >> open(converted_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:0,[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%m-%d-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
+      print >> open(convert_to_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:0,[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%m-%d-%Y AT %H:%M:%S") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
       xml_list=open(xml_file, 'r')  
       link=xml_list.read()
       xml_list.close()
       match=re.compile('<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>').findall(link) 
       for title, url, thumbnail in match:
         url=url.replace('&amp;','&')
-        print >> open(converted_m3u, 'a+'), ('#EXTINF:0,' + title + '\n' + url)
-      print >> open(converted_m3u, 'a+'), '\n\n\n\n'
-      ok = xbmcgui.Dialog().ok('[COLOR orange]XML to M3U Convertor[/COLOR]', 'Done.', '', 'Congratulations!')
-    except:
-      pass	
-	
-def M3UtoXML():
+        print >> open(convert_to_m3u, 'a+'), ('#EXTINF:0,' + title + '\n' + url)
+      print >> open(convert_to_m3u, 'a+'), '\n\n\n\n'
+      ok = xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Convertor[/COLOR]', 'Done.', '', 'Congratulations!')
+    except:	
+      ok = xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Convertor[/COLOR]', 'Destination folder is either unwritable or empty.', 'Please choose a different location.', 'Then try again.')
+  
+def M3U_to_XML():
   if len(m3u_file) > 0:
-    try:
-      if os.path.exists(converted_xml):
-        os.remove(converted_xml)
-      else: 
-	    pass
-      print >> open(converted_xml, 'a+'), ('<?xml version="1.0" encoding="utf-8" standalone="yes"?>' + '\n\n' + '<stream>' + '\n\n' + '<item>' + '\n' + '<title>[COLOR lime]****[COLOR yellow] CREATED ON ' + time.strftime("%m-%d-%Y") + ' [COLOR lime]****[/COLOR]</title>' + '\n' + '<link>http://www.youtube.com</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>' + '\n')		
+    try: 	
+      print >> open(convert_to_xml, 'a+'), ('<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n\n<stream>\n\n<item>\n<title>[COLOR lime]****[COLOR yellow] ' + time.strftime('CREATED ON %m-%d-%Y AT %H:%M:%S') + ' [COLOR lime]****[/COLOR]</title>\n<link>http://www.youtube.com</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>\n')		
       m3u_list=open(m3u_file, 'r')  
       link=m3u_list.read()
       m3u_list.close()
       match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(link) 
       for title, url in match:
         url=url.replace('&','&amp;')	  
-        print >> open(converted_xml, 'a+'), ('<item>' + '\n' + '<title>' + title + '</title>' + '\n' + '<link>' + url + '</link>' + '\n' + '<thumbnail>' + thumb + '</thumbnail>' + '\n' + '</item>')
-      print >> open(converted_xml, 'a+'), ('\n' + '</stream>' + '\n\n\n\n')	
+        print >> open(convert_to_xml, 'a+'), ('<item>\n<title>' + title + '</title>\n<link>' + url + '</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>')
+      print >> open(convert_to_xml, 'a+'), '\n</stream>\n\n\n\n'	
       ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Convertor[/COLOR]', 'Done.', '', 'Congratulations!') 
-    except:
-      pass
+    except:	
+      ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Convertor[/COLOR]', 'Không thể viết vào được hoặc thư mục còn trống.', 'Vui lòng chọn thư mục khác.', 'Thử lại.')
   else:	
-    mysettings.openSettings()  	  
-
+    mysettings.openSettings()
+  
 def get_params():
   param=[]
   paramstring=sys.argv[2]
@@ -146,10 +137,10 @@ if mode==None or url==None or len(url)<1:
   main()
   
 elif mode=='XMLtoM3U':
-  XMLtoM3U() 
+  XML_to_M3U() 
 
 elif mode=='M3UtoXML':
-  M3UtoXML() 
+  M3U_to_XML() 
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
 

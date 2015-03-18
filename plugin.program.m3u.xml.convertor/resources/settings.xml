@@ -1,7 +1,8 @@
 <settings>
-  <category label="Add File Path">
-    <setting label="Path to XML File" type="file"  id="xml_file" default="" /> 
-    <setting label="Path to M3U File" type="file"  id="m3u_file" default="" /> 	
-    <setting label="URL to XML thumbnail" type="text"  id="thumb" default="" /> 	
+  <category label="Add Path">
+    <setting label="Path to XML Source File" type="file"  id="xml_file" default="" /> 
+    <setting label="Path to M3U Source File" type="file"  id="m3u_file" default="" /> 	
+    <setting label="URL to Thumbnail for XML" type="text"  id="thumb" default="" /> 
+    <setting label="Path to Destination Folder" type="folder"  id="dest" default="" /> 		
   </category>
 </settings>

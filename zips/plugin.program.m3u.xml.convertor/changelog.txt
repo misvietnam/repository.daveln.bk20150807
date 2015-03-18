@@ -1,2 +1,7 @@
-Ver 0.0.1
+v 0.0.2
+Added Destination folder.
+Added All converted playlists can be saved by 
+their own names with creation date and time.
+
+v 0.0.1
 Initial release

@@ -1,8 +1,8 @@
 <settings>
   <category label="Add M3U-XML">
-    <setting label="Add URL to Remote M3U Playlist" type="text"  id="remote_m3u" default="" />
+    <setting label="Add URL to Online M3U Playlist" type="text"  id="online_m3u" default="" />
     <setting label="Add Path to Local M3U Playlist" type="file"  id="local_m3u" default="" /> 
-    <setting label="Đường dẫn đến URL của XML Playlist" type="text"  id="remote_xml" default="" />
-    <setting label="Đường dẫn đến XML nằm trên máy" type="file"  id="local_xml" default="" /> 	
+    <setting label="Đường dẫn đến URL của XML" type="text"  id="online_xml" default="" />
+    <setting label="Đường dẫn đến XML trên máy" type="file"  id="local_xml" default="" /> 	
   </category>
 </settings>

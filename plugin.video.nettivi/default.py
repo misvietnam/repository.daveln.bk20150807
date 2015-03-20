@@ -27,9 +27,9 @@ fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 localm3u=mysettings.getSetting('local_m3u')
-remotem3u=mysettings.getSetting('remote_m3u')
+onlinem3u=mysettings.getSetting('online_m3u')
 localxml=mysettings.getSetting('local_xml')
-remotexml=mysettings.getSetting('remote_xml')
+onlinexml=mysettings.getSetting('online_xml')
 #m3u_regex='#EXTINF.+,(.+)\s(.+?)\s'
 m3u_regex='#EXTINF.+,(.+)\s(.+?)\n'
 xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
@@ -68,9 +68,8 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  addDir('[COLOR white]SETUP PATH FOR[COLOR magenta] XML/M3U[COLOR white] PLAYLIST[/COLOR]','settings',101,logos+'settings.png')
   addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')  #play direct and plugin links.
-  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI[/COLOR]','myxml',30,logos+'myxml.png')	#play direct and plugin links (change "&amp;" to "&") 
+  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI [COLOR red][B] (NO REGEX)[/B][/COLOR]','myxml',30,logos+'myxml.png')	#play direct and plugin links (change "&amp;" to "&") 
   addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')  
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -97,50 +96,62 @@ def main():
  
 def my_playlist_directories(name):
   if 'XML' in name:
-    addDir('[COLOR cyan]My Remote XML Playlist[/COLOR]',remotexml,31,logos+'myxml.png')
+    addDir('[COLOR cyan]My Online XML Playlist[/COLOR]','onlinexml',31,logos+'myxml.png')
     addDir('[COLOR orange]My Local XML Playlist[/COLOR]','localxml',31,logos+'myxml.png')  
   else:
-    addDir('[COLOR yellow]My Remote M3U Playlist[/COLOR]',remotem3u,31,logos+'mychannel.png')
+    addDir('[COLOR yellow]My Online M3U Playlist[/COLOR]','onlinem3u',31,logos+'mychannel.png')
     addDir('[COLOR lime]My Local M3U Playlist[/COLOR]','localm3u',31,logos+'mychannel.png')
  
 def my_playlist_links(name):
   if 'Local M3U' in name:
-    try:
-      mym3u=open(localm3u, 'r')  
-      link=mym3u.read()
-      mym3u.close()
-      match=re.compile(m3u_regex).findall(link)
+    if len(localm3u) <= 0:
+      mysettings.openSettings()
+    else:  
+      try:
+        mym3u=open(localm3u, 'r')  
+        link=mym3u.read()
+        mym3u.close()
+        match=re.compile(m3u_regex).findall(link)
+        for title,url in match:
+	      playLink(title,url,logos+'mychannel.png')
+      except:
+        pass 
+  elif 'Online M3U' in name:
+    if len(onlinem3u) > 0: 
+      content=makeRequest(onlinem3u)
+      match=re.compile(m3u_regex).findall(content)
       for title,url in match:
 	    playLink(title,url,logos+'mychannel.png')
-    except:
-      pass 
-  elif 'Remote M3U' in name:
-    content=makeRequest(remotem3u)
-    match=re.compile(m3u_regex).findall(content)
-    for title,url in match:
-	  playLink(title,url,logos+'mychannel.png') 	  
+    else:		
+      mysettings.openSettings()			
   elif 'Local XML' in name:
-    try:
-      myxml=open(localxml, 'r')  
-      link=myxml.read()
-      myxml.close()
-      match=re.compile(xml_regex).findall(link)
+    if len(localxml) <= 0:
+      mysettings.openSettings()
+    else:     
+      try:
+        myxml=open(localxml, 'r')  
+        link=myxml.read()
+        myxml.close()
+        match=re.compile(xml_regex).findall(link)
+        for title,url,thumb in match:
+	      if len(thumb) > 0:
+	        playLink(title,url,thumb) 
+	      else:	
+	        playLink(title,url,logos+'myxml.png')	
+      except:
+        pass  	  
+  elif 'Online XML' in name:
+    if len(onlinexml) > 0:	
+      content=makeRequest(onlinexml)
+      match=re.compile(xml_regex).findall(content)
       for title,url,thumb in match:
-	  if len(thumb) > 0:
-	    playLink(title,url,thumb) 
-	  else:	
-	    playLink(title,url,logos+'myxml.png')	
-    except:
-      pass  	  
-  elif 'Remote XML' in name:
-    content=makeRequest(remotexml)
-    match=re.compile(xml_regex).findall(content)
-    for title,url,thumb in match:
-	  if len(thumb) <= 0:
-	    playLink(title,url,logos+'myxml.png') 
-	  else:	
-	    playLink(title,url,thumb)	  
- 
+	    if len(thumb) <= 0:
+	      playLink(title,url,logos+'myxml.png') 
+	    else:	
+	      playLink(title,url,thumb)
+    else:		  
+      mysettings.openSettings()	
+		  	  
 def thanh51_atf01(url,name):
   content=makeRequest(url)
   match=re.compile(m3u_regex).findall(content)
@@ -633,9 +644,6 @@ elif mode==32:
   
 elif mode==51:
   thanh51_atf01(url,name) 
- 
-elif mode==101:
-  mysettings.openSettings()
-  
+   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
 

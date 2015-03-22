@@ -13,8 +13,8 @@
         <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Convertor</summary>
-    <description>M3U XML Playlist Convertor</description>		
+    <summary>Converter</summary>
+    <description>M3U XML Playlist Converter</description>		
     <platform>all</platform>     
   </extension>
 </addon>

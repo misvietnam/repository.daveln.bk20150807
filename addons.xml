@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.program.m3u.xml.converter"
        name="*[COLOR yellow]M3U [COLOR cyan]XML [COLOR lime]Converter[/COLOR]"
-       version="0.0.1"
+       version="0.0.2"
        provider-name="DaveLN">
   <requires>
     <import addon="xbmc.python" version="2.1.0" optional="true" />

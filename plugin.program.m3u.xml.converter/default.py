@@ -30,6 +30,8 @@ xml_file=mysettings.getSetting('xml_file')
 m3u_file=mysettings.getSetting('m3u_file')
 thumb=mysettings.getSetting('thumb')
 dest=mysettings.getSetting('dest')
+m3u_regex='#EXTINF.+,(.+)\s(.+?)\n'
+xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 convert_m3u_to_xml=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+m3u_file.split('/')[-1].split('\\')[-1].replace('.m3u','.xml').replace('.M3U','.xml'))))
 convert_xml_to_m3u=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+xml_file.split('/')[-1].split('\\')[-1].replace('.xml','.m3u').replace('.XML','.m3u'))))
 
@@ -42,14 +44,14 @@ def XML_to_M3U():
     mysettings.openSettings()
   else:
     try:
-      print >> open(convert_xml_to_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:0,[COLOR lime]****[COLOR cyan] CREATED ON ' + time.strftime("[COLOR yellow]%m-%d-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
+      print >> open(convert_xml_to_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:-1,[COLOR lime]****[COLOR cyan] CREATED ON ' + time.strftime("[COLOR yellow]%m-%d-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
       xml_list=open(xml_file, 'r')  
       link=xml_list.read()
       xml_list.close()
-      match=re.compile('<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>').findall(link) 
+      match=re.compile(xml_regex).findall(link) 
       for title, url, thumbnail in match:
-        url=url.replace('&amp;','&')
-        print >> open(convert_xml_to_m3u, 'a+'), ('#EXTINF:0,' + title + '\n' + url)
+        url=url.replace('&amp;','&').replace('rtmp://$OPT:rtmp-raw=','')
+        print >> open(convert_xml_to_m3u, 'a+'), ('#EXTINF:-1,' + title + '\n' + url)
       print >> open(convert_xml_to_m3u, 'a+'), '\n\n\n\n'
       ok = xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Done.', '', 'Congratulations!')
     except:	
@@ -62,9 +64,9 @@ def M3U_to_XML():
       m3u_list=open(m3u_file, 'r')  
       link=m3u_list.read()
       m3u_list.close()
-      match=re.compile('#EXTINF.+,(.+)\s(.+?)\s').findall(link) 
+      match=re.compile(m3u_regex).findall(link) 
       for title, url in match:
-        url=url.replace('&','&amp;')	  
+        url=url.replace('&','&amp;').replace('rtmp://$OPT:rtmp-raw=','')	  
         print >> open(convert_m3u_to_xml, 'a+'), ('<item>\n<title>' + title + '</title>\n<link>' + url + '</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>')
       print >> open(convert_m3u_to_xml, 'a+'), '\n</stream>\n\n\n\n'	
       ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Đã xong.', '', 'Chúc mừng!') 

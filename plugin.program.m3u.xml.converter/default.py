@@ -30,18 +30,19 @@ xml_file=mysettings.getSetting('xml_file')
 m3u_file=mysettings.getSetting('m3u_file')
 thumb=mysettings.getSetting('thumb')
 dest=mysettings.getSetting('dest')
-m3u_regex='#EXTINF.+,(.+)\s(.+?)\n'
+m3u_regex='#.+,(.+?)\n(.+?)\n'
 xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 convert_m3u_to_xml=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+m3u_file.split('/')[-1].split('\\')[-1].replace('.m3u','.xml').replace('.M3U','.xml'))))
 convert_xml_to_m3u=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+xml_file.split('/')[-1].split('\\')[-1].replace('.xml','.m3u').replace('.XML','.m3u'))))
 
 def main():
-  addDir('[COLOR yellow]XML to M3U Converter[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
-  addDir('[COLOR cyan]M3U to XML Converter[/COLOR]','M3U2XML','M3UtoXML',icon)
+  addDir('[COLOR yellow]XML to M3U Converter[COLOR magenta]  *****  [COLOR white]NO REGEX[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
+  addDir('[COLOR cyan]M3U to XML Converter[COLOR magenta]  *****  [COLOR white]NO REGEX[/COLOR]','M3U2XML','M3UtoXML',icon)
   
 def XML_to_M3U():
   if len(xml_file) <= 0:
     mysettings.openSettings()
+    main()	
   else:
     try:
       print >> open(convert_xml_to_m3u, 'a+'), ('#EXTM3U' + '\n\n' + '#EXTINF:-1,[COLOR lime]****[COLOR cyan] CREATED ON ' + time.strftime("[COLOR yellow]%m-%d-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n')	
@@ -53,14 +54,16 @@ def XML_to_M3U():
         url=url.replace('&amp;','&').replace('rtmp://$OPT:rtmp-raw=','')
         print >> open(convert_xml_to_m3u, 'a+'), ('#EXTINF:-1,' + title + '\n' + url)
       print >> open(convert_xml_to_m3u, 'a+'), '\n\n\n\n'
-      ok = xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Done.', '', 'Congratulations!')
+      xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Done.', '', 'Congratulations!')
+      main()
     except:	
-      ok = xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Please choose a different path to destination folder.', '', 'Then try again.')
+      xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Please choose a different path to destination folder.', '', 'Then try again.')
+      main()
   
 def M3U_to_XML():
   if len(m3u_file) > 0:
     try: 	
-      print >> open(convert_m3u_to_xml, 'a+'), ('<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n\n<stream>\n\n<item>\n<title>[COLOR lime]****[COLOR cyan] ' + time.strftime('CREATED ON [COLOR yellow]%m-%d-%Y') + ' [COLOR lime]****[/COLOR]</title>\n<link>http://www.youtube.com</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>\n')		
+      print >> open(convert_m3u_to_xml, 'a+'), ('<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n\n<stream>\n\n<item>\n<title>[COLOR lime]****[COLOR cyan] ' + time.strftime('CREATED ON [COLOR yellow]%m-%d-%Y [COLOR lime]****[/COLOR]</title>\n<link>http://www.youtube.com</link>\n<thumbnail>') + thumb + '</thumbnail>\n</item>\n')		
       m3u_list=open(m3u_file, 'r')  
       link=m3u_list.read()
       m3u_list.close()
@@ -69,11 +72,14 @@ def M3U_to_XML():
         url=url.replace('&','&amp;').replace('rtmp://$OPT:rtmp-raw=','')	  
         print >> open(convert_m3u_to_xml, 'a+'), ('<item>\n<title>' + title + '</title>\n<link>' + url + '</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>')
       print >> open(convert_m3u_to_xml, 'a+'), '\n</stream>\n\n\n\n'	
-      ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Đã xong.', '', 'Chúc mừng!') 
+      xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Đã xong.', '', 'Chúc mừng!')
+      main()	  
     except:	
-      ok = xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Vui lòng chọn lại đường dẫn khác đến thư mục.', '', 'Thử lại.')
+      xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Vui lòng chọn lại đường dẫn khác đến thư mục.', '', 'Thử lại.')
+      main()
   else:	
     mysettings.openSettings()
+    main()
   
 def get_params():
   param=[]

@@ -1,3 +1,6 @@
+v 0.0.3
+Updated code
+
 v 0.0.2
 - Changed \s to \n at the end of m3u_regex to scrape the whole line of url link.
 - Changed #EXTINF:0 to #EXTINF:-1

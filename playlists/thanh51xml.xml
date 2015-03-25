@@ -1,5 +1,73 @@
 ﻿<?xml version="1.0"?>
 <channels>
+
+<channel>
+<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]REGEX-HTVonline[/I][/COLOR][/COLOR]</name>
+<thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
+<items>
+
+
+<item>
+<title>VTV3 HD</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name> 
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv3-hd-3133356E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>VTV6 HD</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name> 
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtv6-hd-3133366E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>VTC3 HD</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name> 
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/vtc3-hd-3133376E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>HTV2 HD</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name> 
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv2-31336E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>HTV7 HD</title>
+<link>$doregex[m3u8] live=1 timeout=60</link>
+<regex>
+<name>m3u8</name> 
+<expres>file: "(.+?)"</expres>
+<page>http://www.htvonline.com.vn/livetv/htv7-34336E61.html</page>
+<referer></referer>
+</regex>
+<thumbnail></thumbnail>
+</item>
+</channel>
+
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]VTVPlay[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>

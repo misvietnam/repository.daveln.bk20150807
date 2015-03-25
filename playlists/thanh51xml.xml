@@ -822,7 +822,7 @@
 <thumbnail>http://img.htvonline.com.vn/livetv/18052014/star-world-hd--edited_72251400346181.png</thumbnail>
 </item>   
 
-<channels>
+</channel>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]SCTV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -2036,7 +2036,7 @@
 
 
 
-<channels>
+</channel>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]ACCESSASIA TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -2103,7 +2103,7 @@
 <thumbnail>http://langsongviet.com/fta4vnForum/upload/images/ads/accessasiatv/DULICH.png</thumbnail>
 </item>
 
-<channels>
+</channel>
 <channel>
 <name>[COLOR FF00FF00]->>TRUYEN HINH VIET NAM[COLOR blue] - HAI NGOAI TV[/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -2594,6 +2594,9 @@
 <link>rtsp://ewns-hls-b-stream.hexaglobe.net/rtpeuronewslive/en_vidan750_rtp.sdp</link>
 <thumbnail></thumbnail>
 </item>
+
+</channel>
+</channels>
 
 
 

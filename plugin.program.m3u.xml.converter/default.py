@@ -36,8 +36,8 @@ convert_m3u_to_xml=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_
 convert_xml_to_m3u=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+xml_file.split('/')[-1].split('\\')[-1].replace('.xml','.m3u').replace('.XML','.m3u'))))
 
 def main():
-  addDir('[COLOR yellow]XML to M3U Converter[COLOR magenta]  *****  [COLOR white]NO REGEX[/COLOR]','XML2M3U','XMLtoM3U',logos+'icon.png')
-  addDir('[COLOR cyan]M3U to XML Converter[COLOR magenta]  *****  [COLOR white]NO REGEX[/COLOR]','M3U2XML','M3UtoXML',icon)
+  addDir('[COLOR yellow]XML to M3U Converter[COLOR magenta]  *****  [COLOR white]NO REGEX[/COLOR]','XML2M3U',1,logos+'icon.png')
+  addDir('[COLOR cyan]Đổi M3U Sang XML[COLOR magenta]  *****  [COLOR white]KHÔNG REGEX[/COLOR]','M3U2XML',2,icon)
   
 def XML_to_M3U():
   if len(xml_file) <= 0:
@@ -54,7 +54,7 @@ def XML_to_M3U():
         url=url.replace('&amp;','&').replace('rtmp://$OPT:rtmp-raw=','')
         print >> open(convert_xml_to_m3u, 'a+'), ('#EXTINF:-1,' + title + '\n' + url)
       print >> open(convert_xml_to_m3u, 'a+'), '\n\n\n\n'
-      xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Done.', '', 'Congratulations!')
+      xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Done.')
       main()
     except:	
       xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Please choose a different path to destination folder.', '', 'Then try again.')
@@ -72,10 +72,10 @@ def M3U_to_XML():
         url=url.replace('&','&amp;').replace('rtmp://$OPT:rtmp-raw=','')	  
         print >> open(convert_m3u_to_xml, 'a+'), ('<item>\n<title>' + title + '</title>\n<link>' + url + '</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>')
       print >> open(convert_m3u_to_xml, 'a+'), '\n</stream>\n\n\n\n'	
-      xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Đã xong.', '', 'Chúc mừng!')
+      xbmcgui.Dialog().ok('[COLOR cyan]Đổi M3U Sang XML[/COLOR]', 'Xong.')
       main()	  
     except:	
-      xbmcgui.Dialog().ok('[COLOR cyan]M3U to XML Converter[/COLOR]', 'Vui lòng chọn lại đường dẫn khác đến thư mục.', '', 'Thử lại.')
+      xbmcgui.Dialog().ok('[COLOR cyan]Đổi M3U Sang XML[/COLOR]', 'Vui lòng chọn lại đường dẫn khác đến thư mục.', '', 'Thử lại.')
       main()
   else:	
     mysettings.openSettings()
@@ -106,13 +106,6 @@ def addDir(name,url,mode,iconimage):
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
   return ok
 
-def addLink(name,url,iconimage):
-  u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=1"  
-  liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-  liz.setInfo( type="Video", infoLabels={ "Title": name } )
-  liz.setProperty('IsPlayable', 'true')  
-  ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
-
 params=get_params()
 url=None
 name=None
@@ -128,7 +121,7 @@ try:
 except:
   pass
 try:
-  mode=(params["mode"])
+  mode=int(params["mode"])
 except:
   pass
 try:
@@ -144,10 +137,10 @@ print "iconimage: "+str(iconimage)
 if mode==None or url==None or len(url)<1:
   main()
   
-elif mode=='XMLtoM3U':
+elif mode==1:
   XML_to_M3U() 
 
-elif mode=='M3UtoXML':
+elif mode==2:
   M3U_to_XML() 
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

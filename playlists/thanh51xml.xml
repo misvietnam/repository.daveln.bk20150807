@@ -7,17 +7,6 @@
 <items>
 
 <item>
-<title>HTV Thể Thao HD</title>
-<link>$doregex[m3u8] live=1 timeout=60</link>
-<regex>
-<name>m3u8</name>
-<expres>var iosUrl = "(.+?)"</expres>
-<page>http://hplus.com.vn/vi/content/detail/htv-the-thao-hd-4009.html</page>
-<referer></referer>
-</regex>
-<thumbnail>http://img.hplus.com.vn/355x200/banner/2015/03/20/831936-HTV-the-thao-HD.png?.png</thumbnail>
-</item>
-<item>
 <title>HTV2 HD</title>
 <link>$doregex[m3u8] live=1 timeout=60</link>
 <regex>

@@ -34,6 +34,8 @@ onlinexml=mysettings.getSetting('online_xml')
 m3u_regex='#.+,(.+?)\n(.+?)\n'
 xml_channel_name='<channel>\s*<name>(.+?)</name>'
 xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
+xml_regex_reg_1S='<title>(.*?)</title>(?s).*?<page>(.*?)</page>(?s).*?<thumbnail>(.*?)</thumbnail>'
+xml_regex_reg_2L='<title>(.*?)</title>\s*<link>.*?</link>\s*<regex>\s*<name>.*?</name>\s*<expres>.*?</expres>\s*<page>(.*?)</page>\s*<referer>.*?</referer>\s*</regex>\s*<thumbnail>(.*?)</thumbnail>'
 hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
 viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
 sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
@@ -42,7 +44,7 @@ haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playl
 vietnamtv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/vietnamtv.xml'
 giniko='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/giniko.xml'
 thanh51='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.m3u'
-thanh51xml='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51xml.xml'
+thanh51xml='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.xml'
 ATF01='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ATF01.m3u'
 #htvonline='http://www.htvonline.com.vn/livetv'
 hplus='http://hplus.com.vn/vi/categories/live-tv'
@@ -194,7 +196,7 @@ def thanh51_xml(url):
   if '<channel>' in content:
     match=re.compile(xml_channel_name).findall(content)
     for sname in match:
-	  addDir(sname,url,62,logos+'thanh51xml.png')
+	  addDir(sname,url,62,logos+'thanh51xml.png')   	
   else:
 	match=re.compile(xml_regex).findall(content)
 	for title,url,thumb in match:
@@ -209,12 +211,21 @@ def thanh51_xml_channel(url,name):
     content=makeRequest(thanh51xml)
   match=re.compile('<channel>\s*<name>'+name+'</name>((?s).+?)</channel>').findall(content)	
   for vlink in match:
-    final_link=re.compile(xml_regex).findall(vlink)
-    for title,url,thumb in final_link:
-      if len(thumb) <= 0:
-	    playLink(title,url,logos+'thanh51xml.png') 
-      else:	
-	    playLink(title,url,thumb)  
+    if '<page>' in	vlink:
+	  #match=re.compile(xml_regex_reg_1S).findall(vlink)
+	  match=re.compile(xml_regex_reg_2L).findall(vlink)
+	  for name,url,thumb in match:
+	    if len(thumb) <= 0:
+		  add_Link(name,url,logos+'thanh51xml.png')		
+	    else:
+	      add_Link(name,url,thumb) 
+    else:		
+      final_link=re.compile(xml_regex).findall(vlink)
+      for title,url,thumb in final_link:
+        if len(thumb) <= 0:
+	      playLink(title,url,logos+'thanh51xml.png') 
+        else:	
+	      playLink(title,url,thumb)  
 		
 def thanh51_atf01(url,name):
   content=makeRequest(url)
@@ -577,9 +588,6 @@ def resolveUrl(url):
   elif 'hplus' in url:
     content=makeRequest(url)
     mediaUrl=re.compile('var iosUrl = "(.+?)"').findall(content)[0]	
-  elif 'hplus' in url:
-    content=makeRequest(url)  
-    mediaUrl=re.compile("var iosUrl = \"(.+?)\"").findall(content)[0]	
   elif 'tv24' in url:
     content=makeRequest(url)  
     videoUrl=re.compile('\'file\': \'http([^\']*)\/playlist.m3u8').findall(content)[0]

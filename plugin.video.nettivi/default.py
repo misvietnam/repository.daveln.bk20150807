@@ -36,16 +36,17 @@ xml_channel_name='<channel>\s*<name>(.+?)</name>'
 xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 xml_regex_reg_1S='<title>(.*?)</title>(?s).*?<page>(.*?)</page>(?s).*?<thumbnail>(.*?)</thumbnail>'
 xml_regex_reg_2L='<title>(.*?)</title>\s*<link>.*?</link>\s*<regex>\s*<name>.*?</name>\s*<expres>.*?</expres>\s*<page>(.*?)</page>\s*<referer>.*?</referer>\s*</regex>\s*<thumbnail>(.*?)</thumbnail>'
-hotChannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/hotchannels.xml'
-viet_tv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/viet_tv.m3u'
-sctv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/SCTV.m3u'
-tvchannels='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/tvchannels.json'
-haotivi='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/haotivi.json'
-vietnamtv='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/vietnamtv.xml'
-giniko='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/giniko.xml'
-thanh51='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.m3u'
-thanh51xml='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/thanh51.xml'
-ATF01='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ATF01.m3u'
+my_repo='https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/'
+hotChannels=my_repo+'hotchannels.xml'
+viet_tv=my_repo+'viet_tv.m3u'
+sctv=my_repo+'SCTV.m3u'
+tvchannels=my_repo+'tvchannels.json'
+haotivi=my_repo+'haotivi.json'
+vietnamtv=my_repo+'vietnamtv.xml'
+giniko=my_repo+'giniko.xml'
+thanh51=my_repo+'thanh51.m3u'
+thanh51xml=my_repo+'thanh51.xml'
+ATF01=my_repo+'ATF01.m3u'
 #htvonline='http://www.htvonline.com.vn/livetv'
 hplus='http://hplus.com.vn/vi/categories/live-tv'
 wezatv='http://www.wezatv.com'
@@ -60,7 +61,7 @@ def makeRequest(url):
   try:
     req=urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
-    response=urllib2.urlopen(req)
+    response=urllib2.urlopen(req, timeout=60)
     link=response.read()
     response.close()  
     return link
@@ -73,8 +74,8 @@ def makeRequest(url):
       print 'Reason: ', e.reason
  	  
 def main():
-  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')  #play direct and plugin links.
-  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI [COLOR red][B] (NO REGEX)[/B][/COLOR]','myxml',30,logos+'myxml.png')	#play direct and plugin links (change "&amp;" to "&") 
+  addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')  #play direct links and links that call other plugin (plugin://plugin)
+  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI [COLOR red][B] (NO REGEX)[/B][/COLOR]','myxml',30,logos+'myxml.png')	#play direct links and links that call other plugin (plugin://plugin) + (change "&amp;" to "&") 
   #addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')  
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -276,7 +277,7 @@ def vietsimpletv(url):
 def tvtonghop_linklist(url):
   content=makeRequest(url)
   match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
-  for url, sname in match:
+  for url, sname in match:  
 	if 'f4m' in url:
 	  url=url.split('=')[-1]
 	  url='plugin://plugin.video.f4mTester/?url='+url
@@ -395,8 +396,14 @@ def add_Link(name,url,iconimage):
   ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz)  
 
 def tvtonghop():
-  content=makeRequest(anluongtv)
+  content=makeRequest(anluongtv)  
   match=re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="(.+?)"').findall(content)
+  for url,name,thumbnail in match:	  
+    if 'SCTV' in name or 'SAO TV HD' in name or 'NHẠC CÁCH MẠNG' in name:
+      pass
+    else: 
+      addDir('[COLOR yellow]'+name.replace('SOPPING','SHOPPING')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)
+  #match=re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="(.+?)"').findall(content)
   for url,name,thumbnail in match:
     if 'SCTV' in name or 'SAO TV HD' in name:
       addDir('[COLOR lime]'+name+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)
@@ -405,13 +412,7 @@ def tvtonghop():
   match=re.compile('href="(.+?)"><img class="images-kenh1"  src="(.+?)"').findall(content)
   for url,thumbnail in match:
     name=url.replace('?tab=sctv&xem=','').upper()
-    addDir('[COLOR cyan]'+name.replace('SCTV','SCTV ')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)	  
-  match=re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="(.+?)"').findall(content)
-  for url,name,thumbnail in match:	  
-    if 'SCTV' in name or 'SAO TV HD' in name or 'NHẠC CÁCH MẠNG' in name:
-      pass
-    else: 
-      addDir('[COLOR yellow]'+name.replace('SOPPING','SHOPPING')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)
+    addDir('[COLOR cyan]'+name.replace('SCTV','SCTV ')+'[/COLOR]',anluongtv+url,14,anluongtv+thumbnail)		  
   content=makeRequest(viet_tv)	
   match=re.compile(m3u_regex).findall(content)
   for name,url in match:
@@ -520,18 +521,20 @@ def hao():
 def urlResolver(url):
   if 'm3u8' in url:
 	mediaUrl=url.split('=')[-1]
+  elif 'rtsp' in url:
+    mediaUrl=url  
   else:
     content=makeRequest(url)
     try:  
 	  mediaUrl=re.compile('file: "(.+?)",').findall(content)[0]
     except:
-      try:
-        mediaUrl=re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]	
-      except:
-		mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath='+re.compile("'file': '(.+?)',").findall(content)[0]
-		#mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+'/'+re.compile("'file': '(.+?)',").findall(content)[0]		
+      mediaUrl=re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]  
+    try:
+	  mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath='+re.compile("'file': '(.+?)',").findall(content)[0]
+    except:
+	  mediaUrl=re.compile("'streamer': '(.+?)',").findall(content)[0]+'/'+re.compile("'file': '(.+?)',").findall(content)[0]	  
   item=xbmcgui.ListItem(path=mediaUrl)
-  xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
+  xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
   return
 
 def getLink(name,url,iconimage):
@@ -578,7 +581,7 @@ def resolveUrl(url):
     req=urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
     req.add_header('Referer', fptplay)	
-    response=urllib2.urlopen(req)
+    response=urllib2.urlopen(req, timeout=60)
     link=response.read()
     response.close()
     mediaUrl='plugin://plugin.video.f4mTester/?url='+re.compile('"adapt_hds": "(.+?)"').findall(link)[0]
@@ -737,4 +740,3 @@ elif mode==62:
   thanh51_xml_channel(url,name)
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
-

@@ -79,7 +79,7 @@ def M3U_to_XML():
       link=open_file(m3u_file)  
       match=re.compile(m3u_regex).findall(link) 
       for title,url in match:
-        url=url.replace('&amp;','&').replace('rtmp://$OPT:rtmp-raw=','').strip()
+        url=url.replace('&','&amp;').replace('rtmp://$OPT:rtmp-raw=','').strip()
         title=title.strip()		  
         f.write('<item>\n<title>'+title+'</title>\n<link>'+url+'</link>\n<thumbnail>'+thumb+'</thumbnail>\n</item>\n')
       f.write('\n</stream>\n\n\n\n')

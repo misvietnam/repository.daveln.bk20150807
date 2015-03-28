@@ -2,7 +2,7 @@
 <channels>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR lightblue] - [I]REGEX-hplus[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR lightblue] - [I]REGEX-hplus[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 
@@ -406,7 +406,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR lightblue] - [I]REGEX-HTVonline[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR lightblue] - [I]REGEX-HTVonline[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 
@@ -1218,7 +1218,7 @@
 
 <channel>
 
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]VTVPlay[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]VTVPlay[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 
@@ -1363,7 +1363,7 @@
 
 </channel>
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]FPT PLAY[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]FPT PLAY[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 </item>
 
@@ -1953,7 +1953,7 @@
 
 </channel>
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]SCTV[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]SCTV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 
@@ -2464,7 +2464,7 @@
 
 </channel>
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH AN VIEN AVG[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH AN VIEN AVG[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 
@@ -2518,7 +2518,8 @@
 
 <item>
 <title>FOX SPORT HD</title>
-<link>http://113.160.49.34/lives/origin03/foxhd.isml/foxhd-2096k.m3u8</link>
+<link>http://113.160.49.34/lives/origin03/foxhd.isml/foxhd-2096k.m3u8
+</link>
 <thumbnail></thumbnail>
 </item>
 
@@ -2978,7 +2979,7 @@
 
 </channel>
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]VP9 TV[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]VP9 TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 
@@ -3299,7 +3300,7 @@
 
 </channel>
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]LIFE TV[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]LIFE TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 
@@ -3372,7 +3373,7 @@
 
 </channel>
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]HAI NGOAI TV[/I][/COLOR][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]HAI NGOAI TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <items>
 

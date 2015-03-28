@@ -23,22 +23,25 @@ import xbmcplugin,xbmcgui,xbmcaddon
 mysettings=xbmcaddon.Addon(id='plugin.program.m3u.xml.converter')
 profile=mysettings.getAddonInfo('profile')
 home=mysettings.getAddonInfo('path')
+fanart=xbmc.translatePath(os.path.join(home,'fanart.jpg'))
+icon=xbmc.translatePath(os.path.join(home,'icon.png'))
+logos=xbmc.translatePath(os.path.join(home,'resources','logos\\'))
+localizedString=mysettings.getLocalizedString
 my_settings=mysettings.getSetting
-fanart=xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
-icon=xbmc.translatePath(os.path.join(home, 'icon.png'))
-logos=xbmc.translatePath(os.path.join(home, 'logos\\'))
 xml_file=my_settings('xml_file')
 m3u_file=my_settings('m3u_file')
 thumb=my_settings('thumb')
 dest=my_settings('dest')
 m3u_regex='#.+,(.+?)\n(.+?)\n'
 xml_regex='<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
-convert_m3u_to_xml=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+m3u_file.split('/')[-1].split('\\')[-1].replace('.m3u','.xml').replace('.M3U','.xml'))))
-convert_xml_to_m3u=xbmc.translatePath(os.path.join(dest, (time.strftime("%m%d%Y_%H%M%S_")+xml_file.split('/')[-1].split('\\')[-1].replace('.xml','.m3u').replace('.XML','.m3u'))))
+xml_filename=xml_file.split('/')[-1].split('\\')[-1].split('.')[0]
+m3u_filename=m3u_file.split('/')[-1].split('\\')[-1].split('.')[0]
+convert_m3u_to_xml=xbmc.translatePath(os.path.join(dest,m3u_filename+time.strftime("_%m%d%Y_%H%M%S.xml")))
+convert_xml_to_m3u=xbmc.translatePath(os.path.join(dest,xml_filename+time.strftime("_%m%d%Y_%H%M%S.m3u")))
 
 def open_file(file):
   try:
-    f=open(file, 'r')
+    f=open(file,'r')
     content=f.read()
     f.close()
     return content	
@@ -46,42 +49,44 @@ def open_file(file):
     pass 
   	
 def main():
-  addDir('[COLOR yellow]XML to M3U Converter[COLOR magenta]  *****  [COLOR white]NO REGEX[/COLOR]','XML2M3U',1,logos+'icon.png')
-  addDir('[COLOR cyan]Đổi M3U Sang XML[COLOR magenta]  *****  [COLOR white]KHÔNG REGEX[/COLOR]','M3U2XML',2,icon)
+  addDir('[COLOR yellow]'+localizedString(10001).encode('utf-8')+'[COLOR magenta]  *****  [COLOR white]'+localizedString(10002).encode('utf-8')+'[/COLOR]','XML2M3U',1,logos+'icon.png')
+  addDir('[COLOR cyan]'+localizedString(10003).encode('utf-8')+'[COLOR magenta]  *****  [COLOR white]'+localizedString(10004).encode('utf-8')+'[/COLOR]','M3U2XML',2,icon)
   
 def XML_to_M3U():
   if len(xml_file) <= 0:
     mysettings.openSettings()
   else:
     try:
-      f=open(convert_xml_to_m3u, 'w+')
-      f.write('#EXTM3U' + '\n\n' + '#EXTINF:-1,[COLOR lime]****[COLOR cyan] CREATED ON ' + time.strftime("[COLOR yellow]%m-%d-%Y") + ' [COLOR lime]****[/COLOR]' + '\n' + 'http://www.youtube.com' + '\n\n')	
+      f=open(convert_xml_to_m3u,'w+')
+      f.write('#EXTM3U\n\n#EXTINF:-1,[COLOR lime]****[COLOR cyan] '+localizedString(10011).encode('utf-8')+time.strftime(' [COLOR yellow]%m-%d-%Y [COLOR lime]****[/COLOR]\nhttp://www.youtube.com\n\n'))	
       link=open_file(xml_file)  
       match=re.compile(xml_regex).findall(link) 
       for title,url,thumbnail in match:
-        url=url.replace('&amp;','&')
-        f.write('#EXTINF:-1,' + title + '\n' + url + '\n')
+        url=url.replace('&amp;','&').strip()
+        title=title.strip()		
+        f.write('#EXTINF:-1,'+title+'\n'+url+'\n')
       f.write('\n\n\n\n')
       f.close()
-      xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Done.')
+      xbmcgui.Dialog().ok('[COLOR yellow]'+localizedString(10001).encode('utf-8')+'[/COLOR]',localizedString(10005).encode('utf-8'))
     except:	
-      xbmcgui.Dialog().ok('[COLOR yellow]XML to M3U Converter[/COLOR]', 'Please choose a different path to destination folder.', '', 'Then try again.')
+      xbmcgui.Dialog().ok('[COLOR yellow]'+localizedString(10001).encode('utf-8')+'[/COLOR]',localizedString(10006).encode('utf-8'),'',localizedString(10007).encode('utf-8'))
   
 def M3U_to_XML():
   if len(m3u_file) > 0:
     try: 	
-      f=open(convert_m3u_to_xml, 'w+')
-      f.write('<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n\n<stream>\n\n<item>\n<title>[COLOR lime]****[COLOR cyan] ' + time.strftime('CREATED ON [COLOR yellow]%m-%d-%Y [COLOR lime]****[/COLOR]</title>\n<link>http://www.youtube.com</link>\n<thumbnail>') + thumb + '</thumbnail>\n</item>\n\n')		
+      f=open(convert_m3u_to_xml,'w+')
+      f.write('<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n\n<stream>\n\n<item>\n<title>[COLOR lime]****[COLOR cyan] '+localizedString(10011).encode('utf-8')+time.strftime(' [COLOR yellow]%m-%d-%Y [COLOR lime]****[/COLOR]</title>\n<link>http://www.youtube.com</link>\n<thumbnail>')+thumb+'</thumbnail>\n</item>\n\n')		
       link=open_file(m3u_file)  
       match=re.compile(m3u_regex).findall(link) 
       for title,url in match:
-        url=url.replace('&','&amp;').replace('rtmp://$OPT:rtmp-raw=','')	  
-        f.write('<item>\n<title>' + title + '</title>\n<link>' + url + '</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>\n')
+        url=url.replace('&amp;','&').replace('rtmp://$OPT:rtmp-raw=','').strip()
+        title=title.strip()		  
+        f.write('<item>\n<title>'+title+'</title>\n<link>'+url+'</link>\n<thumbnail>'+thumb+'</thumbnail>\n</item>\n')
       f.write('\n</stream>\n\n\n\n')
       f.close()	  
-      xbmcgui.Dialog().ok('[COLOR cyan]Đổi M3U Sang XML[/COLOR]', 'Xong.')
+      xbmcgui.Dialog().ok('[COLOR cyan]'+localizedString(10003).encode('utf-8')+'[/COLOR]',localizedString(10008).encode('utf-8'))
     except:	
-      xbmcgui.Dialog().ok('[COLOR cyan]Đổi M3U Sang XML[/COLOR]', 'Vui lòng chọn lại đường dẫn khác đến thư mục.', '', 'Thử lại.')
+      xbmcgui.Dialog().ok('[COLOR cyan]'+localizedString(10003).encode('utf-8')+'[/COLOR]',localizedString(10009).encode('utf-8'),'',localizedString(10010).encode('utf-8'))
   else:	
     mysettings.openSettings()
   

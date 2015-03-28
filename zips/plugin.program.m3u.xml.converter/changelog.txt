@@ -1,5 +1,9 @@
+v 0.0.6
+- Fixed leading and trailing spaces.
+- Clean up.
+
 v 0.0.5
-Updated
+Updated.
 
 v 0.0.4
 - Change color in add-on's name.

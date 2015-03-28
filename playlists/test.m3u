@@ -1,0 +1,281 @@
+#EXTM3U
+
+#EXTINF:-1,[COLOR lime]****[COLOR cyan] CREATED ON [COLOR yellow]03-28-2015 [COLOR lime]****[/COLOR]
+http://www.youtube.com
+
+#<CHANNELS>
+#<CHANNEL>
+#<NAME>CHANNEL 1
+#EXTINF:-1,CNN News US
+rtmp://d.cdn.newschat.tv/edge playpath=cnn_live swfUrl=http://msnbclive.eu/player.swf live=1 pageUrl=http://www.livenewschat.eu/breaking/
+#EXTINF:-1,ESPN 3
+http://200.76.77.237/LIVE/H01/CANAL520/PROFILE03.m3u8?moneysports
+#EXTINF:-1,Animal Planet
+http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028
+#EXTINF:-1,Discovery
+http://200.76.77.237/LIVE/H01/CANAL371/PROFILE03.m3u8
+#EXTINF:-1,NAT GEO WILD
+http://200.76.77.237/LIVE/H01/CANAL355/PROFILE03.m3u8
+#EXTINF:-1,NAT GEO
+http://200.76.77.237/LIVE/H01/CANAL377/PROFILE03.m3u8
+#EXTINF:-1,CNBC News
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnbc_eu/ls_satlink/b_828.m3u8
+#EXTINF:-1,ABC News HD
+http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on live=true
+#EXTINF:-1,ABC News
+http://abclive.abcnews.com/i/abc_live4@136330/master.m3u8?b=500,300,700,900,1200 swfVfy=true live=true timeout=10
+#</CHANNEL>
+
+#<CHANNEL>
+#<NAME>CHANNEL 2
+#EXTINF:-1,News 12 Brooklyn US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-ace3010000000000 playpath=fs-ace3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-ace3010000000000 pageURL=http://www.news12.com/player/flowplayer/.live_player.html?region=BK live=true swfVfy=true timeout=10
+#EXTINF:-1,News 12 Connecticut US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-bbe3010000000000 playpath=fs-bbe3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-bbe3010000000000 pageURL=http://www.news12.com/player/flowplayer/.live_player.html?region=CT live=true swfVfy=true timeout=10
+#EXTINF:-1,News 12 Hudson Valley US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-bae3010000000000 playpath=fs-bae3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-bae3010000000000 pageURL=http://www.news12.com/player/flowplayer/.live_player.html?region=HV live=true swfVfy=true timeout=10
+#EXTINF:-1,News 12 Long Island US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-b4e3010000000000 playpath=fs-b4e3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-b4e3010000000000 pageURL=http://www.news12.com/player/flowplayer/.live_player.html?region=LI live=true swfVfy=true timeout=10
+#EXTINF:-1,News 12 New Jersey US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-b9e3010000000000 playpath=fs-b9e3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-b9e3010000000000 pageURL=http://www.news12.com/player/flowplayer/live_player.html?region=NJ live=true swfVfy=true timeout=10
+#EXTINF:-1,News 12 The Bronx US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-b5e3010000000000 playpath=fs-b5e3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-b5e3010000000000 pageURL=http://www.news12.com/player/flowplayer/.live_player.html?region=BX live=true swfVfy=true timeout=10
+#EXTINF:-1,News 12 Westchester US
+rtmp://fs-b4e3010000000000.id.cdn.cv.net/vxedge/fs-bce3010000000000 playpath=fs-bce3010000000000 swfURL=http://www.news12.com/player/flowplayer.commercial-3.2.7.swf app=vxedge/fs-bce3010000000000 pageURL=http://www.news12.com/player/flowplayer/.live_player.html?region=WC live=true swfVfy=true timeout=10
+#EXTINF:-1,CTV News
+http://ams-lp2.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/ctvnewsOpen8.m3u8
+#EXTINF:-1,CBSN Live
+http://cbsnewshd-lh.akamaihd.net/i/CBSNDC_4@199302/index_4000_av-b.m3u8?sd=10&rebase=on
+#EXTINF:-1,RT Global
+http://odna.octoshape.net/f3f5m2v4/cds/ch1_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,RT America
+http://odna.octoshape.net/f3f5m2v4/cds/ch4_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,RT UK
+http://odna.octoshape.net/f3f5m2v4/cds/ch6_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,BBC 2
+http://37.220.29.186:8000/bbc2/bbc2/index.m3u8
+#EXTINF:-1,BBC World News
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8
+#EXTINF:-1,BBC World News (link 2)
+rtmp://d.cdn.newschat.tv/edge playpath=bbcwn_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/world/
+#EXTINF:-1,Al Jazeera News
+rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/aljazeera_eng_high live=true swfVfy=true timeout=60
+#EXTINF:-1,Al Jazeera News (link 2)
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/aljazeera_en/ls_satlink/b_528.m3u8
+#EXTINF:-1,CNN News UK
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8
+#</CHANNEL>
+
+#<CHANNEL>
+#<NAME>CHANNEL 3
+#EXTINF:-1,NHK World
+http://plslive-w1.nhk.or.jp/http-live/nhkworld-ios-live1/delivery/index_high.m3u8
+#EXTINF:-1,NHK World (link 2)
+http://nhkworld-hds-live1.hds1.fmslive.stream.ne.jp/hls-live/nhkworld-hds-live1/_definst_/livestream/nhkworld-live-512.m3u8
+#EXTINF:-1,MSNBC
+rtmp://b.cdn.newschat.tv/edge playpath=msnbc_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/politics/
+#EXTINF:-1,CP24 News
+http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.m3u8
+#EXTINF:-1,i24News
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/i24/ls_satlink/b_828.m3u8
+#EXTINF:-1,Bloomberg
+http://live.bltvios.com.edgesuite.net/oza2w6q8gX9WSkRx13bskffWIuyf/BnazlkNDpCIcD-QkfyZCQKlRiiFnVa5I/master.m3u8?geo_country=US
+#EXTINF:-1,Sky News UK
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/skynews/ls_satlink/b_828.m3u8
+#EXTINF:-1,QUARTARETE 4 (Italiano)
+rtmp://wowza1.top-ix.org/quartaretetv/quartareteweb
+#EXTINF:-1,NASA
+http://public.infozen.cshls.lldns.net/infozen/public/public/public_1000.m3u8
+#EXTINF:-1,Pentagon
+http://149.11.34.6:1935/live/pentagon.stream/playlist.m3u8?wowzasessionid=750145898
+#EXTINF:-1,Weather Channel
+http://kalsegsec-a.akamaihd.net/dc-0/m/pa-live-publish3/kLive/smil:1_oorxcge2_all.smil/chunklist_b2096000.m3u8
+#EXTINF:-1,Weather Network
+http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/atl/master_Layer5.m3u8
+#EXTINF:-1,HSN US
+rtmp://hsn.mpl.miisolutions.net:1935/hsn-live01/_definst_/mp4:420p500kB31 playpath=mp4:420p500kB31 swfUrl="http://img.hsni.com/images/Site_Relaunch_2007/arcade/StrobeMediaPlayback_Default.swf" pageUrl="http://www.hsn.com/watch-hsn-tv-live_xh.aspx?network=1&autostart=1&cm_sp=Global*LNTV*LiveTV" swfVfy=true live=true
+#EXTINF:-1,HSN 2 US
+rtmp://hsn.mpl.miisolutions.net:1935/hsn-live01/_definst_/mp4:468p500kB31 playpath=mp4:468p500kB31 swfUrl="http://img.hsni.com/images/Site_Relaunch_2007/arcade/StrobeMediaPlayback_Default.swf" pageUrl="http://hsn2.hsn.com/watch-hsn-live_xh.aspx?network=4" swfVfy=true live=true
+#EXTINF:-1,EuroSport Fr
+http://esioslive6-i.akamaihd.net/hls/live/202892/AL_P_ESP1_FR_FRA/playlist_1800.m3u8
+#EXTINF:-1,EuroSport Inter
+http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
+#EXTINF:-1,Fox Sport 2
+http://200.76.77.237/LIVE/H01/CANAL527/PROFILE03.m3u8?moneysports
+#EXTINF:-1,Pac 12 Network US
+http://xrxs.net/video/live-p12netw-2328.m3u8
+#EXTINF:-1,Pac 12 Network Bay Area US
+http://xrxs.net/video/live-p12baya-2328.m3u8
+#EXTINF:-1,NBC Golf
+http://tvegolf-i.akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8
+#EXTINF:-1,SPORTSNET 360
+http://nlds187.cdnak.neulion.com/nlds/sportsnetnow/sn_360/as/live/sn_360_hd_3000_ipad.m3u8
+#EXTINF:-1,Bursaspor TV (Turkey)
+rtmp://stream.yayindayiz.biz:80/Bursaspor/ playpath=bursaspor swfUrl=http://bedavacanlitvizle.org/wp-content/uploads/player/player.swf pageUrl=http://bedavacanlitvizle.org/yayin/bstv.php
+#EXTINF:-1,CANALE 7 (Italy)
+rtmp://fms.shared.streamshow.it/canale7 playpath=canale7 swfUrl=http://thvl.vn/vplayer.swf pageUrl=http://tivihay.net/kenh-the-thao-canale-7-k326.html
+#EXTINF:-1,Sport Time TV 1 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel1_1200
+#EXTINF:-1,Sport Time TV 2 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel2_1200
+#EXTINF:-1,Sport Time TV 3 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel3_1200
+#EXTINF:-1,Sport Time TV 4 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel4_1200
+#EXTINF:-1,Sport Time TV 5 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel5_1200
+#EXTINF:-1,Sport Time TV 6 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel6_800
+#EXTINF:-1,Sport Time TV 7 (German)
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel7_1200
+#EXTINF:-1,TSN 1
+http://ams-lp5.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/tsnOpen8.m3u8
+#EXTINF:-1,TSN 3
+http://ams-lp1.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN3Open8.m3u8
+#EXTINF:-1,TSN 4
+http://ams-lp2.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN4Open8.m3u8
+#EXTINF:-1,TSN 5
+http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN5Open8.m3u8
+#EXTINF:-1,Big Ten Network
+http://bigten247.cdnak.bigtenhd.neulion.com/nlds/btn2go/btnnetwork/as/live/btnnetwork_hd_3000.m3u8
+#EXTINF:-1,Sport Tonight TV (UK)
+rtmp://freeview.fms.visionip.tv/live playpath=sports_tonight-sports_tonight-live-25f-16x9-SD?ref=www.sportstonightlive.com&USER=STL_0001 swfUrl=http://embeddedplayer.visionip.tv/data/swf/f22ee95bcec532c04146635a1a1adf00559/player.swf
+#EXTINF:-1,Sport China
+rtmp://v2.gdtv.cn/live playpath=soccer swfUrl=http://www.gdtv.cn/vms/demoLiveF4M/livePlayerF4M.swf pageUrl=
+#EXTINF:-1,Kita TV
+rtmp://www.kitatv.com/live playpath=myStream swfUrl=http://thvl.vn/vplayer.swf pageUrl=http://tivihay.net/world-channels-kita-music-k403.html
+#EXTINF:-1,VEVO HD 1
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8
+#EXTINF:-1,VEVO HD 2
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch2/06/prog_index.m3u8
+#EXTINF:-1,VEVO HD 3
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch3/06/prog_index.m3u8
+#EXTINF:-1,Virgin Radio TV
+rtmp://fms.105.net:1935/live playpath=virgin1 live=true timeout=15
+#EXTINF:-1,California Music Chanel
+rtmp://cmctv.flash.internapcdn.net:443/cmctv_vitalstream_com/live_adaptive_1/CMC-TV_adaptive1 swfUrl=http://http.vitalstreamcdn.com/flashskins/V2Player.swf pageUrl=http://www.myiplayer.eu/x/USA/cmc.php swfVfy=1 live=1 timeout=10
+#EXTINF:-1,Fresh TV [Russia]
+rtmp://80.93.53.88:1935/live playpath=channel_4 swfUrl=http://www.planeta-online.tv/planeta_player.swf?ver=108 pageUrl=http://www.planeta-online.tv/?ch=4 live=true swfVfy=true timeout=60
+#EXTINF:-1,Music Box
+rtmp://musicbox.cdnvideo.ru/musicbox-live playpath=musicboxtv.sdp swfUrl=http://player.longtailvideo.com/player.swf pageUrl=http://tivihay.net/world-channels-music-box-k280.html
+#EXTINF:-1,Relax TV
+rtmp://www.planeta-online.tv:1936/live/channel_3 swfURL=http://www.planeta-online.tv/planeta_player.swf pageURL=http://www.planeta-online.tv/ live=true
+#EXTINF:-1,Rock One TV US
+rtmp://musicbox.cdnvideo.ru/musicbox-live playpath=musicbox.sdp swfUrl=http://www.musicboxtv.ru/_front/flowplayer-3.2.7.swf live=true pageUrl=http://www.musicboxtv.ru/channel/russian-musicbox/online
+#EXTINF:-1,Rouge TV - France
+rtmp://rtmp.infomaniak.ch/livecast playpath=rougetv swfURL=http://tvplayer.castlemedia.fr/swf/tvplayer.swf?4dadb783f0a81537187120216 pageURL=http://www.playtv.fr/television/#rouge-tv live=true
+#EXTINF:-1,Russian Music Box
+rtmp://musicbox.cdnvideo.ru/musicbox-live playpath=musicbox.sdp swfUrl=http://www.musicboxtv.ru/_front/flowplayer-3.2.7.swf live=true pageUrl=http://www.musicboxtv.ru/channel/russian-musicbox/online
+#EXTINF:-1,Beats Per Minute TV (Canada)
+mms://ken-cdn220-is-2.se.bptvlive.ngcdn.telstra.com/bp_online_bpmusic_high
+#EXTINF:-1,For Music (Canal 613 France)
+rtmp://wowza1.top-ix.org/quartaretetv1 playpath=formusicweb swfUrl=http://lihattv.us/scripts/videogallery.swf live=1 pageUrl=http://lihattv.us/?ch=it
+#EXTINF:-1,Europa Plus TV
+rtmp://europaplus.cdnvideo.ru:1935/europaplus-live playpath=mp4:eptv_main.sdp swfUrl=http://www.europaplustv.com/javascript/videoplayernew.swf pageUrl=http://imtv.at.ua/NEXT_Music.html
+#EXTINF:-1,RMC Tv
+rtmp://fms.105.net:1935/live playpath=rmc2 live=1
+#EXTINF:-1,Fashon 1HD
+http://109.239.142.62:1935/live/livestream3/chunklist_w788555898.m3u8
+#EXTINF:-1,4Seven
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/fourseven.m3u8
+#EXTINF:-1,Capital TV [UK]
+http://ooyalahd2-f.akamaihd.net/i/globalradio01_delivery@156521/index_656_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1,Channel 4
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/channel4.m3u8
+#</CHANNEL>
+
+#<CHANNEL>
+#<NAME>CHANNEL 4
+#EXTINF:-1,Channel 5
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/channel5.m3u8
+#EXTINF:-1,A&E
+http://200.76.77.237/LIVE/H01/CANAL211/PROFILE03.m3u8
+#EXTINF:-1,AMC
+http://200.76.77.237/LIVE/H01/CANAL444/PROFILE03.m3u8
+#EXTINF:-1,AXN HD
+http://200.76.77.237/LIVE/H01/CANAL213/PROFILE03.m3u8
+#EXTINF:-1,CBS Action
+http://93.184.221.133/00573D/711/711-0.m3u8
+#EXTINF:-1,CBS Reality
+http://93.184.221.133/00573D/713/713-0.m3u8
+#EXTINF:-1,CBS Drama
+http://93.184.221.133/00573D/712/712-0.m3u8
+#EXTINF:-1,Cinecanal
+http://200.76.77.237/LIVE/H01/CANAL430/PROFILE03.m3u8
+#EXTINF:-1,Cinemax
+http://113.160.49.34/lives/origin03/cinemaxsd.isml/cinemaxsd-1096k.m3u8
+#EXTINF:-1,E4
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/e4.m3u8
+#EXTINF:-1,Film 4
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/film4.m3u8
+#EXTINF:-1,ITVbe
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/itvbe.m3u8
+#EXTINF:-1,ITV London
+http://93.184.221.133/00573D/283/283-0.m3u8
+#EXTINF:-1,MGM
+http://185.27.237.105:8082/TV0050
+#EXTINF:-1,More4
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/more4.m3u8
+#EXTINF:-1,Movies 24/7
+http://167.114.65.88/hls/mv.m3u8
+#EXTINF:-1,MTV Hits
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8
+#EXTINF:-1,Pick TV
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/pick.m3u8
+#EXTINF:-1,Pink Action
+http://str108.setplex.net/fastv_2psh/PinkActionglobal_rly_greece_109/chunklist.m3u8
+#EXTINF:-1,Star Movies
+http://113.160.49.34/lives/origin03/moviehd.isml/moviehd-2096k.m3u8
+#EXTINF:-1,Star Movies (link 2)
+http://185.27.237.105:8082/TV0051
+#EXTINF:-1,TCM
+http://185.27.237.105:8082/TV0082
+#EXTINF:-1,TRT HD
+http://trtcanlitv-lh.akamaihd.net/i/TRTHD_1@182045/master.m3u8
+#EXTINF:-1,True Entertainment
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/trueent.m3u8
+#EXTINF:-1,True Movies 1
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/truemovies1.m3u8
+#EXTINF:-1,True Movies 2
+http://wpc.ac3a.edgecastcdn.net/80AC3A/001/hls/m3u8/truemovies2.m3u8
+#EXTINF:-1,RT Documentary
+http://odna.octoshape.net/f3f5m2v4/cds/ch5_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,Warner TV
+http://200.76.77.237/LIVE/H01/CANAL205/PROFILE03.m3u8
+#EXTINF:-1,Fashion TV
+http://80.82.43.95/streaming/fashion/16/tvrec/playlist.m3u8
+#EXTINF:-1,Discovery World
+http://188.227.86.4:4022/udp/239.77.0.78:1234
+#EXTINF:-1,Discovery Theater
+http://200.76.77.237/LIVE/H01/CANAL351/PROFILE03.m3u8
+#EXTINF:-1,Fox Actions
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=302&lan=2&rows=40&f=.m3u8
+#EXTINF:-1,Fox Classic
+http://200.76.77.237/LIVE/H01/CANAL478/PROFILE03.m3u8
+#EXTINF:-1,Fox Cinema
+http://200.76.77.237/LIVE/H01/CANAL472/PROFILE03.m3u8
+#EXTINF:-1,Fox Actions US
+http://200.76.77.237/LIVE/H01/CANAL416/PROFILE03.m3u8
+#EXTINF:-1,Fox Movies
+http://200.76.77.237/LIVE/H01/CANAL417/PROFILE03.m3u8
+#EXTINF:-1,Fox Family
+http://200.76.77.237/LIVE/H01/CANAL475/PROFILE03.m3u8
+#EXTINF:-1,Film Zone
+http://200.76.77.237/LIVE/H01/CANAL440/PROFILE03.m3u8
+#EXTINF:-1,FX HD
+http://200.38.126.38:8081/TPHLSWeb/M3U8LiveFile?format=2&profile=104&lan=2&rows=40&f=.m3u8
+#EXTINF:-1,MTV
+http://200.76.77.237/LIVE/H01/CANAL701/PROFILE03.m3u8
+#EXTINF:-1,Kid TV
+http://66.90.111.66:1935/ctv/tom/waldo_paes.m3u8?b?b*t$&wowzasessionid=841441282
+#EXTINF:-1,American Dad
+http://167.114.65.74/hls/ad.m3u8
+#EXTINF:-1,Family Guy
+http://167.114.65.74/hls/ad.m3u8
+#EXTINF:-1,Tom & Jerry
+http://66.90.111.66:1935/ctv/tom/waldo_paes.m3u8?b?b*t$&wowzasessionid=841441282
+#</CHANNEL>
+#</CHANNELS>
+
+
+

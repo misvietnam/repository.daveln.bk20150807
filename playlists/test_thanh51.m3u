@@ -3,11 +3,11 @@
 #<CHANNELS>
 
 #<CHANNEL>
-#<UPDATE>[COLOR yellow]CẬP NHẬT NGÀY 25 THÁNG 3 NĂM 2015[/COLOR]</UPDATE>
+#<UPDATE>[COLOR blue]thanh51 [COLOR yellow]CẬP NHẬT NGÀY 25 THÁNG 3 NĂM 2015[/COLOR]</UPDATE>
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]VTV[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]VTV[/I][/COLOR]</NAME>
 #EXTINF:-1,VTV1 HD S1
 http://hlscache.fptplay.net.vn/livev/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 #EXTINF:-1,VTV1 HD S2
@@ -171,7 +171,7 @@ http://hlscache.fptplay.net.vn/livez/onetv_2500.stream/playlist.m3u8?token=c335V
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]AN VIÊN AVG[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]AN VIÊN AVG[/I][/COLOR]</NAME>
 #EXTINF:-1, NCM S1
 http://hlscache.fptplay.net.vn/livez/ncm_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 #EXTINF:-1, NCM S2
@@ -211,7 +211,7 @@ http://113.160.49.34/lives/origin01/docsachsd.isml/docsachsd-1096k.m3u8
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]HTV - HTVC[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]HTV - HTVC[/I][/COLOR]</NAME>
 #EXTINF:-1, HTV9 HD
 http://playcache.fptplay.net.vn/live/htv9HD_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl                                                                                                                  
 #EXTINF:-1,HTVC THUẦN VIỆT HD
@@ -269,7 +269,7 @@ http://scache.fptplay.net.vn/live/htvcthethao_2500.stream/playlist.m3u8?token=c3
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]VTC[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]VTC[/I][/COLOR]</NAME>
 #EXTINF:-0,VTC1 HD
 http://113.160.49.34/lives/origin03/vtchd1hd.isml/vtchd1hd-2096k.m3u8
 #EXTINF:-0,VTC HD2
@@ -353,7 +353,7 @@ http://113.160.49.34/lives/origin01/vtc16sd.isml/vtc16sd-1096k.m3u8
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]SCTV[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]SCTV[/I][/COLOR]</NAME>
 #EXTINF:-1, SCTVHD-SÓNG NHẠC
 http://112.197.2.154:1935/mlive/C006_HD_4/chunklist.m3u8?us=f9c1a4c308ea65315530bb809a100a47f04626c6bac3632d7a46b14478850a42f668f5319cd0c0deaee298cccf4bbb7d%7C1728515
 #EXTINF:0, SCTVHD-DU LỊCH KHÁM PHÁ    
@@ -419,7 +419,7 @@ http://112.197.2.154:1935/mlive/C034_SD_3/chunklist.m3u8?us=f9c1a4c308ea65315530
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]ĐỊA PHƯƠNG[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]ĐỊA PHƯƠNG[/I][/COLOR]</NAME>
 #EXTINF:-1, HÀ NỘI1 S1
 http://scache.fptplay.net.vn/livez/hntv1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 #EXTINF:-1, HÀ NỘI1 S2
@@ -545,7 +545,7 @@ http://113.160.49.34/lives/origin02/kg1sd.isml/kg1sd-1096k.m3u8
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]LIFETV[/I][/COLOR]</NAME>                                            
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]LIFETV[/I][/COLOR]</NAME>                                            
 #EXTINF:-1, LIFETV
 rtmp://27.118.16.16/live/live_lifetv 
 #EXTINF:-1, KÊNH 9 MUSIC
@@ -571,7 +571,7 @@ rtmp://27.118.16.16/live//ttv
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]HẢI NGOẠI[/I][/COLOR]</NAME> 
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]HẢI NGOẠI[/I][/COLOR]</NAME> 
 #EXTINF:-1, VIETNEWS
 rtmp://54.92.10.208/VietNews//myStream
 #EXTINF:-1, KVLA
@@ -615,7 +615,7 @@ http://uni6rtmp.tulix.tv:1935/vbstv/vbsabr.smil/chunklist.m3u8
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]QUỐC TẾ[/I][/COLOR]</NAME>
+#<NAME>[COLOR cyan]->>[B]TRUYỀN HÌNH[/B][COLOR blue] - [I]QUỐC TẾ[/I][/COLOR]</NAME>
 #EXTINF:0, SCTVHD-NATGEO 
 http://112.197.2.154:1935/mlive/C002_HD_4/chunklist.m3u8?us=f9c1a4c308ea65315530bb809a100a47f04626c6bac3632d7a46b14478850a42f668f5319cd0c0deaee298cccf4bbb7d%7C1728515
 #EXTINF:-0, DISCOVERY WORLD HD S1

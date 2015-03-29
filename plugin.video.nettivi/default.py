@@ -75,7 +75,7 @@ def makeRequest(url):
  	  
 def main():
   addDir('[COLOR yellow]M3U PLAYLIST[COLOR magenta] ***** [COLOR lime]MY OWN CHANNELS[/COLOR]','mym3u',30,logos+'mychannel.png')  #play direct links and links that call other plugin (plugin://plugin)
-  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI [COLOR red][B] (NO REGEX)[/B][/COLOR]','myxml',30,logos+'myxml.png')	#play direct links and links that call other plugin (plugin://plugin) + (change "&amp;" to "&") 
+  addDir('[COLOR cyan]XML PLAYLIST[COLOR magenta] ***** [COLOR orange]XML CỦA TUI [COLOR white][B] (NO REGEX)[/B][/COLOR]','myxml',30,logos+'myxml.png')	#play direct links and links that call other plugin (plugin://plugin) + (change "&amp;" to "&") 
   #addDir('[COLOR lime]HD [COLOR cyan]Channels[/COLOR]','hdchannels',8,logos+'hd.png')  
   addDir('[COLOR yellow]TV Hải Ngoại   ++   [COLOR cyan]Âm Nhạc   ++   [COLOR lime]Radio[/COLOR]',tvchannels,7,logos+'tivihn.png')
   addDir('[COLOR cyan]TV Trong Nước   ++   [COLOR lime]Radio[/COLOR]',vietnamtv,6,logos+'vietnamtvradio.png')
@@ -149,8 +149,8 @@ def my_playlist_links(name):
 	  myxml.close()
 	  if '<channel>' in link:
 	    match=re.compile(xml_channel_name).findall(link)
-	    for sname in match:
-	      addDir(sname,'xmlfile',32,logos+'myxml.png')
+	    for ch_name in match:
+	      addDir(ch_name,'xmlfile',32,logos+'myxml.png')
 	  else:
 	    match=re.compile(xml_regex).findall(link)
 	    for title,url,thumb in match:
@@ -163,8 +163,8 @@ def my_playlist_links(name):
 	  link=makeRequest(onlinexml)
 	  if '<channel>' in link:
 	    match=re.compile(xml_channel_name).findall(link)
-	    for sname in match:
-	      addDir(sname,onlinexml,32,logos+'myxml.png')
+	    for ch_name in match:
+	      addDir(ch_name,onlinexml,32,logos+'myxml.png')
 	  else:
 	    match=re.compile(xml_regex).findall(link)
 	    for title,url,thumb in match:
@@ -196,8 +196,11 @@ def thanh51_xml(url):
   content=makeRequest(url)
   if '<channel>' in content:
     match=re.compile(xml_channel_name).findall(content)
-    for sname in match:
-	  addDir(sname,url,62,logos+'thanh51xml.png')   	
+    for ch_name in match:
+	  if 'UPDATED ON' in ch_name or 'CẬP NHẬT' in ch_name:
+	    addLink(ch_name,'http://www.youtube.com',logos+'xml.png')
+	  else:
+	    addDir(ch_name,url,62,logos+'xml.png')  	
   else:
 	match=re.compile(xml_regex).findall(content)
 	for title,url,thumb in match:
@@ -227,16 +230,35 @@ def thanh51_xml_channel(url,name):
 	      playLink(title,url,logos+'thanh51xml.png') 
         else:	
 	      playLink(title,url,thumb)  
-		
+
 def thanh51_atf01(url,name):
   content=makeRequest(url)
-  match=re.compile(m3u_regex).findall(content)
-  for title,url in match:
-    if 'thanh51' in name:  
-	  addLink(title,url,logos+'thanh51.png')
-    else:  
-      addLink(title,url,logos+'atf01.png')
-	  
+  if '<CHANNEL>' in content:
+	match=re.compile('<NAME>(.+?)</NAME>').findall(content)
+	for ch_name in match:
+	  if 'UPDATED ON' in ch_name or 'CẬP NHẬT' in ch_name:
+	    addLink(ch_name,'http://www.youtube.com',logos+'m3u.png')
+	  else:	
+	    addDir(ch_name,url,52,logos+'m3u.png')  
+  else:
+    match=re.compile(m3u_regex).findall(content)
+    for title,url in match:
+      if 'thanh51' in name:  
+	    addLink(title,url,logos+'thanh51.png')
+      else:  
+        addLink(title,url,logos+'atf01.png')
+
+def thanh51_atf01_channel(url,name):
+  name=name.replace('[','\[').replace(']','\]')
+  content=makeRequest(url)
+  match=re.compile('#<CHANNEL>\s*#<NAME>'+name+'</NAME>((?s).*?)#</CHANNEL>').findall(content)
+  vlink=re.compile(m3u_regex).findall(match[0])
+  for title,ahref in vlink:
+    if 'thanh51.m3u' in url:	
+	  addLink(title,ahref,logos+'thanh51.png')
+    elif 'atf01.m3u' in url:
+	  addLink(title,ahref,logos+'atf01.png')	
+ 		  	  
 def tv_replay(url):
   content=makeRequest(url)
   match=re.compile('href="(\d+)/">(\d+)/<').findall(content)
@@ -277,13 +299,13 @@ def vietsimpletv(url):
 def tvtonghop_linklist(url):
   content=makeRequest(url)
   match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
-  for url, sname in match:  
+  for url, ch_name in match:  
 	if 'f4m' in url:
 	  url=url.split('=')[-1]
 	  url='plugin://plugin.video.f4mTester/?url='+url
-	  addLink('[COLOR yellow]'+sname.replace(' sever','Link')+'[COLOR lime] (f4m)[/COLOR]',url,iconimage)
+	  addLink('[COLOR yellow]'+ch_name.replace(' sever','Link')+'[COLOR lime] (f4m)[/COLOR]',url,iconimage)
 	else:
-	  get_Link('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
+	  get_Link('[COLOR cyan]'+ch_name.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
 
 def url_Resolver(url):
   if 'm3u8' in url:
@@ -378,15 +400,15 @@ def sctv_serverlist(url):
   content=makeRequest(url)
   if 'kenhhd' in url:
 	match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
-	for url, sname in match:
+	for url, ch_name in match:
 	  if 'f4m' in url:
 	    pass
 	  else:
-	    getLink('[COLOR magenta]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)
+	    getLink('[COLOR magenta]'+ch_name.replace(' sever','Link')+'[/COLOR]',url,iconimage)
   else:
     match=re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
-    for url, sname in match:
-      getLink('[COLOR cyan]'+sname.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
+    for url, ch_name in match:
+      getLink('[COLOR cyan]'+ch_name.replace(' sever','Link')+'[/COLOR]',url,iconimage)  
 
 def add_Link(name,url,iconimage):
   u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode=9"+"&iconimage="+urllib.quote_plus(iconimage)  
@@ -732,7 +754,10 @@ elif mode==40:
   
 elif mode==51:
   thanh51_atf01(url,name) 
-  
+
+elif mode==52:
+  thanh51_atf01_channel(url,name) 
+   
 elif mode==61:
   thanh51_xml(url)
 

@@ -1,5 +1,5 @@
 v 1.1.7
-- Fixed tv.anluong.info
+- Fixed tv tong hop
 - Minor clean up
 
 v 1.1.6

@@ -1,3 +1,11 @@
+v 1.1.8
+- Divided thanh51's m3u into channel groups.
+- Minor changes
+
+v 1.1.7
+- Fixed tv tong hop
+- Minor clean up
+
 v 1.1.6
 Added REGEX-hplus and REGEX-HTVOnline to thanh51's XML playlist
 

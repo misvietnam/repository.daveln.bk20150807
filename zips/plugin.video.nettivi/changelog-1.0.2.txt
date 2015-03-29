@@ -1,9 +1,0 @@
-v 1.0.2
-update haotivi
-
-v 1.0.1
-Update tv24vn
-No token needed
-
-v 1.0.0
-Initial release

@@ -757,7 +757,7 @@ http://115.146.126.226/chn/st3/v.m3u8
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR cyan]->>[B]TRUYỀN THANH[/B][COLOR blue] - [I]RADIO[/I][/COLOR]</NAME>
+#<NAME>[COLOR blue]->>[B]TRUYỀN THANH[/B][COLOR cyan] - [I]RADIO[/I][/COLOR]</NAME>
 #EXTINF:-1, RADIO XONE FM
 http://scache.fptplay.net.vn/liveshow/xonefmlive/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 #EXTINF:-1, RADIO VOV GIAO THÔNG HN

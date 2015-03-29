@@ -15,8 +15,14 @@
 </item>
 
 <item>
-<title>CP24</title>
+<title>CP24 (f4m)</title>
 <link>plugin://plugin.video.f4mTester/?url=http://ams-lp3.9c9media.com/hds-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.f4m</link>
+<thumbnail>hotchannel.png</thumbnail>
+</item>
+
+<item>
+<title>CP24 (m3u8)</title>
+<link>http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.m3u8</link>
 <thumbnail>hotchannel.png</thumbnail>
 </item>
 

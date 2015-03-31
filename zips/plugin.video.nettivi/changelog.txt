@@ -1,3 +1,6 @@
+v 1.1.9
+- Fixed empty settings in resources
+
 v 1.1.8
 - Divided thanh51's m3u into channel groups.
 - Minor changes

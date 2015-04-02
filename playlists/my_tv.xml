@@ -11,42 +11,32 @@
 <thumbnail></thumbnail>
 <items>
 <item>
-<title>Công Giáo TV</title>
+<title>Công Giáo</title>
 <link>http://54.152.24.55:1935/conggiao/myStream/playlist.m3u8</link>
 <thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
 </item>
 <item>
-<title>CHÚA LÀ TÌNH YÊU TV</title>
-<link>http://liveplay3.malimarcdn.com/chualatinhyeu/chualatinhyeu.sdp/playlist.m3u8</link>
-<thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
-</item>
-<item>
-<title>Hành Trình Đức Tin TV</title>
+<title>Hành Trình Đức Tin</title>
 <link>http://54.152.24.55:1935/htdt/myStream/playlist.m3u8</link>
 <thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
 </item>
 <item>
-<title>An Bình Hạnh Phúc TV</title>
+<title>An Bình Hạnh Phúc</title>
 <link>http://54.152.24.55:1935/abhp/myStream/playlist.m3u8</link>
 <thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
 </item>
 <item>
-<title>Việt Christian 1</title>
-<link>http://liveplay3.malimarcdn.com/chualatinhyeu/chualatinhyeu.sdp/playlist.m3u8</link>
-<thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
-</item>
-<item>
-<title>Viet Christian 2</title>
+<title>Viet Christian</title>
 <link>mms://live.vietchristian.com/tv</link>
 <thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
 </item>
 <item>
-<title>PHIM TIN LÀNH</title>
+<title>Chúa Là Tình Yêu</title>
 <link>http://liveplay3.malimarcdn.com/chualatinhyeu/chualatinhyeu.sdp/playlist.m3u8</link>
 <thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
 </item>
 <item>
-<title>Phật Từ Bi TV</title>
+<title>Phật Từ Bi</title>
 <link>http://206.190.140.142:1935/liveStream/ptb_1/playlist.m3u8</link>
 <thumbnail>https://raw.githubusercontent.com/daveln/repository.daveln/master/images/TVIcons/myreligion.png</thumbnail>
 </item>

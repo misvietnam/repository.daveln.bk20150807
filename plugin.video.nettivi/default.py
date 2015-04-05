@@ -171,9 +171,7 @@ def my_tv_scraper(url, iconimage):
 	elif 'tv.vnn.vn' in url:
 		match = re.compile('href="\/(.+?)">\s*<img src="\/(.+?)".+?\/>\s*(.+?)\n').findall(content)
 		for url, thumb, title in match:
-			title = replaceAll(title, my_dict)
-			print >> open('C:\\Users\\Tony\\Desktop\\VietTV.m3u', 'a+'), ('#EXTINF:-1,' + title)
-			print >> open('C:\\Users\\Tony\\Desktop\\VietTV.m3u', 'a+'), (tvviet + url)			
+			title = replaceAll(title, my_dict)	
 			add_link(title, tvviet + url, 202, (tvviet + thumb).replace(' ', '%20'))  	  
 
 def tvtonghop_anluong(name, url, iconimage):

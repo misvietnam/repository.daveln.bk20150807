@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
+  <string id="10001">SELECT TV MODE</string>
+  <string id="10002">1 - Menu Selections Mode (TV có nhiều thư mục)</string>
+  <string id="10003">2 - Direct Links Mode (TV vào thẳng kênh)</string>
+  <string id="10004">[COLOR red]Then manually restart[COLOR lime] (khởi động lại) [COLOR red]XBMC/Kodi.[/COLOR]</string> 
 </strings>

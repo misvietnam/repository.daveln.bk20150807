@@ -1,3 +1,8 @@
+v 1.1.11
+2 TV modes:
+- TV mode with multi menu selections.
+- TV mode showing all direct links.
+
 v 1.1.10
 Updated code
 

@@ -232,7 +232,7 @@ http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv10.480p/playlist.m3u8
 #EXTINF:-1,SCTV 14
 http://live.accessasia.tv:1935/vnptg_channels/mp4:sctv14.480p/playlist.m3u8
 
-#EXTINF:-1,[COLOR cyan]TV Trong Nước[COLOR]
+#EXTINF:-1,[COLOR cyan]TV Trong Nước[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,VNews - Truyền Hình Thông Tấn
 rtmp://live.vnanet.vn:1935/Live/ playpath=DRC swfUrl=http://avnews.vnanet.vn/RtmpPlayer/player.swf pageUrl=http://avnews.vnanet.vn/ live=1 timeout=90

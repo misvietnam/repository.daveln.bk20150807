@@ -105,11 +105,11 @@ http://206.190.140.142:1935/liveStream/vietvla_1/playlist.m3u8
 
 #EXTINF:-1,[COLOR cyan]HPLUS[/COLOR]
 http://www.youtube.com
-#EXTINF:-1,HTV2 HD
+#EXTINF:-1,HTV2 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/htv2-hd-2669.html
-#EXTINF:-1,HTV7 HD
+#EXTINF:-1,HTV7 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/htv7-hd-256.html
-#EXTINF:-1,HTV9 HD
+#EXTINF:-1,HTV9 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/htv9-hd-2667.html
 #EXTINF:-1,HTV 1
 http://hplus.com.vn/vi/content/detail/htv-1-2631.html
@@ -119,9 +119,9 @@ http://hplus.com.vn/vi/content/detail/htv-2-2630.html
 http://hplus.com.vn/vi/content/detail/htv-3-2535.html
 #EXTINF:-1,HTV 4
 http://hplus.com.vn/vi/content/detail/htv-4-2528.html
-#EXTINF:-1,VTV3 HD
+#EXTINF:-1,VTV3 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/vtv3-hd-2130.html
-#EXTINF:-1,VTV6 HD
+#EXTINF:-1,VTV6 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/vtv6-hd-2129.html
 #EXTINF:-1,VTV 1
 http://hplus.com.vn/vi/content/detail/vtv-1-2128.html
@@ -131,7 +131,7 @@ http://hplus.com.vn/vi/content/detail/vtv-2-2127.html
 http://hplus.com.vn/vi/content/detail/vtv-3-2126.html
 #EXTINF:-1,VTV 9
 http://hplus.com.vn/vi/content/detail/vtv-9-2125.html
-#EXTINF:-1,VTC 3 HD
+#EXTINF:-1,VTC 3 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/vtc-3-hd-2058.html
 #EXTINF:-1,VTC 4
 http://hplus.com.vn/vi/content/detail/vtc-4-2057.html
@@ -141,13 +141,13 @@ http://hplus.com.vn/vi/content/detail/vtc-6-2056.html
 http://hplus.com.vn/vi/content/detail/vtc-9-2052.html
 #EXTINF:-1,VTC 10
 http://hplus.com.vn/vi/content/detail/vtc-10-2051.html
-#EXTINF:-1,HTV Thể Thao HD
+#EXTINF:-1,HTV Thể Thao [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/htv-the-thao-hd-4009.html
 #EXTINF:-1,HTV Thể Thao
 http://hplus.com.vn/vi/content/detail/htv-the-thao-2400.html
-#EXTINF:-1,Thể Thao TV HD
+#EXTINF:-1,Thể Thao TV [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/the-thao-tv-hd-2133.html
-#EXTINF:-1,Bóng Đá TV HD
+#EXTINF:-1,Bóng Đá TV [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/bong-da-tv-hd-2131.html
 #EXTINF:-1,Đà Nẵng 2
 http://hplus.com.vn/vi/content/detail/da-nang-2-3268.html
@@ -165,17 +165,17 @@ http://hplus.com.vn/vi/content/detail/today-tv-2060.html
 http://hplus.com.vn/vi/content/detail/viet-nam-net-2048.html
 #EXTINF:-1,Bà Rịa
 http://hplus.com.vn/vi/content/detail/ba-ria-1982.html
-#EXTINF:-1,FOX SPORT 2 HD
+#EXTINF:-1,FOX SPORT 2 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/fox-sport-2-hd-3781.html
-#EXTINF:-1,FOX SPORT 1 HD
+#EXTINF:-1,FOX SPORT 1 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/fox-sport-1-hd-3681.html
-#EXTINF:-1,Channel V HD
+#EXTINF:-1,Channel V [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/channel-v-hd-3582.html
 #EXTINF:-1,National Geographic Channel HD
 http://hplus.com.vn/vi/content/detail/national-geographic-channel-hd-3207.html
-#EXTINF:-1,StarWorld HD
+#EXTINF:-1,StarWorld [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/starworld-hd-366.html
-#EXTINF:-1,STAR MOVIES HD
+#EXTINF:-1,STAR MOVIES [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/star-movies-hd-358.html
 
 #EXTINF:-1,[COLOR cyan]VTC[/COLOR]

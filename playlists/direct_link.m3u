@@ -103,7 +103,7 @@ http://206.190.150.132:1935/liveStream/hai_1/playlist.m3u8
 #EXTINF:-1,Ngôi Nhà Mơ Ước
 http://206.190.140.142:1935/liveStream/vietvla_1/playlist.m3u8
 
-#EXTINF:-1,[COLOR cyan]HPLUS[/COLOR]
+#EXTINF:-1,[COLOR cyan]HTV Online - HPLUS[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,HTV2 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/htv2-hd-2669.html

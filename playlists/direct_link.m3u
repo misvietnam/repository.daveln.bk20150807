@@ -436,6 +436,46 @@ rtmp://123.30.108.72/live/ playpath=thvl2 swfUrl=http://www.thvl.vn/jwplayer/jwp
 #EXTINF:-1,Truyền Hình Vĩnh Phúc
 rtmp://117.6.162.63/live/ playpath=thvp swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/vinhphuc.html swfVfy=true live=true timeout=90
 
+#EXTINF:-1,[COLOR cyan]Việt TV[/COLOR]
+http://www.youtube.com
+#EXTINF:-1,Kênh thông tin tổng hợp
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vtv1
+#EXTINF:-1,Kênh khoa học và giáo dục 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vtv2
+#EXTINF:-1,Kênh thông tin thể thao, giải trí 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vtv3
+#EXTINF:-1,Kênh tiếng dân tộc thiểu số 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vtv5
+#EXTINF:-1,Kênh giải trí tổng hợp 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vtc1
+#EXTINF:-1,Kênh thể thao tổng hợp 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vtc3
+#EXTINF:-1,Truyền Hình Hà Nội 1 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/hanoi1
+#EXTINF:-1,Truyền Hình Hà Nội 2 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/hanoi2
+#EXTINF:-1,Truyền hình An Ninh 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/antv
+#EXTINF:-1,Kênh VOV TV 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vov
+#EXTINF:-1,Truyền hình Thanh Hóa 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/ttv
+#EXTINF:-1,Truyền hình Bình Định 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/binhdinh
+#EXTINF:-1,Truyền hình Trà Vinh 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/travinh
+#EXTINF:-1,Truyền hình Hòa Bình 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/hoabinh
+#EXTINF:-1,Truyền hình Tiền Giang 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/tiengiang
+#EXTINF:-1,Truyền hình Bà Rịa VT 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/bariavt
+#EXTINF:-1,Truyền Hình Quảng Ninh 1 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/quangninh
+#EXTINF:-1,Truyền hình Bắc Ninh 
+http://tv.vnn.vn/Kenh-truyen-hinh-token/bacninh
+#EXTINF:-1,vks2
+http://tv.vnn.vn/Kenh-truyen-hinh-token/vks2
 
 #EXTINF:-1,[COLOR cyan]Âm Nhạc TV[/COLOR]
 http://www.youtube.com
@@ -638,7 +678,7 @@ http://2co1.vp9.tv/chn/nba/v.m3u8
 #EXTINF:-1,FOX SPORTS
 http://113.160.49.34/lives/lives/origin03/foxhdmb.isml/foxhdmb.m3u8
 
-#EXTINF:-1,[COLOR cyan]thanh51's playlist[/COLOR]
+#EXTINF:-1,[COLOR blue]thanh51's playlist[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,VTV1 HD S1
 http://hlscache.fptplay.net.vn/livez/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -1469,7 +1509,7 @@ rtmp://vov.radiovietnam.vn/live/vov2.stream
 #EXTINF:-1,VOV3
 rtmp://vov.radiovietnam.vn/live/vov3.stream
 
-#EXTINF:-1,[COLOR cyan]ATF01's playlist[/COLOR]
+#EXTINF:-1,[COLOR orange]ATF01's playlist[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,*** American Live TV ***  
 http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on live=true

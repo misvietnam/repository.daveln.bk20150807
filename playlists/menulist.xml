@@ -161,12 +161,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Religion - Nhạc Công Giáo</title>
-<link>http://gdata.youtube.com/feeds/api/users/nhacconggiaovn/uploads?start-index=1&max-results=50</link>
-<thumbnail>tongiao.png</thumbnail>
-</item>
-
-<item>
 <title>Religion - Thánh Ca</title>
 <link>http://gdata.youtube.com/feeds/api/users/ThanhCaHD/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
@@ -181,6 +175,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Religion - Tin Lành TiVi</title>
 <link>http://gdata.youtube.com/feeds/api/users/tinlanhtv/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Tin Lành Orange</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCd8tHv1A1VsTL7WS9yQ3eGg/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
 </item>
 

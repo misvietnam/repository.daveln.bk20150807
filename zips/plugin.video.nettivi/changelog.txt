@@ -1,3 +1,6 @@
+v 1.1.12
+Fixed Online XML Của Tui
+
 v 1.1.11
 2 TV modes:
 - TV mode with multi menu selections.

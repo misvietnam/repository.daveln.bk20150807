@@ -70,7 +70,7 @@ def replaceAll(text, my_dict):
 
 def open_file(file):
 	try:
-		f = open(file,'r')
+		f = open(file, 'r')
 		content = f.read()
 		f.close()
 		return content	
@@ -272,15 +272,15 @@ def playlist_channel(url, name, iconimage):
 		myxml = open(localxml, 'r')  
 		link = myxml.read()
 		myxml.close()
-		match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(link)	
-		for vlink in match:
-			final_link = re.compile(xml_regex).findall(vlink)
-			for title, url, thumb in final_link:
-				if len(thumb) <= 0:
-					add_link(title, url, 201, iconimage)
-				else:
-					add_link(title, url, 201, thumb)
-
+	match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(link)	
+	for vlink in match:
+		final_link = re.compile(xml_regex).findall(vlink)
+		for title, url, thumb in final_link:
+			if len(thumb) <= 0:
+				add_link(title, url, 201, iconimage)
+			else:
+				add_link(title, url, 201, thumb)	
+				
 def thanh51_xml_m3u_directory(iconimage):
 	add_dir("[COLOR lime]thanh51's XML playlist[/COLOR]", my_repo + 'master/playlists/thanh51.xml', 12, iconimage)  
 	add_dir("[COLOR blue]thanh51's M3U playlist[/COLOR]", my_repo + 'master/playlists/thanh51.m3u', 12, iconimage)  

@@ -31,7 +31,7 @@ rtmp://100.32.77.128:1935/live/ playpath=vod swfUrl=http://p.jwpcdn.com/6/12/jwp
 #EXTINF:-1,Sài Gòn TV 55.3 Link 1 [COLOR yellow](ATF01)[/COLOR]
 http://origin3-edge2.yourstreamlive.com:1935/live/yourstreamlive/out_1651_211xdnzd/chunklist_w1086793991.m3u8
 #EXTINF:-1,Sài Gòn TV 55.3 Link 2 [COLOR yellow](ATF01)[/COLOR]
-rtmp://origin3-edge2.yourstreamlive.com:1935/live/yourstreamlive/ playpath=out_1651_211xdnzd?platform=Computer swfUrl=http://www.yourstreamlive.com/jwplayer/jwplayer.flash.swf pageUrl=http://www.yourstreamlive.com/embed/iframe/live/1651?width=680&height=460&responsive=yes&upcoming_ events=false&autostart=yes&include_sharing:yes&sho w_live_event_schedule_link=no&show_powered_by=no&i nclude_countdown=no&skin=six
+rtmp://origin3-edge2.yourstreamlive.com:1935/live/yourstreamlive/ playpath=out_1651_211xdnzd?platform=Computer swfUrl=http://www.yourstreamlive.com/jwplayer/jwplayer.flash.swf pageUrl=http://www.yourstreamlive.com/embed/iframe/live/1651
 #EXTINF:-1,Viet USA TV
 http://stream.onworldtv.com/live/vus/index.m3u8
 #EXTINF:-1,ITV Home Shopping

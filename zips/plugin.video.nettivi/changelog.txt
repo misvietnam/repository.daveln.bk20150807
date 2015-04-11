@@ -1,3 +1,6 @@
+v 1.1.13
+Fixed tv.anluong.info
+
 v 1.1.12
 Fixed Online XML Của Tui
 

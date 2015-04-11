@@ -48,7 +48,7 @@ u_tube = 'http://www.youtube.com'
 tv_mode = mysettings.getSetting('tv_mode')
 if len(tv_mode) <= 0:
 	xbmcgui.Dialog().ok(localizedString(10001), localizedString(10002), localizedString(10003), localizedString(10004))
-	mysettings.openSettings() 
+	mysettings.openSettings()
 
 def get_cookie():
 	from urllib2 import Request, build_opener, HTTPCookieProcessor, HTTPHandler
@@ -109,7 +109,7 @@ def direct_link():
 		else:	
 			add_link(name, url, 201, logos + 'directlink.png')
 
-def my_tv_directory(url, iconimage): 
+def tv_directory(url, iconimage): 
 	content = make_request(url) 
 	match = re.compile(xml_channel_name).findall(content)
 	for channel_name in match:
@@ -125,7 +125,7 @@ def my_tv_directory(url, iconimage):
 			else:
 				add_dir(channel_name, url, 2, iconimage) 
 
-def my_tv_index(name, url, iconimage):	
+def tv_index(name, url, iconimage):	
 	content = make_request(url) 
 	match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(content)
 	for vlink in match:
@@ -139,7 +139,7 @@ def my_tv_index(name, url, iconimage):
 				else:	
 					add_link(title, url, 201, thumb)  
 
-def my_tv_scraper(url, iconimage):
+def tv_scraper(url, iconimage):
 	content = make_request(url)
 	if 'hplus' in url:
 		match = re.compile('href="http://hplus.com.vn/vi/genre/index(.+?)">(.+?)<').findall(content)
@@ -149,21 +149,21 @@ def my_tv_scraper(url, iconimage):
 			else: 
 				add_dir(name, 'http://hplus.com.vn/vi/genre/index' + url, 101, 'http://static.hplus.com.vn/themes/front/images/logo.png')
 	elif 'anluong' in url: 
-		match = re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="(.+?)"').findall(content)
+		match = re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="/(.+?)"').findall(content)
 		for url, name, thumb in match:	  
 			if 'SCTV' in name or 'SAO TV HD' in name or 'NHẠC CÁCH MẠNG' in name:
 				pass
 			else: 
-				add_dir(name.replace('SOPPING', 'SHOPPING'), anluongtv + url, 111, iconimage)
-				for url, name, thumb in match:
-					if 'SCTV' in name or 'SAO TV HD' in name:
-						add_dir(name, anluongtv + url, 111, iconimage)
-					else:
-						pass 		
-		match = re.compile('href="(.+?)"><img class="images-kenh1" src="(.+?)"').findall(content)
+				add_dir(name.replace('SOPPING', 'SHOPPING'), anluongtv + url, 111, anluongtv + thumb.replace(' ', '%20'))
+		for url, name, thumb in match:
+			if 'SCTV' in name or 'SAO TV HD' in name:
+				add_dir(name, anluongtv + url, 111,  anluongtv + thumb.replace(' ', '%20'))
+			else:
+				pass 		
+		match = re.compile('href="(.+?)"><img class="images-kenh1" src="/img/sctv/(.+?)"').findall(content)
 		for url, thumb in match:
-			name = url.replace('?tab=sctv&xem=', '').upper()
-			add_dir(name.replace('SCTV', 'SCTV '), anluongtv + url, 111, iconimage)		  
+			name = thumb.replace('.png', '').upper()
+			add_dir(name, anluongtv + url, 111, anluongtv + 'img/sctv/' + thumb.replace(' ', '%20'))		  
 	elif 'tvcatchup' in url:
 		match = re.compile('href="(\d+)/">(\d+)/<').findall(content)
 		for url, name in match:
@@ -193,7 +193,7 @@ def tvreplay_link(url, iconimage):
 		name = name[0] + '_' + name[-1]
 		add_link(name + '   [COLOR yellow]' + video_size + '[/COLOR]', url + '/' + href, 201, iconimage)
 
-def my_playlist_directories(name, iconimage):
+def my_playlist_directory(name, iconimage):
 	if 'XML' in name:
 		add_dir('[COLOR cyan]Online XML Playlist Của Tui[/COLOR]', 'onlinexml', 32, iconimage)
 		add_dir('[COLOR orange]Local XML Playlist Của Tui[/COLOR]', 'localxml', 32, iconimage)  
@@ -201,7 +201,7 @@ def my_playlist_directories(name, iconimage):
 		add_dir('[COLOR yellow]My Online M3U Playlist[/COLOR]', 'onlinem3u', 32, iconimage)
 		add_dir('[COLOR lime]My Local M3U Playlist[/COLOR]', 'localm3u', 32, iconimage)
 
-def my_playlist_links(name, iconimage):
+def my_playlist_link(name, iconimage):
 	if 'Local M3U' in name:
 		if len(localm3u) <= 0:
 			mysettings.openSettings()
@@ -264,7 +264,7 @@ def my_playlist_links(name, iconimage):
 		else:		  
 			mysettings.openSettings()	
 
-def playlist_channel(url, name, iconimage):
+def my_playlist_channel(url, name, iconimage):
 	name = name.replace('[', '\[').replace(']', '\]')
 	if url == onlinexml:
 		link = make_request(onlinexml)
@@ -355,16 +355,8 @@ def atf01_m3u(url, iconimage):
 			add_link(title, url, 201, iconimage)
 
 def index(url, iconimage):
-	content = make_request(url)
-	if 'tv.anluong.info' in url:		
-		match = re.compile('href="\?tab=kenhhd&xem=(.+?)"><img title="([^"]+)" class="images-kenh".+?src="([^"]*)"').findall(content)
-		for url, name, thumb in match:	
-			add_dir('SCTV HD - ' + name.replace('HD', '').replace('SCTV ', ''), anluongtv + '?tab=kenhhd&xem=' + url, 5, anluongtv + thumb)
-		match = re.compile('href="(.+?)"><img class="images-kenh1"  src="(.+?)"').findall(content)
-		for url, thumb in match:
-			name = url.replace('?tab=sctv&xem=', '').upper()
-			add_dir(name.replace('SCTV', 'SCTV '), anluongtv + url, 5, anluongtv + thumb) 
-	elif 'htvonline' in url:
+	content = make_request(url) 
+	if 'htvonline' in url:
 		match = re.compile("<a class=\"mh-grids5-img\".*?href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
 		for url, name, thumb in match:
 			add_Link(name, url, thumb) 	  
@@ -374,7 +366,7 @@ def index(url, iconimage):
 			name = re.sub(' HD', ' [COLOR magenta]* [COLOR yellow]HD[/COLOR]', name)
 			add_link(name, 'http://hplus.com.vn/' + url, 202, thumb + '?.png') 
 			
-def play_my_playlists(url):
+def play_my_playlist(url):
 	mediaUrl = url.replace('&amp;', '&')
 	item = xbmcgui.ListItem(path = mediaUrl)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
@@ -395,20 +387,22 @@ def resolve_url(url):
 	return
 
 def play_tvtonghop(url):
-	if 'm3u8' in url:
+	if 'm3u8' in url or 'rtmp' in url:
 		mediaUrl = url.split('=')[-1]
 	elif 'rtsp' in url:
 		mediaUrl = url  
 	else:
 		content = make_request(url)
-		try:  
-			mediaUrl = re.compile('file: "(.+?)",').findall(content)[0]
+		try:
+			try:
+				mediaUrl = re.compile('file: "(.+?)",').findall(content)[0]
+			except:	
+				mediaUrl = re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]
 		except:
 			try:
-				mediaUrl = re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]  
-			except:
-				mediaUrl = re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath=' + re.compile("'file': '(.+?)',").findall(content)[0]			
-				#mediaUrl = re.compile("'streamer': '(.+?)',").findall(content)[0] + '/' + re.compile("'file': '(.+?)',").findall(content)[0]	  
+				mediaUrl = re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath=' + re.compile("'file': '(.+?)',").findall(content)[0]
+			except:				
+				mediaUrl = re.compile('<iframe src="(.+?)".+?</iframe>').findall(content)[0].split('=')[-1]
 	item = xbmcgui.ListItem(path = mediaUrl)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
 	return
@@ -474,19 +468,19 @@ print "Name: " + str(name)
 print "iconimage: " + str(iconimage)
 
 if mode == None or url == None or len(url) < 1:
-	if '1' in tv_mode:
+	if 'Menu Selection Mode' in tv_mode:
 		main()
-	if '2' in tv_mode:
+	elif 'Direct Link Mode' in tv_mode:
 		direct_link()  	
 
 elif mode == 1:
-	my_tv_directory(url, iconimage)
+	tv_directory(url, iconimage)
 
 elif mode == 2:  
-	my_tv_index(name, url, iconimage)
+	tv_index(name, url, iconimage)
 
 elif mode == 3:
-	my_tv_scraper(url, iconimage)  
+	tv_scraper(url, iconimage)  
 
 elif mode == 11:  
 	thanh51_xml_m3u_directory(iconimage)
@@ -501,13 +495,13 @@ elif mode == 21:
 	atf01_m3u(url, iconimage)  
 
 elif mode == 31:
-	my_playlist_directories(name, iconimage)
+	my_playlist_directory(name, iconimage)
 
 elif mode == 32:
-	my_playlist_links(name, iconimage)  
+	my_playlist_link(name, iconimage)  
 
 elif mode == 33:  
-	playlist_channel(url, name, iconimage)  
+	my_playlist_channel(url, name, iconimage)  
 
 elif mode == 101:
 	index(url, iconimage) 
@@ -519,7 +513,7 @@ elif mode == 121:
 	tvreplay_link(url, iconimage)  
 
 elif mode == 201:  
-	play_my_playlists(url)
+	play_my_playlist(url)
 
 elif mode == 202:
 	resolve_url(url)  

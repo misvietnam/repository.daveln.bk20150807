@@ -6,9 +6,7 @@
     <setting label="Đường dẫn đến XML trên máy" type="file"  id="local_xml" default="" /> 
     <setting type="sep" />	
     <setting type="sep" />
-    <setting type="sep" />
     <setting type="sep" />	
-    <setting type="sep" />		
-    <setting label="[B]SELECT TV MODE[/B][COLOR red] (REQUIRED - BẮT BUỘC)[/COLOR]"  type="select" id="tv_mode" values="1 - Menu Selection Mode|2 - Direct Link Mode" default="" /> 	
+    <setting label="[B]SELECT TV MODE[/B][COLOR red] (REQUIRED - BẮT BUỘC)[/COLOR]"  type="select" id="tv_mode" values="Menu Selection Mode|Direct Link Mode" default="" /> 	
   </category>
 </settings>

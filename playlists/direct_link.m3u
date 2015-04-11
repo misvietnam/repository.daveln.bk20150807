@@ -1,6 +1,6 @@
 #EXTM3U
 
-#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 10 THÁNG 4 NĂM 2015[/COLOR]
+#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 11 THÁNG 4 NĂM 2015[/COLOR]
 http://www.youtube.com
 
 #EXTINF:-1,[COLOR cyan]Tôn Giáo[/COLOR]
@@ -28,6 +28,10 @@ http://64.71.129.2:8080/hls/ius_000104.m3u8
 rtmp://stream.s15.cpanelservices.com/lstvlive/livestream swfUrl=http://vietpho.com/ext/js/5.1/player-licensed.swf pageUrl=http://vietpho.com/online-channels.php live=true swfVfy=true timeout=30
 #EXTINF:-1,Việt Phố Link 2  [COLOR yellow](ATF01)[/COLOR]
 rtmp://100.32.77.128:1935/live/ playpath=vod swfUrl=http://p.jwpcdn.com/6/12/jwplayer.flash.swf pageUrl=http://www.huongviettv.com/index.php/component/allvideoshare/video/latest/live-streaming
+#EXTINF:-1,Sài Gòn TV 55.3 Link 1 [COLOR yellow](ATF01)[/COLOR]
+http://origin3-edge2.yourstreamlive.com:1935/live/yourstreamlive/out_1651_211xdnzd/chunklist_w1086793991.m3u8
+#EXTINF:-1,Sài Gòn TV 55.3 Link 2 [COLOR yellow](ATF01)[/COLOR]
+rtmp://origin3-edge2.yourstreamlive.com:1935/live/yourstreamlive/ playpath=out_1651_211xdnzd?platform=Computer swfUrl=http://www.yourstreamlive.com/jwplayer/jwplayer.flash.swf pageUrl=http://www.yourstreamlive.com/embed/iframe/live/1651?width=680&height=460&responsive=yes&upcoming_ events=false&autostart=yes&include_sharing:yes&sho w_live_event_schedule_link=no&show_powered_by=no&i nclude_countdown=no&skin=six
 #EXTINF:-1,Viet USA TV
 http://stream.onworldtv.com/live/vus/index.m3u8
 #EXTINF:-1,ITV Home Shopping

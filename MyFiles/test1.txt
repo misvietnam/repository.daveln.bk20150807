@@ -1,6 +1,2 @@
-﻿HTVC
-var iosUrl.*?\"(.*?)\"
-XemPhimSo
-file=(.*?)&
-MiamiTV
+﻿MiamiTV
 file: "([^"]+)"

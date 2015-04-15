@@ -1,0 +1,6 @@
+﻿HTVC
+var iosUrl.*?\"(.*?)\"
+XemPhimSo
+file=(.*?)&
+MiamiTV
+file: "([^"]+)"

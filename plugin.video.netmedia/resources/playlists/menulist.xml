@@ -161,12 +161,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Religion - Nhạc Công Giáo</title>
-<link>http://gdata.youtube.com/feeds/api/users/nhacconggiaovn/uploads?start-index=1&max-results=50</link>
-<thumbnail>tongiao.png</thumbnail>
-</item>
-
-<item>
 <title>Religion - Thánh Ca</title>
 <link>http://gdata.youtube.com/feeds/api/users/ThanhCaHD/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
@@ -181,6 +175,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Religion - Tin Lành TiVi</title>
 <link>http://gdata.youtube.com/feeds/api/users/tinlanhtv/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
+<title>Religion - Tin Lành Orange</title>
+<link>http://gdata.youtube.com/feeds/api/users/UCd8tHv1A1VsTL7WS9yQ3eGg/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
 </item>
 
@@ -471,6 +471,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>NewsInVN - Kênh Truyền Hình VTC 14</title>
+<link>http://gdata.youtube.com/feeds/api/users/KenhTruyenHinhVTC14/uploads?start-index=1&max-results=50</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
 <title>NewsInVN - VNews - Truyền Hình Thông Tấn</title>
 <link>http://gdata.youtube.com/feeds/api/users/UCfA4BYQdTPU9ItmQOauuFEQ/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
@@ -659,6 +665,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <!------------ Music --------------------->
+
+<item>
+<title>Music - Thuý Nga Paris By Night</title>
+<link>http://gdata.youtube.com/feeds/api/users/TNPBN/uploads?start-index=1&max-results=50</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
 
 <item>
 <title>Music - Asia</title>
@@ -905,6 +917,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ CaiLuong -------------------->
 
 <item>
+<title>CailuongTV - [COLOR yellow]Cải Lương [COLOR cyan]TV[/COLOR]</title>
+<link>http://206.190.140.142:1935/liveStream/cailuong_1/playlist.m3u8</link>
+<thumbnail>cailuong.png</thumbnail>
+</item>
+
+<item>
 <title>Cailuong - Lệ Thuỷ</title>
 <link>http://gdata.youtube.com/feeds/api/users/micovn/uploads?start-index=1&max-results=50</link>
 <thumbnail>cailuong.png</thumbnail>
@@ -919,12 +937,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Cailuong - Ngọc Huyền</title>
 <link>http://gdata.youtube.com/feeds/api/users/NgocHuyenZone/uploads?start-index=1&max-results=50</link>
-<thumbnail>cailuong.png</thumbnail>
-</item>
-
-<item>
-<title>Cailuong - Cải Lương Việt Nam</title>
-<link>http://gdata.youtube.com/feeds/api/users/cailuongvn2014/uploads?start-index=1&max-results=50</link>
 <thumbnail>cailuong.png</thumbnail>
 </item>
 
@@ -1794,8 +1806,26 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Other - Chuyện lạ Việt Nam</title>
+<link>http://gdata.youtube.com/feeds/api/users/chuyenlavietnam24h/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - Giải Trí 60 Giây</title>
+<link>http://gdata.youtube.com/feeds/api/users/bantintonghop/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
 <title>Other - Khoa học - Đời sống</title>
 <link>http://gdata.youtube.com/feeds/api/users/khoahoctv/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - KHOA HỌC- CÔNG NGHỆ Plus</title>
+<link>http://gdata.youtube.com/feeds/api/users/KHCN1123Pus/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

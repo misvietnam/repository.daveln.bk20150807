@@ -1415,31 +1415,31 @@ plugin://plugin.video.f4mTester/?url=http://avg.anluong.info/lives/origin03/cars
 plugin://plugin.video.f4mTester/?url=http://avg.anluong.info/lives/origin03/channelvsd.isml/channelvsd.f4m
 #EXTINF:-1,FOX SPORT
 plugin://plugin.video.f4mTester/?url=http://avg.anluong.info/lives/origin03/foxsd.isml/foxsd.f4m
-#EXTINF:-1,[COLOR=FF0084ff]LIFETV[/COLOR]
+#EXTINF:-1,LIFETV
 rtmp://27.118.16.16/live/live_lifetv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]KÊNH 9 MUSIC[/COLOR]
+#EXTINF:-1,KÊNH 9 MUSIC
 rtmp://27.118.16.16/live//9_music swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]FITNESS 360[/COLOR]
+#EXTINF:-1,FITNESS 360
 rtmp://27.118.16.16/live//fitness_360 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]MODEL CHANNEL[/COLOR]
+#EXTINF:-1,MODEL CHANNEL
 rtmp://27.118.16.16/live//model_channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]DI SẢN VIỆT[/COLOR]
+#EXTINF:-1,DI SẢN VIỆT
 rtmp://27.118.16.16/live//disanviet swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]4 MEN[/COLOR]
+#EXTINF:-1,4 MEN
 rtmp://27.118.16.16/live//4Men swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]2CHANNEL VN[/COLOR]
+#EXTINF:-1,2CHANNEL VN
 rtmp://27.118.16.16/live//2channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]SOTV[/COLOR]
+#EXTINF:-1,SOTV
 rtmp://27.118.16.16/live//sotv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]TECH CHANNEL[/COLOR]
+#EXTINF:-1,TECH CHANNEL
 rtmp://27.118.16.16/live//tech swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]KÊNH 911[/COLOR]
+#EXTINF:-1,KÊNH 911
 rtmp://27.118.16.16/live//911 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]TRUYỀN THÔNG VIỆT[/COLOR]
+#EXTINF:-1,TRUYỀN THÔNG VIỆT
 rtmp://27.118.16.16/live//ttv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]ITV[/COLOR]
+#EXTINF:-1,ITV
 rtmp://live.kenhitv.vn/liveweb//itv_web_500k.stream swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
-#EXTINF:-1,[COLOR=FF0084ff]NHAC CUA TUI[/COLOR]
+#EXTINF:-1,NHAC CUA TUI
 rtmp://123.30.134.108/live//nctlive swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/
 #EXTINF:-1,KVLA
 http://206.190.140.142/liveStream/kvla_1/playlist.m3u8

@@ -96,7 +96,9 @@ def category(url):
 	home()
 	for title, url, thumb in menu_list():
 		if 'Tôn Giáo' in name and 'Religion - ' in title:
-			add_dir(title.replace('Religion - ', ''), url, 3, logos + thumb)       
+			add_dir(title.replace('Religion - ', ''), url, 3, logos + thumb)
+		elif "Sưu tập của bạn thanh51" in name and 'thanh51 - ' in title:
+			add_dir(title.replace('thanh51 - ', ''), url, 3, logos + thumb)
 		elif 'Tin Tức & TV Hải Ngoại' in name and 'OverseaNews - ' in title:	
 			add_dir(title.replace('OverseaNews - ', ''), url, 3, logos + thumb)
 		elif 'Tin Tức & TV Trong Nước' in name and 'NewsInVN - ' in title:	

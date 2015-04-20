@@ -27,7 +27,7 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.</descripti
 
 <addon id="plugin.video.netmedia"
        name="*netmedia"
-       version="1.0.16"
+       version="1.0.17"
        provider-name="DaveLN">
   <requires>
     <import addon="xbmc.python" version="2.1.0" optional="true" />

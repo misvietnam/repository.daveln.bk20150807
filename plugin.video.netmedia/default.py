@@ -301,6 +301,7 @@ def TubeMotion_playlist(url):
 		for url, name in match:
 			name = replace_all(name, dict)
 			add_dir(name, 'http://www.dailymotion.com/rss' + url, 7, iconimage)
+		match = re.compile('href="(.+?)"\s*class=".+?"> (\d+)<').findall(content)	
 		for url, name in match:  
 			add_dir("[COLOR lime]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR lime]Page " + name + "[/COLOR]" , "http://www.dailymotion.com" + url, 6, icon)
 

@@ -15,9 +15,15 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu - [COLOR lime]Sưu tập của bạn thanh51[/COLOR]</title>
+<title>Main Menu - [COLOR lime]thanh51's collection[/COLOR]</title>
 <link>Thanh51</link>
 <thumbnail>thanh51.png</thumbnail>
+</item>
+
+<item>
+<title>Main Menu learn_kodi - [COLOR yellow]Regex, Python, XBMC, Kodi ...[/COLOR]</title>
+<link>tutorial</link>
+<thumbnail>tutorial.png</thumbnail>
 </item>
 
 <item>
@@ -339,6 +345,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>thanh51 - Planet Doc Full Documentaries</title>
 <link>http://gdata.youtube.com/feeds/api/users/PlanetDocChannel/uploads?start-index=1&max-results=50</link>
+<thumbnail>thanh51.png</thumbnail>
+</item>
+
+<item>
+<title>thanh51 - DocuVeVO Tribes Life</title>
+<link>http://gdata.youtube.com/feeds/api/users/DocuVevoTribesLife/uploads?start-index=1&max-results=50</link>
 <thumbnail>thanh51.png</thumbnail>
 </item>
 
@@ -893,6 +905,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Music - Ca Nhạc Việt Nam</title>
 <link>http://www.dailymotion.com/rss/user/TaiSON1973/1</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - Gozua Test</title>
+<link>http://www.dailymotion.com/rss/user/Gozua/1</link>
+<thumbnail>canhac.png</thumbnail>
+</item>
+
+<item>
+<title>Music - ExcelIsFun Test</title>
+<link>http://gdata.youtube.com/feeds/api/users/ExcelIsFun/uploads?start-index=1&max-results=50</link>
 <thumbnail>canhac.png</thumbnail>
 </item>
 
@@ -1866,6 +1890,18 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <!------------ Other ---------------->
+
+<item>
+<title>Other - [COLOR cyan]Programming and More ... by Dạy Nhau Học[/COLOR]</title>
+<link>http://gdata.youtube.com/feeds/api/users/trandatnh/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - [COLOR cyan]Programming and More ... by Derek Banas[/COLOR]</title>
+<link>http://gdata.youtube.com/feeds/api/users/derekbanas/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
 
 <item>
 <title>Other - Bếp Yêu Thương</title>

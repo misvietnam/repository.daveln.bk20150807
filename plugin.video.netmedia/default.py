@@ -141,76 +141,76 @@ def directory():
 		
 def category(url):
 	home()
-	for title, url, thumbnail in menu_list():
+	for title, url, thumb in menu_list():
 		if 'Tôn Giáo' in name:   
 			if 'Religion - ' in title:	
-				addDir(title.replace('Religion - ',''),url,3,logos+thumbnail)      
+				add_dir(title.replace('Religion - ', ''), url, 3, logos + thumb)      
 		elif "thanh51's collection" in name:
 			if 'thanh51 - ' in title:
 				add_dir(title.replace('thanh51 - ', ''), url, 3, logos + thumb)			
 		elif 'Tin Tức & TV Hải Ngoại' in name:
 			if 'OverseaNews - ' in title:	
-				addDir(title.replace('OverseaNews - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('OverseaNews - ', ''), url, 3, logos + thumb)
 		elif 'Tin Tức & TV Trong Nước' in name:
 			if 'NewsInVN - ' in title:	
-				addDir(title.replace('NewsInVN - ',''),url,3,logos+thumbnail)  
+				add_dir(title.replace('NewsInVN - ', ''), url, 3, logos + thumb)  
 		elif 'Thiếu Nhi' in name:
 			if 'Children - ' in title:	
-				addDir(title.replace('Children - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Children - ', ''), url, 3, logos + thumb)
 		elif 'Ca Nhạc' in name:
 			if 'Music - ' in title:	
-				addDir(title.replace('Music - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Music - ', ''), url, 3, logos + thumb)
 		elif 'Hát Karaoke' in name:
 			if 'Karaoke - ' in title:	
-				addDir(title.replace('Karaoke - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Karaoke - ', ''), url, 3, logos + thumb)
 		elif 'Cải Lương' in name:
 			if 'CailuongTV - ' in title:
-				addLink(title.replace('CailuongTV - ',''),url,logos+thumbnail)
+				add_link(title.replace('CailuongTV - ', ''), url, 4, logos + thumb)
 			elif 'Cailuong - ' in title:	
-				addDir(title.replace('Cailuong - ',''),url,3,logos+thumbnail)        
+				add_dir(title.replace('Cailuong - ', ''), url, 3, logos + thumb)        
 		elif 'Hài Kịch' in name:
 			if 'Sitcom - ' in title:	
-				addDir(title.replace('Sitcom - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Sitcom - ', ''), url, 3, logos + thumb)
 		elif 'Talk Shows' in name:
 			if 'TalkShows - ' in title:	
-				addDir(title.replace('TalkShows - ',''),url,3,logos+thumbnail)    
+				add_dir(title.replace('TalkShows - ', ''), url, 3, logos + thumb)    
 		elif 'TV Shows' in name:
 			if 'TiviShows - ' in title:	
-				addDir(title.replace('TiviShows - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('TiviShows - ', ''), url, 3, logos + thumb)
 		elif 'Thể Thao' in name:
 			if 'Sports - ' in title:	
-				addDir(title.replace('Sports - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Sports - ', ''), url, 3, logos + thumb)
 		elif 'Du Lịch' in name:
 			if 'Travel - ' in title:	
-				addDir(title.replace('Travel - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Travel - ', ''), url, 3, logos + thumb)
 		elif 'Y Khoa' in name:
 			if 'Medical - ' in title:	
-				addDir(title.replace('Medical - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Medical - ', ''), url, 3, logos + thumb)
 			elif 'Y Tế NguoiVietTV - ' in title:
-				addDir(title.replace('Y Tế NguoiVietTV - ',''),url,5,logos+thumbnail)         
+				add_dir(title.replace('Y Tế NguoiVietTV - ', ''), url, 5, logos + thumb)         
 			elif 'Y Tế Đồng Nai' in title:
-				addDir(title.replace('Y Tế Đồng Nai - ',''),url,5,logos+thumbnail)        
+				add_dir(title.replace('Y Tế Đồng Nai - ', ''), url, 5, logos + thumb)        
 		elif 'Ẩm Thực Tình Yêu' in name:
 			if 'Cooking - ' in title:	
-				addDir(title.replace('Cooking - ',''),url,3,logos+thumbnail)     	
+				add_dir(title.replace('Cooking - ', ''), url, 3, logos + thumb)     	
 		elif 'Trang Điểm' in name:
 			if 'MakeUp - ' in title:	
-				addDir(title.replace('MakeUp - ',''),url,3,logos+thumbnail)	
+				add_dir(title.replace('MakeUp - ', ''), url, 3, logos + thumb)	
 		elif 'Đọc Truyện' in name:
 			if 'AudioBook - ' in title:	
-				addDir(title.replace('AudioBook - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('AudioBook - ', ''), url, 3, logos + thumb)
 		elif 'Di trú và Nhập Tịch Hoa Kỳ' in name:
 			if 'Immigration - ' in title:	
-				addDir(title.replace('Immigration - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Immigration - ', ''), url, 3, logos + thumb)
 		elif 'America\'s Funniest Videos' in name:
 			if 'AFV - ' in title:	
-				addDir(title.replace('AFV - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('AFV - ', ''), url, 3, logos + thumb)
 		elif 'Dicovery Channels & Animal Planet' in name:
 			if 'DCAP - ' in title:	
-				addDir(title.replace('DCAP - ',''),url,3,logos+thumbnail)       
+				add_dir(title.replace('DCAP - ', ''), url, 3, logos + thumb)       
 		elif 'Những Mục Khác' in name:
 			if 'Other - ' in title:	
-				addDir(title.replace('Other - ',''),url,3,logos+thumbnail)
+				add_dir(title.replace('Other - ', ''), url, 3, logos + thumb)
 
 def medical_site(url):
 	home()

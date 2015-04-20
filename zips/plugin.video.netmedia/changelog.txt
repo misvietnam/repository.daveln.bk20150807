@@ -4,6 +4,9 @@ https://github.com/bromix/plugin.video.youtube
 Download link for Dailymotion add-on:
 https://github.com/AddonScriptorDE/plugin.video.dailymotion_com
 
+v 1.0.16
+Updated
+
 v 1.0.15
 Added thanh51's collection
 

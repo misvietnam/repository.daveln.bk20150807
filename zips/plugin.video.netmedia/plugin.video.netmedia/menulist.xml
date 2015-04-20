@@ -15,18 +15,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu - [COLOR lime]thanh51's collection[/COLOR]</title>
-<link>Thanh51</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>Main Menu learn_kodi - [COLOR yellow]Regex, Python, XBMC, Kodi ...[/COLOR]</title>
-<link>tutorial</link>
-<thumbnail>tutorial.png</thumbnail>
-</item>
-
-<item>
 <title>Main Menu Plus - Tin Tức & TV</title>
 <link>TinTuc</link>
 <thumbnail>tintuctv.png</thumbnail>
@@ -173,6 +161,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Religion - Nhạc Công Giáo</title>
+<link>http://gdata.youtube.com/feeds/api/users/nhacconggiaovn/uploads?start-index=1&max-results=50</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
 <title>Religion - Thánh Ca</title>
 <link>http://gdata.youtube.com/feeds/api/users/ThanhCaHD/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
@@ -187,12 +181,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>Religion - Tin Lành TiVi</title>
 <link>http://gdata.youtube.com/feeds/api/users/tinlanhtv/uploads?start-index=1&max-results=50</link>
-<thumbnail>tongiao.png</thumbnail>
-</item>
-
-<item>
-<title>Religion - Tin Lành Orange</title>
-<link>http://gdata.youtube.com/feeds/api/users/UCd8tHv1A1VsTL7WS9yQ3eGg/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
 </item>
 
@@ -296,80 +284,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <title>Religion - Cao Đài Ban Chỉnh Đạo</title>
 <link>http://gdata.youtube.com/feeds/api/users/caodaibanchinhdaoorg/uploads?start-index=1&max-results=50</link>
 <thumbnail>tongiao.png</thumbnail>
-</item>
-
-<!------------ thanh51 --------------->
-
-<item>
-<title>thanh51 - VTC2 TV</title>
-<link>http://gdata.youtube.com/feeds/api/users/vtc2tv/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - TheChuChu TV</title>
-<link>http://gdata.youtube.com/feeds/api/users/TheChuChuTV/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - NHẠC VÀNG PLUS</title>
-<link>http://gdata.youtube.com/feeds/api/users/NhacVangPlus/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - NHẠC VÀNG TUYỂN CHỌN 2</title>
-<link>http://gdata.youtube.com/feeds/api/users/nhacvangtuyenchon2/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - NVB TUBE</title>
-<link>http://gdata.youtube.com/feeds/api/users/nvbtube4474/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - Documentary & Life Discovery HD Channel</title>
-<link>http://gdata.youtube.com/feeds/api/users/LifeDiscoveryDocu/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - HD Documentary Channel</title>
-<link>http://gdata.youtube.com/feeds/api/users/HDdocumentaryChannel/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - Planet Doc Full Documentaries</title>
-<link>http://gdata.youtube.com/feeds/api/users/PlanetDocChannel/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - National Geo & Discovery HD Channel</title>
-<link>http://gdata.youtube.com/feeds/api/users/NationalGeoTVchannel/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - HD Universe Channel</title>
-<link>http://gdata.youtube.com/feeds/api/users/HDUniverseChannel/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - TheGoldProspector D'arcy Cooper</title>
-<link>http://gdata.youtube.com/feeds/api/users/hixonAu/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
-</item>
-
-<item>
-<title>thanh51 - Imperia Toys</title>
-<link>http://gdata.youtube.com/feeds/api/users/ImperiaToys/uploads?start-index=1&max-results=50</link>
-<thumbnail>thanh51.png</thumbnail>
 </item>
 
 <!------------ OverseaNews --------------->
@@ -553,12 +467,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>NewsInVN - VTV - Đài Truyền Hình Việt Nam</title>
 <link>http://gdata.youtube.com/feeds/api/users/VTVgo/uploads?start-index=1&max-results=50</link>
-<thumbnail>vietnam.png</thumbnail>
-</item>
-
-<item>
-<title>NewsInVN - Kênh Truyền Hình VTC 14</title>
-<link>http://gdata.youtube.com/feeds/api/users/KenhTruyenHinhVTC14/uploads?start-index=1&max-results=50</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -751,12 +659,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <!------------ Music --------------------->
-
-<item>
-<title>Music - Thuý Nga Paris By Night</title>
-<link>http://gdata.youtube.com/feeds/api/users/TNPBN/uploads?start-index=1&max-results=50</link>
-<thumbnail>canhac.png</thumbnail>
-</item>
 
 <item>
 <title>Music - Asia</title>
@@ -1874,18 +1776,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------ Other ---------------->
 
 <item>
-<title>Other - [COLOR cyan]Programming and More ... by Dạy Nhau Học[/COLOR]</title>
-<link>http://gdata.youtube.com/feeds/api/users/trandatnh/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - [COLOR cyan]Programming and More ... by Derek Banas[/COLOR]</title>
-<link>http://gdata.youtube.com/feeds/api/users/derekbanas/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
 <title>Other - Bếp Yêu Thương</title>
 <link>http://gdata.youtube.com/feeds/api/users/WilmarVietnam/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
@@ -1904,26 +1794,8 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Other - Chuyện lạ Việt Nam</title>
-<link>http://gdata.youtube.com/feeds/api/users/chuyenlavietnam24h/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Giải Trí 60 Giây</title>
-<link>http://gdata.youtube.com/feeds/api/users/bantintonghop/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
 <title>Other - Khoa học - Đời sống</title>
 <link>http://gdata.youtube.com/feeds/api/users/khoahoctv/uploads?start-index=1&max-results=50</link>
-<thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - KHOA HỌC- CÔNG NGHỆ Plus</title>
-<link>http://gdata.youtube.com/feeds/api/users/KHCN1123Pus/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 
@@ -1955,18 +1827,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <title>Other - Zui.vn</title>
 <link>http://gdata.youtube.com/feeds/api/users/zuivn/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - Gozua</title>
-<link>http://www.dailymotion.com/rss/user/Gozua/1</link>
-<thumbnail>canhac.png</thumbnail>
-</item>
-
-<item>
-<title>Other - ExcelIsFun</title>
-<link>http://gdata.youtube.com/feeds/api/users/ExcelIsFun/uploads?start-index=1&max-results=50</link>
-<thumbnail>canhac.png</thumbnail>
 </item>
 
 <item>

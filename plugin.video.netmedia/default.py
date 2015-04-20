@@ -24,8 +24,8 @@ mysettings = xbmcaddon.Addon(id = 'plugin.video.netmedia')
 profile = mysettings.getAddonInfo('profile')
 home = mysettings.getAddonInfo('path')
 icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
-logos = xbmc.translatePath(os.path.join(home, 'resources\logos\\'))
-home_menu = xbmc.translatePath(os.path.join(home, 'resources\playlists\menulist.xml'))
+logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
+home_menu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'menulist.xml'))
 home_link = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
 dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':'-', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
 

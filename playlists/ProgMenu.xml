@@ -340,6 +340,8 @@
 <link>plugin://plugin.video.youtube/play/?video_id=0r3yYXLQisc</link>
 <thumbnail>https://yt3.ggpht.com/-T5KhISjRRjo/AAAAAAAAAAI/AAAAAAAAAAA/FJXBKhpnO3E/s88-c-k-no/photo.jpg</thumbnail>
 </item>
+</items>
+</channel>
 
 <channel>
 <name>Tìm hiểu Regular Expression by ewebvn</name>
@@ -350,6 +352,8 @@
 <link>plugin://plugin.video.youtube/play/?video_id=m8HCENJ4TXM</link>
 <thumbnail>https://i.ytimg.com/i/p9QPIKtOgccJ7KmSPLRzTQ/1.jpg</thumbnail>
 </item>
+</items>
+</channel>
 
 <channel>
 <name>REGEX Tutorial Regular Expressions by Derek Banas</name>

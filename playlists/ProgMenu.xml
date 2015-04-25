@@ -356,6 +356,198 @@
 </channel>
 
 <channel>
+<name>Learn Python the Hard Way by  Barton Poulson</name>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+<items>
+<item>
+<title>Welcome - Learn Python the Hard Way (1:53)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=F9kC70vhRnw</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 00 - The Setup - Learn Python the Hard Way (15:48)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=QQ1ol6E_9oo</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 01 - A Good First Program - Learn Python the Hard Way (11:04)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=k-SyGaRk8YY</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 02 - Comments and Pound Characters - Learn Python the Hard Way (7:29)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=vT9mkJYcQVY</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 03 - Numbers and Math - Learn Python the Hard Way (10:25)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=ZOiGnTPBAy4</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 04 - Variables and Names - Learn Python the Hard Way (8:09)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=atXS-XgUvuE</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 05 - More Variables and Printing - Learn Python the Hard Way (8:40)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=urzbUpdpxN8</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 06 - Strings and Text - Learn Python the Hard Way (10:05)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=9KaErBEYHKA</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 07 - More Printing - Learn Python the Hard Way (5:16)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=ei4HYtvtHcY</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 08 - Printing, Printing - Learn Python the Hard Way (5:23)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=ayLBifwkKeI</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 09 - Printing, Printing, Printing - Learn Python the Hard Way (5:29)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=3RhBNdv8iLQ</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 10 - What Was That? - Learn Python the Hard Way (6:24)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=2R576xQejwo</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 11 - Asking Questions - Learn Python the Hard Way (6:33)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=LEkmJRg51qQ</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 12 - Prompting People - Learn Python the Hard Way (5:50)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=2ZdN08AR0jI</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 13 - Parameters, Unpacking, Variables - Learn Python the Hard Way (5:04)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=ceIJdwriuKc</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 14 - Prompting and Passing - Learn Python the Hard Way (8:12)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=QfoszA9goDo</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 15 - Reading Files - Learn Python the Hard Way (8:04)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=GkpanN59MTI</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 16 - Reading and Writing Files - Learn Python the Hard Way (12:43)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=DwvSntCSf-0</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 17 - More Files - Learn Python the Hard Way (12:13)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=kH7XoEZBkj8</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 18 - Names, Variables, Code, Functions - Learn Python the Hard Way (8:33)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=llK_4FTHOZQ</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 19 - Functions and Variables - Learn Python the Hard Way (5:54)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=n0C91YH3aQI</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 20 - Functions and Files - Learn Python the Hard Way (9:51)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=hbH89UCg9rM</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 21 - Functions Can Return Something - Learn Python the Hard Way (8:26)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=QH8LfS-29JE</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 22 - What Do You Know So Far? - Learn Python the Hard Way (6:50)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=8nmekdC2r-c</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 23 - Read Some Code - Learn Python the Hard Way (7:05)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=xVSE1YpRIVo</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 24 - More Practice - Learn Python the Hard Way (13:54)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=1v1XMbVxQu0</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 25 - Even More Practice - Learn Python the Hard Way (18:32)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=sNmLKBsOjto</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 26 - Congratulations, Take a Test! - Learn Python the Hard Way (8:48)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=N9e2SH2pwns</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 27 - Memorizing Logic - Learn Python the Hard Way (5:43)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=eOV72NHnK4Q</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 28 - Boolean Practice - Learn Python the Hard Way (11:05)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=cqsdz8qb-Wo</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 29 - What If - Learn Python the Hard Way (5:49)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=yZHPUvoSKeA</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 30 - Else and If - Learn Python the Hard Way (5:07)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=Sww4qQq8_tU</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 31 - Making Decisions - Learn Python the Hard Way (9:34)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=pXG2uKTZl8U</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 32 - Loops and Lists - Learn Python the Hard Way (11:21)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=EDxRFmuTjsc</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 33 - While Loops - Learn Python the Hard Way (11:59)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=Vkk92omL8-8</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 34 - Accessing Elements of Lists - Learn Python the Hard Way (7:05)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=gzqRMQOhsNw</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+<item>
+<title>Ex 35 - Branches and Functions - Learn Python the Hard Way (10:28)</title>
+<link>plugin://plugin.video.youtube/play/?video_id=J6aHn0xyCCI</link>
+<thumbnail>https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg</thumbnail>
+</item>
+</items>
+</channel>
+
+<channel>
 <name>REGEX Tutorial Regular Expressions by Derek Banas</name>
 <thumbnail>https://yt3.ggpht.com/-SN1RQ4kN5bM/AAAAAAAAAAI/AAAAAAAAAAA/T39gSKk4e2g/s100-c-k-no/photo.jpg</thumbnail>
 <items>

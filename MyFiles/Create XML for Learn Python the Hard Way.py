@@ -12,6 +12,9 @@ url='https://www.youtube.com/playlist?list=PLCHnubFzFwjJVEvQk-FuEynAuwGV_4BNS'  
 foldername = 'Learn Python the Hard Way by Barton Poulson'  # This name will be used for folder, file, and channel name
 thumb = 'https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg' # location to thumbnail on xml playlist.
 
+
+#xml_file = os.path.expanduser('~/Desktop/' + foldername + '.xml')		# xml file is on Desktop
+
 Desktop_folderpath = os.path.expanduser('~/Desktop/' + foldername)
 if not os.path.exists(Desktop_folderpath):
     os.makedirs(Desktop_folderpath)
@@ -33,4 +36,4 @@ for url, name, duration in match:
 	url = 'plugin://plugin.video.youtube/play/?video_id=' + url
 	f.write('<item>\n<title>' + name + ' (' + duration + ')' + '</title>\n<link>' + url + '</link>\n<thumbnail>' + thumb + '</thumbnail>\n</item>\n')
 f.write('</items>\n</channel>\n')
-
+f.close()

@@ -13,13 +13,15 @@ foldername = 'Learn Python the Hard Way by Barton Poulson'  # This name will be 
 thumb = 'https://yt3.ggpht.com/-SeiGqP6PKvI/AAAAAAAAAAI/AAAAAAAAAAA/3NKqqfiwqCw/s100-c-k-no/photo.jpg' # location to thumbnail on xml playlist.
 
 
-#xml_file = os.path.expanduser('~/Desktop/' + foldername + '.xml')		# xml file is on Desktop
+xml_file = os.path.expanduser('~/Desktop/' + foldername + '.xml')		# xml file is on Desktop
 
+'''
 Desktop_folderpath = os.path.expanduser('~/Desktop/' + foldername)
 if not os.path.exists(Desktop_folderpath):
     os.makedirs(Desktop_folderpath)
 else: pass
 xml_file = Desktop_folderpath + '\\' + foldername + '.xml'
+'''
 
 req = urllib2.Request(url)
 req.add_header('User-agent' , 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 VietMedia/1.0')

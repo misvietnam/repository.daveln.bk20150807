@@ -23,10 +23,11 @@ import xbmc, xbmcplugin, xbmcgui, xbmcaddon
 mysettings = xbmcaddon.Addon(id = 'plugin.video.netmedia')
 profile = mysettings.getAddonInfo('profile')
 home = mysettings.getAddonInfo('path')
+fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
-logos = xbmc.translatePath(os.path.join(home, 'logos\\'))
-home_menu = xbmc.translatePath(os.path.join(home, 'menulist.xml'))
-prog_menu = xbmc.translatePath(os.path.join(home, 'ProgMenu.xml'))
+logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
+home_menu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'menulist.xml'))
+prog_menu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'ProgMenu.xml'))
 prog_link = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ProgMenu.xml'
 home_link = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
 dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':'-', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
@@ -40,8 +41,6 @@ if not os.path.exists(home_menu):
 status = urllib.urlopen(home_link).getcode()
 if status == 200:
 	urllib.urlretrieve (home_link, home_menu)
-else:
-	pass
 	
 if not os.path.exists(prog_menu):
 	try:
@@ -52,15 +51,13 @@ if not os.path.exists(prog_menu):
 status = urllib.urlopen(prog_link).getcode()
 if status == 200:
 	urllib.urlretrieve (prog_link, prog_menu)
-else:
-	pass	
 
 def menu_list():
 	try:
 		mainmenu = open(home_menu, 'r')  
 		link = mainmenu.read()
 		mainmenu.close()
-		match = re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(link)
+		match = re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.*?)</thumbnail>").findall(link)
 		return match
 	except:
 		pass	
@@ -90,19 +87,60 @@ def make_request(url):
 			print 'Reason: ', e.reason
 			
 def home():
-	add_dir('[COLOR cyan]. .[COLOR red]  ^  [COLOR cyan]. .[COLOR yellow]  Home  [COLOR cyan]. .[COLOR red]  ^  [COLOR cyan]. .[/COLOR]', '', None, icon)
+	add_dir('[COLOR cyan]. .[COLOR red]  ^  [COLOR cyan]. .[COLOR yellow]  Home  [COLOR cyan]. .[COLOR red]  ^  [COLOR cyan]. .[/COLOR]', '', None, icon, fanart)
 		
 def main():
+	add_dir('[COLOR yellow]Youtube Search[/COLOR]', 'youtube', 90, logos + 'YTSearch.png', fanart)
+	add_dir('[COLOR cyan]Dailymotion Search[/COLOR]', 'dailymotion', 90, logos + 'DMSearch.png', fanart)	
 	for title, url, thumb in menu_list():
 		if 'Main Menu - ' in title:  
-			add_dir(title.replace('Main Menu - ', ''), url, 2, logos + thumb)
+			add_dir(title.replace('Main Menu - ', ''), url, 2, logos + thumb, fanart)
 		elif 'Main Menu Plus - ' in title:  
-			add_dir(title.replace('Main Menu Plus - ', ''), url, 1, logos + thumb)	
+			add_dir(title.replace('Main Menu Plus - ', ''), url, 1, logos + thumb, fanart)	
 		elif 'Main Menu learn_kodi - ' in title:  
-			add_dir(title.replace('Main Menu learn_kodi - ', ''), url, 8, logos + thumb)			
-		else:
-			pass
+			add_dir(title.replace('Main Menu learn_kodi - ', ''), url, 8, logos + thumb, fanart)			
 
+def search():
+	try:
+		keyb = xbmc.Keyboard('', 'Enter search text')
+		keyb.doModal()
+		if (keyb.isConfirmed()):
+			searchText = urllib.quote_plus(keyb.getText())
+		if 'Youtube Search' in name:  
+			url = 'https://www.youtube.com/results?search_query=' + searchText
+			search_result(url)
+		elif 'Dailymotion Search' in name:  
+			url = 'http://www.dailymotion.com/relevance/universal/search/'+ searchText +'/1'
+			search_result(url)			
+	except:
+		pass
+
+def search_result(url):
+	home()
+	content = make_request(url)
+	if 'youtube' in url:
+		match = re.compile('href="/watch\?v=(.+?)" class=".+?" data-sessionlink=".+?" title="(.+?)".+?Duration: (.+?).</span>').findall(content)
+		for url, name, duration in match:
+			name = replace_all(name, dict)
+			thumb = 'https://i.ytimg.com/vi/' + url + '/mqdefault.jpg'
+			url = 'plugin://plugin.video.youtube/play/?video_id=' + url
+			add_link(name + ' (' + duration + ')', url, 4, thumb, fanart)
+		match = re.compile('href="/results\?search_query=(.+?)".+?aria-label="Go to (.+?)"').findall(content)
+		for url, name in match:
+			url = 'https://www.youtube.com/results?search_query=' + url
+			add_dir(name, url, 91, icon, fanart)
+	elif 'dailymotion' in url:
+		match = re.compile('data-xid="(.+?)">\s*\s*\s*<div class=".+?duration">\s*(.+?)\s*</div>\s*\s*\s*\s*\s*\s*\s*<img class.+?title="(.+?)".+?data-src="(.+?)"').findall(content)
+		for url, duration, name, thumb in match:
+			name = replace_all(name, dict)
+			url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=' + url
+			add_link(name + ' (' + duration + ')', url, 4, thumb, fanart)
+		match = re.compile('href="(.+?)"\s*class=".+?"> (\d+)<').findall(content)
+		for url, name in match:
+			url = 'http://www.dailymotion.com' + url
+			add_dir('Trang ' + name, url, 91, icon, fanart)			
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 def learn_kodi():
 	home()
 	myxml = open(prog_menu, 'r')  
@@ -111,14 +149,15 @@ def learn_kodi():
 	if '<channel>' in link:
 		match = re.compile('<channel>\s*<name>(.+?)</name>').findall(link)
 		for channel_name in match:
-			add_dir(channel_name, 'progmenu', 9, iconimage)
+			add_dir(channel_name, 'progmenu', 9, iconimage, fanart)
 	else:
 		match = re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.*?)</thumbnail>").findall(link)
 		for title, url, thumb in match:
 			if len(thumb) > 0:
-				add_link(title, url, 4, thumb) 
+				add_link(title, url, 4, thumb, fanart) 
 			else:	
-				add_link(title, url, 4, iconimage) 		
+				add_link(title, url, 4, iconimage, fanart)
+		xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def play_tutorial(name):
 	home()
@@ -130,87 +169,88 @@ def play_tutorial(name):
 		final_link = re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.*?)</thumbnail>").findall(vlink)
 		for title, url, thumb in final_link:
 			if len(thumb) <= 0:
-				add_link(title, url, 4, iconimage)
+				add_link(title, url, 4, iconimage, fanart)
 			else:
-				add_link(title, url, 4, thumb)	
+				add_link(title, url, 4, thumb, fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def directory():
 	home()
-	add_dir('Tin Tức & TV Hải Ngoại', url, 2, logos + 'haingoai.png')
-	add_dir('Tin Tức & TV Trong Nước', url, 2, logos + 'vietnam.png')
+	add_dir('Tin Tức & TV Hải Ngoại', url, 2, logos + 'haingoai.png', fanart)
+	add_dir('Tin Tức & TV Trong Nước', url, 2, logos + 'vietnam.png', fanart)
 		
 def category(url):
 	home()
 	for title, url, thumb in menu_list():
 		if 'Tôn Giáo' in name:   
 			if 'Religion - ' in title:	
-				add_dir(title.replace('Religion - ', ''), url, 3, logos + thumb)      
+				add_dir(title.replace('Religion - ', ''), url, 3, logos + thumb, fanart)      
 		elif "thanh51's collection" in name:
 			if 'thanh51 - ' in title:
-				add_dir(title.replace('thanh51 - ', ''), url, 3, logos + thumb)			
+				add_dir(title.replace('thanh51 - ', ''), url, 3, logos + thumb, fanart)			
 		elif 'Tin Tức & TV Hải Ngoại' in name:
 			if 'OverseaNews - ' in title:	
-				add_dir(title.replace('OverseaNews - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('OverseaNews - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Tin Tức & TV Trong Nước' in name:
 			if 'NewsInVN - ' in title:	
-				add_dir(title.replace('NewsInVN - ', ''), url, 3, logos + thumb)  
+				add_dir(title.replace('NewsInVN - ', ''), url, 3, logos + thumb, fanart)  
 		elif 'Thiếu Nhi' in name:
 			if 'Children - ' in title:	
-				add_dir(title.replace('Children - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Children - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Ca Nhạc' in name:
 			if 'Music - ' in title:	
-				add_dir(title.replace('Music - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Music - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Hát Karaoke' in name:
 			if 'Karaoke - ' in title:	
-				add_dir(title.replace('Karaoke - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Karaoke - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Cải Lương' in name:
 			if 'CailuongTV - ' in title:
-				add_link(title.replace('CailuongTV - ', ''), url, 4, logos + thumb)
+				add_link(title.replace('CailuongTV - ', ''), url, 4, logos + thumb, fanart)
 			elif 'Cailuong - ' in title:	
-				add_dir(title.replace('Cailuong - ', ''), url, 3, logos + thumb)        
+				add_dir(title.replace('Cailuong - ', ''), url, 3, logos + thumb, fanart)        
 		elif 'Hài Kịch' in name:
 			if 'Sitcom - ' in title:	
-				add_dir(title.replace('Sitcom - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Sitcom - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Talk Shows' in name:
 			if 'TalkShows - ' in title:	
-				add_dir(title.replace('TalkShows - ', ''), url, 3, logos + thumb)    
+				add_dir(title.replace('TalkShows - ', ''), url, 3, logos + thumb, fanart)    
 		elif 'TV Shows' in name:
 			if 'TiviShows - ' in title:	
-				add_dir(title.replace('TiviShows - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('TiviShows - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Thể Thao' in name:
 			if 'Sports - ' in title:	
-				add_dir(title.replace('Sports - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Sports - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Du Lịch' in name:
 			if 'Travel - ' in title:	
-				add_dir(title.replace('Travel - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Travel - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Y Khoa' in name:
 			if 'Medical - ' in title:	
-				add_dir(title.replace('Medical - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Medical - ', ''), url, 3, logos + thumb, fanart)
 			elif 'Y Tế NguoiVietTV - ' in title:
-				add_dir(title.replace('Y Tế NguoiVietTV - ', ''), url, 5, logos + thumb)         
+				add_dir(title.replace('Y Tế NguoiVietTV - ', ''), url, 5, logos + thumb, fanart)         
 			elif 'Y Tế Đồng Nai' in title:
-				add_dir(title.replace('Y Tế Đồng Nai - ', ''), url, 5, logos + thumb)        
+				add_dir(title.replace('Y Tế Đồng Nai - ', ''), url, 5, logos + thumb, fanart)        
 		elif 'Ẩm Thực Tình Yêu' in name:
 			if 'Cooking - ' in title:	
-				add_dir(title.replace('Cooking - ', ''), url, 3, logos + thumb)     	
+				add_dir(title.replace('Cooking - ', ''), url, 3, logos + thumb, fanart)     	
 		elif 'Trang Điểm' in name:
 			if 'MakeUp - ' in title:	
-				add_dir(title.replace('MakeUp - ', ''), url, 3, logos + thumb)	
+				add_dir(title.replace('MakeUp - ', ''), url, 3, logos + thumb, fanart)	
 		elif 'Đọc Truyện' in name:
 			if 'AudioBook - ' in title:	
-				add_dir(title.replace('AudioBook - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('AudioBook - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Di trú và Nhập Tịch Hoa Kỳ' in name:
 			if 'Immigration - ' in title:	
-				add_dir(title.replace('Immigration - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Immigration - ', ''), url, 3, logos + thumb, fanart)
 		elif 'America\'s Funniest Videos' in name:
 			if 'AFV - ' in title:	
-				add_dir(title.replace('AFV - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('AFV - ', ''), url, 3, logos + thumb, fanart)
 		elif 'Dicovery Channels & Animal Planet' in name:
 			if 'DCAP - ' in title:	
-				add_dir(title.replace('DCAP - ', ''), url, 3, logos + thumb)       
+				add_dir(title.replace('DCAP - ', ''), url, 3, logos + thumb, fanart)       
 		elif 'Những Mục Khác' in name:
 			if 'Other - ' in title:	
-				add_dir(title.replace('Other - ', ''), url, 3, logos + thumb)
+				add_dir(title.replace('Other - ', ''), url, 3, logos + thumb, fanart)
 
 def medical_site(url):
 	home()
@@ -218,25 +258,26 @@ def medical_site(url):
 	if 'www.dnrtv.org.vn' in url:
 		match = re.compile("img src=\"([^\"]+)\" \/><\/a>\s*<a href=\"([^\"]*)\" class=\"title\">(.+?)<").findall(content)
 		for thumb, url, name in match:	
-			add_link(name, url, 4, thumb)
+			add_link(name, url, 4, thumb, fanart)
 		match = re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang đầu<').findall(content)
 		for url in match:	
-			add_dir('[COLOR violet]Trang đầu[/COLOR]', url, 5, logos + 'dongnai.png')    
+			add_dir('[COLOR violet]Trang đầu[/COLOR]', url, 5, logos + 'dongnai.png', fanart)    
 		match = re.compile('class=\'paging_normal\' href=\'([^\']+)\'>(\d+)<').findall(content)
 		for url, name in match:	
-			add_dir('[COLOR lime]Trang ' + name + '[/COLOR]', url, 5, logos + 'dongnai.png')	
+			add_dir('[COLOR lime]Trang ' + name + '[/COLOR]', url, 5, logos + 'dongnai.png', fanart)	
 		match = re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang cuối<').findall(content)
 		for url in match:	
-			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 5, logos + 'dongnai.png')	
+			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 5, logos + 'dongnai.png', fanart)	
 	elif 'nguoiviettv' in url:
 		match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[15:-6]
 		for name, url, thumb in match:
 			name = replace_all(name, dict)  
-			add_link(name, url, 4, thumb)   
+			add_link(name, url, 4, thumb, fanart)   
 		match = re.compile("href='([^']*)' class='.+?'>(\d+)<").findall(content)
 		for url, name in match:	
-			add_dir('[COLOR yellow]Trang ' + name + '[/COLOR]', url.replace('&#038;','&'), 5, logos + 'bacsi.png')
-      
+			add_dir('[COLOR yellow]Trang ' + name + '[/COLOR]', url.replace('&#038;','&'), 5, logos + 'bacsi.png', fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 def media_list(url):
 	home()
 	if 'youtube' in url:
@@ -246,7 +287,7 @@ def media_list(url):
 			match1 = re.compile("<title type='text'>(?!Playlists of)(.+?)</title>.+?href='http://www\.youtube\.com/playlist\?list=.+?'").findall(content1)[0]
 			for name in match1[0]:		
 				if name > 0:
-					add_dir('[COLOR magenta]+ + + +[COLOR cyan]  Playlists  [COLOR magenta]+ + + +[/COLOR]', url1 + '?start-index=1&max-results=25', 6, iconimage)		
+					add_dir('[COLOR magenta]+ + + +[COLOR cyan]  Playlists  [COLOR magenta]+ + + +[/COLOR]', url1 + '?start-index=1&max-results=25', 6, iconimage, fanart)		
 		except:
 			pass			
 		content = make_request(url)
@@ -256,10 +297,10 @@ def media_list(url):
 			url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=') #new
 			#url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')  #old
 			#url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=') #old     
-			add_link(name, url, 4, thumb)
+			add_link(name, url, 4, thumb, fanart)
 		match = re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
 		for url in match:	      
-			add_dir('[COLOR cyan]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;', '&'), 3, icon)		  
+			add_dir('[COLOR cyan]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;', '&'), 3, icon, fanart)		  
 	elif 'dailymotion' in url:
 		try:
 			url1 = url.replace('/rss/', '/playlists/')
@@ -267,7 +308,7 @@ def media_list(url):
 			match1 = re.compile('href=".+?" class="link" title="(.+?)"').findall(content1)[0]
 			for name in match1[0]:		
 				if name > 0 and '/1' in url:
-					add_dir('[COLOR magenta]+ + + +[COLOR lime]  Playlists  [COLOR magenta]+ + + +[/COLOR]', url1, 6, iconimage)	
+					add_dir('[COLOR magenta]+ + + +[COLOR lime]  Playlists  [COLOR magenta]+ + + +[/COLOR]', url1, 6, iconimage, fanart)	
 		except:
 			pass
 		content = make_request(url)		
@@ -275,11 +316,12 @@ def media_list(url):
 		for name, url, thumb in match:
 			name = replace_all(name, dict)    
 			url = url.replace('http://www.dailymotion.com/video/', 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=')	  
-			add_link(name, url, 4, thumb)
+			add_link(name, url, 4, thumb, fanart)
 		match = re.compile('<dm:link rel="next" href="(.+?)"').findall(content)
 		for url in match:  
-			add_dir('[COLOR lime]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url, 3, icon)	
-
+			add_dir('[COLOR lime]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url, 3, icon, fanart)	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 def TubeMotion_playlist(url):
 	home()
 	content = make_request(url)
@@ -292,18 +334,18 @@ def TubeMotion_playlist(url):
 		match = re.compile("<title type='text'>(?!Playlists of)(.+?)</title>.+?href='http://www\.youtube\.com/playlist\?list=(.+?)'").findall(content)
 		for name, url in match:
 			name = replace_all(name, dict)
-			add_dir(name, 'http://gdata.youtube.com/feeds/api/playlists/' + url + '?max-results=50&start-index=1', 7, iconimage)
+			add_dir(name, 'http://gdata.youtube.com/feeds/api/playlists/' + url + '?max-results=50&start-index=1', 7, iconimage, fanart)
 		match = re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
 		for url in match:	      
-			add_dir('[COLOR cyan]Next playlist  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;', '&'), 6, icon)		  			
+			add_dir('[COLOR cyan]Next playlist  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;', '&'), 6, icon, fanart)		  			
 	elif 'dailymotion' in url:
 		match = re.compile('href="(.+?)" class="link" title="(.+?)"').findall(content)
 		for url, name in match:
 			name = replace_all(name, dict)
-			add_dir(name, 'http://www.dailymotion.com/rss' + url, 7, iconimage)
+			add_dir(name, 'http://www.dailymotion.com/rss' + url, 7, iconimage, fanart)
 		match = re.compile('href="(.+?)"\s*class=".+?"> (\d+)<').findall(content)	
 		for url, name in match:  
-			add_dir("[COLOR lime]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR lime]Page " + name + "[/COLOR]" , "http://www.dailymotion.com" + url, 6, icon)
+			add_dir("[COLOR lime]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR lime]Page " + name + "[/COLOR]" , "http://www.dailymotion.com" + url, 6, icon, fanart)
 
 def TubeMotion_playlist_medialist(url):
 	home()
@@ -313,29 +355,30 @@ def TubeMotion_playlist_medialist(url):
 		for url, thumb, name in match:
 			name = replace_all(name, dict)
 			url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=')
-			add_link(name, url, 4, thumb)
+			add_link(name, url, 4, thumb, fanart)
 		match = re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
 		for url in match:	      
-			add_dir('[COLOR cyan]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR cyan]Next page[/COLOR]', url.replace('&amp;', '&'), 7, icon)		  
+			add_dir('[COLOR cyan]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR cyan]Next page[/COLOR]', url.replace('&amp;', '&'), 7, icon, fanart)		  
 	elif 'dailymotion' in url:
 		match = re.compile('<title>(.+?)<\/title>\s*<link>(.+?)_.+?<\/link>\s*<description>.+?src="(.+?)"').findall(content)
 		for name, url, thumb in match:
 			name = replace_all(name, dict)    
 			url = url.replace('http://www.dailymotion.com/video/', 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=')	  
-			add_link(name, url, 4, thumb)
+			add_link(name, url, 4, thumb, fanart)
 		match = re.compile('<dm:link rel="next" href="(.+?)"').findall(content)
 		for url in match:  
-			add_dir('[COLOR lime]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR lime]Next page[/COLOR]', url, 7, icon)	
-		
+			add_dir('[COLOR lime]Playlists  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>  [COLOR lime]Next page[/COLOR]', url, 7, icon, fanart)	
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+			
 def resolve_url(url):
 	content = make_request(url)
 	if 'www.dnrtv.org.vn' in url:		
-		mediaUrl = re.compile("url: '(.+?)mp4'").findall(content)[0] + 'mp4'
+		media_url = re.compile("url: '(.+?)mp4'").findall(content)[0] + 'mp4'
 	elif 'nguoiviettv' in url:
-		mediaUrl = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile('src="http://www\.youtube\.com/embed/(.+?)\?').findall(content)[0]        
+		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile('src="http://www\.youtube\.com/embed/(.+?)\?').findall(content)[0]        
 	else:  
-		mediaUrl = url	
-	item = xbmcgui.ListItem(name, path = mediaUrl)
+		media_url = url	
+	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)  
 	return
 
@@ -356,18 +399,20 @@ def get_params():
 				param[splitparams[0]] = splitparams[1]
 	return param
 				  
-def add_dir(name, url, mode, iconimage):
+def add_dir(name, url, mode, iconimage, fanart):
 	u = sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + "&name=" + urllib.quote_plus(name) + "&iconimage=" + urllib.quote_plus(iconimage)
 	ok = True
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultFolder.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )
+	liz.setProperty('fanart_image', fanart)
 	ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
 	return ok
 
-def add_link(name, url, mode, iconimage):
+def add_link(name, url, mode, iconimage, fanart):
 	u = sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + "&name=" + urllib.quote_plus(name) + "&iconimage=" + urllib.quote_plus(iconimage)	
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultVideo.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )
+	liz.setProperty('fanart_image', fanart)
 	liz.setProperty('IsPlayable', 'true')  
 	ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz)  
 
@@ -428,6 +473,11 @@ elif mode == 8:
 
 elif mode == 9:	
 	play_tutorial(name)
+
+elif mode == 90:	
+	search()
+
+elif mode == 91:	
+	search_result(url)	
 	
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
-

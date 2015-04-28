@@ -15,13 +15,13 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu - [COLOR lime]thanh51's collection[/COLOR]</title>
+<title>Main Menu - thanh51's collection</title>
 <link>Thanh51</link>
 <thumbnail>thanh51.png</thumbnail>
 </item>
 
 <item>
-<title>Main Menu learn_kodi - [COLOR yellow]Regex, Python, XBMC, Kodi ...[/COLOR]</title>
+<title>Main Menu learn_kodi - Regex, Python, XBMC, Kodi ...</title>
 <link>tutorial</link>
 <thumbnail>tutorial.png</thumbnail>
 </item>
@@ -1874,8 +1874,32 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
+<title>Other - [COLOR cyan]Programming by Lưu Trường Hải Lân[/COLOR]</title>
+<link>http://gdata.youtube.com/feeds/api/users/luutruonghailan/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
 <title>Other - [COLOR cyan]Programming and More ... by Derek Banas[/COLOR]</title>
 <link>http://gdata.youtube.com/feeds/api/users/derekbanas/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - TotalXBMC</title>
+<link>http://gdata.youtube.com/feeds/api/users/TotalXBMC/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - PRO XBMC + KODI + SuperAddon</title>
+<link>http://gdata.youtube.com/feeds/api/users/HowToVideoHelp/uploads?start-index=1&max-results=50</link>
+<thumbnail>muckhac.png</thumbnail>
+</item>
+
+<item>
+<title>Other - OneTechGenius (XBMC HELPER)</title>
+<link>http://gdata.youtube.com/feeds/api/users/XBMCHELPER/uploads?start-index=1&max-results=50</link>
 <thumbnail>muckhac.png</thumbnail>
 </item>
 

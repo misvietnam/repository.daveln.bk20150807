@@ -15,13 +15,13 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 </item>
 
 <item>
-<title>Main Menu - [COLOR lime]thanh51's collection[/COLOR]</title>
+<title>Main Menu - thanh51's collection</title>
 <link>Thanh51</link>
 <thumbnail>thanh51.png</thumbnail>
 </item>
 
 <item>
-<title>Main Menu learn_kodi - [COLOR yellow]Regex, Python, XBMC, Kodi ...[/COLOR]</title>
+<title>Main Menu learn_kodi - Regex, Python, XBMC, Kodi ...</title>
 <link>tutorial</link>
 <thumbnail>tutorial.png</thumbnail>
 </item>
@@ -1603,7 +1603,7 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 
 <item>
 <title>Y Tế NguoiVietTV - Y Tế – Sức Khỏe</title>
-<link>http://nguoiviettv.com/?cat=23</link>
+<link>http://video.nguoi-viet.com/?cat=23</link>
 <thumbnail>ykhoa.png</thumbnail>
 </item>
 

@@ -28,6 +28,7 @@ icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
 homemenu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'menulist.xml'))
 homelink = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
+dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':'-', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
 karaoke = 'http://www.timkaraoke.com'
 nctm = 'http://m.nhaccuatui.com/'
 csn = 'http://chiasenhac.com/'
@@ -46,6 +47,14 @@ if status == 200:
 	except:
 		pass		
 
+def replace_all(text, dict):
+	try:
+		for a, b in dict.iteritems():
+			text = text.replace(a, b)
+		return text
+	except:
+		pass	
+ 		
 def menulist():
 	try:
 		mainmenu = open(homemenu, 'r')  
@@ -72,6 +81,9 @@ def make_request(url):
 			print 'We failed to reach a server.'
 			print 'Reason: ', e.reason
 
+def home():
+	add_dir('[COLOR cyan]. .[COLOR red]  ^  [COLOR cyan]. .[COLOR yellow]  Home  [COLOR cyan]. .[COLOR red]  ^  [COLOR cyan]. .[/COLOR]', '', None, icon, fanart)
+			
 def main():
 	add_dir('[COLOR lightgreen]Hát Karaoke Online[/COLOR]', 'KaraokeOnline', 6, logos + 'karaoke.png', fanart)
 	add_dir('[COLOR yellow]Thuý Nga - Paris by Night[/COLOR]', 'thuynga', 11, logos + 'thuynga.png', fanart)  	
@@ -85,8 +97,17 @@ def main():
 	add_link('[COLOR yellow]VEVO HD 1[/COLOR]', 'http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8', 4, logos + 'vevo.png', fanart)	
 	add_link('[COLOR yellow]VEVO HD 2[/COLOR]', 'http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch2/06/prog_index.m3u8', 4, logos + 'vevo.png', fanart)	
 	add_link('[COLOR yellow]VEVO HD 3[/COLOR]', 'http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch3/06/prog_index.m3u8', 4, logos + 'vevo.png', fanart)	
+
+def get_karaoke():
+	home()
+	add_dir('[COLOR magenta]++++ [COLOR white][B]Youtube Search[/B] [COLOR magenta]++++[/COLOR]', 'youtube', 1, logos + 'YTSearch.png', fanart)	
+	add_dir('[COLOR cyan]Vietnamese[COLOR magenta] - [COLOR lightgreen]timkaraoke.com[/COLOR]', karaoke, 2, logos + 'timkaraoke.png', fanart)	
+	for title, url, thumb in menulist():
+		if 'Karaoke - ' in title:
+			add_dir(title.replace('Karaoke - ', ''), url, 3, logos + thumb, fanart) 
 	
 def thuy_nga():
+	home()
 	add_dir('PBN SHOWS | [COLOR yellow]VARIETY[/COLOR]', ThuyNga + 'en/genre/index/22/3/', 3, logos + 'thuynga.png', fanart)  
 	add_dir('PBN SHOWS | [COLOR cyan]COMEDY[/COLOR]', ThuyNga + 'en/genre/index/26/3', 3, logos + 'thuynga.png', fanart)  
 	add_dir('PBN SHOWS | [COLOR lime]BTS[/COLOR]', ThuyNga + 'en/genre/index/64/3', 3, logos + 'thuynga.png', fanart)    
@@ -99,17 +120,43 @@ def search():
 			searchText = urllib.quote_plus(keyb.getText())
 		if 'Chia Sẻ Nhạc' in name: 
 			url = csn + 'search.php?s=' + searchText + '&cat=video'   
-			CSN_media_list_Search(url)      
+			search_result(url)
+		elif 'Youtube Search' in name:  
+			url = 'https://www.youtube.com/results?search_query=' + searchText
+			search_result(url)			
 		elif 'Nhạc Của Tui' in name:
 			url = nctm + 'tim-kiem/mv?q=' + searchText     
 			media_list(url)
 		elif 'Tìm Karaoke' in name:
 			url = karaoke + '/search/karaoke/' + searchText.replace('+', ' ')     
-			media_list(url) 
+			media_list(url) 			
 	except: 
 		pass
-    
+
+def search_result(url):
+	home()
+	content = make_request(url)
+	if 'youtube' in url:
+		match = re.compile('href="/watch\?v=(.+?)" class=".+?" data-sessionlink=".+?" title="(.+?)".+?Duration: (.+?).</span>').findall(content)
+		for url, name, duration in match:
+			name = replace_all(name, dict)
+			thumb = 'https://i.ytimg.com/vi/' + url + '/mqdefault.jpg'
+			url = 'plugin://plugin.video.youtube/play/?video_id=' + url
+			add_link(name + ' (' + duration + ')', url, 4, thumb, fanart)
+		match = re.compile('href="/results\?search_query=(.+?)".+?aria-label="Go to (.+?)"').findall(content)
+		for url, name in match:
+			url = 'https://www.youtube.com/results?search_query=' + url
+			add_dir(name, url, 5, icon, fanart)
+	else:		
+		match = re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\"><img src=\"([^\"]+)\"").findall(content)
+		for url, name, thumb in match:
+			add_link('[COLOR yellow]' + name + '[/COLOR]', (csn + url), 4, thumb, fanart)
+		match = re.compile("href=\"(.+?)\" class=\"npage\">(\d+)<").findall(content)
+		for url, name in match:
+			add_dir('[COLOR cyan]Trang ' + name + '[/COLOR]', url.replace('&amp;', '&'), 5, logos + 'csn.png', fanart)  			
+	
 def category(url):
+	home()
 	content = make_request(url)	  
 	if 'chiasenhac' in url:
 		add_dir('[COLOR yellow]Chia Sẻ Nhạc[B]   [COLOR lime]>[COLOR magenta]>[COLOR cyan]>[COLOR orange]>   [/B][COLOR yellow]Tìm Nhạc[/COLOR]', csn, 1, logos + 'csn.png', fanart)		
@@ -136,15 +183,9 @@ def category(url):
 		match = re.compile('<\/i> <br\/>\s*<a href="([^"]*)">([^>]+)<').findall(content)
 		for url, name in match: 
 			add_link('[COLOR lime]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), 4, logos + 'timkaraoke.png', fanart)
-		xbmc.executebuiltin('Container.SetViewMode(500)')
-
-def get_karaoke():
-	add_dir('[COLOR cyan]Vietnamese[COLOR magenta] - [COLOR lightgreen]timkaraoke.com[/COLOR]', karaoke, 2, logos + 'timkaraoke.png', fanart)
-	for title, url, thumb in menulist():
-		if 'Karaoke - ' in title:
-			add_dir(title.replace('Karaoke - ', ''), url, 3, logos + thumb, fanart) 
   
 def media_list(url):
+	home()
 	content = make_request(url)
 	if 'chiasenhac' in url:		
 		match = re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\"><img src=\"([^\"]+)\"").findall(content)
@@ -169,7 +210,7 @@ def media_list(url):
 	elif 'timkaraoke' in url:
 		match = re.compile('pagespeed_url_hash="1785647900".+?href="([^"]*)">([^>]+)<').findall(content)
 		for url, name in match: 
-			add_link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), 4, logos + 'timkaraoke.png', fanart) 
+			add_link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), 4, logos + 'timkaraoke.png', fanart) 			
 	elif 'youtube' in url:	  
 		match = re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
 		for url, thumb, name in match:       
@@ -187,19 +228,8 @@ def media_list(url):
 			add_link(name, ThuyNga + url, 4, thumb + '?.jpg', fanart)
 		match = re.compile('href="http://ott.thuynga.com/([^>]+)">(\d+)<').findall(content)	
 		for url, name in match:
-			add_dir('[COLOR magenta]Trang ' + name + '[/COLOR]', ThuyNga + url, 3, logos + 'thuynga.png', fanart)	
-	xbmc.executebuiltin('Container.SetViewMode(500)')
-			
-def CSN_media_list_Search(url):
-	content = make_request(url)			
-	match = re.compile("<a href=\"([^\"]*)\" title=\"(.*?)\"><img src=\"([^\"]+)\"").findall(content)
-	for url, name, thumb in match:
-		add_link('[COLOR yellow]' + name + '[/COLOR]', (csn + url), 4, thumb, fanart)
-		xbmc.executebuiltin('Container.SetViewMode(500)')
-	match = re.compile("href=\"(.+?)\" class=\"npage\">(\d+)<").findall(content)
-	for url, name in match:
-		add_dir('[COLOR cyan]Trang ' + name + '[/COLOR]', url.replace('&amp;', '&'), 5, logos + 'csn.png', fanart)  
-		
+			add_dir('[COLOR magenta]Trang ' + name + '[/COLOR]', ThuyNga + url, 3, logos + 'thuynga.png', fanart)		
+					
 def resolve_url(url):
 	content = make_request(url)
 	if 'chiasenhac' in url:		
@@ -286,17 +316,19 @@ elif mode == 2:
 		
 elif mode == 3:
 	media_list(url)
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 		
 elif mode == 4:
 	resolve_url(url)		
 
-elif mode == 5:
-	CSN_media_list_Search(url)		
-
+elif mode == 5:	
+	search_result(url)
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+		
 elif mode == 6:
 	get_karaoke() 
 
 elif mode == 11:
 	thuy_nga()
-  
+		
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

@@ -1,5 +1,6 @@
-v 1.1.1
-Updated
+v 1.1.2
+Added Youtube Search
+Added Home
 
 v 1.1.0
 Added VEVO

@@ -32,7 +32,6 @@ dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'
 dongnai = 'http://www.dnrtv.org.vn'
 CaliToday = 'http://truyenhinhcalitoday.com/'
 nguoiviettvcom = 'http://nguoiviettv.com'
-cailuongus = 'http://phimtailieu.haikich.us'
 
 if not os.path.exists(homemenu):
 	try:
@@ -42,8 +41,11 @@ if not os.path.exists(homemenu):
 	
 status = urllib.urlopen(homelink).getcode()
 if status == 200:
-	urllib.urlretrieve (homelink, homemenu)
-
+	try:
+		urllib.urlretrieve (homelink, homemenu)
+	except:
+		pass
+			
 def menulist():
 	try:
 		mainmenu = open(homemenu, 'r')  
@@ -54,7 +56,7 @@ def menulist():
 	except:
 		pass	
 
-def replaceAll(text, dict):
+def replace_all(text, dict):
 	try:
 		for a, b in dict.iteritems():
 			text = text.replace(a, b)
@@ -62,7 +64,7 @@ def replaceAll(text, dict):
 	except:
 		pass	
 
-def makeRequest(url):
+def make_request(url):
 	try:
 		req = urllib2.Request(url)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0')
@@ -85,18 +87,18 @@ def main():
 	add_dir('Hải Ngoại', 'HaiNgoai', 1, logos + 'haingoai.png', fanart)
 	add_dir('Trong Nước', 'TrongNuoc', 2, logos + 'vietnam.png', fanart)  
       
-def trongnuoc():
+def trong_nuoc():
 	home()
 	add_dir('Đài Phát Thanh - Truyền Hình Đồng Nai', dongnai, 3, logos + 'dongnai.png', fanart)
   
-def haingoai(): 
+def hai_ngoai(): 
 	home()
 	add_dir('nguoiviettv.com', nguoiviettvcom, 4, logos + 'nguoiviet.png', fanart) 
 	add_dir('Truyền Hình Cali Today', CaliToday, 3, logos + 'cali.png', fanart)  
   
-def mediaStations(url):
+def media_station(url):
 	home()
-	content = makeRequest(url)
+	content = make_request(url)
 	if 'www.dnrtv.org' in url:
 		match = re.compile("tabindex=\"0\"><a href=\"([^\"]+)\">(.+?)<").findall(content)[13:]
 		for url, name in match:  	
@@ -106,15 +108,15 @@ def mediaStations(url):
 		for url, name in match:	
 			add_dir(name, CaliToday + 'category' + url, 5, logos + 'cali.png', fanart)			
         
-def NguoiViet():
+def nguoi_viet():
 	home()
 	for title, url, thumb in menulist():
 		if 'nguoiviet.com - ' in title:
 			add_dir(title.replace('nguoiviet.com - ', ''), url, 5, logos + thumb, fanart)  
      
-def mediaList(url):
+def media_list(url):
 	home()
-	content = makeRequest(url)
+	content = make_request(url)
 	if 'www.dnrtv.org.vn' in url:
 		match = re.compile("img src=\"([^\"]+)\" \/><\/a>\s*<a href=\"([^\"]*)\" class=\"title\">(.+?)<").findall(content)
 		for thumb, url, name in match:     
@@ -131,7 +133,7 @@ def mediaList(url):
 	elif 'truyenhinhcalitoday' in url:
 		match = re.compile('href="(.+?)">\s*<span class="clip">\s*<img src="(.+?)" alt="(.+?)"').findall(content)
 		for url, thumb, name in match:
-			name = replaceAll(name, dict)
+			name = replace_all(name, dict)
 			add_link(name, url, 6, thumb, fanart)
 		match = re.compile("href='([^']*)' class='first'").findall(content)
 		for url in match:	
@@ -146,25 +148,25 @@ def mediaList(url):
 		if 'orderby=views' in url:
 			match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[0:24]
 			for name, url, thumb in match:
-				name = replaceAll(name, dict)
+				name = replace_all(name, dict)
 				add_link(name, url, 6, thumb, fanart)
 		else: 
 			match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[15:-6]
 			for name, url, thumb in match:
-				name = replaceAll(name, dict)
+				name = replace_all(name, dict)
 				add_link(name, url, 6, thumb, fanart)    
 		match = re.compile("href='([^']*)' class='.+?'>(\d+)<").findall(content)
 		for url, name in match:	
 			add_dir('[COLOR yellow]Trang ' + name + '[/COLOR]', url.replace('#038;', ''), 5, logos + 'nguoiviet.png', fanart)
 	xbmc.executebuiltin('Container.SetViewMode(500)')
           
-def resolveUrl(url):
-	content = makeRequest(url)
+def resolve_url(url):
+	content = make_request(url)
 	if 'www.dnrtv.org.vn' in url:  
 		media_url = re.compile("url: '(.+?)mp4'").findall(content)[0] + 'mp4' 
-	elif 'truyenhinhcalitoday' in url or 'nguoiviettv' in url:
+	elif 'truyenhinhcalitoday' in url or 'video.nguoi-viet' in url:
 		videoID = re.compile("http://www.youtube.com/embed/(.+?)\?").findall(content)[0]  
-		media_url = 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=' + videoID       
+		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + videoID       
 	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
 	return
@@ -235,21 +237,21 @@ if mode == None or url == None or len(url)<1:
 	main()
 
 elif mode == 1:
-	haingoai()
+	hai_ngoai()
 
 elif mode == 2:
-	trongnuoc()
+	trong_nuoc()
 
 elif mode == 3:
-	mediaStations(url)
+	media_station(url)
 
 elif mode == 4:
-	NguoiViet()
+	nguoi_viet()
   
 elif mode == 5:
-	mediaList(url)
+	media_list(url)
 		
 elif mode == 6:
-	resolveUrl(url)
+	resolve_url(url)
  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

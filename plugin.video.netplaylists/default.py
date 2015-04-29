@@ -45,7 +45,7 @@ def main():
 	for foldername in os.listdir(playlistPath):
 		add_dir(foldername, 'folderlist', 3, icon, fanart)
    
-def categories():
+def category():
 	for foldername in os.listdir(playlistPath + '/' + name):
 		if 'Phim3s' in name:
 			add_dir(foldername, 'folderlist', 4, logos + 'phim3s.png', fanart)
@@ -61,7 +61,8 @@ def phim3snet(name):
 			#add_dir(filename.replace('.xml', ''), filename, 5, logos + 'phim3s.png', fanart) 
 			match = menulist(playlistPath + '/Phim3s/Phim3sLe/' + filename)    
 			for name, url, thumbnail in match:	
-				add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart)      
+				add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart) 
+		xbmc.executebuiltin('Container.SetViewMode(500)')
 	elif 'Phim3sBo' in name:
 		add_dir('[COLOR lime]Tìm Phim3s Bộ[/COLOR]', 'PhimBo', 2, logos + 'phim3s_search.png', fanart)
 		for filename in os.listdir(playlistPath + '/Phim3s/' + name):
@@ -74,11 +75,13 @@ def phim3sle(name):
 	match = menulist(playlistPath + '/Phim3s/Phim3sLe/' + name + '.xml')
 	for name, url, thumbnail in match:	
 		add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')	
 
 def phim3sbo(name):  
 	match = menulist(playlistPath + '/Phim3s/Phim3sBo/' + name + '.xml')    
 	for name, url, thumbnail in match:
 		add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')	
 
 def megaboxvn(name):
 	if 'MegaboxLe' in name:
@@ -93,6 +96,7 @@ def megaboxvn(name):
 			match = menulist(playlistPath + '/Megabox/MegaboxBo/' + filename)   
 			for name, url, thumbnail in match:	
 				add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')			
         
 def dangcaphd(name):
 	if 'DangcaphdLe' in name:
@@ -100,7 +104,8 @@ def dangcaphd(name):
 		for filename in os.listdir(playlistPath + '/Dangcaphd/' + name): 
 			match = menulist(playlistPath + '/Dangcaphd/DangcaphdLe/' + filename)    
 			for name, url, thumbnail in match:	
-				add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart)      
+				add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart) 
+		xbmc.executebuiltin('Container.SetViewMode(500)')
 	elif 'DangcaphdBo' in name:
 		add_dir('[COLOR lime]Tìm Dangcaphd Phim Bộ[/COLOR]', 'PhimBo', 2, logos + 'dangcaphd_search.png', fanart)
 		for filename in os.listdir(playlistPath + '/Dangcaphd/' + name):
@@ -113,6 +118,7 @@ def dangcaphdbo(name):
 	match = menulist(playlistPath + '/Dangcaphd/DangcaphdBo/' + name + '.xml')  
 	for name, url, thumbnail in match:	
 		add_link('[COLOR yellow]' + name + '[/COLOR]', url, 99, thumbnail, fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')	
         
 def search_phimle(): 	
 	try:
@@ -134,7 +140,8 @@ def search_phimle():
 			match = menulist(playlistPath + '/Dangcaphd/DangcaphdLe/DangcaphdLe.xml')    
 			for title, url, thumbnail in match:     
 				if re.search(searchText, removeAccents(title.replace('Đ', 'D')), re.IGNORECASE):
-					add_link('[COLOR lime]' + title + '[/COLOR]', url, 99, thumbnail, fanart)                                
+					add_link('[COLOR lime]' + title + '[/COLOR]', url, 99, thumbnail, fanart)
+		xbmc.executebuiltin('Container.SetViewMode(500)')
 	except:
 		pass
 
@@ -158,11 +165,12 @@ def search_phimbo():
 			match = menulist(playlistPath + '/Dangcaphd/DangcaphdBo/DangcaphdBo.xml')       
 			for title, url, thumbnail in match:     
 				if re.search(searchText, removeAccents(title.replace('Đ', 'D')), re.IGNORECASE):
-					add_link('[COLOR yellow]' + title + '[/COLOR]', url, 99, thumbnail, fanart)                             
+					add_link('[COLOR yellow]' + title + '[/COLOR]', url, 99, thumbnail, fanart)
+		xbmc.executebuiltin('Container.SetViewMode(500)')
 	except:
 		pass
   
-def resolveUrl():
+def resolve_url():
 	media_url = url	
 	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)  
@@ -234,7 +242,7 @@ elif mode == 2:
 	search_phimbo()
   
 elif mode == 3:
-	categories()  
+	category()  
 
 elif mode == 4:
 	phim3snet(name)
@@ -255,6 +263,6 @@ elif mode == 22:
 	dangcaphdbo(name)
   
 elif mode == 99:
-	resolveUrl()
+	resolve_url()
   
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

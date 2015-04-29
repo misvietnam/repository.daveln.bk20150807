@@ -153,7 +153,8 @@ def search_result(url):
 			add_link('[COLOR yellow]' + name + '[/COLOR]', (csn + url), 4, thumb, fanart)
 		match = re.compile("href=\"(.+?)\" class=\"npage\">(\d+)<").findall(content)
 		for url, name in match:
-			add_dir('[COLOR cyan]Trang ' + name + '[/COLOR]', url.replace('&amp;', '&'), 5, logos + 'csn.png', fanart)  			
+			add_dir('[COLOR cyan]Trang ' + name + '[/COLOR]', url.replace('&amp;', '&'), 5, logos + 'csn.png', fanart)  
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 def category(url):
 	home()
@@ -228,7 +229,8 @@ def media_list(url):
 			add_link(name, ThuyNga + url, 4, thumb + '?.jpg', fanart)
 		match = re.compile('href="http://ott.thuynga.com/([^>]+)">(\d+)<').findall(content)	
 		for url, name in match:
-			add_dir('[COLOR magenta]Trang ' + name + '[/COLOR]', ThuyNga + url, 3, logos + 'thuynga.png', fanart)		
+			add_dir('[COLOR magenta]Trang ' + name + '[/COLOR]', ThuyNga + url, 3, logos + 'thuynga.png', fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 					
 def resolve_url(url):
 	content = make_request(url)
@@ -316,14 +318,12 @@ elif mode == 2:
 		
 elif mode == 3:
 	media_list(url)
-	xbmc.executebuiltin('Container.SetViewMode(500)')
 		
 elif mode == 4:
 	resolve_url(url)		
 
 elif mode == 5:	
 	search_result(url)
-	xbmc.executebuiltin('Container.SetViewMode(500)')
 		
 elif mode == 6:
 	get_karaoke() 

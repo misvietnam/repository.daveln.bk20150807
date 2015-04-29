@@ -1,2 +1,5 @@
+v 1.0.1
+Removed Miami International TV
+
 v 1.0.0
 Initial release

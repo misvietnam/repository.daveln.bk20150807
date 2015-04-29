@@ -4,6 +4,9 @@ https://github.com/bromix/plugin.video.youtube
 Download link for Dailymotion add-on:
 https://github.com/AddonScriptorDE/plugin.video.dailymotion_com
 
+v 1.1.1
+Updated NguoiViet's url
+
 v 1.1.0
 Added Youtube Search
 Added Dailymotion Search

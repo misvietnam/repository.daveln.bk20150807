@@ -40,7 +40,10 @@ if not os.path.exists(home_menu):
 	
 status = urllib.urlopen(home_link).getcode()
 if status == 200:
-	urllib.urlretrieve (home_link, home_menu)
+	try:
+		urllib.urlretrieve (home_link, home_menu)
+	except:
+		pass 		
 	
 if not os.path.exists(prog_menu):
 	try:
@@ -50,7 +53,10 @@ if not os.path.exists(prog_menu):
 	
 status = urllib.urlopen(prog_link).getcode()
 if status == 200:
-	urllib.urlretrieve (prog_link, prog_menu)
+	try:
+		urllib.urlretrieve (prog_link, prog_menu)
+	except:
+		pass 	
 
 def menu_list():
 	try:
@@ -268,7 +274,7 @@ def medical_site(url):
 		match = re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang cuối<').findall(content)
 		for url in match:	
 			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 5, logos + 'dongnai.png', fanart)	
-	elif 'nguoiviettv' in url:
+	elif 'video.nguoi-viet.com' in url:
 		match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[15:-6]
 		for name, url, thumb in match:
 			name = replace_all(name, dict)  
@@ -374,7 +380,7 @@ def resolve_url(url):
 	content = make_request(url)
 	if 'www.dnrtv.org.vn' in url:		
 		media_url = re.compile("url: '(.+?)mp4'").findall(content)[0] + 'mp4'
-	elif 'nguoiviettv' in url:
+	elif 'video.nguoi-viet.com' in url:
 		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile('src="http://www\.youtube\.com/embed/(.+?)\?').findall(content)[0]        
 	else:  
 		media_url = url	

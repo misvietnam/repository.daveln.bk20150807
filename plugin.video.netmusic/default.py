@@ -41,7 +41,10 @@ if not os.path.exists(homemenu):
 	
 status = urllib.urlopen(homelink).getcode()
 if status == 200:
-	urllib.urlretrieve (homelink, homemenu)
+	try:
+		urllib.urlretrieve (homelink, homemenu)
+	except:
+		pass		
 
 def menulist():
 	try:

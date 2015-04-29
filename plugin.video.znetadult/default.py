@@ -53,7 +53,10 @@ if not os.path.exists(homemenu):
 	
 status = urllib.urlopen(homelink).getcode()
 if status == 200:
-	urllib.urlretrieve (homelink, homemenu)
+	try:
+		urllib.urlretrieve (homelink, homemenu)
+	except:
+		pass 		
 
 def menulist():
 	try:
@@ -101,9 +104,6 @@ def main():
 	add_dir('[COLOR green]TnAFlix [COLOR red] Adult Videos[/COLOR]', tnaflix, 2, logos + 'tnaflix.png', fanart) 
 	add_dir('[COLOR white]LubeTube [COLOR red] Adult Videos[/COLOR]', lubetube, 2, logos + 'lubetube.png', fanart)
 	add_dir('[COLOR cyan]Ero-tik [COLOR red] Adult Videos[/COLOR]', erotik, 2, logos + 'erotik.png', fanart) 	
-	for name, url in menulist(): 
-		if 'Miami International TV' in name:
-			add_link('[COLOR yellow]Miami International [COLOR red]TV[/COLOR]', url, 4, 'http://www.miamitvchannel.com/images/MIAMITV-international.png', fanart)
 	content = make_request('http://www.giniko.com/watch.php?id=95')	  
 	match = re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(content)
 	for thumb, url in match:
@@ -112,10 +112,7 @@ def main():
 def porn4u():
 	home()
 	for name, url in menulist(): 
-		if 'Miami International TV' in name:
-			pass
-		else:
-			add_link(name, url, 4, logos + 'porn4u.png', fanart)
+		add_link(name, url, 4, logos + 'porn4u.png', fanart)
 
 def HD():
 	home()

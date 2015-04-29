@@ -60,7 +60,7 @@ def get_cookie():
 	for cookie in cj:
 		return "%s=%s" % (cookie.name, cookie.value)      
 
-def replaceAll(text, my_dict):
+def replace_all(text, my_dict):
 	try:
 		for a, b in my_dict.iteritems():
 			text = text.replace(a, b)
@@ -169,7 +169,7 @@ def tv_scraper(url):
 	elif 'tv.vnn.vn' in url:
 		match = re.compile('href="\/(.+?)">\s*<img src="\/(.+?)".+?\/>\s*(.+?)\n').findall(content)
 		for url, thumb, title in match:
-			title = replaceAll(title, my_dict)	
+			title = replace_all(title, my_dict)	
 			add_link(title, tvviet + url, 202, (tvviet + thumb).replace(' ', '%20'), fanart)  	  
 
 def tvtonghop_anluong(url):

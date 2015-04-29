@@ -31,7 +31,7 @@ homelink = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/pl
 dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':' - ', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
 dongnai = 'http://www.dnrtv.org.vn'
 CaliToday = 'http://truyenhinhcalitoday.com/'
-nguoiviettvcom = 'http://nguoiviettv.com'
+nguoiviettvcom = 'http://video.nguoi-viet.com/'
 
 if not os.path.exists(homemenu):
 	try:
@@ -45,7 +45,7 @@ if status == 200:
 		urllib.urlretrieve (homelink, homemenu)
 	except:
 		pass
-			
+		
 def menulist():
 	try:
 		mainmenu = open(homemenu, 'r')  
@@ -93,7 +93,7 @@ def trong_nuoc():
   
 def hai_ngoai(): 
 	home()
-	add_dir('nguoiviettv.com', nguoiviettvcom, 4, logos + 'nguoiviet.png', fanart) 
+	add_dir('Người Việt TV', nguoiviettvcom, 4, logos + 'nguoiviet.png', fanart) 
 	add_dir('Truyền Hình Cali Today', CaliToday, 3, logos + 'cali.png', fanart)  
   
 def media_station(url):
@@ -144,7 +144,7 @@ def media_list(url):
 		match = re.compile("href='([^']*)' class='last'").findall(content)
 		for url in match:	
 			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 5, logos + 'cali.png', fanart)	
-	elif 'nguoiviettv' in url:
+	elif 'video.nguoi-viet.com' in url:
 		if 'orderby=views' in url:
 			match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[0:24]
 			for name, url, thumb in match:
@@ -164,9 +164,8 @@ def resolve_url(url):
 	content = make_request(url)
 	if 'www.dnrtv.org.vn' in url:  
 		media_url = re.compile("url: '(.+?)mp4'").findall(content)[0] + 'mp4' 
-	elif 'truyenhinhcalitoday' in url or 'video.nguoi-viet' in url:
-		videoID = re.compile("http://www.youtube.com/embed/(.+?)\?").findall(content)[0]  
-		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + videoID       
+	else: 	# hai_ngoai - CaliToday and NguoiViet
+		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile("http://www.youtube.com/embed/(.+?)\?").findall(content)[0]     
 	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
 	return

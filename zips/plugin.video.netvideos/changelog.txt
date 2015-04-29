@@ -1,2 +1,7 @@
+v 1.0.1
+Removed cailuong us
+Changed fanart
+xbmc.python version 2.14.0
+
 v 1.0.0
 Initial release

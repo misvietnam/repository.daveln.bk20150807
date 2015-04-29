@@ -98,48 +98,48 @@ def main():
 	content = open_file(MainDirTV)
 	match = re.compile(xml_regex + '\s*<mode>(.*?)</mode>').findall(content)
 	for name, url, thumb, add_dir_mode in match:
-		add_dir(name, url, add_dir_mode, logos + thumb) 
+		add_dir(name, url, add_dir_mode, logos + thumb, fanart) 
 
 def direct_link(): 
 	content = make_request(my_repo + 'master/playlists/direct_link.m3u')
 	match = re.compile(m3u_regex).findall(content)
 	for name, url in match:
 		if 'hplus' in url or 'htvonline' in url or 'giniko' in url or 'tv.vnn.vn' in url:
-			add_link(name, url, 202, logos + 'directlink.png')
+			add_link(name, url, 202, logos + 'directlink.png', fanart)
 		else:	
-			add_link(name, url, 201, logos + 'directlink.png')
+			add_link(name, url, 201, logos + 'directlink.png', fanart)
 
-def tv_directory(url, iconimage): 
+def tv_directory(url): 
 	content = make_request(url) 
 	match = re.compile(xml_channel_name).findall(content)
 	for channel_name in match:
 		if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-			add_link(channel_name, u_tube, 201, iconimage)
+			add_link(channel_name, u_tube, 201, iconimage, fanart)
 		else:
 			if 'Tôn Giáo TV' in channel_name:
-				add_dir(channel_name, url, 2, logos + 'myreligion.png')	  
+				add_dir(channel_name, url, 2, logos + 'myreligion.png', fanart)	  
 			elif 'Âm Nhạc TV' in channel_name:
-				add_dir(channel_name, url, 2, logos + 'mymusic.png')	  
+				add_dir(channel_name, url, 2, logos + 'mymusic.png', fanart)	  
 			elif 'Radio Tổng Hợp' in channel_name:
-				add_dir(channel_name, url, 2, logos + 'myradio.png')	  
+				add_dir(channel_name, url, 2, logos + 'myradio.png', fanart)	  
 			else:
-				add_dir(channel_name, url, 2, iconimage) 
+				add_dir(channel_name, url, 2, iconimage, fanart) 
 
-def tv_index(name, url, iconimage):	
+def tv_index(name, url):	
 	content = make_request(url) 
 	match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(content)
 	for vlink in match:
 		final_link = re.compile(xml_regex).findall(vlink)
 		for title, url, thumb in final_link:
 			if 'www.giniko.com' in url:
-				add_link(title, url, 202, thumb)
+				add_link(title, url, 202, thumb, fanart)
 			else:
 				if len(thumb) <= 0:
-					add_link(title, url, 201, iconimage) 
+					add_link(title, url, 201, iconimage, fanart) 
 				else:	
-					add_link(title, url, 201, thumb)  
+					add_link(title, url, 201, thumb, fanart)  
 
-def tv_scraper(url, iconimage):
+def tv_scraper(url):
 	content = make_request(url)
 	if 'hplus' in url:
 		match = re.compile('href="http://hplus.com.vn/vi/genre/index(.+?)">(.+?)<').findall(content)
@@ -147,61 +147,59 @@ def tv_scraper(url, iconimage):
 			if 'Xem tất cả' in name: 
 				pass 
 			else: 
-				add_dir(name, 'http://hplus.com.vn/vi/genre/index' + url, 101, 'http://static.hplus.com.vn/themes/front/images/logo.png')
+				add_dir(name, 'http://hplus.com.vn/vi/genre/index' + url, 101, 'http://static.hplus.com.vn/themes/front/images/logo.png', fanart)
 	elif 'anluong' in url: 
 		match = re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="/(.+?)"').findall(content)
 		for url, name, thumb in match:	  
 			if 'SCTV' in name or 'SAO TV HD' in name or 'NHẠC CÁCH MẠNG' in name:
 				pass
 			else: 
-				add_dir(name.replace('SOPPING', 'SHOPPING'), anluongtv + url, 111, anluongtv + thumb.replace(' ', '%20'))
+				add_dir(name.replace('SOPPING', 'SHOPPING'), anluongtv + url, 111, anluongtv + thumb.replace(' ', '%20'), fanart)
 		for url, name, thumb in match:
 			if 'SCTV' in name or 'SAO TV HD' in name:
-				add_dir(name, anluongtv + url, 111,  anluongtv + thumb.replace(' ', '%20'))
-			else:
-				pass 		
-		match = re.compile('href="(.+?)"><img class="images-kenh1" src="/img/sctv/(.+?)"').findall(content)
+				add_dir(name, anluongtv + url, 111,  anluongtv + thumb.replace(' ', '%20'), fanart)		
+		match = re.compile('href="(.+?)"><img class="images-kenh1"  src="/img/sctv/(.+?)"').findall(content)
 		for url, thumb in match:
 			name = thumb.replace('.png', '').upper()
-			add_dir(name, anluongtv + url, 111, anluongtv + 'img/sctv/' + thumb.replace(' ', '%20'))		  
+			add_dir(name, anluongtv + url, 111, anluongtv + 'img/sctv/' + thumb.replace(' ', '%20'), fanart)		  
 	elif 'tvcatchup' in url:
 		match = re.compile('href="(\d+)/">(\d+)/<').findall(content)
 		for url, name in match:
-			add_dir(name, tvreplay + url, 121, iconimage)
+			add_dir(name, tvreplay + url, 121, iconimage, fanart)
 	elif 'tv.vnn.vn' in url:
 		match = re.compile('href="\/(.+?)">\s*<img src="\/(.+?)".+?\/>\s*(.+?)\n').findall(content)
 		for url, thumb, title in match:
 			title = replaceAll(title, my_dict)	
-			add_link(title, tvviet + url, 202, (tvviet + thumb).replace(' ', '%20'))  	  
+			add_link(title, tvviet + url, 202, (tvviet + thumb).replace(' ', '%20'), fanart)  	  
 
-def tvtonghop_anluong(name, url, iconimage):
+def tvtonghop_anluong(url):
 	content = make_request(url)
 	match = re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
 	for url, channel_name in match:  
 		if 'f4m' in url:
 			url = url.split('=')[-1]
 			url = 'plugin://plugin.video.f4mTester/?url=' + url
-			add_link(name + '[COLOR magenta] - [/COLOR]' + channel_name.replace(' sever', 'Link') + ' [COLOR yellow](f4m)[/COLOR]', url, 201, iconimage)
+			add_link(name + '[COLOR magenta] - [/COLOR]' + channel_name.replace(' sever', 'Link') + ' [COLOR yellow](f4m)[/COLOR]', url, 201, iconimage, fanart)
 		else:
-			add_link(name + '[COLOR magenta] - [/COLOR]' + channel_name.replace(' sever', 'Link'), url, 203, iconimage)  
+			add_link(name + '[COLOR magenta] - [/COLOR]' + channel_name.replace(' sever', 'Link'), url, 203, iconimage, fanart)  
 
-def tvreplay_link(url, iconimage):
+def tvreplay_link(url):
 	content = make_request(url)
 	match = re.compile('href="(.+?)">(.+?)\.mp4</a></td><td align="right">.+?</td><td align="right">(.+?)<').findall(content)
 	for href, name, video_size in match:
 		name = name.split('_')
 		name = name[0] + '_' + name[-1]
-		add_link(name + '   [COLOR yellow]' + video_size + '[/COLOR]', url + '/' + href, 201, iconimage)
+		add_link(name + '   [COLOR yellow]' + video_size + '[/COLOR]', url + '/' + href, 201, iconimage, fanart)
 
-def my_playlist_directory(name, iconimage):
+def my_playlist_directory():
 	if 'XML' in name:
-		add_dir('[COLOR cyan]Online XML Playlist Của Tui[/COLOR]', 'onlinexml', 32, iconimage)
-		add_dir('[COLOR orange]Local XML Playlist Của Tui[/COLOR]', 'localxml', 32, iconimage)  
+		add_dir('[COLOR cyan]Online XML Playlist Của Tui[/COLOR]', 'onlinexml', 32, iconimage, fanart)
+		add_dir('[COLOR orange]Local XML Playlist Của Tui[/COLOR]', 'localxml', 32, iconimage, fanart)  
 	else:
-		add_dir('[COLOR yellow]My Online M3U Playlist[/COLOR]', 'onlinem3u', 32, iconimage)
-		add_dir('[COLOR lime]My Local M3U Playlist[/COLOR]', 'localm3u', 32, iconimage)
+		add_dir('[COLOR yellow]My Online M3U Playlist[/COLOR]', 'onlinem3u', 32, iconimage, fanart)
+		add_dir('[COLOR lime]My Local M3U Playlist[/COLOR]', 'localm3u', 32, iconimage, fanart)
 
-def my_playlist_link(name, iconimage):
+def my_playlist_link():
 	if 'Local M3U' in name:
 		if len(localm3u) <= 0:
 			mysettings.openSettings()
@@ -212,7 +210,7 @@ def my_playlist_link(name, iconimage):
 				mym3u.close()
 				match = re.compile(m3u_regex).findall(link)
 				for title, url in match:
-					add_link(title, url, 201, iconimage)
+					add_link(title, url, 201, iconimage, fanart)
 			except:
 				pass 
 	elif 'Online M3U' in name:
@@ -220,7 +218,7 @@ def my_playlist_link(name, iconimage):
 			content = make_request(onlinem3u)
 			match = re.compile(m3u_regex).findall(content)
 			for title, url in match:
-				add_link(title, url, 201, iconimage)
+				add_link(title, url, 201, iconimage, fanart)
 		else:		
 			mysettings.openSettings()			
 	elif 'Local XML' in name:
@@ -234,16 +232,16 @@ def my_playlist_link(name, iconimage):
 				match = re.compile(xml_channel_name).findall(link)
 				for channel_name in match:
 					if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-						add_link(channel_name, u_tube, 201, iconimage)
+						add_link(channel_name, u_tube, 201, iconimage, fanart)
 					else:
-						add_dir(channel_name, 'xmlfile', 33, iconimage)
+						add_dir(channel_name, 'xmlfile', 33, iconimage, fanart)
 			else:
 				match = re.compile(xml_regex).findall(link)
 				for title, url, thumb in match:
 					if len(thumb) > 0:
-						add_link(title, url, 201, thumb) 
+						add_link(title, url, 201, thumb, fanart) 
 					else:	
-						add_link(title, url, 201, iconimage)  
+						add_link(title, url, 201, iconimage, fanart)  
 	elif 'Online XML' in name:
 		if len(onlinexml) > 0: 
 			link = make_request(onlinexml)
@@ -251,20 +249,20 @@ def my_playlist_link(name, iconimage):
 				match = re.compile(xml_channel_name).findall(link)
 				for channel_name in match:
 					if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-						add_link(channel_name, u_tube, 201, iconimage)
+						add_link(channel_name, u_tube, 201, iconimage, fanart)
 					else:		
-						add_dir(channel_name, onlinexml, 33, iconimage)
+						add_dir(channel_name, onlinexml, 33, iconimage, fanart)
 			else:
 				match = re.compile(xml_regex).findall(link)
 				for title, url, thumb in match:
 					if len(thumb) > 0:
-						add_link(title, url, 201, thumb) 
+						add_link(title, url, 201, thumb, fanart) 
 					else:	
-						add_link(title, url, 201, iconimage)  		  
+						add_link(title, url, 201, iconimage, fanart)  		  
 		else:		  
 			mysettings.openSettings()	
 
-def my_playlist_channel(url, name, iconimage):
+def my_playlist_channel(name, url):
 	name = name.replace('[', '\[').replace(']', '\]')
 	if url == onlinexml:
 		link = make_request(onlinexml)
@@ -277,48 +275,48 @@ def my_playlist_channel(url, name, iconimage):
 		final_link = re.compile(xml_regex).findall(vlink)
 		for title, url, thumb in final_link:
 			if len(thumb) <= 0:
-				add_link(title, url, 201, iconimage)
+				add_link(title, url, 201, iconimage, fanart)
 			else:
-				add_link(title, url, 201, thumb)	
+				add_link(title, url, 201, thumb, fanart)	
 				
-def thanh51_xml_m3u_directory(iconimage):
-	add_dir("[COLOR lime]thanh51's XML playlist[/COLOR]", my_repo + 'master/playlists/thanh51.xml', 12, iconimage)  
-	add_dir("[COLOR blue]thanh51's M3U playlist[/COLOR]", my_repo + 'master/playlists/thanh51.m3u', 12, iconimage)  
+def thanh51_xml_m3u_directory():
+	add_dir("[COLOR lime]thanh51's XML playlist[/COLOR]", my_repo + 'master/playlists/thanh51.xml', 12, iconimage, fanart)  
+	add_dir("[COLOR blue]thanh51's M3U playlist[/COLOR]", my_repo + 'master/playlists/thanh51.m3u', 12, iconimage, fanart)  
 
-def thanh51_xml_m3u_channel(url, iconimage):	
+def thanh51_xml_m3u_channel(url):	
 	content = make_request(url)
 	if 'thanh51.xml' in url:
 		if '<channel>' in content:
 			match = re.compile(xml_channel_name).findall(content)
 			for channel_name in match:
 				if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-					add_link(channel_name, u_tube, 201, iconimage)
+					add_link(channel_name, u_tube, 201, iconimage, fanart)
 				else:
-					add_dir(channel_name, url, 13, iconimage)  	
+					add_dir(channel_name, url, 13, iconimage, fanart)  	
 		else:
 			match = re.compile(xml_regex).findall(content)
 			for title, url, thumb in match:
 				if len(thumb) > 0:
-					add_link(title, url, 201, thumb) 
+					add_link(title, url, 201, thumb, fanart) 
 				else:	
-					add_link(title, url, 201, iconimage) 
+					add_link(title, url, 201, iconimage, fanart) 
 	else:  
 		if '<CHANNEL>' in content:
 			match = re.compile('<NAME>(.+?)</NAME>').findall(content)
 			for channel_name in match:
 				if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-					add_link(channel_name, u_tube, 201, iconimage)
+					add_link(channel_name, u_tube, 201, iconimage, fanart)
 				else:	
-					add_dir(channel_name, url, 13, iconimage)  
+					add_dir(channel_name, url, 13, iconimage, fanart)  
 		else:
 			match = re.compile(m3u_regex).findall(content)
 			for title, url in match: 
 				if 'UPDATED ON' in title or 'CẬP NHẬT' in title:
-					add_link(title, u_tube, 201, iconimage)
+					add_link(title, u_tube, 201, iconimage, fanart)
 				else:
-					add_link(title, url, 201, iconimage)
+					add_link(title, url, 201, iconimage, fanart)
 
-def thanh51_xml_m3u_index(url, name, iconimage):
+def thanh51_xml_m3u_index(name, url):
 	name = name.replace('[', '\[').replace(']', '\]')
 	content = make_request(url)
 	if 'thanh51.xml' in url:  
@@ -329,81 +327,82 @@ def thanh51_xml_m3u_index(url, name, iconimage):
 				final_link = re.compile(xml_regex_reg_2L).findall(vlink)
 				for name, url, thumb in final_link:
 					if len(thumb) <= 0:
-						add_link(name, url, 202, iconimage)		
+						add_link(name, url, 202, iconimage, fanart)		
 					else:
-						add_link(name, url, 202, thumb) 
+						add_link(name, url, 202, thumb, fanart) 
 			else:		
 				final_link = re.compile(xml_regex).findall(vlink)
 				for title, url, thumb in final_link:
 					if len(thumb) <= 0:
-						add_link(title, url, 201, iconimage) 
+						add_link(title, url, 201, iconimage, fanart) 
 					else:	
-						add_link(title, url, 201, thumb)  
+						add_link(title, url, 201, thumb, fanart)  
 	else: 
 		match = re.compile('#<CHANNEL>\s*#<NAME>' + name + '</NAME>((?s).*?)#</CHANNEL>').findall(content)
 		vlink = re.compile(m3u_regex).findall(match[0])
 		for title, ahref in vlink:	
-			add_link(title, ahref, 201, iconimage) 
+			add_link(title, ahref, 201, iconimage, fanart) 
 
-def atf01_m3u(url, iconimage):
+def atf01_m3u(url):
 	content = make_request(url)
 	match = re.compile(m3u_regex).findall(content)
 	for title, url in match:
 		if 'UPDATED ON' in title or 'CẬP NHẬT' in title:
-			add_link(title, u_tube, 201, iconimage)
+			add_link(title, u_tube, 201, iconimage, fanart)
 		else:
-			add_link(title, url, 201, iconimage)
+			add_link(title, url, 201, iconimage, fanart)
 
-def index(url, iconimage):
+def index(url):
 	content = make_request(url) 
 	if 'htvonline' in url:
 		match = re.compile("<a class=\"mh-grids5-img\".*?href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
 		for url, name, thumb in match:
-			add_Link(name, url, thumb) 	  
+			add_Link(name, url, 202, thumb, fanart) 	  
 	elif 'hplus' in url:
 		match = re.compile('href="(.+?)" style.+?url\(\'(.+?)\'\)" data-content-tooltips="<div class.+?><h3 class.+?>(.+?)<').findall(content)
 		for url, thumb, name in match:
 			name = re.sub(' HD', ' [COLOR magenta]* [COLOR yellow]HD[/COLOR]', name)
-			add_link(name, 'http://hplus.com.vn/' + url, 202, thumb + '?.png') 
+			add_link(name, 'http://hplus.com.vn/' + url, 202, thumb + '?.png', fanart) 
+		xbmc.executebuiltin('Container.SetViewMode(500)')
 			
 def play_my_playlist(url):
-	mediaUrl = url.replace('&amp;', '&')
-	item = xbmcgui.ListItem(path = mediaUrl)
+	media_url = url.replace('&amp;', '&')
+	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
 	return
 
 def resolve_url(url):	
 	content = make_request(url)
 	if 'htvonline' in url:   
-		mediaUrl = re.compile("file: \"([^\"]*)\"").findall(content)[0] 
+		media_url = re.compile("file: \"([^\"]*)\"").findall(content)[0] 
 	elif 'hplus' in url:
-		mediaUrl = re.compile('var iosUrl = "(.+?)"').findall(content)[0]	
+		media_url = re.compile('var iosUrl = "(.+?)"').findall(content)[0]	
 	elif 'giniko' in url: 
-		mediaUrl = re.compile('file: "(.+?)"').findall(content)[0]
+		media_url = re.compile('file: "(.+?)"').findall(content)[0]
 	else:
-		mediaUrl = re.compile("file: '(.+?)'").findall(content)[0]  
-	item = xbmcgui.ListItem(path = mediaUrl)
+		media_url = re.compile("file: '(.+?)'").findall(content)[0]  
+	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
 	return
 
 def play_tvtonghop(url):
 	if 'm3u8' in url or 'rtmp' in url:
-		mediaUrl = url.split('=')[-1]
+		media_url = url.split('=')[-1]
 	elif 'rtsp' in url:
-		mediaUrl = url  
+		media_url = url  
 	else:
 		content = make_request(url)
 		try:
 			try:
-				mediaUrl = re.compile('file: "(.+?)",').findall(content)[0]
+				media_url = re.compile('file: "(.+?)",').findall(content)[0]
 			except:	
-				mediaUrl = re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]
+				media_url = re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]
 		except:
 			try:
-				mediaUrl = re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath=' + re.compile("'file': '(.+?)',").findall(content)[0]
+				media_url = re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath=' + re.compile("'file': '(.+?)',").findall(content)[0]
 			except:				
-				mediaUrl = re.compile('<iframe src="(.+?)".+?</iframe>').findall(content)[0].split('=')[-1]
-	item = xbmcgui.ListItem(path = mediaUrl)
+				media_url = re.compile('<iframe src="(.+?)".+?</iframe>').findall(content)[0].split('=')[-1]
+	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
 	return
 
@@ -424,18 +423,20 @@ def get_params():
 				param[splitparams[0]] = splitparams[1]
 	return param
 
-def add_dir(name, url, mode, iconimage):
+def add_dir(name, url, mode, iconimage, fanart):
 	u = sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + "&name=" + urllib.quote_plus(name) + "&iconimage=" + urllib.quote_plus(iconimage)
 	ok = True
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultFolder.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )
+	liz.setProperty('fanart_image', fanart)
 	ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
 	return ok
 
-def add_link(name, url, mode, iconimage):
-	u = sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + "&iconimage=" + urllib.quote_plus(iconimage)	
+def add_link(name, url, mode, iconimage, fanart):
+	u = sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + "&name=" + urllib.quote_plus(name) + "&iconimage=" + urllib.quote_plus(iconimage)	
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultVideo.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )
+	liz.setProperty('fanart_image', fanart)
 	liz.setProperty('IsPlayable', 'true')  
 	ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz)  
 
@@ -474,43 +475,43 @@ if mode == None or url == None or len(url) < 1:
 		direct_link()  	
 
 elif mode == 1:
-	tv_directory(url, iconimage)
+	tv_directory(url)
 
 elif mode == 2:  
-	tv_index(name, url, iconimage)
+	tv_index(name, url)
 
 elif mode == 3:
-	tv_scraper(url, iconimage)  
+	tv_scraper(url)  
 
 elif mode == 11:  
-	thanh51_xml_m3u_directory(iconimage)
+	thanh51_xml_m3u_directory()
 
 elif mode == 12:
-	thanh51_xml_m3u_channel(url, iconimage)
+	thanh51_xml_m3u_channel(url)
 
 elif mode == 13:
-	thanh51_xml_m3u_index(url ,name, iconimage)
+	thanh51_xml_m3u_index(name, url)
 
 elif mode == 21:  
-	atf01_m3u(url, iconimage)  
+	atf01_m3u(url)  
 
 elif mode == 31:
-	my_playlist_directory(name, iconimage)
+	my_playlist_directory()
 
 elif mode == 32:
-	my_playlist_link(name, iconimage)  
+	my_playlist_link()  
 
 elif mode == 33:  
-	my_playlist_channel(url, name, iconimage)  
+	my_playlist_channel(name, url)  
 
 elif mode == 101:
-	index(url, iconimage) 
+	index(url) 
 
 elif mode == 111:
-	tvtonghop_anluong(name, url, iconimage) 
+	tvtonghop_anluong(url) 
 
 elif mode == 121: 
-	tvreplay_link(url, iconimage)  
+	tvreplay_link(url)  
 
 elif mode == 201:  
 	play_my_playlist(url)
@@ -522,4 +523,3 @@ elif mode == 203:
 	play_tvtonghop(url) 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
-

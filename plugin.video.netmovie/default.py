@@ -31,7 +31,7 @@ m_anhtrang = 'http://m.anhtrang.org/'
 dangcapmovie = 'http://dangcapmovie.com/'
 dchd = 'http://dangcaphd.com/'
 phim3s = 'http://phim3s.net/'
-megaboxvn = 'http://megabox.vn/'
+megaboxvn = 'http://phim.megabox.vn/'
 phimb = 'http://www.phimb.net'
 phim14 = 'http://phim14.net/'
 phim7 = 'http://phim7.com'
@@ -78,10 +78,16 @@ def main():
 	add_dir('[COLOR lime]phim7.com[/COLOR]', phim7, 2, logos + 'phim7.png', fanart)
 	add_dir('[COLOR cyan]phimb.net[/COLOR]', phimb, 2, logos + 'phimb.png', fanart)    
 	add_dir('[COLOR orange]anhtrang.org[/COLOR]', anhtrang, 2, logos + 'anhtrang.png', fanart)  
-	add_dir('[COLOR violet]megabox.vn[/COLOR]', megaboxvn, 2, logos + 'megabox.png', fanart)  
-	add_dir('[COLOR lime]dangcaphd.com[/COLOR]', dchd, 2, logos + 'dchd.png', fanart) 
+	add_dir('[COLOR violet]megabox.vn[/COLOR]', megaboxvn, 10, logos + 'megabox.png', fanart) 
+	add_dir('[COLOR lime]dangcaphd.com - [COLOR white]Phim bộ[/COLOR]', dchd + 'movie/series.html', 3, logos + 'dchd.png', fanart) 	
 	add_dir('[COLOR blue]dangcapmovie.com[/COLOR]', dangcapmovie, 2, logos + 'dcm.png', fanart)  
 
+def megabox_dir():
+	add_dir('[COLOR cyan]megabox[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR cyan]Tìm Phim[/COLOR]', megaboxvn, 1, logos + 'megabox.png', fanart)
+	add_dir('Phim lẻ', megaboxvn, 2, logos + 'megabox.png', fanart)
+	add_dir('Phim bộ', megaboxvn, 2, logos + 'megabox.png', fanart)
+	add_dir('Show', megaboxvn, 2, logos + 'megabox.png', fanart)	
+	
 def search():
 	try:
 		keyb = xbmc.Keyboard('', '[COLOR yellow]Enter search text[/COLOR]')
@@ -98,9 +104,8 @@ def search():
 			url = anhtrang + 'tim-kiem=' + searchText + '.html'  
 			media_list(url)
 		elif 'megabox' in name:	
-			url = megaboxvn + 'home/search/index/key/' + searchText.replace('+', '%20')	
-			megabox_list_eps(url)
-			other_megabox_list(url)
+			url = megaboxvn + 'search/index?keyword=' + searchText.replace('+', '-')	
+			search_result(url)
 		elif 'dangcapmovie' in name:      
 			url = dangcapmovie + 'movie/search.html?key=' + searchText
 			search_result(url)
@@ -123,8 +128,21 @@ def search_result(url):
 		for url, name, thumb in match:
 			url = url.replace('/movie-', '/watch-')
 			add_dir('[COLOR lime]' + name  + '[/COLOR]', url.replace('/movie-', '/watch-'), 5, thumb, fanart)
- 		
-def category(url):
+	elif 'megabox' in url:
+		try:
+			match = re.compile('src="(.+?)">\s*<span class=\'esp\'>.+?<span class="features">\s*</span>\s*</a>\s*<div class="meta">\s*<h3 class="H3title">\s*<a href="(.+?)">(.+?)</a>').findall(content)
+			for thumb, href, title in match:
+				add_dir(title, href, 5, thumb, fanart)
+		except:
+			pass
+		try:
+			match = re.compile('src="(.+?)">\s*<span class="features">\s*</span>\s*</a>\s*<div class="meta">\s*<h3 class="H3title">\s*<a href="(.+?)">(.+?)</a>').findall(content)
+			for thumb, href, title in match:
+				add_link(title, href, 99, thumb, fanart)
+		except:
+			pass			
+			
+def category(name, url):
 	home()
 	content = make_request(url)
 	if 'phim3s' in url:
@@ -188,45 +206,18 @@ def category(url):
 		for url, name in match:
 			add_dir('[COLOR lightblue]' + name + '[/COLOR]', anhtrang + url, 3, logos + 'anhtrang.png', fanart) 
 	elif 'megabox' in url:  
-		add_dir('[COLOR cyan]megabox[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [/B][COLOR cyan]Tìm Phim[/COLOR]', megaboxvn, 1, logos + 'megabox.png', fanart)
-		match = re.compile("href=\"tvonline\/(.+?)\">([^>]*)<").findall(content)[:3]  
-		for url, name in match: 
-			if 'the-loai' in url:  
-				add_dir('[COLOR yellow]TV - ' + name + '[/COLOR]', ('%stvonline/%s' % (megaboxvn, url)), 3, logos + 'megabox.png', fanart)
-			else:	  
-				add_dir('[COLOR yellow]TV - ' + name + '[/COLOR]', ('%stvonline/%s' % (megaboxvn, url)), 10, logos + 'megabox.png', fanart)
-		add_dir('[COLOR lime]Phim Lẻ - Mới Nhất[/COLOR]', megaboxvn + 'phim-le/moi-nhat.html', 11, logos + 'megabox.png', fanart)	  
-		match = re.compile("href=\"phim-le\/(.+?)\">([^>]*)<").findall(content)[:3] 
-		for url, name in match: 
-			if 'the-loai' in url:  
-				add_dir('[COLOR lime]Phim Lẻ - ' + name + '[/COLOR]', megaboxvn + 'phim-le/' + url, 3, logos + 'megabox.png', fanart)
-			else:
-				add_dir('[COLOR lime]Phim Lẻ - ' + name.replace('Phim ', '') + '[/COLOR]', megaboxvn + 'phim-le/' + url, 11, logos + 'megabox.png', fanart)	  
-		add_dir('[COLOR lime]Phim Lẻ - Dành Cho Bạn[/COLOR]', megaboxvn + 'for_you_movies.html', 11, logos + 'megabox.png', fanart)
-		add_dir('[COLOR yellow]Phim Bộ - Mới Nhất[/COLOR]', megaboxvn + 'phim-bo/moi-nhat.html', 10, logos + 'megabox.png', fanart)  
-		match = re.compile("href=\"phim-bo\/(.+?)\">([^>]*)<").findall(content)[:4] 
-		for url, name in match:
-			if 'the-loai' in url:  
-				add_dir('[COLOR yellow]Phim Bộ - ' + name + '[/COLOR]', ('%sphim-bo/%s' % (megaboxvn, url)), 11, logos + 'megabox.png', fanart)	
-			else:
-				add_dir('[COLOR yellow]Phim Bộ - ' + name + '[/COLOR]', ('%sphim-bo/%s' % (megaboxvn, url)), 10, logos + 'megabox.png', fanart)		
-		match = re.compile("href=\"video-clip\/(.+?)\">([^>]*)<").findall(content)[1:5]
-		for url, name in match:  
-			add_dir('[COLOR lime]Videos - ' + name + '[/COLOR]', megaboxvn + 'video-clip/' + url, 11, logos + 'megabox.png', fanart)				
-	elif 'dangcaphd' in url:
-		add_dir('[COLOR yellow]dangcaphd[B]   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR lightgreen]>   [/B][COLOR yellow]Tìm Phim[/COLOR]', dchd + '', 1, logos + 'dchd.png', fanart)
-		match = re.compile("<a href=\"([^\"]*)\" class='menutop' title='([^']+)'>").findall(content)
-		for url, name in match:
-			add_dir('[COLOR lime]' + name + '[/COLOR]', url, 3, logos + 'dchd.png', fanart)  
-		match = re.compile("<li><a href=\"http:\/\/dangcaphd.com\/cat(.+?)\" title=\"([^\"]*)\">").findall(content)[0:22]
-		for url, name in match:
-			add_dir('[COLOR cyan]' + name + '[/COLOR]', dchd + 'cat' + url, 3, logos + 'dchd.png', fanart)
-		match = re.compile("<li><a href=\"http:\/\/dangcaphd.com\/country(.+?)\" title=\"([^\"]+)\">").findall(content)[0:12]
-		for url, name in match:
-			add_dir('[COLOR orange]' + name + '[/COLOR]', dchd + 'country' + url, 3, logos + 'dchd.png', fanart)
-		match = re.compile("<a href=\"http:\/\/dangcaphd.com\/movie(.+?)\"><span>(.*?)<\/span><\/a>").findall(content)[0:3]
-		for url, name in match:
-			add_dir('[COLOR lightgreen]' + name + '[/COLOR]', dchd + 'movie' + url, 3, logos + 'dchd.png', fanart)					
+		if 'Phim lẻ' in name:
+			match = re.compile("href='http://phim.megabox.vn/phim-le(.+?)'>(.+?)<").findall(content) 
+			for href, name in match: 
+				add_dir(name, megaboxvn + 'phim-le' + href, 3, logos + 'megabox.png', fanart)  
+		elif 'Phim bộ' in name:
+			match = re.compile("href='http://phim.megabox.vn/phim-bo(.+?)'>(.+?)<").findall(content) 
+			for href, name in match: 
+				add_dir(name, megaboxvn + 'phim-bo' + href, 3, logos + 'megabox.png', fanart)
+		elif 'Show' in name:
+			match = re.compile("href='http://phim.megabox.vn/tv-shows(.+?)'>(.+?)<").findall(content) 
+			for href, name in match: 
+				add_dir(name, megaboxvn + 'tv-shows' + href, 3, logos + 'megabox.png', fanart)
 	elif 'dangcapmovie' in url:
 		add_dir('[COLOR lime]dangcapmovie.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR lime]Movie Search[/COLOR]', dangcapmovie, 1, logos + 'dcm.png', fanart)
 		match = re.compile('href="http:\/\/dangcapmovie.com\/cat(.+?)" title="(.+?)">').findall(content)[0:23] 
@@ -289,27 +280,20 @@ def media_list(url):
 		for url, name in match:	
 			add_dir('[COLOR red]Trang ' + name.replace('Cuối', '[COLOR red]Cuối[COLOR magenta] >>>>') + '[/COLOR]', url, 3, logos + 'anhtrang.png', fanart)	
 	elif 'megabox' in url:
-		if 'tvonline' in url:
-			match = re.compile('<div class="infoC"> <a href="(.+?)" >\s*<h4>(.+?)<span>\((\d+)\)<\/span>').findall(content)
-			for url, title, inum in match:
-				if inum == '0':
+		match = re.compile('src="(.+?)">\s*.*<span class="features">\s*</span>\s*</a>\s*<div class="meta">\s*<h3 class="H3title">\s*<a href="(.+?)">(.+?)</a>').findall(content)
+		for thumb, href, title in match:
+			if 'phim-bo' in url:
+				add_dir(title, href, 5, thumb, fanart)
+			else:	
+				try:
+					add_link(title, href, 99, thumb, fanart)
+				except: 
 					pass
-				else:
-					add_dir('[COLOR yellow]' + title + '[/COLOR]', url, 10, logos + 'megabox.png', fanart)
-		elif 'phim-le' in url:
-			match = re.compile('<div class="infoC"> <a href="(.+?)" >\s*<h4>(.+?)<span>\((\d+)\)<\/span>').findall(content)[6:]
-			for url, title, inum in match:
-				if inum == '0':
-					pass
-				else:
-					add_dir('[COLOR lime]' + title + '[/COLOR]', url, 11, logos + 'megabox.png', fanart)  
-		elif 'phim-bo' in url:
-			match = re.compile('<div class="infoC"> <a href="(.+?)" >\s*<h4>(.+?)<span>\((\d+)\)<\/span>').findall(content)[5:]
-			for url, title, inum in match:
-				if inum == '0':
-					pass
-				else:
-					add_dir('[COLOR yellow]' + title + '[/COLOR]', url, 10, logos + 'megabox.png', fanart)  	
+		try:	
+			match = re.compile('class="next"><a href="(.+?)">').findall(content)
+			add_dir('Trang kế', match[0], 3, logos + 'megabox.png', fanart)	
+		except: 
+			pass	
 	elif 'dangcaphd' in url:
 		match = re.compile('<a href="(.+?)" title="(.+?)">\s*<img src="(.+?)"').findall(content)
 		for url, name, thumb in match:
@@ -401,13 +385,9 @@ def episode(name, url):
 		for url, title in match:
 			add_link('[COLOR lime]Tập ' + title + '[COLOR cyan][B]  -  [/B][/COLOR]' + name, url, 99, thumb, fanart)   				
 	elif 'megabox' in url:
-		thumb = re.compile ('<link rel="image_src" href="(.+?)"').findall(content)[-1]
-		match = re.compile('<option selected="selected"  value="(.+?)">(.+?)<\/option>').findall(content)
+		match = re.compile("href='(.+?)' >(\d+)<").findall(content)
 		for url, title in match:
-			add_link('[COLOR cyan]' + title + '[COLOR magenta] - ' + name + '[/COLOR]', megaboxvn + url, 99, thumb + '?.jpg', fanart)     
-		match = re.compile('<option  value="(.+?)">(.+?)<\/option>').findall(content)
-		for url, title in match:
-			add_link('[COLOR cyan]' + title + '[COLOR magenta] - ' + name + '[/COLOR]', megaboxvn + url, 99, thumb + '?.jpg', fanart) 
+			add_link('[COLOR cyan]Tập ' + title + '[COLOR magenta] - [COLOR white]' + name + '[/COLOR]', url, 99, iconimage, fanart)      
 	elif 'dangcapmovie' in url:
 		thumb = re.compile('rel="image_src" href="(.+?)"').findall(content)[0]
 		match = re.compile('episode="(.+?)" _link="(.+?)" _sub=".+?"').findall(content)
@@ -418,41 +398,11 @@ def episode(name, url):
 				add_link(name, 'https://redirector' + match1[-1], 99, thumb, fanart)    
 			else:
 				add_link('[COLOR yellow]Tập ' + eps+ '[/COLOR]', 'https://redirector' + match1[-1], 99, thumb, fanart)
-				
-def megabox_list_eps(url):	
-	home()
-	content = make_request(url)
-	if 'phim-bo' in url:
-		match = re.compile("title = '(.+?)' href='(.+?)'.+\s.+\s.*\s.+src=\"(.+?)\"").findall(content)
-		for title, url, thumb in match:
-			add_dir('[COLOR yellow]' + title + '[/COLOR]', url, 5, thumb + '?.jpg', fanart)  
-	else:	  
-		match = re.compile("title = '(.+?)' href='(.+?)'.+\s.+\s*\s.+\s.+src=\"(.+?)\"").findall(content)
-		for title, url, thumb in match:
-			if 'victorias-secret-fashion-show' in url:
-				add_link('[COLOR lime]' + title + '[/COLOR]', url.replace('/phim-', '/xem-phim-'), 99, thumb + '?.jpg', fanart)
-			else:		
-				add_dir('[COLOR yellow]' + title + '[/COLOR]', url, 5, thumb + '?.jpg', fanart)
-				 	  	
-def other_megabox_list(url):
-	home()	
-	content = make_request(url)
-	if 'video-clip' in url:
-		match = re.compile("title = '(.+?)' href='(.+?)'.+\s.+\s*\s.+\s.+src=\"(.+?)\"").findall(content)
-		for title, url, thumb in match:
-			add_link('[COLOR lime]' + title + '[/COLOR]', url.replace('/phim-', '/xem-phim-'), 99, thumb + '?.jpg', fanart)  
-	else:
-		match = re.compile("title = '(.+?)' href='(.+?)'.+\s.+\s.*\s.+src=\"(.+?)\"").findall(content)
-		for title, url, thumb in match:
-			add_link('[COLOR lime]' + title + '[/COLOR]', url.replace('/phim-', '/xem-phim-'), 99, thumb + '?.jpg', fanart)		
-										             		
+													             		
 def resolve_url(url):
 	if 'dangcaphd' in url:
 		content = make_request(url)
-		try:	
-			media_url = re.compile('<a _episode="1" _link="(.+?)_\d_\d+.mp4"').findall(content)[0].replace('demophimle', 'phimle2112') + '.mp4'	  
-		except:
-			media_url = re.compile('<a _episode="1" _link="(.+?)"').findall(content)[0].replace(' ', '%20')
+		media_url = re.compile('<a _episode="1" _link="(.+?)"').findall(content)[0].replace(' ', '%20')
 	elif 'anhtrang' in url:
 		content = make_request(url)
 		try:
@@ -461,11 +411,11 @@ def resolve_url(url):
 			media_url = re.compile("var video_src_mv=\"(.+?)\"").findall(content)[0]
 	elif 'megabox' in url:
 		content = make_request(url)
-		video_url = re.compile('file: "(.+?)"').findall(content)[0]
+		video_url = re.compile('var iosUrl = "(.+?)"').findall(content)[0]
 		if 'youtube' in video_url:
 			media_url = video_url.replace('https://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=')
 		else:
-			media_url = video_url        
+			media_url = video_url       
 	elif 'phim7' in url:
 		content = make_request(url)  
 		try:
@@ -492,7 +442,7 @@ def resolve_url(url):
 		content = response.read()
 		response.close()  
 		try:  
-			media_url = re.compile('source src="(.+?)"').findall(content)[0]
+			media_url = re.compile('var video_src_mv= "(.+?)"').findall(content)[0]
 		except:
 			try:
 				media_url = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile('src="http://www.youtube.com/embed/(.+?)\?.+?"').findall(content)[0]  
@@ -560,7 +510,7 @@ try:
 	iconimage = urllib.unquote_plus(params["iconimage"])
 except:
   pass  
-  
+ 
 print "Mode: " + str(mode)
 print "URL: " + str(url)
 print "Name: " + str(name)
@@ -573,7 +523,7 @@ elif mode == 1:
 	search()
 		
 elif mode == 2:
-	category(url)
+	category(name, url)
 				
 elif mode == 3:
 	media_list(url)
@@ -583,13 +533,10 @@ elif mode == 4:
 	
 elif mode == 5:
 	episode(name, url)
-	
+
 elif mode == 10:
-	megabox_list_eps(url) 
-  
-elif mode == 11:
-	other_megabox_list(url)
-		
+	megabox_dir()	
+	
 elif mode == 99:
 	resolve_url(url)
 	

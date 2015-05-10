@@ -39,12 +39,10 @@ if not os.path.exists(homemenu):
 	except:
 		pass  	
 	
-status = urllib.urlopen(homelink).getcode()
-if status == 200:
-	try:
-		urllib.urlretrieve (homelink, homemenu)
-	except:
-		pass
+try:
+	urllib.urlretrieve (homelink, homemenu)
+except:
+	pass
 		
 def menulist():
 	try:
@@ -158,7 +156,7 @@ def media_list(url):
 		match = re.compile("href='([^']*)' class='.+?'>(\d+)<").findall(content)
 		for url, name in match:	
 			add_dir('[COLOR yellow]Trang ' + name + '[/COLOR]', url.replace('#038;', ''), 5, logos + 'nguoiviet.png', fanart)
-	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
           
 def resolve_url(url):
 	content = make_request(url)

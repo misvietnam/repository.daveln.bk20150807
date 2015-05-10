@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.netmedia"
        name="*netmedia"
-       version="1.1.2"
+       version="1.1.3"
        provider-name="DaveLN">
   <requires>
     <import addon="xbmc.python" version="2.1.0" optional="true" />				
@@ -21,12 +21,10 @@
 		<forum></forum>
 		<website>http://www.youtube.com/</website>
 		<website>http://www.dailymotion.com/</website>
-		<website>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</website> 
-		<website>http://nguoiviettv.com/?cat=23</website>     
+		<website>http://www.dnrtv.org.vn/tvod/chuyen-de/suc-khoe</website>     
 		<email></email>
 		<mainsource>https://github.com/daveln/repository.daveln</mainsource>    
-		<source>https://github.com/bromix/plugin.video.youtube</source>
-		<source>http://ftp.vim.org/pub/pub/mediaplayer/xbmc/addons/frodo/plugin.video.youtube/</source> 
+		<source>https://github.com/bromix/plugin.video.youtube</source> 
 		<source>https://github.com/AddonScriptorDE/plugin.video.dailymotion_com</source>     
   </extension>
 </addon>

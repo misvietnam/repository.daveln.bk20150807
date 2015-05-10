@@ -1,3 +1,8 @@
+v 1.0.3
+Updated
+xbmc.python version 2.1.0
+Show View List
+
 v 1.0.2
 Updated NguoiViet's url and playlist
 

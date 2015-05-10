@@ -1,3 +1,6 @@
+v 0.0.8
+xbmc.python version 2.1.0
+
 v 0.0.7
 Changed fanart
 xbmc.python version 2.14.0

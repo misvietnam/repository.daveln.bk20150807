@@ -363,7 +363,7 @@ def index(url):
 		for url, thumb, name in match:
 			name = re.sub(' HD', ' [COLOR magenta]* [COLOR yellow]HD[/COLOR]', name)
 			add_link(name, 'http://hplus.com.vn/' + url, 202, thumb + '?.png', fanart) 
-		xbmc.executebuiltin('Container.SetViewMode(500)')
+		
 			
 def play_my_playlist(url):
 	media_url = url.replace('&amp;', '&')

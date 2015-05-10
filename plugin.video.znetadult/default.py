@@ -51,12 +51,10 @@ if not os.path.exists(homemenu):
 	except:
 		pass  	
 	
-status = urllib.urlopen(homelink).getcode()
-if status == 200:
-	try:
-		urllib.urlretrieve (homelink, homemenu)
-	except:
-		pass 		
+try:
+	urllib.urlretrieve (homelink, homemenu)
+except:
+	pass 		
 
 def menulist():
 	try:
@@ -496,7 +494,7 @@ def resolve_url(url):
 	elif 'xvideos' in url:
 		media_url = urllib.unquote(re.compile("flv_url=(.+?)&amp").findall(content)[-1]) 
 	elif 'tube8' in url:
-		media_url = re.compile("videoUrlJS	= '(.+?)'").findall(content)[0]
+		media_url = re.compile('videoUrlJS = "(.+?)"').findall(content)[0]
 	elif 'youporn' in url:
 		media_url = re.compile("video id=\"player-html5\" src=\"(.+?)\"").findall(content)[0].replace('&amp;', '&') 
 		#media_url = re.compile("<span>&nbsp;<\/span><a href=\"(.+?)\"").findall(content)[0].replace('&amp;', '&')#MPG	

@@ -38,12 +38,10 @@ if not os.path.exists(home_menu):
 	except:
 		pass  	
 	
-status = urllib.urlopen(home_link).getcode()
-if status == 200:
-	try:
-		urllib.urlretrieve (home_link, home_menu)
-	except:
-		pass 		
+try:
+	urllib.urlretrieve (home_link, home_menu)
+except:
+	pass 		
 	
 if not os.path.exists(prog_menu):
 	try:
@@ -51,12 +49,10 @@ if not os.path.exists(prog_menu):
 	except:
 		pass  	
 	
-status = urllib.urlopen(prog_link).getcode()
-if status == 200:
-	try:
-		urllib.urlretrieve (prog_link, prog_menu)
-	except:
-		pass 	
+try:
+	urllib.urlretrieve (prog_link, prog_menu)
+except:
+	pass 	
 
 def menu_list():
 	try:

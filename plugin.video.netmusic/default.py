@@ -40,12 +40,10 @@ if not os.path.exists(homemenu):
 	except:
 		pass  	
 	
-status = urllib.urlopen(homelink).getcode()
-if status == 200:
-	try:
-		urllib.urlretrieve (homelink, homemenu)
-	except:
-		pass		
+try:
+	urllib.urlretrieve (homelink, homemenu)
+except:
+	pass		
 
 def replace_all(text, dict):
 	try:
@@ -154,7 +152,7 @@ def search_result(url):
 		match = re.compile("href=\"(.+?)\" class=\"npage\">(\d+)<").findall(content)
 		for url, name in match:
 			add_dir('[COLOR cyan]Trang ' + name + '[/COLOR]', url.replace('&amp;', '&'), 5, logos + 'csn.png', fanart)  
-	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 	
 def category(url):
 	home()
@@ -213,16 +211,7 @@ def media_list(url):
 		for url, name in match: 
 			add_link('[COLOR cyan]' + name + '[/COLOR]', ('%s%s' % (karaoke, url)), 4, logos + 'timkaraoke.png', fanart) 			
 	elif 'youtube' in url:	  
-		match = re.compile("player url='(.+?)\&.+?><media.+?url='(.+?)' height=.+?'plain'>(.+?)<\/media").findall(content)
-		for url, thumb, name in match:       
-			name = name.replace("&#39;", "'").replace('&amp;', '&').replace('&quot;', '"')
-			url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/play/?video_id=')	#new
-			#url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?action=play_video&videoid=')	#old
-			#url = url.replace('http://www.youtube.com/watch?v=', 'plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=')	#old	      
-			add_link(name, url, 4, thumb, fanart)
-		match = re.compile("<link rel='next' type='application\/atom\+xml' href='(.+?)'").findall(content)
-		for url in match:  
-			add_dir('[COLOR yellow]Trang kế  [COLOR cyan]>[COLOR magenta]>[COLOR orange]>[COLOR yellow]>[/COLOR]', url.replace('&amp;', '&'), 3, icon, fanart)		  
+		add_link('', url, 4, '', fanart)
 	elif 'thuynga' in url:
 		match = re.compile("style=\"background-image: url\('(.+?)'\)\">\s*<span class.+?</span>\s.+\s.+\s.+\s*<a href=\"(.+?)\">(.+?)<").findall(content)
 		for thumb, url, name in match:
@@ -230,7 +219,7 @@ def media_list(url):
 		match = re.compile('href="http://ott.thuynga.com/([^>]+)">(\d+)<').findall(content)	
 		for url, name in match:
 			add_dir('[COLOR magenta]Trang ' + name + '[/COLOR]', ThuyNga + url, 3, logos + 'thuynga.png', fanart)
-	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 					
 def resolve_url(url):
 	content = make_request(url)
@@ -274,6 +263,10 @@ def add_dir(name, url, mode, iconimage, fanart):
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultFolder.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )
 	liz.setProperty('fanart_image', fanart)
+	if ('www.youtube.com/user/' in url) or ('www.youtube.com/channel/' in url):
+		u = 'plugin://plugin.video.youtube/%s/%s/' % (url.split( '/' )[-2], url.split( '/' )[-1])
+		ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
+		return ok	
 	ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
 	return ok
 

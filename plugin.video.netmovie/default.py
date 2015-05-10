@@ -326,7 +326,7 @@ def media_list(url):
 				add_dir('[COLOR red]' + name + ' Page[/COLOR]', url, 3, logos + 'dcm.png', fanart)      
 			else:
 				add_dir('[COLOR lime]Page ' + name + '[/COLOR]', url, 3, logos + 'dcm.png', fanart)
-	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 	
 def server_list(url):
 	home()

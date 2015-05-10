@@ -26,33 +26,9 @@ home = mysettings.getAddonInfo('path')
 fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
-homemenu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'netvideos.xml'))
-homelink = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/netvideos.xml'
 dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':' - ', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
 dongnai = 'http://www.dnrtv.org.vn'
 CaliToday = 'http://truyenhinhcalitoday.com/'
-nguoiviettvcom = 'http://video.nguoi-viet.com/'
-
-if not os.path.exists(homemenu):
-	try:
-		open(homemenu, 'w').close()
-	except:
-		pass  	
-	
-try:
-	urllib.urlretrieve (homelink, homemenu)
-except:
-	pass
-		
-def menulist():
-	try:
-		mainmenu = open(homemenu, 'r')  
-		mlink = mainmenu.read()
-		mainmenu.close()
-		match = re.compile("<title>([^<]*)<\/title>\s*<link>([^<]+)<\/link>\s*<thumbnail>(.+?)</thumbnail>").findall(mlink)
-		return match
-	except:
-		pass	
 
 def replace_all(text, dict):
 	try:
@@ -91,7 +67,6 @@ def trong_nuoc():
   
 def hai_ngoai(): 
 	home()
-	add_dir('Người Việt TV', nguoiviettvcom, 4, logos + 'nguoiviet.png', fanart) 
 	add_dir('Truyền Hình Cali Today', CaliToday, 3, logos + 'cali.png', fanart)  
   
 def media_station(url):
@@ -100,17 +75,11 @@ def media_station(url):
 	if 'www.dnrtv.org' in url:
 		match = re.compile("tabindex=\"0\"><a href=\"([^\"]+)\">(.+?)<").findall(content)[13:]
 		for url, name in match:  	
-			add_dir(name, dongnai + url, 5, logos + 'dongnai.png', fanart)
+			add_dir(name, dongnai + url, 4, logos + 'dongnai.png', fanart)
 	elif 'truyenhinhcalitoday' in url:
 		match = re.compile('href="http://truyenhinhcalitoday.com/category([^>]+)">([^>]+)<').findall(content)[0:12]
 		for url, name in match:	
-			add_dir(name, CaliToday + 'category' + url, 5, logos + 'cali.png', fanart)			
-        
-def nguoi_viet():
-	home()
-	for title, url, thumb in menulist():
-		if 'nguoiviet.com - ' in title:
-			add_dir(title.replace('nguoiviet.com - ', ''), url, 5, logos + thumb, fanart)  
+			add_dir(name, CaliToday + 'category' + url, 4, logos + 'cali.png', fanart)			
      
 def media_list(url):
 	home()
@@ -118,52 +87,37 @@ def media_list(url):
 	if 'www.dnrtv.org.vn' in url:
 		match = re.compile("img src=\"([^\"]+)\" \/><\/a>\s*<a href=\"([^\"]*)\" class=\"title\">(.+?)<").findall(content)
 		for thumb, url, name in match:     
-			add_link(name, url, 6, thumb, fanart)
+			add_link(name, url, 99, thumb, fanart)
 		match = re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang đầu<').findall(content)
 		for url in match:	
-			add_dir('[COLOR yellow]Trang đầu[/COLOR]', url, 5, logos + 'dongnai.png', fanart)    
+			add_dir('[COLOR yellow]Trang đầu[/COLOR]', url, 4, logos + 'dongnai.png', fanart)    
 		match = re.compile('class=\'paging_normal\' href=\'([^\']+)\'>(\d+)<').findall(content)
 		for url, name in match:	
-			add_dir('[COLOR lime]Trang ' + name + '[/COLOR]', url, 5, icon, fanart)	
+			add_dir('[COLOR lime]Trang ' + name + '[/COLOR]', url, 4, icon, fanart)	
 		match = re.compile('class=\'paging_normal\' href=\'([^\']*)\'>Trang cuối<').findall(content)
 		for url in match:	
-			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 5, logos + 'dongnai.png', fanart)	
+			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 4, logos + 'dongnai.png', fanart)	
 	elif 'truyenhinhcalitoday' in url:
 		match = re.compile('href="(.+?)">\s*<span class="clip">\s*<img src="(.+?)" alt="(.+?)"').findall(content)
 		for url, thumb, name in match:
 			name = replace_all(name, dict)
-			add_link(name, url, 6, thumb, fanart)
+			add_link(name, url, 99, thumb, fanart)
 		match = re.compile("href='([^']*)' class='first'").findall(content)
 		for url in match:	
-			add_dir('[COLOR yellow]Trang đầu[/COLOR]', url, 5, logos + 'cali.png', fanart)    
+			add_dir('[COLOR yellow]Trang đầu[/COLOR]', url, 4, logos + 'cali.png', fanart)    
 		match = re.compile("href='([^']*)' class='page larger'>(\d+)<").findall(content)
 		for url, name in match:	
-			add_dir('[COLOR lime]Trang ' + name + '[/COLOR]', url, 5, logos + 'cali.png', fanart)	
+			add_dir('[COLOR lime]Trang ' + name + '[/COLOR]', url, 4, logos + 'cali.png', fanart)	
 		match = re.compile("href='([^']*)' class='last'").findall(content)
 		for url in match:	
-			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 5, logos + 'cali.png', fanart)	
-	elif 'video.nguoi-viet.com' in url:
-		if 'orderby=views' in url:
-			match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[0:24]
-			for name, url, thumb in match:
-				name = replace_all(name, dict)
-				add_link(name, url, 6, thumb, fanart)
-		else: 
-			match = re.compile('title="([^"]*)" href="([^"]+)">\s*<span class="clip">\s*<img src="(.+?)"').findall(content)[15:-6]
-			for name, url, thumb in match:
-				name = replace_all(name, dict)
-				add_link(name, url, 6, thumb, fanart)    
-		match = re.compile("href='([^']*)' class='.+?'>(\d+)<").findall(content)
-		for url, name in match:	
-			add_dir('[COLOR yellow]Trang ' + name + '[/COLOR]', url.replace('#038;', ''), 5, logos + 'nguoiviet.png', fanart)
-	
-          
+			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 4, logos + 'cali.png', fanart)	
+	          
 def resolve_url(url):
 	content = make_request(url)
 	if 'www.dnrtv.org.vn' in url:  
 		media_url = re.compile("url: '(.+?)mp4'").findall(content)[0] + 'mp4' 
-	else: 	# hai_ngoai - CaliToday and NguoiViet
-		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile("http://www.youtube.com/embed/(.+?)\?").findall(content)[0]     
+	else:
+		media_url = 'plugin://plugin.video.youtube/play/?video_id=' + re.compile("src=.+?www\.youtube\.com/embed/(.+?)\?").findall(content)[0]     
 	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
 	return
@@ -243,12 +197,9 @@ elif mode == 3:
 	media_station(url)
 
 elif mode == 4:
-	nguoi_viet()
-  
-elif mode == 5:
 	media_list(url)
 		
-elif mode == 6:
+elif mode == 99:
 	resolve_url(url)
  
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

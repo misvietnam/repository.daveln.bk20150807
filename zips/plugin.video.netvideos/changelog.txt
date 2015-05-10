@@ -1,3 +1,7 @@
+v 1.0.4
+Updated Truyen Hinh Cali
+Removed Nguoi Viet
+
 v 1.0.3
 Updated
 xbmc.python version 2.1.0

@@ -1,6 +1,6 @@
 #EXTM3U
 
-#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 18 THÁNG 4 NĂM 2015[/COLOR]
+#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 11 THÁNG 5 NĂM 2015[/COLOR]
 http://www.youtube.com
 
 #EXTINF:-1,[COLOR cyan]Tôn Giáo[/COLOR]
@@ -283,29 +283,6 @@ rtmp://38.107.180.195/live/ playpath=vov2 swfUrl=http://p.jwpcdn.com/6/8/jwplaye
 rtmp://66.160.142.194/live/ playpath=vov3 swfUrl=http://p.jwpcdn.com/6/8/jwplayer.flash.swf pageUrl=http://vtc.com.vn/live/15/VOV3.html live=1
 #EXTINF:-1,VOV 5
 rtmp://38.107.180.195/live/ playpath=vov5 swfUrl=http://p.jwpcdn.com/6/8/jwplayer.flash.swf pageUrl=http://vtc.com.vn/live/16/VOV5.html live=1
-
-#EXTINF:-1,[COLOR cyan]Access Asia Network[/COLOR]
-http://www.youtube.com
-#EXTINF:-1,VTVcab 2
-http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv2.480p/playlist.m3u8
-#EXTINF:-1,VTVcab 4
-http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv4.480p/playlist.m3u8
-#EXTINF:-1,Thuần Việt HD
-http://live.accessasia.tv:1935/vnptg_channels/mp4:thuanviet.480p/playlist.m3u8
-#EXTINF:-1,VTV 4
-http://live.accessasia.tv:1935/vnptg_channels/mp4:vtv4.480p/playlist.m3u8
-#EXTINF:-1,SCTV 7
-http://live.accessasia.tv:1935/vnptg_channels/mp4:sctv7.480p/playlist.m3u8
-#EXTINF:-1,Du Lịch Và Cuộc Sống
-http://live.accessasia.tv:1935/vnptg_channels/mp4:dulichcuocsong.480p/playlist.m3u8
-#EXTINF:-1,SCTV HD
-http://live.accessasia.tv:1935/vnptg_channels/mp4:sctvhaihd.480p/playlist.m3u8
-#EXTINF:-1,FBNC
-http://live.accessasia.tv:1935/vnptg_channels/mp4:htvcfbnc.480p/playlist.m3u8
-#EXTINF:-1,O2TV
-http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv10.480p/playlist.m3u8
-#EXTINF:-1,SCTV 14
-http://live.accessasia.tv:1935/vnptg_channels/mp4:sctv14.480p/playlist.m3u8
 
 #EXTINF:-1,[COLOR cyan]TV Trong Nước[/COLOR]
 http://www.youtube.com

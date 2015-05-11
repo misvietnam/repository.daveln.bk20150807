@@ -190,10 +190,6 @@
 <thumbnail></thumbnail>
 <items>
 <item>
-<title>Tom & Jerry</title>
-<link>http://66.90.111.66:1935/ctv/tom/waldo_paes.m3u8?b?b*t$&wowzasessionid=841441282</link>
-<thumbnail>http://redhot-fancydress.co.uk/store/images/uploads/Tom%20&%20Jerry%20Logo.jpg</thumbnail>
-<item>
 <title>Animal Planet</title>
 <link>http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028</link>
 <thumbnail>http://www.lyngsat-logo.com/logo/tv/aa/animal_planet_ru.jpg</thumbnail>
@@ -1171,63 +1167,6 @@
 </channel>
 
 <channel>
-<name>Access Asia Network</name>
-<thumbnail></thumbnail>
-<items>
-<item>
-<title>VTVcab 2</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv2.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280470_vctv2.jpg</thumbnail>
-</item>
-<item>
-<title>VTVcab 4</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv4.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1389779110_vtvcab4.jpg</thumbnail>
-</item>
-<item>
-<title>Thuần Việt HD</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:thuanviet.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840964.jpg</thumbnail>
-</item>
-<item>
-<title>VTV 4</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:vtv4.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378950974_vtv4.jpg</thumbnail>
-</item>
-<item>
-<title>SCTV 7</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:sctv7.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064096.jpg</thumbnail>
-</item>
-<item>
-<title>Du Lịch Và Cuộc Sống</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:dulichcuocsong.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840245.jpg</thumbnail>
-</item>
-<item>
-<title>SCTV HD</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:sctvhaihd.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932781.jpg</thumbnail>
-</item>
-<item>
-<title>FBNC</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:htvcfbnc.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378781313.jpg</thumbnail>
-</item>
-<item>
-<title>O2TV</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:vctv10.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280736_vctv10.jpg</thumbnail>
-</item>
-<item>
-<title>SCTV 14</title>
-<link>http://live.accessasia.tv:1935/vnptg_channels/mp4:sctv14.480p/playlist.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064062.jpg</thumbnail>
-</item>
-</items>
-</channel>
-
-<channel>
 <name>VTC</name>
 <thumbnail></thumbnail>
 <items>
@@ -1360,11 +1299,6 @@
 <name>Radio Tổng Hợp</name>
 <thumbnail></thumbnail>
 <items>
-<item>
-<title>Sai Gon Radio Seatlle</title>
-<link>http://206.71.180.246:8888/</link>
-<thumbnail>http://s28.postimg.org/xw2ety5al/srbsradio.png</thumbnail>
-</item>
 <item>
 <title>Radio Bolsa</title>
 <link>http://ice7.securenetsystems.net/RBVU?type=.flv&playSessionID=724B6190-D27B-7531-5AD645183B89ED51</link>

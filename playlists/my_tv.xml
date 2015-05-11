@@ -36,11 +36,6 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Chúa Là Tình Yêu</title>
-<link>http://liveplay3.malimarcdn.com/chualatinhyeu/chualatinhyeu.sdp/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
 <title>Phật Từ Bi</title>
 <link>http://206.190.140.142:1935/liveStream/ptb_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
@@ -73,12 +68,12 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>EuroSport Fr</title>
+<title>EuroSport</title>
 <link>http://esioslive6-i.akamaihd.net/hls/live/202892/AL_P_ESP1_FR_FRA/playlist_1800.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>EuroSport Inter</title>
+<title>EuroSport International</title>
 <link>http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8</link>
 <thumbnail></thumbnail>
 </item>
@@ -118,37 +113,37 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 1 (German)</title>
+<title>Sport Time TV 1</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel1_1200</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 2 (German)</title>
+<title>Sport Time TV 2</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel2_1200</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 3 (German)</title>
+<title>Sport Time TV 3</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel3_1200</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 4 (German)</title>
+<title>Sport Time TV 4</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel4_1200</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 5 (German)</title>
+<title>Sport Time TV 5</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel5_1200</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 6 (German)</title>
+<title>Sport Time TV 6</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel6_800</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Time TV 7 (German)</title>
+<title>Sport Time TV 7</title>
 <link>rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel7_1200</link>
 <thumbnail></thumbnail>
 </item>
@@ -178,13 +173,13 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Sport Tonight TV (UK)</title>
+<title>Sport Tonight TV</title>
 <link>rtmp://freeview.fms.visionip.tv/live playpath=sports_tonight-sports_tonight-live-25f-16x9-SD?ref=www.sportstonightlive.com&USER=STL_0001 swfUrl=http://embeddedplayer.visionip.tv/data/swf/f22ee95bcec532c04146635a1a1adf00559/player.swf</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>Sport China</title>
-<link>rtmp://v2.gdtv.cn/live playpath=soccer swfUrl=http://www.gdtv.cn/vms/demoLiveF4M/livePlayerF4M.swf pageUrl=</link>
+<link>rtmp://v2.gdtv.cn/live playpath=soccer swfUrl=http://www.gdtv.cn/vms/demoLiveF4M/livePlayerF4M.swf</link>
 <thumbnail></thumbnail>
 </item>
 </items>

@@ -70,7 +70,7 @@ rtmp://v2.gdtv.cn/live playpath=soccer swfUrl=http://www.gdtv.cn/vms/demoLiveF4M
 #EXTINF:-1,[COLOR cyan]TV Hải Ngoại[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,S Channel 54.4  [COLOR yellow](Posted by ATF01)[/COLOR]
-http://hls12.las.v247tv.com:8081/live/s-channel-2/playlist-2096k.m3u8
+http://54.152.24.55:1935/schannel/myStream/chunklist_w1927396712.m3u8
 #EXTINF:-1,Việt bay Television 1.4 KAXT - San Jose  [COLOR yellow](ATF01)[/COLOR]
 http://64.71.129.2:8080/hls/ius_000104.m3u8
 #EXTINF:-1,Việt Phố Link 1 [COLOR yellow](ATF01)[/COLOR]
@@ -85,8 +85,6 @@ http://stream.onworldtv.com/live/byn/index.m3u8
 http://206.190.136.254/liveStream/cailuong_1/playlist.m3u8
 #EXTINF:-1,Đồng Giao TV
 http://206.190.136.254/liveStream/dgtv_1/playlist.m3u8
-#EXTINF:-1,Film24h
-http://hls12.las.v247tv.com:8081/live/ps-uno-04-2/playlist-2096k.m3u8
 #EXTINF:-1,Hài 24/7
 http://206.190.136.254/liveStream/hai_1/playlist.m3u8
 #EXTINF:-1,IBC TV
@@ -113,18 +111,8 @@ http://206.190.136.254/liveStream/kvla_1/playlist.m3u8
 http://206.190.136.254/liveStream/vantv_1/playlist.m3u8
 #EXTINF:-1,VNA TV 57.3
 http://206.190.136.254/liveStream/vnatv_1/playlist.m3u8
-#EXTINF:-1,VietV
-http://hls12.las.v247tv.com:8081/live/ps-uno-06-2/playlist-2096k.m3u8
 #EXTINF:-1,VietV California 54.3
 http://206.190.136.254/liveStream/vietvla_1/playlist.m3u8
-#EXTINF:-1,VietV Los Angeles
-http://hls12.las.v247tv.com:8081/live/vietv-oc1/chunklist_w2075472025.m3u8
-#EXTINF:-1,VietV San Jose
-http://hls12.las.v247tv.com:8081/live/vietv-sjo1/chunklist_w1283008423.m3u8
-#EXTINF:-1,VietV Houston
-http://hls12.las.v247tv.com:8081/live/vietv-hou2/playlist-2096k.m3u8
-#EXTINF:-1,VietV Canada
-http://hls12.las.v247tv.com:8081/live/ps-uno-03-2/playlist-2096k.m3u8
 #EXTINF:-1,Viet Global Mail
 http://origin1-edge2.yourstreamlive.com:1935/live/yourstreamlive/out_956_2kr6rvfu/playlist.m3u8
 #EXTINF:-1,VBS TV 57.6

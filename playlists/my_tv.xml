@@ -539,11 +539,6 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Film24h</title>
-<link>http://hls12.las.v247tv.com:8081/live/ps-uno-04-2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
 <title>Hài 24/7</title>
 <link>http://206.190.136.254/liveStream/hai_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
@@ -565,7 +560,7 @@
 </item>
 <item>
 <title>S Channel</title>
-<link>http://hls12.las.v247tv.com:8081/live/s-channel-2/playlist-2096k.m3u8</link>
+<link>http://54.152.24.55:1935/schannel/myStream/chunklist_w1927396712.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
@@ -629,33 +624,8 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>VietV</title>
-<link>http://hls12.las.v247tv.com:8081/live/ps-uno-06-2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
 <title>VietV California 54.3</title>
 <link>http://206.190.136.254/liveStream/vietvla_1/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietV Los Angeles</title>
-<link>http://hls12.las.v247tv.com:8081/live/vietv-oc1/chunklist_w2075472025.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietV San Jose</title>
-<link>http://hls12.las.v247tv.com:8081/live/vietv-sjo1/chunklist_w1283008423.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietV Houston</title>
-<link>http://hls12.las.v247tv.com:8081/live/vietv-hou2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietV Canada</title>
-<link>http://hls12.las.v247tv.com:8081/live/ps-uno-03-2/playlist-2096k.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>

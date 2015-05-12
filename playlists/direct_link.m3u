@@ -93,8 +93,6 @@ http://206.190.136.254/liveStream/ibctv_1/playlist.m3u8
 http://206.190.136.254/liveStream/lstv_1/playlist.m3u8
 #EXTINF:-1,Saigon TV 57.5
 http://206.190.136.254/liveStream/sgtv_1/playlist.m3u8
-#EXTINF:-1,S Channel
-http://hls12.las.v247tv.com:8081/live/s-channel-2/playlist-2096k.m3u8
 #EXTINF:-1,SET TV
 http://206.190.136.254/liveStream/set_1/playlist.m3u8
 #EXTINF:-1,SGN 51.3

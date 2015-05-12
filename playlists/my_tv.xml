@@ -643,31 +643,6 @@
 <link>http://206.190.136.254/liveStream/vface_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
 </item>
-<item>
-<title>VietFace TV Dallas</title>
-<link>http://hls12.las.v247tv.com:8081/live/vftv-dal1/chunklist_w456941892.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Vietface Houston</title>
-<link>http://hls12.las.v247tv.com:8081/live/vftv-hou2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Vietface San Jose</title>
-<link>http://hls12.las.v247tv.com:8081/live/vftv-sjo2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VNews</title>
-<link>http://hls12.las.v247tv.com:8081/live/ps-uno-05-2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VMax</title>
-<link>http://hls12.las.v247tv.com:8081/live/ps-uno-02-2/playlist-2096k.m3u8</link>
-<thumbnail></thumbnail>
-</item>
 </items>
 </channel>
 

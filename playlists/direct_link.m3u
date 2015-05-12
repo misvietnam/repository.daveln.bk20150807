@@ -117,16 +117,6 @@ http://origin1-edge2.yourstreamlive.com:1935/live/yourstreamlive/out_956_2kr6rvf
 http://206.190.136.254/liveStream/vbstv_1/playlist.m3u8
 #EXTINF:-1,VietFace TV California 57.2
 http://206.190.136.254/liveStream/vface_1/playlist.m3u8
-#EXTINF:-1,VietFace TV Dallas
-http://hls12.las.v247tv.com:8081/live/vftv-dal1/chunklist_w456941892.m3u8
-#EXTINF:-1,Vietface Houston
-http://hls12.las.v247tv.com:8081/live/vftv-hou2/playlist-2096k.m3u8
-#EXTINF:-1,Vietface San Jose
-http://hls12.las.v247tv.com:8081/live/vftv-sjo2/playlist-2096k.m3u8
-#EXTINF:-1,VNews
-http://hls12.las.v247tv.com:8081/live/ps-uno-05-2/playlist-2096k.m3u8
-#EXTINF:-1,VMax
-http://hls12.las.v247tv.com:8081/live/ps-uno-02-2/playlist-2096k.m3u8
 
 #EXTINF:-1,[COLOR cyan]HTV Online - HPLUS[/COLOR]
 http://www.youtube.com

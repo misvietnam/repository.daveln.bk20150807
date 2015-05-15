@@ -44,6 +44,7 @@ tnaflix = 'https://www.tnaflix.com/'
 lubetube = 'http://lubetube.com/'
 erotik = 'http://www.ero-tik.com/'
 v_erotik = 'http://videomega.tv/'
+yesxxx = 'http://www.yes.xxx/'
 
 if not os.path.exists(homemenu):
 	try:
@@ -87,25 +88,26 @@ def home():
 			
 def main():
 	add_link('[COLOR lime]Hardcore [COLOR red]Sex TV[/COLOR]', vietsextv, 4, logos + 'hardcore.png', fanart)
-	add_dir('[COLOR red]Porn[COLOR white] 4u [COLOR red]TV[/COLOR]', 'porn_4u', 8, logos + 'porn4u.png', fanart)  
-	add_dir('[COLOR cyan]HD [COLOR red] Adult Videos[/COLOR]', 'hdadult', 7, logos + 'hdadult.png', fanart)
-	add_dir('[COLOR red]Red[COLOR white]Tube [COLOR red] Adult Videos[/COLOR]', redtube, 2, logos + 'redtube.png', fanart) 	
-	add_dir('[COLOR chocolate]YouJizz [COLOR red] Adult Videos[/COLOR]', youjizz, 2, logos + 'youjizz.png', fanart)	
-	add_dir('[COLOR yellow]Xvideos [COLOR red] Adult Videos[/COLOR]', xvideos, 2, logos + 'xvideos.png', fanart)	
-	add_dir('[COLOR magenta]Tube8 [COLOR red] Adult Videos[/COLOR]', tube8, 2, logos + 'tube8.png', fanart) 
-	add_dir('[COLOR lightgreen]YouPorn [COLOR red] Adult Videos[/COLOR]', youporn, 2, logos + 'youporn.png', fanart)   
-	add_dir('[COLOR violet]PlayVid [COLOR red] Adult Videos[/COLOR]', playvid, 2, logos + 'playvid.png', fanart) 
-	add_dir('[COLOR lightblue]PornCom [COLOR red] Adult Videos[/COLOR]', porncom, 2, logos + 'porncom.png', fanart)
-	add_dir('[COLOR orange]FlyFLV [COLOR red] Adult Videos[/COLOR]', flyflv, 2, logos + 'flyflv.png', fanart)  
-	add_dir('[COLOR silver]ViKiPorn [COLOR red] Adult Videos[/COLOR]', vikiporn, 2, logos + 'vikiporn.png', fanart) 
-	add_dir('[COLOR blue]xHamster [COLOR red] Adult Videos[/COLOR]', xhamster, 2, logos + 'xhamster.png', fanart) 
-	add_dir('[COLOR green]TnAFlix [COLOR red] Adult Videos[/COLOR]', tnaflix, 2, logos + 'tnaflix.png', fanart) 
-	add_dir('[COLOR white]LubeTube [COLOR red] Adult Videos[/COLOR]', lubetube, 2, logos + 'lubetube.png', fanart)
-	add_dir('[COLOR cyan]Ero-tik [COLOR red] Adult Videos[/COLOR]', erotik, 2, logos + 'erotik.png', fanart) 	
 	content = make_request('http://www.giniko.com/watch.php?id=95')	  
 	match = re.compile('image: "([^"]*)",\s*file: "([^"]+)"').findall(content)
 	for thumb, url in match:
 		add_link('[COLOR yellow]Miami [COLOR red]TV[/COLOR]', url, 4, thumb, fanart)
+	add_dir('[COLOR red]Porn[COLOR white] 4u [COLOR red]TV[/COLOR]', 'porn_4u', 8, logos + 'porn4u.png', fanart)		
+	add_dir('[COLOR cyan]HD [COLOR red] Adult Videos[/COLOR]', 'hdadult', 7, logos + 'hdadult.png', fanart)
+	add_dir('[COLOR cyan]Ero-tik [COLOR red] Adult Videos[/COLOR]', erotik, 2, logos + 'erotik.png', fanart) 
+	add_dir('[COLOR orange]FlyFLV [COLOR red] Adult Videos[/COLOR]', flyflv, 2, logos + 'flyflv.png', fanart) 
+	add_dir('[COLOR yellow]LubeTube [COLOR red] Adult Videos[/COLOR]', lubetube, 2, logos + 'lubetube.png', fanart) 
+	add_dir('[COLOR violet]PlayVid [COLOR red] Adult Videos[/COLOR]', playvid, 2, logos + 'playvid.png', fanart) 	
+	add_dir('[COLOR lightblue]PornCom [COLOR red] Adult Videos[/COLOR]', porncom, 2, logos + 'porncom.png', fanart)	
+	add_dir('[COLOR red]Red[COLOR white]Tube [COLOR red] Adult Videos[/COLOR]', redtube, 2, logos + 'redtube.png', fanart)
+	add_dir('[COLOR green]TnAFlix [COLOR red] Adult Videos[/COLOR]', tnaflix, 2, logos + 'tnaflix.png', fanart) 	
+	add_dir('[COLOR magenta]Tube8 [COLOR red] Adult Videos[/COLOR]', tube8, 2, logos + 'tube8.png', fanart) 
+	add_dir('[COLOR silver]ViKiPorn [COLOR red] Adult Videos[/COLOR]', vikiporn, 2, logos + 'vikiporn.png', fanart) 
+	add_dir('[COLOR blue]xHamster [COLOR red] Adult Videos[/COLOR]', xhamster, 2, logos + 'xhamster.png', fanart)
+	add_dir('[COLOR yellow]Xvideos [COLOR red] Adult Videos[/COLOR]', xvideos, 2, logos + 'xvideos.png', fanart)
+	add_dir('[COLOR white]Yes XXX [COLOR red] Adult Videos[/COLOR]', yesxxx, 20, logos + 'yes.png', fanart) 			
+	add_dir('[COLOR chocolate]YouJizz [COLOR red] Adult Videos[/COLOR]', youjizz, 2, logos + 'youjizz.png', fanart)	
+	add_dir('[COLOR lightgreen]YouPorn [COLOR red] Adult Videos[/COLOR]', youporn, 2, logos + 'youporn.png', fanart)   
 	
 def porn4u():
 	home()
@@ -167,7 +169,10 @@ def search():
 			media_list(url)	
 		elif 'ero-tik.com' in name:
 			url = erotik + 'search.php?keywords=' + searchText	  
-			media_list(url)			
+			media_list(url)	
+		elif 'yes.xxx' in name:
+			url = yesxxx + '?s=search&search=' + searchText	  
+			media_list(url)				
 	except:
 		pass	
   
@@ -291,8 +296,15 @@ def category(url):
 			add_dir(name, url,  3, logos + 'erotik.png', fanart)		
 		match = re.compile('href="http://www.ero-tik.com/browse-(.+?)" class="">(.+?)<').findall(content)[:24]
 		for url, name in match:
-			add_dir(name, erotik + 'browse-' + url,  3, logos + 'erotik.png', fanart)
-	
+			add_dir(name, erotik + 'browse-' + url,  3, logos + 'erotik.png', fanart)	
+	elif 'yes.xxx' in url:
+		match = re.compile('href="/(.+?)" title="(.+?)"><img src="(.+?)" /><b>.+?</b></a>(.+?)</div>').findall(content)
+		for url, name, thumb, vidnum in match:
+			add_dir(name + '[COLOR lime]' + vidnum + '[/COLOR]', yesxxx + url,  3, thumb, fanart)		
+		match = re.compile('href="/(.+?)">(\d+)<').findall(content)
+		for url, name in match:
+			add_dir('[COLOR cyan]Page ' + name + '[/COLOR]', yesxxx + url,  2, logos + 'yes.png', fanart)
+			
 def lubtetube_pornstars(url):
 	home()
 	content = make_request(url)
@@ -316,7 +328,15 @@ def play_vid(url):
 		for thumb, url, name in match:
 			thumb = thumb.replace('/images/thumbs/default-ava-channel-250.jpg', '//www.playvid.com/images/thumbs/default-ava-channel-250.jpg')
 			add_dir('[COLOR lightgreen]' + name + '[/COLOR]', playvid + url, 3, 'http:' + thumb, fanart)
-      
+
+def yess_xxx():
+	home()
+	add_dir('[COLOR cyan]yes.xxx  [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]', yesxxx, 1, logos + 'yes.png', fanart)	
+	add_dir('Most recent', yesxxx + '?s=recent', 3, logos + 'yes.png', fanart) 
+	add_dir('Most view', yesxxx + '?s=viewed', 3, logos + 'yes.png', fanart)
+	add_dir('Categories', yesxxx + '?s=tags', 2, logos + 'yes.png', fanart)
+	add_dir('Channels', yesxxx + '?s=channels', 2, logos + 'yes.png', fanart)	
+	
 def tube8_HD(url):
 	home()
 	content = make_request(url)
@@ -484,7 +504,14 @@ def media_list(url):
 			if 'http://www.ero-tik.com/' not in url:
 				add_dir('[COLOR lime]Next page[/COLOR]', erotik + url.replace(' ', '%20'), 3, logos + 'erotik.png', fanart)
 			else:
-				add_dir('[COLOR lime]Next page[/COLOR]', url, 3, logos + 'erotik.png', fanart)			
+				add_dir('[COLOR lime]Next page[/COLOR]', url, 3, logos + 'erotik.png', fanart)
+	elif 'yes.xxx' in url:
+		match = re.compile('href="/(.+?)" title="(.+?)"><img src="(.+?)".+?"dur">(.+?)<').findall(content)
+		for url, name, thumb, duration in match:
+			add_link(name + ' (' + duration + ')', yesxxx + url, 4, thumb, fanart)
+		match = re.compile('href="/(.+?)">(\d+)<').findall(content)
+		for url, name in match:
+			add_dir(name, yesxxx + url,  3, logos + 'yes.png', fanart)			
 	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 def resolve_url(url):
@@ -531,6 +558,8 @@ def resolve_url(url):
 		content = response.read()	
 		response.close()        
 		media_url = re.compile('<source src="(.+?)" type="video').findall(content)[0]
+	elif 'yes.xxx' in url: 
+		media_url = re.compile('<source type="video/mp4" src="(.+?)">').findall(content)[0]		
 	else:
 		media_url = url
 	item = xbmcgui.ListItem(name, path = media_url)
@@ -637,5 +666,8 @@ elif mode == 11:
 
 elif mode == 12:
 	lubtetube_pornstars(url)
+	
+elif mode == 20:
+	yess_xxx()
 	
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

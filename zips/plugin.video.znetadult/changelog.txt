@@ -1,3 +1,8 @@
+v 1.0.3
+Added yes.xxx
+Replaced tnaflix's icon
+Organized addons in alphabetical order
+
 v 1.0.2 
 Updated Tube8
 xbmc.python version 2.1.0

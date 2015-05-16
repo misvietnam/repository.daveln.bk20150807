@@ -1,3 +1,6 @@
+v 1.1.12
+Fixed Megabox's pagination
+
 v 1.1.11
 Added phimhd3s
 Fixed phim.megabox.vn

@@ -77,12 +77,12 @@ def home():
 				
 def main():
 	add_dir('[COLOR yellow]phim3s.net[/COLOR]', phim3s, 2, logos + 'phim3s.png', fanart) 
-	add_dir('[COLOR lightgreen]phimhd3s.net[/COLOR]', phimhd3s, 20, logos + 'phimhd3s.png', fanart)	
+	add_dir('[COLOR white]phimhd3s.net[/COLOR]', phimhd3s, 20, logos + 'phimhd3s.png', fanart)	
 	add_dir('[COLOR lime]phim7.com[/COLOR]', phim7, 2, logos + 'phim7.png', fanart)
 	add_dir('[COLOR cyan]phimb.net[/COLOR]', phimb, 2, logos + 'phimb.png', fanart)    
 	add_dir('[COLOR orange]anhtrang.org[/COLOR]', anhtrang, 2, logos + 'anhtrang.png', fanart)  
 	add_dir('[COLOR violet]megabox.vn[/COLOR]', megaboxvn, 10, logos + 'megabox.png', fanart) 
-	add_dir('[COLOR lime]dangcaphd.com - [COLOR white]Phim bộ[/COLOR]', dchd + 'movie/series.html', 3, logos + 'dchd.png', fanart) 	
+	add_dir('[COLOR lime]dangcaphd.com - [COLOR silver]Phim bộ[/COLOR]', dchd + 'movie/series.html', 3, logos + 'dchd.png', fanart) 	
 	add_dir('[COLOR blue]dangcapmovie.com[/COLOR]', dangcapmovie, 2, logos + 'dcm.png', fanart)  
 
 def megabox_dir():
@@ -274,7 +274,7 @@ def media_list(url):
 					pass
 		try:	
 			match = re.compile('class="next"><a href="(.+?)">').findall(content)
-			add_dir('Trang kế', match[0], 3, logos + 'megabox.png', fanart)	
+			add_dir('[COLOR lime]Trang kế[/COLOR]', megaboxvn + match[0], 3, logos + 'megabox.png', fanart)	
 		except: 
 			pass	
 	elif 'dangcaphd' in url:

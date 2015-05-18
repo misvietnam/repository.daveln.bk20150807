@@ -131,6 +131,12 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!-------------- Religion ---------------->
 
 <item>
+<title>Religion - Viet Catholic News[COLOR magenta] - [COLOR cyan]New Videos [COLOR orange](Temporary Channel)[/COLOR]</title>
+<link>https://www.youtube.com/channel/UCqaIVMSMnwkYzRjmJlT-KHw</link>
+<thumbnail>tongiao.png</thumbnail>
+</item>
+
+<item>
 <title>Religion - Viet Catholic News</title>
 <link>https://www.youtube.com/user/VietCatholicNews</link>
 <thumbnail>tongiao.png</thumbnail>
@@ -407,12 +413,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>OverseaNews - SBTN Paris</title>
 <link>https://www.youtube.com/user/paris2013sbtn</link>
-<thumbnail>haingoai.png</thumbnail>
-</item>
-
-<item>
-<title>OverseaNews - Viet Catholic News</title>
-<link>https://www.youtube.com/user/VietCatholicNews</link>
 <thumbnail>haingoai.png</thumbnail>
 </item>
 

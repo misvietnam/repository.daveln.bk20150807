@@ -665,7 +665,7 @@ http://stream.onworldtv.com/live/multitv/index.m3u8
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]KÊNH TH QUỐC TẾ - MÁY CHỦ TRONG NƯỚC[/I][/COLOR]</NAME>
+#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]QUỐC TẾ - MÁY CHỦ TRONG NƯỚC[/I][/COLOR]</NAME>
 #EXTINF:0,SCTVHD-NATGEO 
 http://112.197.2.154:1935/mlive/C002_HD_4/chunklist.m3u8?us=f9c1a4c308ea65315530bb809a100a47f04626c6bac3632d7a46b14478850a42f668f5319cd0c0deaee298cccf4bbb7d%7C1728515
 #EXTINF:-0,DISCOVERY WORLD HD S1
@@ -779,7 +779,7 @@ http://hlscache.fptplay.net.vn/img/img8_2000/playlist.m3u8?token=c335VydmVyX3Rpb
 #</CHANNEL>
 
 #<CHANNEL>
-#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]KÊNH TH QUỐC TẾ - MÁY CHỦ NƯỚC NGOÀI[/I][/COLOR]</NAME>
+#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]QUỐC TẾ - MÁY CHỦ NƯỚC NGOÀI[/I][/COLOR]</NAME>
 #EXTINF:0,London Live
 http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8
 #EXTINF:0,ARTE FRANCE 

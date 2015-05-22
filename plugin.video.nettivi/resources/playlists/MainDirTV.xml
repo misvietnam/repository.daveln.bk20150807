@@ -45,20 +45,6 @@
 </item>
 
 <item>
-<title>[COLOR lime]Replay[COLOR magenta] - [COLOR lime]TV chiếu lại[/COLOR]</title>
-<link>http://103.31.126.20/tvcatchup/</link>
-<thumbnail>tv.png</thumbnail>
-<mode>3</mode>
-</item>
-
-<item>
-<title>[COLOR lime]TV Tổng Hợp[/COLOR]</title>
-<link>http://tv.anluong.info/</link>
-<thumbnail>tv.png</thumbnail>
-<mode>3</mode>
-</item>
-
-<item>
 <title>[COLOR lime]TV Việt[/COLOR]</title>
 <link>http://tv.vnn.vn/</link>
 <thumbnail>tv.png</thumbnail>

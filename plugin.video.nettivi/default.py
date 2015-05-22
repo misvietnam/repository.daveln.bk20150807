@@ -40,10 +40,8 @@ xml_regex_reg_2L = '<title>(.*?)</title>\s*<link>.*?</link>\s*<regex>\s*<name>.*
 my_dict = {'&#7893;':'ổ', '&#7907;':'ợ', '&#7885;':'ọ', '&#7909;':'ụ', '&#7875;':'ể', '&#7843;':'ả', '&#7871;':'ế', '&#7897;':'ộ', '&#7889;':'ố', '&#7873;':'ề', '&#7883;':'ị', '&#7855;':'ắ'}
 my_repo = 'https://raw.githubusercontent.com/daveln/repository.daveln/'
 hplus = 'http://hplus.com.vn/vi/categories/live-tv'
-anluongtv = 'http://tv.anluong.info/'
-tvreplay = 'http://103.31.126.20/tvcatchup/'
-tvviet = 'http://tv.vnn.vn/'
 u_tube = 'http://www.youtube.com'
+tvviet = 'http://tv.vnn.vn/'
 
 tv_mode = mysettings.getSetting('tv_mode')
 if len(tv_mode) <= 0:
@@ -150,48 +148,11 @@ def tv_scraper(url):
 				pass 
 			else: 
 				add_dir(name, 'http://hplus.com.vn/vi/genre/index' + url, 101, 'http://static.hplus.com.vn/themes/front/images/logo.png', fanart)
-	elif 'anluong' in url: 
-		match = re.compile('href="(.+?)"><img title="(.+?)".+?\s*src="/(.+?)"').findall(content)
-		for url, name, thumb in match:	  
-			if 'SCTV' in name or 'SAO TV HD' in name or 'NHẠC CÁCH MẠNG' in name:
-				pass
-			else: 
-				add_dir(name.replace('SOPPING', 'SHOPPING'), anluongtv + url, 111, anluongtv + thumb.replace(' ', '%20'), fanart)
-		for url, name, thumb in match:
-			if 'SCTV' in name or 'SAO TV HD' in name:
-				add_dir(name, anluongtv + url, 111,  anluongtv + thumb.replace(' ', '%20'), fanart)		
-		match = re.compile('href="(.+?)"><img class="images-kenh1"  src="/img/sctv/(.+?)"').findall(content)
-		for url, thumb in match:
-			name = thumb.replace('.png', '').upper()
-			add_dir(name, anluongtv + url, 111, anluongtv + 'img/sctv/' + thumb.replace(' ', '%20'), fanart)		  
-	elif 'tvcatchup' in url:
-		match = re.compile('href="(\d+)/">(\d+)/<').findall(content)
-		for url, name in match:
-			add_dir(name, tvreplay + url, 121, iconimage, fanart)
 	elif 'tv.vnn.vn' in url:
 		match = re.compile('href="\/(.+?)">\s*<img src="\/(.+?)".+?\/>\s*(.+?)\n').findall(content)
 		for url, thumb, title in match:
 			title = replace_all(title, my_dict)	
 			add_link(title, tvviet + url, 202, (tvviet + thumb).replace(' ', '%20'), fanart)  	  
-
-def tvtonghop_anluong(url):
-	content = make_request(url)
-	match = re.compile('onclick="configurator\(this\)" name="(.+?)">(.+?)<').findall(content)
-	for url, channel_name in match:  
-		if 'f4m' in url:
-			url = url.split('=')[-1]
-			url = 'plugin://plugin.video.f4mTester/?url=' + url
-			add_link(name + '[COLOR magenta] - [/COLOR]' + channel_name.replace(' sever', 'Link') + ' [COLOR yellow](f4m)[/COLOR]', url, 201, iconimage, fanart)
-		else:
-			add_link(name + '[COLOR magenta] - [/COLOR]' + channel_name.replace(' sever', 'Link'), url, 203, iconimage, fanart)  
-
-def tvreplay_link(url):
-	content = make_request(url)
-	match = re.compile('href="(.+?)">(.+?)\.mp4</a></td><td align="right">.+?</td><td align="right">(.+?)<').findall(content)
-	for href, name, video_size in match:
-		name = name.split('_')
-		name = name[0] + '_' + name[-1]
-		add_link(name + '   [COLOR yellow]' + video_size + '[/COLOR]', url + '/' + href, 201, iconimage, fanart)
 
 def my_playlist_directory():
 	if 'XML' in name:
@@ -312,11 +273,11 @@ def thanh51_xml_m3u_channel(url):
 					add_dir(channel_name, url, 13, iconimage, fanart)  
 		else:
 			match = re.compile(m3u_regex).findall(content)
-			for title, url in match: 
-				if 'UPDATED ON' in title or 'CẬP NHẬT' in title:
-					add_link(title, u_tube, 201, iconimage, fanart)
+			for name, url in match: 
+				if 'UPDATED ON' in name or 'CẬP NHẬT' in name:
+					add_link(name, u_tube, 201, iconimage, fanart)
 				else:
-					add_link(title, url, 201, iconimage, fanart)
+					add_link(name, url, 201, iconimage, fanart)
 
 def thanh51_xml_m3u_index(name, url):
 	name = name.replace('[', '\[').replace(']', '\]')
@@ -385,27 +346,6 @@ def resolve_url(url):
 		media_url = re.compile("file: '(.+?)'").findall(content)[0]  
 	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)	  
-	return
-
-def play_tvtonghop(url):
-	if 'm3u8' in url or 'rtmp' in url:
-		media_url = url.split('=')[-1]
-	elif 'rtsp' in url:
-		media_url = url  
-	else:
-		content = make_request(url)
-		try:
-			try:
-				media_url = re.compile('file: "(.+?)",').findall(content)[0]
-			except:	
-				media_url = re.compile('<param name="flashvars" value="src=(.+?)\?').findall(content)[0]
-		except:
-			try:
-				media_url = re.compile("'streamer': '(.+?)',").findall(content)[0]+' playpath=' + re.compile("'file': '(.+?)',").findall(content)[0]
-			except:				
-				media_url = re.compile('<iframe src="(.+?)".+?</iframe>').findall(content)[0].split('=')[-1]
-	item = xbmcgui.ListItem(name, path = media_url)
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
 	return
 
 def get_params():
@@ -509,19 +449,10 @@ elif mode == 33:
 elif mode == 101:
 	index(url) 
 
-elif mode == 111:
-	tvtonghop_anluong(url) 
-
-elif mode == 121: 
-	tvreplay_link(url)  
-
 elif mode == 201:  
 	play_my_playlist(url)
 
 elif mode == 202:
 	resolve_url(url)  
-
-elif mode == 203:  
-	play_tvtonghop(url) 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

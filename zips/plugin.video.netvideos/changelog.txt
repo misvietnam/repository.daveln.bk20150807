@@ -1,3 +1,7 @@
+v 1.0.5
+Fixed Truyen Hinh Cali
+Removed unused logos
+
 v 1.0.4
 Updated Truyen Hinh Cali
 Removed Nguoi Viet

@@ -98,7 +98,7 @@ def media_list(url):
 		for url in match:	
 			add_dir('[COLOR red]Trang cuối[/COLOR]', url, 4, logos + 'dongnai.png', fanart)	
 	elif 'truyenhinhcalitoday' in url:
-		match = re.compile('href="(.+?)">\s*<span class="clip">\s*<img src="(.+?)" alt="(.+?)"').findall(content)
+		match = re.compile('href="(.+?)">\s*<span class="clip">\s*<img src="(.+?)" alt="(.+?)"').findall(content)[-10:]
 		for url, thumb, name in match:
 			name = replace_all(name, dict)
 			add_link(name, url, 99, thumb, fanart)

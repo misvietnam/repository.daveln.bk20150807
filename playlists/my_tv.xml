@@ -594,21 +594,6 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Việt Phố Link 1</title>
-<link>http://100.32.77.128:1935/live/vod/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Việt Phố Link 2</title>
-<link>rtsp://100.32.77.128:1935/live/vod</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Việt Phố Link 3</title>
-<link>rtmp://100.32.77.128:1935/live/ playpath=vod swfUrl=http://p.jwpcdn.com/6/12/jwplayer.flash.swf pageUrl=http://www.huongviettv.com/index.php/component/allvideoshare/video/latest/live-streaming</link>
-<thumbnail></thumbnail>
-</item>
-<item>
 <title>VietSun TV</title>
 <link>http://206.190.136.254/liveStream/vietsuntv_1/playlist.m3u8</link>
 <thumbnail></thumbnail>

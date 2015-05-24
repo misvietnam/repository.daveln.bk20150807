@@ -45,6 +45,7 @@ lubetube = 'http://lubetube.com/'
 erotik = 'http://www.ero-tik.com/'
 v_erotik = 'http://videomega.tv/'
 yesxxx = 'http://www.yes.xxx/'
+pornxs = 'http://pornxs.com/'
 
 if not os.path.exists(homemenu):
 	try:
@@ -99,6 +100,7 @@ def main():
 	add_dir('[COLOR yellow]LubeTube [COLOR red] Adult Videos[/COLOR]', lubetube, 2, logos + 'lubetube.png', fanart) 
 	add_dir('[COLOR violet]PlayVid [COLOR red] Adult Videos[/COLOR]', playvid, 2, logos + 'playvid.png', fanart) 	
 	add_dir('[COLOR lightblue]PornCom [COLOR red] Adult Videos[/COLOR]', porncom, 2, logos + 'porncom.png', fanart)	
+	add_dir('[COLOR blue]PornXS [COLOR red] Adult Videos[/COLOR]', pornxs + 'browse/', 2, logos + 'pornxs.png', fanart)		
 	add_dir('[COLOR red]Red[COLOR white]Tube [COLOR red] Adult Videos[/COLOR]', redtube, 2, logos + 'redtube.png', fanart)
 	add_dir('[COLOR green]TnAFlix [COLOR red] Adult Videos[/COLOR]', tnaflix, 2, logos + 'tnaflix.png', fanart) 	
 	add_dir('[COLOR magenta]Tube8 [COLOR red] Adult Videos[/COLOR]', tube8, 2, logos + 'tube8.png', fanart) 
@@ -172,10 +174,25 @@ def search():
 			media_list(url)	
 		elif 'yes.xxx' in name:
 			url = yesxxx + '?s=search&search=' + searchText	  
-			media_list(url)				
+			media_list(url)		
+		elif 'pornxs.com' in name:
+			url = pornxs + 'search.php?s=' + searchText	  
+			search_result(url)				
 	except:
 		pass	
-  
+
+def search_result(url):
+	home()
+	content = make_request(url)
+	if 'pornxs' in url:
+		match = re.compile('href="/(.+?)">\s*<div class.+?>\s*<div class.+?>\s*<div class.+?>\s*<img src="(.+?)" alt="(.+?)"').findall(content)
+		for url, thumb, name in match:
+			add_link(name, pornxs + url, 4, thumb, fanart)			
+		match = re.compile('href="(.+?)">(\d+)<').findall(content)
+		for url, name in match:
+			add_dir('[COLOR yellow]Page ' + name + '[/COLOR]', url.replace('&amp;', '&'), 30, logos + 'pornxs.png', fanart)
+	xbmc.executebuiltin('Container.SetViewMode(500)')
+	
 def category(url): 
 	home()
 	content = make_request(url)
@@ -304,6 +321,12 @@ def category(url):
 		match = re.compile('href="/(.+?)">(\d+)<').findall(content)
 		for url, name in match:
 			add_dir('[COLOR cyan]Page ' + name + '[/COLOR]', yesxxx + url,  2, logos + 'yes.png', fanart)
+	elif 'pornxs' in url:
+		add_dir('[COLOR blue]pornxs.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]', pornxs, 1, logos + 'pornxs.png', fanart)
+		links = re.compile('<div class=title>categories</div>((?s).+?)<div class=clear></div>').findall(content)	# ((?s).+?) scrape multiline
+		match = re.compile('href="/(.+?)">(.+?)<').findall(str(links))
+		for url, name in match:
+			add_dir(name, pornxs + url,  3, logos + 'pornxs.png', fanart)
 			
 def lubtetube_pornstars(url):
 	home()
@@ -511,7 +534,17 @@ def media_list(url):
 			add_link(name + ' (' + duration + ')', yesxxx + url, 4, thumb, fanart)
 		match = re.compile('href="/(.+?)">(\d+)<').findall(content)
 		for url, name in match:
-			add_dir(name, yesxxx + url,  3, logos + 'yes.png', fanart)			
+			add_dir(name, yesxxx + url,  3, logos + 'yes.png', fanart)	
+	elif 'pornxs' in url:
+		match = re.compile('href="/(.+?)"><.+?class=video>\s*<img src="(.+?)" alt="(.+?)"').findall(content)
+		for url, thumb, name in match:
+			add_link(name, pornxs + url, 4, thumb, fanart)
+		match = re.compile('href="/(.+?)"><.+?video-container-box>\s*<div class=video><img src="(.+?)" alt="(.+?)"').findall(content)
+		for url, thumb, name in match:
+			add_link(name, pornxs + url, 4, thumb, fanart)			
+		match = re.compile('href="/(.+?)">(\d+)<').findall(content)
+		for url, name in match:
+			add_dir('[COLOR yellow]Page ' + name + '[/COLOR]', pornxs + url, 3, logos + 'pornxs.png', fanart)			
 	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 def resolve_url(url):
@@ -560,6 +593,8 @@ def resolve_url(url):
 		media_url = re.compile('<source src="(.+?)" type="video').findall(content)[0]
 	elif 'yes.xxx' in url: 
 		media_url = re.compile('<source type="video/mp4" src="(.+?)">').findall(content)[0]		
+	elif 'pornxs' in url: 
+		media_url = re.compile('config-final-url="(.+?)"').findall(content)[0]			
 	else:
 		media_url = url
 	item = xbmcgui.ListItem(name, path = media_url)
@@ -669,5 +704,8 @@ elif mode == 12:
 	
 elif mode == 20:
 	yess_xxx()
-	
+
+elif mode == 30:	
+	search_result(url)
+
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

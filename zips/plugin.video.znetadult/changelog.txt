@@ -1,3 +1,6 @@
+v 1.0.4
+Added PornXS
+
 v 1.0.3
 Added yes.xxx
 Replaced tnaflix's icon

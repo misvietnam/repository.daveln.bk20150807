@@ -3,122 +3,301 @@
 <channels>
 
 <channel>
-<name>[COLOR yellow]CẬP NHẬT NGÀY 14 THÁNG 5 NĂM 2015[/COLOR]</name>
-<thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
+<name>[COLOR yellow] CẬP NHẬT NGÀY 25 THÁNG 5 NĂM 2015 [/COLOR]</name>
+<thumbnail></thumbnail>
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH VTVPlay[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH VTVPlay[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>VTV1</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv1sd_hls.smil/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VTV2</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv2_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv1sd_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTV3</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv3sd_hls.smil/playlist.m3u8</link>
-<thumbnail>http://vtvplus.vn/vtv/thumb.php?src=https://api.vtvplus.vn/pro/files/channel/1.jpg&a=t&w=291&h=163</thumbnail>
-</item>    
-<item>
-<title>VTV6</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv6sd_hls.smil/playlist.m3u8</link>
-<thumbnail>http://vtvplus.vn/vtv/thumb.php?src=https://api.vtvplus.vn/pro/files/channel/5.jpg&a=t&w=291&h=163</thumbnail>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv3sd_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
 </item>
 <item>
-<title>VTV9</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv9_hls.smil/playlist.m3u8</link>
+<title>VTV6</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv6sd_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab1</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:giaitritv_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:giaitritv_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab2</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:phimviet_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smilhimviet_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>ThethaoTV</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:thethaotvsd_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab4</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:kenh17_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:kenh17_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
-                                                                                                                    
+<item>
+<title>VTVcab5</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:echanel_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVcab6</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:haytv_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
 <item>
 <title>VTVcab7</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:ddramas_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:ddramas_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab8</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bibi_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bibi_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab9</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:infotv_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:infotv_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab10</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:o2tv_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil2tv_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab12</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:styletv_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:styletv_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VTVcab15</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:investtv_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:investtv_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>HN1</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:hanoi1_hls.smil/playlist.m3u8</link>
+<title>BongdaTV</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:bongdatvsd_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVcab17</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:yeah1tv_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>SCTV Hai HD</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:sctvhaihd_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>HanoiTV1</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:hanoi1_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC7</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:todaytv_hls.smil/chunklist_b1200000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC9</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:letsviet_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>HTV9</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:htv9_hls.smil/playlist.m3u8</link>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:htv9_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>HTVC PHU NU</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:htvcphunu_hls.smil/playlist.m3u8</link>
+<title>HTVC Phunu</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:htvcphunu_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>SCTVHD HAI</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:sctvhaihd_hls.smil/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ARIANG</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:arirang_hls.smil/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>KSB</title>
-<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:ksb_hls.smil/playlist.m3u8</link>
+<title>Arirang</title>
+<link>http://vtv.live.cdn.fptplay.net/vtvlive/smil:arirang_hls.smil/chunklist_b1200000.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH FPTPlay[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH VP9[/I][/COLOR][/COLOR]</name>
+<thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
+<item>
+<title>VTV1</title>
+<link>http://2co1.vp9.tv/chn/vtv1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTV2</title>
+<link>http://2co1.vp9.tv/chn/vtv2/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTV3 HD</title>
+<link>http://2co1.vp9.tv/chn/vtv3/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTV4</title>
+<link>http://2co1.vp9.tv/chn/vtv4/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTV6 HD</title>
+<link>http://2co1.vp9.tv/chn/vtv6/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>ANTV</title>
+<link>http://2co1.vp9.tv/chn/antv/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>QPVN</title>
+<link>http://2co1.vp9.tv/chn/qpvn/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VOVTV</title>
+<link>http://2co1.vp9.tv/chn/vovtv/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>TTXVN</title>
+<link>http://2co1.vp9.tv/chn/ttxvn/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVCAB2 PHIM VIET</title>
+<link>http://2co1.vp9.tv/chn/phimv/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVCAB5 Echannel</title>
+<link>http://2co1.vp9.tv/chn/echannel/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVCAB7 DRAMAS</title>
+<link>http://2co1.vp9.tv/chn/ddra/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVCAB8 BIBI</title>
+<link>http://2co1.vp9.tv/chn/bibi/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTVCAB10 O2TV</title>
+<link>http://2co1.vp9.tv/chn/o2tv/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>HA NOI 1</title>
+<link>http://2co1.vp9.tv/chn/hn1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>HA NOI 2</title>
+<link>http://2co1.vp9.tv/chn/hn2/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>HTV7</title>
+<link>http://2co1.vp9.tv/chn/htv7/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>HTV9</title>
+<link>http://2co1.vp9.tv/chn/htv9/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC1</title>
+<link>http://2co1.vp9.tv/chn/vtc1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC2</title>
+<link>http://2co1.vp9.tv/chn/vtc2/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC3</title>
+<link>http://2co1.vp9.tv/chn/vtc3/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC6</title>
+<link>http://2co1.vp9.tv/chn/sgc6/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC7</title>
+<link>http://2co1.vp9.tv/chn/tdayt/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC9</title>
+<link>http://2co1.vp9.tv/chn/letsv/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC11</title>
+<link>http://2co1.vp9.tv/chn/kids/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>ITV VTC13</title>
+<link>http://2co1.vp9.tv/chn/itvvn/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VTC16</title>
+<link>http://2co1.vp9.tv/chn/3ntv/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>DRT1</title>
+<link>http://2co1.vp9.tv/chn/drt1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>BTV1</title>
+<link>http://2co1.vp9.tv/chn/btv1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>THVL1</title>
+<link>http://2co1.vp9.tv/chn/vl1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>THVL2</title>
+<link>http://2co1.vp9.tv/chn/vl2/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36</link>
+<thumbnail></thumbnail>
+</item>
+</channel>
+
+<channel>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH FPTPlay[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>VTV1 HD</title>
-<link>http://hlscache.fptplay.net.vn/livez/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl</link>
+<link>http://scache.fptplay.net.vn/livez/vtv1_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
 <thumbnail></thumbnail>
 </item>
 <item>
@@ -656,50 +835,10 @@
 <link>http://scache.fptplay.net.vn/live/golfchannel_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
 <thumbnail></thumbnail>
 </item>
-<item>
-<title>Premier league 1</title>
-<link>http://hlscache.fptplay.net.vn/img/img1_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 2</title>
-<link>http://hlscache.fptplay.net.vn/img/img2_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 3</title>
-<link>http://hlscache.fptplay.net.vn/img/img3_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 4</title>
-<link>http://hlscache.fptplay.net.vn/img/img4_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 5</title>
-<link>http://hlscache.fptplay.net.vn/img/img5_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 6</title>
-<link>http://hlscache.fptplay.net.vn/img/img6_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 7</title>
-<link>http://hlscache.fptplay.net.vn/img/img7_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Premier league 8</title>
-<link>http://hlscache.fptplay.net.vn/img/img8_2000/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&amp;did=NzIyNCZoYXNoX3ZhbHVl</link>
-<thumbnail></thumbnail>
-</item>
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]REGEX-hplus[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]REGEX-hplus[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>HTV2 HD</title>
@@ -1100,7 +1239,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]REGEX-HTVonline[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]REGEX-HTVonline[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>VTV3 HD</title>
@@ -1842,7 +1981,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH SCTV - http[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH SCTV-http[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>SCTVHD-SÓNG NHẠC</title>
@@ -2012,6 +2151,11 @@
 <item>
 <title>SCTV17</title>
 <link>http://112.197.2.154:1935/mlive/C034_SD_3/chunklist.m3u8?us=f9c1a4c308ea65315530bb809a100a47f04626c6bac3632d7a46b14478850a42f668f5319cd0c0deaee298cccf4bbb7d%7C1728515</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>SCTV18</title>
+<link>http://112.197.2.154:1935/mlive/C008_HD_2/chunklist.m3u8?us=f9c1a4c308ea65315530bb809a100a47f04626c6bac3632d7a46b14478850a42f668f5319cd0c0deaee298cccf4bbb7d%7C1728515</link>
 <thumbnail></thumbnail>
 </item>
 <item>
@@ -2207,7 +2351,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH SCTV - rtmpe[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH SCTV-rtmpe[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>SCTV Dulich HD</title>
@@ -2412,7 +2556,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH AN VIEN[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH AN VIEN[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>VTC1 HD</title>
@@ -2456,8 +2600,7 @@
 </item>
 <item>
 <title>FOX SPORT HD</title>
-<link>http://113.160.49.34/lives/origin03/foxhd.isml/foxhd-2096k.m3u8
-</link>
+<link>http://113.160.49.34/lives/origin03/foxhd.isml/foxhd-2096k.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
@@ -2838,7 +2981,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]F4M-AN VIEN[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]F4M-AN VIEN[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>VTC1 HD</title>
@@ -3253,83 +3396,78 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH LIFE TV[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH LIFE TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
-<title>[COLOR=FF0084ff]LIFETV[/COLOR]</title>
+<title>LIFETV</title>
 <link>rtmp://27.118.16.16/live/live_lifetv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]KÊNH 9 MUSIC[/COLOR]</title>
+<title>KÊNH 9 MUSIC</title>
 <link>rtmp://27.118.16.16/live//9_music swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]FITNESS 360[/COLOR]</title>
+<title>FITNESS 360</title>
 <link>rtmp://27.118.16.16/live//fitness_360 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]MODEL CHANNEL[/COLOR]</title>
+<title>MODEL CHANNEL</title>
 <link>rtmp://27.118.16.16/live//model_channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]DI SẢN VIỆT[/COLOR]</title>
+<title>DI SẢN VIỆT</title>
 <link>rtmp://27.118.16.16/live//disanviet swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]4 MEN[/COLOR]</title>
+<title>4 MEN</title>
 <link>rtmp://27.118.16.16/live//4Men swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]2CHANNEL VN[/COLOR]</title>
+<title>2CHANNEL VN</title>
 <link>rtmp://27.118.16.16/live//2channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]SOTV[/COLOR]</title>
+<title>SOTV</title>
 <link>rtmp://27.118.16.16/live//sotv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]TECH CHANNEL[/COLOR]</title>
+<title>TECH CHANNEL</title>
 <link>rtmp://27.118.16.16/live//tech swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]KÊNH 911[/COLOR]</title>
+<title>KÊNH 911</title>
 <link>rtmp://27.118.16.16/live//911 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]TRUYỀN THÔNG VIỆT[/COLOR]</title>
+<title>TRUYỀN THÔNG VIỆT</title>
 <link>rtmp://27.118.16.16/live//ttv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]ITV[/COLOR]</title>
+<title>ITV</title>
 <link>rtmp://live.kenhitv.vn/liveweb//itv_web_500k.stream swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]NHAC CUA TUI[/COLOR]</title>
+<title>NHAC CUA TUI</title>
 <link>rtmp://123.30.134.108/live//nctlive swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue] - [I]TH HAI NGOAI[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH VIỆT NAM[/B][COLOR blue]- [I]TH HAI NGOAI[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
-<item>
-<title>SaigonTV Dallas TX 55.3</title>
-<link>rtmp://origin3-edge1.yourstreamlive.com:1935/live/yourstreamlive/out_1651_211xdnzd?platform=Computer</link>
-<thumbnail></thumbnail>
-</item>
 <item>
 <title>KVLA 56.5 Cali</title>
 <link>http://206.190.140.142/liveStream/kvla_1/playlist-2096k.m3u8</link>
@@ -3458,7 +3596,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue] - [I] IPTV BOX[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue]- [I] IPTV BOX[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>FOX 1 HD</title>
@@ -3888,7 +4026,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue] - [I] ESPANOL IPTV[/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue]- [I] ESPANOL IPTV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>CANAL DE LAS ESTRELLAS</title>
@@ -4348,7 +4486,7 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue] - [I] PORTUGAL TV [/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue]- [I] PORTUGAL TV [/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
 <title>RTP 1</title>
@@ -4473,226 +4611,82 @@
 </channel>
 
 <channel>
-<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue] - [I] UK FILMON [/I][/COLOR]</name>
+<name>[COLOR FF00FF00]->>[B]TRUYỀN HÌNH QUỐC TẾ[/B][COLOR blue]- [I] VIASAT CHANEELS [/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
-<title>4 Music</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=95</link>
+<title>viasat explorer</title>
+<link>http://urlcut.org/viasatexp</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>5 Star</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=851</link>
+<title>viasat history</title>
+<link>http://urlcut.org/viasathist</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>5 USA</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=845</link>
+<title>Viasat Explorer</title>
+<link>http://hls01-04.az.myvideo.az/hls-live/livepkgr/viasatexp/viasatexp/viasatexp.m3u8?iptvlinks.com=fb%2Fsimpletvipadresleri</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Al Jazeera News UK</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=4</link>
+<title>Viasat History</title>
+<link>http://hls01-11.az.myvideo.az/hls-live/livepkgr/viasathist/viasathist/viasathist.m3u8?iptvlinks.com=fb%2Fsimpletvipadresleri</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Barclays Premier League Classics</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=374</link>
+<title>Viasat Nature (Eng/Rus)</title>
+<link>http://hlsstr02.svc.iptv.rt.ru/hls/CH_VIASATNATURE/variant.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC 1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=14</link>
+<title>Viasat Sport</title>
+<link>http://46.61.226.18/hls/CH_VIASATSPORT/bw1500000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC 1 NI</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=361</link>
+<title>Viasat Explorer</title>
+<link>http://46.61.226.18/hls/CH_VIASATEXPLORER/bw1500000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC 2</title>
-<link>http://37.220.29.186:8000/bbc2/bbc2/index.m3u8</link>
+<title>Viasat History</title>
+<link>http://46.61.226.18/hls/CH_VIASATHISTORY/bw1500000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC 2</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=25</link>
+<title>Viasat Nature</title>
+<link>http://46.61.226.18/hls/CH_VIASATNATURE/bw1500000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC 3</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=113</link>
+<title>Viasat Golf HD</title>
+<link>http://46.61.226.18/hls/CH_C06_VIASATGOLFHD/bw3000000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC 4</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=103</link>
+<title>Viasat Nature / History HD</title>
+<link>http://46.61.226.18/hls/CH_C03_VIASATNATUREHISTORYHD/bw3000000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>BBC News</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=27</link>
+<title>Viasat Sport HD</title>
+<link>http://46.61.226.18/hls/CH_C06_VIASATSPORTHD/bw3000000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Bloomburg UK</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=81</link>
+<title>Viasat Explore</title>
+<link>http://hlsstr01.svc.iptv.rt.ru/hls/CH_VIASATEXPLORER/bw480000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>CBBC</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=29</link>
+<title>Viasat History</title>
+<link>http://hlsstr02.svc.iptv.rt.ru/hls/CH_VIASATHISTORY/bw480000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>CBeebies</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=103</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>CBS Drama</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1805</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>CBS Reality</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1808</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>CBS Reality +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1811</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Channel 4</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=2</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Channel 5</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=22</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Dave</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=370</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>E4</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=65</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Fashion TV</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=21</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Film 4</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=13</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Food Network</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=20</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Horroor Channel</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=836</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=11</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 1 +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1817</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 1 +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=119</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 2</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=67</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 2 +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1820</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 3</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=26</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 3 +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1823</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 4</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=101</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITV 4 +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1826</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ITVBe</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=3211</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>More 4</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=97</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Movies4Men</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=19</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Pick TV</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=371</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Really</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=372</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Travel Channel +1</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=842</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Viva</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Yesterday</title>
-<link>http://live.zoptv.com/filmon/master.m3u8?id=1039</link>
+<title>Viasat Nature CEE</title>
+<link>http://hlsstr03.svc.iptv.rt.ru/hls/CH_VIASATNATURE/bw480000/variant.m3u8?version=2</link>
 <thumbnail></thumbnail>
 </item>
 </channel>
-
 </channels>
-
-
-

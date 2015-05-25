@@ -46,6 +46,7 @@ erotik = 'http://www.ero-tik.com/'
 v_erotik = 'http://videomega.tv/'
 yesxxx = 'http://www.yes.xxx/'
 pornxs = 'http://pornxs.com/'
+zbporn = 'http://zbporn.com/'
 
 if not os.path.exists(homemenu):
 	try:
@@ -110,6 +111,7 @@ def main():
 	add_dir('[COLOR white]Yes XXX [COLOR red] Adult Videos[/COLOR]', yesxxx, 20, logos + 'yes.png', fanart) 			
 	add_dir('[COLOR chocolate]YouJizz [COLOR red] Adult Videos[/COLOR]', youjizz, 2, logos + 'youjizz.png', fanart)	
 	add_dir('[COLOR lightgreen]YouPorn [COLOR red] Adult Videos[/COLOR]', youporn, 2, logos + 'youporn.png', fanart)   
+	add_dir('[COLOR green]ZBPorn [COLOR red] Adult Videos[/COLOR]', zbporn, 40, logos + 'zbporn.png', fanart)  	
 	
 def porn4u():
 	home()
@@ -177,7 +179,10 @@ def search():
 			media_list(url)		
 		elif 'pornxs.com' in name:
 			url = pornxs + 'search.php?s=' + searchText	  
-			search_result(url)				
+			search_result(url)
+		elif 'zbporn' in name:
+			url = zbporn + 'search/?q=' + searchText	  
+			media_list(url)			
 	except:
 		pass	
 
@@ -327,7 +332,26 @@ def category(url):
 		match = re.compile('href="/(.+?)">(.+?)<').findall(str(links))
 		for url, name in match:
 			add_dir(name, pornxs + url,  3, logos + 'pornxs.png', fanart)
+	elif 'zbporn' in url:
+		if 'categories' in url:
+			match = re.compile('href="(.+?)"><span>(.+?)</span> (\d+)<').findall(content)
+			for url, name, VidNum in match:
+				add_dir(name + ' [COLOR lime](' + VidNum + ' videos)[/COLOR]', url,  3, logos + 'zbporn.png', fanart)
+		elif 'performers' in url:
+			match = re.compile('href="(.+?)"><img src="(.+?)" alt="(.+?)"><span class="info">(.+?) <').findall(content)
+			for url, thumb, name, VidNum in match:
+				add_dir(name + ' [COLOR lime](' + VidNum + ')[/COLOR]', url,  3, thumb, fanart)
+			match = re.compile('data-page="\d+" href="(.+?)">(\d+)<').findall(content)
+			for url, name in match:
+				add_dir('[COLOR cyan]Page ' + name + '[/COLOR]', zbporn + url,  2, logos + 'zbporn.png', fanart)		
 			
+def zb_porn():
+	home()
+	add_dir('[COLOR green]zbporn.com   [COLOR lime]>[COLOR cyan]>[COLOR orange]>[COLOR magenta]>   [COLOR red]Adult Movie Search[/COLOR]', zbporn, 1, logos + 'zbporn.png', fanart)	
+	add_dir('Latest Updates', zbporn + 'latest-updates/', 3, logos + 'zbporn.png', fanart) 
+	add_dir('Models', zbporn + 'performers/', 2, logos + 'zbporn.png', fanart) 
+	add_dir('Categories', zbporn + 'categories/', 2, logos + 'zbporn.png', fanart) 
+		
 def lubtetube_pornstars(url):
 	home()
 	content = make_request(url)
@@ -544,7 +568,14 @@ def media_list(url):
 			add_link(name, pornxs + url, 4, thumb, fanart)			
 		match = re.compile('href="/(.+?)">(\d+)<').findall(content)
 		for url, name in match:
-			add_dir('[COLOR yellow]Page ' + name + '[/COLOR]', pornxs + url, 3, logos + 'pornxs.png', fanart)			
+			add_dir('[COLOR yellow]Page ' + name + '[/COLOR]', pornxs + url, 3, logos + 'pornxs.png', fanart)	
+	elif 'zbporn' in url:
+		match = re.compile('href="(.+?)".*?><img src="(.+?)" alt="(.+?)"').findall(content)
+		for url, thumb, name in match:
+			add_link(name , url, 4, thumb, fanart)
+		match = re.compile('data-page="\d+" href="(.+?)">(\d+)<').findall(content)
+		for url, name in match:
+			add_dir('[COLOR cyan]Page ' + name + '[/COLOR]', zbporn + url,  3, logos + 'zbporn.png', fanart)			
 	xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 def resolve_url(url):
@@ -594,7 +625,9 @@ def resolve_url(url):
 	elif 'yes.xxx' in url: 
 		media_url = re.compile('<source type="video/mp4" src="(.+?)">').findall(content)[0]		
 	elif 'pornxs' in url: 
-		media_url = re.compile('config-final-url="(.+?)"').findall(content)[0]			
+		media_url = re.compile('config-final-url="(.+?)"').findall(content)[0]	
+	elif 'zbporn' in url: 
+		media_url = re.compile("video_url: '(.+?)'").findall(content)[0]			
 	else:
 		media_url = url
 	item = xbmcgui.ListItem(name, path = media_url)
@@ -708,4 +741,7 @@ elif mode == 20:
 elif mode == 30:	
 	search_result(url)
 
+elif mode == 40:	
+	zb_porn()
+	
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

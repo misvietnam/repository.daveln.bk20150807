@@ -7,7 +7,7 @@
 #</CHANNEL>
 
 #<CHANNEL>
-<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]KÊNH TH VTV[/I][/COLOR]</NAME>
+#<NAME>[COLOR blue]->>[B]TRUYỀN HÌNH[/B][COLOR cyan] - [I]KÊNH TH VTV[/I][/COLOR]</NAME>
 #EXTINF:-1,VTV1 HD S1
 http://hlscache.fptplay.net.vn/livez/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 #EXTINF:-1,VTV1 HD 

@@ -1,6 +1,6 @@
 #EXTM3U
 
-#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 11 THÁNG 5 NĂM 2015[/COLOR]
+#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 25 THÁNG 5 NĂM 2015[/COLOR]
 http://www.youtube.com
 
 #EXTINF:-1,[COLOR cyan]Tôn Giáo[/COLOR]
@@ -18,7 +18,7 @@ http://hls75.lax.v247tv.com/lax74/tinlanh_3/playlist.m3u8
 #EXTINF:-1,Phật Từ Bi
 http://206.190.140.142:1935/liveStream/ptb_1/playlist.m3u8
 
-#EXTINF:-1,[COLOR cyan]Thiếu Nhi [COLOR yellow](thanh51)[/COLOR]
+#EXTINF:-1,[COLOR cyan]Thiếu Nhi [COLOR lime](thanh51)[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,CARTOON NETWORK
 http://200.76.77.237/LIVE/H01/CANAL320/PROFILE03.m3u8?
@@ -42,8 +42,6 @@ http://200.76.77.237/LIVE/H01/CANAL317/PROFILE03.m3u8?
 http://200.76.77.237/LIVE/H01/CANAL315/PROFILE03.m3u8?
 #EXTINF:-1,NICK JR
 http://200.76.77.237/LIVE/H01/CANAL310/PROFILE03.m3u8?
-#EXTINF:-1,TIIN
-http://200.76.77.237/LIVE/H01/CANAL325/PROFILE03.m3u8?
 #EXTINF:-1,TOONCAST
 http://200.76.77.237/LIVE/H01/CANAL328/PROFILE03.m3u8?
 

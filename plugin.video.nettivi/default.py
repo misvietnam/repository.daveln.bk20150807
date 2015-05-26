@@ -115,7 +115,9 @@ def tv_directory(url):
 			add_link(channel_name, u_tube, 201, iconimage, fanart)
 		else:
 			if 'Tôn Giáo TV' in channel_name:
-				add_dir(channel_name, url, 2, logos + 'religion.png', fanart)	
+				add_dir(channel_name, url, 2, logos + 'religion.png', fanart)
+			elif 'Thiếu Nhi TV' in channel_name:
+				add_dir(channel_name, url, 2, logos + 'thieunhi.png', fanart)					
 			elif 'Thể Thao TV' in channel_name:
 				add_dir(channel_name, url, 2, logos + 'sport.png', fanart)				
 			elif 'Âm Nhạc TV' in channel_name:
@@ -126,6 +128,7 @@ def tv_directory(url):
 				add_dir(channel_name, url, 2, iconimage, fanart) 
 
 def tv_index(name, url):	
+	name = name.replace('[', '\[').replace(']', '\]')
 	content = make_request(url) 
 	match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(content)
 	for vlink in match:

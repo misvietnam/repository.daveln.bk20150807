@@ -18,35 +18,6 @@ http://hls75.lax.v247tv.com/lax74/tinlanh_3/playlist.m3u8
 #EXTINF:-1,Phật Từ Bi
 http://206.190.140.142:1935/liveStream/ptb_1/playlist.m3u8
 
-#EXTINF:-1,[COLOR cyan]Thiếu Nhi [COLOR yellow](thanh51)[/COLOR]
-http://www.youtube.com
-#EXTINF:-1,CARTOON NETWORK
-http://200.76.77.237/LIVE/H01/CANAL320/PROFILE03.m3u8?
-#EXTINF:-1,CBEEBIES
-http://200.76.77.237/LIVE/H01/CANAL305/PROFILE03.m3u8?
-#EXTINF:-1,BABY TV
-http://hlsstr03.svc.iptv.rt.ru/hls/CH_BABYTV/variant.m3u8?version=2
-#EXTINF:-1,BOOMERANG
-http://200.76.77.237/LIVE/H01/CANAL324/PROFILE03.m3u8?
-#EXTINF:-1,DISNEY XD
-http://200.76.77.237/LIVE/H01/CANAL322/PROFILE03.m3u8?
-#EXTINF:-1,DISCOVERY KIDS
-http://200.76.77.237/LIVE/H01/CANAL303/PROFILE03.m3u8?
-#EXTINF:-1,DISNEY JR
-http://200.76.77.237/LIVE/H01/CANAL308/PROFILE03.m3u8?
-#EXTINF:-1,DISNEY CHANNEL
-http://200.76.77.237/LIVE/H01/CANAL312/PROFILE03.m3u8?
-#EXTINF:-1,NICK
-http://200.76.77.237/LIVE/H01/CANAL317/PROFILE03.m3u8?
-#EXTINF:-1,NICK HD
-http://200.76.77.237/LIVE/H01/CANAL315/PROFILE03.m3u8?
-#EXTINF:-1,NICK JR
-http://200.76.77.237/LIVE/H01/CANAL310/PROFILE03.m3u8?
-#EXTINF:-1,TIIN
-http://200.76.77.237/LIVE/H01/CANAL325/PROFILE03.m3u8?
-#EXTINF:-1,TOONCAST
-http://200.76.77.237/LIVE/H01/CANAL328/PROFILE03.m3u8?
-
 #EXTINF:-1,[COLOR cyan]Thể Thao[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,ESPN
@@ -221,6 +192,31 @@ http://hplus.com.vn/vi/content/detail/national-geographic-channel-hd-3207.html
 http://hplus.com.vn/vi/content/detail/starworld-hd-366.html
 #EXTINF:-1,STAR MOVIES [COLOR magenta]* [COLOR yellow]HD[/COLOR]
 http://hplus.com.vn/vi/content/detail/star-movies-hd-358.html
+
+#EXTINF:-1,[COLOR cyan]Thiếu Nhi[/COLOR]
+http://www.youtube.com
+#EXTINF:-1,BabyFirst
+http://31.220.41.110:80/LiveEdge/BabyFirstLA/chunklist_w766440878_b1000000.m3u8?token=d626601ddf083e5b29a822a02b3f22ab
+#EXTINF:-1,Baby TV 1
+http://hlsstr03.svc.iptv.rt.ru/hls/CH_BABYTV/variant.m3u8?version=2
+#EXTINF:-1,BabyTV 2
+http://31.220.41.103:80/LiveEdge/BabyTVLASD/chunklist_w1971041847_b1000000.m3u8?token=01d732319be99759bcd6f540b5535e1f
+#EXTINF:-1,Cartoon Network
+http://31.220.40.108:80/LiveEdge/CartoonNetworkLASD/chunklist_w1093477854_b1000000.m3u8?token=5eb7d220efe48b8c9983aa73d44a8e33
+#EXTINF:-1,CBeebies
+http://31.220.41.111:80/LiveEdge/CbeebiesLA/chunklist_w1455136167_b1000000.m3u8?token=eba3935927d3ce2bcac2539140126166
+#EXTINF:-1,Disney Channel
+http://31.220.40.108:80/LiveEdge/DisneyChannelNorteHD/chunklist_w72560826_b1000000.m3u8?token=ec862476f28730065a05c7b10b2766fc
+#EXTINF:-1,Discovery Kids
+http://31.220.41.107:80/LiveEdge/DiscoveryKidsSD/chunklist_w275830386_b1000000.m3u8?token=033fd42e140595b0741fec4c02eb85ec
+#EXTINF:-1,Disney Jr.
+http://31.220.40.105:80/LiveEdge/DisneyJrLASD/chunklist_w1649678699_b1000000.m3u8?token=19d6908c18d0383e2bc2b1e3a90d35d9
+#EXTINF:-1,Disney SD
+http://31.220.41.103:80/LiveEdge/DisneyXDSD/chunklist_w861694862_b1000000.m3u8?token=9548a9826fa65543fccfd4775dfdc279
+#EXTINF:-1,Nick Jr.
+http://31.220.41.110:80/LiveEdge/NickJrLASD/chunklist_w1320819765_b1000000.m3u8?token=cae49bbdcc202870690ba499a22c7ab0
+#EXTINF:-1,Tooncast
+http://31.220.40.105:80/LiveEdge/TooncastSD/chunklist_w996789646_b1000000.m3u8?token=008ac35dd03a1e917ecf4b4a543b2227
 
 #EXTINF:-1,[COLOR cyan]VTC[/COLOR]
 http://www.youtube.com

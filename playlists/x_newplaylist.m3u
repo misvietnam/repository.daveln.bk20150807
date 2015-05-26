@@ -1,5 +1,20 @@
 #EXTM3U
 
+#EXTINF:-1,Sex TV 1
+http://31.220.41.111:80/LiveEdge/PlayboyTV/chunklist_w1840479767_b1000000.m3u8?token=3216bef84479a9a193d07783812e581d
+#EXTINF:-1,Sex TV 2
+http://hlsstr02.svc.iptv.rt.ru/hls/CH_PLAYBOY/variant.m3u8?version=2
+#EXTINF:-1,Sex TV 3
+http://31.220.41.107:80/LiveEdge/RealLA/chunklist_w2125478676_b1000000.m3u8?token=6e3fb8ca74f05e5d4b8bacb11eb71913
+#EXTINF:-1,Sex TV 4
+http://31.220.41.111:80/LiveEdge/SextremeSD/chunklist_w795668436_b1000000.m3u8?token=666fd53da765e34cc1879a0b895ebf67
+#EXTINF:-1,Sex TV 5
+http://31.220.41.110:80/LiveEdge/JuicyLA/chunklist_w245462514_b1000000.m3u8?token=3d2f1564f1af71bb503c7cbc4fcc2aa3
+#EXTINF:-1,Sex TV 6
+http://31.220.41.102:80/LiveEdge/hustlerLA/chunklist_w1079090018_b1000000.m3u8?token=8307365e7180f17a6e134d53af106343
+#EXTINF:-1,Sex TV 7
+http://31.220.41.102:80/LiveEdge/XTSYLA/chunklist_w350245683_b1000000.m3u8?token=683b4072f29b882dd1f08836c454cd4c
+
 #EXTINF:-1,[COLOR yellow]ATF01[/COLOR] - Bella XXX Club
 http://46.249.213.93/iPhone/broadcast/bellaclub-tablet.3gp/bellaclub-tablet.3gp-mr648k.m3u8
 #EXTINF:-1,[COLOR yellow]ATF01[/COLOR] - Power Girl HD XXX

@@ -166,6 +166,68 @@
 </channel>
 
 <channel>
+<name>Thiếu Nhi TV</name>
+<thumbnail></thumbnail>
+<items>
+<item>
+<title>BabyFirst</title>
+<link>http://31.220.41.110:80/LiveEdge/BabyFirstLA/chunklist_w766440878_b1000000.m3u8?token=d626601ddf083e5b29a822a02b3f22ab</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Baby TV 1</title>
+<link>http://hlsstr03.svc.iptv.rt.ru/hls/CH_BABYTV/variant.m3u8?version=2</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>BabyTV 2</title>
+<link>http://31.220.41.103:80/LiveEdge/BabyTVLASD/chunklist_w1971041847_b1000000.m3u8?token=01d732319be99759bcd6f540b5535e1f</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Cartoon Network</title>
+<link>http://31.220.40.108:80/LiveEdge/CartoonNetworkLASD/chunklist_w1093477854_b1000000.m3u8?token=5eb7d220efe48b8c9983aa73d44a8e33</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>CBeebies</title>
+<link>http://31.220.41.111:80/LiveEdge/CbeebiesLA/chunklist_w1455136167_b1000000.m3u8?token=eba3935927d3ce2bcac2539140126166</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Disney Channel</title>
+<link>http://31.220.40.108:80/LiveEdge/DisneyChannelNorteHD/chunklist_w72560826_b1000000.m3u8?token=ec862476f28730065a05c7b10b2766fc</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Discovery Kids</title>
+<link>http://31.220.41.107:80/LiveEdge/DiscoveryKidsSD/chunklist_w275830386_b1000000.m3u8?token=033fd42e140595b0741fec4c02eb85ec</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Disney Jr.</title>
+<link>http://31.220.40.105:80/LiveEdge/DisneyJrLASD/chunklist_w1649678699_b1000000.m3u8?token=19d6908c18d0383e2bc2b1e3a90d35d9</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Disney SD</title>
+<link>http://31.220.41.103:80/LiveEdge/DisneyXDSD/chunklist_w861694862_b1000000.m3u8?token=9548a9826fa65543fccfd4775dfdc279</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Nick Jr.</title>
+<link>http://31.220.41.110:80/LiveEdge/NickJrLASD/chunklist_w1320819765_b1000000.m3u8?token=cae49bbdcc202870690ba499a22c7ab0</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Tooncast</title>
+<link>http://31.220.40.105:80/LiveEdge/TooncastSD/chunklist_w996789646_b1000000.m3u8?token=008ac35dd03a1e917ecf4b4a543b2227</link>
+<thumbnail></thumbnail>
+</item>
+</items>
+</channel>
+
+<channel>
 <name>International TV</name>
 <thumbnail></thumbnail>
 <items>

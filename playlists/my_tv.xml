@@ -714,6 +714,73 @@
 </channel>
 
 <channel>
+<name>Access Asia Network</name>
+<thumbnail></thumbnail>
+<items>
+<item>
+<title>Du Lịch và Cuộc Sống</title>
+<link>http://tvod.accessasia.tv:8080/live/dulichcuocsong.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840245.jpg</thumbnail>
+</item>
+<item>
+<title>FBNC</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/htvcfbnc.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378781313.jpg</thumbnail>
+</item>
+<item>
+<title>O2TV</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv10.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280736_vctv10.jpg</thumbnail>
+</item>
+<item>
+<title>SCTV 14</title>
+<link>http://tvod.accessasia.tv:8080/live/sctv14.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064062.jpg</thumbnail>
+</item>
+<item>
+<title>SCTV HD</title>
+<link>http://tvod.accessasia.tv:8080/live/sctvhaihd.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932781.jpg</thumbnail>
+</item>
+<item>
+<title>Thuần Việt HD</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/thuanviet.480p/index.m3u8?e=1389744448&st=qyg7wGxdgIptlUnbonBKuQ</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840964.jpg</thumbnail>
+</item>
+<item>
+<title>VTV 4</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/vtv4.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378950974_vtv4.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 1</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv1.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064132.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 2</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/vctv2.480p/index.m3u8?e=1389728751&st=ec_kFlx1ytFUw6ErmiEmHg</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280470_vctv2.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 4</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv4.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1389779110_vtvcab4.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 8</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv8.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932948.png</thumbnail>
+</item>
+<item>
+<title>VTVcab 17</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv17.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378953454_7620794552_db01e9de3a_m.jpg</thumbnail>
+</item>
+</items>
+</channel>
+
+<channel>
 <name>TV Trong Nước</name>
 <thumbnail></thumbnail>
 <items>

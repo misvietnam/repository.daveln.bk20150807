@@ -145,6 +145,33 @@ http://206.190.136.254/liveStream/vface_1/playlist.m3u8
 #EXTINF:-1,VZN TV Houston TX
 http://206.190.136.254/liveStream/vantv_1/playlist.m3u8
 
+#EXTINF:-1,[COLOR cyan]Accessasia TV[/COLOR]
+http://www.youtube.com
+#EXTINF:-1,Du Lịch và Cuộc Sống
+http://tvod.accessasia.tv:8080/live/dulichcuocsong.480p/index.m3u8
+#EXTINF:-1,FBNC
+http://tvod.accessasia.tv:8080/tvod/air/htvcfbnc.480p/index.m3u8
+#EXTINF:-1,O2TV
+http://tvod.accessasia.tv:8080/live/vctv10.480p/index.m3u8
+#EXTINF:-1,SCTV 14
+http://tvod.accessasia.tv:8080/live/sctv14.480p/index.m3u8
+#EXTINF:-1,SCTV HD
+http://tvod.accessasia.tv:8080/live/sctvhaihd.480p/index.m3u8
+#EXTINF:-1,Thuần Việt HD
+http://tvod.accessasia.tv:8080/tvod/air/thuanviet.480p/index.m3u8?e=1389744448&st=qyg7wGxdgIptlUnbonBKuQ
+#EXTINF:-1,VTV 4
+http://tvod.accessasia.tv:8080/tvod/air/vtv4.480p/index.m3u8
+#EXTINF:-1,VTVcab 1
+http://tvod.accessasia.tv:8080/live/vctv1.480p/index.m3u8
+#EXTINF:-1,VTVcab 2
+http://tvod.accessasia.tv:8080/tvod/air/vctv2.480p/index.m3u8?e=1389728751&st=ec_kFlx1ytFUw6ErmiEmHg
+#EXTINF:-1,VTVcab 4
+http://tvod.accessasia.tv:8080/live/vctv4.480p/index.m3u8
+#EXTINF:-1,VTVcab 8
+http://tvod.accessasia.tv:8080/live/vctv8.480p/index.m3u8
+#EXTINF:-1,VTVcab 17
+http://tvod.accessasia.tv:8080/live/vctv17.480p/index.m3u8
+
 #EXTINF:-1,[COLOR cyan]HTV Online[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,HTV7 [COLOR magenta]* [COLOR yellow]HD[/COLOR]

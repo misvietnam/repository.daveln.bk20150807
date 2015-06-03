@@ -38,14 +38,14 @@
 </item>
 
 <item>
-<title>[COLOR lime]HTVOnline[COLOR magenta] - [COLOR lime]HPLUS[/COLOR]</title>
-<link>http://hplus.com.vn/vi/categories/live-tv</link>
+<title>[COLOR lime]HTVOnline[/COLOR]</title>
+<link>http://www.htvonline.com.vn/livetv</link>
 <thumbnail>tv.png</thumbnail>
 <mode>3</mode>
 </item>
 
 <item>
-<title>[COLOR lime]TV Việt[/COLOR]</title>
+<title>TV Việt</title>
 <link>http://tv.vnn.vn/</link>
 <thumbnail>tv.png</thumbnail>
 <mode>3</mode>

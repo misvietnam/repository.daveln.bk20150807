@@ -144,13 +144,10 @@ def tv_index(name, url):
 
 def tv_scraper(url):
 	content = make_request(url)
-	if 'hplus' in url:
-		match = re.compile('href="http://hplus.com.vn/vi/genre/index(.+?)">(.+?)<').findall(content)
-		for url, name in match:
-			if 'Xem tất cả' in name: 
-				pass 
-			else: 
-				add_dir(name, 'http://hplus.com.vn/vi/genre/index' + url, 101, 'http://static.hplus.com.vn/themes/front/images/logo.png', fanart)
+	if 'htvonline' in url:
+		match = re.compile('class="mh-grids5-img" href="(.+?)" title="(.+?)">\s*<!--img src.+?data-original="(.+?)"').findall(content)
+		for url, name, thumb in match:
+			add_link(name, url, 202, thumb, fanart)			
 	elif 'tv.vnn.vn' in url:
 		match = re.compile('href="\/(.+?)">\s*<img src="\/(.+?)".+?\/>\s*(.+?)\n').findall(content)
 		for url, thumb, title in match:
@@ -316,20 +313,7 @@ def atf01_m3u(url):
 		if 'UPDATED ON' in title or 'CẬP NHẬT' in title:
 			add_link(title, u_tube, 201, iconimage, fanart)
 		else:
-			add_link(title, url, 201, iconimage, fanart)
-
-def index(url):
-	content = make_request(url) 
-	if 'htvonline' in url:
-		match = re.compile("<a class=\"mh-grids5-img\".*?href=\"([^\"]*)\" title=\"(.+?)\">\s.*?\s*<img src=\"(.*?)\"").findall(content)
-		for url, name, thumb in match:
-			add_Link(name, url, 202, thumb, fanart) 	  
-	elif 'hplus' in url:
-		match = re.compile('href="(.+?)" style.+?url\(\'(.+?)\'\)" data-content-tooltips="<div class.+?><h3 class.+?>(.+?)<').findall(content)
-		for url, thumb, name in match:
-			name = re.sub(' HD', ' [COLOR magenta]* [COLOR yellow]HD[/COLOR]', name)
-			add_link(name, 'http://hplus.com.vn/' + url, 202, thumb + '?.png', fanart) 
-		
+			add_link(title, url, 201, iconimage, fanart)		
 			
 def play_my_playlist(url):
 	media_url = url.replace('&amp;', '&')
@@ -448,9 +432,6 @@ elif mode == 32:
 
 elif mode == 33:  
 	my_playlist_channel(name, url)  
-
-elif mode == 101:
-	index(url) 
 
 elif mode == 201:  
 	play_my_playlist(url)

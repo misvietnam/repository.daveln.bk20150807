@@ -145,80 +145,132 @@ http://206.190.136.254/liveStream/vface_1/playlist.m3u8
 #EXTINF:-1,VZN TV Houston TX
 http://206.190.136.254/liveStream/vantv_1/playlist.m3u8
 
-#EXTINF:-1,[COLOR cyan]HTV Online - HPLUS[/COLOR]
+#EXTINF:-1,[COLOR cyan]HTV Online[/COLOR]
 http://www.youtube.com
-#EXTINF:-1,HTV2 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/htv2-hd-2669.html
 #EXTINF:-1,HTV7 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/htv7-hd-256.html
+http://www.htvonline.com.vn/livetv/htv7-34336E61.html
 #EXTINF:-1,HTV9 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/htv9-hd-2667.html
-#EXTINF:-1,HTV 1
-http://hplus.com.vn/vi/content/detail/htv-1-2631.html
-#EXTINF:-1,HTV 2
-http://hplus.com.vn/vi/content/detail/htv-2-2630.html
-#EXTINF:-1,HTV 3
-http://hplus.com.vn/vi/content/detail/htv-3-2535.html
-#EXTINF:-1,HTV 4
-http://hplus.com.vn/vi/content/detail/htv-4-2528.html
-#EXTINF:-1,VTV3 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/vtv3-hd-2130.html
-#EXTINF:-1,VTV6 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/vtv6-hd-2129.html
-#EXTINF:-1,VTV 1
-http://hplus.com.vn/vi/content/detail/vtv-1-2128.html
-#EXTINF:-1,VTV 2
-http://hplus.com.vn/vi/content/detail/vtv-2-2127.html
-#EXTINF:-1,VTV 3
-http://hplus.com.vn/vi/content/detail/vtv-3-2126.html
-#EXTINF:-1,VTV 9
-http://hplus.com.vn/vi/content/detail/vtv-9-2125.html
-#EXTINF:-1,VTC 3 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/vtc-3-hd-2058.html
-#EXTINF:-1,VTC 4
-http://hplus.com.vn/vi/content/detail/vtc-4-2057.html
-#EXTINF:-1,VTC 6
-http://hplus.com.vn/vi/content/detail/vtc-6-2056.html
-#EXTINF:-1,VTC 9
-http://hplus.com.vn/vi/content/detail/vtc-9-2052.html
-#EXTINF:-1,VTC 10
-http://hplus.com.vn/vi/content/detail/vtc-10-2051.html
-#EXTINF:-1,HTV Thể Thao [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/htv-the-thao-hd-4009.html
-#EXTINF:-1,HTV Thể Thao
-http://hplus.com.vn/vi/content/detail/htv-the-thao-2400.html
-#EXTINF:-1,Thể Thao TV [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/the-thao-tv-hd-2133.html
-#EXTINF:-1,Bóng Đá TV [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/bong-da-tv-hd-2131.html
-#EXTINF:-1,Đà Nẵng 2
-http://hplus.com.vn/vi/content/detail/da-nang-2-3268.html
-#EXTINF:-1,Trà Vinh
-http://hplus.com.vn/vi/content/detail/tra-vinh-3254.html
-#EXTINF:-1,MTV
-http://hplus.com.vn/vi/content/detail/mtv-2263.html
-#EXTINF:-1,Yeah1 TV
-http://hplus.com.vn/vi/content/detail/yeah1-tv-2082.html
-#EXTINF:-1,YouTV
-http://hplus.com.vn/vi/content/detail/youtv-2070.html
-#EXTINF:-1,Today TV
-http://hplus.com.vn/vi/content/detail/today-tv-2060.html
-#EXTINF:-1,Việt Nam Net
-http://hplus.com.vn/vi/content/detail/viet-nam-net-2048.html
-#EXTINF:-1,Bà Rịa
-http://hplus.com.vn/vi/content/detail/ba-ria-1982.html
-#EXTINF:-1,FOX SPORT 2 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/fox-sport-2-hd-3781.html
-#EXTINF:-1,FOX SPORT 1 [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/fox-sport-1-hd-3681.html
-#EXTINF:-1,Channel V [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/channel-v-hd-3582.html
-#EXTINF:-1,National Geographic Channel [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/national-geographic-channel-hd-3207.html
-#EXTINF:-1,StarWorld [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/starworld-hd-366.html
-#EXTINF:-1,STAR MOVIES [COLOR magenta]* [COLOR yellow]HD[/COLOR]
-http://hplus.com.vn/vi/content/detail/star-movies-hd-358.html
+http://www.htvonline.com.vn/livetv/htv9-37356E61.html
+#EXTINF:-1,HTV1
+http://www.htvonline.com.vn/livetv/htv1-32326E61.html
+#EXTINF:-1,HTV4
+http://www.htvonline.com.vn/livetv/htv4-35306E61.html
+#EXTINF:-1,VTV1
+http://www.htvonline.com.vn/livetv/vtv1-32316E61.html
+#EXTINF:-1,VTV2
+http://www.htvonline.com.vn/livetv/vtv2-37326E61.html
+#EXTINF:-1,VTV9
+http://www.htvonline.com.vn/livetv/vtv9-37346E61.html
+#EXTINF:-1,VTC4
+http://www.htvonline.com.vn/livetv/vtc4-3131366E61.html
+#EXTINF:-1,VTC6
+http://www.htvonline.com.vn/livetv/vtc6-3131376E61.html
+#EXTINF:-1,VTC10
+http://www.htvonline.com.vn/livetv/vtc10-3131386E61.html
+#EXTINF:-1,LONG AN LA34
+http://www.htvonline.com.vn/livetv/long-an-la34-35346E61.html
+#EXTINF:-1,ĐỒNG THÁP - THDT
+http://www.htvonline.com.vn/livetv/dong-thap--thdt-36306E61.html
+#EXTINF:-1,Hậu Giang
+http://www.htvonline.com.vn/livetv/hau-giang-3134376E61.html
+#EXTINF:-1,Kiên Giang
+http://www.htvonline.com.vn/livetv/kien-giang-3134366E61.html
+#EXTINF:-1,KHÁNH HÒA KTV
+http://www.htvonline.com.vn/livetv/khanh-hoa-ktv-3130346E61.html
+#EXTINF:-1,LẠNG SƠN - LSTV
+http://www.htvonline.com.vn/livetv/lang-son--lstv-38396E61.html
+#EXTINF:-1,BÌNH ĐỊNH - BTV
+http://www.htvonline.com.vn/livetv/binh-dinh--btv-33356E61.html
+#EXTINF:-1,Nam Định NTV
+http://www.htvonline.com.vn/livetv/nam-dịnh-ntv-3130386E61.html
+#EXTINF:-1,CÀ MAU - CTV
+http://www.htvonline.com.vn/livetv/ca-mau--ctv-36376E61.html
+#EXTINF:-1,LÀO CAI - THLC
+http://www.htvonline.com.vn/livetv/lao-cai--thlc-37306E61.html
+#EXTINF:-1,QUẢNG NAM QRT
+http://www.htvonline.com.vn/livetv/quang-nam-qrt-3130356E61.html
+#EXTINF:-1,SÓC TRĂNG STV
+http://www.htvonline.com.vn/livetv/soc-trang-stv-35386E61.html
+#EXTINF:-1,ĐẮC LẮC -DRT
+http://www.htvonline.com.vn/livetv/dac-lac--drt-36386E61.html
+#EXTINF:-1,ĐẮC NÔNG - PTD
+http://www.htvonline.com.vn/livetv/dac-nong--ptd-36396E61.html
+#EXTINF:-1,HUẾ -TRT
+http://www.htvonline.com.vn/livetv/hue--trt-36346E61.html
+#EXTINF:-1,BẮC GIANG - BGTV
+http://www.htvonline.com.vn/livetv/bac-giang--bgtv-36366E61.html
+#EXTINF:-1,VĨNH PHÚC VP
+http://www.htvonline.com.vn/livetv/vinh-phuc-vp-37316E61.html
+#EXTINF:-1,bạc liêu
+http://www.htvonline.com.vn/livetv/bac-lieu-3132316E61.html
+#EXTINF:-1,HaiDuong
+http://www.htvonline.com.vn/livetv/haiduong-3133316E61.html
+#EXTINF:-1,ThaiNguyen
+http://www.htvonline.com.vn/livetv/thainguyen-3134356E61.html
+#EXTINF:-1,Hà Tĩnh
+http://www.htvonline.com.vn/livetv/ha-tinh-3134396E61.html
+#EXTINF:-1,HTV7
+http://www.htvonline.com.vn/livetv/htv7-34336E61.html
+#EXTINF:-1,HTV9
+http://www.htvonline.com.vn/livetv/htv9-37356E61.html
+#EXTINF:-1,HTV1
+http://www.htvonline.com.vn/livetv/htv1-32326E61.html
+#EXTINF:-1,HTV4
+http://www.htvonline.com.vn/livetv/htv4-35306E61.html
+#EXTINF:-1,VTV1
+http://www.htvonline.com.vn/livetv/vtv1-32316E61.html
+#EXTINF:-1,VTV2
+http://www.htvonline.com.vn/livetv/vtv2-37326E61.html
+#EXTINF:-1,VTV9
+http://www.htvonline.com.vn/livetv/vtv9-37346E61.html
+#EXTINF:-1,VTC4
+http://www.htvonline.com.vn/livetv/vtc4-3131366E61.html
+#EXTINF:-1,VTC6
+http://www.htvonline.com.vn/livetv/vtc6-3131376E61.html
+#EXTINF:-1,VTC10
+http://www.htvonline.com.vn/livetv/vtc10-3131386E61.html
+#EXTINF:-1,LONG AN LA34
+http://www.htvonline.com.vn/livetv/long-an-la34-35346E61.html
+#EXTINF:-1,ĐỒNG THÁP - THDT
+http://www.htvonline.com.vn/livetv/dong-thap--thdt-36306E61.html
+#EXTINF:-1,Hậu Giang
+http://www.htvonline.com.vn/livetv/hau-giang-3134376E61.html
+#EXTINF:-1,Kiên Giang
+http://www.htvonline.com.vn/livetv/kien-giang-3134366E61.html
+#EXTINF:-1,KHÁNH HÒA KTV
+http://www.htvonline.com.vn/livetv/khanh-hoa-ktv-3130346E61.html
+#EXTINF:-1,LẠNG SƠN - LSTV
+http://www.htvonline.com.vn/livetv/lang-son--lstv-38396E61.html
+#EXTINF:-1,BÌNH ĐỊNH - BTV
+http://www.htvonline.com.vn/livetv/binh-dinh--btv-33356E61.html
+#EXTINF:-1,Nam Định NTV
+http://www.htvonline.com.vn/livetv/nam-dịnh-ntv-3130386E61.html
+#EXTINF:-1,CÀ MAU - CTV
+http://www.htvonline.com.vn/livetv/ca-mau--ctv-36376E61.html
+#EXTINF:-1,LÀO CAI - THLC
+http://www.htvonline.com.vn/livetv/lao-cai--thlc-37306E61.html
+#EXTINF:-1,QUẢNG NAM QRT
+http://www.htvonline.com.vn/livetv/quang-nam-qrt-3130356E61.html
+#EXTINF:-1,SÓC TRĂNG STV
+http://www.htvonline.com.vn/livetv/soc-trang-stv-35386E61.html
+#EXTINF:-1,ĐẮC LẮC -DRT
+http://www.htvonline.com.vn/livetv/dac-lac--drt-36386E61.html
+#EXTINF:-1,ĐẮC NÔNG - PTD
+http://www.htvonline.com.vn/livetv/dac-nong--ptd-36396E61.html
+#EXTINF:-1,HUẾ -TRT
+http://www.htvonline.com.vn/livetv/hue--trt-36346E61.html
+#EXTINF:-1,BẮC GIANG - BGTV
+http://www.htvonline.com.vn/livetv/bac-giang--bgtv-36366E61.html
+#EXTINF:-1,VĨNH PHÚC VP
+http://www.htvonline.com.vn/livetv/vinh-phuc-vp-37316E61.html
+#EXTINF:-1,bạc liêu
+http://www.htvonline.com.vn/livetv/bac-lieu-3132316E61.html
+#EXTINF:-1,HaiDuong
+http://www.htvonline.com.vn/livetv/haiduong-3133316E61.html
+#EXTINF:-1,ThaiNguyen
+http://www.htvonline.com.vn/livetv/thainguyen-3134356E61.html
+#EXTINF:-1,Hà Tĩnh
+http://www.htvonline.com.vn/livetv/ha-tinh-3134396E61.html
 
 #EXTINF:-1,[COLOR cyan]VTC[/COLOR]
 http://www.youtube.com

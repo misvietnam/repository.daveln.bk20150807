@@ -147,7 +147,7 @@ http://206.190.136.254/liveStream/vantv_1/playlist.m3u8
 
 #EXTINF:-1,[COLOR cyan]Accessasia TV[/COLOR]
 http://www.youtube.com
-#EXTINF:-1,Du Lịch và Cuộc Sống
+#EXTINF:-1,Du Lịch & Cuộc Sống
 http://tvod.accessasia.tv:8080/live/dulichcuocsong.480p/index.m3u8
 #EXTINF:-1,FBNC
 http://tvod.accessasia.tv:8080/tvod/air/htvcfbnc.480p/index.m3u8

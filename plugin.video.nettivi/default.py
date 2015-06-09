@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>  
 '''                                                                           
 
-import urllib, urllib2, re, os, sys
+import urllib, urllib2, re, os, sys, math
 import xbmc, xbmcplugin, xbmcgui, xbmcaddon
 
 mysettings = xbmcaddon.Addon(id = 'plugin.video.nettivi')
@@ -40,6 +40,7 @@ xml_regex_reg_2L = '<title>(.*?)</title>\s*<link>.*?</link>\s*<regex>\s*<name>.*
 my_dict = {'&#7893;':'ổ', '&#7907;':'ợ', '&#7885;':'ọ', '&#7909;':'ụ', '&#7875;':'ể', '&#7843;':'ả', '&#7871;':'ế', '&#7897;':'ộ', '&#7889;':'ố', '&#7873;':'ề', '&#7883;':'ị', '&#7855;':'ắ'}
 my_repo = 'https://raw.githubusercontent.com/daveln/repository.daveln/'
 hplus = 'http://hplus.com.vn/vi/categories/live-tv'
+tvreplay = 'http://113.160.49.39/tvcatchup/'
 u_tube = 'http://www.youtube.com'
 tvviet = 'http://tv.vnn.vn/'
 
@@ -91,6 +92,16 @@ def make_request(url):
 		if hasattr(e, 'reason'):
 			print 'We failed to reach a server.'
 			print 'Reason: ', e.reason
+
+def convertSize(size):
+   size_name = ("KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+   i = int(math.floor(math.log(size,1024)))
+   p = math.pow(1024,i)
+   s = round(size/p,2)
+   if (s > 0):
+       return '%s %s' % (s,size_name[i])
+   else:
+       return '0B'
 
 def main():
 	content = open_file(MainDirTV)
@@ -153,6 +164,19 @@ def tv_scraper(url):
 		for url, thumb, title in match:
 			title = replace_all(title, my_dict)	
 			add_link(title, tvviet + url, 202, (tvviet + thumb).replace(' ', '%20'), fanart)  	  
+	elif 'tvcatchup' in url:
+		match = re.compile('href="(\d+)/">(\d+)/<').findall(content)
+		for url, name in match:
+			add_dir(name, tvreplay + url, 121, iconimage, fanart)			
+	   
+def tvreplay_link(url):
+	content = make_request(url)
+	match = re.compile('href="(.+?)">(.+?)\.mp4</a>(.+?)\n').findall(content)
+	for href, name, VidSize in match:
+		name = name.split('_')
+		name = name[0] + '_' + name[-1]
+		video_size = convertSize(int(VidSize.split(' ')[-1]))
+		add_link(name + ' [COLOR magenta]* [COLOR yellow]' + video_size + '[/COLOR]', url + '/' + href, 201, iconimage, fanart)
 
 def my_playlist_directory():
 	if 'XML' in name:
@@ -431,7 +455,10 @@ elif mode == 32:
 	my_playlist_link()  
 
 elif mode == 33:  
-	my_playlist_channel(name, url)  
+	my_playlist_channel(name, url) 
+
+elif mode == 121: 
+	tvreplay_link(url)  		
 
 elif mode == 201:  
 	play_my_playlist(url)

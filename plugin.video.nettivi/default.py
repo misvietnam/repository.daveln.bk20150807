@@ -95,11 +95,11 @@ def make_request(url):
 
 def convertSize(size):
    size_name = ("KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
-   i = int(math.floor(math.log(size,1024)))
-   p = math.pow(1024,i)
-   s = round(size/p,2)
+   i = int(math.floor(math.log(size, 1024)))
+   p = math.pow(1024, i)
+   s = round(size/p, 2)
    if (s > 0):
-       return '%s %s' % (s,size_name[i])
+       return '%s %s' % (s, size_name[i])
    else:
        return '0B'
 
@@ -173,8 +173,7 @@ def tvreplay_link(url):
 	content = make_request(url)
 	match = re.compile('href="(.+?)">(.+?)\.mp4</a>(.+?)\n').findall(content)
 	for href, name, VidSize in match:
-		name = name.split('_')
-		name = name[0] + '_' + name[-1]
+		name = name.split('_')[0] + '_' + name.split('_')[-1]
 		video_size = convertSize(int(VidSize.split(' ')[-1]))
 		add_link(name + ' [COLOR magenta]* [COLOR yellow]' + video_size + '[/COLOR]', url + '/' + href, 201, iconimage, fanart)
 

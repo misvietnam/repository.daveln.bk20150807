@@ -2847,72 +2847,72 @@
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH LIFE TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
 <item>
-<title>[COLOR=FF0084ff]LIFETV[/COLOR]</title>
+<title>LIFE TV</title>
 <link>rtmp://27.118.16.16/live/live_lifetv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]KÊNH 9 MUSIC[/COLOR]</title>
+<title>KÊNH 9 MUSIC</title>
 <link>rtmp://27.118.16.16/live//9_music swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]FITNESS 360[/COLOR]</title>
+<title>FITNESS 360</title>
 <link>rtmp://27.118.16.16/live//fitness_360 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]MODEL CHANNEL[/COLOR]</title>
+<title>MODEL CHANNEL</title>
 <link>rtmp://27.118.16.16/live//model_channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]DI SẢN VIỆT[/COLOR]</title>
+<title>DI SẢN VIỆT</title>
 <link>rtmp://27.118.16.16/live//disanviet swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]4 MEN[/COLOR]</title>
+<title>4 MEN</title>
 <link>rtmp://27.118.16.16/live//4Men swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]2CHANNEL VN[/COLOR]</title>
+<title>2CHANNEL VN</title>
 <link>rtmp://27.118.16.16/live//2channel swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]SOTV[/COLOR]</title>
+<title>SOTV</title>
 <link>rtmp://27.118.16.16/live//sotv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]TECH CHANNEL[/COLOR]</title>
+<title>TECH CHANNEL</title>
 <link>rtmp://27.118.16.16/live//tech swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]KÊNH 911[/COLOR]</title>
+<title>KÊNH 911</title>
 <link>rtmp://27.118.16.16/live//911 swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]TRUYỀN THÔNG VIỆT[/COLOR]</title>
+<title>TRUYỀN THÔNG VIỆT</title>
 <link>rtmp://27.118.16.16/live//ttv swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]ITV[/COLOR]</title>
+<title>ITV</title>
 <link>rtmp://live.kenhitv.vn/liveweb//itv_web_500k.stream swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]NHAC CUA TUI[/COLOR]</title>
+<title>NHAC CUA TUI</title>
 <link>rtmp://123.30.134.108/live//nctlive swfUrl=http://live.lifetv.vn/jwplayer/player.swf pageUrl=http://live.lifetv.vn/</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>[COLOR=FF0084ff]NLĐ[/COLOR]</title>
+<title>NLĐ</title>
 <link>http://222.255.27.218:8081/nld.m3u8</link>
 <thumbnail></thumbnail>
 </item>

@@ -1,0 +1,10 @@
+<settings>
+	<category label="[COLOR red][B]Add Path[/B][COLOR white] - Please fill in [COLOR red][B]ALL[/B] [COLOR white]settings.[/COLOR]"> 
+		<setting label="Name of addon" type="text"  id="name_of_addon" default="" />	
+		<setting label="Addon's provider_name" type="text"  id="provider_name" default="" />  
+		<setting label="Local path to addon's icon.png" type="file"  id="addon_icon" default="" /> 	
+		<setting label="Local path to addon's fanart.jpg" type="file"  id="addon_fanart" default="" /> 
+		<setting label="Local path to destination folder for addon.zip" type="folder"  id="dst_folder" default="" /> 
+		<setting label="Local path to m3u source file" type="file"  id="m3u_file" default="" />	
+	</category>
+</settings>

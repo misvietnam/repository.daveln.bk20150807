@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-Copyright (C) 2015                                                     
+Copyright (C) 2014                                                     
 
 This program is free software: you can redistribute it and/or modify   
 it under the terms of the GNU General Public License as published by   
@@ -28,49 +28,31 @@ icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
 
 license_txt = xbmc.translatePath(os.path.join(home, 'LICENSE.txt'))
-default_file = xbmc.translatePath(os.path.join(home, 'default_file.py'))
-addon_file = xbmc.translatePath(os.path.join(home, 'addon_file.xml'))
+old_default = xbmc.translatePath(os.path.join(home, 'old_default.py'))
+old_addon = xbmc.translatePath(os.path.join(home, 'old_addon.xml'))
 
 name_of_plugin_folder = mysettings.getSetting('name_of_plugin_folder')
 my_first_addon = xbmc.translatePath('special://home/addons/plugin.video.' + name_of_plugin_folder)
 name_of_addon = mysettings.getSetting('name_of_addon')
 addon_version_number = mysettings.getSetting('addon_version_number')
-provider_name = mysettings.getSetting('provider-name')
+provider_name = mysettings.getSetting('provider_name')
 addon_icon = mysettings.getSetting('addon_icon')
 addon_fanart = mysettings.getSetting('addon_fanart')
 sum_mary = mysettings.getSetting('sum_mary')
 desc = mysettings.getSetting('desc')
-xml_file = mysettings.getSetting('xml_file')
-xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 m3u_file = mysettings.getSetting('m3u_file')
+xml_file = mysettings.getSetting('xml_file')
 m3u_regex = '#.+,(.+?)\n(.+?)\n'
+xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 		
 def home():
-	add_dir(
-				'[COLOR white]Create[COLOR cyan] XBMC/Kodi add-on[COLOR white] from [COLOR yellow]M3U and/or XML[COLOR red] - [B]NO REGEX[/B][/COLOR]', 
-				'AddonCreator', 1, logos + 'kodi_xbmc.png', fanart
-			)
+	add_dir('[COLOR white]Create[COLOR cyan] XBMC/Kodi add-on[COLOR white] from [COLOR yellow]M3U and/or XML[COLOR white] - [B]NO REGEX[/B][/COLOR]', 'AddonCreator', 1, logos + 'xml.png', fanart)
 
 def check_settings(): 
-	if (	
-			len(name_of_plugin_folder) > 0 and len(name_of_addon) > 0 and len(addon_version_number) > 0 and 
-			len(provider_name) > 0 and len(addon_icon) > 0 and len(addon_fanart) > 0 and len(sum_mary) > 0 and len(desc) > 0
-		):
-			create_addon()
+	if len(name_of_plugin_folder) > 0 and len(name_of_addon) > 0 and len(addon_version_number) > 0 and len(provider_name) > 0 and len(addon_icon) > 0 and len(addon_fanart) > 0 and len(sum_mary) > 0 and len(desc) > 0:
+		make_addon()
 	else:	
 		mysettings.openSettings()
-
-def completion_note():
-	xbmcgui.Dialog().ok(
-							'Add-on Creator', '[COLOR red][B]Please manually reboot XBMC/Kodi.[/B][/COLOR]', 
-							'Then look for your add-on in [B]VIDEOS >> add-ons.[/B]', 'Done. Enjoy!'
-						)			
-
-def error_warning():
-	xbmcgui.Dialog().ok(
-							'Add-on Creator', '[COLOR red][B]Oops! Something has gone terribly wrong.[/B][/COLOR]', 
-							'[B]Double check [COLOR red]ALL[/COLOR] settings.[/B]', 'Then try again.'
-						)
 
 def copy_files():
 	try:
@@ -83,67 +65,46 @@ def copy_files():
 		shutil.copy(license_txt, my_first_addon)				
 	except:
 		pass
-	'''		
+			
 	shutil.copy(addon_icon, my_first_addon)
-	os.rename(
-				xbmc.translatePath(os.path.join(my_first_addon, addon_icon.split('/')[-1].split('\\')[-1])),
-				xbmc.translatePath(os.path.join(my_first_addon, 'icon.png'))
-			  )	
+	icon_old_name = xbmc.translatePath(os.path.join(my_first_addon, addon_icon.split('/')[-1].split('\\')[-1]))
+	icon_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'icon.png'))
+	os.rename(icon_old_name, icon_new_name)	
 
 	shutil.copy(addon_fanart, my_first_addon)
-	os.rename(
-				xbmc.translatePath(os.path.join(my_first_addon, addon_fanart.split('/')[-1].split('\\')[-1])),
-				xbmc.translatePath(os.path.join(my_first_addon, 'fanart.jpg'))
-			  )	
-	'''	
-	shutil.copy(default_file, my_first_addon)
-	default_old_name = xbmc.translatePath(os.path.join(my_first_addon, 'default_file.py'))
-	default_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'default.py'))
-	os.rename(default_old_name, default_new_name)
-	# Read in the default.py file
-	default_py = None
-	with open(default_new_name, 'r') as file :
-		default_py = file.read()
-	# Replace the target string
-	default_py = default_py.replace('MyNewlyCreatedAddon', name_of_plugin_folder)
-	# Write the default.py file out again
-	with open(default_new_name, 'w') as file:
-		file.write(default_py)	
+	fanart_old_name = xbmc.translatePath(os.path.join(my_first_addon, addon_fanart.split('/')[-1].split('\\')[-1]))
+	fanart_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'fanart.jpg'))
+	os.rename(fanart_old_name, fanart_new_name)	
 		
-	shutil.copy(addon_file, my_first_addon)
-	addon_old_name = xbmc.translatePath(os.path.join(my_first_addon, 'addon_file.xml'))
+	shutil.copy(old_default, my_first_addon)
+	default_old_name = xbmc.translatePath(os.path.join(my_first_addon, 'old_default.py'))
+	default_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'default.py'))
+	os.rename(default_old_name, default_new_name)	
+		
+	shutil.copy(old_addon, my_first_addon)
+	addon_old_name = xbmc.translatePath(os.path.join(my_first_addon, 'old_addon.xml'))
 	addon_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'addon.xml'))
 	os.rename(addon_old_name, addon_new_name)
-	# Read in the addon.xml file
-	addon_xml = None
-	with open(addon_new_name, 'r') as file :
-		addon_xml = file.read()
-	# Replace the target string
-	addon_xml = addon_xml.replace(
-									'<addon id="" name="" version="" provider-name="">', '<addon id="' + 
-									name_of_plugin_folder + '" name="' + name_of_addon + '" version="' + 
-									addon_version_number + '" provider-name="' + provider_name + '">'
-								  )
-	addon_xml = addon_xml.replace('<summary>', '<summary>' + sum_mary).replace('<description>', '<description>' + desc).replace('\[', '[').replace('\]', ']')
-	# Write the addon.xml file out again
-	with open(addon_new_name, 'w') as file:
-		file.write(addon_xml)	
 
 def m3u_playlist():	
 	shutil.copy(m3u_file, my_first_addon)
-	os.rename(
-				xbmc.translatePath(os.path.join(my_first_addon, m3u_file.split('/')[-1].split('\\')[-1])),
-				xbmc.translatePath(os.path.join(my_first_addon, 'playlist.m3u'))
-			  )
+	m3u_old_name = xbmc.translatePath(os.path.join(my_first_addon, m3u_file.split('/')[-1].split('\\')[-1]))
+	m3u_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'playlist.m3u'))
+	os.rename(m3u_old_name, m3u_new_name)
 
 def xml_playlist():	
 	shutil.copy(xml_file, my_first_addon)
-	os.rename(
-				xbmc.translatePath(os.path.join(my_first_addon, xml_file.split('/')[-1].split('\\')[-1])),
-				xbmc.translatePath(os.path.join(my_first_addon, 'playlist.xml'))
-			  )
+	xml_old_name = xbmc.translatePath(os.path.join(my_first_addon, xml_file.split('/')[-1].split('\\')[-1]))
+	xml_new_name = xbmc.translatePath(os.path.join(my_first_addon, 'playlist.xml'))
+	os.rename(xml_old_name, xml_new_name)
+
+def completion_note():
+	xbmcgui.Dialog().ok('Add-on Creator', '[COLOR red][B]Please manually reboot XBMC/Kodi.[/B][/COLOR]', '[B]Then look for your add-on in VIDEOS >> add-ons.[/B]', 'Done. Enjoy!')			
+
+def error_warning():
+	xbmcgui.Dialog().ok('Add-on Creator', '[COLOR red][B]Oops! Something has gone terribly wrong.[/B][/COLOR]', '[B]Double check ALL settings.[/B]', 'Then try again.')
 					
-def create_addon():
+def make_addon():
 	if len(m3u_file) < 1 and len(xml_file) < 1: 
 		mysettings.openSettings()
 

@@ -24,8 +24,8 @@ xbmcplugin.setContent(plugin_handle, "video")
 icon = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/icon.png")
 fanart = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/fanart.jpg")
 xml_playlist = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/playlist.xml")
-xml_regex = "<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>"
 m3u_playlist = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/playlist.m3u")
+xml_regex = "<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>"
 m3u_regex = "#.+,(.+?)\n(.+?)\n"
 
 def open_file(file):

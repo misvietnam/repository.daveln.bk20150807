@@ -99,9 +99,8 @@ def copy_files():
 	d_file = xbmc.translatePath(os.path.join(my_first_addon, 'default.py'))
 	""" Read in the default.py file """
 	default_py = None
-	with open(d_file, 'r') as f :
+	with open(d_file, 'r') as f:
 		default_py = f.read()
-		f.close()
 	""" Replace the target string """
 	default_py = default_py.replace('MyNewlyCreatedAddon', name_of_plugin_folder)
 	""" Write the default.py file out again """
@@ -113,9 +112,8 @@ def copy_files():
 	shutil.copy(addon_file, my_first_addon)
 	a_file = xbmc.translatePath(os.path.join(my_first_addon, 'addon.xml'))
 	addon_xml = None
-	with open(a_file, 'r') as f :
+	with open(a_file, 'r') as f:
 		addon_xml = f.read()
-		f.close()
 	addon_xml = addon_xml.replace(
 									'<addon id="" name="" version="" provider-name="">', '<addon id="' + 
 									name_of_plugin_folder + '" name="' + name_of_addon + '" version="' + 

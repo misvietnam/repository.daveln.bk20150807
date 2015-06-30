@@ -27,12 +27,14 @@ fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos = xbmc.translatePath(os.path.join(home, 'resources/logos/'))
 
+addon_old_file = xbmc.translatePath(os.path.join(home, 'resources/files/addon.xml'))
+default_old_file = xbmc.translatePath(os.path.join(home, 'resources/files/default.py'))
 license_txt = xbmc.translatePath(os.path.join(home, 'LICENSE.txt'))
-default_file = xbmc.translatePath(os.path.join(home, 'resources/files/default.py'))
-addon_file = xbmc.translatePath(os.path.join(home, 'resources/files/addon.xml'))
 
 name_of_plugin_folder = mysettings.getSetting('name_of_plugin_folder')
 my_first_addon = xbmc.translatePath('special://home/addons/plugin.video.' + name_of_plugin_folder)
+addon_new_file = xbmc.translatePath(os.path.join(my_first_addon, 'addon.xml'))
+default_new_file = xbmc.translatePath(os.path.join(my_first_addon, 'default.py'))
 name_of_addon = mysettings.getSetting('name_of_addon')
 addon_version_number = mysettings.getSetting('addon_version_number')
 provider_name = mysettings.getSetting('provider-name')
@@ -45,7 +47,7 @@ xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumb
 m3u_file = mysettings.getSetting('m3u_file')
 m3u_regex = '#.+,(.+?)\n(.+?)\n'
 
-def open_file(file):
+def read_file(file):
 	try:
 		f = open(file, 'r')
 		content = f.read()
@@ -71,14 +73,18 @@ def check_settings():
 
 def completion_note():
 	xbmcgui.Dialog().ok(
-							'Add-on Creator', '[COLOR red][B]Please manually reboot XBMC - KODI[/B][/COLOR]', 
-							'Look for your new add-on in [B]VIDEOS >> Add-ons[/B]', 'Done. Enjoy!'
+							'Add-on Creator', 
+							'[COLOR red][B]Please manually reboot XBMC - KODI[/B][/COLOR]', 
+							'Look for your new add-on in [B]VIDEOS >> Add-ons[/B]', 
+							'Done. Enjoy!'
 						)			
 
 def error_warning():
 	xbmcgui.Dialog().ok(
-							'Add-on Creator', '[COLOR red][B]Oops! Something has gone terribly wrong.[/B][/COLOR]', 
-							'[B]Double check [COLOR red]ALL[/COLOR] settings.[/B]', 'Then try again.'
+							'Add-on Creator', 
+							'[COLOR red][B]Oops! Something has gone terribly wrong.[/B][/COLOR]', 
+							'[B]Double check [COLOR red]ALL[/COLOR] settings.[/B]', 
+							'Then try again.'
 						)
 
 def copy_files():
@@ -94,35 +100,32 @@ def copy_files():
 	shutil.copy(addon_icon, my_first_addon)
 	shutil.copy(addon_fanart, my_first_addon)
 	
+	
 	# Copy default.py and replace the target string.
-	shutil.copy(default_file, my_first_addon)
-	d_file = xbmc.translatePath(os.path.join(my_first_addon, 'default.py'))
-	""" Read in the default.py file """
-	default_py = None
-	with open(d_file, 'r') as f:
-		default_py = f.read()
-	""" Replace the target string """
-	default_py = default_py.replace('MyNewlyCreatedAddon', name_of_plugin_folder)
-	""" Write the default.py file out again """
-	with open(d_file, 'w') as f:
-		f.write(default_py)	
-		f.close()
-		
+	shutil.copy(default_old_file, my_first_addon)
+	default_py = None	
+	default_py = read_file(default_new_file)
+	default_py = default_py.replace('MyNewlyCreatedAddon', name_of_plugin_folder)	
+	f = open(default_new_file, 'w')
+	f.write(default_py)
+	f.close()
+
+	
 	# Copy addon.xml and replace the target strings.		
-	shutil.copy(addon_file, my_first_addon)
-	a_file = xbmc.translatePath(os.path.join(my_first_addon, 'addon.xml'))
-	addon_xml = None
-	with open(a_file, 'r') as f:
-		addon_xml = f.read()
+	shutil.copy(addon_old_file, my_first_addon)
+	addon_xml = None	
+	addon_xml = read_file(addon_new_file)
 	addon_xml = addon_xml.replace(
-									'<addon id="" name="" version="" provider-name="">', '<addon id="' + 
-									name_of_plugin_folder + '" name="' + name_of_addon + '" version="' + 
-									addon_version_number + '" provider-name="' + provider_name + '">'
-								  )
-	addon_xml = addon_xml.replace('<summary>', '<summary>' + sum_mary).replace('<description>', '<description>' + desc).replace('\[', '[').replace('\]', ']')
-	with open(a_file, 'w') as f:
-		f.write(addon_xml)
-		f.close()		
+									'<addon id="" name="" version="" provider-name="">',
+									'<addon id="plugin.video.' + name_of_plugin_folder + '" name="' + name_of_addon +
+									'" version="' + addon_version_number + '" provider-name="' + provider_name + '">'
+									).replace('<summary></summary>', '<summary>' + sum_mary + '</summary>'
+									).replace('<description></description>', '<description>' + desc + '</description>'
+									).replace('\[', '[').replace('\]', ']'
+								  )	
+	f = open(addon_new_file, 'w')
+	f.write(addon_xml)
+	f.close()	
 	
 def create_addon():
 	if len(m3u_file) < 1 and len(xml_file) < 1: 
@@ -147,13 +150,13 @@ def create_addon():
 			error_warning()	
 
 def m3u_playlist():
-	m3uPlaylist = open_file(m3u_file)
+	m3uPlaylist = read_file(m3u_file)
 	f = open(my_first_addon + '/playlist.m3u', 'w')
 	f.write(m3uPlaylist)
 	f.close()
 	
 def xml_playlist():
-	xmlPlaylist = open_file(xml_file)
+	xmlPlaylist = read_file(xml_file)
 	f = open(my_first_addon + '/playlist.xml', 'w')
 	f.write(xmlPlaylist)
 	f.close()
@@ -176,7 +179,10 @@ def get_params():
 	return param
 
 def add_dir(name, url, mode, iconimage, fanart):
-	u = sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + "&name=" + urllib.quote_plus(name) + "&iconimage=" + urllib.quote_plus(iconimage)
+	u = (	
+			sys.argv[0] + "?url=" + urllib.quote_plus(url) + "&mode=" + str(mode) + 
+			"&name=" + urllib.quote_plus(name) + "&iconimage=" + urllib.quote_plus(iconimage)
+		)	
 	ok = True
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultFolder.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )

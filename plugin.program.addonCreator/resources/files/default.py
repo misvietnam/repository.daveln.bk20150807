@@ -20,7 +20,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
 import xbmc, xbmcgui, xbmcplugin, sys, re
 
 plugin_handle = int(sys.argv[1])
-xbmcplugin.setContent(plugin_handle, "video")
+xbmcplugin.setContent(plugin_handle, "movies")
 icon = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/icon.png")
 fanart = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/fanart.jpg")
 xml_playlist = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCreatedAddon/playlist.xml")
@@ -28,7 +28,7 @@ m3u_playlist = xbmc.translatePath("special://home/addons/plugin.video.MyNewlyCre
 xml_regex = "<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>"
 m3u_regex = "#.+,(.+?)\n(.+?)\n"
 
-def open_file(file):
+def read_file(file):
     try:
         f = open(file, "r")
         content = f.read()
@@ -37,38 +37,38 @@ def open_file(file):
     except:
         pass
 
-def add_item(url, infolabels, img = "", fanart = ""):
-    listitem = xbmcgui.ListItem(infolabels["title"], iconImage = img, thumbnailImage = img)
-    listitem.setInfo("video", infolabels)
-    listitem.setProperty("fanart_image", fanart)
-    listitem.setProperty("IsPlayable", "false")
-    xbmcplugin.addDirectoryItem(plugin_handle, url, listitem)
-    return
-
+def add_link(name, url, img = "", fanart = ""):
+    liz = xbmcgui.ListItem(name, iconImage = img, thumbnailImage = img)
+    liz.setInfo("video", infoLabels = {"Title": name})
+    liz.setProperty("fanart_image", fanart)
+    liz.setProperty("IsPlayable", "false")
+    xbmcplugin.addDirectoryItem(plugin_handle, url, listitem = liz)
+    return	
+	
 try:
-    link = open_file(m3u_playlist)
+    link = read_file(m3u_playlist)
     match = re.compile(m3u_regex).findall(link)
-    for title, url in match:
+    for name, url in match:
         try:
             url = url.replace('"', ' ').replace('&amp;', '&').strip()
-            title = re.sub('\s+', ' ', title).replace('"', ' ').strip()
-            add_item(url, {"title": title}, icon, fanart)
+            name = re.sub('\s+', ' ', name).replace('"', ' ').strip()
+            add_link(name, url, icon, fanart)
         except:
             pass
 except:
     pass
 
 try:
-    link = open_file(xml_playlist)
+    link = read_file(xml_playlist)
     match = re.compile(xml_regex).findall(link)
-    for title, url, thumb in match:
+    for name, url, thumb in match:
         try:
             url = url.replace('"', ' ').replace('&amp;', '&').strip()
-            title = re.sub('\s+', ' ', title).replace('"', ' ').strip()
+            name = re.sub('\s+', ' ', name).replace('"', ' ').strip()
             if (len(thumb) > 0):
-                add_item(url, {"title": title}, thumb, thumb)
+                add_link(name, url, thumb, thumb)
             else:
-                add_item(url, {"title": title}, icon, fanart)
+                add_link(name, url, icon, fanart)
         except:
             pass
 except:

@@ -14,9 +14,9 @@
   <extension point="xbmc.addon.metadata">
     <summary>XBMC/Kodi add-on creator</summary>
     <description>
-Use this add-on creator together with m3u and/or xml playlists[B][COLOR red] (NO REGEX)[/B][COLOR white] containing [B][COLOR red]direct links[/B][COLOR white] to make your own favorite XBMC/Kodi addons.
+Use this add-on creator together with[COLOR red][B] m3u and/or xml playlists (NO REGEX)[/B][/COLOR] containing[COLOR red][B] direct links[/B][/COLOR] to make your own favorite XBMC/Kodi addons.
 
-[COLOR magenta]Dùng addon creator này chung với danh sách m3u và/hoặc xml (NO REGEX) chứa các links trực tiếp để tạo ra các XBMC/Kodi addons theo sở thích.[/COLOR]
+Dùng addon creator này chung với[COLOR red][B] danh sách m3u và/hoặc xml (NO REGEX)[/B][/COLOR] chứa[COLOR red][B] các links trực tiếp[/B][/COLOR] để tạo ra các XBMC/Kodi addons theo sở thích.
 	</description>
     <platform>all</platform>
   </extension>

@@ -1,0 +1,10 @@
+v 0.0.1
+Initial release
+Making addon to play local m3u/xml playlists only.
+
+v 0.0.2
+Minor update
+
+v 0.0.3
+Updated codes for making addon which 
+can play local/online m3u/xml playlists.

@@ -35,7 +35,7 @@ online_xml = mysettings.getSetting('online_xml')
 local_xml = mysettings.getSetting('local_xml')
 
 xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
-m3u_regex = '#.+,(.+?)\n(.+?)\n'
+m3u_regex = '#.+,(.+)\n(.+)\n'
 
 u_tube = 'http://www.youtube.com'
 

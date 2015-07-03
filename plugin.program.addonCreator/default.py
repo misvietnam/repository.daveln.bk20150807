@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>  
 '''                                                                           
 
-import urllib, urllib2, re, os, sys, shutil
+import urllib, urllib2, re, os, sys, shutil, zipfile
 import xbmc, xbmcplugin, xbmcgui, xbmcaddon
 
 mysettings = xbmcaddon.Addon(id = 'plugin.program.addonCreator')
@@ -29,21 +29,29 @@ logos = xbmc.translatePath(os.path.join(home, 'resources/logos/'))
 
 addon_old_place = xbmc.translatePath(os.path.join(home, 'resources/files/addon.xml'))
 default_old_place = xbmc.translatePath(os.path.join(home, 'resources/files/default.py'))
-settings_file = xbmc.translatePath(os.path.join(home, 'resources/files/settings.xml'))
+settings_old_place = xbmc.translatePath(os.path.join(home, 'resources/files/settings.xml'))
+sample_m3u = xbmc.translatePath(os.path.join(home, 'resources/files/sample.m3u'))
+sample_xml = xbmc.translatePath(os.path.join(home, 'resources/files/sample.xml'))
 license_txt = xbmc.translatePath(os.path.join(home, 'LICENSE.txt'))
 
 name_of_plugin_folder = mysettings.getSetting('name_of_plugin_folder')
 my_first_addon = xbmc.translatePath('special://home/addons/plugin.video.' + name_of_plugin_folder)
 addon_new_place = xbmc.translatePath(os.path.join(my_first_addon, 'addon.xml'))
 default_new_place = xbmc.translatePath(os.path.join(my_first_addon, 'default.py'))
+settings_new_place = xbmc.translatePath(os.path.join(my_first_addon, 'resources/settings.xml'))
 name_of_addon = mysettings.getSetting('name_of_addon')
 addon_version_number = mysettings.getSetting('addon_version_number')
 provider_name = mysettings.getSetting('provider-name')
 addon_icon = mysettings.getSetting('addon_icon')
 addon_fanart = mysettings.getSetting('addon_fanart')
 sum_mary = mysettings.getSetting('sum_mary')
-desc = mysettings.getSetting('desc')
+description = mysettings.getSetting('desc')
+destination = mysettings.getSetting('dst')
+online_m3u = mysettings.getSetting('online_m3u')
+online_xml = mysettings.getSetting('online_xml')
 
+target_zipfile = xbmc.translatePath('special://home/addons/packages/plugin.video.' + name_of_plugin_folder + '-' + addon_version_number + '.zip')
+	
 def read_file(file):
 	try:
 		f = open(file, 'r')
@@ -61,8 +69,8 @@ def home():
 
 def check_settings(): 
 	if (	
-			len(name_of_plugin_folder) > 0 and len(name_of_addon) > 0 and len(addon_version_number) > 0 and 
-			len(provider_name) > 0 and len(addon_icon) > 0 and len(addon_fanart) > 0 and len(sum_mary) > 0 and len(desc) > 0
+			len(name_of_plugin_folder) > 0 and len(name_of_addon) > 0 and len(addon_version_number) > 0 and len(provider_name) > 0 and
+			len(addon_icon) > 0 and len(addon_fanart) > 0 and len(sum_mary) > 0 and len(description) > 0
 		):
 			create_addon()
 	else:	
@@ -95,31 +103,79 @@ def create_addon():
 										'<addon id="plugin.video.' + name_of_plugin_folder + '" name="' + name_of_addon +
 										'" version="' + addon_version_number + '" provider-name="' + provider_name + '">'
 										).replace('<summary></summary>', '<summary>' + sum_mary + '</summary>'
-										).replace('<description></description>', '<description>' + desc + '</description>'
+										).replace('<description></description>', '<description>' + description + '</description>'
 										).replace('\[', '[').replace('\]', ']'
 									 )	
 		f = open(addon_new_place, 'w')
 		f.write(addon_xml)
 		f.close()
 		
+		# Copy settings.xml and replace the target strings.	
+		shutil.copy(settings_old_place, my_first_addon + '/resources')
+		try:
+			settings_xml = None	
+			settings_xml = read_file(settings_new_place)
+			if len(online_m3u) > 0 and len(online_xml) < 1:
+				settings_xml = settings_xml.replace('id="online_m3u" default="" />', 'id="online_m3u" default="' + online_m3u + '" />')
+			if len(online_xml) > 0 and len(online_m3u) < 1:	
+				settings_xml = settings_xml.replace('id="online_xml" default="" />', 'id="online_xml" default="' + online_xml + '" />')
+			if len(online_m3u) > 0 and len(online_xml) > 0:	
+				settings_xml = settings_xml.replace(	
+														'id="online_m3u" default="" />', 'id="online_m3u" default="' + online_m3u + '" />'
+														).replace('id="online_xml" default="" />', 'id="online_xml" default="' + online_xml + '" />'
+													)				
+			f = open(settings_new_place, 'w')
+			f.write(settings_xml)
+			f.close()		
+		except:
+			pass
+			
 		# Create changelog.txt
 		f = open(my_first_addon + '/changelog.txt', 'w')
 		f.write('Version ' + addon_version_number)
 		f.close()
 		
-		# Copy setings.xml, license.txt, icon.png, and fanart.jpg
-		shutil.copy(settings_file, my_first_addon + '/resources')		
-		shutil.copy(license_txt, my_first_addon)			
+		# Copy license.txt, sample links, icon.png, and fanart.jpg		
+		shutil.copy(license_txt, my_first_addon)
+		shutil.copy(sample_m3u, my_first_addon)
+		shutil.copy(sample_xml, my_first_addon)		
 		shutil.copy(addon_icon, my_first_addon)
-		shutil.copy(addon_fanart, my_first_addon)			
-	
+		shutil.copy(addon_fanart, my_first_addon)	
+		
+		try:
+			create_zipfile() # make zipfile
+		except:
+			pass
+			
 		xbmcgui.Dialog().ok(
 								'Add-on Creator', 
-								'[COLOR red][B]Please manually reboot XBMC - KODI[/B][/COLOR]', 
-								'Look for your new add-on in [B]VIDEOS >> Add-ons[/B]', 
-								'Done. Enjoy!'
-							)			
-		
+								'[COLOR red][B]Please manually reboot XBMC - KODI.[/B][/COLOR]', 
+								'Look for new add-on in [B]VIDEOS > Add-ons.[/B]', 
+								'[COLOR red][B]Next, check for zipfile if selected.[/B][/COLOR]'
+							)
+			
+		# Delete same old zipfile in destination if exist AND then copy zipfile to chosen destination if selected
+		if len(destination) > 0:
+			try:
+				os.remove(xbmc.translatePath(os.path.join(destination, 'plugin.video.' + name_of_plugin_folder + '.zip')))
+			except:
+				pass
+			try:
+				shutil.copy(target_zipfile, destination) 
+				xbmcgui.Dialog().ok(
+										'Add-on Creator', 
+										'[COLOR red][B]Go to the chosen destination for addon zipfile.[/B][/COLOR]',
+										'',
+										'[B]Well Done. Enjoy![/B]', 
+									)					
+			except:
+				xbmcgui.Dialog().ok(
+										'Add-on Creator', 
+										'[COLOR red][B]Oops! Unable to save addon zipfile.[/B][/COLOR]', 
+										'', 
+										'[B]Choose different destination. Get zipfile again.[/B]'
+									)			
+								
 	except:	
 		xbmcgui.Dialog().ok(
 								'Add-on Creator', 
@@ -127,7 +183,18 @@ def create_addon():
 								'[B]Double check [COLOR red]ALL[/COLOR] settings.[/B]', 
 								'Then try again.'
 							)
-		
+
+def create_zipfile():
+	os.chdir(xbmc.translatePath('special://home/addons'))
+	src_dir = 'plugin.video.' + name_of_plugin_folder	
+	#target_zipfile
+	zf = zipfile.ZipFile(target_zipfile, "w")
+	for dirname, subdirs, files in os.walk(src_dir):
+		zf.write(dirname)
+		for filename in files:
+			zf.write(os.path.join(dirname, filename))
+	zf.close()	
+
 def get_params():
 	param = []
 	paramstring = sys.argv[2]

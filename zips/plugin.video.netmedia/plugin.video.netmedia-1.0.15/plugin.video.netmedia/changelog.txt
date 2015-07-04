@@ -1,0 +1,15 @@
+Download link for YouTube add-on:
+https://github.com/bromix/plugin.video.youtube
+
+Download link for Dailymotion add-on:
+https://github.com/AddonScriptorDE/plugin.video.dailymotion_com
+
+v 1.0.15
+Added thanh51's collection
+
+v 1.0.14
+Added Home()
+Added Playlists for YouTube 
+
+v 1.0.0
+Initial release

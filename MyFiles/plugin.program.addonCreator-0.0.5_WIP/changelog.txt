@@ -1,0 +1,21 @@
+v 0.0.5
+Updated to show provided thumbnail links in tvg-logo="" for m3u in the below form:
+
+#EXTINF:-1 tvg-logo="http://www.sample_thumbnail_1.png" group-title="News channel", NEWS CHANNEL 1
+http://www.sample_link_to_news_channel_1.m3u8
+#EXTINF:-1 tvg-logo="http://www.sample_thumbnail_2.jpg" group-title="News channel", NEWS CHANNEL 2
+http://www.sample_link_to_news_channel_2.m3u8
+
+v 0.0.4
+Added option to enter URLs for new addon.
+Added option to save zipfile to desired local location.
+
+v 0.0.3
+Play local/online m3u/xml playlists.
+
+v 0.0.2
+Minor update
+
+v 0.0.1
+Initial release
+Play local m3u/xml playlists only.

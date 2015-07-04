@@ -23,7 +23,7 @@ import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 plugin_handle = int(sys.argv[1])
 xbmcplugin.setContent(plugin_handle, 'movies')
 
-mysettings = xbmcaddon.Addon(id = 'plugin.video.MyNewlyCreatedAddon')
+mysettings = xbmcaddon.Addon(id = 'plugin.video.MyComboAddon')
 profile = mysettings.getAddonInfo('profile')
 home = mysettings.getAddonInfo('path')
 fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
@@ -35,7 +35,8 @@ online_xml = mysettings.getSetting('online_xml')
 local_xml = mysettings.getSetting('local_xml')
 
 xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
-m3u_regex = '#.+,(.+)\n(.+)\n'
+m3u_thumb_regex = 'tvg-logo="(.*?)"'
+m3u_regex = '#(.+),(.+)\n(.+)\n'
 
 u_tube = 'http://www.youtube.com'
 
@@ -66,10 +67,16 @@ def make_request(url):
 	
 def add_m3u_link():
 	match = re.compile(m3u_regex).findall(content)
-	for name, url in match:
-		url = url.replace('"', ' ').replace('&amp;', '&').strip()
-		name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
-		add_link(name, url, icon, fanart)
+	for thumb, name, url in match:
+		if 'tvg-logo="' in thumb:
+			thumbnail = re.compile(m3u_thumb_regex).findall(str(thumb))[0].replace(' ', '%20')
+			url = url.replace('"', ' ').replace('&amp;', '&').strip()
+			name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
+			add_link(name, url, thumbnail, thumbnail)			
+		else:
+			url = url.replace('"', ' ').replace('&amp;', '&').strip()
+			name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
+			add_link(name, url, icon, fanart)
 					
 def add_xml_link():
 	match = re.compile(xml_regex).findall(content)
@@ -82,12 +89,12 @@ def add_xml_link():
 			add_link(name, url, icon, fanart)
 
 def add_link(name, url, img = '', fanart = ''):
-    liz = xbmcgui.ListItem(name, iconImage = img, thumbnailImage = img)
-    liz.setInfo('video', infoLabels = {'Title': name})
-    liz.setProperty('fanart_image', fanart)
-    liz.setProperty('IsPlayable', 'false')
-    xbmcplugin.addDirectoryItem(plugin_handle, url, listitem = liz)
-    return	
+	liz = xbmcgui.ListItem(name, iconImage = img, thumbnailImage = img)
+	liz.setInfo('video', infoLabels = {'Title': name})
+	liz.setProperty('fanart_image', fanart)
+	liz.setProperty('IsPlayable', 'true')	
+	xbmcplugin.addDirectoryItem(plugin_handle, url, listitem = liz)
+	return	
 
 if len(online_m3u) > 0:	
 	try:
@@ -123,6 +130,6 @@ if len(local_xml) > 0:
 		
 if (len(online_m3u) < 1 and len(local_m3u) < 1 and len(online_xml) < 1 and len(local_xml) < 1 ):		
 	mysettings.openSettings()
-		
+	
 xbmcplugin.endOfDirectory(plugin_handle)
 sys.exit(0)

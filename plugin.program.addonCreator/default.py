@@ -30,8 +30,8 @@ logos = xbmc.translatePath(os.path.join(home, 'resources/logos/'))
 addon_old_place = xbmc.translatePath(os.path.join(home, 'resources/files/addon.xml'))
 default_old_place = xbmc.translatePath(os.path.join(home, 'resources/files/default.py'))
 settings_old_place = xbmc.translatePath(os.path.join(home, 'resources/files/settings.xml'))
-sample_m3u = xbmc.translatePath(os.path.join(home, 'resources/files/sample.m3u'))
-sample_xml = xbmc.translatePath(os.path.join(home, 'resources/files/sample.xml'))
+sample_m3u = xbmc.translatePath(os.path.join(home, 'resources/files/sample m3u.m3u'))
+sample_xml = xbmc.translatePath(os.path.join(home, 'resources/files/sample xml.xml'))
 license_txt = xbmc.translatePath(os.path.join(home, 'LICENSE.txt'))
 
 name_of_plugin_folder = mysettings.getSetting('name_of_plugin_folder')
@@ -142,8 +142,9 @@ def create_addon():
 		shutil.copy(addon_icon, my_first_addon)
 		shutil.copy(addon_fanart, my_first_addon)	
 		
+		# make zipfile
 		try:
-			create_zipfile() # make zipfile
+			create_zipfile() 
 		except:
 			pass
 			
@@ -188,7 +189,7 @@ def create_zipfile():
 	os.chdir(xbmc.translatePath('special://home/addons'))
 	src_dir = 'plugin.video.' + name_of_plugin_folder	
 	#target_zipfile
-	zf = zipfile.ZipFile(target_zipfile, "w")
+	zf = zipfile.ZipFile(target_zipfile, 'w')
 	for dirname, subdirs, files in os.walk(src_dir):
 		zf.write(dirname)
 		for filename in files:

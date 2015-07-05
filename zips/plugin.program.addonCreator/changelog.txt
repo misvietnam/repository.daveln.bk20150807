@@ -1,3 +1,7 @@
+v 0.0.6
+Now can play links from YouTube's users and channels
+Can use http://www... for YouTube and DailyMotion
+
 v 0.0.5
 a. Now can pass links to other addons. 
 YouTube:

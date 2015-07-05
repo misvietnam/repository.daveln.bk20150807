@@ -88,13 +88,26 @@ def add_xml_link():
 		else:
 			add_link(name, url, icon, fanart)
 
-def add_link(name, url, img = '', fanart = ''):
-	liz = xbmcgui.ListItem(name, iconImage = img, thumbnailImage = img)
-	liz.setInfo('video', infoLabels = {'Title': name})
+def add_link(name, url, iconimage = '', fanart = ''):
+	ok =True
+	liz = xbmcgui.ListItem(name, iconImage = iconimage, thumbnailImage = iconimage)
+	liz.setInfo(type = 'video', infoLabels = {'Title': name})
 	liz.setProperty('fanart_image', fanart)
-	liz.setProperty('IsPlayable', 'true')	
-	xbmcplugin.addDirectoryItem(plugin_handle, url, listitem = liz)
-	return	
+	if ('youtube.com/user/' in url) or ('youtube.com/channel/' in url) or ('youtube/user/' in url) or ('youtube/channel/' in url):
+		u = 'plugin://plugin.video.youtube/%s/%s/' % (url.split( '/' )[-2], url.split( '/' )[-1])
+		ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
+		return ok	
+	else:
+		liz.setProperty('IsPlayable', 'true')
+		if 'youtube.com/watch?v=' in url:
+			u = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
+		elif 'dailymotion.com/video/' in url:
+			u = url.split('/')[-1].split('_')[0]
+			u = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % u
+		else:
+			u = url
+		ok = xbmcplugin.addDirectoryItem(plugin_handle, url = u, listitem = liz)
+		return ok		
 
 if len(online_m3u) > 0:	
 	try:

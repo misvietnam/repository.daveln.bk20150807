@@ -1,3 +1,8 @@
+v 0.0.8
+Fixed new addon's Search (typing error)
+Shortened new addon's codes
+Updated instruction.
+
 v 0.0.7
 Added Search 
 Divided playlists into their own groups.

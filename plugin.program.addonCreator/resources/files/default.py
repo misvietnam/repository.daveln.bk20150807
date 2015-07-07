@@ -104,13 +104,13 @@ def search():
 			match = re.compile(xml_regex).findall(content)
 			for name, url, thumb in match:
 				if re.search(searchText, removeAccents(name.replace('Đ', 'D')), re.IGNORECASE):
-					m3u_playlist(name, url, thumb)	
+					xml_playlist(name, url, thumb)	
 		if len(local_xml) > 0:		
 			content = read_file(local_xml)
 			match = re.compile(xml_regex).findall(content)
 			for name, url, thumb in match:
 				if re.search(searchText, removeAccents(name.replace('Đ', 'D')), re.IGNORECASE):
-					m3u_playlist(name, url, thumb)	
+					xml_playlist(name, url, thumb)	
 	except:
 		pass
 		
@@ -139,65 +139,47 @@ def xml_local():
 		xml_playlist(name, url, thumb)
 				
 def m3u_playlist(name, url, thumb):	
+	name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
+	url = url.replace('"', ' ').replace('&amp;', '&').strip()
 	if ('youtube.com/user/' in url) or ('youtube.com/channel/' in url) or ('youtube/user/' in url) or ('youtube/channel/' in url):
-		name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
-		url = url.replace('"', ' ').replace('&amp;', '&').strip()
 		if 'tvg-logo="' in thumb:
 			thumb = re.compile(m3u_thumb_regex).findall(str(thumb))[0].replace(' ', '%20')			
 			add_dir(name, url, '', thumb, thumb)			
 		else:	
 			add_dir(name, url, '', icon, fanart)
 	else:
-		name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
-		url = url.replace('"', ' ').replace('&amp;', '&').strip()
-		if 'tvg-logo="' in thumb:
-			if 'youtube.com/watch?v=' in url:
-				url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
-			elif 'dailymotion.com/video/' in url:
-				url = url.split('/')[-1].split('_')[0]
-				url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
-			else:			
-				url = url
+		if 'youtube.com/watch?v=' in url:
+			url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
+		elif 'dailymotion.com/video/' in url:
+			url = url.split('/')[-1].split('_')[0]
+			url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
+		else:			
+			url = url
+		if 'tvg-logo="' in thumb:				
 			thumb = re.compile(m3u_thumb_regex).findall(str(thumb))[0].replace(' ', '%20')
 			add_link(name, url, 1, thumb, thumb)			
-		else:
-			if 'youtube.com/watch?v=' in url:
-				url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
-			elif 'dailymotion.com/video/' in url:
-				url = url.split('/')[-1].split('_')[0]
-				url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
-			else:			
-				url = url				
+		else:				
 			add_link(name, url, 1, icon, fanart)	
 					
 def xml_playlist(name, url, thumb):
+	name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
+	url = url.replace('"', ' ').replace('&amp;', '&').strip()
 	if ('youtube.com/user/' in url) or ('youtube.com/channel/' in url) or ('youtube/user/' in url) or ('youtube/channel/' in url):
-		name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
-		url = url.replace('"', ' ').replace('&amp;', '&').strip()
 		if len(thumb) > 0:	
 			add_dir(name, url, '', thumb, thumb)			
 		else:	
 			add_dir(name, url, '', icon, fanart)
 	else:
-		name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
-		url = url.replace('"', ' ').replace('&amp;', '&').strip()
-		if len(thumb) > 0:
-			if 'youtube.com/watch?v=' in url:
-				url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
-			elif 'dailymotion.com/video/' in url:
-				url = url.split('/')[-1].split('_')[0]
-				url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
-			else:			
-				url = url
+		if 'youtube.com/watch?v=' in url:
+			url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
+		elif 'dailymotion.com/video/' in url:
+			url = url.split('/')[-1].split('_')[0]
+			url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
+		else:			
+			url = url
+		if len(thumb) > 0:		
 			add_link(name, url, 1, thumb, thumb)			
-		else:
-			if 'youtube.com/watch?v=' in url:
-				url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (url.split('=')[-1])
-			elif 'dailymotion.com/video/' in url:
-				url = url.split('/')[-1].split('_')[0]
-				url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
-			else:			
-				url = url				
+		else:			
 			add_link(name, url, 1, icon, fanart)	
 	
 def play_video(url):

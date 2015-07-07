@@ -1,8 +1,564 @@
 #EXTM3U
 
-#EXTINF:-1,VietFace TV California 57.2
-http://206.190.136.254/liveStream/vface_1/playlist.m3u8
-#EXTINF:-1,VZN TV Houston TX
-http://206.190.136.254/liveStream/vantv_1/playlist.m3u8
+#EXTINF:-1,[COLOR magenta]Religion - Viet Catholic News[/COLOR]
+https://www.youtube.com/user/VietCatholicNews
+#EXTINF:-1,[COLOR magenta]Religion - TV Ánh Sáng Tin Mừng[/COLOR]
+https://www.youtube.com/user/tvastm
+#EXTINF:-1,[COLOR magenta]Religion - Đức Mẹ TV[/COLOR]
+https://www.youtube.com/user/chuacuuthe
+#EXTINF:-1,[COLOR magenta]Religion - Đức Mẹ Măng Đen[/COLOR]
+https://www.youtube.com/user/DucMeMangDen
+#EXTINF:-1,[COLOR magenta]Religion - KINH MÂN CÔI online[/COLOR]
+https://www.youtube.com/user/kinhmancoionline
+#EXTINF:-1,[COLOR magenta]Religion - Phim Công Giáo[/COLOR]
+https://www.youtube.com/user/PhimCongGiaoVN
+#EXTINF:-1,[COLOR magenta]Religion - Phim Công Giáo 2[/COLOR]
+https://www.youtube.com/user/PhimCongGiao2
+#EXTINF:-1,[COLOR magenta]Religion - Thánh Ca[/COLOR]
+https://www.youtube.com/user/ThanhCaHD
+#EXTINF:-1,[COLOR magenta]Religion - Thánh Ca Không Lời[/COLOR]
+https://www.youtube.com/user/Thanhcakhongloi
+#EXTINF:-1,[COLOR magenta]Religion - Tin Lành TiVi[/COLOR]
+https://www.youtube.com/user/tinlanhtv
+#EXTINF:-1,[COLOR magenta]Religion - Tin Lành Orange[/COLOR]
+https://www.youtube.com/channel/UCd8tHv1A1VsTL7WS9yQ3eGg
+#EXTINF:-1,[COLOR magenta]Religion - Giảng Luận Cơ Đốc[/COLOR]
+https://www.youtube.com/user/upnhacnee
+#EXTINF:-1,[COLOR magenta]Religion - Thư viện Cơ Đốc[/COLOR]
+https://www.youtube.com/user/cdnvn
+#EXTINF:-1,[COLOR magenta]Religion - Thánh Nhạc[/COLOR]
+https://www.youtube.com/user/CDNVN00
+#EXTINF:-1,[COLOR magenta]Religion - Thư Viện Phật Giáo[/COLOR]
+https://www.youtube.com/user/thuvienphatgiao
+#EXTINF:-1,[COLOR magenta]Religion - Niệm Phật Thành Phật[/COLOR]
+https://www.youtube.com/user/NiemPhatThanhPhat
+#EXTINF:-1,[COLOR magenta]Religion - Phật Âm Video[/COLOR]
+https://www.youtube.com/user/phatamvideo
+#EXTINF:-1,[COLOR magenta]Religion - Quy Y Tam Bảo[/COLOR]
+https://www.youtube.com/user/TANGTRUNGTHANG
+#EXTINF:-1,[COLOR magenta]Religion - Phật Pháp Tăng[/COLOR]
+https://www.youtube.com/channel/UCNE3UFyedJ_3_ZEiuZkioYw
+#EXTINF:-1,[COLOR magenta]Religion - NAM MÔ A DI ĐÀ PHẬT[/COLOR]
+https://www.youtube.com/user/nammoadidaphatnew
+#EXTINF:-1,[COLOR magenta]Religion - Phật Pháp Nhiệm Màu[/COLOR]
+https://www.youtube.com/channel/UCP9jSXwNXTEoql3cZSoI4Yw
+#EXTINF:-1,[COLOR magenta]Religion - Linh Minh Trạm Tịch[/COLOR]
+https://www.youtube.com/user/nguynlinhtam
+#EXTINF:-1,[COLOR magenta]Religion - Phật Giáo Hòa Hảo[/COLOR]
+https://www.youtube.com/user/nhatsonvan1981
+#EXTINF:-1,[COLOR magenta]Religion - PHẬT GIÁO HÒA HẢO (PGHH)[/COLOR]
+https://www.youtube.com/user/hoahao185
+#EXTINF:-1,[COLOR magenta]Religion - PHẬT GIÁO HÒA HẢO - PGHH[/COLOR]
+https://www.youtube.com/user/nguoihoahao
+#EXTINF:-1,[COLOR magenta]Religion - PHẬT GIÁO HÒA HẢO (PGHH)[/COLOR]
+https://www.youtube.com/user/giaolypghh
+#EXTINF:-1,[COLOR magenta]Religion - TỦ SÁCH NÓI CAO ĐÀI[/COLOR]
+https://www.youtube.com/channel/UCtHYWzR7fBcqFMhgHw1nsNg
+#EXTINF:-1,[COLOR magenta]Religion - Cao Đài Ban Chỉnh Đạo[/COLOR]
+https://www.youtube.com/user/caodaibanchinhdaoorg
+#EXTINF:-1,[COLOR magenta]thanh51 - VTC2 TV[/COLOR]
+https://www.youtube.com/user/vtc2tv
+#EXTINF:-1,[COLOR magenta]thanh51 - TheChuChu TV[/COLOR]
+https://www.youtube.com/user/TheChuChuTV
+#EXTINF:-1,[COLOR magenta]thanh51 - NHẠC VÀNG PLUS[/COLOR]
+https://www.youtube.com/user/NhacVangPlus
+#EXTINF:-1,[COLOR magenta]thanh51 - NHẠC VÀNG TUYỂN CHỌN 2[/COLOR]
+https://www.youtube.com/user/nhacvangtuyenchon2
+#EXTINF:-1,[COLOR magenta]thanh51 - NVB TUBE[/COLOR]
+https://www.youtube.com/user/nvbtube4474
+#EXTINF:-1,[COLOR magenta]thanh51 - Documentary & Life Discovery HD Channel[/COLOR]
+https://www.youtube.com/user/LifeDiscoveryDocu
+#EXTINF:-1,[COLOR magenta]thanh51 - HD Documentary Channel[/COLOR]
+https://www.youtube.com/user/HDdocumentaryChannel
+#EXTINF:-1,[COLOR magenta]thanh51 - Planet Doc Full Documentaries[/COLOR]
+https://www.youtube.com/user/PlanetDocChannel
+#EXTINF:-1,[COLOR magenta]thanh51 - National Geo & Discovery HD Channel[/COLOR]
+https://www.youtube.com/user/NationalGeoTVchannel
+#EXTINF:-1,[COLOR magenta]thanh51 - HD Universe Channel[/COLOR]
+https://www.youtube.com/user/HDUniverseChannel
+#EXTINF:-1,[COLOR magenta]thanh51 - TheGoldProspector D'arcy Cooper[/COLOR]
+https://www.youtube.com/user/hixonAu
+#EXTINF:-1,[COLOR magenta]thanh51 - Imperia Toys[/COLOR]
+https://www.youtube.com/user/ImperiaToys
+#EXTINF:-1,[COLOR magenta]OverseaNews - SBTN USA[/COLOR]
+https://www.youtube.com/user/sbtnofficial
+#EXTINF:-1,[COLOR magenta]OverseaNews - SBTN Houston[/COLOR]
+https://www.youtube.com/user/sbtnhosuton
+#EXTINF:-1,[COLOR magenta]OverseaNews - SBTN Boston[/COLOR]
+https://www.youtube.com/user/newssbtnboston
+#EXTINF:-1,[COLOR magenta]OverseaNews - SBTN Canada[/COLOR]
+https://www.youtube.com/user/thoibaocanada
+#EXTINF:-1,[COLOR magenta]OverseaNews - SBTN Úc Châu[/COLOR]
+https://www.youtube.com/user/SBTNAUS
+#EXTINF:-1,[COLOR magenta]OverseaNews - SBTN Paris[/COLOR]
+https://www.youtube.com/user/paris2013sbtn
+#EXTINF:-1,[COLOR magenta]OverseaNews - Người Việt Online[/COLOR]
+https://www.youtube.com/user/NguoiVietOnline
+#EXTINF:-1,[COLOR magenta]OverseaNews - Phố Bolsa TV[/COLOR]
+https://www.youtube.com/user/PhoBolsaTV
+#EXTINF:-1,[COLOR magenta]OverseaNews - officialVietFaceTV[/COLOR]
+https://www.youtube.com/user/officialVietFaceTV
+#EXTINF:-1,[COLOR magenta]OverseaNews - VA TV Online[/COLOR]
+https://www.youtube.com/user/VATVONLINE
+#EXTINF:-1,[COLOR magenta]OverseaNews - LSTV Network[/COLOR]
+https://www.youtube.com/user/LSTVNETWORK
+#EXTINF:-1,[COLOR magenta]OverseaNews - Viet Bay[/COLOR]
+https://www.youtube.com/user/vietbaytv
+#EXTINF:-1,[COLOR magenta]OverseaNews - VIETV[/COLOR]
+https://www.youtube.com/user/VIETVnetwork
+#EXTINF:-1,[COLOR magenta]OverseaNews - Việt News TV[/COLOR]
+https://www.youtube.com/user/vietnewstelevision
+#EXTINF:-1,[COLOR magenta]OverseaNews - Việt Weekly TV[/COLOR]
+https://www.youtube.com/user/VietWeeklyEtc
+#EXTINF:-1,[COLOR magenta]OverseaNews - Việt Weekly[/COLOR]
+https://www.youtube.com/user/vietweeklytube
+#EXTINF:-1,[COLOR magenta]OverseaNews - Van TV Houston[/COLOR]
+https://www.youtube.com/channel/UCj-SnkM-BNrsgsEM52TvmVw
+#EXTINF:-1,[COLOR magenta]OverseaNews - TDBroadcasting[/COLOR]
+https://www.youtube.com/user/TDBroadcasting
+#EXTINF:-1,[COLOR magenta]OverseaNews - VO MEDIA[/COLOR]
+https://www.youtube.com/user/mrVOMedia
+#EXTINF:-1,[COLOR magenta]OverseaNews - Thời Báo TV[/COLOR]
+https://www.youtube.com/user/thoibaocanada
+#EXTINF:-1,[COLOR magenta]OverseaNews - NWVietnameseNews[/COLOR]
+https://www.youtube.com/user/NWVietnameseNews
+#EXTINF:-1,[COLOR magenta]OverseaNews - Truyền Hình Cali Today[/COLOR]
+https://www.youtube.com/user/Truyenhinhvietnam1
+#EXTINF:-1,[COLOR magenta]OverseaNews - Quê Hương Media[/COLOR]
+https://www.youtube.com/user/quehuongradio
+#EXTINF:-1,[COLOR magenta]OverseaNews - Truyền Hình Online VTO[/COLOR]
+https://www.youtube.com/user/1734ize
+#EXTINF:-1,[COLOR magenta]OverseaNews - VOA[/COLOR]
+https://www.youtube.com/user/VOATiengVietVideo
+#EXTINF:-1,[COLOR magenta]OverseaNews - BBC[/COLOR]
+https://www.youtube.com/user/BBCVietnamese
+#EXTINF:-1,[COLOR magenta]OverseaNews - RFA[/COLOR]
+https://www.youtube.com/user/RFAVietnamese
+#EXTINF:-1,[COLOR magenta]NewsInVN - Truyền Hình Tuổi Trẻ Link 1[/COLOR]
+https://www.youtube.com/user/truyenhinhtuoitre
+#EXTINF:-1,[COLOR magenta]NewsInVN - VTV - Đài Truyền Hình Việt Nam[/COLOR]
+https://www.youtube.com/user/VTVgo
+#EXTINF:-1,[COLOR magenta]NewsInVN - Kênh Truyền Hình VTC 14[/COLOR]
+https://www.youtube.com/user/KenhTruyenHinhVTC14
+#EXTINF:-1,[COLOR magenta]NewsInVN - VNews - Truyền Hình Thông Tấn[/COLOR]
+https://www.youtube.com/channel/UCfA4BYQdTPU9ItmQOauuFEQ
+#EXTINF:-1,[COLOR magenta]NewsInVN - Truyền Hình Thông Tấn[/COLOR]
+https://www.youtube.com/user/truyenhinhthongtan
+#EXTINF:-1,[COLOR magenta]NewsInVN - Truyền Hình Vĩnh Long[/COLOR]
+https://www.youtube.com/user/VinhLongTV
+#EXTINF:-1,[COLOR magenta]NewsInVN - LET'S VIET TV[/COLOR]
+https://www.youtube.com/user/letsvietvn
+#EXTINF:-1,[COLOR magenta]NewsInVN - VTV4 on the Go[/COLOR]
+https://www.youtube.com/user/VTV4go
+#EXTINF:-1,[COLOR magenta]NewsInVN - VTVLife[/COLOR]
+https://www.youtube.com/user/VTVLife
+#EXTINF:-1,[COLOR magenta]NewsInVN - POPS TV VIỆT NAM[/COLOR]
+https://www.youtube.com/user/POPSTVVIETNAM
+#EXTINF:-1,[COLOR magenta]NewsInVN - VTCTube[/COLOR]
+https://www.youtube.com/user/vtctv
+#EXTINF:-1,[COLOR magenta]NewsInVN - Zing TV[/COLOR]
+https://www.youtube.com/user/ZingTVVN
+#EXTINF:-1,[COLOR magenta]NewsInVN - FAP TV[/COLOR]
+https://www.youtube.com/user/FAPtivi
+#EXTINF:-1,[COLOR magenta]NewsInVN - Giải Trí TV[/COLOR]
+https://www.youtube.com/user/ChannelGiaiTriTV
+#EXTINF:-1,[COLOR magenta]NewsInVN - htv2channel[/COLOR]
+https://www.youtube.com/user/htv2channel
+#EXTINF:-1,[COLOR magenta]NewsInVN - Yeah1 Family TV - VTC4[/COLOR]
+https://www.youtube.com/channel/UCo_QG56Ijk2iklFgpUOVKIA
+#EXTINF:-1,[COLOR magenta]NewsInVN - YAN News[/COLOR]
+https://www.youtube.com/user/YanNewsTube
+#EXTINF:-1,[COLOR magenta]NewsInVN - YAN TV[/COLOR]
+https://www.youtube.com/user/YanTvTurnsUon
+#EXTINF:-1,[COLOR magenta]Children - Thế Hệ Trẻ TV[/COLOR]
+https://www.youtube.com/user/TheHeTreTV
+#EXTINF:-1,[COLOR magenta]Children - Gương Mặt Thân Quen Nhí[/COLOR]
+https://www.youtube.com/user/GMTQNHI
+#EXTINF:-1,[COLOR magenta]Children - POPS Kids[/COLOR]
+https://www.youtube.com/user/popskids
+#EXTINF:-1,[COLOR magenta]Children - Thiếu Nhi Nhạc[/COLOR]
+https://www.youtube.com/user/thieunhinhac
+#EXTINF:-1,[COLOR magenta]Children - Phim Hoạt Hình Việt Nam[/COLOR]
+https://www.youtube.com/user/CartoonVietNam
+#EXTINF:-1,[COLOR magenta]Children - Children's Music[/COLOR]
+https://www.youtube.com/user/Childrenmusic1
+#EXTINF:-1,[COLOR magenta]Children - Cartoon Network[/COLOR]
+https://www.youtube.com/user/cartoonnetwork
+#EXTINF:-1,[COLOR magenta]Children - Little Baby Bum[/COLOR]
+https://www.youtube.com/user/LittleBabyBum
+#EXTINF:-1,[COLOR magenta]Children - Barbie Film Collection[/COLOR]
+https://www.youtube.com/user/BarbieFilmCollection
+#EXTINF:-1,[COLOR magenta]Children - Disney Cars Toy Club DCTC[/COLOR]
+https://www.youtube.com/user/MaterCarClub
+#EXTINF:-1,[COLOR magenta]Children - ABC Kid TV[/COLOR]
+https://www.youtube.com/user/checkgate
+#EXTINF:-1,[COLOR magenta]Music - Thuý Nga Paris By Night[/COLOR]
+https://www.youtube.com/user/TNPBN
+#EXTINF:-1,[COLOR magenta]Music - Asia[/COLOR]
+https://www.youtube.com/user/TrungTamAsiaChannel
+#EXTINF:-1,[COLOR magenta]Music - Vân Sơn[/COLOR]
+https://www.youtube.com/user/VanSonOnline
+#EXTINF:-1,[COLOR magenta]Music - Bước Chân Hai Thế Hệ[/COLOR]
+https://www.youtube.com/user/buocchanhaithehe
+#EXTINF:-1,[COLOR magenta]Music - POPS MUSIC[/COLOR]
+https://www.youtube.com/user/POPSVIETNAM
+#EXTINF:-1,[COLOR magenta]Music - Blue Ocean Music USA[/COLOR]
+https://www.youtube.com/user/blueoceanmusicusa
+#EXTINF:-1,[COLOR magenta]Music - Nhạc Việt Official[/COLOR]
+https://www.youtube.com/user/NhacvietOfficial
+#EXTINF:-1,[COLOR magenta]Music - Nhạc Vàng Hải Ngoại[/COLOR]
+https://www.youtube.com/user/NhacvietVEVO
+#EXTINF:-1,[COLOR magenta]Music - Zing MP3[/COLOR]
+https://www.youtube.com/user/ZingMp3Official
+#EXTINF:-1,[COLOR magenta]Music - Nhạc Số[/COLOR]
+https://www.youtube.com/user/nhacsoofficial
+#EXTINF:-1,[COLOR magenta]Music - Nhạc Của Tui[/COLOR]
+https://www.youtube.com/user/nhaccuatuiofficial
+#EXTINF:-1,[COLOR magenta]Music - Đồng Giao[/COLOR]
+https://www.youtube.com/user/donggiaoofficial
+#EXTINF:-1,[COLOR magenta]Music - Gala Nhạc Việt[/COLOR]
+https://www.youtube.com/user/galanhacviet
+#EXTINF:-1,[COLOR magenta]Music - Nhạc Vàng NTPlus[/COLOR]
+https://www.youtube.com/user/NhacvangNTPlus
+#EXTINF:-1,[COLOR magenta]Music - Sắc Việt[/COLOR]
+https://www.youtube.com/user/sacviet
+#EXTINF:-1,[COLOR magenta]Music - Yeah1 Music[/COLOR]
+https://www.youtube.com/channel/UCI2OiZs5aVcyBUBVsgovzng
+#EXTINF:-1,[COLOR magenta]Music - Như Quỳnh[/COLOR]
+https://www.youtube.com/user/nhuquynhtube
+#EXTINF:-1,[COLOR magenta]Music - Lam Trường[/COLOR]
+https://www.youtube.com/user/LamTruongOfficial
+#EXTINF:-1,[COLOR magenta]Music - Mỹ Tâm[/COLOR]
+https://www.youtube.com/user/mytamofficial
+#EXTINF:-1,[COLOR magenta]Music - Đàm Vĩnh Hưng[/COLOR]
+https://www.youtube.com/user/DamVinhHungPOPS
+#EXTINF:-1,[COLOR magenta]Music - Đan Trường[/COLOR]
+https://www.youtube.com/user/DanTruongPOPS
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]ViCi karaoke online[/COLOR]
+https://www.youtube.com/user/vcbuikara1993
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]KARAOKE YOU SING FREE[/COLOR]
+https://www.youtube.com/user/nguyenhoangthanh1
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 1[/COLOR]
+https://www.youtube.com/user/TNOTV1
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 2[/COLOR]
+https://www.youtube.com/user/letaiducks
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 3[/COLOR]
+https://www.youtube.com/channel/UCqLIjOVf9_YMNeydzpEXf1w
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 4[/COLOR]
+https://www.youtube.com/channel/UCvfYGLpsIShZvMFAIubbo4Q
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 5[/COLOR]
+https://www.youtube.com/channel/UCwnnS6DdCQ8VOr4SH4CbV1Q
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 6[/COLOR]
+https://www.youtube.com/user/NguyenTanLuc2
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 7[/COLOR]
+https://www.youtube.com/channel/UCN0AKDjI-TIbAmUGdS9Rc0A
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 8[/COLOR]
+https://www.youtube.com/user/nhacsongnguyenthanh
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR yellow]Vietnamese[/COLOR][COLOR magenta] - [/COLOR]Karaoke 9[/COLOR]
+https://www.youtube.com/user/karaokephamvanvang
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR magenta]English[/COLOR][COLOR magenta] - [/COLOR]Karaoke On VEVO[/COLOR]
+https://www.youtube.com/user/KaraokeOnVEVO
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR magenta]English[/COLOR][COLOR magenta] - [/COLOR]The KARAOKE Channel[/COLOR]
+https://www.youtube.com/user/TheKARAOKEChannel
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR magenta]English[/COLOR][COLOR magenta] - [/COLOR]Sing Sing Karaoke [/COLOR]
+https://www.youtube.com/user/singkingkaraoke
+#EXTINF:-1,[COLOR magenta]Karaoke - [COLOR magenta]English[/COLOR][COLOR magenta] - [/COLOR]Sing Songs Music[/COLOR]
+https://www.youtube.com/user/singsongsmusic
+#EXTINF:-1,[COLOR magenta]CailuongTV - [COLOR yellow]Cải Lương [COLOR magenta]TV[/COLOR][/COLOR]
+http://206.190.140.142:1935/liveStream/cailuong_1/playlist.m3u8
+#EXTINF:-1,[COLOR magenta]Cailuong - Lệ Thuỷ[/COLOR]
+https://www.youtube.com/user/micovn
+#EXTINF:-1,[COLOR magenta]Cailuong - Bạch Tuyết[/COLOR]
+https://www.youtube.com/user/fukudahoushin1
+#EXTINF:-1,[COLOR magenta]Cailuong - Ngọc Huyền[/COLOR]
+https://www.youtube.com/user/NgocHuyenZone
+#EXTINF:-1,[COLOR magenta]Cailuong - cailuongvietnam.vn[/COLOR]
+https://www.youtube.com/channel/UCM85iZlQzyEV3Ag9Bh2v54A
+#EXTINF:-1,[COLOR magenta]Cailuong - cailuongvietnam.com[/COLOR]
+https://www.youtube.com/user/tancogiaoduyencp
+#EXTINF:-1,[COLOR magenta]Cailuong - Việt Nam Cải Lương[/COLOR]
+https://www.youtube.com/channel/UCYK1xo7CRbGIhNyfz4MyGkQ
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương Online[/COLOR]
+https://www.youtube.com/channel/UCPR1RT-nvozDhweXtHh6Zkw
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương Miền Nam[/COLOR]
+https://www.youtube.com/channel/UCMKsP2qCocvWTDP5hfNm_Tw
+#EXTINF:-1,[COLOR magenta]Cailuong - Tân Cổ Giao Duyên[/COLOR]
+https://www.youtube.com/user/trutinhvietnam2014
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 1[/COLOR]
+https://www.youtube.com/user/MrMinhRang
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 2[/COLOR]
+https://www.youtube.com/user/cailuongtoiyeutv
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 3[/COLOR]
+https://www.youtube.com/user/cailuongluong2015
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 4[/COLOR]
+https://www.youtube.com/channel/UCcUyBre7IIdskndDbBe_dRg
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 5[/COLOR]
+https://www.youtube.com/channel/UCrfhSe0PnEYb-Y_ARusKwHQ
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 6[/COLOR]
+https://www.youtube.com/user/sirnguyenhha
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 7[/COLOR]
+https://www.youtube.com/user/conhacmiennam
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 8[/COLOR]
+https://www.youtube.com/channel/UCvrb2yJttwWhuTCiuCpvYMw
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 9[/COLOR]
+https://www.youtube.com/channel/UCWO6xsEFVQ9ClWOhHSbWSFw
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 10[/COLOR]
+https://www.youtube.com/user/vipprosadec
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 11[/COLOR]
+https://www.youtube.com/channel/UCOByIJlXD9dHRntNnaymncg
+#EXTINF:-1,[COLOR magenta]Cailuong - Cải Lương 12[/COLOR]
+https://www.youtube.com/user/albumcailuong
+#EXTINF:-1,[COLOR magenta]Sitcom - Tiệm Bánh Hoàng Tử Bé - Kim Chi Cà Pháo[/COLOR]
+https://www.youtube.com/user/tiembanhhoangtube
+#EXTINF:-1,[COLOR magenta]Sitcom - Ơn Giời Cậu Đây Rồi[/COLOR]
+https://www.youtube.com/user/ONGIOICAUDAYROIVTV3
+#EXTINF:-1,[COLOR magenta]Sitcom - Thư Giãn Cuối Tuần[/COLOR]
+https://www.youtube.com/user/ChemChuoiVTV3
+#EXTINF:-1,[COLOR magenta]Sitcom - 5sonlinevietnam[/COLOR]
+https://www.youtube.com/user/5sonlinevietnam
+#EXTINF:-1,[COLOR magenta]Sitcom - Cafe Cười[/COLOR]
+https://www.youtube.com/user/cafecuoisenvang
+#EXTINF:-1,[COLOR magenta]Sitcom - Yeah1/NVU/Phở[/COLOR]
+https://www.youtube.com/user/2idolshow
+#EXTINF:-1,[COLOR magenta]Sitcom - MC Việt Thảo[/COLOR]
+https://www.youtube.com/user/mcvietthao
+#EXTINF:-1,[COLOR magenta]TiviShows - Tìm Kiếm Tài Năng Việt[/COLOR]
+https://www.youtube.com/user/VTVShowbiz
+#EXTINF:-1,[COLOR magenta]TiviShows - Thử Thách Cùng Bước Nhảy 2014[/COLOR]
+https://www.youtube.com/user/sytycdvn
+#EXTINF:-1,[COLOR magenta]TiviShows - Bếp Hát[/COLOR]
+https://www.youtube.com/user/bephatvn
+#EXTINF:-1,[COLOR magenta]TiviShows - Vui Ơi Là Vui[/COLOR]
+https://www.youtube.com/user/gameshowVuiOiLaVui
+#EXTINF:-1,[COLOR magenta]TiviShows - Cười Là Thua[/COLOR]
+https://www.youtube.com/channel/UCGhoqIuOFPYneUs-Dnp1TVQ
+#EXTINF:-1,[COLOR magenta]TiviShows - Người Bí Ẩn[/COLOR]
+https://www.youtube.com/user/TVSHOWNGUOIBIAN
+#EXTINF:-1,[COLOR magenta]TiviShows - VN's Got Talent[/COLOR]
+https://www.youtube.com/user/VNsGotTalent
+#EXTINF:-1,[COLOR magenta]TiviShows - Nhân Tố Bí Ẩn[/COLOR]
+https://www.youtube.com/user/nhantobianvietnam
+#EXTINF:-1,[COLOR magenta]TiviShows - Bước Nhảy Hoàn Vũ Nhí[/COLOR]
+https://www.youtube.com/user/btcbuocnhayhoanvunhi
+#EXTINF:-1,[COLOR magenta]TiviShows - Vua Đầu Bếp Việt Nam[/COLOR]
+https://www.youtube.com/user/vuadaubepvietnam
+#EXTINF:-1,[COLOR magenta]TiviShows - Ai Là Triệu Phú[/COLOR]
+https://www.youtube.com/user/ailatrieuphufull
+#EXTINF:-1,[COLOR magenta]TiviShows - VTV[/COLOR]
+https://www.youtube.com/channel/UCsi9MraTO6b78y2xzB13UrA
+#EXTINF:-1,[COLOR magenta]TiviShows - VLOG Truyền Hình[/COLOR]
+https://www.youtube.com/user/VLOGTruyenHinh
+#EXTINF:-1,[COLOR magenta]TiviShows - Cuộc Đua Kỳ Thú[/COLOR]
+https://www.youtube.com/user/CuocDuaKyThuVN
+#EXTINF:-1,[COLOR magenta]TiviShows - Học Viện Ngôi Sao[/COLOR]
+https://www.youtube.com/user/HocVienNgoiSao
+#EXTINF:-1,[COLOR magenta]TiviShows - Gương Mặt Thân Quen[/COLOR]
+https://www.youtube.com/user/YFSFVietnam
+#EXTINF:-1,[COLOR magenta]TiviShows - Vũ Điệu Tuổi Xanh[/COLOR]
+https://www.youtube.com/user/VuDieuTuoiXanh
+#EXTINF:-1,[COLOR magenta]TiviShows - Đọ Sức Âm Nhạc[/COLOR]
+https://www.youtube.com/user/dosucamnhac
+#EXTINF:-1,[COLOR magenta]TiviShows - Giọng Hát Việt[/COLOR]
+https://www.youtube.com/user/GiongHatViet1
+#EXTINF:-1,[COLOR magenta]TiviShows - Tuyệt Đỉnh Tranh Tài[/COLOR]
+https://www.youtube.com/user/tuyetdinhtranhtaiTV
+#EXTINF:-1,[COLOR magenta]TiviShows - Thần Tượng Âm Nhạc[/COLOR]
+https://www.youtube.com/user/vietnamidol3
+#EXTINF:-1,[COLOR magenta]TiviShows - X-Factor VN[/COLOR]
+https://www.youtube.com/user/NhanToBiAn1
+#EXTINF:-1,[COLOR magenta]Sports - Thể Dục Thẩm Mỹ với MC Nguyễn Cao Kỳ Duyên[/COLOR]
+https://www.youtube.com/user/nhochembitkhoc
+#EXTINF:-1,[COLOR magenta]Sports - Thể Dục Thẩm Mỹ 1[/COLOR]
+https://www.youtube.com/channel/UCplLrzVkLP31D0ymZ_q333A
+#EXTINF:-1,[COLOR magenta]Sports - Thể Dục Thẩm Mỹ 2[/COLOR]
+https://www.youtube.com/channel/UC3neDQB3isgEr0FqQyUJ44Q
+#EXTINF:-1,[COLOR magenta]Sports - Thể Dục Thẩm Mỹ 3[/COLOR]
+https://www.youtube.com/channel/UCMd8pzGXMqFjdZSogx_Oy6Q
+#EXTINF:-1,[COLOR magenta]Sports - Vovinam Thái Nguyên[/COLOR]
+https://www.youtube.com/user/thanhnienxungkich
+#EXTINF:-1,[COLOR magenta]Sports - Vovinam England[/COLOR]
+https://www.youtube.com/user/VovinamEngland
+#EXTINF:-1,[COLOR magenta]Sports - Thethao247vn[/COLOR]
+https://www.youtube.com/user/Thethao247vn
+#EXTINF:-1,[COLOR magenta]Sports - Bóng Đá[/COLOR]
+https://www.youtube.com/user/cutinhofull
+#EXTINF:-1,[COLOR magenta]Sports - Báo Bóng Đá[/COLOR]
+https://www.youtube.com/user/bongdaplustv
+#EXTINF:-1,[COLOR magenta]Sports - VTV Sport[/COLOR]
+https://www.youtube.com/user/VTVSport
+#EXTINF:-1,[COLOR magenta]Sports - The Olympic Channel[/COLOR]
+https://www.youtube.com/user/olympic
+#EXTINF:-1,[COLOR magenta]Sports - Allsports Athletics[/COLOR]
+https://www.youtube.com/user/AllSportsAthletics
+#EXTINF:-1,[COLOR magenta]Sports - ESPN[/COLOR]
+https://www.youtube.com/user/ESPN
+#EXTINF:-1,[COLOR magenta]Sports - Đô Vật WWE[/COLOR]
+https://www.youtube.com/user/WWEFanNation
+#EXTINF:-1,[COLOR magenta]Sports - HBO Boxing[/COLOR]
+https://www.youtube.com/user/HBOsports
+#EXTINF:-1,[COLOR magenta]Sports - Glovesgymabc Gloves[/COLOR]
+https://www.youtube.com/channel/UCYGlQcpAY_2UxEOCxTd1k5Q
+#EXTINF:-1,[COLOR magenta]Sports - Kings of Boxing[/COLOR]
+https://www.youtube.com/user/2112wildcat
+#EXTINF:-1,[COLOR magenta]Sports - NBA[/COLOR]
+https://www.youtube.com/user/NBA
+#EXTINF:-1,[COLOR magenta]Sports - Football News[/COLOR]
+https://www.youtube.com/user/FootballNewsUS
+#EXTINF:-1,[COLOR magenta]Sports - Swimming World[/COLOR]
+https://www.youtube.com/user/SwimmingWorldSPI
+#EXTINF:-1,[COLOR magenta]Sports - USA Swimming[/COLOR]
+https://www.youtube.com/user/USASwimmingOrg
+#EXTINF:-1,[COLOR magenta]Sports - US Open Tennis Championships[/COLOR]
+https://www.youtube.com/user/USOPEN
+#EXTINF:-1,[COLOR magenta]Sports - Australian Open TV[/COLOR]
+https://www.youtube.com/user/australianopentv
+#EXTINF:-1,[COLOR magenta]Travel - Du Lịch Hoàn Mỹ[/COLOR]
+https://www.youtube.com/user/DulichHoanmy
+#EXTINF:-1,[COLOR magenta]Travel - Du Lịch Việt Nam[/COLOR]
+https://www.youtube.com/user/apttravelgroup
+#EXTINF:-1,[COLOR magenta]Travel - Du Lịch Thái Lan[/COLOR]
+https://www.youtube.com/channel/UCj799b-m3Ve44vPoD1NDbxA
+#EXTINF:-1,[COLOR magenta]Travel - Văn hóa Việt Nam[/COLOR]
+https://www.youtube.com/user/vanhoaviettv
+#EXTINF:-1,[COLOR magenta]Travel - Khám Phá Việt Nam[/COLOR]
+https://www.youtube.com/user/KhamPhaVietNamVTV
+#EXTINF:-1,[COLOR magenta]Travel - Du Lịch Đất Việt[/COLOR]
+https://www.youtube.com/user/datviettour198
+#EXTINF:-1,[COLOR magenta]Travel - Du Lịch Khát Vọng Việt[/COLOR]
+https://www.youtube.com/user/dulichkhatvongviet
+#EXTINF:-1,[COLOR magenta]Travel - Du lịch Biển Đảo Phú Quốc[/COLOR]
+https://www.youtube.com/user/phuquoctravelonline
+#EXTINF:-1,[COLOR magenta]Travel - Du lịch Anz[/COLOR]
+https://www.youtube.com/user/dulichanz2
+#EXTINF:-1,[COLOR magenta]Travel - Đi Du Lịch[/COLOR]
+https://www.youtube.com/user/DiDuLichOnline
+#EXTINF:-1,[COLOR magenta]Travel - Venus Travel VN[/COLOR]
+https://www.youtube.com/user/venustravelvn
+#EXTINF:-1,[COLOR magenta]Travel - Mekong Culture[/COLOR]
+https://www.youtube.com/user/mekongculture
+#EXTINF:-1,[COLOR magenta]Travel - Văn Hóa Miền Sông Nước[/COLOR]
+https://www.youtube.com/user/miensongnuoc
+#EXTINF:-1,[COLOR magenta]Travel - Đồng Tháp Quê Mình[/COLOR]
+https://www.youtube.com/user/DThapquetoi
+#EXTINF:-1,[COLOR magenta]Travel - Du Lịch và Ẩm Thực Miền Tây Sông Nước[/COLOR]
+https://www.youtube.com/user/dulichvaamthuc
+#EXTINF:-1,[COLOR magenta]Medical - Tin Tức Y Khoa[/COLOR]
+https://www.youtube.com/user/CoPhamMD
+#EXTINF:-1,[COLOR magenta]Medical - Kiến Thức Y Khoa[/COLOR]
+https://www.youtube.com/user/kienthucykhoa
+#EXTINF:-1,[COLOR magenta]Medical - Sức Khỏe Mỗi Ngày[/COLOR]
+https://www.youtube.com/user/tringoai
+#EXTINF:-1,[COLOR magenta]Medical - Tài Liệu Y Học[/COLOR]
+https://www.youtube.com/user/TaiLieuYHoc
+#EXTINF:-1,[COLOR magenta]Medical - Thư Viện Y Khoa[/COLOR]
+https://www.youtube.com/channel/UCldPEiKvoHXuT6E4Zp5vCIg
+#EXTINF:-1,[COLOR magenta]Cooking - Uyên Thi - Bếp Nhà Ta Nấu[/COLOR]
+https://www.youtube.com/user/UyenThyCooking2013
+#EXTINF:-1,[COLOR magenta]Cooking - Asian Cooking Made Easy[/COLOR]
+https://www.youtube.com/user/AsianCookingmadeEasy
+#EXTINF:-1,[COLOR magenta]Cooking - Ẩm Thực Tình Yêu[/COLOR]
+https://www.youtube.com/user/amthuctinhyeu123
+#EXTINF:-1,[COLOR magenta]Cooking - Helen's Recipes[/COLOR]
+https://www.youtube.com/user/HelenRecipes
+#EXTINF:-1,[COLOR magenta]Cooking - Xuân Hồng[/COLOR]
+https://www.youtube.com/user/tdmaison
+#EXTINF:-1,[COLOR magenta]Cooking - Cathy Ha[/COLOR]
+https://www.youtube.com/user/VietFoodie
+#EXTINF:-1,[COLOR magenta]Cooking - Món Ngon[/COLOR]
+https://www.youtube.com/user/khoainv
+#EXTINF:-1,[COLOR magenta]MakeUp - Michelle Phan[/COLOR]
+https://www.youtube.com/user/MichellePhan
+#EXTINF:-1,[COLOR magenta]MakeUp - Quách Ánh Makeup Store[/COLOR]
+https://www.youtube.com/channel/UCHQO9xPSROEHYHUk_T82l6w
+#EXTINF:-1,[COLOR magenta]MakeUp - Trang LalaBeautylady[/COLOR]
+https://www.youtube.com/user/tranglala90
+#EXTINF:-1,[COLOR magenta]MakeUp - VietBeauty NailViet[/COLOR]
+https://www.youtube.com/channel/UCrvDF3Rzt6qeFVjFwQM3rRw
+#EXTINF:-1,[COLOR magenta]AudioBook - Nghe Đọc Truyện Online[/COLOR]
+https://www.youtube.com/user/nghedoctruyenonline
+#EXTINF:-1,[COLOR magenta]AudioBook - Nghe Truyện Ma[/COLOR]
+https://www.youtube.com/user/NgheTruyenMa
+#EXTINF:-1,[COLOR magenta]AudioBook - Video Books for You[/COLOR]
+https://www.youtube.com/user/videobooksforyou
+#EXTINF:-1,[COLOR magenta]AudioBook - Truyện Audio Online[/COLOR]
+https://www.youtube.com/user/AudioOnlineHay
+#EXTINF:-1,[COLOR magenta]Immigration - Di trú và Nhập Tịch Hoa Kỳ[/COLOR]
+https://www.youtube.com/user/NguyenLegalGroup
+#EXTINF:-1,[COLOR magenta]Immigration - Nhập Tịch Di trú Hoa Kỳ[/COLOR]
+https://www.youtube.com/user/NguyenLeThienTrang
+#EXTINF:-1,[COLOR magenta]AFV - America's Funniest Home Videos[/COLOR]
+https://www.youtube.com/user/AFVofficial
+#EXTINF:-1,[COLOR magenta]AFV - AFV Kids[/COLOR]
+https://www.youtube.com/user/ToddleTale
+#EXTINF:-1,[COLOR magenta]AFV - AFV Animals[/COLOR]
+https://www.youtube.com/user/PETSAMI
+#EXTINF:-1,[COLOR magenta]AFV - AFVApproved[/COLOR]
+https://www.youtube.com/user/AFVApproved
+#EXTINF:-1,[COLOR magenta]AFV - AFVMobile[/COLOR]
+https://www.youtube.com/user/AFVMobile
+#EXTINF:-1,[COLOR magenta]DCAP - Thế Giới Động Vật Hoang Dã[/COLOR]
+https://www.youtube.com/channel/UCcTBt9-jXyxIja4A3pHBRpg
+#EXTINF:-1,[COLOR magenta]DCAP - Animal Planet[/COLOR]
+https://www.youtube.com/user/AnimlPlanet
+#EXTINF:-1,[COLOR magenta]DCAP - Animal Planet TV[/COLOR]
+https://www.youtube.com/user/AnimalPlanetTV
+#EXTINF:-1,[COLOR magenta]DCAP - Animalist[/COLOR]
+https://www.youtube.com/user/AnimalistNetwork
+#EXTINF:-1,[COLOR magenta]DCAP - Documentary TV[/COLOR]
+https://www.youtube.com/user/storyofkittens
+#EXTINF:-1,[COLOR magenta]DCAP - Science Channel[/COLOR]
+https://www.youtube.com/user/ScienceChannel
+#EXTINF:-1,[COLOR magenta]DCAP - National Geographic[/COLOR]
+https://www.youtube.com/user/NationalGeographic
+#EXTINF:-1,[COLOR magenta]DCAP - NatGeoWild[/COLOR]
+https://www.youtube.com/user/NatGeoWild
+#EXTINF:-1,[COLOR magenta]DCAP - History Channel[/COLOR]
+https://www.youtube.com/user/historychannel
+#EXTINF:-1,[COLOR magenta]DCAP - Discovery Channel Science Documentary[/COLOR]
+https://www.youtube.com/channel/UCe4AKRmWCL9LLorr-q3On_Q
+#EXTINF:-1,[COLOR magenta]Other - [COLOR magenta]Programming and More ... by Dạy Nhau Học[/COLOR][/COLOR]
+https://www.youtube.com/user/trandatnh
+#EXTINF:-1,[COLOR magenta]Other - [COLOR magenta]Programming by Lưu Trường Hải Lân[/COLOR][/COLOR]
+https://www.youtube.com/user/luutruonghailan
+#EXTINF:-1,[COLOR magenta]Other - [COLOR magenta]Programming and More ... by Derek Banas[/COLOR][/COLOR]
+https://www.youtube.com/user/derekbanas
+#EXTINF:-1,[COLOR magenta]Other - TotalXBMC[/COLOR]
+https://www.youtube.com/user/TotalXBMC
+#EXTINF:-1,[COLOR magenta]Other - PRO XBMC + KODI + SuperAddon[/COLOR]
+https://www.youtube.com/user/HowToVideoHelp
+#EXTINF:-1,[COLOR magenta]Other - OneTechGenius (XBMC HELPER)[/COLOR]
+https://www.youtube.com/user/XBMCHELPER
+#EXTINF:-1,[COLOR magenta]Other - Bếp Yêu Thương[/COLOR]
+https://www.youtube.com/user/WilmarVietnam
+#EXTINF:-1,[COLOR magenta]Other - HTVOnline Entertainment[/COLOR]
+https://www.youtube.com/user/htvonlinetube
+#EXTINF:-1,[COLOR magenta]Other - Chuyện lạ Việt Nam[/COLOR]
+https://www.youtube.com/user/chuyenlavietnam24h
+#EXTINF:-1,[COLOR magenta]Other - Giải Trí 60 Giây[/COLOR]
+https://www.youtube.com/user/bantintonghop
+#EXTINF:-1,[COLOR magenta]Other - Khoa học - Đời sống[/COLOR]
+https://www.youtube.com/user/khoahoctv
+#EXTINF:-1,[COLOR magenta]Other - KHOA HỌC- CÔNG NGHỆ Plus[/COLOR]
+https://www.youtube.com/user/KHCN1123Pus
+#EXTINF:-1,[COLOR magenta]Other - Chương Trình Tổng Hợp 2[/COLOR]
+https://www.youtube.com/user/xempihim3
+#EXTINF:-1,[COLOR magenta]Other - Yantv Jsc[/COLOR]
+https://www.youtube.com/user/YanTVChannel
+#EXTINF:-1,[COLOR magenta]Other - Yeah1 Film/iMovie[/COLOR]
+https://www.youtube.com/user/ImovieBTV4
+#EXTINF:-1,[COLOR magenta]Other - Zui.vn[/COLOR]
+https://www.youtube.com/user/zuivn
+#EXTINF:-1,[COLOR magenta]Other - ExcelIsFun[/COLOR]
+https://www.youtube.com/user/ExcelIsFun
+#EXTINF:-1,[COLOR magenta]Other - Home Repair - This Old House[/COLOR]
+https://www.youtube.com/user/thisoldhouse
+#EXTINF:-1,[COLOR magenta]Other - Khan Academy[/COLOR]
+https://www.youtube.com/user/khanacademy
+#EXTINF:-1,[COLOR magenta]Other - Khan Academy Projects[/COLOR]
+https://www.youtube.com/user/khanacademyprojects
+#EXTINF:-1,[COLOR magenta]Other - Khan Academy Medicine[/COLOR]
+https://www.youtube.com/user/khanacademymedicine
+
+
 
 

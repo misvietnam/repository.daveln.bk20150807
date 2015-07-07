@@ -1,0 +1,8 @@
+#EXTM3U
+
+#EXTINF:-1,VietFace TV California 57.2
+http://206.190.136.254/liveStream/vface_1/playlist.m3u8
+#EXTINF:-1,VZN TV Houston TX
+http://206.190.136.254/liveStream/vantv_1/playlist.m3u8
+
+

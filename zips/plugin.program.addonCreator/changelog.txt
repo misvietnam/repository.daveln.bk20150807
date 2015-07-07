@@ -1,3 +1,7 @@
+v 0.0.7
+Added Search 
+Divided playlists into their own groups.
+
 v 0.0.6
 Now can play links from YouTube's users and channels
 Can use http://www... for YouTube and DailyMotion
@@ -29,3 +33,5 @@ Minor update
 v 0.0.1
 Initial release
 Play local m3u/xml playlists only.
+
+NOTE: Above notes are for add-on created by this Add-on Creator.

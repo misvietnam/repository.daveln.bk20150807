@@ -1,4 +1,5 @@
 v 0.0.8
+Changed regex rule for m3u and its thumbnail.
 Fixed new addon's Search (typing error)
 Shortened new addon's codes
 Updated instruction.

@@ -35,8 +35,8 @@ online_xml = mysettings.getSetting('online_xml')
 local_xml = mysettings.getSetting('local_xml')
 
 xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
-m3u_thumb_regex = 'tvg-logo="(.*?)"'
-m3u_regex = '#(.+),(.+)\n(.+)\n'
+m3u_thumb_regex = 'tvg-logo=[\'"](.*?)[\'"]'
+m3u_regex = '#(.+?),(.+)\n(.+)\n'
 
 u_tube = 'http://www.youtube.com'
 
@@ -71,13 +71,13 @@ def make_request(url):
 def main():
 	add_dir('[B]<<<  SEARCH  >>>[/B]', 'searchlink', 99, icon, fanart)
 	if len(online_m3u) > 0:	
-		add_dir('[COLOR yellow][B]>> ONLINE M3U <<[/COLOR][/B]', u_tube, 2, icon, fanart)
+		add_dir('[COLOR yellow][B]>> ONLINE M3U <<[/B][/COLOR]', u_tube, 2, icon, fanart)
 	if len(local_m3u) > 0:	
-		add_dir('[COLOR magenta][B]>> LOCAL M3U <<[/COLOR][/B]', u_tube, 3, icon, fanart)
+		add_dir('[COLOR magenta][B]>> LOCAL M3U <<[/B][/COLOR]', u_tube, 3, icon, fanart)
 	if len(online_xml) > 0:	
-		add_dir('[COLOR cyan][B]>> ONLINE XML <<[/COLOR][/B]', u_tube, 4, icon, fanart)
+		add_dir('[COLOR cyan][B]>> ONLINE XML <<[/B][/COLOR]', u_tube, 4, icon, fanart)
 	if len(local_xml) > 0:	
-		add_dir('[COLOR lime][B]>> LOCAL XML <<[/COLOR][/B]', u_tube, 5, icon, fanart)		
+		add_dir('[COLOR lime][B]>> LOCAL XML <<[/B][/COLOR]', u_tube, 5, icon, fanart)		
 	if (len(online_m3u) < 1 and len(local_m3u) < 1 and len(online_xml) < 1 and len(local_xml) < 1 ):		
 		mysettings.openSettings()		
 
@@ -95,19 +95,19 @@ def search():
 					m3u_playlist(name, url, thumb)	
 		if len(local_m3u) > 0:		
 			content = read_file(local_m3u)
-			match = re.compile(m3u_regex).findall(content)
+			match = re.compile(m3u_regex).findall(content)		
 			for thumb, name, url in match:
 				if re.search(searchText, removeAccents(name.replace('Đ', 'D')), re.IGNORECASE):
 					m3u_playlist(name, url, thumb)	
 		if len(online_xml) > 0:					
 			content = make_request(online_xml)
-			match = re.compile(xml_regex).findall(content)
+			match = re.compile(xml_regex).findall(content)	
 			for name, url, thumb in match:
 				if re.search(searchText, removeAccents(name.replace('Đ', 'D')), re.IGNORECASE):
 					xml_playlist(name, url, thumb)	
 		if len(local_xml) > 0:		
 			content = read_file(local_xml)
-			match = re.compile(xml_regex).findall(content)
+			match = re.compile(xml_regex).findall(content)		
 			for name, url, thumb in match:
 				if re.search(searchText, removeAccents(name.replace('Đ', 'D')), re.IGNORECASE):
 					xml_playlist(name, url, thumb)	
@@ -117,32 +117,44 @@ def search():
 def m3u_online():		
 	content = make_request(online_m3u)
 	match = re.compile(m3u_regex).findall(content)
-	for thumb, name, url in match:	
-		m3u_playlist(name, url, thumb)
-
+	for thumb, name, url in match:
+		try:
+			m3u_playlist(name, url, thumb)
+		except:
+			pass
+			
 def xml_online():			
 	content = make_request(online_xml)
 	match = re.compile(xml_regex).findall(content)
-	for name, url, thumb in match:	
-		xml_playlist(name, url, thumb)
+	for name, url, thumb in match:
+		try:
+			xml_playlist(name, url, thumb)
+		except:
+			pass
 			
 def m3u_local():
 	content = read_file(local_m3u)
 	match = re.compile(m3u_regex).findall(content)
 	for thumb, name, url in match:	
-		m3u_playlist(name, url, thumb)
+		try:
+			m3u_playlist(name, url, thumb)
+		except:
+			pass
 
 def xml_local():		
 	content = read_file(local_xml)
 	match = re.compile(xml_regex).findall(content)
 	for name, url, thumb in match:	
-		xml_playlist(name, url, thumb)
+		try:
+			xml_playlist(name, url, thumb)
+		except:
+			pass
 				
 def m3u_playlist(name, url, thumb):	
-	name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
+	name = re.sub('\s+', ' ', name).strip()			
 	url = url.replace('"', ' ').replace('&amp;', '&').strip()
 	if ('youtube.com/user/' in url) or ('youtube.com/channel/' in url) or ('youtube/user/' in url) or ('youtube/channel/' in url):
-		if 'tvg-logo="' in thumb:
+		if 'tvg-logo' in thumb:
 			thumb = re.compile(m3u_thumb_regex).findall(str(thumb))[0].replace(' ', '%20')			
 			add_dir(name, url, '', thumb, thumb)			
 		else:	
@@ -155,14 +167,14 @@ def m3u_playlist(name, url, thumb):
 			url = 'plugin://plugin.video.dailymotion_com/?mode=playVideo&url=%s' % url	
 		else:			
 			url = url
-		if 'tvg-logo="' in thumb:				
+		if 'tvg-logo' in thumb:				
 			thumb = re.compile(m3u_thumb_regex).findall(str(thumb))[0].replace(' ', '%20')
 			add_link(name, url, 1, thumb, thumb)			
 		else:				
 			add_link(name, url, 1, icon, fanart)	
 					
 def xml_playlist(name, url, thumb):
-	name = re.sub('\s+', ' ', name).replace('"', ' ').strip()			
+	name = re.sub('\s+', ' ', name).strip()			
 	url = url.replace('"', ' ').replace('&amp;', '&').strip()
 	if ('youtube.com/user/' in url) or ('youtube.com/channel/' in url) or ('youtube/user/' in url) or ('youtube/channel/' in url):
 		if len(thumb) > 0:	
@@ -183,7 +195,7 @@ def xml_playlist(name, url, thumb):
 			add_link(name, url, 1, icon, fanart)	
 	
 def play_video(url):
-	media_url = url.replace('&amp;', '&')
+	media_url = url
 	item = xbmcgui.ListItem(name, path = media_url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
 	return

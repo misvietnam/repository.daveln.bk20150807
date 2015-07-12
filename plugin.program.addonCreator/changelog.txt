@@ -1,3 +1,6 @@
+v 0.0.10
+Fixed typing error (v 0.0.5 - 0.0.9) - default.py (files)
+
 v 0.0.9
 New addon now can read m3u playlists containing empty lines.
 

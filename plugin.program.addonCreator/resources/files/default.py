@@ -21,9 +21,8 @@ import urllib, urllib2, sys, re, os, unicodedata
 import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 
 plugin_handle = int(sys.argv[1])
-xbmcplugin.setContent(plugin_handle, 'movies')
 
-mysettings = xbmcaddon.Addon(id = 'plugin.video.MyComboAddon')
+mysettings = xbmcaddon.Addon(id = 'plugin.video.MyNewlyCreatedAddon')
 profile = mysettings.getAddonInfo('profile')
 home = mysettings.getAddonInfo('path')
 fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))

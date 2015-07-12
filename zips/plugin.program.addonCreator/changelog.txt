@@ -1,3 +1,6 @@
+v 0.0.9
+New addon now can read m3u playlists containing empty lines.
+
 v 0.0.8
 Changed regex rule for m3u and its thumbnail.
 Fixed new addon's Search (typing error)

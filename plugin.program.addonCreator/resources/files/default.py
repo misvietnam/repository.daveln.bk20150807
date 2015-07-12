@@ -36,7 +36,7 @@ local_xml = mysettings.getSetting('local_xml')
 
 xml_regex = '<title>(.*?)</title>\s*<link>(.*?)</link>\s*<thumbnail>(.*?)</thumbnail>'
 m3u_thumb_regex = 'tvg-logo=[\'"](.*?)[\'"]'
-m3u_regex = '#(.+?),(.+)\n(.+)\n'
+m3u_regex = '#(.+?),(.+)\s*(.+)\s*'
 
 u_tube = 'http://www.youtube.com'
 
@@ -79,7 +79,8 @@ def main():
 	if len(local_xml) > 0:	
 		add_dir('[COLOR lime][B]>> LOCAL XML <<[/B][/COLOR]', u_tube, 5, icon, fanart)		
 	if (len(online_m3u) < 1 and len(local_m3u) < 1 and len(online_xml) < 1 and len(local_xml) < 1 ):		
-		mysettings.openSettings()		
+		mysettings.openSettings()
+		xbmc.executebuiltin("Container.Refresh")		
 
 def search(): 	
 	try:

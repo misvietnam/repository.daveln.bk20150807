@@ -138,7 +138,7 @@ def tv_directory(url):
 				add_dir(channel_name, url, 2, iconimage, fanart) 
 
 def tv_index(name, url):	
-	name = name.replace('[', '\[').replace(']', '\]')
+	name = name.replace('[', '\[').replace(']', '\]').replace ('(', '\(').replace(')', '\)')
 	content = make_request(url) 
 	match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(content)
 	for vlink in match:
@@ -250,7 +250,7 @@ def my_playlist_link():
 			mysettings.openSettings()	
 
 def my_playlist_channel(name, url):
-	name = name.replace('[', '\[').replace(']', '\]')
+	name = name.replace('[', '\[').replace(']', '\]').replace ('(', '\(').replace(')', '\)')
 	if url == onlinexml:
 		link = make_request(onlinexml)
 	else:
@@ -304,7 +304,7 @@ def thanh51_xml_m3u_channel(url):
 					add_link(name.strip(), url, 201, iconimage, fanart)
 
 def thanh51_xml_m3u_index(name, url):
-	name = name.replace('[', '\[').replace(']', '\]')
+	name = name.replace('[', '\[').replace(']', '\]').replace ('(', '\(').replace(')', '\)')
 	content = make_request(url)
 	if 'thanh51.xml' in url:  
 		match = re.compile('<channel>\s*<name>' + name + '</name>((?s).+?)</channel>').findall(content)	

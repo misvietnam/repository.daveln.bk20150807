@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0"?>
 
-</channel>
+<channels>
 <channel>
 <name>[COLOR yellow]CẬP NHẬT NGÀY 14 THÁNG 7 NĂM 2015[/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -2099,8 +2099,8 @@
 <link>plugin://plugin.video.f4mTester/?url=http://scache.fptplay.net.vn/liveshow/sporttv2/manifest.f4m%7CReferer=http://play.fpt.vn/static/mediaplayer/FPlayer.swf&amp;proxy=&amp;mode=play</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-<channels>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH SCTV-http[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -2465,9 +2465,8 @@
 <link>http://vtsstr9.sctv.vn/mslive/C012_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-
-<channels>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH SCTV-rtmpe[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -3608,9 +3607,8 @@
 <link>plugin://plugin.video.f4mTester/?url=http://113.160.49.34/lives/origin03/starsportsd.isml/starsportsd.f4m</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-
-<channels>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue] - [I]TH LIFE TV[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -3699,9 +3697,8 @@
 <link>http://222.255.27.218:8081/nld.m3u8</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-
-<channels>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue]- [I]TH ACCESSASIA[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -3766,9 +3763,8 @@
 <link>http://tvod.accessasia.tv:8080/live/sctv14.480p/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 VietMedia/1.0</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-
-<channels>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH VIET NAM[/B][COLOR blue]- [I]TH HAI NGOAI[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -3969,9 +3965,8 @@
 <link>http://origin.onworldtv.com:1935/liveorigin/sgn/chunklist_w942043689_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NjUxJndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEyNTEmd29ybGR0b2tlbmhhc2g9dzNCdXB1NVpacjJDYVg1LUxhOGlCOTdlNDFkNG5PbWlpeE90bGEwbXRkQT0=.m3u8</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-
-<channels>
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH QUOC TE[/B][COLOR blue]- [I]Veetle.com (USA)[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -4176,8 +4171,9 @@
 <link>http://veetle.com/index.php/hls/streamMbrfast/53b1f49df2730_/stream.m3u8</link>
 <thumbnail></thumbnail>
 </item>
+</channel>
 
-<channels>
+
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYEN HINH QUOC TE[/B][COLOR blue]- [I]TONG HOP[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -4582,9 +4578,9 @@
 <link>http://wowza1.videos.movile.com:8080/live/smil:adulto_1.smil/playlist.m3u8</link>
 <thumbnail></thumbnail>
 </item>
-
-
 </channel>
+
+
 <channel>
 <name>[COLOR FF00FF00]->>[B]TRUYỀN THANH[/B][COLOR blue] - [I]RADIO TH[/I][/COLOR][/COLOR]</name>
 <thumbnail>http://LangSongViet.com/fta4vnForum/upload/uploaded/26_1385260447.png</thumbnail>
@@ -4616,7 +4612,8 @@
 </item>
 <item>
 <title>RADIO JoyFM HaNoi</title>
-<link>rtmp://radio.joyfm.vn:1935/live playpath=RadioOnline swfUrl=http://hanoitv.vn/JScripts/player.swf live=1 pageUrl=http://hanoitv.vn/Media/157/Radio.htv </link>
+<link>rtmp://radio.joyfm.vn:1935/live playpath=RadioOnline swfUrl=http://hanoitv.vn/JScripts/player.swf live=1 pageUrl=http://hanoitv.vn/Media/157/Radio.htv
+ </link>
 <thumbnail></thumbnail>
 </item>
 <item>
@@ -4691,3 +4688,5 @@
 </item>
 
 </channel>
+
+</channels>

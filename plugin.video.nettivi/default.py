@@ -39,7 +39,6 @@ xml_regex_reg_1S = '<title>(.*?)</title>(?s).*?<page>(.*?)</page>(?s).*?<thumbna
 xml_regex_reg_2L = '<title>(.*?)</title>\s*<link>.*?</link>\s*<regex>\s*<name>.*?</name>\s*<expres>.*?</expres>\s*<page>(.*?)</page>\s*<referer>.*?</referer>\s*</regex>\s*<thumbnail>(.*?)</thumbnail>'
 my_dict = {'&#7893;':'ổ', '&#7907;':'ợ', '&#7885;':'ọ', '&#7909;':'ụ', '&#7875;':'ể', '&#7843;':'ả', '&#7871;':'ế', '&#7897;':'ộ', '&#7889;':'ố', '&#7873;':'ề', '&#7883;':'ị', '&#7855;':'ắ'}
 my_repo = 'https://raw.githubusercontent.com/daveln/repository.daveln/'
-hplus = 'http://hplus.com.vn/vi/categories/live-tv'
 tvreplay = 'http://113.160.49.39/tvcatchup/'
 u_tube = 'http://www.youtube.com'
 tvviet = 'http://tv.vnn.vn/'
@@ -156,9 +155,11 @@ def tv_index(name, url):
 def tv_scraper(url):
 	content = make_request(url)
 	if 'htvonline' in url:
-		match = re.compile('class="mh-grids5-img" href="(.+?)" title="(.+?)">\s*<!--img src.+?data-original="(.+?)"').findall(content)
-		for url, name, thumb in match:
-			add_link(name, url, 202, thumb, fanart)			
+		match = re.compile('href="http://www.htvonline.com.vn/livetv/(.+?)-3(.+?)"(?:\s*)><img alt="" width=".+?" height=".+?" src="(.+?)">').findall(content)
+		for name, url, thumb in match:
+			url = 'http://www.htvonline.com.vn/livetv/' + name + '-3' + url
+			name = name.replace('-', ' ').upper()			
+			add_link(name, url, 202, thumb, thumb)			
 	elif 'tv.vnn.vn' in url:
 		match = re.compile('href="\/(.+?)">\s*<img src="\/(.+?)".+?\/>\s*(.+?)\n').findall(content)
 		for url, thumb, title in match:
@@ -276,31 +277,31 @@ def thanh51_xml_m3u_channel(url):
 			match = re.compile(xml_channel_name).findall(content)
 			for channel_name in match:
 				if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-					add_link(channel_name, u_tube, 201, iconimage, fanart)
+					add_link(channel_name.strip(), u_tube, 201, iconimage, fanart)
 				else:
-					add_dir(channel_name, url, 13, iconimage, fanart)  	
+					add_dir(channel_name.strip(), url, 13, iconimage, fanart)  	
 		else:
 			match = re.compile(xml_regex).findall(content)
 			for title, url, thumb in match:
 				if len(thumb) > 0:
-					add_link(title, url, 201, thumb, fanart) 
+					add_link(title.strip(), url, 201, thumb, fanart) 
 				else:	
-					add_link(title, url, 201, iconimage, fanart) 
+					add_link(title.strip(), url, 201, iconimage, fanart) 
 	else:  
 		if '<CHANNEL>' in content:
 			match = re.compile('<NAME>(.+?)</NAME>').findall(content)
 			for channel_name in match:
 				if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
-					add_link(channel_name, u_tube, 201, iconimage, fanart)
+					add_link(channel_name.strip(), u_tube, 201, iconimage, fanart)
 				else:	
-					add_dir(channel_name, url, 13, iconimage, fanart)  
+					add_dir(channel_name.strip(), url, 13, iconimage, fanart)  
 		else:
 			match = re.compile(m3u_regex).findall(content)
 			for name, url in match: 
 				if 'UPDATED ON' in name or 'CẬP NHẬT' in name:
-					add_link(name, u_tube, 201, iconimage, fanart)
+					add_link(name.strip(), u_tube, 201, iconimage, fanart)
 				else:
-					add_link(name, url, 201, iconimage, fanart)
+					add_link(name.strip(), url, 201, iconimage, fanart)
 
 def thanh51_xml_m3u_index(name, url):
 	name = name.replace('[', '\[').replace(']', '\]')
@@ -313,30 +314,30 @@ def thanh51_xml_m3u_index(name, url):
 				final_link = re.compile(xml_regex_reg_2L).findall(vlink)
 				for name, url, thumb in final_link:
 					if len(thumb) <= 0:
-						add_link(name, url, 202, iconimage, fanart)		
+						add_link(name.strip(), url, 202, iconimage, fanart)		
 					else:
-						add_link(name, url, 202, thumb, fanart) 
+						add_link(name.strip(), url, 202, thumb, fanart) 
 			else:		
 				final_link = re.compile(xml_regex).findall(vlink)
 				for title, url, thumb in final_link:
 					if len(thumb) <= 0:
-						add_link(title, url, 201, iconimage, fanart) 
+						add_link(title.strip(), url, 201, iconimage, fanart) 
 					else:	
-						add_link(title, url, 201, thumb, fanart)  
+						add_link(title.strip(), url, 201, thumb, fanart)  
 	else: 
 		match = re.compile('#<CHANNEL>\s*#<NAME>' + name + '</NAME>((?s).*?)#</CHANNEL>').findall(content)
 		vlink = re.compile(m3u_regex).findall(match[0])
 		for title, ahref in vlink:	
-			add_link(title, ahref, 201, iconimage, fanart) 
+			add_link(title.strip(), ahref, 201, iconimage, fanart) 
 
 def atf01_m3u(url):
 	content = make_request(url)
 	match = re.compile(m3u_regex).findall(content)
 	for title, url in match:
 		if 'UPDATED ON' in title or 'CẬP NHẬT' in title:
-			add_link(title, u_tube, 201, iconimage, fanart)
+			add_link(title.strip(), u_tube, 201, iconimage, fanart)
 		else:
-			add_link(title, url, 201, iconimage, fanart)		
+			add_link(title.strip(), url, 201, iconimage, fanart)		
 			
 def play_my_playlist(url):
 	media_url = url.replace('&amp;', '&')
@@ -347,9 +348,7 @@ def play_my_playlist(url):
 def resolve_url(url):	
 	content = make_request(url)
 	if 'htvonline' in url:   
-		media_url = re.compile("file: \"([^\"]*)\"").findall(content)[0] 
-	elif 'hplus' in url:
-		media_url = re.compile('var iosUrl = "(.+?)"').findall(content)[0]	
+		media_url = re.compile('data-source="(.+?)"').findall(content)[0] 
 	elif 'giniko' in url: 
 		media_url = re.compile('file: "(.+?)"').findall(content)[0]
 	else:

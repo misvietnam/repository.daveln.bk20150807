@@ -62,6 +62,11 @@
 <link>rtsp://72.13.93.186/campcartoon</link>
 <thumbnail></thumbnail>
 </item>
+<item>
+<title>Tom & Jerry</title>
+<link>rtmp://208.53.180.242/ctv playpath=tom swfUrl=http://www.carolineoliveira.com.br/swf/player.swf&itvjonas pageUrl=http://carolineoliveira.com.br/tvamigos/tomejerry.html</link>
+<thumbnail></thumbnail>
+</item>
 </items>
 </channel>
 

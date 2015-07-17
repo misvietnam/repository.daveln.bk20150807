@@ -545,14 +545,20 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <!------------- NewsInVN ----------------->
 
 <item>
-<title>NewsInVN - Truyền Hình Tuổi Trẻ Link 1</title>
-<link>https://www.youtube.com/user/truyenhinhtuoitre</link>
+<title>NewsInVN - VIETNAM NEWS AGENCY (DailyMotion)</title>
+<link>http://www.dailymotion.com/rss/user/TTXVN/1</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
 <item>
-<title>NewsInVN - Truyền Hình Tuổi Trẻ Link 2</title>
+<title>NewsInVN - Truyền Hình Tuổi Trẻ (DailyMotion)</title>
 <link>http://www.dailymotion.com/rss/user/truyenhinhtuoitre/1</link>
+<thumbnail>vietnam.png</thumbnail>
+</item>
+
+<item>
+<title>NewsInVN - Truyền Hình Tuổi Trẻ (YouTube)</title>
+<link>https://www.youtube.com/user/truyenhinhtuoitre</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 
@@ -577,12 +583,6 @@ MakeUp, AudioBook, Immigration, AFV, Dicovery & Animal, OtherStuff -->
 <item>
 <title>NewsInVN - Truyền Hình Thông Tấn</title>
 <link>https://www.youtube.com/user/truyenhinhthongtan</link>
-<thumbnail>vietnam.png</thumbnail>
-</item>
-
-<item>
-<title>NewsInVN - VIETNAM NEWS AGENCY</title>
-<link>http://www.dailymotion.com/rss/user/TTXVN/1</link>
 <thumbnail>vietnam.png</thumbnail>
 </item>
 

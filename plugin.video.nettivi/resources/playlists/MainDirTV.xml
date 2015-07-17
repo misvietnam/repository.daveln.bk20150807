@@ -38,6 +38,20 @@
 </item>
 
 <item>
+<title>[COLOR magenta]TV Hải Ngoại (YouTube)[/COLOR]</title>
+<link>https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml</link>
+<thumbnail>utube.png</thumbnail>
+<mode>40</mode>
+</item>
+
+<item>
+<title>[COLOR white]TV Trong Nước (YouTube)[/COLOR]</title>
+<link>https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml</link>
+<thumbnail>utube.png</thumbnail>
+<mode>40</mode>
+</item>
+
+<item>
 <title>[COLOR yellow]Replay[COLOR magenta] - [COLOR yellow]TV chiếu lại[/COLOR]</title>
 <link>http://113.160.49.39/tvcatchup</link>
 <thumbnail>tv.png</thumbnail>

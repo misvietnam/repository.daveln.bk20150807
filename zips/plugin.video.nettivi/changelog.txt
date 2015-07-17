@@ -1,11 +1,6 @@
-v 1.2.4
-Fixed parentheses
-
-v 1.2.3
+v 1.2.5
 Updated HTVOnline
-
-v 1.2.2
-Added tvcatchup
+Added YouTube channels
 
 v 1.0.0
 Initial release

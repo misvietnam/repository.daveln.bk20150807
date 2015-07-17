@@ -107,7 +107,7 @@ def main():
 	match = re.compile(xml_regex + '\s*<mode>(.*?)</mode>').findall(content)
 	for name, url, thumb, add_dir_mode in match:
 		add_dir(name, url, add_dir_mode, logos + thumb, fanart) 
-
+		
 def direct_link(): 
 	content = make_request(my_repo + 'master/playlists/direct_link.m3u')
 	match = re.compile(m3u_regex).findall(content)
@@ -126,6 +126,8 @@ def tv_directory(url):
 		else:
 			if 'Tôn Giáo TV' in channel_name:
 				add_dir(channel_name, url, 2, logos + 'religion.png', fanart)
+			elif 'Tôn Giáo (YouTube)' in channel_name:
+				add_dir(channel_name, my_repo + 'master/playlists/menulist.xml', 40, logos + 'religion.png', fanart)				
 			elif 'Thiếu Nhi TV' in channel_name:
 				add_dir(channel_name, url, 2, logos + 'thieunhi.png', fanart)					
 			elif 'Thể Thao TV' in channel_name:
@@ -136,6 +138,23 @@ def tv_directory(url):
 				add_dir(channel_name, url, 2, logos + 'radio.png', fanart)	  
 			else:
 				add_dir(channel_name, url, 2, iconimage, fanart) 
+
+def utube_channels(url):
+	content = make_request(url)
+	match = re.compile(xml_regex).findall(content)
+	for title, url, thumb in match:
+		if 'TV Hải Ngoại' in name: 
+			if 'OverseaNews' in title:
+				add_dir(title.replace('OverseaNews - ', ''), url, '', logos + 'YouTube.png', fanart)
+		elif 'Tôn Giáo' in name: 
+			if 'Religion' in title:
+				add_dir(title.replace('Religion - ', ''), url, '', logos + 'YouTube.png', fanart)				
+		else:
+			if 'NewsInVN' in title:
+				if '(DailyMotion)' in title:
+					pass
+				else:
+					add_dir(title.replace('NewsInVN - ', ''), url, '', logos + 'YouTube.png', fanart)		
 
 def tv_index(name, url):	
 	name = name.replace('[', '\[').replace(']', '\]').replace ('(', '\(').replace(')', '\)')
@@ -151,6 +170,7 @@ def tv_index(name, url):
 					add_link(title, url, 201, iconimage, fanart) 
 				else:	
 					add_link(title, url, 201, thumb, fanart)  
+
 
 def tv_scraper(url):
 	content = make_request(url)
@@ -380,6 +400,10 @@ def add_dir(name, url, mode, iconimage, fanart):
 	liz = xbmcgui.ListItem(name, iconImage = "DefaultFolder.png", thumbnailImage = iconimage)
 	liz.setInfo( type = "Video", infoLabels = { "Title": name } )
 	liz.setProperty('fanart_image', fanart)
+	if ('www.youtube.com/user/' in url) or ('www.youtube.com/channel/' in url):
+		u = 'plugin://plugin.video.youtube/%s/%s/' % (url.split( '/' )[-2], url.split( '/' )[-1])
+		ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
+		return ok	
 	ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
 	return ok
 
@@ -454,6 +478,9 @@ elif mode == 32:
 
 elif mode == 33:  
 	my_playlist_channel(name, url) 
+
+elif mode == 40:	
+	utube_channels(url)
 
 elif mode == 121: 
 	tvreplay_link(url)  		

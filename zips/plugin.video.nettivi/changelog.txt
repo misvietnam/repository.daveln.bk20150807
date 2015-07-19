@@ -1,6 +1,7 @@
 v 1.2.6
 Added search
 Updated logos
+Set settings default to "Menu Selection Mode"
 
 v 1.2.5
 Updated HTVOnline

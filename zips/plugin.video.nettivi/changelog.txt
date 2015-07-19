@@ -1,3 +1,7 @@
+v 1.2.6
+Added search
+Updated logos
+
 v 1.2.5
 Updated HTVOnline
 Added YouTube channels

@@ -8,7 +8,7 @@
 
 <channel>
 <name>Tôn Giáo TV</name>
-<thumbnail></thumbnail>
+<thumbnail>religion.png</thumbnail>
 <items>
 <item>
 <title>Công Giáo</title>
@@ -45,12 +45,12 @@
 
 <channel>
 <name>Tôn Giáo (YouTube)</name>
-<thumbnail></thumbnail>
+<thumbnail>religiontube.png</thumbnail>
 </channel>
 
 <channel>
 <name>Thiếu Nhi TV</name>
-<thumbnail></thumbnail>
+<thumbnail>thieunhi.png</thumbnail>
 <items>
 <item>
 <title>BABY TV</title>
@@ -77,7 +77,7 @@
 
 <channel>
 <name>Thể Thao TV</name>
-<thumbnail></thumbnail>
+<thumbnail>sports.png</thumbnail>
 <items>
 <item>
 <title>Tennis HD 1</title>
@@ -589,7 +589,7 @@
 
 <channel>
 <name>International TV</name>
-<thumbnail></thumbnail>
+<thumbnail>intertv.png</thumbnail>
 <items>
 <item>
 <title>Animal Planet</title>
@@ -850,7 +850,7 @@
 
 <channel>
 <name>World TV</name>
-<thumbnail></thumbnail>
+<thumbnail>world.png</thumbnail>
 <items>
 <item>
 <title>BBC Two</title>
@@ -944,7 +944,7 @@
 
 <channel>
 <name>TV Hải Ngoại</name>
-<thumbnail></thumbnail>
+<thumbnail>haingoai.png</thumbnail>
 <item>
 <title>BYN TV Houston TX 57.3</title>
 <link>http://stream.onworldtv.com/live/byn/index.m3u8</link>
@@ -1070,7 +1070,7 @@
 
 <channel>
 <name>Access Asia Network</name>
-<thumbnail></thumbnail>
+<thumbnail>accessasia.png</thumbnail>
 <items>
 <item>
 <title>Du Lịch & Cuộc Sống</title>
@@ -1137,7 +1137,7 @@
 
 <channel>
 <name>TV Trong Nước</name>
-<thumbnail></thumbnail>
+<thumbnail>vn.png</thumbnail>
 <items>
 <item>
 <title>VNews - Truyền Hình Thông Tấn</title>
@@ -1304,7 +1304,7 @@
 
 <channel>
 <name>VTC</name>
-<thumbnail></thumbnail>
+<thumbnail>vtc.png</thumbnail>
 <items>
 <item>
 <title>VTC 1</title>
@@ -1381,7 +1381,7 @@
 
 <channel>
 <name>Âm Nhạc TV</name>
-<thumbnail></thumbnail>
+<thumbnail>music.png</thumbnail>
 <items>
 <item>
 <title>Viet MTV</title>
@@ -1433,7 +1433,7 @@
 
 <channel>
 <name>Radio Tổng Hợp</name>
-<thumbnail></thumbnail>
+<thumbnail>radio.png</thumbnail>
 <items>
 <item>
 <title>Radio Bolsa</title>

@@ -129,7 +129,7 @@ def search_main():
 		try:
 			link = make_request(my_repo + 'master/playlists/my_tv.xml')	
 			match = re.compile(xml_channel_name).findall(link)
-			for channel_name in match:
+			for channel_name, thumb in match:
 				if re.search(searchText, removeAccents(channel_name.replace('Đ', 'D')), re.IGNORECASE):					
 					if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 						add_link(channel_name, u_tube, 201, logos + 'mytv.png', fanart)
@@ -152,7 +152,7 @@ def search_main():
 		try:
 			link = make_request(my_repo + 'master/playlists/thanh51.xml')
 			match = re.compile(xml_channel_name).findall(link)
-			for channel_name in match:
+			for channel_name, thumb in match:
 				if re.search(searchText, removeAccents(channel_name.replace('Đ', 'D')), re.IGNORECASE):					
 					if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 						add_link(channel_name, u_tube, 201, logos + 'thanh51.png', fanart)
@@ -282,7 +282,7 @@ def search_main():
 				link = make_request(onlinexml)
 				if '<channel>' in link:
 					match = re.compile(xml_channel_name).findall(link)
-					for channel_name in match:
+					for channel_name, thumb in match:
 						if re.search(searchText, removeAccents(channel_name.replace('Đ', 'D')), re.IGNORECASE):					
 							if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 								add_link(channel_name, u_tube, 201, logos + 'myxml.png', fanart)
@@ -314,7 +314,7 @@ def search_main():
 				myxml.close()
 				if '<channel>' in link:
 					match = re.compile(xml_channel_name).findall(link)
-					for channel_name in match:
+					for channel_name, thumb in match:
 						if re.search(searchText, removeAccents(channel_name.replace('Đ', 'D')), re.IGNORECASE):					
 							if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 								add_link(channel_name, u_tube, 201, logos + 'myxml.png', fanart)
@@ -551,7 +551,7 @@ def my_playlist_link():
 			myxml.close()
 			if '<channel>' in link:
 				match = re.compile(xml_channel_name).findall(link)
-				for channel_name in match:
+				for channel_name, thumb in match:
 					if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 						add_link(channel_name, u_tube, 201, iconimage, fanart)
 					else:
@@ -568,7 +568,7 @@ def my_playlist_link():
 			link = make_request(onlinexml)
 			if '<channel>' in link:
 				match = re.compile(xml_channel_name).findall(link)
-				for channel_name in match:
+				for channel_name, thumb in match:
 					if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 						add_link(channel_name, u_tube, 201, iconimage, fanart)
 					else:		
@@ -609,7 +609,7 @@ def thanh51_xml_m3u_channel(url):
 	if 'thanh51.xml' in url:
 		if '<channel>' in content:
 			match = re.compile(xml_channel_name).findall(content)
-			for channel_name in match:
+			for channel_name, thumb in match:
 				if 'UPDATED ON' in channel_name or 'CẬP NHẬT' in channel_name:
 					add_link(channel_name.strip(), u_tube, 201, iconimage, fanart)
 				else:

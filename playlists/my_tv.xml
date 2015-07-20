@@ -588,10 +588,76 @@
 </channel>
 
 <channel>
+<name>News TV</name>
+<thumbnail>news.png</thumbnail>
+<items>
+<item> 
+<title>Canada CP24 HD 720p</title>
+<link>http://bcliveuniv-lh.akamaihd.net/i/cpac1eng2014_01@119330/index_2000_av-p.m3u8</link>
+<thumbnail>http://i.ytimg.com/vi/Ewka8V7VF9A/maxresdefault.jpg</thumbnail>
+</item>
+<item>
+<title>ABC News</title>
+<link>http://abclive.abcnews.com/i/abc_live4@136330/master.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>BBC World News 1</title>
+<link>http://202.75.23.33:8800/live/ch28/01.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>BBC World News 2</title>
+<link>http://93.184.221.133/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>CNN International 1</title>
+<link>http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>CNN International 2</title>
+<link>http://livestation_hls-lh.akamaihd.net/i/cnn_en@105455/master.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>CNN America</title>
+<link>http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>REUTERS TV</title>
+<link>http://37.58.85.156/rlo001/ngrp:rlo001.stream_all/chunklist_b1056000.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Fox News Radio</title>
+<link>http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>NHK World HD</title>
+<link>http://plslive-w.nhk.or.jp/nhkworld/app/live.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>ENCA</title>
+<link>http://hd7.lsops.net/live/enca_en_hls.smil/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>i24 NEWS</title>
+<link>http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/master.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+</items>
+</channel>
+
+<channel>
 <name>International TV</name>
 <thumbnail>intertv.png</thumbnail>
 <items>
-
 <item>
 <title>Animal Planet</title>
 <link>http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028</link>
@@ -656,66 +722,6 @@
 <title>Weather Network</title>
 <link>http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/atl/master_Layer5.m3u8</link>
 <thumbnail>http://www.bell.ca/styles/tv/all_languages/all_regions/catalog_images/large/itv/the_weather_network.jpg</thumbnail>
-</item>
-<item> 
-<title>Canada CP24 HD 720p</title>
-<link>http://bcliveuniv-lh.akamaihd.net/i/cpac1eng2014_01@119330/index_2000_av-p.m3u8</link>
-<thumbnail>http://i.ytimg.com/vi/Ewka8V7VF9A/maxresdefault.jpg</thumbnail>
-</item>
-<item>
-<title>ABC News</title>
-<link>http://abclive.abcnews.com/i/abc_live4@136330/master.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>BBC World News 1</title>
-<link>http://202.75.23.33:8800/live/ch28/01.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>BBC World News 2</title>
-<link>http://93.184.221.133/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>CNN International 1</title>
-<link>http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>CNN International 2</title>
-<link>http://livestation_hls-lh.akamaihd.net/i/cnn_en@105455/master.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>CNN America</title>
-<link>http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>REUTERS TV</title>
-<link>http://37.58.85.156/rlo001/ngrp:rlo001.stream_all/chunklist_b1056000.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Fox News Radio</title>
-<link>http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>NHK World HD</title>
-<link>http://plslive-w.nhk.or.jp/nhkworld/app/live.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>ENCA</title>
-<link>http://hd7.lsops.net/live/enca_en_hls.smil/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>i24 NEWS</title>
-<link>http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/master.m3u8</link>
-<thumbnail></thumbnail>
 </item>
 <item>
 <title>KBS World</title>
@@ -940,6 +946,73 @@
 </channel>
 
 <channel>
+<name>Access Asia Network</name>
+<thumbnail>accessasia.png</thumbnail>
+<items>
+<item>
+<title>Du Lịch & Cuộc Sống</title>
+<link>http://tvod.accessasia.tv:8080/live/dulichcuocsong.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840245.jpg</thumbnail>
+</item>
+<item>
+<title>FBNC</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/htvcfbnc.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378781313.jpg</thumbnail>
+</item>
+<item>
+<title>O2TV</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv10.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280736_vctv10.jpg</thumbnail>
+</item>
+<item>
+<title>SCTV 14</title>
+<link>http://tvod.accessasia.tv:8080/live/sctv14.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064062.jpg</thumbnail>
+</item>
+<item>
+<title>SCTV HD</title>
+<link>http://tvod.accessasia.tv:8080/live/sctvhaihd.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932781.jpg</thumbnail>
+</item>
+<item>
+<title>Thuần Việt HD</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/thuanviet.480p/index.m3u8?e=1389744448&st=qyg7wGxdgIptlUnbonBKuQ</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840964.jpg</thumbnail>
+</item>
+<item>
+<title>VTV 4</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/vtv4.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378950974_vtv4.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 1</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv1.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064132.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 2</title>
+<link>http://tvod.accessasia.tv:8080/tvod/air/vctv2.480p/index.m3u8?e=1389728751&st=ec_kFlx1ytFUw6ErmiEmHg</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280470_vctv2.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 4</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv4.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1389779110_vtvcab4.jpg</thumbnail>
+</item>
+<item>
+<title>VTVcab 8</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv8.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932948.png</thumbnail>
+</item>
+<item>
+<title>VTVcab 17</title>
+<link>http://tvod.accessasia.tv:8080/live/vctv17.480p/index.m3u8</link>
+<thumbnail>http://www.accessasia.tv/img/img_livetv/1378953454_7620794552_db01e9de3a_m.jpg</thumbnail>
+</item>
+</items>
+</channel>
+
+<channel>
 <name>TV Hải Ngoại</name>
 <thumbnail>haingoai.png</thumbnail>
 <item>
@@ -1081,73 +1154,6 @@
 <title>VZN TV Houston TX</title>
 <link>http://206.190.136.254/liveStream/vantv_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
-</item>
-</items>
-</channel>
-
-<channel>
-<name>Access Asia Network</name>
-<thumbnail>accessasia.png</thumbnail>
-<items>
-<item>
-<title>Du Lịch & Cuộc Sống</title>
-<link>http://tvod.accessasia.tv:8080/live/dulichcuocsong.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840245.jpg</thumbnail>
-</item>
-<item>
-<title>FBNC</title>
-<link>http://tvod.accessasia.tv:8080/tvod/air/htvcfbnc.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378781313.jpg</thumbnail>
-</item>
-<item>
-<title>O2TV</title>
-<link>http://tvod.accessasia.tv:8080/live/vctv10.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280736_vctv10.jpg</thumbnail>
-</item>
-<item>
-<title>SCTV 14</title>
-<link>http://tvod.accessasia.tv:8080/live/sctv14.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064062.jpg</thumbnail>
-</item>
-<item>
-<title>SCTV HD</title>
-<link>http://tvod.accessasia.tv:8080/live/sctvhaihd.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932781.jpg</thumbnail>
-</item>
-<item>
-<title>Thuần Việt HD</title>
-<link>http://tvod.accessasia.tv:8080/tvod/air/thuanviet.480p/index.m3u8?e=1389744448&st=qyg7wGxdgIptlUnbonBKuQ</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378840964.jpg</thumbnail>
-</item>
-<item>
-<title>VTV 4</title>
-<link>http://tvod.accessasia.tv:8080/tvod/air/vtv4.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378950974_vtv4.jpg</thumbnail>
-</item>
-<item>
-<title>VTVcab 1</title>
-<link>http://tvod.accessasia.tv:8080/live/vctv1.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1371064132.jpg</thumbnail>
-</item>
-<item>
-<title>VTVcab 2</title>
-<link>http://tvod.accessasia.tv:8080/tvod/air/vctv2.480p/index.m3u8?e=1389728751&st=ec_kFlx1ytFUw6ErmiEmHg</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1379280470_vctv2.jpg</thumbnail>
-</item>
-<item>
-<title>VTVcab 4</title>
-<link>http://tvod.accessasia.tv:8080/live/vctv4.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1389779110_vtvcab4.jpg</thumbnail>
-</item>
-<item>
-<title>VTVcab 8</title>
-<link>http://tvod.accessasia.tv:8080/live/vctv8.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378932948.png</thumbnail>
-</item>
-<item>
-<title>VTVcab 17</title>
-<link>http://tvod.accessasia.tv:8080/live/vctv17.480p/index.m3u8</link>
-<thumbnail>http://www.accessasia.tv/img/img_livetv/1378953454_7620794552_db01e9de3a_m.jpg</thumbnail>
 </item>
 </items>
 </channel>

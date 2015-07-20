@@ -42,7 +42,6 @@ my_repo = 'https://raw.githubusercontent.com/daveln/repository.daveln/'
 tvreplay = 'http://113.160.49.39/tvcatchup/'
 u_tube = 'http://www.youtube.com'
 tvviet = 'http://tv.vnn.vn/'
-global searchText
 
 tv_mode = mysettings.getSetting('tv_mode')
 if len(tv_mode) <= 0:
@@ -407,8 +406,7 @@ def search_direct():
 		keyb = xbmc.Keyboard('', 'Enter search text')
 		keyb.doModal()
 		if (keyb.isConfirmed()):
-			searchText = urllib.quote_plus(keyb.getText()).replace('+', ' ')
-			
+			searchText = urllib.quote_plus(keyb.getText()).replace('+', ' ')			
 		content = make_request(my_repo + 'master/playlists/direct_link.m3u')
 		match = re.compile(m3u_regex).findall(content)
 		for name, url in match:	
@@ -439,29 +437,29 @@ def utube_channels(url):
 	content = make_request(url)
 	match = re.compile(xml_regex).findall(content)
 	for title, url, thumb in match:
-		if 'TV Hải Ngoại' in name: 
-			if 'OverseaNews' in title:
-				if len(thumb) > 0:
-					if thumb.startswith ('http'):
-						add_dir(title.replace('OverseaNews - ', ''), url, '', thumb, fanart)
+		if 'dailymotion' in url:
+			pass
+		else:	
+			if 'TV Hải Ngoại' in name: 
+				if 'OverseaNews' in title:			
+					if len(thumb) > 0:
+						if thumb.startswith ('http'):
+							add_dir(title.replace('OverseaNews - ', ''), url, '', thumb, fanart)
+						else:
+							add_dir(title.replace('OverseaNews - ', ''), url, '', logos + 'haingoaitube.png', fanart)						
 					else:
-						add_dir(title.replace('OverseaNews - ', ''), url, '', logos + 'haingoaitube.png', fanart)						
-				else:
-					add_dir(title.replace('OverseaNews - ', ''), url, '', logos + 'haingoaitube.png', fanart)
-		elif 'Tôn Giáo' in name: 
-			if 'Religion' in title:
-				if len(thumb) < 1:				
-					add_dir(title.replace('Religion - ', ''), url, '', logos + 'religiontube.png', fanart)	
-				else:
-					if thumb.startswith ('http'):				
-						add_dir(title.replace('Religion - ', ''), url, '', thumb, fanart)
-					else:
+						add_dir(title.replace('OverseaNews - ', ''), url, '', logos + 'haingoaitube.png', fanart)
+			elif 'Tôn Giáo' in name: 
+				if 'Religion' in title:
+					if len(thumb) < 1:				
 						add_dir(title.replace('Religion - ', ''), url, '', logos + 'religiontube.png', fanart)	
-		else:
-			if 'NewsInVN' in title:
-				if '(DailyMotion)' in title:
-					pass
-				else:
+					else:
+						if thumb.startswith ('http'):				
+							add_dir(title.replace('Religion - ', ''), url, '', thumb, fanart)
+						else:
+							add_dir(title.replace('Religion - ', ''), url, '', logos + 'religiontube.png', fanart)	
+			else:
+				if 'NewsInVN' in title:
 					if len(thumb) > 0:
 						if thumb.startswith ('http'):					
 							add_dir(title.replace('NewsInVN - ', ''), url, '', thumb, fanart)
@@ -484,7 +482,6 @@ def tv_index(name, url):
 					add_link(title, url, 201, iconimage, fanart) 
 				else:	
 					add_link(title, url, 201, thumb, fanart)  
-
 
 def tv_scraper(url):
 	content = make_request(url)

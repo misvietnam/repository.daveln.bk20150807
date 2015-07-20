@@ -1,3 +1,7 @@
+v 1.2.8
+Fixed errors
+Added news section
+
 v 1.2.7
 Fixed errors
 
@@ -5,10 +9,6 @@ v 1.2.6
 Added search
 Updated logos
 Set settings default to "Menu Selection Mode"
-
-v 1.2.5
-Updated HTVOnline
-Added YouTube channels
 
 v 1.0.0
 Initial release

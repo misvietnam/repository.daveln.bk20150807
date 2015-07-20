@@ -591,6 +591,7 @@
 <name>International TV</name>
 <thumbnail>intertv.png</thumbnail>
 <items>
+
 <item>
 <title>Animal Planet</title>
 <link>http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028</link>
@@ -656,14 +657,10 @@
 <link>http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/atl/master_Layer5.m3u8</link>
 <thumbnail>http://www.bell.ca/styles/tv/all_languages/all_regions/catalog_images/large/itv/the_weather_network.jpg</thumbnail>
 </item>
-<title>CP24 News - f4m</title>
-<link>plugin://plugin.video.f4mTester/?url=http://ams-lp3.9c9media.com/hds-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.f4m</link>
-<thumbnail>http://static.ctvnews.ca/bellmedia/cp24/img/apple-touch-icon-72x72.png</thumbnail>
-</item>
-<item>
-<title>CP24 News - m3u8</title>
-<link>http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.m3u8</link>
-<thumbnail>http://static.ctvnews.ca/bellmedia/cp24/img/apple-touch-icon-72x72.png</thumbnail>
+<item> 
+<title>Canada CP24 HD 720p</title>
+<link>http://bcliveuniv-lh.akamaihd.net/i/cpac1eng2014_01@119330/index_2000_av-p.m3u8</link>
+<thumbnail>http://i.ytimg.com/vi/Ewka8V7VF9A/maxresdefault.jpg</thumbnail>
 </item>
 <item>
 <title>ABC News</title>
@@ -947,8 +944,28 @@
 <thumbnail>haingoai.png</thumbnail>
 <item>
 <title>BYN TV Houston TX 57.3</title>
-<link>http://stream.onworldtv.com/live/byn/index.m3u8</link>
-<thumbnail></thumbnail>
+<link>http://origin.onworldtv.com:1935/liveorigin/stream_byn/playlist.m3u8?worldtokenstarttime=1437363222&worldtokenendtime=1437447822&worldtokenhash=2FOWz209DmUTthrlMUpLjtTORpPNGjCrp4E0MWf75vc=</link>
+<thumbnail>http://img.onworldtv.com/355x200/banner/2015/03/26/133479-261989-BYNTV.jpg</thumbnail>
+</item>
+<item>
+<title>VSTAR Television Channel</title>
+<link>"http://origin.onworldtv.com:1935/liveorigin/stream_vstartv/playlist.m3u8?worldtokenstarttime=1437363306&worldtokenendtime=1437447906&worldtokenhash=vUlp_doJbuj0WZnTTlLwpBRHS9EElCZ9oXslmOQQnHQ=</link>
+<thumbnail>http://img.onworldtv.com/1180x665/banner/2015/05/19/216437-vstartv_logo.jpg</thumbnail>
+</item>
+<item>
+<title>Vietnamese American Network Television</title>
+<link>http://origin.onworldtv.com:1935/liveorigin/stream_van/playlist.m3u8?worldtokenstarttime=1437363502&worldtokenendtime=1437448102&worldtokenhash=AZwzXIx32NvZETqarCNYDdj5WtVJTV0cyl5qBnwrpDk=</link>
+<thumbnail>http://img.onworldtv.com/460x260/banner/2015/03/26/894908-922708-vantv.jpg</thumbnail>
+</item>
+<item>
+<title>Little Saigon Channel</title>
+<link>http://origin.onworldtv.com:1935/liveorigin/stream_lstv/playlist.m3u8?worldtokenstarttime=1437363595&worldtokenendtime=1437448195&worldtokenhash=Afl9_5sHqaK2BLidznILnI7Wwr2CtIlvz-sxaIfvnx4=</link>
+<thumbnail>http://img.onworldtv.com/355x200/banner/2015/03/08/534534-livetv_littlesaigon_banner.jpg</thumbnail>
+</item>
+<item>
+<title>Sai Gon Network Channel</title>
+<link>http://origin.onworldtv.com:1935/liveorigin/stream_sgn/playlist.m3u8?worldtokenstarttime=1437363704&worldtokenendtime=1437448304&worldtokenhash=xvcAmTGH03ZlIXOZL1K1zQuEA9FZHTAyjwva9UssK3A=</link>
+<thumbnail>http://img.onworldtv.com/250x250/banner/2015/03/11/884908-livetv_sgn_banner.jpg</thumbnail>
 </item>
 <item>
 <title>Cải Lương</title>
@@ -1440,6 +1457,16 @@
 <link>http://ice7.securenetsystems.net/RBVU?type=.flv&playSessionID=724B6190-D27B-7531-5AD645183B89ED51</link>
 <thumbnail>http://www.ktulaw.com/wp-content/uploads/Radio-Bolsa-logo.jpg</thumbnail>
 <item>
+<item>
+<title>Little Saigon Radio</title>
+<link>http://origin.onworldtv.com:1935/liveorigin/lstv_aud/chunklist_w1228284842_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2Nzk0JndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEzOTQmd29ybGR0b2tlbmhhc2g9X3dCeXhGU09TLWtGd2RISEREd2JLNDBiWkhfSy1CdG41UVZ1c3RVYUNydz0=.m3u8</link>
+<thumbnail>http://img.onworldtv.com/250x250/banner/2015/03/11/629964-livetv_littlesaigon_banner.jpg</thumbnail>
+</item>
+<item>
+<title>Sai Gon Network Radio Channel</title>
+<link>http://origin.onworldtv.com:1935/liveorigin/sgn_aud/playlist.m3u8?worldtokenstarttime=1437363779&worldtokenendtime=1437448379&worldtokenhash=iggyrO1iUKIFBQqXlx9CDvt0JainDUTO2KW6W3nPb5A=</link>
+<thumbnail>http://img.onworldtv.com/250x250/banner/2015/03/11/884908-livetv_sgn_banner.jpg</thumbnail>
+</item>
 <title>VOA News</title>
 <link>mms://a823.l211056822.c2110.g.lm.akamaistream.net/D/823/2110/v0001/reflector:56822</link>
 <thumbnail></thumbnail>

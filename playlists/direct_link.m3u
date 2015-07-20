@@ -1,6 +1,6 @@
 #EXTM3U
 
-#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 25 THÁNG 5 NĂM 2015[/COLOR]
+#EXTINF:-1,[COLOR yellow]CẬP NHẬT NGÀY 20 THÁNG 7 NĂM 2015[/COLOR]
 http://www.youtube.com
 
 #EXTINF:-1,[COLOR cyan]Tôn Giáo[/COLOR]
@@ -576,6 +576,59 @@ rtmp://118.69.198.109:1935/live playpath=audio swfUrl=http://thvl.vn/vplayer.swf
 #EXTINF:-1,Sóc Trăng Radio
 rtmp://115.78.3.164/live playpath=FMsoctrang swfUrl=http://thst.vn/MediaPlayer/vplayer.swf pageUrl=http://thst.vn/Phat_thanh.aspx live=1 timeout=90
 
+#EXTINF:-1,[COLOR cyan]News and Weather TV[/COLOR]
+http://www.youtube.com
+#EXTINF:-1,Canada CP24 HD 720p
+http://bcliveuniv-lh.akamaihd.net/i/cpac1eng2014_01@119330/index_2000_av-p.m3u8
+#EXTINF:-1,ABC News
+http://abclive.abcnews.com/i/abc_live4@136330/master.m3u8
+#EXTINF:-1,BBC World News 1
+http://202.75.23.33:8800/live/ch28/01.m3u8
+#EXTINF:-1,BBC World News 2
+http://93.184.221.133/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8
+#EXTINF:-1,CNN International 1
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8
+#EXTINF:-1,CNN International 2
+http://livestation_hls-lh.akamaihd.net/i/cnn_en@105455/master.m3u8
+#EXTINF:-1,CNN America
+http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8
+#EXTINF:-1,REUTERS TV
+http://37.58.85.156/rlo001/ngrp:rlo001.stream_all/chunklist_b1056000.m3u8
+#EXTINF:-1,Fox News Radio
+http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8
+#EXTINF:-1,NHK World HD
+http://plslive-w.nhk.or.jp/nhkworld/app/live.m3u8
+#EXTINF:-1,ENCA
+http://hd7.lsops.net/live/enca_en_hls.smil/playlist.m3u8
+#EXTINF:-1,i24 NEWS
+http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/master.m3u8
+#EXTINF:-1,KBS World
+http://117.103.206.26:1935/live/_definst_/KBSWORLD/KBSWORLD_live.smil/playlist.m3u8
+#EXTINF:-1,FRANCE 24
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/france24_en/ls_satlink/b_828.m3u8
+#EXTINF:-1,RT Global HD
+http://rt.ashttp14.visionip.tv/live/rt-global-live-HD/playlist.m3u8
+#EXTINF:-1,RT America HD
+http://rt.ashttp14.visionip.tv/live/rt-america-live-HD/playlist.m3u8
+#EXTINF:-1,Edgesuite TV
+http://live.bltvios.com.edgesuite.net/tv/us/master.m3u8
+#EXTINF:-1,Bloomberg TV
+http://hd4.lsops.net/live/bloomber_en_hls.smil/playlist.m3u8
+#EXTINF:-1,ALJAZEERA English 1
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/livestation/ls_lmle/ajam_828.m3u8
+#EXTINF:-1,ALJAZEERA English 2
+http://hd2.lsops.net/live/aljazeer_en_hls.smil/playlist.m3u8
+#EXTINF:-1,Russia Today
+http://rt.ashttp14.visionip.tv/live/rt-doc-live-HD/playlist.m3u8
+#EXTINF:-1,Euro News TV
+http://livestation_hls-lh.akamaihd.net/i/euronews_en@107240/master.m3u8
+#EXTINF:-1,Weather Network Canada HD 720p
+http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/nat/master_Layer5.m3u8
+#EXTINF:-1,Weather Channel
+http://kalsegsec-a.akamaihd.net/dc-0/m/pa-live-publish3/kLive/smil:1_oorxcge2_all.smil/chunklist_b2096000.m3u8
+#EXTINF:-1,Weather Network
+http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/atl/master_Layer5.m3u8
+
 #EXTINF:-1,[COLOR cyan]International TV[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,BBC Two
@@ -634,56 +687,6 @@ http://tv.vnzee.com/live/ngc~ztv_CND_partner.m3u8
 http://202.75.23.35:8800/live/ch39/01.m3u8
 #EXTINF:-1,Discovery Channel
 http://203.162.235.26:80/lives/origin03/discoveryhd.isml/discoveryhd.m3u8
-#EXTINF:-1,Weather Channel
-http://kalsegsec-a.akamaihd.net/dc-0/m/pa-live-publish3/kLive/smil:1_oorxcge2_all.smil/chunklist_b2096000.m3u8
-#EXTINF:-1,Weather Network
-http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/atl/master_Layer5.m3u8
-#EXTINF:-1,CP24 News - f4m
-plugin://plugin.video.f4mTester/?url=http://ams-lp3.9c9media.com/hds-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.f4m
-#EXTINF:-1,CP24 News - m3u8
-http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/cp24Open8.m3u8
-#EXTINF:-1,ABC News
-http://abclive.abcnews.com/i/abc_live4@136330/master.m3u8
-#EXTINF:-1,BBC World News 1
-http://202.75.23.33:8800/live/ch28/01.m3u8
-#EXTINF:-1,BBC World News 2
-http://93.184.221.133/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8
-#EXTINF:-1,CNN International 1
-http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8
-#EXTINF:-1,CNN International 2
-http://livestation_hls-lh.akamaihd.net/i/cnn_en@105455/master.m3u8
-#EXTINF:-1,CNN America
-http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8
-#EXTINF:-1,REUTERS TV
-http://37.58.85.156/rlo001/ngrp:rlo001.stream_all/chunklist_b1056000.m3u8
-#EXTINF:-1,Fox News Radio
-http://ca-edge-3.cdn2.streamago.tv:1935/streamagoedge/34960/28965/chunklist_w1761528217.m3u8
-#EXTINF:-1,NHK World HD
-http://plslive-w.nhk.or.jp/nhkworld/app/live.m3u8
-#EXTINF:-1,ENCA
-http://hd7.lsops.net/live/enca_en_hls.smil/playlist.m3u8
-#EXTINF:-1,i24 NEWS
-http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/master.m3u8
-#EXTINF:-1,KBS World
-http://117.103.206.26:1935/live/_definst_/KBSWORLD/KBSWORLD_live.smil/playlist.m3u8
-#EXTINF:-1,FRANCE 24
-http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/france24_en/ls_satlink/b_828.m3u8
-#EXTINF:-1,RT Global HD
-http://rt.ashttp14.visionip.tv/live/rt-global-live-HD/playlist.m3u8
-#EXTINF:-1,RT America HD
-http://rt.ashttp14.visionip.tv/live/rt-america-live-HD/playlist.m3u8
-#EXTINF:-1,Edgesuite TV
-http://live.bltvios.com.edgesuite.net/tv/us/master.m3u8
-#EXTINF:-1,Bloomberg TV
-http://hd4.lsops.net/live/bloomber_en_hls.smil/playlist.m3u8
-#EXTINF:-1,ALJAZEERA English 1
-http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/livestation/ls_lmle/ajam_828.m3u8
-#EXTINF:-1,ALJAZEERA English 2
-http://hd2.lsops.net/live/aljazeer_en_hls.smil/playlist.m3u8
-#EXTINF:-1,Russia Today
-http://rt.ashttp14.visionip.tv/live/rt-doc-live-HD/playlist.m3u8
-#EXTINF:-1,Euro News TV
-http://livestation_hls-lh.akamaihd.net/i/euronews_en@107240/master.m3u8
 #EXTINF:-1,LONDON LIVE TV
 http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8
 #EXTINF:-1,CHELSEA
@@ -715,10 +718,9 @@ http://2co1.vp9.tv/chn/nba/v.m3u8
 #EXTINF:-1,FOX SPORTS
 http://113.160.49.34/lives/lives/origin03/foxhdmb.isml/foxhdmb.m3u8
 
-#EXTINF:0,[COLOR lime]****[COLOR yellow] CẬP NHẬT NGÀY 14 THÁNG 7 NĂM 2015 [COLOR lime]****[/COLOR]
+#EXTINF:-1,[COLOR lime]thanh51's playlist[COLOR yellow] (CẬP NHẬT NGÀY 14 THÁNG 7 NĂM 2015)[/COLOR]
 http://www.youtube.com
-
-#EXTINF:-1, [COLOR cyan]***************KÊNH VTV *****************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH VTV ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,VTV1 HD S1
 http://scache.fptplay.net.vn/livez/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -899,7 +901,7 @@ http://vtsstr9.sctv.vn/mslive/C036_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f25
 #EXTINF:-1,VTVCab17
 http://tvod.accessasia.tv:8080/live/vctv17.480p/index.m3u8 
 
-#EXTINF:-1, [COLOR cyan]****************KÊNH AN VIÊN ******************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH AN VIÊN ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1, NCM S1
 http://hlscache.fptplay.net.vn/livez/ncm_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -941,7 +943,7 @@ http://113.160.49.34/lives/origin01/nhaccodiensd.isml/nhaccodiensd.m3u8
 #EXTINF:-1, ĐỌC SÁCH
 http://113.160.49.34/lives/origin01/docsachsd.isml/docsachsd.m3u8
 
-#EXTINF:-1, [COLOR cyan]*********************KÊNH HTV-HTVC ***********************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH HTV-HTVC ****[/COLOR] 
 http://www.youtube.com/
 #EXTINF:-1, HTV9 HD
 http://playcache.fptplay.net.vn/live/htv9HD_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl                                                                                                                  
@@ -1016,7 +1018,7 @@ http://tvod.accessasia.tv:8080/live/htvcfbnc.480p/index.m3u8
 #EXTINF:-1, HTVC THỂ THAO
 http://scache.fptplay.net.vn/live/htvcthethao_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 
-#EXTINF:-1, [COLOR cyan]*******************KÊNH VTC ***********************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH VTC ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,VTC1 HD S1
 http://123.30.184.172:1935/livez3/smil:vtchd1.smil/playlist.m3u8
@@ -1121,7 +1123,7 @@ http://scache.fptplay.net.vn/livez/vtc16_2500.stream/playlist.m3u8?token=c335Vyd
 #EXTINF:0, VTC16 S3
 http://113.160.49.34/lives/origin01/vtc16sd.isml/vtc16sd.m3u8
 
-#EXTINF:-1, [COLOR cyan]*******************KÊNH SCTV-http ***********************[/COLOR]  
+#EXTINF:-1, [COLOR cyan]**** KÊNH SCTV-http ****[/COLOR]  
 http://www.youtube.com/
 #EXTINF:-1, SCTVHD-SÓNG NHẠC
 http://vtsstr9.sctv.vn/mslive/C006_HD_4/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
@@ -1188,7 +1190,7 @@ http://vtsstr9.sctv.vn/mslive/C034_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f25
 #EXTINF:0, SCTV18 
 http://vtsstr9.sctv.vn/mslive/C008_HD_2/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
 
-#EXTINF:-1, [COLOR cyan]***************KÊNH SCTV-rtmpe *****************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH SCTV-rtmpe ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,SCTV Dulich HD
 rtmpe://112.197.2.154/glive//C007_HD_3 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/ token=qrtkL6xTjSqeG4q3
@@ -1253,7 +1255,7 @@ rtmpe://112.197.2.154/live//sctv17_2 live=1 swfUrl=http://tv24.vn/getflash.ashx 
 #EXTINF:-1,SCTV18
 rtmpe://112.197.2.154/glive//C008_HD_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/ token=qrtkL6xTjSqeG4q3
 
-#EXTINF:-1,[COLOR cyan]***************KÊNH ĐỊA PHƯƠNG ************************[/COLOR]  
+#EXTINF:-1,[COLOR cyan]**** KÊNH ĐỊA PHƯƠNG ****[/COLOR]  
 http://www.youtube.com/
 #EXTINF:-1,HA NOI1 S1
 http://2co1.vp9.tv/chn/hn1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36
@@ -1382,7 +1384,7 @@ http://113.160.49.34/lives/origin02/thtvsd.isml/thtvsd.m3u8
 #EXTINF:0, KIÊN GIANG 1
 http://113.160.49.34/lives/origin02/kg1sd.isml/kg1sd.m3u8 
 
-#EXTINF:-1, [COLOR cyan]**************KÊNH QUỐC TẾ (MÁY CHỦ TRONG NƯỚC) *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH QUỐC TẾ (MÁY CHỦ TRONG NƯỚC) ****[/COLOR] 
 http://www.youtube.com/
 #EXTINF:0, SCTVHD-NATGEO 
 http://vtsstr9.sctv.vn/mslive/C002_HD_4/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
@@ -1494,7 +1496,7 @@ http://113.160.49.34/lives/origin03/foxsd.isml/foxsd.m3u8
 #EXTINF:-1,FOXSPORT2
 http://vtsstr9.sctv.vn/mslive/C020_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
 
-#EXTINF:-1, [COLOR cyan]************** KÊNH QUỐC TẾ: Veetle.com(MÁY CHỦ USA) *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH QUỐC TẾ: Veetle.com(MÁY CHỦ USA) ****[/COLOR] 
 http://www.youtube.com/
 #EXTINF:-1, Columbo
 http://veetle.com/index.php/hls/streamMbrfast/51d8cf3f02188_/stream.m3u8
@@ -1577,7 +1579,7 @@ http://veetle.com/index.php/hls/streamMbrfast/52a0adb7b6024_/stream.m3u8
 #EXTINF:-1,Cartoon Remix
 http://veetle.com/index.php/hls/streamMbrfast/53b1f49df2730_/stream.m3u8
 
-#EXTINF:-1, [COLOR cyan]******************KÊNH LIFETV *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH LIFETV ****[/COLOR] 
 http://www.youtube.com/                                           
 #EXTINF:-1, LIFETV
 rtmp://27.118.16.16/live/live_lifetv 
@@ -1605,7 +1607,7 @@ rtmp://27.118.16.16/live//ttv
 #EXTINF:-1, NLĐ
 http://222.255.27.218:8081/nld.m3u8
 
-#EXTINF:-1,[COLOR cyan]*************KÊNH HẢI NGOẠI ******************[/COLOR]
+#EXTINF:-1,[COLOR cyan]**** KÊNH HẢI NGOẠI ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,S Channel 54.4
 http://64.71.129.2:8080/hls/ius_000114.m3u8
@@ -1686,7 +1688,7 @@ http://origin.onworldtv.com:1935/liveorigin/lstv/chunklist_w2039022998_tkd29ybGR
 #EXTINF:-1,Sai Gon Network Channel
 http://origin.onworldtv.com:1935/liveorigin/sgn/chunklist_w942043689_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NjUxJndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEyNTEmd29ybGR0b2tlbmhhc2g9dzNCdXB1NVpacjJDYVg1LUxhOGlCOTdlNDFkNG5PbWlpeE90bGEwbXRkQT0=.m3u8
 
-#EXTINF:-1, [COLOR cyan]************* KÊNH RADIO *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH RADIO ****[/COLOR] 
 http://www.youtube.com/ 
 #EXTINF:-1,VOV1
 http://210.245.60.242:1935/vov1/vov1/playlist.m3u8

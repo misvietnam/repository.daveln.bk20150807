@@ -3,7 +3,7 @@
 #EXTINF:0,[COLOR lime]****[COLOR yellow] CẬP NHẬT NGÀY 14 THÁNG 7 NĂM 2015 [COLOR lime]****[/COLOR]
 http://www.youtube.com
 
-#EXTINF:-1, [COLOR cyan]***************KÊNH VTV *****************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH VTV ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,VTV1 HD S1
 http://scache.fptplay.net.vn/livez/vtv1hd_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -176,7 +176,7 @@ http://vtsstr9.sctv.vn/mslive/C036_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f25
 #EXTINF:-1,VTVCab17
 http://tvod.accessasia.tv:8080/live/vctv17.480p/index.m3u8 
 
-#EXTINF:-1, [COLOR cyan]****************KÊNH AN VIÊN ******************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH AN VIÊN ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1, NCM S1
 http://hlscache.fptplay.net.vn/livez/ncm_1000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
@@ -217,7 +217,7 @@ http://113.160.49.34/lives/origin01/nhaccodiensd.isml/nhaccodiensd.m3u8
 #EXTINF:-1, ĐỌC SÁCH
 http://113.160.49.34/lives/origin01/docsachsd.isml/docsachsd.m3u8
 
-#EXTINF:-1, [COLOR cyan]*********************KÊNH HTV-HTVC ***********************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH HTV-HTVC ****[/COLOR] 
 http://www.youtube.com/
 #EXTINF:-1, HTV9 HD
 http://playcache.fptplay.net.vn/live/htv9HD_2000.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl                                                                                                                  
@@ -284,7 +284,7 @@ http://tvod.accessasia.tv:8080/live/htvcfbnc.480p/index.m3u8
 #EXTINF:-1, HTVC THỂ THAO
 http://scache.fptplay.net.vn/live/htvcthethao_2500.stream/playlist.m3u8?token=c335VydmVyX3RpbWU9MTQwMjYxNzIyNCZoYXNoX3ZhbHVl&did=NzIyNCZoYXNoX3ZhbHVl
 
-#EXTINF:-1, [COLOR cyan]*******************KÊNH VTC ***********************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH VTC ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,VTC1 HD S1
 http://123.30.184.172:1935/livez3/smil:vtchd1.smil/playlist.m3u8
@@ -383,7 +383,7 @@ http://scache.fptplay.net.vn/livez/vtc16_2500.stream/playlist.m3u8?token=c335Vyd
 #EXTINF:0, VTC16 S3
 http://113.160.49.34/lives/origin01/vtc16sd.isml/vtc16sd.m3u8
 
-#EXTINF:-1, [COLOR cyan]*******************KÊNH SCTV-http ***********************[/COLOR]  
+#EXTINF:-1, [COLOR cyan]**** KÊNH SCTV-http ****[/COLOR]  
 http://www.youtube.com/
 #EXTINF:-1, SCTVHD-SÓNG NHẠC
 http://vtsstr9.sctv.vn/mslive/C006_HD_4/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
@@ -450,7 +450,7 @@ http://vtsstr9.sctv.vn/mslive/C034_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f25
 #EXTINF:0, SCTV18 
 http://vtsstr9.sctv.vn/mslive/C008_HD_2/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
 
-#EXTINF:-1, [COLOR cyan]***************KÊNH SCTV-rtmpe *****************[/COLOR]
+#EXTINF:-1, [COLOR cyan]**** KÊNH SCTV-rtmpe ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,SCTV Dulich HD
 rtmpe://112.197.2.154/glive//C007_HD_3 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/ token=qrtkL6xTjSqeG4q3
@@ -515,7 +515,7 @@ rtmpe://112.197.2.154/live//sctv17_2 live=1 swfUrl=http://tv24.vn/getflash.ashx 
 #EXTINF:-1,SCTV18
 rtmpe://112.197.2.154/glive//C008_HD_2 live=1 swfUrl=http://tv24.vn/getflash.ashx pageUrl=http://www.tv24.vn/ token=qrtkL6xTjSqeG4q3
 
-#EXTINF:-1,[COLOR cyan]***************KÊNH ĐỊA PHƯƠNG ************************[/COLOR]  
+#EXTINF:-1,[COLOR cyan]**** KÊNH ĐỊA PHƯƠNG ****[/COLOR]  
 http://www.youtube.com/
 #EXTINF:-1,HA NOI1 S1
 http://2co1.vp9.tv/chn/hn1/v.m3u8|User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36
@@ -644,7 +644,7 @@ http://113.160.49.34/lives/origin02/thtvsd.isml/thtvsd.m3u8
 #EXTINF:0, KIÊN GIANG 1
 http://113.160.49.34/lives/origin02/kg1sd.isml/kg1sd.m3u8 
 
-#EXTINF:-1, [COLOR cyan]**************KÊNH QUỐC TẾ (MÁY CHỦ TRONG NƯỚC) *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH QUỐC TẾ (MÁY CHỦ TRONG NƯỚC) ****[/COLOR] 
 http://www.youtube.com/
 #EXTINF:0, SCTVHD-NATGEO 
 http://vtsstr9.sctv.vn/mslive/C002_HD_4/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
@@ -755,7 +755,7 @@ http://113.160.49.34/lives/origin03/foxsd.isml/foxsd.m3u8
 #EXTINF:-1,FOXSPORT2
 http://vtsstr9.sctv.vn/mslive/C020_SD_3/chunklist.m3u8?us=b58fb424f50d6622991f2519a55dd1ade42026f97400d5f2d0c83c860685d831ae6d271893992731192ede4845ad83be-103247
 
-#EXTINF:-1, [COLOR cyan]************** KÊNH QUỐC TẾ: Veetle.com(MÁY CHỦ USA) *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH QUỐC TẾ: Veetle.com(MÁY CHỦ USA) ****[/COLOR] 
 http://www.youtube.com/
 #EXTINF:-1, Columbo
 http://veetle.com/index.php/hls/streamMbrfast/51d8cf3f02188_/stream.m3u8
@@ -838,7 +838,7 @@ http://veetle.com/index.php/hls/streamMbrfast/52a0adb7b6024_/stream.m3u8
 #EXTINF:-1,Cartoon Remix
 http://veetle.com/index.php/hls/streamMbrfast/53b1f49df2730_/stream.m3u8
 
-#EXTINF:-1, [COLOR cyan]******************KÊNH LIFETV *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH LIFETV ****[/COLOR] 
 http://www.youtube.com/                                           
 #EXTINF:-1, LIFETV
 rtmp://27.118.16.16/live/live_lifetv 
@@ -865,7 +865,7 @@ rtmp://27.118.16.16/live//ttv
 #EXTINF:-1, NLĐ
 http://222.255.27.218:8081/nld.m3u8
 
-#EXTINF:-1,[COLOR cyan]*************KÊNH HẢI NGOẠI ******************[/COLOR]
+#EXTINF:-1,[COLOR cyan]**** KÊNH HẢI NGOẠI ****[/COLOR]
 http://www.youtube.com/
 #EXTINF:-1,S Channel 54.4
 http://64.71.129.2:8080/hls/ius_000114.m3u8
@@ -946,7 +946,7 @@ http://origin.onworldtv.com:1935/liveorigin/lstv/chunklist_w2039022998_tkd29ybGR
 #EXTINF:-1,Sai Gon Network Channel
 http://origin.onworldtv.com:1935/liveorigin/sgn/chunklist_w942043689_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NjUxJndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEyNTEmd29ybGR0b2tlbmhhc2g9dzNCdXB1NVpacjJDYVg1LUxhOGlCOTdlNDFkNG5PbWlpeE90bGEwbXRkQT0=.m3u8
 
-#EXTINF:-1, [COLOR cyan]************* KÊNH RADIO *******************[/COLOR] 
+#EXTINF:-1, [COLOR cyan]**** KÊNH RADIO ****[/COLOR] 
 http://www.youtube.com/ 
 #EXTINF:-1,VOV1
 http://210.245.60.242:1935/vov1/vov1/playlist.m3u8

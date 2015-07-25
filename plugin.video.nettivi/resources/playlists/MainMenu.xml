@@ -18,7 +18,7 @@
 
 <item>
 <title>[COLOR orange]TV[COLOR magenta] + [COLOR orange]Âm Nhạc[COLOR magenta] + [COLOR orange]Radio Tổng Hợp[/COLOR]</title>
-<link>https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/my_tv.xml</link>
+<link>NoRedirect</link>
 <thumbnail>mytv.png</thumbnail>
 <mode>1</mode>
 </item>
@@ -32,21 +32,28 @@
 
 <item>
 <title>[COLOR lightblue]Live TV[COLOR magenta] - [COLOR lightblue]Links posted by ATF01[/COLOR]</title>
-<link>https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ATF01.m3u</link>
+<link>NoRedirect</link>
 <thumbnail>atf01.png</thumbnail>
 <mode>21</mode>
 </item>
 
 <item>
-<title>[COLOR magenta]TV Hải Ngoại (YouTube)[/COLOR]</title>
-<link>https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml</link>
+<title>[COLOR white][B]Tôn Giáo[/B] (YouTube)[/COLOR]</title>
+<link>NoRedirect</link>
+<thumbnail>religiontube.png</thumbnail>
+<mode>40</mode>
+</item>
+
+<item>
+<title>[COLOR lime][B]SBTN[/B] + TV Hải Ngoại (YouTube)[/COLOR]</title>
+<link>NoRedirect</link>
 <thumbnail>haingoaitube.png</thumbnail>
 <mode>40</mode>
 </item>
 
 <item>
 <title>[COLOR white]TV Trong Nước (YouTube)[/COLOR]</title>
-<link>https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml</link>
+<link>NoRedirect</link>
 <thumbnail>vntube.png</thumbnail>
 <mode>40</mode>
 </item>
@@ -59,7 +66,7 @@
 </item>
 
 <item>
-<title>[COLOR lime]HTVOnline[/COLOR]</title>
+<title>[COLOR magenta]HTVOnline[/COLOR]</title>
 <link>http://www.htvonline.com.vn/livetv</link>
 <thumbnail>htvonline.png</thumbnail>
 <mode>3</mode>

@@ -28,31 +28,7 @@ icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
 home_menu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'menulist.xml'))
 prog_menu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'ProgMenu.xml'))
-prog_link = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/ProgMenu.xml'
-home_link = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
 dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':'-', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
-
-if not os.path.exists(home_menu):
-	try:
-		open(home_menu, 'w').close()
-	except:
-		pass  	
-	
-try:
-	urllib.urlretrieve (home_link, home_menu)
-except:
-	pass 		
-	
-if not os.path.exists(prog_menu):
-	try:
-		open(prog_menu, 'w').close()
-	except:
-		pass  	
-	
-try:
-	urllib.urlretrieve (prog_link, prog_menu)
-except:
-	pass 	
 
 def menu_list():
 	try:

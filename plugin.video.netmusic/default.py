@@ -27,23 +27,11 @@ fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 icon = xbmc.translatePath(os.path.join(home, 'icon.png'))
 logos = xbmc.translatePath(os.path.join(home, 'resources', 'logos\\'))
 homemenu = xbmc.translatePath(os.path.join(home, 'resources', 'playlists', 'menulist.xml'))
-homelink = 'https://raw.githubusercontent.com/daveln/repository.daveln/master/playlists/menulist.xml'
 dict = {'&amp;':'&', '&quot;':'"', '.':' ', '&#39':'\'', '&#038;':'&', '&#039':'\'', '&#8211;':'-', '&#8220;':'"', '&#8221;':'"', '&#8230':'...'}
 karaoke = 'http://www.timkaraoke.com'
 nctm = 'http://m.nhaccuatui.com/'
 csn = 'http://chiasenhac.com/'
-ThuyNga = 'http://ott.thuynga.com/'
-
-if not os.path.exists(homemenu):
-	try:
-		open(homemenu, 'w').close()
-	except:
-		pass  	
-	
-try:
-	urllib.urlretrieve (homelink, homemenu)
-except:
-	pass		
+ThuyNga = 'http://ott.thuynga.com/'	
 
 def replace_all(text, dict):
 	try:
@@ -84,7 +72,7 @@ def home():
 			
 def main():
 	add_dir('[COLOR lightgreen]Hát Karaoke Online[/COLOR]', 'KaraokeOnline', 6, logos + 'karaoke.png', fanart)
-	add_dir('[COLOR yellow]Thuý Nga - Paris by Night[/COLOR]', 'thuynga', 11, logos + 'thuynga.png', fanart)  	
+	#add_dir('[COLOR yellow]Thuý Nga - Paris by Night[/COLOR]', 'thuynga', 11, logos + 'thuynga.png', fanart)  	
 	add_dir('[COLOR lime]Video Chia Sẻ Nhạc[/COLOR]', csn, 2, logos + 'csn.png', fanart)
 	add_dir('[COLOR cyan]Video Nhạc Của Tui[/COLOR]', nctm + 'mv.html', 2, logos + 'nct.png', fanart)  
 	add_link('[COLOR gold]Vmusic[/COLOR]', 'http://206.190.140.142:1935/liveStream/mtv_1/playlist.m3u8', 4, logos + 'vmusic.png', fanart)	

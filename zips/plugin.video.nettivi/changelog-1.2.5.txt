@@ -1,6 +1,0 @@
-v 1.2.5
-Updated HTVOnline
-Added YouTube channels
-
-v 1.0.0
-Initial release

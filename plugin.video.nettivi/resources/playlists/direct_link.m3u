@@ -1786,9 +1786,7 @@ mms://wm.nhk.or.jp/rj/on_demand/wma/vietnamese.wma
 #EXTINF:-1,RFI Vietnam
 http://95.81.155.3/2584/rfi_en_vietnamien/rfivietnamien.mp3
 
-#EXTINF:-1,[COLOR orange]ATF01's playlist[COLOR yellow] (UPDATED ON 28 JUNE 2015)[/COLOR]
-http://www.youtube.com
-#EXTINF:-1,[COLOR yellow]UPDATED ON 28 JUNE 2015[/COLOR]
+#EXTINF:-1,[COLOR lime]ATF01's playlist[COLOR yellow] (UPDATED ON 28 JUNE 2015)[/COLOR]
 http://www.youtube.com
 #EXTINF:-1,[COLOR ff00afaf]***** American / Euro Live TV *****[/COLOR]  
 http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on live=true

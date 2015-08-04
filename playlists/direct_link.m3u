@@ -1786,298 +1786,306 @@ mms://wm.nhk.or.jp/rj/on_demand/wma/vietnamese.wma
 #EXTINF:-1,RFI Vietnam
 http://95.81.155.3/2584/rfi_en_vietnamien/rfivietnamien.mp3
 
-#EXTINF:-1,[COLOR orange]ATF01's playlist[/COLOR]
+#EXTINF:-1,[COLOR lime]ATF01's playlist[COLOR yellow] (UPDATED ON 28 JUNE 2015)[/COLOR]
 http://www.youtube.com
-#EXTINF:-1,*** American Live TV ***  
+#EXTINF:-1,[COLOR ff00afaf]***** American / Euro Live TV *****[/COLOR]  
 http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on live=true
-#EXTINF:-1,Animal Planet Live HD
-http://sjc-uhls-vip01.ustream.tv/watch/playlist.m3u8?cid=12762028
-#EXTINF:-1,Animal Planet HD
-http://200.76.77.237/LIVE/H01/CANAL373/PROFILE03.m3u8? 
-#EXTINF:-1,Nat Geo Wild -HD
-http://cdn-02.sdn.si/natgeowild/natgeowild.isml/natgeowild-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,Nat Geo Wild
-http://cdn-02.sdn.si/natgeowild/natgeowild.isml/natgeowild-video%3D1500000-audio101%3D128000.m3u8
-#EXTINF:-1,NAT GEO Sp.
-http://200.76.77.237/LIVE/H01/CANAL377/PROFILE03.m3u8? 
-#EXTINF:-1,NAT GEO WILD SP. HD
-http://200.76.77.237/LIVE/H01/CANAL355/PROFILE03.m3u8? 
-#EXTINF:-1,Discovery
-http://200.76.77.237/LIVE/H01/CANAL371/PROFILE03.m3u8? 
-#EXTINF:-1,Discovery HD
-http://200.76.77.237/LIVE/H01/CANAL351/PROFILE03.m3u8? 
-#EXTINF:-1,Discovery Theater HD
-http://200.76.77.237/LIVE/H01/CANAL351/PROFILE03.m3u8?
-#EXTINF:-1,Outdoor Channel
-http://cdn-02.sdn.si/outdoorchannel/outdoorchannel.isml/outdoorchannel-video%3D1500000-audio101%3D128000.m3u8
-#EXTINF:-1,1HD
+#EXTINF:-1,[COLOR cyan] 5 USA [/COLOR]
+http://37.187.172.168:8080/5_usa_nFovf/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Aaa Family [/COLOR]
+http://63.237.48.3/ios/AAA_FAMILY/AAA_FAMILY.m3u8
+#EXTINF:-1,[COLOR ff00afaf] 1HD  [/COLOR]
 http://109.239.142.62:1935/live/livestream3/chunklist_w788555898.m3u8
-#EXTINF:-1,4-Fun TV (Balan) 
+#EXTINF:-1,[COLOR ff00afaf] 4-Fun TV (Balan) [/COLOR] 
 rtmp://edge2.popler.tv:1935/publishlive?play=123452 playpath=4funtv swfUrl=http://images.popler.tv/player/flowplayer.commercial.swf pageUrl=http://www.popler.tv/ live=true
-#EXTINF:-1,4seven
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/fourseven.m3u8
-#EXTINF:-1,5 USA
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/fiveusa.m3u8
-#EXTINF:-1,ABC HD
+#EXTINF:-1,[COLOR ff00afaf] ABC HD [/COLOR]
 http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8?sd=10&b=1200&rebase=on
-#EXTINF:-1,ABC News
+#EXTINF:-1,[COLOR ff00afaf]  ABC News [/COLOR]
 http://abclive.abcnews.com/i/abc_live4@136330/index_2500_av-b.m3u8?sd=10&rebase=on live=true
-#EXTINF:-1,A&E
-http://200.76.77.237/LIVE/H01/CANAL211/PROFILE03.m3u8?
-#EXTINF:-1,AMC
-http://200.76.77.237/LIVE/H01/CANAL444/PROFILE03.m3u8?
-#EXTINF:-1,Al Jazeera News
+#EXTINF:-1,[COLOR ff00afaf]  ABC News -1200 [/COLOR]
+http://abclive.abcnews.com/i/abc_live4@136330/index_1200_av-b.m3u8?sd=10&b=1200&rebase=on
+#EXTINF:-1,[COLOR ff00afaf] A&E HD[/COLOR]
+http://trtcanlitv-lh.akamaihd.net/i/TRTHD_1@182045/index_1500_av-p.m3u8?sd=10&rebase=on
+#EXTINF:-1,[COLOR ff00afaf] Al Jazeera News [/COLOR]
 http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/aljazeera_en/ls_satlink/b_528.m3u8
-#EXTINF:-1,AXN HD
-http://200.76.77.237/LIVE/H01/CANAL213/PROFILE03.m3u8?
-#EXTINF:-1,BBC News [satlink]
+#EXTINF:-1,[COLOR ff00afaf] Animal Planet HD [/COLOR]
+http://80.80.160.168/live/1/1500000/live.m3u8
+#EXTINF:-1,[COLOR ff00afaf] BBC World News [satlink][/COLOR]
 http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8
-#EXTINF:-1,BBC 1
-http://93.184.221.133/00573D/1277/1277-0.m3u8
-#EXTINF:-1,BBC 2
-http://37.220.29.186:8000/bbc2/bbc2/index.m3u8
-#EXTINF:-1,BBC World News
-rtmp://d.cdn.newschat.tv/edge playpath=bbcwn_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/world/
-#EXTINF:-1,BBC Knowledge
-http://cdn-02.sdn.si/bbcknowledge/bbcknowledge.isml/bbcknowledge-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,Bein 3 Sports HD
+#EXTINF:-1,[COLOR ff00afaf]  BBC World News (Satlink)[/COLOR]
+http://93.184.221.133/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Bein 1[/COLOR]
+http://streamindo.ddns.net/jhos/beib1_5/streamindo/playlist.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Bein 2[/COLOR]
+http://streamindo.ddns.net/jhos/beib2_5/streamindo/playlist.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Bein 3[/COLOR]
 http://streamindo.ddns.net/jhos/beib3_5/streamindo/playlist.m3u8
-#EXTINF:-1,Bein Sports 9 HD
-http://edge.hls.dt.hitbox.tv/hls/koraonline/index.m3u8
-#EXTINF:-1,Big Ten Network
+#EXTINF:-1,[COLOR ff00afaf] Big Ten Network [/COLOR]
 http://bigten247.cdnak.bigtenhd.neulion.com/nlds/btn2go/btnnetwork/as/live/btnnetwork_hd_3000.m3u8
-#EXTINF:-1,Box Nation (PN)
-http://hospital.privatizehealthinsurance.net:1935/sports/boxnation/chunklist_w547824066.m3u8
-#EXTINF:-1,Bloomberg TV
+#EXTINF:-1,[COLOR ff00afaf] Bloomberg TV [/COLOR]
 http://btv-i.akamaihd.net/hls/live/202760/btvusa_ios/P1/M12K.m3u8
-#EXTINF:-1,Capital TV
+#EXTINF:-1,[COLOR ff00afaf] CPAC TV Canada [/COLOR]
 http://ooyalahd2-f.akamaihd.net/i/globalradio01_delivery@156521/index_656_av-p.m3u8?sd=10&rebase=on
-#EXTINF:-1,CBSN Live HD
-http://cbsnewshd-lh.akamaihd.net/i/CBSNDC_4@199302/index_4000_av-b.m3u8?sd=10&rebase=on
-#EXTINF:-1,CBS Drama
-http://cdn-02.sdn.si/cbsdrama/cbsdrama.isml/cbsdrama-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,CBS Action ***?
-http://cdn-02.sdn.si/cbsdrama/cbsdrama.isml/cbsdrama-audio101%3D128000-video%3D2500000-989984.m3u8
-#EXTINF:-1,CBS Action
-http://cdn-02.sdn.si/cbsdrama/cbsdrama.isml/cbsdrama-video%3D900000-audio101%3D128000.m3u8
-#EXTINF:-1,CBS Reality
-http://83.139.104.99/Content/HLS/Live/Channel(cbs_reality)/Stream(03)/index.m3u8
-#EXTINF:-1,CNN
+#EXTINF:-1,[COLOR ff00afaf] TSC - The Shopping Channel 1080HD-Canada [/COLOR]
+http://tscstreaming-lh.akamaihd.net/i/TSCLiveStreaming_1@91031/index_3_av-p.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CTV News Canada [/COLOR]
+http://198.179.31.198/live/2053.high.stream/2053.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CFCN Canada [/COLOR]
+http://198.179.31.198/live/2062.high.stream/2062.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CFCN Yorkton[/COLOR]
+http://198.179.31.198/live/2062.high.stream/2062.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CFCN Edmonton[/COLOR]
+http://198.179.31.198/live/2053.high.stream/2053.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CFCN Regina[/COLOR]
+http://198.179.31.198/live/2056.high.stream/2056.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CFCN Lethbrige[/COLOR]
+http://198.179.31.198/live/2059.high.stream/2059.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CFCN Lethbridge [/COLOR]
+http://198.179.31.198/live/2059.high.stream/2059.high.stream/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] TVA -French-[/COLOR]
+http://tva_chaine_uls-lh.akamaihd.net/i/chaine_tva_1@125892/index_700_av-p.m3u8?sd=10&amp;rebase=on
+#EXTINF:-1,[COLOR ff00afaf] Dance TV Canada [/COLOR]
+http://87.239.31.232/hls/230.3.4.169.sd.stream.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Dicovery Science HD [/COLOR]
+http://80.80.160.168/live/9/2500000/live.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CBSN News HD [/COLOR]
+http://cbsnewshd-lh.akamaihd.net/i/CBSN_2@199302/index_4000_av-b.m3u8?sd=10&rebase=on
+#EXTINF:-1,[COLOR ff00afaf] CNN [/COLOR]
 http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8?Vd?u#bt!25
-#EXTINF:-1,CNN USA 2 (satlink)
+#EXTINF:-1,[COLOR ff00afaf] CNN -!fast!-[/COLOR]
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_528.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CNN USA 2 (satlink) [/COLOR]
 http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8
-#EXTINF:-1,Channel-4
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/channel4.m3u8
-#EXTINF:-1,CTV News Channel HD
-http://ams-lp2.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/ctvnewsOpen8.m3u8
-#EXTINF:-1,Crime Investigation
-http://cdn-02.sdn.si/crimeinvestigation/crimeinvestigation.isml/crimeinvestigation-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,Cinecanal C+
-http://200.76.77.237/LIVE/H01/CANAL430/PROFILE03.m3u8?
-#EXTINF:-1,Cinestar 
-http://83.139.104.99/Content/HLS/Live/Channel(cinestar_tv)/Stream(03)/index.m3u8 
-#EXTINF:-1,Cinestar Action
-http://83.139.104.99/Content/HLS/Live/Channel(CINESTAR_ACTION_AND_THRILLER)/Stream(03)/index.m3u8 
-#EXTINF:-1,Cinestar Premiere 
-http://83.139.104.99/Content/HLS/Live/Channel(cinestar_premiere_1)/Stream(03)/index.m3u8 
-#EXTINF:-1,Cinestar Premiere 2 
-http://83.139.104.99/Content/HLS/Live/Channel(cinestar_premiere_2)/Stream(03)/index.m3u8 
-#EXTINF:-1,Dubai One TV  
-http://cdnedvrdubaitv.endavomedia.com/smil:dmilivedubaitvhls.smil/chunklist.m3u8
-#EXTINF:-1,E4  
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/e4.m3u8
-#EXTINF:-1,ESPN HD
-http://200.76.77.237/LIVE/H01/CANAL516/PROFILE03.m3u8?
-#EXTINF:-1,ESPN
-http://200.76.77.237/LIVE/H01/CANAL558/PROFILE03.m3u8?
-#EXTINF:-1,ESPN 3 sp
-http://200.76.77.237/LIVE/H01/CANAL520/PROFILE03.m3u8?moneysports 
-#EXTINF:-1,Fashion TV HD
-http://cdn-02.sdn.si/fashiontv/fashiontv.isml/fashiontv-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,Food network
-http://83.139.104.99/Content/HLS/Live/Channel(food_network)/Stream(03)/index.m3u8
-#EXTINF:-1,Fox + HD
-http://cdn-02.sdn.si/fox/fox.isml/fox-video%3D1500000-audio101%3D128000.m3u8 
-#EXTINF:-1,Fox 1 HD
-http://200.76.77.237/LIVE/H01/CANAL415/PROFILE03.m3u8? 
-#EXTINF:-1,Fox Actions US
-http://200.76.77.237/LIVE/H01/CANAL416/PROFILE03.m3u8? 
-#EXTINF:-1,Fox Classic US
-http://200.76.77.237/LIVE/H01/CANAL478/PROFILE03.m3u8?
-#EXTINF:-1,Fox Cinema US
-http://200.76.77.237/LIVE/H01/CANAL472/PROFILE03.m3u8? 
-#EXTINF:-1,Fox Cinema
-http://200.76.77.237/LIVE/H01/CANAL472/PROFILE03.m3u8?
-#EXTINF:-1,Fox Crime
-http://cdn-01.sdn.si/fox/fox.isml/fox-video%3D350000-audio102%3D64000.m3u8
-#EXTINF:-1,Fox Life
-http://cdn-02.sdn.si/foxlife/foxlife.isml/foxlife-video%3D1500000-audio101%3D128000.m3u8 
-#EXTINF:-1,Fox Movies HD
-http://200.76.77.237/LIVE/H01/CANAL417/PROFILE03.m3u8?
-#EXTINF:-1,Fox Movies 1
-http://200.76.77.237/LIVE/H01/CANAL415/PROFILE03.m3u8? 
-#EXTINF:-1,Fox Movies 2
-http://200.76.77.237/LIVE/H01/CANAL417/PROFILE03.m3u8?
-#EXTINF:-1,Fox Family HD
-http://200.76.77.237/LIVE/H01/CANAL475/PROFILE03.m3u8? 
-#EXTINF:-1,Fox Film Zone HD
-http://200.76.77.237/LIVE/H01/CANAL440/PROFILE03.m3u8?
-#EXTINF:-1,Fox Sports HD
-http://200.76.77.237/LIVE/H01/CANAL522/PROFILE03.m3u8?
-#EXTINF:-1,Fox Sports 2 HD
-http://200.76.77.237/LIVE/H01/CANAL527/PROFILE03.m3u8?
-#EXTINF:-1,Fox Sport 2
-http://200.76.77.237/LIVE/H01/CANAL527/PROFILE03.m3u8?moneysports
-#EXTINF:-1,Film 4
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/film4.m3u8
-#EXTINF:-1,Film Zone HD
-http://200.76.77.237/LIVE/H01/CANAL440/PROFILE03.m3u8?
-#EXTINF:-1,History Channel
-http://cdn-01.sdn.si/historychannel/historychannel.isml/historychannel-video%3D900000-audio101%3D128000.m3u8
-#EXTINF:-1,I24 News HD
-http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/650.m3u8
-#EXTINF:-1,I24 News
-http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/i24/ls_satlink/b_828.m3u8?Vd?u#bt!25
-#EXTINF:-1,ITV London HD
-http://93.184.221.133/00573D/283/283-0.m3u8
-#EXTINF:-1,London Live
-http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_484.m3u8
-#EXTINF:-1,Movies 24/7
-http://167.114.65.88/hls/mv.m3u8 
-#EXTINF:-1,MBC Max
-http://63.237.48.23/ios/MBC_MAX/MBC_MAX.m3u8
-#EXTINF:-1,More4
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/more4.m3u8
-#EXTINF:-1,MSNBC News HD
-rtmp://b.cdn.newschat.tv/edge playpath=msnbc_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/politics/
-#EXTINF:-1,MTV HD
-http://200.76.77.237/LIVE/H01/CANAL701/PROFILE03.m3u8?
-#EXTINF:-1,MTV Dance HD
-http://cdn-02.sdn.si/mtvdance/mtvdance.isml/mtvdance-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,MTV Rocks HD
-http://cdn-02.sdn.si/mtvrocks/mtvrocks.isml/mtvrocks-video%3D2500000-audio101%3D128000.m3u8
-#EXTINF:-1,MTV Hits
-http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8 
-#EXTINF:-1,NBC Golf Live & new events 1080
-http://tvegolf-i.Akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8?Vd?u#bt!25
-#EXTINF:-1,NBC Sports live Extra - Golf Live HD
-http://tvegolf-i.Akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8
-#EXTINF:-1,Pac-12 Net LA HD
-http://xrxs.net/video/live-p12losa-4728.m3u8?Vd?u#bt!25
-#EXTINF:-1,Pac-12 Net MT HD
-http://xrxs.net/video/live-p12moun-4728.m3u8?Vd?u#bt!25
-#EXTINF:-1,Pac-12 Net BA HD
-http://xrxs.net/video/live-p12baya-2328.m3u8?Vd?u#bt!25
-#EXTINF:-1,Pac Nat-1080 HD
-http://xrxs.net/video/live-p12netw-4728.m3u8?Vd?u#bt!25
-#EXTINF:-1,Pac ORE-1080 HD
-http://xrxs.net/video/live-p12oreg-4728.m3u8?Vd?u#bt!25
-#EXTINF:-1,Pink Action
-http://str108.setplex.net/fastv_2psh/PinkActionglobal_rly_greece_109/chunklist.m3u8
-#EXTINF:-1,Pink Action 2
-http://str108.setplex.net/fastv_2psh/PinkAction2global_rly_greece_103/chunklist.m3u8
-#EXTINF:-1,Pink Action 3
-http://str108.setplex.net/fastv_2psh/PinkAction3global_rly_greece_103/chunklist.m3u8
-#EXTINF:-1,Pink Horror
-http://str108.setplex.net/fastv_2psh/PinkHorrorglobal_rly_greece_103/chunklist.m3u8
-#EXTINF:-1,Pink Movies 2
-http://str108.setplex.net/fastv_2psh/PinkMovies2global_rly_greece_109/chunklist.m3u8
-#EXTINF:-1,Pink Movies 3
-http://str108.setplex.net/fastv_2psh/PinkMovies3global_rly_greece_109/chunklist.m3u8
-#EXTINF:-1,Pink Premium
-http://str108.setplex.net/fastv_2psh/PinkPremiumglobal_rly_greece_103/chunklist.m3u8
-#EXTINF:-1,NASA HD
-http://public.infozen.cshls.lldns.net/infozen/public/public/public_1000.m3u8
-#EXTINF:-1,Sportnet-360 HD
+#EXTINF:-1,[COLOR ff00afaf] CNN International[/COLOR]
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnn/ls_satlink/b_828.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CNBC News [Satlink] [/COLOR]
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnbc_eu/ls_satlink/b_828.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CBC Canada 1[/COLOR]
+rtmp://b.cdn.newschat.tv/edge playpath=cbc_live swfUrl=http://newschat.tv/player.swf pageUrl=http://www.livenewschat.eu/canada/
+#EXTINF:-1,[COLOR ff00afaf] CBC Canada ms-live[/COLOR]
+rtmp://a.cdn.newschat.tv/edge playpath=cbc_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/canada/
+#EXTINF:-1,[COLOR cyan] CBS Actions [/COLOR]
+http://37.187.172.168:8080/cbs_action_9ruGe/index.m3u8
+#EXTINF:-1,[COLOR cyan] CBS Reality [/COLOR]
+http://37.187.172.168:8080/cbs_reality_MZl6H/index.m3u8
+#EXTINF:-1,[COLOR cyan] CBS Drama [/COLOR]
+http://37.187.172.168:8080/cbs_drama_mSFWV/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] CBS Sports HD[/COLOR]
 http://nlds187.cdnak.neulion.com/nlds/sportsnetnow/sn_360/as/live/sn_360_hd_3000_ipad.m3u8
-#EXTINF:-1,Sports Stadium Astro HD
-http://stream.ssh101.com/hls/333656.m3u8
-#EXTINF:-1,Sky News UK
-http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/skynews/ls_satlink/b_828.m3u8
-#EXTINF:-1,Sky News UK 2 [satlink]
-http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/bbc_world/ls_satlink/b_828.m3u8?Vd?u#bt!25
-#EXTINF:-1,SKY Sports 1 HD
-http://213.250.19.50/sporttv2/sporttv2.isml/sporttv2-video=4500000-audio101=128000.m3u8
-#EXTINF:-1,SKY Sports 2 HD
-http://85.25.246.141:8081/Sports/HDSkySport2/playlist.m3u8
-#EXTINF:-1,SKY Sports 3 HD
-http://85.25.246.141:8081/Sports/SkySport3/playlist.m3u8
-#EXTINF:-1,SKY Sports 4 HD
-http://85.25.246.141:8081/Sports/SkySports4/playlist.m3u8
-#EXTINF:-1,TLC 1 HD
-http://200.76.77.237/LIVE/H01/CANAL356/PROFILE03.m3u8? 
-#EXTINF:-1,Travel Channel UK HD
-http://cdn-02.sdn.si/travelchannel/travelchannel.isml/travelchannel-video%3D2500000-audio101%3D128000.m3u8 
-#EXTINF:-1,TSN 1 HD
-http://ams-lp5.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/tsnOpen8.m3u8
-#EXTINF:-1,TSN 3 HD
-http://ams-lp1.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN3Open8.m3u8
-#EXTINF:-1,TSN 5 HD
-http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN5Open8.m3u8
-#EXTINF:-1,TNT HD
-http://200.76.77.237/LIVE/H01/CANAL435/PROFILE03.m3u8?
-#EXTINF:-1,The Pentagon Channel  HD
-http://149.11.34.6:1935/live/pentagon.stream/playlist.m3u8?wowzasessionid=750145898
-#EXTINF:-1,True Drama
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/truedrama.m3u8
-#EXTINF:-1,True Movies 1
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/truemovies1.m3u8
-#EXTINF:-1,True Movies 2
-http://wpc.AC3A.edgecastcdn.net:80/80AC3A/001/hls/m3u8/truemovies2.m3u8
-#EXTINF:-1,True TV
-http://cdn.live.simplestream.com/coder5/coder.channels.channel2/hls/2/playlist.m3u8
-#EXTINF:-1,Universal HD
-http://200.76.77.237/LIVE/H01/CANAL207/PROFILE03.m3u8?
-#EXTINF:-1,Random Sports 1 HD
-http://stream.ssh101.com/hls/321111.m3u8
-#EXTINF:-1,Random Sports 2 HD
-http://stream.ssh101.com/hls/333656.m3u8
-#EXTINF:-1,RT Global Auto HD
-http://odna.octoshape.net/f3f5m2v4/cds/ch1_auto.smil/chunklist_b2500000.m3u8
-#EXTINF:-1,RT America Live Auto HD
-http://odna.octoshape.net/f3f5m2v4/cds/ch4_auto.smil/chunklist_b2500000.m3u8
-#EXTINF:-1,RT Documentary Live Auto HD
-http://odna.octoshape.net/f3f5m2v4/cds/ch5_auto.smil/chunklist_b2500000.m3u8
-#EXTINF:-1,RT UK Live Auto HD
-http://odna.octoshape.net/f3f5m2v4/cds/ch6_auto.smil/chunklist_b2500000.m3u8
-#EXTINF:-1,RT America
-http://odna.octoshape.net/f3f5m2v4/cds/ch4_320p/chunklist.m3u8?Vd?u
-#EXTINF:-1,kanal Sports  HD + new events
-http://lswb-de-08.servers.octoshape.net:1935/live/kanalsport_2000k/chunklist_w1315561860.m3u8?Vd?u
-#EXTINF:-1,Astro Supersports 1&3 HD
-http://stream.ssh101.com/hls/321111.m3u8
-#EXTINF:-1,Astro Supersports 2 HD
-http://stream.ssh101.com/hls/333656.m3u8
-#EXTINF:-1,EuroSports 1 HD
+#EXTINF:-1,[COLOR cyan] Comedy Central [/COLOR]
+http://37.187.172.168:8080/comedy_central_HMqhT/index.m3u8
+#EXTINF:-1,[COLOR cyan] Comedy Central Extra [/COLOR]
+http://37.187.172.168:8080/comedy_centralextra_1g9Dc/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Dance TV Canada [/COLOR]
+http://87.239.31.232/hls/230.3.4.169.sd.stream.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Dubai One[/COLOR]
+http://dmi.mangomolo.com:1935/dubaione/smil:dubaione.smil/chunklist_w958549813_b1800000.m3u8
+#EXTINF:-1,[COLOR ff00afaf] ESPN [/COLOR]
+http://80.80.160.168/live/6/5000000/live.m3u8
+#EXTINF:-1,[COLOR ff00afaf] EuroSport -French-[/COLOR]
+http://esioslive6-i.akamaihd.net/hls/live/202892/AL_P_ESP1_FR_FRA/playlist_1800.m3u8
+#EXTINF:-1,[COLOR ff00afaf] EuroSport -Int'l[/COLOR]
 http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
-#EXTINF:-1,EuroSports 2 HD
-http://213.250.19.50/eurosport2/eurosport2.isml/eurosport2-video=1500000-audio101=128000.m3u8
-#EXTINF:-1,VH1 UK HD
-http://hlsstr02.svc.rt.ru/hls/CH_VH1CLASSIC/variant.m3u8
-#EXTINF:-1,Various Sports (TSN 1) HD
-http://ams-lp5.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/tsnOpen8.m3u8
-#EXTINF:-1,Various Sports 2 HD
-http://ams-lp1.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN3Open8.m3u8
-#EXTINF:-1,Various Sports (TSN 4) HD
-http://ams-lp2.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN4Open8.m3u8
-#EXTINF:-1,Various Sports (TSN 5) HD
-http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN5Open8.m3u8
-#EXTINF:-1,Vevo -1 HD Country Musics
+#EXTINF:-1,[COLOR ff00afaf] Fashion TV[/COLOR]
+http://80.82.43.95/streaming/fashion/16/tvrec/playlist.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Food Network[/COLOR]
+http://198.179.30.110/live/20.high.stream/playlist.m3u8?id=0ad5aac39bb13fbeb09962ead69887a990acbfd8c6fd30269f48a9c926228a740e094edd42ced8ed3fef14155524bdf5e9e0b66810d7f28e1f2cc6d8e92008adeb08b63ad4a52d12ab3392df350ba6b4df0deade33b985a293854aa8a3d2f810311716fbeede0e53fbad0390970ab2e153d4820e042b358b63766d6079b903f8b524aea7fbfeee70ef46356dd6450e8ae4efd9979e6b6fb1
+#EXTINF:-1,[COLOR cyan]  Fox [/COLOR]
+http://37.187.172.168:8080/fox_c91MW/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Global News TV Canada -nm-[/COLOR]
+http://link.theplatform.com/s/dtjsEC/hdSH3iztz_j_?feed=DEV Live Stream Feed
+#EXTINF:-1,[COLOR ff00afaf] ID [/COLOR]
+http://80.80.160.168/live/5/1500000/live.m3u8
+#EXTINF:-1,[COLOR ff00afaf] London Live [/COLOR]
+http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8
+#EXTINF:-1,[COLOR ff00afaf] MGM Channel [/COLOR]
+http://canli.ecanlitvizle.com/org11/mgmchannel_me/playlist.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NBC 6 News Omaha [/COLOR]
+http://graywowtlive-i.akamaihd.net/hls/live/207153/WOWT/qa/888k/prog.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NBCSN HD[/COLOR]
+http://tvenbcsn-i.Akamaihd.net/hls/live/218235/nbcsnx/4296k/prog.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NBC -Golf [/COLOR]
+http://tvegolf-i.akamaihd.net/hls/live/218225/golfx/4296k/prog.m3u8
+#EXTINF:-1,[COLOR ff00afaf] National Geograpgic HD [/COLOR]
+http://80.80.160.168/live/8/2500000/live.m3u8
+#EXTINF:-1,[COLOR ff00afaf] I24 News HD[/COLOR]
+http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/650.m3u8
+#EXTINF:-1,[COLOR ff00afaf] I24 News [/COLOR]
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/i24/ls_satlink/b_828.m3u8?Vd?u#bt!25
+#EXTINF:-1,[COLOR ff00afaf] KGO ABC 7 San Francisco [/COLOR]
+http://content-ausc3.uplynk.com/channel/6737085ce023428b8b4e099f2288e2dd/g.m3u8?pbs=9bc0c75a61494d1983ca7427de2f5983
+#EXTINF:-1,[COLOR ff00afaf] MSNBC News HD [/COLOR]
+rtmp://b.cdn.newschat.tv/edge playpath=msnbc_live swfUrl=http://msnbclive.eu/player.swf pageUrl=http://www.livenewschat.eu/politics/
+#EXTINF:-1,[COLOR ff00afaf] MTV Hits [/COLOR]
+http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8 
+#EXTINF:-1,[COLOR ff00afaf] Nat Geo Wild [/COLOR]
+http://canli.ecanlitvizle.com/org17/natgeowild_me/chunks.m3u8?nimblesessionid=40711338
+#EXTINF:-1,[COLOR ff00afaf] CNBC [/COLOR]
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/cnbc_eu/ls_satlink/b_828.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NBCsn Sports live -1080[/COLOR]
+http://tvenbcsn-i.Akamaihd.net/hls/live/218235/nbcsnx/4296k/prog.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NBCSN Manchester US 1080[/COLOR]
+http://tvenbcsn-i.Akamaihd.net/hls/live/218235/nbcsnx/4296k/prog.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NBCSN Sports Arsenal[/COLOR]
+http://tvenbcsn-i.Akamaihd.net/hls/live/218235/nbcsnx/2596k/prog.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NHK World HD [/COLOR]
+http://nhkworld-hds-live1.hds1.fmslive.stream.ne.jp/hls-live/nhkworld-hds-live1/_definst_/livestream/nhkworld-live-512.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Pac-12 Net LA HD[/COLOR]
+http://xrxs.net/video/live-p12losa-4728.m3u8?Vd?u#bt!25
+#EXTINF:-1,[COLOR ff00afaf] Pac-12 Net MT HD[/COLOR]
+http://xrxs.net/video/live-p12moun-4728.m3u8?Vd?u#bt!25
+#EXTINF:-1,[COLOR ff00afaf] Pac-12 Net BA HD[/COLOR]
+http://xrxs.net/video/live-p12baya-2328.m3u8?Vd?u#bt!25
+#EXTINF:-1,[COLOR ff00afaf] Pac Nat-1080 HD [/COLOR]
+http://xrxs.net/video/live-p12netw-4728.m3u8?Vd?u#bt!25
+#EXTINF:-1,[COLOR ff00afaf] Pac ORE-1080 HD [/COLOR]
+http://xrxs.net/video/live-p12oreg-4728.m3u8?Vd?u#bt!25
+#EXTINF:-1,[COLOR ff00afaf] Pac ORE-1080 HD 2[/COLOR]
+http://xrxs.net/video/live-p12oreg-4728.m3u8?
+#EXTINF:-1,[COLOR cyan] Sony Movies 1 [/COLOR]
+http://37.187.172.168:8080/sony_movies_1_3wuNP/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sony Movies 2 [/COLOR]
+http://37.187.172.168:8080/sony_movies_2_j0alN/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Showtime HD [/COLOR]
+http://80.80.160.168/live/7/5000000/live.m3u8
+#EXTINF:-1,[COLOR ff00afaf] NASA HD[/COLOR]
+http://public.infozen.cshls.lldns.net/infozen/public/public/public_1000.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Senate TV Canada [/COLOR]
+http://bcliveuniv-lh.akamaihd.net/i/cpac1eng2014_01@119330/index_2000_av-p.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Sportnet-360 Canada HD [/COLOR]
+http://nlds187.cdnak.neulion.com/nlds/sportsnetnow/sn_360/as/live/sn_360_hd_3000_ipad.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Sportnet-360 HD [/COLOR]
+http://nlds187.cdnak.neulion.com/nlds/sportsnetnow/sn_360/as/live/sn_360_hd_3000_ipad.m3u8
+#EXTINF:-1,[COLOR ff00afaf] SPORTSNET 360HD 3000 CANADA[/COLOR]
+http://nlds187.cdnak.neulion.com/nlds/sportsnetnow/sn_360/as/live/sn_360_hd_ipad.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 1 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel1_1200
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 2 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel2_1200
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 3 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel3_1200
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 4 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel4_1200
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 5 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel5_1200
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 6 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel6_800
+#EXTINF:-1,[COLOR ff00afaf] Sport Time 7 HD [/COLOR]
+rtmp://streamer.a1.net:1935/rtmplive/redundant/channels/Sporttime/SporttimeTV/mp4:channel7_1200
+#EXTINF:-1,[COLOR cyan] Super Sport 1 [/COLOR]
+http://37.187.172.168:8080/super_sport_1_1lqIQ/index.m3u8
+#EXTINF:-1,[COLOR cyan] Super Sport 2  [/COLOR]
+http://37.187.172.168:8080/super_sport_2_vjwuP/index.m3u8
+#EXTINF:-1,[COLOR cyan] Super Sport 3 [/COLOR]
+#EXTIhttp://37.187.172.168:8080/super_sport_3_qmbRP/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky 1 [/COLOR]
+http://37.187.172.168:8080/sky_1_jwmBy/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky 1 Plus[/COLOR]
+http://37.187.172.168:8080/sky_1_plus_1_8koZN/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky 2 Plus[/COLOR]
+http://37.187.172.168:8080/sky_2_aOGci/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Atlantic [/COLOR]
+http://37.187.172.168:8080/sky_atlantic_hfGEL/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Atlantis Plus 1 [/COLOR]
+http://37.187.172.168:8080/sky_atlantic_plus_1_t9RLO/index.m3u8
+#EXTINF:-1,[COLOR cyan] Discovery Channel [/COLOR]
+http://37.187.172.168:8080/discovery_sL85e/index.m3u8
+#EXTINF:-1,[COLOR cyan] Discovery History [/COLOR]
+http://37.187.172.168:8080/dischist_aY0vB/index.m3u8
+#EXTINF:-1,[COLOR cyan] Disney XD [/COLOR]
+http://37.187.172.168:8080/disney_xd_uzR6o/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Disney [/COLOR]
+http://37.187.172.168:8080/sky_disney_hd_otPEr/index.m3u8
+#EXTINF:-1,[COLOR cyan] Disney Channel [/COLOR]
+http://37.187.172.168:8080/sky_disney_hd_otPEr/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Premiere [/COLOR]
+http://37.187.172.168:8080/sky_mov_premiere_eAGuo/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Action [/COLOR]
+http://37.187.172.168:8080/sky_mov_action_Ht98s/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Thriller [/COLOR]
+http://37.187.172.168:8080/sky_mov_thriller_Bso1z/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Scifi/Horror [/COLOR]
+http://37.187.172.168:8080/sky_mov_scifi_bm2zE/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Showcase [/COLOR]
+http://37.187.172.168:8080/sky_mov_show_case_bKC3W/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Modern Greats [/COLOR]
+http://37.187.172.168:8080/sky_mov_greats_lAH4J/index.m3u8
+#EXTINF:-1,[COLOR cyan] Sky Movies Comedy [/COLOR]
+http://37.187.172.168:8080/sky_comedy_hd_JW7hQ/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Sky News[/COLOR]
+http://wpc.c1a9.edgecastcdn.net/hls-live/20C1A9/skynews/ls_satlink/b_828.m3u8
+#EXTINF:-1,[COLOR ff00afaf] TLC [/COLOR]
+http://80.80.160.168/live/2/1500000/live.m3u8
+#EXTINF:-1,[COLOR cyan] TSN 1 [/COLOR]
+http://37.187.172.168:8080/tsn_1_b1hOZ/index.m3u8
+#EXTINF:-1,[COLOR cyan] TSN 2 [/COLOR]
+http://37.187.172.168:8080/tsn_2_of87P/index.m3u8
+#EXTINF:-1,[COLOR cyan] TSN 3 [/COLOR]
+http://37.187.172.168:8080/tsn_3_D46rR/index.m3u8
+#EXTINF:-1,[COLOR cyan] TSN 4 [/COLOR]
+http://37.187.172.168:8080/tsn_4_tZDJh/index.m3u8
+#EXTINF:-1,[COLOR cyan] TSN 5 [/COLOR]
+http://37.187.172.168:8080/tsn_5_fBDad/index.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Twoon Room[/COLOR]
+rtmp://b.cdn.newschat.tv/edge playpath=hln_live swfUrl=http://newschat.tv/player.swf pageUrl=http://www.livenewschat.eu/twoons/
+#EXTINF:-1,[COLOR ff00afaf] TRT HD[/COLOR]
+http://trtcanlitv-lh.akamaihd.net/i/TRTHD_1@182045/master.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Reality[/COLOR]
+http://198.179.30.110/live/1808.high.stream/playlist.m3u8?id=0ad5aac39bb13fbe56d926ec962538b815de0fc910c928bb6568a6043a9b7b63f6d06d6116af9b3bcd845250f16979a46571600f76d175fee7abb3ce1a6df18f9096580be88852a8f110bad329a94578da7a2da9e23360615ccbbe2656f97d2786ab701a89d76b10c5f71caa4a88385570d02dd3ed95000c441530b2ae065ab254b9382c18514980ae6fe6f8bbed152d434c4f650f131bae
+#EXTINF:-1,[COLOR ff00afaf] RT Global Auto HD [/COLOR]
+http://odna.octoshape.net/f3f5m2v4/cds/ch1_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,[COLOR ff00afaf] RT America Live Auto HD [/COLOR]
+http://odna.octoshape.net/f3f5m2v4/cds/ch4_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,[COLOR ff00afaf] RT HD [fastest clig tv][/COLOR]
+http://odna.octoshape.net/f3f5m2v4/cds/ch4_720p/chunklist.m3u8
+#EXTINF:-1,[COLOR ff00afaf] RT Documentary Live Auto HD [/COLOR]
+http://odna.octoshape.net/f3f5m2v4/cds/ch5_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,[COLOR ff00afaf] RT UK Live Auto HD [/COLOR]
+http://odna.octoshape.net/f3f5m2v4/cds/ch6_auto.smil/chunklist_b2500000.m3u8
+#EXTINF:-1,[COLOR ff00afaf] RT America [/COLOR]
+http://odna.octoshape.net/f3f5m2v4/cds/ch4_320p/chunklist.m3u8?Vd?u
+#EXTINF:-1,[COLOR ff00afaf] EuroSports 1 HD [/COLOR]
+http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
+#EXTINF:-1,[COLOR ff00afaf] Vevo -1 HD Country Musics [/COLOR]
 http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/06/prog_index.m3u8
-#EXTINF:-1,Vevo -2 HD Country Musics
+#EXTINF:-1,[COLOR ff00afaf] Vevo -2 HD Country Musics [/COLOR]
 http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch2/06/prog_index.m3u8
-#EXTINF:-1,Vevo -3 HD Country Musics
+#EXTINF:-1,[COLOR ff00afaf] Vevo -3 HD Country Musics[/COLOR]
 http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch3/06/prog_index.m3u8
-#EXTINF:-1,Various Sports (TSN 1) HD
-http://ams-lp5.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/tsnOpen8.m3u8
-#EXTINF:-1,Various Sports 2 HD
-http://ams-lp1.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN3Open8.m3u8
-#EXTINF:-1,Various Sports (TSN 4) HD
-http://ams-lp2.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN4Open8.m3u8
-#EXTINF:-1,Various Sports (TSN 5) HD
-http://ams-lp3.9c9media.com/hls-live/livepkgr/_definst_/liveeventNoDRM/TSN5Open8.m3u8
-#EXTINF:-1,Warner TV US
+#EXTINF:-1,[COLOR ff00afaf] Warner TV US [/COLOR]
 http://200.76.77.237/LIVE/H01/CANAL205/PROFILE03.m3u8? 
+#EXTINF:-1,[COLOR ff00afaf] Weather Network HD [/COLOR]
+http://bcoveliveios-i.akamaihd.net/hls/live/207737/1942203455001/nat/master_Layer5.m3u8
+#EXTINF:-1,[COLOR ff808080] ***** LIVE  SPORTS TV *****[/COLOR]
+http://bigten247.cdnak.bigtenhd.neulion.com/nlds/btn2go/btnnetwork/as/live/btnnetwork_hd_3000.m3u8     
+#EXTINF:-1,[COLOR ff808080] Big Ten Network [/COLOR]
+http://bigten247.cdnak.bigtenhd.neulion.com/nlds/btn2go/btnnetwork/as/live/btnnetwork_hd_3000.m3u8 
+#EXTINF:-1,[COLOR ff808080] Sport\snet East HD  [/COLOR]
+http://xrxs.net/video/live-p12netw-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] Pac National 1080 HD [/COLOR]
+http://xrxs.net/video/live-p12netw-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] Pac Arizona 1080 HD [/COLOR] 
+http://xrxs.net/video/live-p12ariz-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] Pac Bay Area 720 HD [/COLOR]  
+http://xrxs.net/video/live-p12baya-2328.m3u8
+#EXTINF:-1,[COLOR ff808080] Pac Los Angeles 1080 HD [/COLOR] 
+http://xrxs.net/video/live-p12losa-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] Pac Mountain 1080 HD [/COLOR] 
+http://xrxs.net/video/live-p12moun-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (National) [/COLOR] 
+http://xrxs.net/video/live-p12netw-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (Arizona) HD [/COLOR] 
+http://xrxs.net/video/live-p12ariz-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (Bay Area) HD [/COLOR] 
+http://xrxs.net/video/live-p12baya-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (Los Angeles) HD [/COLOR] 
+http://xrxs.net/video/live-p12losa-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (Moutain) HD [/COLOR] 
+http://xrxs.net/video/live-p12moun-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (Oregon) HD [/COLOR] 
+http://xrxs.net/video/live-p12oreg-4728.m3u8
+#EXTINF:-1,[COLOR ff808080] PAC-12 Net. (Washington) HD [/COLOR]
+http://xrxs.net/video/live-p12wash-4728.m3u8
 
 
 

@@ -44,6 +44,11 @@
 </channel>
 
 <channel>
+<name>Tôn Giáo (YouTube)</name>
+<thumbnail>religiontube.png</thumbnail>
+</channel>
+
+<channel>
 <name>Thiếu Nhi TV</name>
 <thumbnail>thieunhi.png</thumbnail>
 <items>
@@ -140,80 +145,124 @@
 <channel>
 <name>TV Hải Ngoại</name>
 <thumbnail>haingoai.png</thumbnail>
-<items>
 <item>
-<title>Cải Lương</title>
-<link>http://206.190.136.254/liveStream/cailuong/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>S Channel - Link 1</title>
-<link>http://54.152.24.55:1935/schannel/myStream/chunklist_w1927396712.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>S Channel - Link 2</title>
-<link>http://64.71.129.2:8080/hls/ius_000114.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>BYN TV - Link 1</title>
-<link>http://origin.onworldtv.com:1935/liveorigin/byn/index.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>BYN TV - Link 2</title>
+<title>BYN TV Houston TX 57.3</title>
 <link>http://origin.onworldtv.com:1935/liveorigin/stream_byn/playlist.m3u8?worldtokenstarttime=1437363222&worldtokenendtime=1437447822&worldtokenhash=2FOWz209DmUTthrlMUpLjtTORpPNGjCrp4E0MWf75vc=</link>
 <thumbnail>http://img.onworldtv.com/355x200/banner/2015/03/26/133479-261989-BYNTV.jpg</thumbnail>
 </item>
 <item>
-<title>VSTAR Television Channel - Link 1</title>
+<title>VSTAR Television Channel</title>
 <link>http://origin.onworldtv.com:1935/liveorigin/stream_vstartv/playlist.m3u8?worldtokenstarttime=1437363306&worldtokenendtime=1437447906&worldtokenhash=vUlp_doJbuj0WZnTTlLwpBRHS9EElCZ9oXslmOQQnHQ=</link>
 <thumbnail>http://img.onworldtv.com/1180x665/banner/2015/05/19/216437-vstartv_logo.jpg</thumbnail>
 </item>
 <item>
-<title>VSTAR Television Channel - Link 2</title>
-<link>http://origin.onworldtv.com:1935/liveorigin/vstartv/chunklist_w228688581_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2MjQ1JndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDA4NDUmd29ybGR0b2tlbmhhc2g9LXlBOUoxb29IZ2pMTlBWbEZjcVFtUXRSVEpNeWNyWU1oQ0lWUG9BNVl0az0=.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Vietnamese American Network Television - Link 1</title>
+<title>Vietnamese American Network Television</title>
 <link>http://origin.onworldtv.com:1935/liveorigin/stream_van/playlist.m3u8?worldtokenstarttime=1437363502&worldtokenendtime=1437448102&worldtokenhash=AZwzXIx32NvZETqarCNYDdj5WtVJTV0cyl5qBnwrpDk=</link>
 <thumbnail>http://img.onworldtv.com/460x260/banner/2015/03/26/894908-922708-vantv.jpg?png</thumbnail>
 </item>
 <item>
-<title>Vietnamese American Network Television - Link 2</title>
-<link>http://origin.onworldtv.com:1935/liveorigin/van/chunklist_w1237319353_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NTM5JndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDExMzkmd29ybGR0b2tlbmhhc2g9c1FRbUE3VU5laXoyMDJ6SHpTZ2otbl9iR2QtLTBGQ1pERDF2UEZlVHFWMD0=.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Little Saigon Channel - Link 1</title>
+<title>Little Saigon Channel</title>
 <link>http://origin.onworldtv.com:1935/liveorigin/stream_lstv/playlist.m3u8?worldtokenstarttime=1437363595&worldtokenendtime=1437448195&worldtokenhash=Afl9_5sHqaK2BLidznILnI7Wwr2CtIlvz-sxaIfvnx4=</link>
 <thumbnail>http://img.onworldtv.com/355x200/banner/2015/03/08/534534-livetv_littlesaigon_banner.jpg</thumbnail>
 </item>
 <item>
-<title>Little Saigon Channel - Link 2</title>
-<link>http://origin.onworldtv.com:1935/liveorigin/lstv/chunklist_w2039022998_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NjA3JndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEyMDcmd29ybGR0b2tlbmhhc2g9Ni0xWG5zTlAzcnZkQlRzeXYwR3RUai1ZdWwyeW5GSUMxWkw2MHlEVXhqMD0=.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Little Saigon Channel - Link 3</title>
-<link>http://206.190.136.254/liveStream/lstv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Sai Gon Network Channel - Link 1</title>
+<title>Sai Gon Network Channel</title>
 <link>http://origin.onworldtv.com:1935/liveorigin/stream_sgn/playlist.m3u8?worldtokenstarttime=1437363704&worldtokenendtime=1437448304&worldtokenhash=xvcAmTGH03ZlIXOZL1K1zQuEA9FZHTAyjwva9UssK3A=</link>
 <thumbnail>http://img.onworldtv.com/250x250/banner/2015/03/11/884908-livetv_sgn_banner.jpg</thumbnail>
 </item>
 <item>
-<title>Sai Gon Network Channel - Link 2</title>
-<link>http://origin.onworldtv.com:1935/liveorigin/sgn/chunklist_w942043689_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NjUxJndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEyNTEmd29ybGR0b2tlbmhhc2g9dzNCdXB1NVpacjJDYVg1LUxhOGlCOTdlNDFkNG5PbWlpeE90bGEwbXRkQT0=.m3u8</link>
+<title>Cải Lương</title>
+<link>http://206.190.136.254/liveStream/cailuong_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>Viet USA Television Channel</title>
-<link>http://origin.onworldtv.com:1935/liveorigin/vus/chunklist_w957481003_tkd29ybGR0b2tlbnN0YXJ0dGltZT0xNDM0MzU2NDU3JndvcmxkdG9rZW5lbmR0aW1lPTE0MzQ0NDEwNTcmd29ybGR0b2tlbmhhc2g9cTZGeV9UdnBjQUR4cDhlX0lnRTQyNmlXUTRlX19nQmtRd2h5ZEl1a1hRdz0=.m3u8</link>
+<title>Đồng Giao TV</title>
+<link>http://206.190.136.254/liveStream/dgtv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Hài 24/7</title>
+<link>http://206.190.136.254/liveStream/hai_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>IBC TV 57.8 Cali</title>
+<link>http://206.190.136.254/liveStream/ibctv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>KVLA 56.5 Cali</title>
+<link>http://206.190.140.142/liveStream/kvla_1/playlist-2096k.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Little Saigon TV 57.7 Cali</title>
+<link>http://206.190.136.254/liveStream/lstv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Saigon TV 57.5</title>
+<link>http://206.190.136.254/liveStream/sgtv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>SaigonTV Dallas TX 55.3</title>
+<link>rtmp://origin3-edge1.yourstreamlive.com:1935/live/yourstreamlive/out_1651_211xdnzd?platform=Computer</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>S Channel</title>
+<link>http://54.152.24.55:1935/schannel/myStream/chunklist_w1927396712.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>SET TV</title>
+<link>http://206.190.136.254/liveStream/set_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>SGN TV Houston TX 51.3</title>
+<link>http://stream.onworldtv.com/live/sgn/index.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Tuổi Thần Tiên</title>
+<link>http://206.190.136.254/liveStream/ttt_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Việt Bay Television 1.4 KAXT - San Jose</title>
+<link>http://64.71.129.2:8080/hls/ius_000104.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VietSun TV</title>
+<link>http://206.190.136.254/liveStream/vietsuntv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Viet Media TV</title>
+<link>http://206.190.136.254/liveStream/viettv24_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>Viet New TV 56.5</title>
+<link>http://206.190.136.254/liveStream/kvla_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VAN TV 55.2 (Houston)</title>
+<link>http://206.190.136.254/liveStream/vantv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VNA TV 57.3</title>
+<link>http://206.190.136.254/liveStream/vnatv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VietV California 54.3</title>
+<link>http://206.190.136.254/liveStream/vietvla_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
@@ -222,158 +271,18 @@
 <thumbnail></thumbnail>
 </item>
 <item>
-<title>VietFace TV - Link 1</title>
-<link>http://198.179.31.198/live/2936.high.stream/2936.high.stream/index.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Vietface TV - Link 2</title>
-<link>http://206.190.136.254/liveStream/vface/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Vietface TV - Link 3</title>
-<link>http://54.152.24.55:1935/vftv/myStream/chunklist_w1863205407.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SAIGON TV - Link 1</title>
-<link>http://74.63.219.99:1935/sgvp/myStream.sdp/playlist.m3u8?wowzasessionid=346039669</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SAIGON TV - Link 2</title>
-<link>rtmp://74.63.219.99:1935/sgvp playpath=myStream.sdp swfUrl=http://saigontv.us/includes/flash/saigontv.swf pageUrl=http://www.saigontv.us/ live=true timeout=10</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SAIGON TV - Link 3</title>
-<link>http://74.63.219.99:1935/sgvp/myStream.sdp/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SAIGON TV - Link 4</title>
-<link>http://origin3-edge2.yourstreamlive.com:1935/live/yourstreamlive/amlst:out_1651_211xdnzd/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SAIGON TV - Link 5</title>
-<link>http://206.190.136.254/liveStream/sgtv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VNA TV 57.3</title>
-<link>http://54.152.24.55:1935/vnatv/myStream/chunklist_w253772229.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VBS TELEVISION Channel 57.6</title>
-<link>http://uni6rtmp.tulix.tv:1935/vbstv/vbsabr.smil/chunklist_w439903609_b1228800.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietBay TV</title>
-<link>http://64.71.129.2:8080/hls/ius_000131.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietNews TV</title>
-<link>http://54.152.24.55:1935/VietNews/myStream/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>V Star 57.11 - OC</title>
-<link>http://54.152.24.55:1935/vftv/myStream/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SET TV 57.4</title>
-<link>http://206.190.136.254/liveStream/set/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VAN TV</title>
-<link>http://206.190.136.254/liveStream/vantv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Việt SUN TV 57.11</title>
-<link>http://206.190.136.254/liveStream/vietsuntv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>KVLA TV</title>
-<link>http://206.190.136.254/liveStream/kvla/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>IBC TV 57.8</title>
-<link>http://206.190.136.254/liveStream/ibctv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VBS TV</title>
-<link>http://uni6rtmp.tulix.tv/vbstv/vbsabr.smil/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Hài 24/7</title>
-<link>http://206.190.136.254/liveStream/hai/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Đồng Giao TV</title>
-<link>http://206.190.136.254/liveStream/dgtv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>SET TV</title>
-<link>http://206.190.136.254/liveStream/set/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Tuổi Thần Tiên</title>
-<link>http://206.190.136.254/liveStream/ttt/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietSun TV</title>
-<link>http://206.190.136.254/liveStream/vietsuntv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Viet Media TV</title>
-<link>http://206.190.136.254/liveStream/viettv24/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>Viet New TV 56.5</title>
-<link>http://206.190.136.254/liveStream/kvla/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VAN TV 55.2 (Houston)</title>
-<link>http://206.190.136.254/liveStream/vantv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VNA TV 57.3</title>
-<link>http://206.190.136.254/liveStream/vnatv/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
-<title>VietV California 54.3</title>
-<link>http://206.190.136.254/liveStream/vietvla/playlist.m3u8</link>
-<thumbnail></thumbnail>
-</item>
-<item>
 <title>VBS TV 57.6</title>
-<link>http://206.190.136.254/liveStream/vbstv/playlist.m3u8</link>
+<link>http://206.190.136.254/liveStream/vbstv_1/playlist.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+<item>
+<title>VietFace TV California 57.2</title>
+<link>http://206.190.136.254/liveStream/vface_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 <item>
 <title>VZN TV Houston TX</title>
-<link>http://206.190.136.254/liveStream/vantv/playlist.m3u8</link>
+<link>http://206.190.136.254/liveStream/vantv_1/playlist.m3u8</link>
 <thumbnail></thumbnail>
 </item>
 </items>
@@ -384,7 +293,7 @@
 <thumbnail>vn.png</thumbnail>
 <items>
 <item>
-<title>VNews - Thông Tấn Xã Việt Nam</title>
+<title>VNews - Truyền Hình Thông Tấn</title>
 <link>rtmp://live.vnanet.vn:1935/Live/ playpath=DRC swfUrl=http://avnews.vnanet.vn/RtmpPlayer/player.swf pageUrl=http://avnews.vnanet.vn/ live=1 timeout=90</link>
 <thumbnail></thumbnail>
 </item>
@@ -1137,7 +1046,7 @@
 
 <channel>
 <name>News and Weather TV</name>
-<thumbnail>weather_news.png</thumbnail>
+<thumbnail>news.png</thumbnail>
 <items>
 <item>
 <title>ABC News</title>

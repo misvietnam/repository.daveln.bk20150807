@@ -45,6 +45,24 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.</descripti
   </extension>
 </addon>
 
+<addon
+  id="plugin.video.kodi4vn.viettv24"
+  version="1.0.12"
+  name="*[COLOR yellow]VietTV24.com[/COLOR]"
+  provider-name="thongld">
+  <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>VietTV24.com</summary>
+    <description>Watch hundreds of Vietnamesse and English channels from viettv24.com</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.netmedia"
        name="*netmedia"
        version="1.1.5"

@@ -16,7 +16,7 @@ mms://live.vietchristian.com/tv
 #EXTINF:-1,Tin Lành
 http://hls75.lax.v247tv.com/lax74/tinlanh_3/playlist.m3u8
 #EXTINF:-1,Phật Từ Bi
-http://206.190.140.142:1935/liveStream/ptb_1/playlist.m3u8
+http://206.190.140.142:1935/liveStream/ptb/playlist.m3u8
 
 #EXTINF:-1,[COLOR cyan]Thiếu Nhi[/COLOR]
 http://www.youtube.com

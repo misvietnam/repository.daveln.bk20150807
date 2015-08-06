@@ -709,7 +709,7 @@ http://www.youtube.com
 #EXTINF:-1,Viet MTV
 http://64.62.143.5:1935/live/donotstealmy-Stream1/playlist.m3u8?bitrate=800&q=high
 #EXTINF:-1,VMusic TV
-http://206.190.140.140/liveStream/mtv/playlist.m3u8
+http://206.190.136.254/liveStream/mtv/playlist.m3u8
 #EXTINF:-1,VPop TV
 http://206.190.136.254/liveStream/vpoptv/playlist.m3u8
 #EXTINF:-1,Nhạc Của Tui

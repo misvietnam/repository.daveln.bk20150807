@@ -105,7 +105,7 @@ def convertSize(size):
        return '0B'
 
 def main():
-	add_dir('[B][COLOR lime]-[COLOR orange]-[COLOR cyan]>[COLOR magenta]> [COLOR yellow]Channel SUPER Search [COLOR red] * [COLOR white]BE PATIENT[COLOR red] * [COLOR lime]Tìm Kênh/Đài [COLOR magenta]<[COLOR cyan]<[COLOR orange]-[COLOR lime]-[/COLOR][/B]', 'searchlink', 91, logos + 'menu_search.png', fanart) 
+	add_dir('[B][COLOR lime]>[COLOR magenta]> [COLOR yellow]Channel SUPER Search [COLOR red] * [COLOR white]BE PATIENT[COLOR red] * [COLOR lime]Tìm Kênh [COLOR magenta]<[COLOR lime]<[/COLOR][/B]', 'searchlink', 91, logos + 'menu_search.png', fanart) 
 	content = read_file(playlists + 'MainMenu.xml')
 	match = re.compile(xml_regex + '\s*<mode>(.*?)</mode>').findall(content)
 	for name, url, thumb, add_dir_mode in match:
@@ -117,6 +117,12 @@ def direct_link():
 	match = re.compile(m3u_regex).findall(content)
 	for name, url in match:
 		direct_link_action(name, url)
+
+def viettv24_free():
+	try:
+		xbmc.executebuiltin("RunAddon(plugin.video.viettv24free)")
+	except:
+		pass
 		
 def search_main(): 
 	try:
@@ -783,6 +789,9 @@ elif mode == 33:
 
 elif mode == 40:	
 	utube_channels(url)
+	
+elif mode == 50:
+	viettv24_free()
 
 elif mode == 90:	
 	search_direct()

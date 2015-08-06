@@ -16,7 +16,7 @@ mms://live.vietchristian.com/tv
 #EXTINF:-1,Tin Lành
 http://hls75.lax.v247tv.com/lax74/tinlanh_3/playlist.m3u8
 #EXTINF:-1,Phật Từ Bi
-http://206.190.140.142:1935/liveStream/ptb/playlist.m3u8
+http://206.190.136.254/liveStream/ptb/playlist.m3u8
 
 #EXTINF:-1,[COLOR cyan]Thiếu Nhi[/COLOR]
 http://www.youtube.com
@@ -709,9 +709,9 @@ http://www.youtube.com
 #EXTINF:-1,Viet MTV
 http://64.62.143.5:1935/live/donotstealmy-Stream1/playlist.m3u8?bitrate=800&q=high
 #EXTINF:-1,VMusic TV
-http://206.190.136.254/liveStream/mtv_1/playlist.m3u8
+http://206.190.140.140/liveStream/mtv/playlist.m3u8
 #EXTINF:-1,VPop TV
-http://206.190.136.254/liveStream/vpoptv_1/playlist.m3u8
+http://206.190.136.254/liveStream/vpoptv/playlist.m3u8
 #EXTINF:-1,Nhạc Của Tui
 rtmp://123.30.134.108:1935/live playpath=nctlive swfUrl=http://hktivi.net/player.swf pageUrl=http://hktivi.net/kenh/nhaccuatui.php live=1
 #EXTINF:-1,iTV

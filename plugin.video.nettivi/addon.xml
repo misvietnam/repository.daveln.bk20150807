@@ -5,7 +5,7 @@
        provider-name="DaveLN">
   <requires>
         <import addon="xbmc.python" version="2.1.0" optional="true" />
-        <import addon="plugin.video.viettv24free" version="1.0.0" optional="true" />		
+        <import addon="plugin.video.viettv24free" version="1.0.0" />		
   </requires>
   <extension point="xbmc.python.pluginsource"
             library="default.py">

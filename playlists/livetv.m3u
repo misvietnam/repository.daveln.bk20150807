@@ -1,0 +1,41 @@
+#EXTINF:-1, TEST TEST TEST
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8
+
+#EXTINF:-1, VTV1 VTVPlay 576p
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv1sd_hls.smil/chunklist_b1200000.m3u8
+#EXTINF:-1, VTV1 VTVPlay 480p
+http://vtv.live.cdn.fptplay.net/vtvlive/smil:vtv1sd_hls.smil/chunklist_b500000.m3u8
+
+#EXTINF:-1, VTV1 FPT Play Auto Token
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8
+#EXTINF:-1, VTV1 FPT Play Auto
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8?token=c2VydmVyX3RpbWU9MTQzODk3MjI2NiZoYXNoX3ZhbHVlPWM4YmViN2RmNjE1ZGQ4MjY3MTlhZGVkZDQ4YWI3MzBiJnZhbGlkX21pbnV0ZXM9MTQ0MCZjaGFubmVsX2lkPXZ0djEtaGQ&did=05563c08d4ee707d4196a009b9f8a9568d1cbf1b
+
+#EXTM3U
+#EXTINF:-1, VTV1 FPT Play Mobile
+http://hlscache.fptplay.net.vn/livez/vtv1hd_500.stream/chunklist.m3u8
+#EXTINF:-1, VTV1 FPT Play Mobile Token
+http://hlscache.fptplay.net.vn/livez/vtv1hd_500.stream/chunklist.m3u8?token=c2VydmVyX3RpbWU9MTQzODk3MjMzNCZoYXNoX3ZhbHVlPTVhOWRiZjUyOWQyYjQ2ODNiNzA0N2NhODE1NWJiYjkwJnZhbGlkX21pbnV0ZXM9MTQ0MCZjaGFubmVsX2lkPXZ0djEtaGQ&did=2a72156dc1ad1897130e1b6ce94cd77942d8addf
+
+#EXTINF:-1, VTV1 FPT Play Tốt
+http://hlscache.fptplay.net.vn/livez/vtv1hd_500.stream/chunklist.m3u8
+#EXTINF:-1, VTV1 FPT Play Tốt Token
+http://hlscache.fptplay.net.vn/livez/vtv1hd_500.stream/chunklist.m3u8?token=c2VydmVyX3RpbWU9MTQzODk3MjM3MCZoYXNoX3ZhbHVlPWNlMGUyNWFkZjliOWUwOTA2OGE0MTczOWI1ZmQ3ZmJiJnZhbGlkX21pbnV0ZXM9MTQ0MCZjaGFubmVsX2lkPXZ0djEtaGQ&did=5bee9205d7400b78981928d3189eef9ee2ae8611
+
+#EXTINF:-1, VTV1 FPT Play Đẹp
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8
+#EXTINF:-1, VTV1 FPT Play Đẹp Token
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8?token=c2VydmVyX3RpbWU9MTQzODk3MjQyMyZoYXNoX3ZhbHVlPWUyNjMxMDdkYjY2ZDcxOWMzNTgwMDVlMWZmZjJhZDJlJnZhbGlkX21pbnV0ZXM9MTQ0MCZjaGFubmVsX2lkPXZ0djEtaGQ&did=0bbcebe6001d5cea05cf5f1958c2746ee640a644
+
+#EXTINF:-1, VTV1 FPT Play Đẹp
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8
+#EXTINF:-1, VTV1 FPT Play Đẹp Token
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8?token=c2VydmVyX3RpbWU9MTQzODk3MjQyMyZoYXNoX3ZhbHVlPWUyNjMxMDdkYjY2ZDcxOWMzNTgwMDVlMWZmZjJhZDJlJnZhbGlkX21pbnV0ZXM9MTQ0MCZjaGFubmVsX2lkPXZ0djEtaGQ&did=0bbcebe6001d5cea05cf5f1958c2746ee640a644&time=1438972434810
+
+#EXTINF:-1, VTV1 FPT Play Rất đẹp
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8
+#EXTINF:-1, VTV1 FPT Play Rất đẹp Token
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/chunklist.m3u8?token=c2VydmVyX3RpbWU9MTQzODk3MjQ5NCZoYXNoX3ZhbHVlPWYxYzgyMTYwZWIxYzkxZDRjZjViOTMwMmFmNjkxYjdjJnZhbGlkX21pbnV0ZXM9MTQ0MCZjaGFubmVsX2lkPXZ0djEtaGQ&did=3a35ae9226850171303a25aad51e0b9ccf1ac36e
+
+#EXTINF:-1, VTV1 FPT Play Đẹp Playlist
+http://hlscache.fptplay.net.vn/livez/vtv1hd_1000.stream/playlist.m3u8
